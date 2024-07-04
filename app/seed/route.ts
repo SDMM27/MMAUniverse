@@ -19,7 +19,7 @@ async function seedOrganizations() {
     organizations.map(
       (org) => sql`
         INSERT INTO organizations (name, abbreviation, logo_link)
-        VALUES (${org.name}, ${org.abbreviation}, ${org.logoLink})
+        VALUES (${org.name}, ${org.abbreviation}, ${org.logo_link})
         ON CONFLICT (id) DO NOTHING;
       `
     ),
@@ -44,7 +44,7 @@ async function seedEvents() {
     events.map(
       (event) => sql`
         INSERT INTO events (name, date, organization_id)
-        VALUES (${event.name}, ${event.date}, ${event.organizationId})
+        VALUES (${event.name}, ${event.date}, ${event.organization_id})
         ON CONFLICT (id) DO NOTHING;
       `
     ),
@@ -105,7 +105,7 @@ async function seedFighters() {
     fighters.map(
       (fighter) => sql`
         INSERT INTO fighters (name, nationality, image_url, weight_class, organization_id, wins, losses, draws)
-        VALUES (${fighter.name}, ${fighter.nationality}, ${fighter.imageUrl}, ${fighter.weightClass}, ${fighter.organizationId}, ${fighter.wins}, ${fighter.losses}, ${fighter.draws})
+        VALUES (${fighter.name}, ${fighter.nationality}, ${fighter.imageUrl}, ${fighter.weightClass}, ${fighter.organization_id}, ${fighter.wins}, ${fighter.losses}, ${fighter.draws})
         ON CONFLICT (id) DO NOTHING;
       `
     ),

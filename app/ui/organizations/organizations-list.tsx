@@ -12,9 +12,9 @@ import Image from 'next/image';
         {organizations.map((org) => (
           <li key={org.id} className="flex justify-between gap-x-6 py-5">
             <div className="flex min-w-0 gap-x-4">
-              <Image 
-              className="h-12 w-12 flex-none rounded-full bg-white-50" 
-              src={org.logoLink} 
+              <img
+              className="h-12 w-12 flex-none rounded-full bg-gray-50" 
+              src={org.logo_link} 
               alt="Org Logo" />
               <div className="min-w-0 flex-auto">
                 <p className="text-sm font-semibold leading-6 text-white-900">{org.abbreviation}</p>
