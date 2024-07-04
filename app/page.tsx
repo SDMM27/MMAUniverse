@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { lusitana } from '@/app/ui/fonts';
-import MMAUniverseLogo from '@/app/ui/mma-universe-logo';
-import OrganizationsList from './ui/organizations/organizations-list';
+import { lusitana } from '@/components/ui/fonts';
+import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
+import OrganizationsList from '../components/ui/organizations/organizations-list';
 import Image from 'next/image';
-import { fetchOrganizations } from '@/app/lib/data';
+import { fetchOrganizations } from '@/components/lib/data';
 
 export default async function Page() {
   const organizations = await fetchOrganizations();

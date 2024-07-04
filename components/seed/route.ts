@@ -1,8 +1,6 @@
 import { db, sql } from '@vercel/postgres';
 import { organizations, events, fights, fighters } from '../lib/placeholder-data';
 
-const client = await db.connect();
-
 async function seedOrganizations() {
   await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
 
