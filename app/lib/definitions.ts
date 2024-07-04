@@ -2,7 +2,7 @@ export type Organization = {
     id: number;
     name: string;
     abbreviation: number;
-    logoLink: string;
+    logo_link: string;
   };
 
 export type Event = {
@@ -10,7 +10,7 @@ export type Event = {
     name: string;
     date: string;
     location: string;
-    organizationId: number;
+    organization_id: number;
   };
 
 export type Fight = {
@@ -32,7 +32,7 @@ export type Fighter = {
     nationality: string;
     imageUrl: string;
     weightClass: string;
-    organizationId: number;
+    organization_id: number;
     wins: number; // Moved out of 'record' for direct access
     losses: number;
     draws: number;
