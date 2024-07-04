@@ -1,0 +1,29 @@
+import { Organization } from '@/app/lib/definitions';
+import Image from 'next/image';
+
+  
+  export default async function OrganizationsList({
+    organizations,
+  }: {
+    organizations: Organization[];
+  }) {
+    return (
+      <ul role="list" className="divide-y divide-gray-100">
+        {organizations.map((org) => (
+          <li key={org.id} className="flex justify-between gap-x-6 py-5">
+            <div className="flex min-w-0 gap-x-4">
+              <Image 
+              className="h-12 w-12 flex-none rounded-full bg-white-50" 
+              src={org.logoLink} 
+              alt="Org Logo" />
+              <div className="min-w-0 flex-auto">
+                <p className="text-sm font-semibold leading-6 text-white-900">{org.abbreviation}</p>
+                <p className="mt-1 truncate text-xs leading-5 text-white-500">{org.name}</p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+  
