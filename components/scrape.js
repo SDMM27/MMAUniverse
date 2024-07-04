@@ -42,6 +42,10 @@ async function fetchEventDetails(url) {
         fights: []
     };
 
+    if (eventDetails.eventPoster && eventDetails.eventPoster.startsWith('data/poster.php')) {
+        eventDetails.eventPoster = `https://www.ufc-fr.com/${eventDetails.eventPoster}`;
+    }
+
     $('#evenement-detail-combat .fight').each((i, elem) => {
         const fighter1 = {
             name: $(elem).find('.nom').first().text().trim(),
