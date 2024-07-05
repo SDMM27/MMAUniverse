@@ -141,7 +141,1803 @@ const events = [
     organization_id: 1,
   },
 ];
-
+const pflEvents = [
+  {
+    id: 1,
+    name: "Friday Aug 02, 2024 | PFL Playoffs",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  },
+  {
+    id: 9,
+    name: "Friday Aug 16, 2024 | PFL Playoffs",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  },
+  {
+    id: 8,
+    name: "Friday Aug 23, 2024 | PFL Playoffs",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  },
+  {
+    id: 2,
+    name: "Thursday Apr 04, 2024",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  },
+  {
+    id: 6,
+    name: "Friday Apr 12, 2024",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  },
+  {
+    id: 3,
+    name: "Friday Apr 19, 2024",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  },
+  {
+    id: 5,
+    name: "Thursday Jun 13, 2024",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  },
+  {
+    id: 7,
+    name: "Friday Jun 21, 2024",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  },
+  {
+    id: 4,
+    name: "Friday Jun 28, 2024",
+    date: "",
+    event_location: "",
+    event_poster: "",
+    organization_id: 3
+  }
+];
+const pflFighters = [
+  {
+    id: "Goltsov",
+    name: "Goltsov",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/0468bdf353530ebeb2fb680a26a257b3.png",
+    weight_class: "Heavyweight Semifinal",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Johnson",
+    name: "Johnson",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/827dae2ef5af683b954e74caac857d6b-1.png",
+    weight_class: "Heavyweight Semifinal",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Popov",
+    name: "Popov",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/9321790337336411a5e31f7d11912bce-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Moldavsky",
+    name: "Moldavsky",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/606ee0bc292dadf3dfa9d466516b4eb8-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Ditcheva",
+    name: "Ditcheva",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/39fd74f82cbfaac44e8efc6522eaf3e9-1.png",
+    weight_class: "Women's Flyweight Semifinal",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Bishop",
+    name: "Bishop",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/3866c9d075dbdd539250440e29800500-1.png",
+    weight_class: "Women's Flyweight Semifinal",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Santos",
+    name: "Santos",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/6d2ab9e68be2f70fdda19f5b842cbcbb-1.png",
+    weight_class: "Women's Flyweight Semifinal",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Carmouche",
+    name: "Carmouche",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/b95b72c4d2c23a3f1d0389dda191c793-1.png",
+    weight_class: "Women's Flyweight Semifinal",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Delija",
+    name: "Delija",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/d2cbeff2e09b47e6c3e82103ee6a1629-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Vassell",
+    name: "Vassell",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/5717dc7a01da6b5d2e8de2c60f323a7c-2.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Velasquez",
+    name: "Velasquez",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/464f519410f1f5df220f3885d97c7867-2.png",
+    weight_class: "Women's Flyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Mauldin",
+    name: "Mauldin",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/378cc9e875227adb576015fcab11cbcc.png",
+    weight_class: "Women's Flyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Golm",
+    name: "Golm",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/fcf95b79057a4d566493e245f8c23e4b-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "James",
+    name: "James",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/99d7b546d20ddc77fe7f1d022856bc06-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Ivanov",
+    name: "Ivanov",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/b1b5af4e307c9c4a62c479f39934b1a5-2.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Bilostenniy",
+    name: "Bilostenniy",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/b090b1698d7b30d5998585cc9b10d9e9-2.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Joanne",
+    name: "Joanne",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/25ec1dc1b8a68c1b2aab0e65f18505d7-1.png",
+    weight_class: "Women's Flyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Mowry",
+    name: "Mowry",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/f43f076ce8b70726ad5f3cab9a58215f-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Watanabe",
+    name: "Watanabe",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/c37c6ac6f88b2d963007bcaf3fb778bd-1.png",
+    weight_class: "Women's Flyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Young",
+    name: "Young",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/51a2b5cdf63ded6f126b5377f777e2f8-3.png",
+    weight_class: "Women's Flyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Hackett",
+    name: "Hackett",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/7ee49feb892b38b991758ba1129b0b6a-1.png",
+    weight_class: "Women's Flyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Brennan",
+    name: "Brennan",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/f5d0d229ccae2290d866acc857e0a5e3-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Ivy",
+    name: "Ivy",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/b6b69d83f50f62d68aa3f27b356dbe2d-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Meredith",
+    name: "Meredith",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/12dca96b68166f51455862ddf7f24e60-1.png",
+    weight_class: "Bantamweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Umalatov",
+    name: "Umalatov",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/562bab80ca76afeaf2f1003f597bfc1b-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Koreshkov",
+    name: "Koreshkov",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/f09c8ae90152ecdc9494130b5c23302b-2.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Loughnane",
+    name: "Loughnane",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/58fdce120da18ed9812e79fc5aad5705.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Carvalho",
+    name: "Carvalho",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/d356e6501f228d9fe550448e08dc1251-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Storley",
+    name: "Storley",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/783f9b2a8e37174a73c3dbbd9ad797a5-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Musaev",
+    name: "Musaev",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/4b4d71d28e4db160868baca6cf400d65-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Braga",
+    name: "Braga",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/78deb9b8bf0a9c388fc9469c7310fbbd.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Gonzales",
+    name: "Gonzales",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/05b0e57acd29b9dbb00aeb51813c034e-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Yamauchi",
+    name: "Yamauchi",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/71c823dc9f22827674cadd8746e89aab-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Gracie",
+    name: "Gracie",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/65c9c317b7764403599cfc2f82bda025-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Jenkins",
+    name: "Jenkins",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/1ae22fa28d77e4c4bba4484516d6146d.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Kamaka",
+    name: "Kamaka",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/cdbb221aa36fe2fd89d25e12f2dbdcc6-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Borics",
+    name: "Borics",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/159aa0cb6eac78bc4330ae666018b2c6-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Barzola",
+    name: "Barzola",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/801239e3452c7775a1f5fcab255cf587-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Khizriev",
+    name: "Khizriev",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/34b49c18dc1ca84ff782d0f5dabeb4f4-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Johns",
+    name: "Johns",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/d1f01298cb8fdc16a43558df4be67f5c.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Staropoli",
+    name: "Staropoli",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/4d7dd7a374b095466dad1f6f6ccab00a.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Ramazanov",
+    name: "Ramazanov",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/b016fb0135a1b43bf4fdf5c1add258cc-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Madge",
+    name: "Madge",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/10415533f4892e4de640d1ec899d7c8f.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Ward",
+    name: "Ward",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/f25d0aeec3fb9d83887bf509c70087a4-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Diamond",
+    name: "Diamond",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/b3da8bebd2951c5f083c856c40021950-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Rodrigues",
+    name: "Rodrigues",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/e34f6b8b131cb54f0e9657d492d817e4-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Debienne",
+    name: "Debienne",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/ca90273981cb0fd977d92de372326422-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Jean",
+    name: "Jean",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/78c1ac1d84126570934f23db8e645a45.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Poclit",
+    name: "Poclit",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/3cb3c8ca6383e1eb203099315c56a881-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Larkin",
+    name: "Larkin",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/d87695fad9627fc37d478b2ac0b54777-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Dominguez",
+    name: "Dominguez",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/c147931d5f83a95de83c47e838791537-1.png",
+    weight_class: "Welterweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Franklin",
+    name: "Franklin",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/3d9f86bddae5162d0b311467bc41ce1e-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Fortune",
+    name: "Fortune",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/5f6aa46187b2b4e7c3e8e19efbe8cdcc-2.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Marques",
+    name: "Marques",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/e5ddb8b198b1caf062c28d076ad0d077.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Inaba",
+    name: "Inaba",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/e510990d59746b45fdcca45c80a31af1-3.png",
+    weight_class: "Women's Flyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Orozco",
+    name: "Orozco",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/433c043c8b305946e52a069520424d70-1.png",
+    weight_class: "Women's Flyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Kasanganay",
+    name: "Kasanganay",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/f3378639c1f60e78f2f639d252ddb336-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Polizzi",
+    name: "Polizzi",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/bacf2675b3271c50b8aab7e5529f57e1-2.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Wilkinson",
+    name: "Wilkinson",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/9129cb57a69f22d8a29166a6f2176693-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Breese",
+    name: "Breese",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/23fedd7d6f0f2305835760a51317811f-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Collard",
+    name: "Collard",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/b3a1756d3d7a70fb9027865e08958daf-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Pitbull",
+    name: "Pitbull",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/99fa88d73960ab0fb5400c951858c9f9-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Burnell",
+    name: "Burnell",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/086c21261be1c8a356394cb98e1045c3-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Dufort",
+    name: "Dufort",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/e9405801535e393354790a1af45f4370-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Sy",
+    name: "Sy",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/219ce70ec87c0775f9e01d07c76b220e-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Silveira",
+    name: "Silveira",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/de7e256327fd690ffa4cd67f6c06c102-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Carlos Jr.",
+    name: "Carlos Jr.",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/5b65fe4724b4df11a5581fac1a7d970b-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Biyong",
+    name: "Biyong",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/6e96cb3787ab7ab8d2c1619d07740cbf-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Yagshimuradov",
+    name: "Yagshimuradov",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/1c9f44d839732bd125060ef1d83e4eb3-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Nedoh",
+    name: "Nedoh",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/4fbfec67cbb4b143da1712314d5c4964-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Miranda",
+    name: "Miranda",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/e9ddded8529397823fdf55e6606338fa-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Primus",
+    name: "Primus",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/ae1795beab2d6428958c3ec9e2e95e91-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Rabadanov",
+    name: "Rabadanov",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/fa41b9372d0f55bd047565a9d2436ed3-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Renfro",
+    name: "Renfro",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/a70ea75b8e124815aa9ca9fba1549ec3-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Espinoza",
+    name: "Espinoza",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/b8156c3546293b88fe6546eda412468d-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Piccolotti",
+    name: "Piccolotti",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/eb1049fd58d49beeb399bb9b57e29ffa-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Nunes",
+    name: "Nunes",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/2e145730a7722b99b4cee750ea7b553f-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Heiderman",
+    name: "Heiderman",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/f25913bae294c64c5a47d8c681435c48-1.png",
+    weight_class: "Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Sanchez",
+    name: "Sanchez",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/937525c631e5c16f13151fb17771a50f-1.png",
+    weight_class: "Light Heavyweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Romero",
+    name: "Romero",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/a926badb58a3a76c13140a9de1307052-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Cossio",
+    name: "Cossio",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/f88f272260cf47752bede6e377489c4e-1.png",
+    weight_class: "Lightweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Zurcher",
+    name: "Zurcher",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/c333d234ab830a3b4c5255f5cd46f758-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  },
+  {
+    id: "Ruiz",
+    name: "Ruiz",
+    image_url: "https://pflmma-prod.s3.amazonaws.com/fighters/bodyshots/e717541de4e64cbd37f738e57157ae52-1.png",
+    weight_class: "Featherweight",
+    organization_id: 3,
+    record: "",
+    ranking: 0
+  }
+];
+const pflFights = [
+  {
+    id: 1,
+    event_name: "Friday Aug 02, 2024 | PFL Playoffs",
+    fighter1_id: "Goltsov",
+    fighter2_id: "Johnson",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight Semifinal"
+  },
+  {
+    id: 2,
+    event_name: "Friday Aug 02, 2024 | PFL Playoffs",
+    fighter1_id: "Popov",
+    fighter2_id: "Moldavsky",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 3,
+    event_name: "Friday Aug 02, 2024 | PFL Playoffs",
+    fighter1_id: "Ditcheva",
+    fighter2_id: "Bishop",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight Semifinal"
+  },
+  {
+    id: 4,
+    event_name: "Friday Aug 02, 2024 | PFL Playoffs",
+    fighter1_id: "Santos",
+    fighter2_id: "Carmouche",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight Semifinal"
+  },
+  {
+    id: 67,
+    event_name: "Friday Aug 16, 2024 | PFL Playoffs",
+    fighter1_id: "Primus",
+    fighter2_id: "Collard",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight Semifinal"
+  },
+  {
+    id: 68,
+    event_name: "Friday Aug 16, 2024 | PFL Playoffs",
+    fighter1_id: "Rabadanov",
+    fighter2_id: "Dufort",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight Semifinal"
+  },
+  {
+    id: 69,
+    event_name: "Friday Aug 16, 2024 | PFL Playoffs",
+    fighter1_id: "Kasanganay",
+    fighter2_id: "Silveira",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight Semifinal"
+  },
+  {
+    id: 70,
+    event_name: "Friday Aug 16, 2024 | PFL Playoffs",
+    fighter1_id: "Wilkinson",
+    fighter2_id: "Yagshimuradov",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight Semifinal"
+  },
+  {
+    id: 28,
+    event_name: "Friday Aug 23, 2024 | PFL Playoffs",
+    fighter1_id: "Musaev",
+    fighter2_id: "Ramazanov",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight Semifinal"
+  },
+  {
+    id: 29,
+    event_name: "Friday Aug 23, 2024 | PFL Playoffs",
+    fighter1_id: "Umalatov",
+    fighter2_id: "Madge",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight Semifinal"
+  },
+  {
+    id: 30,
+    event_name: "Friday Aug 23, 2024 | PFL Playoffs",
+    fighter1_id: "Loughnane",
+    fighter2_id: "Kamaka",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight Semifinal"
+  },
+  {
+    id: 31,
+    event_name: "Friday Aug 23, 2024 | PFL Playoffs",
+    fighter1_id: "Braga",
+    fighter2_id: "Khizriev",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight Semifinal"
+  },
+  {
+    id: 5,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Delija",
+    fighter2_id: "Moldavsky",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 6,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Goltsov",
+    fighter2_id: "Vassell",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 7,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Carmouche",
+    fighter2_id: "Velasquez",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 8,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Ditcheva",
+    fighter2_id: "Mauldin",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 9,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Golm",
+    fighter2_id: "James",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 10,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Ivanov",
+    fighter2_id: "Bilostenniy",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 11,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Santos",
+    fighter2_id: "Joanne",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 12,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Mowry",
+    fighter2_id: "Popov",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 13,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Watanabe",
+    fighter2_id: "Young",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 14,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Hackett",
+    fighter2_id: "Bishop",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 15,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Brennan",
+    fighter2_id: "Ivy",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 16,
+    event_name: "Thursday Apr 04, 2024",
+    fighter1_id: "Meredith",
+    fighter2_id: "Johnson",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Bantamweight"
+  },
+  {
+    id: 44,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Kasanganay",
+    fighter2_id: "Polizzi",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 45,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Wilkinson",
+    fighter2_id: "Breese",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 46,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Collard",
+    fighter2_id: "Pitbull",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 47,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Burnell",
+    fighter2_id: "Dufort",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 48,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Sy",
+    fighter2_id: "Silveira",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 49,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Carlos Jr.",
+    fighter2_id: "Biyong",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 50,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Yagshimuradov",
+    fighter2_id: "Nedoh",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 51,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Miranda",
+    fighter2_id: "Primus",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 52,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Rabadanov",
+    fighter2_id: "Renfro",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 53,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Espinoza",
+    fighter2_id: "Piccolotti",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 54,
+    event_name: "Friday Apr 12, 2024",
+    fighter1_id: "Nunes",
+    fighter2_id: "Heiderman",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 55,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Umalatov",
+    fighter2_id: "Koreshkov",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 56,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Loughnane",
+    fighter2_id: "Carvalho",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 57,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Storley",
+    fighter2_id: "Musaev",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 58,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Braga",
+    fighter2_id: "Gonzales",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 59,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Yamauchi",
+    fighter2_id: "Gracie",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 60,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Jenkins",
+    fighter2_id: "Kamaka",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 61,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Borics",
+    fighter2_id: "Barzola",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 62,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Khizriev",
+    fighter2_id: "Johns",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 63,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Staropoli",
+    fighter2_id: "Ramazanov",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 64,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Madge",
+    fighter2_id: "Ward",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 65,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Diamond",
+    fighter2_id: "Rodrigues",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 66,
+    event_name: "Friday Apr 19, 2024",
+    fighter1_id: "Debienne",
+    fighter2_id: "Jean",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 17,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Moldavsky",
+    fighter2_id: "Vassell",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 18,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Ditcheva",
+    fighter2_id: "Hackett",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 19,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Goltsov",
+    fighter2_id: "Santos",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 20,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Carmouche",
+    fighter2_id: "Watanabe",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 21,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Santos",
+    fighter2_id: "Bishop",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 22,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Popov",
+    fighter2_id: "Franklin",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 23,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Golm",
+    fighter2_id: "Fortune",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 24,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Joanne",
+    fighter2_id: "Young",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 25,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Marques",
+    fighter2_id: "Johnson",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Heavyweight"
+  },
+  {
+    id: 26,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Velasquez",
+    fighter2_id: "Mauldin",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 27,
+    event_name: "Thursday Jun 13, 2024",
+    fighter1_id: "Inaba",
+    fighter2_id: "Orozco",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Women's Flyweight"
+  },
+  {
+    id: 32,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Collard",
+    fighter2_id: "Burnell",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 33,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Kasanganay",
+    fighter2_id: "Nedoh",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 34,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Pitbull",
+    fighter2_id: "Miranda",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 35,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Wilkinson",
+    fighter2_id: "Silveira",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 36,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Yagshimuradov",
+    fighter2_id: "Biyong",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 37,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Carlos Jr.",
+    fighter2_id: "Polizzi",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 38,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Primus",
+    fighter2_id: "Renfro",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 39,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Sy",
+    fighter2_id: "Sanchez",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Light Heavyweight"
+  },
+  {
+    id: 40,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Rabadanov",
+    fighter2_id: "Espinoza",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 41,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Dufort",
+    fighter2_id: "Piccolotti",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 42,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Romero",
+    fighter2_id: "Cossio",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Lightweight"
+  },
+  {
+    id: 43,
+    event_name: "Friday Jun 21, 2024",
+    fighter1_id: "Zurcher",
+    fighter2_id: "Ruiz",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 71,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Loughnane",
+    fighter2_id: "Gonzales",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 72,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Storley",
+    fighter2_id: "Poclit",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 73,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Umalatov",
+    fighter2_id: "Ward",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 74,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Braga",
+    fighter2_id: "Jenkins",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 75,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Larkin",
+    fighter2_id: "Dominguez",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 76,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Ramazanov",
+    fighter2_id: "Musaev",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 77,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Kamaka",
+    fighter2_id: "Carvalho",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 78,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Yamauchi",
+    fighter2_id: "Koreshkov",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 79,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Khizriev",
+    fighter2_id: "Barzola",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  },
+  {
+    id: 80,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Madge",
+    fighter2_id: "Gracie",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Welterweight"
+  },
+  {
+    id: 81,
+    event_name: "Friday Jun 28, 2024",
+    fighter1_id: "Diamond",
+    fighter2_id: "Johns",
+    fight_finished: false,
+    winner_id: null,
+    method: "",
+    round: 0,
+    time: "",
+    weight_class: "Featherweight"
+  }
+];
 const fights = [
   {
       id: 1,
@@ -2789,4 +4585,4 @@ const fighters = [
 
 
 // Exporting the data to be used in your application
-export { organizations, events, fights, fighters };
+export { organizations, events, fights, fighters, pflFights, pflFighters, pflEvents };

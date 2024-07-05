@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import { fetchEventsByOrg } from '@/components/lib/data';
+import { fetchEventsByOrg } from '@/data/lib/data';
 import EventListByOrg from '../../../components/ui/events/events-by-org';
 
 export default function Page({ params }: { params: { slug: string } })  {

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import { fetchEventsByOrg } from '@/components/lib/data';
+import { fetchEventsByOrg } from '@/data/lib/data';
 import FightListByEvent from '../../../components/ui/fights/fights-by-event';
 
 export default function Page({ params }: { params: { slug: string } })  {

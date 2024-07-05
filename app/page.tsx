@@ -3,7 +3,7 @@ import { lusitana } from '@/components/ui/fonts';
 import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
 import OrganizationsList from '../components/ui/organizations/organizations-list';
 import Image from 'next/image';
-import { fetchOrganizations } from '@/components/lib/data';
+import { fetchOrganizations } from '@/data/lib/data';
 
 export default async function Page() {
   const organizations = await fetchOrganizations();

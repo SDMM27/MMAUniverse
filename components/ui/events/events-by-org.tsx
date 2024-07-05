@@ -1,6 +1,6 @@
-import { Event } from '@/components/lib/definitions';
+import { Event } from '@/data/lib/definitions';
 import { useEffect, useState } from 'react';
-import { fetchEventsByOrg } from '@/components/lib/data';
+import { fetchEventsByOrg } from '@/data/lib/data';
 import Link from 'next/link';
 
 export default function EventListByOrg({ orgId }: { orgId: string }) {
