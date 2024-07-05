@@ -6,7 +6,7 @@ import EventListByOrg from '../../../components/ui/events/events-by-org';
 
 export default function Page({ params }: { params: { slug: string } })  {
   const [orgName, setOrgName] = useState(null);
-  const [orgImg, setOrgImg] = useState(null);
+  const [orgImg, setOrgImg] = useState(undefined);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
