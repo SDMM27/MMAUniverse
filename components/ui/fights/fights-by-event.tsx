@@ -1,4 +1,4 @@
-import { Fight } from '@/components/lib/definitions';
+import { Fight } from '@/data/lib/definitions';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 

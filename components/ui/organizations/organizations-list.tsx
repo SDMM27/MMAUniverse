@@ -1,4 +1,4 @@
-import { Organization } from '@/components/lib/definitions';
+import { Organization } from '@/data/lib/definitions';
 import Link from 'next/link';
 
 export default async function OrganizationsList({
