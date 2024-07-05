@@ -6,7 +6,7 @@ import FightListByEvent from '../../../components/ui/fights/fights-by-event';
 
 export default function Page({ params }: { params: { slug: string } })  {
     const [eventName, setEventName] = useState(null);
-    const [eventPoster, setEventPoster] = useState(null);
+    const [eventPoster, setEventPoster] = useState(undefined);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
   
