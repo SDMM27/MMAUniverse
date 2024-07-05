@@ -1,5 +1,5 @@
 import { db, sql } from '@vercel/postgres';
-import { organizations, events, fights, fighters, pflEvents, pflFighters, pflFights } from '../../data/lib/placeholder-data';
+import { organizations, events, fights, fighters, pflEvents, pflFighters, pflFights, pastPflEvents, pastPflFighters, pastPflFights } from '../../data/lib/placeholder-data';
 
 async function seedOrganizations() {
 
@@ -39,7 +39,7 @@ async function seedEvents() {
   `;
 
   const insertedEvents = await Promise.all(
-    pflEvents.map(
+    pastPflEvents.map(
       (event) => sql`
         INSERT INTO events (name, date, event_location, event_poster, organization_id)
         VALUES (${event.name}, ${event.date}, ${event.event_location}, ${event.event_poster}, ${event.organization_id})
@@ -83,14 +83,19 @@ async function seedFights() {
   `;
 
   const insertedFights = await Promise.all(
-    pflFights.map(async (fight) => {
+    pastPflFights.map(async (fight) => {
       const eventId = await getEventIdByName(fight.event_name);
       const fighter1Id = await getFighterIdByName(fight.fighter1_id);
       const fighter2Id = await getFighterIdByName(fight.fighter2_id);
 
+      //Delete fights with event_id, fighter1_id and fighter2_id
+      await sql`
+        DELETE FROM fights WHERE event_id = ${eventId} AND fighter1_id = ${fighter1Id} AND fighter2_id = ${fighter2Id};
+      `;
+
       return sql`
-        INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, method, time, weight_class)
-        VALUES (${eventId}, ${fighter1Id}, ${fighter2Id}, ${fight.fight_finished}, ${fight.method}, ${fight.time}, ${fight.weight_class})
+        INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, method, round, time, weight_class)
+        VALUES (${eventId}, ${fighter1Id}, ${fighter2Id}, ${fight.fight_finished}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class})
         ON CONFLICT (id) DO NOTHING;
       `;
     })
@@ -114,7 +119,7 @@ async function seedFighters() {
   `;
 
   const insertedFighters = await Promise.all(
-    pflFighters.map(
+    pastPflFighters.map(
       (fighter) => sql`
         INSERT INTO fighters (name, image_url, weight_class, organization_id, record, ranking)
         VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${fighter.organization_id}, ${fighter.record}, ${fighter.ranking})
