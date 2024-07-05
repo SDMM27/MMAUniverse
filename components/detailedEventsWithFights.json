@@ -1,0 +1,1560 @@
+[
+  {
+    "eventTitle": "UFC ON ESPN 59 - NAMAJUNAS VS. CORTEZ",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 13 juillet 2024",
+    "eventLocation": "BALL ARENA, DENVER, COLORADO",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=450&path=../https://www.ufc-fr.com/data/evenement/709/ufc-on-espn-59-namajunas-vs-cortez-2024-07-03-03-30-10__dsno__ID709.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Rose Namajunas",
+          "record": "10-5-0",
+          "ranking": "#6",
+          "image": "https://www.ufc-fr.com/data/combattant/252/rose-namajunas-2023-09-02-11-41-42__dxif__ID252.webp"
+        },
+        "fighter2": {
+          "name": "Tracy Cortez",
+          "record": "5-0-0",
+          "ranking": "#10",
+          "image": "https://www.ufc-fr.com/data/combattant/2018/2022-05-07-09-23-17__lrcc__ID2018.jpg"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7826.html"
+      },
+      {
+        "fighter1": {
+          "name": "Santiago Ponzinibbio",
+          "record": "11-6-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/332/2018-11-17-08-59-06__hmjo__ID332.jpg"
+        },
+        "fighter2": {
+          "name": "Muslim Salikhov",
+          "record": "6-4-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1737/2022-11-18-09-43-08__khuc__ID1737.jpg"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7700.html"
+      },
+      {
+        "fighter1": {
+          "name": "Drew Dober",
+          "record": "13-9-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/612/drew-dober-2024-02-03-02-26-54__ohib__ID612.webp"
+        },
+        "fighter2": {
+          "name": "Jean Silva",
+          "record": "2-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2502/jean-silva-2024-06-29-10-46-06__cayv__ID2502.webp"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7719.html"
+      },
+      {
+        "fighter1": {
+          "name": "Ange Loosa",
+          "record": "2-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2296/ange-loosa-2024-03-16-05-03-17__kyft__ID2296.webp"
+        },
+        "fighter2": {
+          "name": "Gabriel Bonfim",
+          "record": "2-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2338/gabriel-bonfim-2023-11-04-10-31-34__whtl__ID2338.webp"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7802.html"
+      },
+      {
+        "fighter1": {
+          "name": "Christian Rodriguez",
+          "record": "4-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2283/christian-rodriguez-2024-03-16-12-20-29__xeev__ID2283.webp"
+        },
+        "fighter2": {
+          "name": "Julian Erosa",
+          "record": "7-7-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1514/2022-09-09-10-07-41__sdrg__ID1514.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7688.html"
+      },
+      {
+        "fighter1": {
+          "name": "Cody Brundage",
+          "record": "4-5-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2234/cody-brundage-2024-04-13-01-38-51__cjij__ID2234.webp"
+        },
+        "fighter2": {
+          "name": "Abdul Razak Alhassan",
+          "record": "6-6-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1624/abdul-razak-alhassan-2023-10-06-08-46-11__crve__ID1624.webp"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7827.html"
+      },
+      {
+        "fighter1": {
+          "name": "Viviane Araujo",
+          "record": "6-5-0",
+          "ranking": "#9",
+          "image": "https://www.ufc-fr.com/data/combattant/1944/viviane-araujo-2024-02-03-01-28-31__ifuh__ID1944.webp"
+        },
+        "fighter2": {
+          "name": "Jasmine Jasudavicius",
+          "record": "4-2-0",
+          "ranking": "#15",
+          "image": "https://www.ufc-fr.com/data/combattant/2247/jasmine-jasudavicius-2024-01-20-08-49-05__jfcs__ID2247.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7781.html"
+      },
+      {
+        "fighter1": {
+          "name": "Montel Jackson",
+          "record": "7-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1826/2018-08-03-10-13-49__ayys__ID1826.jpg"
+        },
+        "fighter2": {
+          "name": "Da'Mon Blackshear",
+          "record": "2-2-1",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2323/da-mon-blackshear-2023-03-03-08-49-04__rjqk__ID2323.jpg"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7828.html"
+      },
+      {
+        "fighter1": {
+          "name": "Luana Santos",
+          "record": "2-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2429/luana-santos-2023-12-08-09-17-05__zdsf__ID2429.webp"
+        },
+        "fighter2": {
+          "name": "Mariya Agapova",
+          "record": "2-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2062/2020-05-29-03-24-50__aihc__ID2062.jpg"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7755.html"
+      },
+      {
+        "fighter1": {
+          "name": "Josh Fremd",
+          "record": "2-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2294/josh-fremd-2023-03-11-09-09-19__nwri__ID2294.jpg"
+        },
+        "fighter2": {
+          "name": "Andre Petroski",
+          "record": "5-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2225/2022-05-14-07-18-52__pswh__ID2225.jpg"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7706.html"
+      },
+      {
+        "fighter1": {
+          "name": "Joshua Van",
+          "record": "3-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2436/joshua-van-2023-11-10-03-40-33__scwr__ID2436.webp"
+        },
+        "fighter2": {
+          "name": "Charles Johnson",
+          "record": "4-4-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2299/charles-johnson-2024-02-03-11-57-37__qimu__ID2299.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7845.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC ON ESPN 60 - LEMOS VS. JANDIROBA",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 20 juillet 2024",
+    "eventLocation": "UFC APEX, LAS VEGAS, NEVADA",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=450&path=../https://www.ufc-fr.com/data/evenement/711/ufc-fight-night-lemos-vs-jandiroba-2024-06-23-08-11-28__gyll__ID711.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Amanda Lemos",
+          "record": "8-3-0",
+          "ranking": "#3",
+          "image": "https://www.ufc-fr.com/data/combattant/1691/2022-04-23-08-17-28__pkkq__ID1691.jpg"
+        },
+        "fighter2": {
+          "name": "Virna Jandiroba",
+          "record": "6-3-0",
+          "ranking": "#4",
+          "image": "https://www.ufc-fr.com/data/combattant/1924/2020-08-16-03-38-45__bgff__ID1924.jpg"
+        },
+        "details": "Combat Categorie - Poids Pailles",
+        "fightLink": "https://www.ufc-fr.com/combat-7829.html"
+      },
+      {
+        "fighter1": {
+          "name": "Brad Tavares",
+          "record": "15-9-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/549/2016-09-10-06-05-33__iiyn__ID549.jpg"
+        },
+        "fighter2": {
+          "name": "Jun Yong Park",
+          "record": "7-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1970/jun-yong-park-2023-07-14-10-09-27__ehvq__ID1970.webp"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7823.html"
+      },
+      {
+        "fighter1": {
+          "name": "Bill Algeo",
+          "record": "5-4-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2120/bill-algeo-2023-10-06-08-40-48__uozm__ID2120.webp"
+        },
+        "fighter2": {
+          "name": "Doo Ho Choi",
+          "record": "3-3-1",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1402/2023-02-04-09-18-13__rqdl__ID1402.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7822.html"
+      },
+      {
+        "fighter1": {
+          "name": "Loik Radzhabov",
+          "record": "2-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2408/loik-radzhabov-2024-03-02-08-32-17__neww__ID2408.webp"
+        },
+        "fighter2": {
+          "name": "Trey Ogden",
+          "record": "2-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2293/trey-ogden-2023-11-18-09-42-01__eenu__ID2293.webp"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7803.html"
+      },
+      {
+        "fighter1": {
+          "name": "Kurt Holobaugh",
+          "record": "1-5-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1056/2018-07-14-07-23-30__dhlw__ID1056.jpg"
+        },
+        "fighter2": {
+          "name": "Kaynan Kruschewsky",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2492/kaynan-kruschewsky-2023-11-04-09-58-44__uvct__ID2492.webp"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7811.html"
+      },
+      {
+        "fighter1": {
+          "name": "Hyder Amil",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2500/hyder-amil-2023-12-04-11-49-25__oblk__ID2500.webp"
+        },
+        "fighter2": {
+          "name": "Jeong Yeong Lee",
+          "record": "2-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2387/jeong-yeong-lee-2024-02-03-10-47-51__ibvd__ID2387.webp"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7817.html"
+      },
+      {
+        "fighter1": {
+          "name": "Brian Kelleher",
+          "record": "8-8-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1676/brian-kelleher-2023-12-15-10-36-25__ktoe__ID1676.webp"
+        },
+        "fighter2": {
+          "name": "Cody Gibson",
+          "record": "1-5-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/953/cody-gibson-2024-03-27-03-56-00__ieds__ID953.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7819.html"
+      },
+      {
+        "fighter1": {
+          "name": "Luana Carolina",
+          "record": "5-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1912/luana-carolina-2024-02-03-10-16-02__ehrl__ID1912.webp"
+        },
+        "fighter2": {
+          "name": "Lucie Pudilova",
+          "record": "3-7-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1662/2018-09-09-05-24-54__aned__ID1662.jpg"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7824.html"
+      },
+      {
+        "fighter1": {
+          "name": "Miranda Maverick",
+          "record": "6-3-0",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/2081/2020-10-24-05-31-21__wgcr__ID2081.jpg"
+        },
+        "fighter2": {
+          "name": "Dione Barbosa",
+          "record": "1-0-0",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/2472/dione-barbosa-2023-10-02-02-51-12__jsmg__ID2472.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7825.html"
+      },
+      {
+        "fighter1": {
+          "name": "Mohammed Usman",
+          "record": "3-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2318/mohammed-usman-2023-04-22-05-11-54__ygau__ID2318.jpg"
+        },
+        "fighter2": {
+          "name": "Thomas Petersen",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2493/thomas-petersen-2024-02-03-09-18-33__umee__ID2493.webp"
+        },
+        "details": "Combat Categorie - Poids Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7856.html"
+      },
+      {
+        "fighter1": {
+          "name": "Steve Garcia",
+          "record": "4-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2053/steve-garcia-2023-12-08-09-20-07__sutq__ID2053.webp"
+        },
+        "fighter2": {
+          "name": "Seung Woo Choi",
+          "record": "4-5-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1920/2019-07-26-10-59-35__gedj__ID1920.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7860.html"
+      },
+      {
+        "fighter1": {
+          "name": "Cody Durden",
+          "record": "5-3-1",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/2096/cody-durden-2023-12-15-10-27-52__byao__ID2096.webp"
+        },
+        "fighter2": {
+          "name": "Bruno Gustavo da Silva",
+          "record": "3-2-0",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/1951/bruno-silva-2023-03-11-06-20-17__eicn__ID1951.jpg"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7526.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC 304 - EDWARDS VS. MUHAMMAD 2",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 27 juillet 2024",
+    "eventLocation": "CO-OP LIVE ARENA, MANCHESTER, ENGLAND",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=450&path=../https://www.ufc-fr.com/data/evenement/713/ufc-304-edwards-vs-muhammad-2-2024-06-06-08-47-10__slur__ID713.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Leon Edwards",
+          "record": "14-2-0",
+          "ranking": "#2",
+          "image": "https://www.ufc-fr.com/data/combattant/59/leon-edwards-2023-12-15-11-14-27__aoxi__ID59.webp"
+        },
+        "fighter2": {
+          "name": "Belal Muhammad",
+          "record": "14-3-0",
+          "ranking": "#2",
+          "image": "https://www.ufc-fr.com/data/combattant/1558/2022-04-16-09-08-23__dwkd__ID1558.jpg"
+        },
+        "details": "Championnat du Monde - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7831.html"
+      },
+      {
+        "fighter1": {
+          "name": "Tom Aspinall",
+          "record": "7-1-0",
+          "ranking": "#1",
+          "image": "https://www.ufc-fr.com/data/combattant/2036/tom-aspinall-2023-11-10-04-30-38__shyz__ID2036.webp"
+        },
+        "fighter2": {
+          "name": "Curtis Blaydes",
+          "record": "13-4-0",
+          "ranking": "#5",
+          "image": "https://www.ufc-fr.com/data/combattant/1533/curtis-blaydes-2024-03-09-12-41-03__hama__ID1533.webp"
+        },
+        "details": "Championnat du Monde - Poids Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7832.html"
+      },
+      {
+        "fighter1": {
+          "name": "Bobby Green",
+          "record": "13-10-1",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/249/bobby-green-2023-12-02-11-16-15__ubph__ID249.webp"
+        },
+        "fighter2": {
+          "name": "Paddy Pimblett",
+          "record": "5-0-0",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/2213/paddy-pimblett-2023-12-15-11-04-39__upmq__ID2213.webp"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7833.html"
+      },
+      {
+        "fighter1": {
+          "name": "Arnold Allen",
+          "record": "10-2-0",
+          "ranking": "#6",
+          "image": "https://www.ufc-fr.com/data/combattant/1366/arnold-allen-2024-01-20-11-12-15__ynht__ID1366.webp"
+        },
+        "fighter2": {
+          "name": "Giga Chikadze",
+          "record": "8-1-0",
+          "ranking": "#10",
+          "image": "https://www.ufc-fr.com/data/combattant/2010/2020-11-08-06-09-17__jjbd__ID2010.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7813.html"
+      },
+      {
+        "fighter1": {
+          "name": "Nathaniel Wood",
+          "record": "7-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1796/nathaniel-wood-2023-10-21-09-18-28__dskq__ID1796.webp"
+        },
+        "fighter2": {
+          "name": "Daniel Pineda",
+          "record": "5-6-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1038/2021-06-26-03-03-49__sgtm__ID1038.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7788.html"
+      },
+      {
+        "fighter1": {
+          "name": "Muhammad Mokaev",
+          "record": "6-0-0",
+          "ranking": "#6",
+          "image": "https://www.ufc-fr.com/data/combattant/2267/muhammad-mokaev-2024-03-02-11-15-28__vnpo__ID2267.webp"
+        },
+        "fighter2": {
+          "name": "Manel Kape",
+          "record": "4-2-0",
+          "ranking": "#8",
+          "image": "https://www.ufc-fr.com/data/combattant/2150/2022-11-09-07-03-59__zusx__ID2150.jpg"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7816.html"
+      },
+      {
+        "fighter1": {
+          "name": "Ramon Taveras",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2478/ramon-taveras-2024-01-20-09-58-58__cgzc__ID2478.webp"
+        },
+        "fighter2": {
+          "name": "Caolan Loughran",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2448/caolan-loughran-2023-09-02-11-11-02__nuoj__ID2448.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7836.html"
+      },
+      {
+        "fighter1": {
+          "name": "Mick Parkin",
+          "record": "3-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2416/mick-parkin-2023-11-18-11-44-39__ygfe__ID2416.webp"
+        },
+        "fighter2": {
+          "name": "Lukasz Brzeski",
+          "record": "1-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2306/lukasz-brzeski-2024-04-06-11-42-44__spto__ID2306.webp"
+        },
+        "details": "Combat Categorie - Poids Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7838.html"
+      },
+      {
+        "fighter1": {
+          "name": "Shauna Bannon",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2430/shauna-bannon-2023-07-22-05-07-49__fuyg__ID2430.webp"
+        },
+        "fighter2": {
+          "name": "Ravena Oliveira",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2469/ravena-oliveira-2023-10-14-10-58-02__mbxd__ID2469.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7485.html"
+      },
+      {
+        "fighter1": {
+          "name": "Molly McCann",
+          "record": "7-5-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1806/molly-mccann-2024-02-03-12-29-51__khat__ID1806.webp"
+        },
+        "fighter2": {
+          "name": "Bruna Brasil",
+          "record": "1-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2396/bruna-brasil-2023-07-22-05-08-03__ffaw__ID2396.webp"
+        },
+        "details": "Combat Categorie - Poids Pailles",
+        "fightLink": "https://www.ufc-fr.com/combat-7515.html"
+      },
+      {
+        "fighter1": {
+          "name": "Oban Elliott",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2504/oban-elliott-2024-02-17-09-04-46__kmrq__ID2504.webp"
+        },
+        "fighter2": {
+          "name": "Preston Parsons",
+          "record": "2-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2214/2022-04-23-08-06-34__jmlx__ID2214.jpg"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7612.html"
+      },
+      {
+        "fighter1": {
+          "name": "Sam Patterson",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2402/sam-patterson-2024-01-20-09-43-12__bask__ID2402.webp"
+        },
+        "fighter2": {
+          "name": "Kiefer Crosbie",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2462/kiefer-crosbie-2023-08-25-05-02-44__mldm__ID2462.webp"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7617.html"
+      },
+      {
+        "fighter1": {
+          "name": "Modestas Bukauskas",
+          "record": "3-4-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2072/modestas-bukauskas-2023-11-04-09-47-02__zclm__ID2072.webp"
+        },
+        "fighter2": {
+          "name": "Marcin Prachnio",
+          "record": "4-5-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1775/marcin-prachnio-2023-07-07-07-47-54__wcax__ID1775.webp"
+        },
+        "details": "Combat Categorie - Poids Mi-Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7648.html"
+      },
+      {
+        "fighter1": {
+          "name": "Christian Leroy Duncan",
+          "record": "3-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2405/christian-leroy-duncan-2024-03-02-09-26-39__xkzd__ID2405.webp"
+        },
+        "fighter2": {
+          "name": "Gregory Rodrigues",
+          "record": "6-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2206/2022-06-17-06-39-49__qaeb__ID2206.jpg"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7613.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC ON ABC 7 - SANDHAGEN VS. NURMAGOMEDOV",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 3 août 2024",
+    "eventLocation": "ETIHAD ARENA, YAS ISLAND, ABU DHABI, UNITED ARAB EMIRATES",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=450&path=../https://www.ufc-fr.com/data/evenement/705/ufc-on-abc-7-sandhagen-vs-nurmagomedov-2024-06-14-09-11-23__dckx__ID705.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Cory Sandhagen",
+          "record": "10-3-0",
+          "ranking": "#2",
+          "image": "https://www.ufc-fr.com/data/combattant/1774/2018-08-24-11-33-27__muwz__ID1774.jpg"
+        },
+        "fighter2": {
+          "name": "Umar Nurmagomedov",
+          "record": "5-0-0",
+          "ranking": "#10",
+          "image": "https://www.ufc-fr.com/data/combattant/2059/umar-nurmagomedov-2024-03-02-10-49-49__cohi__ID2059.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7814.html"
+      },
+      {
+        "fighter1": {
+          "name": "Vicente Luque",
+          "record": "15-6-0",
+          "ranking": "#13",
+          "image": "https://www.ufc-fr.com/data/combattant/68/2018-05-19-08-25-23__pyzu__ID68.jpg"
+        },
+        "fighter2": {
+          "name": "Nick Diaz",
+          "record": "7-7-0",
+          "ranking": "#13",
+          "image": "https://www.ufc-fr.com/data/combattant/83/2015-12-24-10-37-04__ruwu__ID83.jpg"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7692.html"
+      },
+      {
+        "fighter1": {
+          "name": "Joel Alvarez",
+          "record": "5-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1901/joel-alvarez-2023-07-22-05-30-32__genr__ID1901.webp"
+        },
+        "fighter2": {
+          "name": "Elves Brener",
+          "record": "3-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2392/elves-brener-2023-11-04-09-59-00__rzxw__ID2392.webp"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7861.html"
+      },
+      {
+        "fighter1": {
+          "name": "Michael Chiesa",
+          "record": "11-7-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/155/2019-07-05-09-28-57__fdtg__ID155.jpg"
+        },
+        "fighter2": {
+          "name": "Tony Ferguson",
+          "record": "15-8-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/43/tony-ferguson-2023-12-15-11-04-57__wios__ID43.webp"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7689.html"
+      },
+      {
+        "fighter1": {
+          "name": "Marlon Vera",
+          "record": "15-8-0",
+          "ranking": "#4",
+          "image": "https://www.ufc-fr.com/data/combattant/341/marlon-vera-2024-03-09-12-52-49__fuzx__ID341.webp"
+        },
+        "fighter2": {
+          "name": "Deiveson Figueiredo",
+          "record": "12-3-1",
+          "ranking": "#6",
+          "image": "https://www.ufc-fr.com/data/combattant/1667/deiveson-figueiredo-2024-04-13-08-56-22__xjev__ID1667.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7841.html"
+      },
+      {
+        "fighter1": {
+          "name": "Chris Gutierrez",
+          "record": "8-3-1",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1875/chris-gutierrez-2023-10-14-10-54-04__xdlq__ID1875.webp"
+        },
+        "fighter2": {
+          "name": "Javid Basharat",
+          "record": "3-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2263/javid-basharat-2024-03-02-09-38-43__czlq__ID2263.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7855.html"
+      },
+      {
+        "fighter1": {
+          "name": "Jai Herbert",
+          "record": "2-4-1",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2038/jai-herbert-2023-07-22-05-42-19__bxzd__ID2038.webp"
+        },
+        "fighter2": {
+          "name": "Rolando Bedoya",
+          "record": "0-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2399/2023-01-26-06-46-43__xqxe__ID2399.jpg"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7854.html"
+      },
+      {
+        "fighter1": {
+          "name": "Sedriques Dumas",
+          "record": "2-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2369/sedriques-dumas-2023-10-21-09-31-27__zmyx__ID2369.webp"
+        },
+        "fighter2": {
+          "name": "Denis Tiuliulin",
+          "record": "1-4-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2291/denis-tiuliulin-2023-11-18-02-32-59__hqtt__ID2291.webp"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7857.html"
+      },
+      {
+        "fighter1": {
+          "name": "Abdul-Kareem Al-Selwady",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2514/abdul-kareem-al-selwady-2024-03-02-08-32-35__mysg__ID2514.webp"
+        },
+        "fighter2": {
+          "name": "Guram Kutateladze",
+          "record": "1-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2144/guram-kutateladze-2023-06-30-11-36-03__gbtk__ID2144.webp"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7711.html"
+      },
+      {
+        "fighter1": {
+          "name": "Mackenzie Dern",
+          "record": "8-5-0",
+          "ranking": "#6",
+          "image": "https://www.ufc-fr.com/data/combattant/1780/mackenzie-dern-2024-02-17-10-21-16__pbqk__ID1780.webp"
+        },
+        "fighter2": {
+          "name": "Lupita Godinez",
+          "record": "7-4-0",
+          "ranking": "#9",
+          "image": "https://www.ufc-fr.com/data/combattant/2197/lupita-godinez-2023-11-10-04-06-17__ydtn__ID2197.webp"
+        },
+        "details": "Combat Categorie - Poids Pailles",
+        "fightLink": "https://www.ufc-fr.com/combat-7690.html"
+      },
+      {
+        "fighter1": {
+          "name": "Alonzo Menifield",
+          "record": "8-4-1",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/1849/alonzo-menifield-2023-12-15-10-49-10__cvrw__ID1849.webp"
+        },
+        "fighter2": {
+          "name": "Azamat Murzakanov",
+          "record": "3-0-0",
+          "ranking": "#15",
+          "image": "https://www.ufc-fr.com/data/combattant/2239/2022-08-12-08-39-42__fwom__ID2239.jpg"
+        },
+        "details": "Combat Categorie - Poids Mi-Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7694.html"
+      },
+      {
+        "fighter1": {
+          "name": "Victoria Dudakova",
+          "record": "2-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2425/viktoriya-dudakova-2023-10-21-09-16-38__djjm__ID2425.webp"
+        },
+        "fighter2": {
+          "name": "Sam Hughes",
+          "record": "3-5-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2160/2022-04-16-01-31-41__olas__ID2160.jpg"
+        },
+        "details": "Combat Categorie - Poids Pailles",
+        "fightLink": "https://www.ufc-fr.com/combat-7726.html"
+      },
+      {
+        "fighter1": {
+          "name": "Azat Maksum",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2414/azat-maksum-2023-07-14-09-56-28__hubr__ID2414.webp"
+        },
+        "fighter2": {
+          "name": "C.J. Vergara",
+          "record": "3-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2243/c-j--vergara-2024-03-09-09-12-30__tjme__ID2243.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7727.html"
+      },
+      {
+        "fighter1": {
+          "name": "Mohammad Yahya",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2468/mohammad-yahya-2023-10-21-09-40-32__eeai__ID2468.webp"
+        },
+        "fighter2": {
+          "name": "Kaue Fernandes",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2474/kaue-fernandes-2023-11-04-09-27-16__rxdm__ID2474.webp"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7783.html"
+      },
+      {
+        "fighter1": {
+          "name": "Don'tale Mayes",
+          "record": "4-4-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1996/don-tale-mayes-2024-04-27-12-15-15__auzs__ID1996.jpeg"
+        },
+        "fighter2": {
+          "name": "Shamil Gaziev",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2482/shamil-gaziev-2024-03-02-11-17-03__xhnw__ID2482.webp"
+        },
+        "details": "Combat Categorie - Poids Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7869.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC FIGHT NIGHT",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 10 août 2024",
+    "eventLocation": "UFC APEX, LAS VEGAS, NEVADA",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=250&path=../images/evenement.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Marcin Tybura",
+          "record": "12-7-0",
+          "ranking": "#8",
+          "image": "https://www.ufc-fr.com/data/combattant/1538/marcin-tybura-2023-07-22-05-53-15__ufmq__ID1538.webp"
+        },
+        "fighter2": {
+          "name": "Serghei Spivac",
+          "record": "7-4-0",
+          "ranking": "#9",
+          "image": "https://www.ufc-fr.com/data/combattant/1928/serghei-spivac-2023-09-02-11-41-59__pmpg__ID1928.webp"
+        },
+        "details": "Combat Categorie - Poids Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7849.html"
+      },
+      {
+        "fighter1": {
+          "name": "Jarno Errens",
+          "record": "1-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2332/jarno-errens-2023-08-25-12-46-11__pyvx__ID2332.webp"
+        },
+        "fighter2": {
+          "name": "Youssef Zalal",
+          "record": "4-3-1",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2040/2020-02-08-09-21-24__nhkv__ID2040.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7673.html"
+      },
+      {
+        "fighter1": {
+          "name": "Karl Williams",
+          "record": "3-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2367/karl-williams-2023-03-11-09-22-13__oiif__ID2367.jpg"
+        },
+        "fighter2": {
+          "name": "Jhonata Diniz",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2520/jhonata-diniz-2024-04-27-12-26-27__mixc__ID2520.jpeg"
+        },
+        "details": "Combat Categorie - Poids Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7687.html"
+      },
+      {
+        "fighter1": {
+          "name": "Jonny Parsons",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2281/2022-02-10-11-10-32__fzll__ID2281.jpg"
+        },
+        "fighter2": {
+          "name": "Yusaku Kinoshita",
+          "record": "0-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2352/2023-02-04-09-07-06__epun__ID2352.jpg"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7731.html"
+      },
+      {
+        "fighter1": {
+          "name": "Stephanie Luciano",
+          "record": "0-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2506/stephanie-luciano-2023-12-25-09-43-12__lsdd__ID2506.webp"
+        },
+        "fighter2": {
+          "name": "Talita Alencar",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2495/talita-alencar-2023-12-08-09-01-10__zqih__ID2495.webp"
+        },
+        "details": "Combat Categorie - Poids Pailles",
+        "fightLink": "https://www.ufc-fr.com/combat-7792.html"
+      },
+      {
+        "fighter1": {
+          "name": "Allan Nascimento",
+          "record": "2-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2217/2023-01-14-02-11-52__dfnf__ID2217.jpg"
+        },
+        "fighter2": {
+          "name": "Jafel Filho",
+          "record": "2-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2395/2023-01-17-08-38-29__bxdc__ID2395.jpg"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7842.html"
+      },
+      {
+        "fighter1": {
+          "name": "Danny Barlow",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2473/danny-barlow-2023-10-02-03-07-41__cwye__ID2473.webp"
+        },
+        "fighter2": {
+          "name": "Uros Medic",
+          "record": "4-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2163/uros-medic-2024-04-27-12-39-19__xsbh__ID2163.jpeg"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7843.html"
+      },
+      {
+        "fighter1": {
+          "name": "Yana Santos",
+          "record": "4-5-0",
+          "ranking": "#12",
+          "image": "https://www.ufc-fr.com/data/combattant/1781/2018-10-05-08-00-19__pmvf__ID1781.jpg"
+        },
+        "fighter2": {
+          "name": "Chelsea Chandler",
+          "record": "2-1-0",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/2307/chelsea-chandler-2024-03-16-10-51-24__yytw__ID2307.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7858.html"
+      },
+      {
+        "fighter1": {
+          "name": "Charalampos Grigoriou",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2510/charalampos-grigoriou-2024-03-16-05-54-27__tzed__ID2510.webp"
+        },
+        "fighter2": {
+          "name": "Toshiomi Kazama",
+          "record": "0-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2389/2023-02-04-08-53-12__ubbi__ID2389.jpg"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7873.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC 305 - DU PLESSIS VS. ADESANYA",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 17 août 2024",
+    "eventLocation": "RAC ARENA, PERTH, WESTERN AUSTRALIA",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=450&path=../https://www.ufc-fr.com/data/evenement/710/ufc-305-du-plessis-vs-adesanya-2024-06-17-11-18-20__vdop__ID710.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Dricus Du Plessis",
+          "record": "7-0-0",
+          "ranking": "#2",
+          "image": "https://www.ufc-fr.com/data/combattant/2137/dricus-du-plessis-2024-01-20-12-05-16__zcwn__ID2137.webp"
+        },
+        "fighter2": {
+          "name": "Israel Adesanya",
+          "record": "13-3-0",
+          "ranking": "#2",
+          "image": "https://www.ufc-fr.com/data/combattant/1767/2020-09-24-03-15-35__mhwu__ID1767.jpg"
+        },
+        "details": "Championnat du Monde - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7764.html"
+      },
+      {
+        "fighter1": {
+          "name": "Tom Nolan",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2499/tom-nolan-2024-05-18-10-28-18__skzi__ID2499.webp"
+        },
+        "fighter2": {
+          "name": "Alex Reyes",
+          "record": "0-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1716/alex-reyes-2023-02-13-09-15-50__vgnd__ID1716.jpg"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7839.html"
+      },
+      {
+        "fighter1": {
+          "name": "Jairzinho Rozenstruik",
+          "record": "8-5-0",
+          "ranking": "#12",
+          "image": "https://www.ufc-fr.com/data/combattant/1892/jairzinho-rozenstruik-2024-03-02-11-17-21__ggfw__ID1892.webp"
+        },
+        "fighter2": {
+          "name": "Tai Tuivasa",
+          "record": "8-7-0",
+          "ranking": "#10",
+          "image": "https://www.ufc-fr.com/data/combattant/1733/2018-06-09-02-27-03__igkr__ID1733.jpg"
+        },
+        "details": "Combat Categorie - Poids Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7859.html"
+      },
+      {
+        "fighter1": {
+          "name": "Kai Kara-France",
+          "record": "7-4-0",
+          "ranking": "#4",
+          "image": "https://www.ufc-fr.com/data/combattant/1834/2019-02-09-09-34-26__fufq__ID1834.jpg"
+        },
+        "fighter2": {
+          "name": "Steve Erceg",
+          "record": "3-1-0",
+          "ranking": "#9",
+          "image": "https://www.ufc-fr.com/data/combattant/2417/steve-erceg-2024-03-02-10-22-23__ackq__ID2417.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7864.html"
+      },
+      {
+        "fighter1": {
+          "name": "Junior Tafa",
+          "record": "1-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2393/junior-tafa-2024-02-17-10-03-38__ahzf__ID2393.webp"
+        },
+        "fighter2": {
+          "name": "Valter Walker",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2437/valter-walker-2024-04-06-11-42-27__umyr__ID2437.webp"
+        },
+        "details": "Combat Categorie - Poids Lourds",
+        "fightLink": "https://www.ufc-fr.com/combat-7439.html"
+      },
+      {
+        "fighter1": {
+          "name": "Gavin Tucker",
+          "record": "4-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1653/2019-07-26-11-01-14__qnfi__ID1653.jpg"
+        },
+        "fighter2": {
+          "name": "Jack Jenkins",
+          "record": "2-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2358/jack-jenkins-2023-02-11-09-22-16__heit__ID2358.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7476.html"
+      },
+      {
+        "fighter1": {
+          "name": "Josh Culibao",
+          "record": "3-3-1",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2048/josh-culibao-2024-03-16-10-01-51__masl__ID2048.webp"
+        },
+        "fighter2": {
+          "name": "Ricardo Ramos",
+          "record": "7-5-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1647/2022-06-17-06-32-40__dsxx__ID1647.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7508.html"
+      },
+      {
+        "fighter1": {
+          "name": "Casey O'Neill",
+          "record": "4-2-0",
+          "ranking": "#13",
+          "image": "https://www.ufc-fr.com/data/combattant/2159/casey-o-neill-2023-12-15-10-32-35__vdqv__ID2159.webp"
+        },
+        "fighter2": {
+          "name": "Tereza Bleda",
+          "record": "1-1-0",
+          "ranking": "#13",
+          "image": "https://www.ufc-fr.com/data/combattant/2346/2022-11-18-09-29-21__uszb__ID2346.jpg"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7680.html"
+      },
+      {
+        "fighter1": {
+          "name": "Jingliang Li",
+          "record": "11-6-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/950/2019-08-31-02-19-13__yjnh__ID950.jpg"
+        },
+        "fighter2": {
+          "name": "Carlos Prates",
+          "record": "2-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2496/carlos-prates-2023-11-23-09-08-57__usnw__ID2496.webp"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7868.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC FIGHT NIGHT",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 24 août 2024",
+    "eventLocation": "UFC APEX, LAS VEGAS, NEVADA",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=250&path=../images/evenement.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Zach Reese",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2483/zachary-reese-2023-12-02-10-20-24__mgaf__ID2483.webp"
+        },
+        "fighter2": {
+          "name": "Jose Medina",
+          "record": "0-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2585/jose-medina-2024-06-18-09-17-40__ooda__ID2585.webp"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7853.html"
+      },
+      {
+        "fighter1": {
+          "name": "Dennis Buzukja",
+          "record": "1-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2450/dennis-buzukja-2023-11-10-03-38-44__txew__ID2450.webp"
+        },
+        "fighter2": {
+          "name": "Danny Silva",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2518/danny-silva-2024-03-16-10-01-21__hozs__ID2518.webp"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7850.html"
+      },
+      {
+        "fighter1": {
+          "name": "Neil Magny",
+          "record": "22-10-0",
+          "ranking": "#12",
+          "image": "https://www.ufc-fr.com/data/combattant/29/neil-magny-2024-01-20-11-32-25__szse__ID29.webp"
+        },
+        "fighter2": {
+          "name": "Michael Morales",
+          "record": "4-0-0",
+          "ranking": "#12",
+          "image": "https://www.ufc-fr.com/data/combattant/2250/michael-morales-2023-07-01-10-07-38__frjn__ID2250.webp"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7874.html"
+      },
+      {
+        "fighter1": {
+          "name": "Viacheslav Borshchev",
+          "record": "2-3-1",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2255/viacheslav-borshchev-2023-11-10-04-00-29__pplg__ID2255.webp"
+        },
+        "fighter2": {
+          "name": "James Llontop",
+          "record": "0-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2516/james-llontop-2024-04-27-12-06-23__ccyx__ID2516.jpeg"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7753.html"
+      },
+      {
+        "fighter1": {
+          "name": "Roman Kopylov",
+          "record": "5-3-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2011/roman-kopylov-2024-06-01-10-43-37__pctl__ID2011.webp"
+        },
+        "fighter2": {
+          "name": "Brunno Ferreira",
+          "record": "3-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2382/2023-01-21-11-39-57__pgxr__ID2382.jpg"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7818.html"
+      },
+      {
+        "fighter1": {
+          "name": "Gerald Meerschaert",
+          "record": "11-9-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1628/gerald-meerschaert-2024-03-16-11-45-50__xkhv__ID1628.webp"
+        },
+        "fighter2": {
+          "name": "Edmen Shahbazyan",
+          "record": "6-4-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1862/2019-07-05-09-18-08__beod__ID1862.jpg"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7846.html"
+      },
+      {
+        "fighter1": {
+          "name": "Josiane Nunes",
+          "record": "3-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/1763/josiane-nunes-2024-03-16-10-51-41__uivm__ID1763.webp"
+        },
+        "fighter2": {
+          "name": "Jacqueline Cavalcanti",
+          "record": "1-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2457/jacqueline-cavalcanti-2023-09-02-09-38-45__dgew__ID2457.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7866.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC FIGHT NIGHT - BURNS VS. BRADY",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 7 septembre 2024",
+    "eventLocation": "UFC APEX, LAS VEGAS, NEVADA",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=250&path=../images/evenement.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Gilbert Burns",
+          "record": "15-7-0",
+          "ranking": "#6",
+          "image": "https://www.ufc-fr.com/data/combattant/914/2018-07-07-02-29-47__erda__ID914.jpg"
+        },
+        "fighter2": {
+          "name": "Sean Brady",
+          "record": "6-1-0",
+          "ranking": "#8",
+          "image": "https://www.ufc-fr.com/data/combattant/2004/sean-brady-2023-12-02-10-49-25__zjaf__ID2004.webp"
+        },
+        "details": "Combat Categorie - Poids Mi-Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7847.html"
+      },
+      {
+        "fighter1": {
+          "name": "Calvin Kattar",
+          "record": "7-6-0",
+          "ranking": "#9",
+          "image": "https://www.ufc-fr.com/data/combattant/1702/calvin-kattar-2024-04-13-11-39-25__dcos__ID1702.webp"
+        },
+        "fighter2": {
+          "name": "Kyle Nelson",
+          "record": "4-4-1",
+          "ranking": "#9",
+          "image": "https://www.ufc-fr.com/data/combattant/1899/2023-02-04-09-17-14__okci__ID1899.jpg"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7844.html"
+      },
+      {
+        "fighter1": {
+          "name": "Jessica Andrade",
+          "record": "17-10-0",
+          "ranking": "#5",
+          "image": "https://www.ufc-fr.com/data/combattant/634/jessica-andrade-2024-04-13-09-39-03__ixmm__ID634.webp"
+        },
+        "fighter2": {
+          "name": "Natalia Silva",
+          "record": "5-0-0",
+          "ranking": "#8",
+          "image": "https://www.ufc-fr.com/data/combattant/2162/natalia-silva-2024-02-03-01-28-04__clyd__ID2162.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7863.html"
+      },
+      {
+        "fighter1": {
+          "name": "Andre Lima",
+          "record": "2-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2533/andre-lima-2024-06-01-10-08-15__slqu__ID2533.webp"
+        },
+        "fighter2": {
+          "name": "Felipe dos Santos",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2458/felipe-dos-santos-2023-08-22-08-06-35__qfha__ID2458.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7870.html"
+      },
+      {
+        "fighter1": {
+          "name": "Matt Schnell",
+          "record": "6-6-0",
+          "ranking": "#12",
+          "image": "https://www.ufc-fr.com/data/combattant/1629/matt-schnell-2024-03-02-10-22-56__dsqq__ID1629.webp"
+        },
+        "fighter2": {
+          "name": "Alessandro Costa",
+          "record": "2-2-0",
+          "ranking": "#12",
+          "image": "https://www.ufc-fr.com/data/combattant/2364/alessandro-costa-2023-11-10-04-08-48__yojr__ID2364.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7821.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC 306",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 14 septembre 2024",
+    "eventLocation": "THE SPHERE, LAS VEGAS, NEVADA",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=450&path=../https://www.ufc-fr.com/data/evenement/694/ufc-306-2024-06-27-05-49-19__egpa__ID694.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Sean O'Malley",
+          "record": "10-1-0",
+          "ranking": "#1",
+          "image": "https://www.ufc-fr.com/data/combattant/1747/sean-o-malley-2024-03-09-12-53-05__uumw__ID1747.webp"
+        },
+        "fighter2": {
+          "name": "Merab Dvalishvili",
+          "record": "10-2-0",
+          "ranking": "#1",
+          "image": "https://www.ufc-fr.com/data/combattant/1745/merab-dvalishvili-2024-02-17-10-39-50__byzy__ID1745.webp"
+        },
+        "details": "Combat non confirme",
+        "fightLink": "https://www.ufc-fr.com/combat-7767.html"
+      },
+      {
+        "fighter1": {
+          "name": "Alexa Grasso",
+          "record": "8-3-1",
+          "ranking": "#1",
+          "image": "https://www.ufc-fr.com/data/combattant/1596/2018-05-19-08-47-04__qrte__ID1596.jpg"
+        },
+        "fighter2": {
+          "name": "Valentina Shevchenko",
+          "record": "12-3-1",
+          "ranking": "#1",
+          "image": "https://www.ufc-fr.com/data/combattant/1518/valentina-shevchenko-2023-03-03-09-42-37__htcj__ID1518.jpg"
+        },
+        "details": "Combat non confirme",
+        "fightLink": "https://www.ufc-fr.com/combat-7862.html"
+      },
+      {
+        "fighter1": {
+          "name": "Irene Aldana",
+          "record": "8-5-0",
+          "ranking": "#3",
+          "image": "https://www.ufc-fr.com/data/combattant/1635/irene-aldana-2023-12-15-10-43-28__yatg__ID1635.webp"
+        },
+        "fighter2": {
+          "name": "Norma Dumont",
+          "record": "7-2-0",
+          "ranking": "#10",
+          "image": "https://www.ufc-fr.com/data/combattant/2032/norma-dumont-2024-04-06-11-06-44__jewl__ID2032.webp"
+        },
+        "details": "Combat Categorie - Poids Coqs",
+        "fightLink": "https://www.ufc-fr.com/combat-7865.html"
+      },
+      {
+        "fighter1": {
+          "name": "Michel Pereira",
+          "record": "9-2-0",
+          "ranking": "#13",
+          "image": "https://www.ufc-fr.com/data/combattant/1932/michel-pereira-2024-03-09-10-00-39__bryr__ID1932.webp"
+        },
+        "fighter2": {
+          "name": "Anthony Hernandez",
+          "record": "6-2-0",
+          "ranking": "#14",
+          "image": "https://www.ufc-fr.com/data/combattant/1891/anthony-hernandez-2024-02-17-10-26-48__occt__ID1891.webp"
+        },
+        "details": "Combat Categorie - Poids Moyens",
+        "fightLink": "https://www.ufc-fr.com/combat-7867.html"
+      },
+      {
+        "fighter1": {
+          "name": "Yazmin Jauregui",
+          "record": "3-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2303/2022-08-12-08-36-08__cpda__ID2303.jpg"
+        },
+        "fighter2": {
+          "name": "Ketlen Souza",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2421/ketlen-souza-2024-04-27-12-13-04__zegy__ID2421.jpeg"
+        },
+        "details": "Combat Categorie - Poids Pailles",
+        "fightLink": "https://www.ufc-fr.com/combat-7871.html"
+      },
+      {
+        "fighter1": {
+          "name": "Edgar Chairez",
+          "record": "1-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2442/edgar-chairez-2023-07-07-07-49-20__fopb__ID2442.webp"
+        },
+        "fighter2": {
+          "name": "Kevin Borjas",
+          "record": "0-2-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2455/kevin-borjas-2023-11-10-03-39-56__qkyw__ID2455.webp"
+        },
+        "details": "Combat Categorie - Poids Mouches",
+        "fightLink": "https://www.ufc-fr.com/combat-7872.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC PARIS 3",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 28 septembre 2024",
+    "eventLocation": "ACCOR ARENA, PARIS, FRANCE",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=450&path=../https://www.ufc-fr.com/data/evenement/707/ufc-paris-3-2024-05-14-02-05-48__gnae__ID707.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Benoit Saint-Denis",
+          "record": "5-2-0",
+          "ranking": "#11",
+          "image": "https://www.ufc-fr.com/data/combattant/2253/benoit-saint-denis-2024-03-09-12-51-12__dexw__ID2253.webp"
+        },
+        "fighter2": {
+          "name": "Renato Moicano",
+          "record": "11-5-0",
+          "ranking": "#9",
+          "image": "https://www.ufc-fr.com/data/combattant/1396/renato-moicano-2024-04-13-10-00-12__dcuh__ID1396.webp"
+        },
+        "details": "Combat Categorie - Poids Légers",
+        "fightLink": "https://www.ufc-fr.com/combat-7608.html"
+      },
+      {
+        "fighter1": {
+          "name": "Joanderson Brito",
+          "record": "5-1-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2238/joanderson-brito-2023-07-01-08-59-32__uapy__ID2238.webp"
+        },
+        "fighter2": {
+          "name": "William Gomis",
+          "record": "3-0-0",
+          "ranking": "",
+          "image": "https://www.ufc-fr.com/data/combattant/2331/william-gomis-2023-09-02-11-20-12__qlip__ID2331.webp"
+        },
+        "details": "Combat Categorie - Poids Plumes",
+        "fightLink": "https://www.ufc-fr.com/combat-7779.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC 307",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 5 octobre 2024",
+    "eventLocation": "DELTA CENTER, SALT LAKE CITY, UTAH, UNITED STATES",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=250&path=../images/evenement.jpg",
+    "fights": [
+      {
+        "fighter1": {
+          "name": "Raquel Pennington",
+          "record": "13-5-0",
+          "ranking": "#1",
+          "image": "https://www.ufc-fr.com/data/combattant/219/raquel-pennington-2024-01-20-12-03-41__dwfs__ID219.webp"
+        },
+        "fighter2": {
+          "name": "Julianna Pena",
+          "record": "7-3-0",
+          "ranking": "#1",
+          "image": "https://www.ufc-fr.com/data/combattant/904/2021-01-22-06-35-23__ddic__ID904.jpg"
+        },
+        "details": "Combat non confirme",
+        "fightLink": "https://www.ufc-fr.com/combat-7848.html"
+      }
+    ]
+  },
+  {
+    "eventTitle": "UFC 308",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 26 octobre 2024",
+    "eventLocation": "ETIHAD ARENA, YAS ISLAND, ABU DHABI, UNITED ARAB EMIRATES",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=450&path=../https://www.ufc-fr.com/data/evenement/712/ufc-308-2024-04-12-06-30-52__ojsq__ID712.jpg",
+    "fights": []
+  },
+  {
+    "eventTitle": "UFC 309",
+    "eventDate": "FemmesHommesStatistiques combatsStatistiques EvènementsFemmesHommesClassement UFC Classement UFC FansSamedi 9 novembre 2024",
+    "eventLocation": "MADISON SQUARE GARDEN, NEW YORK, NEW YORK",
+    "eventPoster": "https://www.ufc-fr.com/https://www.ufc-fr.com/data/poster.php?w=250&path=../images/evenement.jpg",
+    "fights": []
+  }
+]

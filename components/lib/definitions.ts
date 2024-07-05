@@ -9,32 +9,31 @@ export type Event = {
     id: number;
     name: string;
     date: string;
-    location: string;
+    event_location: string;
+    event_poster: string;
     organization_id: number;
   };
 
 export type Fight = {
     id: number;
-    eventId: number;
-    fighter1Id: number;
-    fighter2Id: number;
-    fightFinished: boolean;
-    winnerId: number;
+    event_id: number;
+    fighter1_id: number;
+    fighter2_id: number;
+    fight_finished: boolean;
+    winner_id: number;
     method: string;
     round: number;
     time: string;
-    weightClass: string;
+    weight_class: string;
   };
 
 export type Fighter = {
     id: number;
     name: string;
-    nationality: string;
-    imageUrl: string;
-    weightClass: string;
+    image_url: string;
+    weight_class: string;
     organization_id: number;
-    wins: number; // Moved out of 'record' for direct access
-    losses: number;
-    draws: number;
+    record: string;
+    ranking: number;
   };
   
