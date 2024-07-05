@@ -3,7 +3,7 @@ import cheerio from "cheerio";
 import fs from "fs";
 import path from "path";
 
-const baseURL = "https://pflmma.com/regular-season/2024";
+const baseURL = "https://pflmma.com/europe-event";
 const organizationId = 3; // ID de l'organisation fixé à 3
 
 // Fonction pour récupérer et charger une page
@@ -28,9 +28,9 @@ async function fetchEventDetails(eventUrl, eventTitle) {
     id: eventIdCounter++,
     name:
       eventTitle || $("h1.event-title").text().trim() || $("h1").text().trim(),
-    date: $(".font-oswald.font-weight-bold.m-0").first().text().trim(),
-    event_location: $(".m-0.letter-spacing").text().trim(),
-    event_poster: $(".event-thumbnail").attr("src") || "",
+    date: $(".event-date").text().trim(),
+    event_location: $(".event-location").text().trim(),
+    event_poster: $(".event-poster img").attr("src") || "",
     organization_id: organizationId,
     fights: []
   };
@@ -83,16 +83,24 @@ async function fetchEventDetails(eventUrl, eventTitle) {
     const details = `Combat Categorie - ${weightClass}`;
     const fightLink = ""; // Champ vide
 
+    const fightFinished = $(elem).find(".winBy").text().trim() !== "";
+    const method = fightFinished ? $(elem).find(".winBy").text().trim() : "";
+
+    // Nettoyage de la méthode pour éviter les doublons
+    const cleanedMethod = method
+      .split(" ")
+      .filter((value, index, self) => self.indexOf(value) === index)
+      .join(" ");
+
     eventDetails.fights.push({
       id: fightIdCounter++,
       event_name: eventDetails.name,
       fighter1_id: fighter1.name,
       fighter2_id: fighter2.name,
-      fight_finished: false,
-      winner_id: null,
-      method: "",
-      round: 0,
-      time: "",
+      fight_finished: fightFinished,
+      method: cleanedMethod,
+      round: fightFinished ? 3 : 0,
+      time: fightFinished ? "5:00" : "",
       weight_class: weightClass
     });
   });
@@ -102,26 +110,17 @@ async function fetchEventDetails(eventUrl, eventTitle) {
 
 // Fonction principale pour orchestrer la récupération des événements
 async function fetchEvents() {
-  const $ = await fetchPage(baseURL);
-  if (!$) return;
-
-  const events = [];
-
-  $(".event-buttons a.btn-secondary").each((i, elem) => {
-    const eventUrl = $(elem).attr("href");
-    const eventTitle = $(elem)
-      .closest(".row")
-      .find(".font-oswald.font-weight-bold.m-0")
-      .first()
-      .text()
-      .trim();
-    if (eventUrl) {
-      events.push(fetchEventDetails(eventUrl, eventTitle));
-    }
-  });
+  const events = [
+    { url: `${baseURL}/2024-pfl-europe-1`, title: "PFL Europe 1" },
+    { url: `${baseURL}/2024-pfl-europe-2`, title: "PFL Europe 2" },
+    { url: `${baseURL}/2024-pfl-europe-3`, title: "Sep 28 Playoffs" },
+    { url: `${baseURL}/2024-pfl-europe-4`, title: "Dec 14 Championship" }
+  ];
 
   try {
-    const eventsDetails = await Promise.all(events);
+    const eventsDetails = await Promise.all(
+      events.map((event) => fetchEventDetails(event.url, event.title))
+    );
 
     const eventsData = eventsDetails.map((event) => ({
       id: event.id,

@@ -77,7 +77,9 @@ export default function EventListByOrg({ eventId }: { eventId: string }) {
                           {fight.fighter1.name}
                         </p>
                         <p className="text-xs text-white-500">{fight.fighter1.record}</p>
-                        <p className="text-xs text-white-500">{fight.fighter1.ranking}</p>
+                        <p className="text-xs text-white-500">
+                          {fight.fighter1.ranking !== 0 && `Ranking: ${fight.fighter1.ranking}`}
+                       </p>
                       </div>
                     </div>
                     <div className="flex items-center gap-x-4">
@@ -91,7 +93,9 @@ export default function EventListByOrg({ eventId }: { eventId: string }) {
                           {fight.fighter2.name}
                         </p>
                         <p className="text-xs text-white-500">{fight.fighter2.record}</p>
-                        <p className="text-xs text-white-500">{fight.fighter2.ranking}</p>
+                        <p className="text-xs text-white-500">
+                          {fight.fighter2.ranking !== 0 && `Ranking: ${fight.fighter2.ranking}`}
+                        </p>
                       </div>
                     </div>
                   </>
