@@ -4,6 +4,7 @@ import {
     Event,
     Fight,
     Fighter,
+    FightHistoryEntry,
   } from './definitions';
 
 export async function fetchOrganizations() {
@@ -231,14 +232,7 @@ export async function fetchFightsByFighterId(fighterId: string) {
           : String(row.winner_id) === String(fighterId)
             ? 'win'
             : 'loss',
-    })) as Array<Omit<Fight, 'winner_id'> & {
-      winner_id: number | null;
-      event_name: string;
-      event_date: string;
-      opponent_name: string | null;
-      opponent_image_url: string | null;
-      result: 'win' | 'loss' | 'draw' | 'upcoming';
-    }>;
+    })) as FightHistoryEntry[];
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch fight history.');
