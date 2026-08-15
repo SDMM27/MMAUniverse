@@ -1,7 +1,7 @@
 export type Organization = {
     id: number;
     name: string;
-    abbreviation: number;
+    abbreviation: string;
     logo_link: string;
   };
 
@@ -36,4 +36,33 @@ export type Fighter = {
     record: string;
     ranking: number;
   };
-  
+
+export type EventWithOrganization = Event & {
+  organization_abbreviation: string;
+};
+
+export type FighterWithOrganization = Fighter & {
+  organization_abbreviation: string;
+};
+
+export type FightWithFighters = Fight & {
+  fighter1: Fighter | null;
+  fighter2: Fighter | null;
+};
+
+export type FightHistoryEntry = Fight & {
+  event_name: string;
+  event_date: string;
+  opponent_name: string;
+  opponent_image_url: string;
+  result: 'win' | 'loss' | 'draw' | 'upcoming';
+};
+
+export type FighterStats = {
+  wins: number;
+  losses: number;
+  draws: number;
+  ko: number;
+  submission: number;
+  decision: number;
+};
