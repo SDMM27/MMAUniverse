@@ -227,7 +227,8 @@ export async function fetchFightsByFighterId(fighterId: string) {
           : String(row.winner_id) === String(fighterId)
             ? 'win'
             : 'loss',
-    })) as Array<Fight & {
+    })) as Array<Omit<Fight, 'winner_id'> & {
+      winner_id: number | null;
       event_name: string;
       event_date: string;
       opponent_name: string | null;
