@@ -18,7 +18,7 @@ export default function FighterHistoryList({ fights }: { fights: FightHistoryEnt
             className="flex items-center justify-between rounded-lg border border-base-border bg-base-card p-3 hover:border-accent"
           >
             <div>
-              <p className="text-sm text-ink-primary">vs {fight.opponent_name}</p>
+              <p className="text-sm text-ink-primary">vs {fight.opponent_name ?? 'Adversaire inconnu'}</p>
               <p className="text-xs text-ink-secondary">
                 {fight.event_name} · {fight.event_date}
               </p>
