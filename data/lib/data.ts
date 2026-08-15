@@ -4,7 +4,6 @@ import {
     Event,
     Fight,
     Fighter,
-    FightWithFighters,
   } from './definitions';
 
 export async function fetchOrganizations() {
@@ -151,7 +150,11 @@ export async function fetchFightsByEvent(eventId: string) {
             ranking: row.f2_ranking,
           }
         : null,
-    })) as FightWithFighters[];
+    })) as Array<Omit<Fight, 'winner_id'> & {
+      winner_id: number | null;
+      fighter1: Fighter | null;
+      fighter2: Fighter | null;
+    }>;
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch fights for event.');
