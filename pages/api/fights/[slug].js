@@ -1,6 +1,6 @@
 // pages/api/fights/[slug].js
 
-import { sql } from "@vercel/postgres";
+import { sql } from "@/data/lib/db";
 
 export default async function handler(req, res) {
   const { slug } = req.query; // Extraction du slug de la requête

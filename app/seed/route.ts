@@ -1,4 +1,4 @@
-import { db, sql } from '@vercel/postgres';
+import { sql } from '@/data/lib/db';
 import { organizations, events, fights, fighters, pflEvents, pflFighters, pflFights, pastPflEvents, pastPflFighters, pastPflFights } from '../../data/lib/placeholder-data';
 
 async function seedOrganizations() {
