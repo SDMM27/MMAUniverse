@@ -20,7 +20,7 @@ export type Fight = {
     fighter1_id: number;
     fighter2_id: number;
     fight_finished: boolean;
-    winner_id: number;
+    winner_id: number | null;
     method: string;
     round: number;
     time: string;

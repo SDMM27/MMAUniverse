@@ -2,9 +2,9 @@ import { sql } from '@vercel/postgres';
 import {
     Organization,
     Event,
-    Fight,
     Fighter,
     FightHistoryEntry,
+    FightWithFighters,
   } from './definitions';
 
 export async function fetchOrganizations() {
@@ -151,11 +151,7 @@ export async function fetchFightsByEvent(eventId: string) {
             ranking: row.f2_ranking,
           }
         : null,
-    })) as Array<Omit<Fight, 'winner_id'> & {
-      winner_id: number | null;
-      fighter1: Fighter | null;
-      fighter2: Fighter | null;
-    }>;
+    })) as FightWithFighters[];
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch fights for event.');
