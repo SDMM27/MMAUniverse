@@ -19,6 +19,7 @@ Cette spec ne couvre que le chantier 3. Les chantiers 1, 2 et 4 sont volontairem
 
 - `/` — Accueil : hero "prochain événement" + grille des organisations
 - `/organizations/[slug]` — Événements de l'organisation
+- `/events` — **Nouveau.** Annuaire de tous les événements, toutes organisations confondues (omis de la première passe de cette spec alors que la nav globale ci-dessous le prévoyait déjà — corrigé)
 - `/events/[slug]` — Fights de l'événement
 - `/fighters` — **Nouveau.** Annuaire de tous les combattants, toutes organisations confondues, filtrable par organisation
 - `/fighters/[slug]` — **Nouveau.** Profil combattant
