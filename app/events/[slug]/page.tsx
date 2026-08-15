@@ -3,6 +3,7 @@ import { fetchEventById, fetchFightsByEvent } from '@/data/lib/data';
 import { CoverImage } from '@/components/ui/shared/media';
 import FightRow from '@/components/ui/fights/fight-row';
 import EmptyState from '@/components/ui/shared/empty-state';
+import { FightWithFighters } from '@/data/lib/definitions';
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const event = await fetchEventById(params.slug);
@@ -32,7 +33,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
       ) : (
         <div className="flex flex-col gap-3">
           {fights.map((fight) => (
-            <FightRow key={fight.id} fight={fight} />
+            // fetchFightsByEvent honestly types winner_id as number | null
+            // (an unfinished fight has no winner yet). FightRow never reads
+            // winner_id, so it's safe to view the fight as FightWithFighters
+            // at this render boundary only.
+            <FightRow key={fight.id} fight={fight as FightWithFighters} />
           ))}
         </div>
       )}
