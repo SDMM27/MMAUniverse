@@ -50,7 +50,8 @@ export type FightWithFighters = Fight & {
   fighter2: Fighter | null;
 };
 
-export type FightHistoryEntry = Fight & {
+export type FightHistoryEntry = Omit<Fight, 'winner_id'> & {
+  winner_id: number | null;
   event_name: string;
   event_date: string;
   opponent_name: string | null;
