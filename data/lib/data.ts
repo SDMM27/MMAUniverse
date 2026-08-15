@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import { sql } from '@/data/lib/db';
 import {
     Organization,
     Event,
