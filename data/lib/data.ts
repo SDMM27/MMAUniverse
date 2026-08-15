@@ -81,7 +81,32 @@ export async function fetchEventById(id: string) {
 
 export async function fetchFightsByEvent(eventId: string) {
   try {
-    const data = await sql`
+    const data = await sql<{
+      id: number;
+      event_id: number;
+      fighter1_id: number;
+      fighter2_id: number;
+      fight_finished: boolean;
+      winner_id: number | null;
+      method: string;
+      round: number;
+      time: string;
+      weight_class: string;
+      f1_id: number | null;
+      f1_name: string | null;
+      f1_image_url: string | null;
+      f1_weight_class: string | null;
+      f1_organization_id: number | null;
+      f1_record: string | null;
+      f1_ranking: number | null;
+      f2_id: number | null;
+      f2_name: string | null;
+      f2_image_url: string | null;
+      f2_weight_class: string | null;
+      f2_organization_id: number | null;
+      f2_record: string | null;
+      f2_ranking: number | null;
+    }>`
       SELECT
         f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class,
         f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking,
@@ -164,14 +189,29 @@ export async function fetchFighterById(id: string) {
 
 export async function fetchFightsByFighterId(fighterId: string) {
   try {
-    const data = await sql`
+    const data = await sql<{
+      id: number;
+      event_id: number;
+      fighter1_id: number;
+      fighter2_id: number;
+      fight_finished: boolean;
+      winner_id: number | null;
+      method: string;
+      round: number;
+      time: string;
+      weight_class: string;
+      event_name: string;
+      event_date: string;
+      opponent_name: string | null;
+      opponent_image_url: string | null;
+    }>`
       SELECT
         f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class,
         e.name AS event_name, e.date AS event_date,
         opponent.name AS opponent_name, opponent.image_url AS opponent_image_url
       FROM fights f
       JOIN events e ON f.event_id = e.id
-      JOIN fighters opponent ON opponent.id = (
+      LEFT JOIN fighters opponent ON opponent.id = (
         CASE WHEN f.fighter1_id = ${fighterId} THEN f.fighter2_id ELSE f.fighter1_id END
       )
       WHERE f.fighter1_id = ${fighterId} OR f.fighter2_id = ${fighterId}
@@ -190,8 +230,8 @@ export async function fetchFightsByFighterId(fighterId: string) {
     })) as Array<Fight & {
       event_name: string;
       event_date: string;
-      opponent_name: string;
-      opponent_image_url: string;
+      opponent_name: string | null;
+      opponent_image_url: string | null;
       result: 'win' | 'loss' | 'draw' | 'upcoming';
     }>;
   } catch (error) {

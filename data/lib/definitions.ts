@@ -53,8 +53,8 @@ export type FightWithFighters = Fight & {
 export type FightHistoryEntry = Fight & {
   event_name: string;
   event_date: string;
-  opponent_name: string;
-  opponent_image_url: string;
+  opponent_name: string | null;
+  opponent_image_url: string | null;
   result: 'win' | 'loss' | 'draw' | 'upcoming';
 };
 
