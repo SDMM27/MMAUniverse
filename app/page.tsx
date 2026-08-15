@@ -1,20 +1,27 @@
-import Link from 'next/link';
-import { lusitana } from '@/components/ui/fonts';
-import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
-import OrganizationsList from '../components/ui/organizations/organizations-list';
-import Image from 'next/image';
-import { fetchOrganizations } from '@/data/lib/data';
+import { fetchAllEvents, fetchOrganizations } from '@/data/lib/data';
+import { computeNextEvent } from '@/data/lib/event-utils';
+import NextEventHero from '@/components/ui/events/next-event-hero';
+import OrganizationsList from '@/components/ui/organizations/organizations-list';
+import EmptyState from '@/components/ui/shared/empty-state';
 
 export default async function Page() {
-  const organizations = await fetchOrganizations();
+  const [organizations, events] = await Promise.all([
+    fetchOrganizations(),
+    fetchAllEvents(),
+  ]);
+  const next = computeNextEvent(events);
+
   return (
-    <main className="flex min-h-screen flex-col p-6">
-      <div className="flex h-20 shrink-0 items-end rounded-lg bg-red-600 p-4 md:h-52">
-        <MMAUniverseLogo />
-      </div>
-        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          <OrganizationsList organizations={organizations} />
-        </div>
+    <main className="flex min-h-screen flex-col gap-8 p-6">
+      {next ? (
+        <NextEventHero event={next.event} isUpcoming={next.isUpcoming} />
+      ) : (
+        <EmptyState title="Aucun événement pour le moment" />
+      )}
+      <section>
+        <h2 className="mb-4 font-display text-lg uppercase tracking-wide text-ink-primary">Organisations</h2>
+        <OrganizationsList organizations={organizations} />
+      </section>
     </main>
   );
 }
