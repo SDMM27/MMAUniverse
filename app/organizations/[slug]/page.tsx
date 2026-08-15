@@ -1,49 +1,39 @@
-"use client"
+import { notFound } from 'next/navigation';
+import { fetchOrganizationById, fetchEventsByOrg } from '@/data/lib/data';
+import { CoverImage } from '@/components/ui/shared/media';
+import EventCard from '@/components/ui/events/event-card';
+import EmptyState from '@/components/ui/shared/empty-state';
 
-import { useEffect, useState } from 'react';
-import { fetchEventsByOrg } from '@/data/lib/data';
-import EventListByOrg from '../../../components/ui/events/events-by-org';
+export default async function Page({ params }: { params: { slug: string } }) {
+  const organization = await fetchOrganizationById(params.slug);
 
-export default function Page({ params }: { params: { slug: string } })  {
-  const [orgName, setOrgName] = useState(null);
-  const [orgImg, setOrgImg] = useState(undefined);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  if (!organization) {
+    notFound();
+  }
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      setLoading(true);
-      try {
-        const response = await fetch(`/api/orgs/${params.slug}`);
-        const data = await response.json();
-        setOrgName(data[0].name);
-        setOrgImg(data[0].logo_link);
-        setError(null);
-      } catch (err) {
-        setError('Failed to fetch events');
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (params.slug) {
-      fetchEvents();
-    }
-  }, [params.slug]);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  const events = await fetchEventsByOrg(params.slug);
 
   return (
-    <div>
-      <div className="flex h-20 shrink-0 items-end rounded-lg bg-red-600 p-4 md:h-52">
-        <img src={orgImg} alt="Org Logo" className="h-20 w-20 rounded-full bg-gray-50" />
-        <h1 className="text-2xl text-white-900">{orgName}</h1>
-      </div>
-      <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          <EventListByOrg orgId={params.slug}/>
+    <main className="flex min-h-screen flex-col gap-6 p-6">
+      <div className="flex items-center gap-4 border-b border-base-border pb-6">
+        <CoverImage src={organization.logo_link} alt={organization.name} className="h-16 w-16 rounded-full" />
+        <div>
+          <p className="font-display text-xs uppercase tracking-wide text-accent">{organization.abbreviation}</p>
+          <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{organization.name}</h1>
         </div>
-    </div>
+      </div>
+      {events.length === 0 ? (
+        <EmptyState
+          title="Aucun événement programmé"
+          description="Revenez plus tard pour les prochains events de cette organisation."
+        />
+      ) : (
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+          {events.map((event) => (
+            <EventCard key={event.id} event={event} />
+          ))}
+        </div>
+      )}
+    </main>
   );
-};
+}
