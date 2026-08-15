@@ -1,48 +1,41 @@
-"use client"
+import { notFound } from 'next/navigation';
+import { fetchEventById, fetchFightsByEvent } from '@/data/lib/data';
+import { CoverImage } from '@/components/ui/shared/media';
+import FightRow from '@/components/ui/fights/fight-row';
+import EmptyState from '@/components/ui/shared/empty-state';
 
-import { useEffect, useState } from 'react';
-import { fetchEventsByOrg } from '@/data/lib/data';
-import FightListByEvent from '../../../components/ui/fights/fights-by-event';
+export default async function Page({ params }: { params: { slug: string } }) {
+  const event = await fetchEventById(params.slug);
 
-export default function Page({ params }: { params: { slug: string } })  {
-    const [eventName, setEventName] = useState(null);
-    const [eventPoster, setEventPoster] = useState(undefined);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
-  
-    useEffect(() => {
-      const fetchEvents = async () => {
-        setLoading(true);
-        try {
-          const response = await fetch(`/api/event/${params.slug}`);
-          const data = await response.json();
-          setEventName(data[0].name);
-          setEventPoster(data[0].event_poster);
-          setError(null);
-        } catch (err) {
-          setError('Failed to fetch events');
-          console.error(err);
-        } finally {
-          setLoading(false);
-        }
-      };
-  
-      if (params.slug) {
-        fetchEvents();
-      }
-    }, [params.slug]);
-  
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
+  if (!event) {
+    notFound();
+  }
+
+  const fights = await fetchFightsByEvent(params.slug);
+
   return (
-    <div>
-      <div className="flex h-20 shrink-0 items-end rounded-lg bg-red-600 p-4 md:h-52">
-        <img src={eventPoster} alt="Org Logo" className="h-20 w-20 rounded-full bg-gray-50" />
-        <h1 className="text-2xl text-white-900">{eventName}</h1>
-      </div>
-      <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          <FightListByEvent eventId={params.slug}/>
+    <main className="flex min-h-screen flex-col gap-6 p-6">
+      <div className="flex items-center gap-4 border-b border-base-border pb-6">
+        <CoverImage src={event.event_poster} alt={event.name} className="h-20 w-20 rounded-md" />
+        <div>
+          <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{event.name}</h1>
+          <p className="text-sm text-ink-secondary">
+            {event.date} · {event.event_location}
+          </p>
         </div>
-    </div>
+      </div>
+      {fights.length === 0 ? (
+        <EmptyState
+          title="Aucun combat annoncé"
+          description="La card de cet événement n'a pas encore été communiquée."
+        />
+      ) : (
+        <div className="flex flex-col gap-3">
+          {fights.map((fight) => (
+            <FightRow key={fight.id} fight={fight} />
+          ))}
+        </div>
+      )}
+    </main>
   );
-};
+}
