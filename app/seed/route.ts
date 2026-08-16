@@ -18,15 +18,24 @@ async function seedOrganizations() {
     );
   `;
 
+  // Explicit `id` matters here: data/scraped/*.json and data/scrapers/orgs.config.ts
+  // hardcode organization_id (1=UFC, 2=PFL, 3=Bellator) to match `organizations[].id`.
+  // Letting SERIAL auto-assign ids via a concurrent Promise.all would race — whichever
+  // insert reaches Postgres first gets id 1, not necessarily UFC — silently breaking
+  // every downstream fighters/events organization_id foreign key.
   const insertedOrganizations = await Promise.all(
     organizations.map(
       (org) => sql`
-        INSERT INTO organizations (name, abbreviation, logo_link)
-        VALUES (${org.name}, ${org.abbreviation}, ${org.logo_link})
+        INSERT INTO organizations (id, name, abbreviation, logo_link)
+        VALUES (${org.id}, ${org.name}, ${org.abbreviation}, ${org.logo_link})
         ON CONFLICT (id) DO NOTHING;
       `
     ),
   );
+
+  // Resync the SERIAL sequence past the explicit ids above, so any future insert
+  // that omits `id` (relying on the default) doesn't collide with them.
+  await sql`SELECT setval('organizations_id_seq', (SELECT MAX(id) FROM organizations));`;
 
   return insertedOrganizations;
 }
