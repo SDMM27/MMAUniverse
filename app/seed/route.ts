@@ -1,5 +1,11 @@
 import { sql } from '@/data/lib/db';
-import { organizations, events, fights, fighters, pflEvents, pflFighters, pflFights, pastPflEvents, pastPflFighters, pastPflFights } from '../../data/lib/placeholder-data';
+import { organizations } from '@/data/lib/placeholder-data';
+import type { ScrapedOrgData } from '@/data/scrapers/shared/types';
+import ufcData from '@/data/scraped/ufc.json';
+import pflData from '@/data/scraped/pfl.json';
+import bellatorData from '@/data/scraped/bellator.json';
+
+const orgDatasets = [ufcData, pflData, bellatorData] as ScrapedOrgData[];
 
 async function seedOrganizations() {
 
@@ -26,7 +32,6 @@ async function seedOrganizations() {
 }
 
 async function seedEvents() {
-
   await sql`
     CREATE TABLE IF NOT EXISTS events (
       id SERIAL PRIMARY KEY,
@@ -38,15 +43,17 @@ async function seedEvents() {
     );
   `;
 
-  const insertedEvents = await Promise.all(
-    pastPflEvents.map(
-      (event) => sql`
+  const insertedEvents = [];
+  for (const dataset of orgDatasets) {
+    for (const event of dataset.events) {
+      const result = await sql`
         INSERT INTO events (name, date, event_location, event_poster, organization_id)
-        VALUES (${event.name}, ${event.date}, ${event.event_location}, ${event.event_poster}, ${event.organization_id})
+        VALUES (${event.name}, ${event.date}, ${event.event_location}, ${event.event_poster}, ${dataset.organization_id})
         ON CONFLICT (id) DO NOTHING;
-      `
-    ),
-  );
+      `;
+      insertedEvents.push(result);
+    }
+  }
 
   return insertedEvents;
 }
@@ -66,7 +73,6 @@ async function getFighterIdByName(fighterName: string) {
 }
 
 async function seedFights() {
-
   await sql`
     CREATE TABLE IF NOT EXISTS fights (
       id SERIAL PRIMARY KEY,
@@ -82,30 +88,31 @@ async function seedFights() {
     );
   `;
 
-  const insertedFights = await Promise.all(
-    pastPflFights.map(async (fight) => {
+  const insertedFights = [];
+  for (const dataset of orgDatasets) {
+    for (const fight of dataset.fights) {
       const eventId = await getEventIdByName(fight.event_name);
-      const fighter1Id = await getFighterIdByName(fight.fighter1_id);
-      const fighter2Id = await getFighterIdByName(fight.fighter2_id);
+      const fighter1Id = await getFighterIdByName(fight.fighter1_name);
+      const fighter2Id = await getFighterIdByName(fight.fighter2_name);
+      const winnerId = fight.winner_name ? await getFighterIdByName(fight.winner_name) : null;
 
-      //Delete fights with event_id, fighter1_id and fighter2_id
       await sql`
         DELETE FROM fights WHERE event_id = ${eventId} AND fighter1_id = ${fighter1Id} AND fighter2_id = ${fighter2Id};
       `;
 
-      return sql`
-        INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, method, round, time, weight_class)
-        VALUES (${eventId}, ${fighter1Id}, ${fighter2Id}, ${fight.fight_finished}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class})
+      const result = await sql`
+        INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class)
+        VALUES (${eventId}, ${fighter1Id}, ${fighter2Id}, ${fight.fight_finished}, ${winnerId}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class})
         ON CONFLICT (id) DO NOTHING;
       `;
-    })
-  );
+      insertedFights.push(result);
+    }
+  }
 
   return insertedFights;
 }
 
 async function seedFighters() {
-
   await sql`
     CREATE TABLE IF NOT EXISTS fighters (
       id SERIAL PRIMARY KEY,
@@ -118,15 +125,17 @@ async function seedFighters() {
     );
   `;
 
-  const insertedFighters = await Promise.all(
-    pastPflFighters.map(
-      (fighter) => sql`
+  const insertedFighters = [];
+  for (const dataset of orgDatasets) {
+    for (const fighter of dataset.fighters) {
+      const result = await sql`
         INSERT INTO fighters (name, image_url, weight_class, organization_id, record, ranking)
-        VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${fighter.organization_id}, ${fighter.record}, ${fighter.ranking})
+        VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${dataset.organization_id}, ${fighter.record}, ${fighter.ranking})
         ON CONFLICT (id) DO NOTHING;
-      `
-    ),
-  );
+      `;
+      insertedFighters.push(result);
+    }
+  }
 
   return insertedFighters;
 }
@@ -135,10 +144,10 @@ export async function GET() {
   try {
     await sql`BEGIN`;
 
-    // await seedOrganizations();  // Cette fonction doit être exécutée en premier
-    // await seedEvents();         // Dépend de `organizations`
-    // await seedFighters();       // Peut dépendre de `organizations`
-    await seedFights();         // Dépend de `events` et `fighters`
+    await seedOrganizations(); // Cette fonction doit être exécutée en premier
+    await seedEvents();        // Dépend de `organizations`
+    await seedFighters();      // Peut dépendre de `organizations`
+    await seedFights();        // Dépend de `events` et `fighters`
 
     await sql`COMMIT`;
 
