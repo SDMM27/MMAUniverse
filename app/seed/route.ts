@@ -7,6 +7,13 @@ import bellatorData from '@/data/scraped/bellator.json';
 
 const orgDatasets = [ufcData, pflData, bellatorData] as ScrapedOrgData[];
 
+// Route Handlers cache underlying fetch() calls by default in Next.js 14's App
+// Router. @neondatabase/serverless issues its queries as POST fetch() calls
+// under the hood, so without this they get swept into Next's Data Cache like
+// any other fetch — a query replayed from cache silently returns stale data
+// instead of hitting the database again.
+export const dynamic = 'force-dynamic';
+
 async function seedOrganizations() {
 
   await sql`
@@ -20,18 +27,19 @@ async function seedOrganizations() {
 
   // Explicit `id` matters here: data/scraped/*.json and data/scrapers/orgs.config.ts
   // hardcode organization_id (1=UFC, 2=PFL, 3=Bellator) to match `organizations[].id`.
-  // Letting SERIAL auto-assign ids via a concurrent Promise.all would race — whichever
-  // insert reaches Postgres first gets id 1, not necessarily UFC — silently breaking
-  // every downstream fighters/events organization_id foreign key.
-  const insertedOrganizations = await Promise.all(
-    organizations.map(
-      (org) => sql`
-        INSERT INTO organizations (id, name, abbreviation, logo_link)
-        VALUES (${org.id}, ${org.name}, ${org.abbreviation}, ${org.logo_link})
-        ON CONFLICT (id) DO NOTHING;
-      `
-    ),
-  );
+  // Inserted sequentially (not Promise.all): firing these concurrently raced against
+  // Neon's HTTP-over-SQL proxy — each insert individually reported success (rowCount 1)
+  // but the rows never became visible, even to a read-back in the very same request.
+  // Discovered while running Task 13's manual seed verification; sequential avoids it.
+  const insertedOrganizations = [];
+  for (const org of organizations) {
+    const result = await sql`
+      INSERT INTO organizations (id, name, abbreviation, logo_link)
+      VALUES (${org.id}, ${org.name}, ${org.abbreviation}, ${org.logo_link})
+      ON CONFLICT (id) DO NOTHING;
+    `;
+    insertedOrganizations.push(result);
+  }
 
   // Resync the SERIAL sequence past the explicit ids above, so any future insert
   // that omits `id` (relying on the default) doesn't collide with them.
@@ -151,19 +159,14 @@ async function seedFighters() {
 
 export async function GET() {
   try {
-    await sql`BEGIN`;
-
     await seedOrganizations(); // Cette fonction doit être exécutée en premier
     await seedEvents();        // Dépend de `organizations`
     await seedFighters();      // Peut dépendre de `organizations`
     await seedFights();        // Dépend de `events` et `fighters`
 
-    await sql`COMMIT`;
-
     return Response.json({ message: 'Database seeded successfully' });
   } catch (error) {
     console.error(error);  // Pour un meilleur débogage
-    await sql`ROLLBACK`;
     return Response.json({ error }, { status: 500 });
   }
 }
