@@ -72,7 +72,7 @@ Deleted: `data/scrapPFL.js`, `data/scrape.js`, `data/scrapePFLEvent.js`, `data/d
 - Modify: `.gitignore`
 - Create: `data/scrapers/shared/` (empty dir, populated in later tasks)
 
-- [ ] **Step 1: Add `tsx` as a devDependency and add npm scripts**
+- [x] **Step 1: Add `tsx` as a devDependency and add npm scripts**
 
 Edit `package.json` — add to `"devDependencies"`:
 
@@ -90,12 +90,12 @@ Add to `"scripts"`:
     "scrape:all": "tsx data/scrapers/run-all.ts"
 ```
 
-- [ ] **Step 2: Install**
+- [x] **Step 2: Install**
 
 Run: `npm install`
 Expected: `tsx` added to `node_modules`, `package-lock.json` updated.
 
-- [ ] **Step 3: Add the scraper cache directory to `.gitignore`**
+- [x] **Step 3: Add the scraper cache directory to `.gitignore`**
 
 Add this line to `.gitignore`, under the existing `# testing` section:
 
@@ -103,7 +103,7 @@ Add this line to `.gitignore`, under the existing `# testing` section:
 data/scraped/.cache/
 ```
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add package.json package-lock.json .gitignore
@@ -119,7 +119,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 **Files:**
 - Create: `data/scrapers/shared/types.ts`
 
-- [ ] **Step 1: Write the shared types file**
+- [x] **Step 1: Write the shared types file**
 
 ```ts
 // data/scrapers/shared/types.ts
@@ -161,7 +161,7 @@ export interface ScrapedOrgData {
 
 No test for this file — it's type declarations only, nothing to run.
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add data/scrapers/shared/types.ts
@@ -178,7 +178,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 - Create: `data/scrapers/shared/normalize-date.ts`
 - Test: `data/scrapers/shared/normalize-date.test.ts`
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 ```ts
 // data/scrapers/shared/normalize-date.test.ts
@@ -207,12 +207,12 @@ test('normalizeDate throws on an empty string', () => {
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `npm test`
 Expected: FAIL — `Cannot find module './normalize-date'` (file doesn't exist yet).
 
-- [ ] **Step 3: Write minimal implementation**
+- [x] **Step 3: Write minimal implementation**
 
 ```ts
 // data/scrapers/shared/normalize-date.ts
@@ -234,12 +234,12 @@ export function normalizeDate(sherdogStartDate: string): string {
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `npm test`
 Expected: PASS — 5 tests passing.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/scrapers/shared/normalize-date.ts data/scrapers/shared/normalize-date.test.ts
@@ -258,7 +258,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 
 This stores the **entire accumulated `ScrapedOrgData`** per organization, not just a list of "done" URLs — a checkpoint that only remembered which URLs were processed would lose all previously-scraped events/fights/fighters the moment the process restarts, since nothing else keeps them in memory across runs.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 ```ts
 // data/scrapers/shared/checkpoint.test.ts
@@ -309,12 +309,12 @@ test('clearProgress removes the checkpoint file', () => {
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `npm test`
 Expected: FAIL — `Cannot find module './checkpoint'`.
 
-- [ ] **Step 3: Write minimal implementation**
+- [x] **Step 3: Write minimal implementation**
 
 ```ts
 // data/scrapers/shared/checkpoint.ts
@@ -364,12 +364,12 @@ export function clearProgress(orgKey: string, cacheDir: string): void {
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `npm test`
 Expected: PASS — 3 new tests passing (8 total).
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/scrapers/shared/checkpoint.ts data/scrapers/shared/checkpoint.test.ts
@@ -387,7 +387,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 
 I/O wrapper, no unit test (would just be mocking axios) — verified manually in Task 8's smoke test.
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```ts
 // data/scrapers/shared/fetch-throttled.ts
@@ -416,7 +416,7 @@ export async function fetchAndLoad(url: string): Promise<cheerio.CheerioAPI> {
 }
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add data/scrapers/shared/fetch-throttled.ts
@@ -437,7 +437,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 
 These are trimmed-but-real excerpts of the actual pages fetched during planning (URLs listed at the top of this plan) — real class names and structure, just fewer rows so the fixtures stay short.
 
-- [ ] **Step 1: Create the org page fixture**
+- [x] **Step 1: Create the org page fixture**
 
 ```html
 <!-- data/scrapers/__fixtures__/org-page.html -->
@@ -488,7 +488,7 @@ These are trimmed-but-real excerpts of the actual pages fetched during planning 
 </body></html>
 ```
 
-- [ ] **Step 2: Create the org page fixture for the last page (no "Older Events" link)**
+- [x] **Step 2: Create the org page fixture for the last page (no "Older Events" link)**
 
 ```html
 <!-- data/scrapers/__fixtures__/org-page-last.html -->
@@ -512,7 +512,7 @@ These are trimmed-but-real excerpts of the actual pages fetched during planning 
 </body></html>
 ```
 
-- [ ] **Step 3: Create the finished event page fixture**
+- [x] **Step 3: Create the finished event page fixture**
 
 ```html
 <!-- data/scrapers/__fixtures__/event-page-finished.html -->
@@ -590,7 +590,7 @@ These are trimmed-but-real excerpts of the actual pages fetched during planning 
 </body></html>
 ```
 
-- [ ] **Step 4: Create the upcoming (not-yet-happened) event page fixture**
+- [x] **Step 4: Create the upcoming (not-yet-happened) event page fixture**
 
 ```html
 <!-- data/scrapers/__fixtures__/event-page-upcoming.html -->
@@ -659,7 +659,7 @@ These are trimmed-but-real excerpts of the actual pages fetched during planning 
 </body></html>
 ```
 
-- [ ] **Step 5: Create the fighter page fixture**
+- [x] **Step 5: Create the fighter page fixture**
 
 ```html
 <!-- data/scrapers/__fixtures__/fighter-page.html -->
@@ -700,7 +700,7 @@ These are trimmed-but-real excerpts of the actual pages fetched during planning 
 </body></html>
 ```
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add data/scrapers/__fixtures__/
@@ -717,7 +717,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 - Create: `data/scrapers/parse.ts`
 - Test: `data/scrapers/parse.test.ts`
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 ```ts
 // data/scrapers/parse.test.ts
@@ -833,12 +833,12 @@ test('parseFighterDetails extracts name, weight class, image and win/loss counts
 });
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `npm test`
 Expected: FAIL — `Cannot find module './parse'`.
 
-- [ ] **Step 3: Write the implementation**
+- [x] **Step 3: Write the implementation**
 
 ```ts
 // data/scrapers/parse.ts
@@ -1007,12 +1007,12 @@ export function parseFighterDetails($: CheerioAPI): ParsedFighterDetails {
 }
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `npm test`
 Expected: PASS — all `parse.test.ts` tests green (17 total across the suite).
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/scrapers/parse.ts data/scrapers/parse.test.ts
@@ -1030,7 +1030,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 
 I/O orchestration wiring the pure parser to the throttled fetch and the checkpoint — verified manually in Task 9, not unit tested (would require mocking the network, which defeats the point).
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```ts
 // data/scrapers/sherdog.ts
@@ -1140,7 +1140,7 @@ export async function scrapeOrganization(config: OrgScrapeConfig, cacheDir: stri
 }
 ```
 
-- [ ] **Step 2: Commit**
+- [x] **Step 2: Commit**
 
 ```bash
 git add data/scrapers/sherdog.ts
@@ -1157,7 +1157,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 - Create: `data/scrapers/orgs.config.ts`
 - Create: `data/scrapers/run-all.ts`
 
-- [ ] **Step 1: Write the org configuration**
+- [x] **Step 1: Write the org configuration**
 
 ```ts
 // data/scrapers/orgs.config.ts
@@ -1170,7 +1170,7 @@ export const ORG_CONFIGS: OrgScrapeConfig[] = [
 ];
 ```
 
-- [ ] **Step 2: Write the CLI entry point**
+- [x] **Step 2: Write the CLI entry point**
 
 ```ts
 // data/scrapers/run-all.ts
@@ -1210,7 +1210,7 @@ main().catch((error) => {
 });
 ```
 
-- [ ] **Step 3: Smoke-test against the live site with a tiny, deliberately limited run**
+- [x] **Step 3: Smoke-test against the live site with a tiny, deliberately limited run**
 
 This is the first time the pipeline talks to the real network end-to-end — verify it before trusting it with a multi-hour run. Temporarily add a hard cap right after `collectEventUrls` returns, run it, then remove the cap.
 
@@ -1223,14 +1223,14 @@ Temporarily edit `data/scrapers/sherdog.ts`, right after `const eventUrls = awai
 Run: `npx tsx data/scrapers/run-all.ts bellator`
 Expected: Completes in well under a minute, prints `[bellator] wrote 2 events, N fighters, M fights to .../data/scraped/bellator.json`.
 
-- [ ] **Step 4: Inspect the smoke-test output**
+- [x] **Step 4: Inspect the smoke-test output**
 
 Run: `cat data/scraped/bellator.json`
 Expected: valid JSON matching `ScrapedOrgData` — 2 events with non-empty `name`/`date` (format `YYYY-MM-DD`)/`event_location`, a non-empty `fighters` array with plausible `record` strings like `"12-3-0"`, and a non-empty `fights` array where at least the finished ones have `winner_name` set to one of the two fighters' names (not `null`).
 
 If anything looks wrong (empty names, `date` not ISO, every `winner_name` null even for old/finished events), go back to Task 7 and fix the parser — do not proceed with a bad parser producing a multi-hour run of bad data.
 
-- [ ] **Step 5: Remove the temporary cap and reset the checkpoint used for the smoke test**
+- [x] **Step 5: Remove the temporary cap and reset the checkpoint used for the smoke test**
 
 Revert the one-line change from Step 3 in `data/scrapers/sherdog.ts` (delete the `.slice(0, 2)` and the `TEMP` comment, restore `const eventUrls = await collectEventUrls(config);`).
 
@@ -1238,7 +1238,7 @@ Run: `rm -rf data/scraped/.cache data/scraped/bellator.json`
 
 (The smoke-test checkpoint would otherwise make the real run think those 2 events are already done and skip them — harmless since they'd be picked up in the fighters pass regardless, but cleanest to start the real run from a clean slate.)
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add data/scrapers/orgs.config.ts data/scrapers/run-all.ts
@@ -1255,25 +1255,25 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 
 This is a long-running (~1.5-2.5 hour total, per the spec's volumetry estimate), network-bound task — run it in the background and monitor rather than blocking on it.
 
-- [ ] **Step 1: Launch the full scrape in the background**
+- [x] **Step 1: Launch the full scrape in the background**
 
 Run in background: `npm run scrape:all`
 
-- [ ] **Step 2: Monitor progress periodically via the checkpoint files rather than polling constantly**
+- [x] **Step 2: Monitor progress periodically via the checkpoint files rather than polling constantly**
 
 Run occasionally: `ls -la data/scraped/.cache/ && cat data/scraped/.cache/ufc-progress.json | node -e "const d=JSON.parse(require('fs').readFileSync(0,'utf-8')); console.log(d.processedEventUrls.length, 'events processed')"`
 
-- [ ] **Step 3: If the process crashes or is interrupted, just re-run it — it resumes from the checkpoint**
+- [x] **Step 3: If the process crashes or is interrupted, just re-run it — it resumes from the checkpoint**
 
 Run: `npm run scrape:all`
 Expected: log lines show it skipping already-known event URLs (fast) and continuing from where it left off (no re-fetching of already-processed events).
 
-- [ ] **Step 4: Once complete, sanity-check the output files**
+- [x] **Step 4: Once complete, sanity-check the output files**
 
 Run: `node -e "for (const f of ['ufc','pfl','bellator']) { const d = require('./data/scraped/'+f+'.json'); console.log(f, d.events.length, 'events', d.fighters.length, 'fighters', d.fights.length, 'fights'); }"`
 Expected: UFC ~800 events, PFL ~130 events, Bellator ~300 events (order-of-magnitude check against the spec's estimates — exact counts will differ as new events happen between planning and running this).
 
-- [ ] **Step 5: Commit the scraped data**
+- [x] **Step 5: Commit the scraped data**
 
 ```bash
 git add data/scraped/ufc.json data/scraped/pfl.json data/scraped/bellator.json
@@ -1289,7 +1289,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 **Files:**
 - Modify: `app/seed/route.ts`
 
-- [ ] **Step 1: Replace the imports at the top of the file**
+- [x] **Step 1: Replace the imports at the top of the file**
 
 Read `app/seed/route.ts` first, then replace lines 1-2:
 
@@ -1311,7 +1311,7 @@ import bellatorData from '@/data/scraped/bellator.json';
 const orgDatasets = [ufcData, pflData, bellatorData] as ScrapedOrgData[];
 ```
 
-- [ ] **Step 2: Replace `seedEvents` to loop over all 3 organizations**
+- [x] **Step 2: Replace `seedEvents` to loop over all 3 organizations**
 
 Replace the whole `seedEvents` function body's insert loop:
 
@@ -1344,7 +1344,7 @@ async function seedEvents() {
 }
 ```
 
-- [ ] **Step 3: Replace `seedFighters` to loop over all 3 organizations**
+- [x] **Step 3: Replace `seedFighters` to loop over all 3 organizations**
 
 ```ts
 async function seedFighters() {
@@ -1376,7 +1376,7 @@ async function seedFighters() {
 }
 ```
 
-- [ ] **Step 4: Replace `seedFights` to loop over all 3 organizations and resolve `winner_id`**
+- [x] **Step 4: Replace `seedFights` to loop over all 3 organizations and resolve `winner_id`**
 
 ```ts
 async function seedFights() {
@@ -1422,7 +1422,7 @@ async function seedFights() {
 
 Note: this replaces the previous `Promise.all(pastPflFights.map(...))` (all fights inserted concurrently) with a sequential `for` loop. With only 4 PFL Europe fights that didn't matter; with the full multi-thousand-fight dataset across 3 organizations, firing every fight's 3-4 lookup queries at once would open far more concurrent connections against Neon than necessary for a one-time seed script — sequential is the right tradeoff here.
 
-- [ ] **Step 5: Decomment the 3 previously-disabled calls in `GET()`**
+- [x] **Step 5: Decomment the 3 previously-disabled calls in `GET()`**
 
 Replace:
 
@@ -1442,12 +1442,12 @@ with:
     await seedFights();        // Dépend de `events` et `fighters`
 ```
 
-- [ ] **Step 6: Type-check**
+- [x] **Step 6: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no new errors related to `app/seed/route.ts` or the `data/scraped/*.json` imports (they exist from Task 10 and `resolveJsonModule` is already enabled in `tsconfig.json`).
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add app/seed/route.ts
@@ -1464,7 +1464,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 - Modify: `data/lib/placeholder-data.ts`
 - Delete: `data/scrapPFL.js`, `data/scrape.js`, `data/scrapePFLEvent.js`, `data/detailedEvents.json`, `data/detailedEventsWithFights.json`, `data/extractFighters.js`, `data/extractsFights.js`, `data/fightersOutput.js`, `data/formatted_fights.js`, `data/pflEventsDetails.js`, `data/pflEventsWithFights.json`, `data/pflFightersDetails.js`, `data/pflFightsDetails.js`
 
-- [ ] **Step 1: Read the full current `data/lib/placeholder-data.ts` and rewrite it to keep only `organizations`**
+- [x] **Step 1: Read the full current `data/lib/placeholder-data.ts` and rewrite it to keep only `organizations`**
 
 Read `data/lib/placeholder-data.ts` first (it's ~5300 lines), then replace its entire contents with:
 
@@ -1493,23 +1493,23 @@ const organizations = [
 export { organizations };
 ```
 
-- [ ] **Step 2: Delete the obsolete scraper scripts and their intermediate outputs**
+- [x] **Step 2: Delete the obsolete scraper scripts and their intermediate outputs**
 
 ```bash
 git rm data/scrapPFL.js data/scrape.js data/scrapePFLEvent.js data/detailedEvents.json data/detailedEventsWithFights.json data/extractFighters.js data/extractsFights.js data/fightersOutput.js data/formatted_fights.js data/pflEventsDetails.js data/pflEventsWithFights.json data/pflFightersDetails.js data/pflFightsDetails.js
 ```
 
-- [ ] **Step 3: Search the codebase for any other importer of the removed exports, to make sure nothing else breaks**
+- [x] **Step 3: Search the codebase for any other importer of the removed exports, to make sure nothing else breaks**
 
 Run: `grep -rn "pflEvents\|pflFighters\|pflFights\|pastPflEvents\|pastPflFighters\|pastPflFights" --include="*.ts" --include="*.tsx" app data`
 Expected: no output (only `app/seed/route.ts` used them, already updated in Task 11).
 
-- [ ] **Step 4: Type-check**
+- [x] **Step 4: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/lib/placeholder-data.ts
@@ -1526,33 +1526,33 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 
 **Files:** none
 
-- [ ] **Step 1: Start the dev server and seed the database**
+- [x] **Step 1: Start the dev server and seed the database**
 
 Run: `npm run dev` (background)
 Then visit `http://localhost:3000/seed` in a browser or via `curl http://localhost:3000/seed`
 Expected: `{"message":"Database seeded successfully"}`, no 500.
 
-- [ ] **Step 2: Verify the homepage hero shows a real, non-PFL-Europe-only event**
+- [x] **Step 2: Verify the homepage hero shows a real, non-PFL-Europe-only event**
 
 Visit `http://localhost:3000/`
 Expected: hero shows an event with a real ISO-derived date, not the previous PFL-only default; organizations grid shows UFC, PFL, and Bellator, all clickable.
 
-- [ ] **Step 3: Verify each organization page shows its own real events**
+- [x] **Step 3: Verify each organization page shows its own real events**
 
 Visit `http://localhost:3000/organizations/1`, `/organizations/2`, `/organizations/3`
 Expected: each shows a grid of that organization's own events (UFC events under org 1, PFL under org 2, Bellator under org 3) — not all 3 showing the same data.
 
-- [ ] **Step 4: Verify the global events index sorts correctly**
+- [x] **Step 4: Verify the global events index sorts correctly**
 
 Visit `http://localhost:3000/events`
 Expected: events from all 3 organizations mixed together, sorted by date ascending with no obviously out-of-order entries (confirms the ISO date normalization from Task 7 is working end-to-end).
 
-- [ ] **Step 5: Verify a fighter profile shows correct win/loss (not all draws)**
+- [x] **Step 5: Verify a fighter profile shows correct win/loss (not all draws)**
 
 Visit `http://localhost:3000/fighters`, filter by an organization, click into a fighter with multiple finished fights.
 Expected: fight history shows a mix of "win"/"loss" (not every finished fight reading as "draw", which was the pre-existing bug from `winner_id` never being set).
 
-- [ ] **Step 6: Report results**
+- [x] **Step 6: Report results**
 
 Note in the final summary: seed response, screenshot or text confirmation of steps 2-5, and the actual event/fighter/fight counts from Task 10 Step 4.
 
