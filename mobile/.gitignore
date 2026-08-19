@@ -32,6 +32,9 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env
+# repo-root .gitignore blanket-ignores .env* — re-include the committed example
+!.env.example
 
 # typescript
 *.tsbuildinfo
