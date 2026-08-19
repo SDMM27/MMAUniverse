@@ -3,8 +3,13 @@ import type { EventWithOrganization, FighterWithOrganization, FightWithFighters,
 
 export function OrganizationCard({ organization, onPress }: { organization: Organization; onPress: () => void }) {
   return (
-    <Pressable onPress={onPress} className="flex-row items-center gap-3 rounded-lg border border-base-border bg-base-card p-3">
-      <Image source={{ uri: organization.logo_link }} className="h-12 w-12 rounded-full" />
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={organization.name}
+      className="flex-row items-center gap-3 rounded-lg border border-base-border bg-base-card p-3"
+    >
+      <Image source={{ uri: organization.logo_link }} accessible={false} className="h-12 w-12 rounded-full" />
       <View>
         <Text className="font-display text-xs uppercase tracking-wide text-accent">{organization.abbreviation}</Text>
         <Text className="text-base font-semibold text-ink-primary">{organization.name}</Text>
@@ -15,7 +20,12 @@ export function OrganizationCard({ organization, onPress }: { organization: Orga
 
 export function EventCard({ event, onPress }: { event: EventWithOrganization; onPress: () => void }) {
   return (
-    <Pressable onPress={onPress} className="rounded-lg border border-base-border bg-base-card p-3">
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`${event.name}, ${event.date}`}
+      className="rounded-lg border border-base-border bg-base-card p-3"
+    >
       <Text className="font-display text-xs uppercase tracking-wide text-accent">{event.organization_abbreviation}</Text>
       <Text className="text-base font-semibold text-ink-primary">{event.name}</Text>
       <Text className="text-xs text-ink-secondary">
@@ -27,8 +37,13 @@ export function EventCard({ event, onPress }: { event: EventWithOrganization; on
 
 export function FighterCard({ fighter, onPress }: { fighter: FighterWithOrganization; onPress: () => void }) {
   return (
-    <Pressable onPress={onPress} className="flex-row items-center gap-3 rounded-lg border border-base-border bg-base-card p-3">
-      <Image source={{ uri: fighter.image_url }} className="h-12 w-12 rounded-full" />
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`${fighter.name}, ${fighter.record}`}
+      className="flex-row items-center gap-3 rounded-lg border border-base-border bg-base-card p-3"
+    >
+      <Image source={{ uri: fighter.image_url }} accessible={false} className="h-12 w-12 rounded-full" />
       <View className="flex-1">
         <Text className="text-base font-semibold text-ink-primary">{fighter.name}</Text>
         <Text className="text-xs text-ink-secondary">
