@@ -37,9 +37,16 @@ export interface ParsedFighterDetails {
   draws: number;
 }
 
+// Sherdog sometimes renders a disabled/placeholder link as `href="javascript:void();"`
+// (e.g. an inactive "Older Events" control, or a malformed row in an event
+// table) instead of omitting the href. `new URL()` happily parses those as
+// absolute URLs, so without filtering by protocol they'd get queued up and
+// axios would blow up trying to fetch `javascript:void();` over HTTP.
 function absoluteUrl(href: string | undefined, baseUrl: string): string {
   if (!href) return '';
-  return new URL(href, baseUrl).toString();
+  const url = new URL(href, baseUrl);
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') return '';
+  return url.toString();
 }
 
 /** Collapses `<br>`-separated text nodes (e.g. a two-line fighter name) into a single space-joined string. */
@@ -68,7 +75,8 @@ export function parseEventTableUrls($: CheerioAPI, tabId: 'upcoming_tab' | 'rece
   const urls: string[] = [];
   $(`#${tabId} table.new_table.event tr[itemscope]`).each((_, row) => {
     const href = $(row).find('a[itemprop="url"]').attr('href');
-    if (href) urls.push(absoluteUrl(href, baseUrl));
+    const resolved = absoluteUrl(href, baseUrl);
+    if (resolved) urls.push(resolved);
   });
   return urls;
 }
@@ -80,7 +88,8 @@ export function parseOlderEventsUrl($: CheerioAPI, baseUrl: string): string | nu
       href = $(a).attr('href');
     }
   });
-  return href ? absoluteUrl(href, baseUrl) : null;
+  const resolved = absoluteUrl(href, baseUrl);
+  return resolved || null;
 }
 
 export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDetails {
