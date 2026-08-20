@@ -31,7 +31,7 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col gap-8 p-6">
-      <h1 className="font-display text-lg uppercase tracking-wide text-ink-primary">
+      <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">
         Organisations ({organizations.length})
       </h1>
       <OrganizationsList organizations={organizationsWithActivity} />
