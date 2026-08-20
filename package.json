@@ -12,7 +12,15 @@
     "scrape:ufc": "tsx data/scrapers/run-all.ts ufc",
     "scrape:pfl": "tsx data/scrapers/run-all.ts pfl",
     "scrape:bellator": "tsx data/scrapers/run-all.ts bellator",
-    "scrape:all": "tsx data/scrapers/run-all.ts"
+    "scrape:one": "tsx data/scrapers/run-all.ts one",
+    "scrape:cagewarriors": "tsx data/scrapers/run-all.ts cagewarriors",
+    "scrape:rizin": "tsx data/scrapers/run-all.ts rizin",
+    "scrape:ksw": "tsx data/scrapers/run-all.ts ksw",
+    "scrape:aca": "tsx data/scrapers/run-all.ts aca",
+    "scrape:invicta": "tsx data/scrapers/run-all.ts invicta",
+    "scrape:lfa": "tsx data/scrapers/run-all.ts lfa",
+    "scrape:all": "tsx data/scrapers/run-all.ts",
+    "seed:additional-orgs": "tsx data/scrapers/seed-additional-orgs.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

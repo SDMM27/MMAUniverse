@@ -188,8 +188,27 @@ export async function fetchFighterById(id: string) {
   }
 }
 
+// The scraper stores one `fighters` row per organization a fighter has
+// appeared in (same name + image_url, different id/organization_id), since
+// each org's roster is scraped independently. A fighter who moved between
+// orgs (e.g. Bellator -> UFC) therefore has several ids, and their fights
+// are split across those ids' rows. To show a fighter's full history we
+// first resolve every sibling id that represents the same real person.
+async function resolveFighterIds(fighterId: string): Promise<number[]> {
+  const siblings = await sql<{ id: number }>`
+    SELECT sibling.id
+    FROM fighters self
+    JOIN fighters sibling ON sibling.name = self.name AND sibling.image_url = self.image_url
+    WHERE self.id = ${fighterId}
+  `;
+  const ids = siblings.rows.map((row) => row.id);
+  return ids.length > 0 ? ids : [Number(fighterId)];
+}
+
 export async function fetchFightsByFighterId(fighterId: string) {
   try {
+    const fighterIds = await resolveFighterIds(fighterId);
+
     const data = await sql<{
       id: number;
       event_id: number;
@@ -213,9 +232,9 @@ export async function fetchFightsByFighterId(fighterId: string) {
       FROM fights f
       JOIN events e ON f.event_id = e.id
       LEFT JOIN fighters opponent ON opponent.id = (
-        CASE WHEN f.fighter1_id = ${fighterId} THEN f.fighter2_id ELSE f.fighter1_id END
+        CASE WHEN f.fighter1_id = ANY(${fighterIds}) THEN f.fighter2_id ELSE f.fighter1_id END
       )
-      WHERE f.fighter1_id = ${fighterId} OR f.fighter2_id = ${fighterId}
+      WHERE f.fighter1_id = ANY(${fighterIds}) OR f.fighter2_id = ANY(${fighterIds})
       ORDER BY e.date DESC
     `;
 
@@ -225,7 +244,7 @@ export async function fetchFightsByFighterId(fighterId: string) {
         ? 'upcoming'
         : row.winner_id === null
           ? 'draw'
-          : String(row.winner_id) === String(fighterId)
+          : fighterIds.includes(row.winner_id)
             ? 'win'
             : 'loss',
     })) as FightHistoryEntry[];
