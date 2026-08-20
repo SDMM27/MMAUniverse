@@ -2,7 +2,7 @@ import Link from 'next/link';
 import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
 
 const links = [
-  { href: '/', label: 'Organisations' },
+  { href: '/', label: 'Home' },
   { href: '/events', label: 'Events' },
   { href: '/fighters', label: 'Fighters' },
 ];
