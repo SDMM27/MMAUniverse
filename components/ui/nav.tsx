@@ -5,6 +5,7 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/events', label: 'Events' },
   { href: '/fighters', label: 'Fighters' },
+  { href: '/organizations', label: 'Organisations' },
 ];
 
 export default function Nav() {
