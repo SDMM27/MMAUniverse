@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import { fetchEventById, fetchFightsByEvent } from '@/data/lib/data';
+import { splitMainEvent } from '@/data/lib/fight-utils';
 import { CoverImage } from '@/components/ui/shared/media';
+import FightCard from '@/components/ui/fights/fight-card';
 import FightRow from '@/components/ui/fights/fight-row';
 import EmptyState from '@/components/ui/shared/empty-state';
 
@@ -12,6 +14,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
 
   const fights = await fetchFightsByEvent(params.slug);
+  const { mainEvent, rest } = splitMainEvent(fights);
 
   return (
     <main className="flex min-h-screen flex-col gap-6 p-6">
@@ -30,11 +33,18 @@ export default async function Page({ params }: { params: { slug: string } }) {
           description="La card de cet événement n'a pas encore été communiquée."
         />
       ) : (
-        <div className="flex flex-col gap-3">
-          {fights.map((fight) => (
-            <FightRow key={fight.id} fight={fight} />
-          ))}
-        </div>
+        <>
+          {mainEvent && (
+            <div>
+              <FightCard fight={mainEvent} event={event} />
+            </div>
+          )}
+          <div className="flex flex-col gap-3">
+            {rest.map((fight) => (
+              <FightRow key={fight.id} fight={fight} />
+            ))}
+          </div>
+        </>
       )}
     </main>
   );
