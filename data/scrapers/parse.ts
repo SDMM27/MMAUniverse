@@ -119,7 +119,7 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
     }
   }
 
-  $('table.new_table.result tr[itemprop="subEvent"]').each((_, row) => {
+  $('table.new_table.result tr[itemprop="subEvent"], table.new_table.upcoming tr[itemprop="subEvent"]').each((_, row) => {
     const $row = $(row);
     const weightClass = $row.find('td.text_center span.weight_class').first().text().trim();
     const leftCell = $row.find('td.text_right').first();
