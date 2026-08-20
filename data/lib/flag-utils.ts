@@ -12,6 +12,6 @@ export function countryCodeToFlag(code: string | null): string | null {
   const normalized = code.trim().toUpperCase();
   if (!/^[A-Z]{2}$/.test(normalized)) return null;
 
-  const codePoints = [...normalized].map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
+  const codePoints = normalized.split('').map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
   return String.fromCodePoint(...codePoints);
 }
