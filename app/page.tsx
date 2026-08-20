@@ -4,6 +4,10 @@ import NextEventHero from '@/components/ui/events/next-event-hero';
 import OrganizationsList from '@/components/ui/organizations/organizations-list';
 import EmptyState from '@/components/ui/shared/empty-state';
 
+// Queries the DB on every request instead of at build time — Vercel's build
+// step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
+export const dynamic = 'force-dynamic';
+
 export default async function Page() {
   const [organizations, events] = await Promise.all([
     fetchOrganizations(),
