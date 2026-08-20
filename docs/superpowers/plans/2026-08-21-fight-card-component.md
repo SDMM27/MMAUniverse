@@ -216,17 +216,24 @@ export function countryCodeToFlag(code: string | null): string | null {
   const normalized = code.trim().toUpperCase();
   if (!/^[A-Z]{2}$/.test(normalized)) return null;
 
-  const codePoints = [...normalized].map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
+  const codePoints = normalized.split('').map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
   return String.fromCodePoint(...codePoints);
 }
 ```
+
+(Use `.split('')`, not `[...normalized]` — the web `tsconfig.json` has no explicit `target`, which defaults to a pre-ES2015 target where spreading a *string* fails `tsc --noEmit` with TS2802. `String.fromCodePoint(...codePoints)` is fine as-is since `codePoints` is an array, not a string — TS2802 is specific to string iteration.)
 
 - [ ] **Step 4: Run it to verify it passes**
 
 Run: `npx tsx --test data/lib/flag-utils.test.ts`
 Expected: PASS — `4 tests`, `4 pass`, `0 fail`.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 5: Verify it compiles**
+
+Run: `npx tsc --noEmit`
+Expected: no output (clean pass).
+
+- [ ] **Step 6: Commit**
 
 ```bash
 git add data/lib/flag-utils.ts data/lib/flag-utils.test.ts
@@ -967,10 +974,12 @@ export function countryCodeToFlag(code: string | null): string | null {
   const normalized = code.trim().toUpperCase();
   if (!/^[A-Z]{2}$/.test(normalized)) return null;
 
-  const codePoints = [...normalized].map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
+  const codePoints = normalized.split('').map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
   return String.fromCodePoint(...codePoints);
 }
 ```
+
+(`.split('')`, not `[...normalized]` — matches the web copy exactly, see Task 3's note. Mobile's `tsconfig.json` targets `ESNext`, so the spread form would actually compile fine here, but keeping both copies textually identical avoids any confusion about which one is "the real one".)
 
 - [ ] **Step 2: Verify it compiles**
 
