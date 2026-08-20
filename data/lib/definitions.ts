@@ -25,6 +25,7 @@ export type Fight = {
     round: number;
     time: string;
     weight_class: string;
+    is_main_event: boolean;
   };
 
 export type Fighter = {
@@ -35,6 +36,7 @@ export type Fighter = {
     organization_id: number;
     record: string;
     ranking: number;
+    nationality: string | null;
   };
 
 export type EventWithOrganization = Event & {
