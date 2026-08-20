@@ -318,17 +318,24 @@ export function splitMainEvent<T extends { is_main_event: boolean }>(
   fights: T[],
 ): { mainEvent: T | null; rest: T[] } {
   const mainEvent = fights.find((fight) => fight.is_main_event) ?? null;
-  const rest = mainEvent ? fights.filter((fight) => fight !== mainEvent) : fights;
+  const rest = mainEvent ? fights.filter((fight) => !fight.is_main_event) : fights;
   return { mainEvent, rest };
 }
 ```
 
+(`rest` filters by the `is_main_event` flag itself, not object identity — if a data-integrity slip ever flags more than one fight as main event, this excludes all of them from `rest` rather than leaking the extras through. Add a 4th test for this case: `[makeFight(1, true), makeFight(2, false), makeFight(3, true)]` → `mainEvent.id === 1`, `rest` is `[2]`.)
+
 - [ ] **Step 4: Run it to verify it passes**
 
 Run: `npx tsx --test data/lib/fight-utils.test.ts`
-Expected: PASS — `3 tests`, `3 pass`, `0 fail`.
+Expected: PASS — `4 tests`, `4 pass`, `0 fail`.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 5: Verify it compiles**
+
+Run: `npx tsc --noEmit`
+Expected: no output (clean pass).
+
+- [ ] **Step 6: Commit**
 
 ```bash
 git add data/lib/fight-utils.ts data/lib/fight-utils.test.ts
@@ -1013,7 +1020,7 @@ export function splitMainEvent<T extends { is_main_event: boolean }>(
   fights: T[],
 ): { mainEvent: T | null; rest: T[] } {
   const mainEvent = fights.find((fight) => fight.is_main_event) ?? null;
-  const rest = mainEvent ? fights.filter((fight) => fight !== mainEvent) : fights;
+  const rest = mainEvent ? fights.filter((fight) => !fight.is_main_event) : fights;
   return { mainEvent, rest };
 }
 ```
