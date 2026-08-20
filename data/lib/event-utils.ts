@@ -32,10 +32,9 @@ export function computeNextEvent<T extends Event & { organization_abbreviation: 
 
 /**
  * Per-organization version of computeNextEvent, plus a total count of events
- * on file for that org. Used on the home page so each organization card can
- * show what's actually coming up there instead of just its logo — useful now
- * that we track a dozen orgs whose logos are often indistinguishable
- * placeholders.
+ * on file for that org. Not currently called anywhere; kept for a planned
+ * future `/organizations` list page (see docs/superpowers/specs/
+ * 2026-08-20-home-editorial-redesign-design.md).
  */
 export function computeNextEventByOrg<T extends Event & { organization_abbreviation: string }>(
   events: T[],
