@@ -105,6 +105,8 @@ async function seedFights() {
     );
   `;
 
+  await sql`ALTER TABLE fights ADD COLUMN IF NOT EXISTS is_main_event BOOLEAN NOT NULL DEFAULT false;`;
+
   const insertedFights = [];
   for (const dataset of orgDatasets) {
     for (const fight of dataset.fights) {
@@ -141,6 +143,8 @@ async function seedFighters() {
       ranking INT
     );
   `;
+
+  await sql`ALTER TABLE fighters ADD COLUMN IF NOT EXISTS nationality VARCHAR(2);`;
 
   const insertedFighters = [];
   for (const dataset of orgDatasets) {
