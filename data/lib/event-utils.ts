@@ -13,9 +13,9 @@ export function splitEventsByStatus<T extends Event>(
   return { upcoming, past };
 }
 
-export function computeNextEvent(
-  events: Array<Event & { organization_abbreviation: string }>,
-): { event: Event & { organization_abbreviation: string }; isUpcoming: boolean } | null {
+export function computeNextEvent<T extends Event & { organization_abbreviation: string }>(
+  events: T[],
+): { event: T; isUpcoming: boolean } | null {
   if (events.length === 0) {
     return null;
   }
@@ -28,4 +28,34 @@ export function computeNextEvent(
   }
 
   return { event: events[events.length - 1], isUpcoming: false };
+}
+
+/**
+ * Per-organization version of computeNextEvent, plus a total count of events
+ * on file for that org. Used on the home page so each organization card can
+ * show what's actually coming up there instead of just its logo — useful now
+ * that we track a dozen orgs whose logos are often indistinguishable
+ * placeholders.
+ */
+export function computeNextEventByOrg<T extends Event & { organization_abbreviation: string }>(
+  events: T[],
+): Map<number, { event: T; isUpcoming: boolean; eventCount: number }> {
+  const byOrg = new Map<number, T[]>();
+  for (const event of events) {
+    const list = byOrg.get(event.organization_id);
+    if (list) {
+      list.push(event);
+    } else {
+      byOrg.set(event.organization_id, [event]);
+    }
+  }
+
+  const result = new Map<number, { event: T; isUpcoming: boolean; eventCount: number }>();
+  for (const [orgId, orgEvents] of Array.from(byOrg.entries())) {
+    const next = computeNextEvent(orgEvents);
+    if (next) {
+      result.set(orgId, { ...next, eventCount: orgEvents.length });
+    }
+  }
+  return result;
 }
