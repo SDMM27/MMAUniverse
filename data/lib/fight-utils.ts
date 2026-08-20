@@ -10,6 +10,6 @@ export function splitMainEvent<T extends { is_main_event: boolean }>(
   fights: T[],
 ): { mainEvent: T | null; rest: T[] } {
   const mainEvent = fights.find((fight) => fight.is_main_event) ?? null;
-  const rest = mainEvent ? fights.filter((fight) => fight !== mainEvent) : fights;
+  const rest = mainEvent ? fights.filter((fight) => !fight.is_main_event) : fights;
   return { mainEvent, rest };
 }

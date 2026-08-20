@@ -39,3 +39,15 @@ test('splitMainEvent returns empty results for an empty input', () => {
   assert.equal(mainEvent, null);
   assert.deepEqual(rest, []);
 });
+
+test('splitMainEvent excludes every flagged fight from rest, even if more than one is flagged', () => {
+  const fights = [makeFight(1, true), makeFight(2, false), makeFight(3, true)];
+
+  const { mainEvent, rest } = splitMainEvent(fights);
+
+  assert.equal(mainEvent?.id, 1);
+  assert.deepEqual(
+    rest.map((f) => f.id),
+    [2],
+  );
+});
