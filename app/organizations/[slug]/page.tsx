@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { fetchOrganizationById, fetchEventsByOrg } from '@/data/lib/data';
 import { CoverImage } from '@/components/ui/shared/media';
-import EventCard from '@/components/ui/events/event-card';
+import EventsByStatus from '@/components/ui/events/events-by-status';
 import EmptyState from '@/components/ui/shared/empty-state';
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -28,11 +28,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
           description="Revenez plus tard pour les prochains events de cette organisation."
         />
       ) : (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-          {events.map((event) => (
-            <EventCard key={event.id} event={event} />
-          ))}
-        </div>
+        <EventsByStatus
+          events={events}
+          emptyUpcoming="Aucun événement à venir pour cette organisation"
+          emptyPast="Aucun événement passé pour cette organisation"
+        />
       )}
     </main>
   );
