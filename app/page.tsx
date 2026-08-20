@@ -1,40 +1,30 @@
 import Link from 'next/link';
-import { fetchAllEvents, fetchOrganizations } from '@/data/lib/data';
-import { computeNextEvent, computeNextEventByOrg, splitEventsByStatus } from '@/data/lib/event-utils';
+import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights } from '@/data/lib/data';
+import { computeNextEvent } from '@/data/lib/event-utils';
 import NextEventHero from '@/components/ui/events/next-event-hero';
-import EventCard from '@/components/ui/events/event-card';
-import OrganizationsList from '@/components/ui/organizations/organizations-list';
+import FightRow from '@/components/ui/fights/fight-row';
+import FightResultRow from '@/components/ui/fights/fight-result-row';
 import EmptyState from '@/components/ui/shared/empty-state';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
-const UPCOMING_PREVIEW_COUNT = 6;
+const RECENT_RESULTS_COUNT = 4;
 
 export default async function Page() {
-  const [organizations, events] = await Promise.all([
-    fetchOrganizations(),
-    fetchAllEvents(),
-  ]);
+  const events = await fetchAllEvents();
   const next = computeNextEvent(events);
-  const nextByOrg = computeNextEventByOrg(events);
 
-  // The hero already covers the single most imminent event, so the "coming
-  // up" strip below it shows what's next after that one — otherwise, with a
-  // dozen orgs now feeding events in, the same fight card would appear twice
-  // right on top of itself.
-  const { upcoming } = splitEventsByStatus(events);
-  const upcomingPreview = (next?.isUpcoming ? upcoming.slice(1) : upcoming).slice(0, UPCOMING_PREVIEW_COUNT);
+  // Only fetch the hero event's fight card when the hero is actually an
+  // upcoming event — when there's no future event in DB, computeNextEvent
+  // falls back to the last past event, which has nothing left "à venir".
+  const heroEventId = next && next.isUpcoming ? next.event.id : null;
 
-  const organizationsWithActivity = organizations.map((organization) => {
-    const orgNext = nextByOrg.get(organization.id);
-    return {
-      ...organization,
-      nextEvent: orgNext ? { ...orgNext.event, isUpcoming: orgNext.isUpcoming } : undefined,
-      eventCount: orgNext?.eventCount ?? 0,
-    };
-  });
+  const [heroFights, recentResults] = await Promise.all([
+    heroEventId ? fetchFightsByEvent(String(heroEventId)) : Promise.resolve([]),
+    fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
+  ]);
 
   return (
     <main className="flex min-h-screen flex-col gap-8 p-6">
@@ -44,28 +34,32 @@ export default async function Page() {
         <EmptyState title="Aucun événement pour le moment" />
       )}
 
-      {upcomingPreview.length > 0 && (
+      {heroFights.length > 0 && heroEventId && (
         <section>
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">À venir</h2>
-            <Link href="/events" className="text-xs uppercase tracking-wide text-accent hover:underline">
-              Voir tous les événements
+            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Combats à venir</h2>
+            <Link href={`/events/${heroEventId}`} className="text-xs uppercase tracking-wide text-accent hover:underline">
+              Voir l&apos;événement
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-            {upcomingPreview.map((event) => (
-              <EventCard key={event.id} event={event} />
+          <div className="flex flex-col gap-3">
+            {heroFights.map((fight) => (
+              <FightRow key={fight.id} fight={fight} />
             ))}
           </div>
         </section>
       )}
 
-      <section>
-        <h2 className="mb-4 font-display text-lg uppercase tracking-wide text-ink-primary">
-          Organisations ({organizations.length})
-        </h2>
-        <OrganizationsList organizations={organizationsWithActivity} />
-      </section>
+      {recentResults.length > 0 && (
+        <section>
+          <h2 className="mb-4 font-display text-lg uppercase tracking-wide text-ink-primary">Derniers résultats</h2>
+          <div className="flex flex-col gap-3">
+            {recentResults.map((result) => (
+              <FightResultRow key={result.id} result={result} />
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   );
 }
