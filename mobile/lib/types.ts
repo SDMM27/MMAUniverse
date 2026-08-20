@@ -26,6 +26,7 @@ export type Fighter = {
   organization_id: number;
   record: string;
   ranking: number;
+  nationality: string | null;
 };
 
 export type FighterWithOrganization = Fighter & {
@@ -43,6 +44,7 @@ export type FightWithFighters = {
   round: number;
   time: string;
   weight_class: string;
+  is_main_event: boolean;
   fighter1: Fighter | null;
   fighter2: Fighter | null;
 };
@@ -82,6 +84,7 @@ export type NextEventPayload = {
 export type HomeResponse = {
   nextEvent: NextEventPayload;
   organizations: Organization[];
+  fights: FightWithFighters[];
 };
 
 export type OrgDetailResponse = {
@@ -90,7 +93,7 @@ export type OrgDetailResponse = {
 };
 
 export type EventDetailResponse = {
-  event: Event;
+  event: EventWithOrganization;
   fights: FightWithFighters[];
 };
 
