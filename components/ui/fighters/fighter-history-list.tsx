@@ -8,6 +8,13 @@ const resultLabel: Record<FightHistoryEntry['result'], string> = {
   upcoming: 'À venir',
 };
 
+const resultColor: Record<FightHistoryEntry['result'], string> = {
+  win: 'text-win',
+  loss: 'text-accent',
+  draw: 'text-ink-secondary',
+  upcoming: 'text-ink-secondary',
+};
+
 export default function FighterHistoryList({ fights }: { fights: FightHistoryEntry[] }) {
   return (
     <ul className="flex flex-col gap-2">
@@ -23,9 +30,9 @@ export default function FighterHistoryList({ fights }: { fights: FightHistoryEnt
                 {fight.event_name} · {fight.event_date}
               </p>
             </div>
-            <span className="font-display text-xs uppercase tracking-wide text-accent">
+            <span className={`font-display text-xs uppercase tracking-wide ${resultColor[fight.result]}`}>
               {resultLabel[fight.result]}
-              {fight.result === 'win' && fight.method ? ` · ${fight.method}` : ''}
+              {(fight.result === 'win' || fight.result === 'loss') && fight.method ? ` · ${fight.method}` : ''}
             </span>
           </Link>
         </li>
