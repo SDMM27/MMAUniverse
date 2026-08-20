@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights } from '@/data/lib/data';
 import { computeNextEvent } from '@/data/lib/event-utils';
+import { splitMainEvent } from '@/data/lib/fight-utils';
 import NextEventHero from '@/components/ui/events/next-event-hero';
+import FightCard from '@/components/ui/fights/fight-card';
 import FightRow from '@/components/ui/fights/fight-row';
 import FightResultRow from '@/components/ui/fights/fight-result-row';
 import EmptyState from '@/components/ui/shared/empty-state';
@@ -19,12 +21,14 @@ export default async function Page() {
   // Only fetch the hero event's fight card when the hero is actually an
   // upcoming event — when there's no future event in DB, computeNextEvent
   // falls back to the last past event, which has nothing left "à venir".
-  const heroEventId = next && next.isUpcoming ? next.event.id : null;
+  const heroEvent = next && next.isUpcoming ? next.event : null;
 
   const [heroFights, recentResults] = await Promise.all([
-    heroEventId ? fetchFightsByEvent(String(heroEventId)) : Promise.resolve([]),
+    heroEvent ? fetchFightsByEvent(String(heroEvent.id)) : Promise.resolve([]),
     fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
   ]);
+
+  const { mainEvent, rest } = splitMainEvent(heroFights);
 
   return (
     <main className="flex min-h-screen flex-col gap-8 p-6">
@@ -34,16 +38,21 @@ export default async function Page() {
         <EmptyState title="Aucun événement pour le moment" />
       )}
 
-      {heroFights.length > 0 && heroEventId && (
+      {heroFights.length > 0 && heroEvent && (
         <section>
           <div className="mb-4 flex items-center justify-between">
             <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Combats à venir</h2>
-            <Link href={`/events/${heroEventId}`} className="text-xs uppercase tracking-wide text-accent hover:underline">
+            <Link href={`/events/${heroEvent.id}`} className="text-xs uppercase tracking-wide text-accent hover:underline">
               Voir l&apos;événement
             </Link>
           </div>
+          {mainEvent && (
+            <div className="mb-3">
+              <FightCard fight={mainEvent} event={heroEvent} />
+            </div>
+          )}
           <div className="flex flex-col gap-3">
-            {heroFights.map((fight) => (
+            {rest.map((fight) => (
               <FightRow key={fight.id} fight={fight} />
             ))}
           </div>
