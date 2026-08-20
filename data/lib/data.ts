@@ -73,7 +73,12 @@ export async function fetchOrganizationById(id: string) {
 
 export async function fetchEventById(id: string) {
   try {
-    const data = await sql<Event>`SELECT * FROM events WHERE id = ${id}`;
+    const data = await sql<Event & { organization_abbreviation: string }>`
+      SELECT e.*, o.abbreviation AS organization_abbreviation
+      FROM events e
+      JOIN organizations o ON e.organization_id = o.id
+      WHERE e.id = ${id}
+    `;
     return data.rows[0] ?? null;
   } catch (error) {
     console.error('Database Error:', error);
@@ -94,6 +99,7 @@ export async function fetchFightsByEvent(eventId: string) {
       round: number;
       time: string;
       weight_class: string;
+      is_main_event: boolean;
       f1_id: number | null;
       f1_name: string | null;
       f1_image_url: string | null;
@@ -101,6 +107,7 @@ export async function fetchFightsByEvent(eventId: string) {
       f1_organization_id: number | null;
       f1_record: string | null;
       f1_ranking: number | null;
+      f1_nationality: string | null;
       f2_id: number | null;
       f2_name: string | null;
       f2_image_url: string | null;
@@ -108,11 +115,12 @@ export async function fetchFightsByEvent(eventId: string) {
       f2_organization_id: number | null;
       f2_record: string | null;
       f2_ranking: number | null;
+      f2_nationality: string | null;
     }>`
       SELECT
-        f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class,
-        f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking,
-        f2.id AS f2_id, f2.name AS f2_name, f2.image_url AS f2_image_url, f2.weight_class AS f2_weight_class, f2.organization_id AS f2_organization_id, f2.record AS f2_record, f2.ranking AS f2_ranking
+        f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class, f.is_main_event,
+        f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking, f1.nationality AS f1_nationality,
+        f2.id AS f2_id, f2.name AS f2_name, f2.image_url AS f2_image_url, f2.weight_class AS f2_weight_class, f2.organization_id AS f2_organization_id, f2.record AS f2_record, f2.ranking AS f2_ranking, f2.nationality AS f2_nationality
       FROM fights f
       LEFT JOIN fighters f1 ON f.fighter1_id = f1.id
       LEFT JOIN fighters f2 ON f.fighter2_id = f2.id
@@ -130,6 +138,7 @@ export async function fetchFightsByEvent(eventId: string) {
       round: row.round,
       time: row.time,
       weight_class: row.weight_class,
+      is_main_event: row.is_main_event,
       fighter1: row.f1_id
         ? {
             id: row.f1_id,
@@ -139,6 +148,7 @@ export async function fetchFightsByEvent(eventId: string) {
             organization_id: row.f1_organization_id,
             record: row.f1_record,
             ranking: row.f1_ranking,
+            nationality: row.f1_nationality,
           }
         : null,
       fighter2: row.f2_id
@@ -150,6 +160,7 @@ export async function fetchFightsByEvent(eventId: string) {
             organization_id: row.f2_organization_id,
             record: row.f2_record,
             ranking: row.f2_ranking,
+            nationality: row.f2_nationality,
           }
         : null,
     })) as FightWithFighters[];
