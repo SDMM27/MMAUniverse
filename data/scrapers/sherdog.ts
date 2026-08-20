@@ -59,8 +59,11 @@ export async function scrapeOrganization(config: OrgScrapeConfig, cacheDir: stri
     });
 
     for (const fight of details.fights) {
-      progress.fighterUrlToName[fight.fighter1.sherdogUrl] = fight.fighter1.name;
-      progress.fighterUrlToName[fight.fighter2.sherdogUrl] = fight.fighter2.name;
+      // sherdogUrl is '' when the fight row has no real fighter link (e.g. a
+      // TBD opponent, or a stray non-http href `absoluteUrl` filtered out) —
+      // skip those rather than queuing an unfetchable "fighter".
+      if (fight.fighter1.sherdogUrl) progress.fighterUrlToName[fight.fighter1.sherdogUrl] = fight.fighter1.name;
+      if (fight.fighter2.sherdogUrl) progress.fighterUrlToName[fight.fighter2.sherdogUrl] = fight.fighter2.name;
 
       const finished = fight.fighter1.result !== 'not_finished' || fight.fighter2.result !== 'not_finished';
       const winnerName =
@@ -86,6 +89,9 @@ export async function scrapeOrganization(config: OrgScrapeConfig, cacheDir: stri
 
   for (const [fighterUrl, fallbackName] of Object.entries(progress.fighterUrlToName)) {
     if (processedFighters.has(fighterUrl)) continue;
+    // Defensive guard against stale checkpoints saved before the fix above
+    // (or any other non-http key that slips through): skip rather than crash.
+    if (!fighterUrl.startsWith('http://') && !fighterUrl.startsWith('https://')) continue;
 
     const $fighter = await fetchAndLoad(fighterUrl);
     const details = parseFighterDetails($fighter);
