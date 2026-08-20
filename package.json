@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "tsx --test \"data/scrapers/**/*.test.ts\"",
+    "test": "tsx --test \"data/**/*.test.ts\"",
     "scrape:ufc": "tsx data/scrapers/run-all.ts ufc",
     "scrape:pfl": "tsx data/scrapers/run-all.ts pfl",
     "scrape:bellator": "tsx data/scrapers/run-all.ts bellator",

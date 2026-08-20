@@ -1,9 +1,9 @@
-import { View, Text, FlatList } from 'react-native';
+import { View, Text } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { getOrg } from '../../../lib/api';
 import { useApi } from '../../../lib/use-api';
-import { Loading, ErrorState, EmptyState } from '../../../components/state';
-import { EventCard } from '../../../components/cards';
+import { Loading, ErrorState } from '../../../components/state';
+import { EventsByStatus } from '../../../components/events-by-status';
 
 export default function OrgDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -14,27 +14,20 @@ export default function OrgDetailScreen() {
   if (state.status === 'error') return <ErrorState message={state.message} onRetry={reload} />;
 
   const { organization, events } = state.data;
+  const eventsWithOrg = events.map((event) => ({ ...event, organization_abbreviation: organization.abbreviation }));
 
   return (
-    <FlatList
-      className="flex-1 bg-base-bg"
-      contentContainerStyle={{ padding: 16, gap: 12 }}
-      data={events}
-      keyExtractor={(event) => String(event.id)}
+    <EventsByStatus
+      events={eventsWithOrg}
+      onPressEvent={(event) => router.push(`/events/${event.id}`)}
+      emptyUpcoming="Aucun événement à venir pour cette organisation."
+      emptyPast="Aucun événement passé pour cette organisation."
       ListHeaderComponent={
-        <View className="mb-4">
+        <View>
           <Text className="font-display text-xs uppercase tracking-wide text-accent">{organization.abbreviation}</Text>
           <Text className="font-display text-2xl uppercase text-ink-primary">{organization.name}</Text>
         </View>
       }
-      ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
-      ListEmptyComponent={<EmptyState message="Aucun événement programmé pour cette organisation." />}
-      renderItem={({ item }) => (
-        <EventCard
-          event={{ ...item, organization_abbreviation: organization.abbreviation }}
-          onPress={() => router.push(`/events/${item.id}`)}
-        />
-      )}
     />
   );
 }
