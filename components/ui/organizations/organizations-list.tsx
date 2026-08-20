@@ -1,7 +1,5 @@
 import OrganizationCard, { OrganizationWithActivity } from './organization-card';
 
-// Not currently rendered anywhere (home page was redesigned to remove organization
-// cards). Reserved for a planned future `/organizations` list page.
 export default function OrganizationsList({
   organizations,
 }: {
