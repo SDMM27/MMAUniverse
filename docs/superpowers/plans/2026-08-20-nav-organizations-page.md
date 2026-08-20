@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a 4th nav link ("Organisations" → `/organizations`) and build that page as a Server Component listing every organization with its next event, reusing components/utilities left in place for exactly this purpose after the Home redesign — then remove the now-stale "reserved for later" comments those pieces were left with.
+**Goal:** Add a 4th nav link ("Organisations" → `/organizations`) and build that page as a Server Component listing every organization with its next event, reusing components/utilities left in place for exactly this purpose after the Home redesign — with its own route-scoped error/loading states matching the rest of the app, then remove the now-stale "reserved for later" comments those pieces were left with.
 
-**Architecture:** One new route (`app/organizations/page.tsx`) that fetches organizations + events and reuses `computeNextEventByOrg` (data/lib/event-utils.ts) and `OrganizationsList`/`OrganizationCard` (components/ui/organizations/) unchanged. No new data-fetching functions, no new components — this task is pure wiring plus two doc-comment cleanups.
+**Architecture:** One new route (`app/organizations/page.tsx` + `error.tsx` + `loading.tsx`) that fetches organizations + events and reuses `computeNextEventByOrg` (data/lib/event-utils.ts) and `OrganizationsList`/`OrganizationCard` (components/ui/organizations/) unchanged. No new data-fetching functions, no new list/card components — this task is pure wiring (plus two small new boundary files following the existing `/fighters` pattern) and two doc-comment cleanups.
 
 **Tech Stack:** Next.js 14 App Router (Server Components), TypeScript, Tailwind (Dark Combat palette).
 
@@ -140,7 +140,75 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 
 ---
 
-### Task 3: Clean up the "reserved for later" comments
+### Task 3: Add `error.tsx` and `loading.tsx` for `/organizations`
+
+**Files:**
+- Create: `app/organizations/error.tsx`
+- Create: `app/organizations/loading.tsx`
+
+Every other list route in this app (`/events`, `/fighters`, and the nested `/organizations/[slug]`) ships its own route-scoped `error.tsx` and `loading.tsx`. Task 2 only created `page.tsx`, so `/organizations` currently falls back to the root `app/error.tsx` (whose text says "Impossible de charger la page d'accueil" — wrong for this route) and the root `app/loading.tsx` (a hero-skeleton block that has no counterpart on this page, since `/organizations` has no hero). This task brings `/organizations` in line with the rest of the app. `/fighters` is the closest structural match (heading + card grid, no hero), so both new files mirror it exactly.
+
+- [ ] **Step 1: Write `error.tsx`**
+
+```tsx
+'use client';
+
+import ErrorState from '@/components/ui/shared/error-state';
+
+export default function Error({ reset }: { error: Error; reset: () => void }) {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center p-6">
+      <ErrorState title="Impossible de charger les organisations" />
+      <button
+        onClick={reset}
+        className="mt-4 rounded-md border border-base-border px-4 py-2 text-sm text-ink-secondary hover:border-accent hover:text-accent"
+      >
+        Réessayer
+      </button>
+    </main>
+  );
+}
+```
+
+- [ ] **Step 2: Write `loading.tsx`**
+
+```tsx
+import CardGridSkeleton from '@/components/ui/shared/card-grid-skeleton';
+
+export default function Loading() {
+  return (
+    <main className="flex min-h-screen flex-col gap-6 p-6">
+      <CardGridSkeleton />
+    </main>
+  );
+}
+```
+
+This is a byte-for-byte copy of `app/fighters/loading.tsx` — same layout shape (heading + grid, no hero), so the skeleton is appropriate as-is.
+
+- [ ] **Step 3: Typecheck**
+
+Run: `npx tsc --noEmit`
+Expected: no errors.
+
+- [ ] **Step 4: Manual verification**
+
+With `npm run dev` running:
+- Loading state: throttle network in devtools (or briefly add `await new Promise(r => setTimeout(r, 2000))` at the top of `page.tsx`'s `Page()` function, check the skeleton, then remove it again — don't commit a debug delay) and confirm the grid-skeleton renders instead of the stale root hero-skeleton.
+- Error state: temporarily make `fetchOrganizations` throw (e.g. edit the DB URL env var to something invalid, reload, then revert) and confirm the page shows "Impossible de charger les organisations" with a working "Réessayer" button, instead of the root "Impossible de charger la page d'accueil" message. Revert any temporary changes before moving on.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add app/organizations/error.tsx app/organizations/loading.tsx
+git commit -m "feat(organizations): add route-scoped error and loading states
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
+```
+
+---
+
+### Task 4: Clean up the "reserved for later" comments
 
 **Files:**
 - Modify: `data/lib/event-utils.ts:33-38`
@@ -214,7 +282,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 
 ---
 
-### Task 4: Final full-flow verification
+### Task 5: Final full-flow verification
 
 **Files:** none (verification only)
 
