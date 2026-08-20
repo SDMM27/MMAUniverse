@@ -32,9 +32,11 @@
       </div>
     </div>
   </div>
-  <table border="0" class="new_table result">
+  <!-- Real Sherdog markup for a not-yet-fought card uses table.new_table.upcoming (no "result"
+       class) and rows with just 5 <td>s -- no separate winby/round/time cells like the "result"
+       table has once fights are scored. See data/scrapers/parse.ts. -->
+  <table border="0" class="new_table upcoming">
     <tbody>
-      <tr class="table_head"><td class="col_one">Match</td><td></td><td class="col_two">Fighters</td><td></td><td class="col_three">Method/Referee</td><td class="col_four">R</td><td class="col_five">Time</td></tr>
       <tr itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
         <td>11</td>
         <td class="text_right col_fc_upcoming" itemprop="performer" itemscope itemtype="http://schema.org/Person">
@@ -54,8 +56,6 @@
             </div>
           </div>
         </td>
-        <td class="winby"></td>
-        <td></td>
         <td></td>
       </tr>
     </tbody>
