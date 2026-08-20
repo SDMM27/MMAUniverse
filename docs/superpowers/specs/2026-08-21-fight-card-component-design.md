@@ -126,7 +126,16 @@ above the rest, which render as `FightRow` as they do today.
 - **Event detail page**
   ([`app/events/[slug]/page.tsx`](../../../app/events/[slug]/page.tsx)):
   applies to `fights` for that event.
-- **Mobile** `mobile/app/(tabs)/events/[id].tsx`: same rule, ported.
+- **Mobile event screen** `mobile/app/(tabs)/events/[id].tsx`: same rule, ported.
+- **Mobile home screen** `mobile/app/(tabs)/index.tsx`: has no fight list
+  today (only the next-event hero poster + org list), unlike the web home
+  page. `HomeResponse` (`mobile/lib/types.ts`) gains a `fights:
+  FightWithFighters[]` field — the next upcoming event's fights, fetched by
+  `/api/mobile/home` the same way the web home page fetches `heroFights` (via
+  `fetchFightsByEvent`, only when `computeNextEvent` returns `isUpcoming:
+  true`; otherwise `[]`). The screen renders the main-event fight as a
+  `FightCard` below the hero poster when present. No full "derniers
+  résultats" section is added — that stays a web-only home feature for now.
 - **Fallback:** if no fight in the list is flagged `is_main_event` (not yet
   hand-set for that event), the section renders exactly as today — all
   `FightRow`, no `FightCard`, no placeholder/error state.
