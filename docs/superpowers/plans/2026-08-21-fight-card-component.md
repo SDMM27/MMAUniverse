@@ -216,17 +216,24 @@ export function countryCodeToFlag(code: string | null): string | null {
   const normalized = code.trim().toUpperCase();
   if (!/^[A-Z]{2}$/.test(normalized)) return null;
 
-  const codePoints = [...normalized].map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
+  const codePoints = normalized.split('').map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
   return String.fromCodePoint(...codePoints);
 }
 ```
+
+(Use `.split('')`, not `[...normalized]` — the web `tsconfig.json` has no explicit `target`, which defaults to a pre-ES2015 target where spreading a *string* fails `tsc --noEmit` with TS2802. `String.fromCodePoint(...codePoints)` is fine as-is since `codePoints` is an array, not a string — TS2802 is specific to string iteration.)
 
 - [ ] **Step 4: Run it to verify it passes**
 
 Run: `npx tsx --test data/lib/flag-utils.test.ts`
 Expected: PASS — `4 tests`, `4 pass`, `0 fail`.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 5: Verify it compiles**
+
+Run: `npx tsc --noEmit`
+Expected: no output (clean pass).
+
+- [ ] **Step 6: Commit**
 
 ```bash
 git add data/lib/flag-utils.ts data/lib/flag-utils.test.ts
@@ -311,17 +318,24 @@ export function splitMainEvent<T extends { is_main_event: boolean }>(
   fights: T[],
 ): { mainEvent: T | null; rest: T[] } {
   const mainEvent = fights.find((fight) => fight.is_main_event) ?? null;
-  const rest = mainEvent ? fights.filter((fight) => fight !== mainEvent) : fights;
+  const rest = mainEvent ? fights.filter((fight) => !fight.is_main_event) : fights;
   return { mainEvent, rest };
 }
 ```
 
+(`rest` filters by the `is_main_event` flag itself, not object identity — if a data-integrity slip ever flags more than one fight as main event, this excludes all of them from `rest` rather than leaking the extras through. Add a 4th test for this case: `[makeFight(1, true), makeFight(2, false), makeFight(3, true)]` → `mainEvent.id === 1`, `rest` is `[2]`.)
+
 - [ ] **Step 4: Run it to verify it passes**
 
 Run: `npx tsx --test data/lib/fight-utils.test.ts`
-Expected: PASS — `3 tests`, `3 pass`, `0 fail`.
+Expected: PASS — `4 tests`, `4 pass`, `0 fail`.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 5: Verify it compiles**
+
+Run: `npx tsc --noEmit`
+Expected: no output (clean pass).
+
+- [ ] **Step 6: Commit**
 
 ```bash
 git add data/lib/fight-utils.ts data/lib/fight-utils.test.ts
@@ -967,10 +981,12 @@ export function countryCodeToFlag(code: string | null): string | null {
   const normalized = code.trim().toUpperCase();
   if (!/^[A-Z]{2}$/.test(normalized)) return null;
 
-  const codePoints = [...normalized].map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
+  const codePoints = normalized.split('').map((char) => REGIONAL_INDICATOR_OFFSET + char.charCodeAt(0));
   return String.fromCodePoint(...codePoints);
 }
 ```
+
+(`.split('')`, not `[...normalized]` — matches the web copy exactly, see Task 3's note. Mobile's `tsconfig.json` targets `ESNext`, so the spread form would actually compile fine here, but keeping both copies textually identical avoids any confusion about which one is "the real one".)
 
 - [ ] **Step 2: Verify it compiles**
 
@@ -1004,7 +1020,7 @@ export function splitMainEvent<T extends { is_main_event: boolean }>(
   fights: T[],
 ): { mainEvent: T | null; rest: T[] } {
   const mainEvent = fights.find((fight) => fight.is_main_event) ?? null;
-  const rest = mainEvent ? fights.filter((fight) => fight !== mainEvent) : fights;
+  const rest = mainEvent ? fights.filter((fight) => !fight.is_main_event) : fights;
   return { mainEvent, rest };
 }
 ```
@@ -1027,6 +1043,17 @@ git commit -m "feat(fights): add mobile splitMainEvent util"
 
 **Files:**
 - Modify: `mobile/components/cards.tsx`
+- Modify: `mobile/tailwind.config.js`
+
+- [ ] **Step 0: Add the missing `win` color token**
+
+`mobile/tailwind.config.js`'s `theme.extend.colors` only defines `base`, `accent`, and `ink` — unlike the web `tailwind.config.ts`, it has no `win` token. `FightCard`'s finished-state winner badge (Step 2 below) uses `text-win`, which NativeWind won't generate a utility for unless the token exists — the badge would silently render with no color instead of green. Add a `win` entry to `theme.extend.colors`, matching the web config's value and ordering (`base`, `accent`, `win`, `ink`):
+
+```js
+        win: {
+          DEFAULT: '#3fb950',
+        },
+```
 
 - [ ] **Step 1: Add the import**
 
@@ -1082,7 +1109,13 @@ export function FightCard({
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={`${fight.fighter1.name} contre ${fight.fighter2.name}`}
+      accessibilityLabel={
+        status === 'finished'
+          ? `${fight.fighter1.name} contre ${fight.fighter2.name}, terminé`
+          : status === 'live'
+            ? `${fight.fighter1.name} contre ${fight.fighter2.name}, en direct, round ${live?.round}`
+            : `${fight.fighter1.name} contre ${fight.fighter2.name}, ${event.date}`
+      }
       className="flex flex-col gap-4 rounded-lg border border-base-border bg-base-card p-4"
     >
       <FightCardHeader status={status} event={event} liveRound={live?.round} />
@@ -1296,7 +1329,7 @@ Replace the file with:
 
 ```tsx
 import { View, Text, FlatList } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router';
 import { getEvent } from '../../../lib/api';
 import { useApi } from '../../../lib/use-api';
 import { splitMainEvent } from '../../../lib/fight-utils';
@@ -1304,7 +1337,6 @@ import { Loading, ErrorState, EmptyState } from '../../../components/state';
 import { FightRow, FightCard } from '../../../components/cards';
 
 export default function EventDetailScreen() {
-  const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const [state, reload] = useApi(() => getEvent(id), [id]);
 
@@ -1328,9 +1360,7 @@ export default function EventDetailScreen() {
               {event.date} · {event.event_location}
             </Text>
           </View>
-          {mainEvent && (
-            <FightCard fight={mainEvent} event={event} onPress={() => router.push(`/events/${event.id}`)} />
-          )}
+          {mainEvent && <FightCard fight={mainEvent} event={event} onPress={() => {}} />}
         </View>
       }
       ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -1340,6 +1370,8 @@ export default function EventDetailScreen() {
   );
 }
 ```
+
+(No `useRouter`/navigation on this card's `onPress` — unlike the web version, where `FightCard` self-links via `next/link` and a link-to-the-current-page is inert, `router.push()` on mobile has no dedup here and would push a *new* instance of this same screen onto the stack, causing a visible reload and a duplicate back-stack entry. `onPress` is required on `FightCard`'s props, so a no-op is the correct minimal choice — this card is already on the event's own detail screen, so there's nowhere meaningful to navigate to.)
 
 Note `ListEmptyComponent` checks `fights.length === 0` (the original, full list), not `rest.length === 0` — an event with exactly one fight (which becomes the main event) would otherwise incorrectly show the "no fights announced" empty state below a `FightCard` that's clearly showing a fight.
 
@@ -1359,6 +1391,6 @@ git commit -m "feat(mobile-events): show main event as FightCard on the event de
 
 ## Final check
 
-- [ ] Run the full web test suite once more: `npm test` — expect `tests 20`, `pass 20`, `fail 0` (this plan adds `data/lib/flag-utils.test.ts` and `data/lib/fight-utils.test.ts`, so the real final count is `tests 27`, `pass 27`, `fail 0` — 20 pre-existing + 4 flag-utils + 3 fight-utils).
+- [ ] Run the full web test suite once more: `npm test` — expect `tests 28`, `pass 28`, `fail 0` (20 pre-existing + 4 `flag-utils` + 4 `fight-utils` — the 4th `fight-utils` case was added during Task 4's code review to cover the multiple-flagged-fight edge case, on top of the 3 originally planned).
 - [ ] Run `npx tsc --noEmit` at the repo root — expect a clean pass.
 - [ ] Run `npx tsc --noEmit` inside `mobile/` — expect a clean pass.
