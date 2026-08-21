@@ -1,5 +1,5 @@
 import { View, Text, FlatList } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router';
 import { getEvent } from '../../../lib/api';
 import { useApi } from '../../../lib/use-api';
 import { splitMainEvent } from '../../../lib/fight-utils';
@@ -7,7 +7,6 @@ import { Loading, ErrorState, EmptyState } from '../../../components/state';
 import { FightRow, FightCard } from '../../../components/cards';
 
 export default function EventDetailScreen() {
-  const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const [state, reload] = useApi(() => getEvent(id), [id]);
 
