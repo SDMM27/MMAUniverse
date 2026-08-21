@@ -8,7 +8,17 @@ let client: ReturnType<typeof neon<false, true>> | null = null;
 
 function getClient() {
   if (!client) {
-    client = neon(process.env.DATABASE_URL!, { fullResults: true });
+    // `fetchOptions: { cache: 'no-store' }` forces every underlying fetch()
+    // this driver makes to opt out of Next.js's Data Cache. Route-level
+    // `export const dynamic = 'force-dynamic'` (see app/seed/route.ts) only
+    // opts a route out of static rendering — it does not, by itself, stop
+    // Next from serving a cached response for an individual fetch() call
+    // nested inside that route. Confirmed via diagnostic logging: repeated
+    // `/seed` runs against a freshly truncated DB kept returning old ids
+    // (e.g. a cached `SELECT id FROM events WHERE name = ...` result) with
+    // zero real rows in the table, causing spurious fights_event_id_fkey
+    // violations. no-store here is what actually prevents that.
+    client = neon(process.env.DATABASE_URL!, { fullResults: true, fetchOptions: { cache: 'no-store' } });
   }
   return client;
 }
