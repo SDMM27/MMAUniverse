@@ -124,7 +124,13 @@ export function FightCard({
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={`${fight.fighter1.name} contre ${fight.fighter2.name}`}
+      accessibilityLabel={
+        status === 'finished'
+          ? `${fight.fighter1.name} contre ${fight.fighter2.name}, terminé`
+          : status === 'live'
+            ? `${fight.fighter1.name} contre ${fight.fighter2.name}, en direct, round ${live?.round}`
+            : `${fight.fighter1.name} contre ${fight.fighter2.name}, ${event.date}`
+      }
       className="flex flex-col gap-4 rounded-lg border border-base-border bg-base-card p-4"
     >
       <FightCardHeader status={status} event={event} liveRound={live?.round} />
