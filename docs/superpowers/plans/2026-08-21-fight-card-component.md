@@ -1329,7 +1329,7 @@ Replace the file with:
 
 ```tsx
 import { View, Text, FlatList } from 'react-native';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams } from 'expo-router';
 import { getEvent } from '../../../lib/api';
 import { useApi } from '../../../lib/use-api';
 import { splitMainEvent } from '../../../lib/fight-utils';
@@ -1337,7 +1337,6 @@ import { Loading, ErrorState, EmptyState } from '../../../components/state';
 import { FightRow, FightCard } from '../../../components/cards';
 
 export default function EventDetailScreen() {
-  const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const [state, reload] = useApi(() => getEvent(id), [id]);
 
@@ -1361,9 +1360,7 @@ export default function EventDetailScreen() {
               {event.date} · {event.event_location}
             </Text>
           </View>
-          {mainEvent && (
-            <FightCard fight={mainEvent} event={event} onPress={() => router.push(`/events/${event.id}`)} />
-          )}
+          {mainEvent && <FightCard fight={mainEvent} event={event} onPress={() => {}} />}
         </View>
       }
       ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
@@ -1373,6 +1370,8 @@ export default function EventDetailScreen() {
   );
 }
 ```
+
+(No `useRouter`/navigation on this card's `onPress` — unlike the web version, where `FightCard` self-links via `next/link` and a link-to-the-current-page is inert, `router.push()` on mobile has no dedup here and would push a *new* instance of this same screen onto the stack, causing a visible reload and a duplicate back-stack entry. `onPress` is required on `FightCard`'s props, so a no-op is the correct minimal choice — this card is already on the event's own detail screen, so there's nowhere meaningful to navigate to.)
 
 Note `ListEmptyComponent` checks `fights.length === 0` (the original, full list), not `rest.length === 0` — an event with exactly one fight (which becomes the main event) would otherwise incorrectly show the "no fights announced" empty state below a `FightCard` that's clearly showing a fight.
 
@@ -1392,6 +1391,6 @@ git commit -m "feat(mobile-events): show main event as FightCard on the event de
 
 ## Final check
 
-- [ ] Run the full web test suite once more: `npm test` — expect `tests 20`, `pass 20`, `fail 0` (this plan adds `data/lib/flag-utils.test.ts` and `data/lib/fight-utils.test.ts`, so the real final count is `tests 27`, `pass 27`, `fail 0` — 20 pre-existing + 4 flag-utils + 3 fight-utils).
+- [ ] Run the full web test suite once more: `npm test` — expect `tests 28`, `pass 28`, `fail 0` (20 pre-existing + 4 `flag-utils` + 4 `fight-utils` — the 4th `fight-utils` case was added during Task 4's code review to cover the multiple-flagged-fight edge case, on top of the 3 originally planned).
 - [ ] Run `npx tsc --noEmit` at the repo root — expect a clean pass.
 - [ ] Run `npx tsc --noEmit` inside `mobile/` — expect a clean pass.
