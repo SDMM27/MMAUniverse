@@ -2,8 +2,9 @@ import { View, Text, ScrollView, Image, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
 import { getHome } from '../../lib/api';
 import { useApi } from '../../lib/use-api';
+import { splitMainEvent } from '../../lib/fight-utils';
 import { Loading, ErrorState, EmptyState } from '../../components/state';
-import { OrganizationCard } from '../../components/cards';
+import { OrganizationCard, FightCard } from '../../components/cards';
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -12,7 +13,8 @@ export default function HomeScreen() {
   if (state.status === 'loading') return <Loading />;
   if (state.status === 'error') return <ErrorState message={state.message} onRetry={reload} />;
 
-  const { nextEvent, organizations } = state.data;
+  const { nextEvent, organizations, fights } = state.data;
+  const { mainEvent } = splitMainEvent(fights);
 
   return (
     <ScrollView className="flex-1 bg-base-bg" contentContainerStyle={{ padding: 16, gap: 24 }}>
@@ -36,6 +38,14 @@ export default function HomeScreen() {
         </Pressable>
       ) : (
         <EmptyState message="Aucun event à afficher pour le moment." />
+      )}
+
+      {mainEvent && nextEvent && (
+        <FightCard
+          fight={mainEvent}
+          event={nextEvent.event}
+          onPress={() => router.push(`/events/${nextEvent.event.id}`)}
+        />
       )}
 
       <View className="gap-3">
