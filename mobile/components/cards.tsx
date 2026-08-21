@@ -1,5 +1,6 @@
 import { View, Text, Image, Pressable } from 'react-native';
-import type { EventWithOrganization, FighterWithOrganization, FightWithFighters, Organization } from '../lib/types';
+import type { EventWithOrganization, Fighter, FighterWithOrganization, FightWithFighters, Organization } from '../lib/types';
+import { countryCodeToFlag } from '../lib/flag-utils';
 
 export function OrganizationCard({ organization, onPress }: { organization: Organization; onPress: () => void }) {
   return (
@@ -87,4 +88,139 @@ export function FightRow({ fight }: { fight: FightWithFighters }) {
       )}
     </View>
   );
+}
+
+type FightStatus = 'upcoming' | 'live' | 'finished';
+
+const resultLabel: Record<'win' | 'loss' | 'draw', string> = { win: 'V', loss: 'D', draw: 'N' };
+const resultColor: Record<'win' | 'loss' | 'draw', string> = {
+  win: 'text-win',
+  loss: 'text-accent',
+  draw: 'text-ink-secondary',
+};
+
+export function FightCard({
+  fight,
+  event,
+  onPress,
+  live,
+}: {
+  fight: FightWithFighters;
+  event: { id: number; date: string; organization_abbreviation: string };
+  onPress: () => void;
+  live?: { round: number };
+}) {
+  if (!fight.fighter1 || !fight.fighter2) {
+    return (
+      <View className="rounded-lg border border-base-border bg-base-card p-4">
+        <Text className="text-sm text-ink-secondary">Données des combattants indisponibles pour ce combat.</Text>
+      </View>
+    );
+  }
+
+  const status: FightStatus = fight.fight_finished ? 'finished' : live ? 'live' : 'upcoming';
+
+  return (
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={`${fight.fighter1.name} contre ${fight.fighter2.name}`}
+      className="flex flex-col gap-4 rounded-lg border border-base-border bg-base-card p-4"
+    >
+      <FightCardHeader status={status} event={event} liveRound={live?.round} />
+      <View className="flex-row items-center justify-between gap-3">
+        <FightCardFighterColumn fighter={fight.fighter1} status={status} winnerId={fight.winner_id} />
+        <FightCardCenter status={status} fight={fight} />
+        <FightCardFighterColumn fighter={fight.fighter2} status={status} winnerId={fight.winner_id} />
+      </View>
+      <Text className="border-t border-base-border pt-2 text-center font-display text-xs uppercase tracking-wide text-accent">
+        Événement principal
+      </Text>
+    </Pressable>
+  );
+}
+
+function FightCardHeader({
+  status,
+  event,
+  liveRound,
+}: {
+  status: FightStatus;
+  event: { date: string; organization_abbreviation: string };
+  liveRound?: number;
+}) {
+  if (status === 'live') {
+    return (
+      <View className="flex-row items-center justify-between">
+        <View className="flex-row items-center gap-1.5 rounded bg-accent px-2 py-0.5">
+          <View className="h-1.5 w-1.5 rounded-full bg-white" />
+          <Text className="font-display text-[10px] uppercase tracking-wide text-white">En direct</Text>
+        </View>
+        <Text className="text-xs text-ink-secondary">Round {liveRound}</Text>
+      </View>
+    );
+  }
+
+  if (status === 'finished') {
+    return (
+      <View className="flex-row items-center justify-between">
+        <Text className="font-display text-xs uppercase tracking-wide text-accent">{event.organization_abbreviation}</Text>
+        <Text className="rounded border border-base-border px-2 py-0.5 text-[10px] uppercase tracking-wide text-ink-secondary">
+          Terminé
+        </Text>
+      </View>
+    );
+  }
+
+  return (
+    <View className="flex-row items-center justify-between">
+      <Text className="font-display text-xs uppercase tracking-wide text-accent">{event.organization_abbreviation}</Text>
+      <Text className="text-xs text-ink-secondary">{event.date}</Text>
+    </View>
+  );
+}
+
+function FightCardFighterColumn({
+  fighter,
+  status,
+  winnerId,
+}: {
+  fighter: Fighter;
+  status: FightStatus;
+  winnerId: number | null;
+}) {
+  const flag = countryCodeToFlag(fighter.nationality);
+  const result = winnerId === null ? 'draw' : winnerId === fighter.id ? 'win' : 'loss';
+
+  return (
+    <View className="flex-1 items-center gap-1">
+      <Image source={{ uri: fighter.image_url }} accessible={false} className="h-12 w-12 rounded-full" />
+      {flag && <Text className="text-sm">{flag}</Text>}
+      <Text className="font-display text-sm uppercase tracking-wide text-ink-primary">{fighter.name}</Text>
+      {status === 'finished' ? (
+        <Text className={`font-display text-lg font-bold ${resultColor[result]}`}>{resultLabel[result]}</Text>
+      ) : (
+        fighter.ranking > 0 && (
+          <Text className="text-[10px] font-bold uppercase tracking-wide text-accent">#{fighter.ranking}</Text>
+        )
+      )}
+    </View>
+  );
+}
+
+function FightCardCenter({ status, fight }: { status: FightStatus; fight: FightWithFighters }) {
+  if (status === 'live') {
+    return <View className="h-2 w-2 rounded-full bg-accent" />;
+  }
+
+  if (status === 'finished') {
+    const parts = [fight.method, fight.round ? `Round ${fight.round}` : null].filter(Boolean);
+    return (
+      <Text className="text-center text-xs text-ink-secondary">
+        {parts.length > 0 ? parts.join(' · ') : 'Résultat non précisé'}
+      </Text>
+    );
+  }
+
+  return <Text className="text-xs font-bold text-ink-secondary">VS</Text>;
 }
