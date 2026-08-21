@@ -31,9 +31,7 @@ export default function EventDetailScreen() {
               {event.date} · {event.event_location}
             </Text>
           </View>
-          {mainEvent && (
-            <FightCard fight={mainEvent} event={event} onPress={() => router.push(`/events/${event.id}`)} />
-          )}
+          {mainEvent && <FightCard fight={mainEvent} event={event} onPress={() => {}} />}
         </View>
       }
       ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
