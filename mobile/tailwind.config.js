@@ -17,6 +17,9 @@ module.exports = {
         accent: {
           DEFAULT: '#ff3b30',
         },
+        win: {
+          DEFAULT: '#3fb950',
+        },
         ink: {
           primary: '#f5f5f5',
           secondary: '#9a9a9a',
