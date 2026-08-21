@@ -53,6 +53,18 @@ ALTER TABLE fights ADD COLUMN IF NOT EXISTS is_main_event BOOLEAN NOT NULL DEFAU
   backfilled **by hand** for fighters/events actually in rotation — same
   placeholder-data pattern already used for org/event seeding. No scraper
   changes.
+- **Known limitation, found during final review:** `seedFighters()` inserts
+  with `ON CONFLICT (id) DO NOTHING`, so a hand-set `nationality` on an
+  existing fighter survives every future `/seed` call untouched. `seedFights()`
+  does not — it `DELETE`s and re-`INSERT`s every fight in the *entire* static
+  scraped dataset (`orgDatasets`, all orgs) on every `/seed` call, and its
+  `INSERT` doesn't list `is_main_event`, so it always comes back as the column
+  default (`false`). A hand-set `is_main_event` flag is therefore silently
+  wiped the next time `/seed` runs for *any* reason — not just when that
+  fight's own event changes. Until the seed script is changed to preserve it
+  (out of scope here — it's a pre-existing delete+recreate pattern, not
+  something this project introduces), **re-apply the manual `is_main_event`
+  SQL after every `/seed` run**, not just once after backfilling.
 - Type updates needed in both `data/lib/definitions.ts` and
   `mobile/lib/types.ts`: `Fighter.nationality: string | null`,
   `Fight.is_main_event: boolean`.
