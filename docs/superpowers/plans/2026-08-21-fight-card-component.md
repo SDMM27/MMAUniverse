@@ -1043,6 +1043,17 @@ git commit -m "feat(fights): add mobile splitMainEvent util"
 
 **Files:**
 - Modify: `mobile/components/cards.tsx`
+- Modify: `mobile/tailwind.config.js`
+
+- [ ] **Step 0: Add the missing `win` color token**
+
+`mobile/tailwind.config.js`'s `theme.extend.colors` only defines `base`, `accent`, and `ink` — unlike the web `tailwind.config.ts`, it has no `win` token. `FightCard`'s finished-state winner badge (Step 2 below) uses `text-win`, which NativeWind won't generate a utility for unless the token exists — the badge would silently render with no color instead of green. Add a `win` entry to `theme.extend.colors`, matching the web config's value and ordering (`base`, `accent`, `win`, `ink`):
+
+```js
+        win: {
+          DEFAULT: '#3fb950',
+        },
+```
 
 - [ ] **Step 1: Add the import**
 
@@ -1098,7 +1109,13 @@ export function FightCard({
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={`${fight.fighter1.name} contre ${fight.fighter2.name}`}
+      accessibilityLabel={
+        status === 'finished'
+          ? `${fight.fighter1.name} contre ${fight.fighter2.name}, terminé`
+          : status === 'live'
+            ? `${fight.fighter1.name} contre ${fight.fighter2.name}, en direct, round ${live?.round}`
+            : `${fight.fighter1.name} contre ${fight.fighter2.name}, ${event.date}`
+      }
       className="flex flex-col gap-4 rounded-lg border border-base-border bg-base-card p-4"
     >
       <FightCardHeader status={status} event={event} liveRound={live?.round} />
