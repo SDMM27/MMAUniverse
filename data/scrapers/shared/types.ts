@@ -1,7 +1,7 @@
 export interface ScrapedEvent {
   name: string;
   date: string; // ISO 'YYYY-MM-DD'
-  start_time: string; // full ISO 8601 datetime
+  start_time?: string; // full ISO 8601 datetime — absent until this org's JSON is rescraped with this field
   event_location: string;
   event_poster: string;
 }

@@ -14,6 +14,7 @@ function makeEvent(id: number, date: string): Event {
     id,
     name: `Event ${id}`,
     date,
+    start_time: null,
     event_location: 'Somewhere',
     event_poster: '',
     organization_id: 1,

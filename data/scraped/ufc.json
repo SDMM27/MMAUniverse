@@ -4906,72 +4906,84 @@
     {
       "name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
       "date": "2026-08-28",
+      "start_time": "2026-08-28T00:00:00+00:00",
       "event_location": "Shanghai Indoor Stadium, Shanghai, China",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/891292"
     },
     {
       "name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
       "date": "2026-08-29",
+      "start_time": "2026-08-29T00:00:00+00:00",
       "event_location": "Shanghai Indoor Stadium, Shanghai, China",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/889968"
     },
     {
       "name": "UFC Fight Night 287 - Hooker vs. Parnasse",
       "date": "2026-09-05",
+      "start_time": "2026-09-05T00:00:00+00:00",
       "event_location": "Accor Arena, Paris, France",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/892487"
     },
     {
       "name": "UFC Fight Night 288 - Noche UFC 4",
       "date": "2026-09-12",
+      "start_time": "2026-09-12T00:00:00+00:00",
       "event_location": "Desert Diamond Arena, Glendale, Arizona, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/893741"
     },
     {
       "name": "UFC 331 - Van vs. Pantoja",
       "date": "2026-09-19",
+      "start_time": "2026-09-19T00:00:00+00:00",
       "event_location": "Staples Center, Los Angeles, California, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/894094"
     },
     {
       "name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
       "date": "2026-09-26",
+      "start_time": "2026-09-26T00:00:00+00:00",
       "event_location": "UFC Apex, Las Vegas, Nevada, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/894826"
     },
     {
-      "name": "UFC 332 -",
+      "name": "UFC 332 - TBA",
       "date": "2026-10-03",
+      "start_time": "2026-10-03T15:00:00+00:00",
       "event_location": "Delta Center, Salt Lake City, Utah, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895177"
     },
     {
       "name": "UFC Fight Night - Oct. 10",
       "date": "2026-10-10",
+      "start_time": "2026-10-10T00:00:00+00:00",
       "event_location": "UFC Apex, Las Vegas, Nevada, United States",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895390"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895690"
     },
     {
       "name": "UFC Fight Night - Buckley vs. Malott",
       "date": "2026-10-17",
+      "start_time": "2026-10-17T00:00:00+00:00",
       "event_location": "Rogers Place, Edmonton, Alberta, Canada",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/893222"
     },
     {
       "name": "UFC 333 - Volkanovski vs. Evloev",
       "date": "2026-10-24",
+      "start_time": "2026-10-24T00:00:00+00:00",
       "event_location": "Etihad Arena, Yas Island, Abu Dhabi, United Arab Emirates",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/894835"
     },
     {
       "name": "UFC Fight Night - Oct. 31",
       "date": "2026-10-31",
+      "start_time": "2026-10-31T00:00:00+00:00",
       "event_location": "UFC Apex, Las Vegas, Nevada, United States",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895052"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895706"
     },
     {
       "name": "UFC Fight Night - Brady vs. Bonfim",
       "date": "2026-11-07",
+      "start_time": "2026-11-07T00:00:00+00:00",
       "event_location": "UFC Apex, Las Vegas, Nevada, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895050"
     }
@@ -25184,6 +25196,34 @@
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1703221121Jourdain.jpg",
       "weight_class": "Bantamweight",
       "record": "9-3-0",
+      "ranking": 0
+    },
+    {
+      "name": "Valesca Machado",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20221116023743_Valesca_Machado.JPG",
+      "weight_class": "Strawweight",
+      "record": "15-4-0",
+      "ranking": 0
+    },
+    {
+      "name": "Melissa Amaya",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240529063154_Melissa_Amaya.JPG",
+      "weight_class": "Strawweight",
+      "record": "8-0-0",
+      "ranking": 0
+    },
+    {
+      "name": "Ilimbek Akylbek Uulu",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1632627936Ilimbek-Akylbek-Uulu.jpg",
+      "weight_class": "Bantamweight",
+      "record": "9-3-0",
+      "ranking": 0
+    },
+    {
+      "name": "Lucia Szabova",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1740237747luciaszabova.png",
+      "weight_class": "Bantamweight",
+      "record": "10-0-0",
       "ranking": 0
     }
   ],
@@ -124091,7 +124131,7 @@
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
-      "fighter1_name": "Nueraji Taiyilake",
+      "fighter1_name": "Maheshate Hayisaer",
       "fighter2_name": "Darrius Flowers",
       "fight_finished": false,
       "winner_name": null,
@@ -124871,7 +124911,29 @@
       "weight_class": "Middleweight"
     },
     {
-      "event_name": "UFC 332 -",
+      "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
+      "fighter1_name": "Valesca Machado",
+      "fighter2_name": "Melissa Amaya",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight"
+    },
+    {
+      "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
+      "fighter1_name": "Ilimbek Akylbek Uulu",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "UFC 332 - TBA",
       "fighter1_name": "Deiveson Figueiredo",
       "fighter2_name": "Payton Talbott",
       "fight_finished": false,
@@ -124882,7 +124944,18 @@
       "weight_class": "Bantamweight"
     },
     {
-      "event_name": "UFC 332 -",
+      "event_name": "UFC 332 - TBA",
+      "fighter1_name": "Rafael dos Anjos",
+      "fighter2_name": "Alexander Hernandez",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "UFC 332 - TBA",
       "fighter1_name": "Mick Parkin",
       "fighter2_name": "Johnny Walker",
       "fight_finished": false,
@@ -124893,7 +124966,7 @@
       "weight_class": "Heavyweight"
     },
     {
-      "event_name": "UFC 332 -",
+      "event_name": "UFC 332 - TBA",
       "fighter1_name": "Damian Pinas",
       "fighter2_name": "Andrey Pulyaev",
       "fight_finished": false,
@@ -124904,7 +124977,7 @@
       "weight_class": "Middleweight"
     },
     {
-      "event_name": "UFC 332 -",
+      "event_name": "UFC 332 - TBA",
       "fighter1_name": "Court McGee",
       "fighter2_name": "Eric Nolan",
       "fight_finished": false,
@@ -124915,7 +124988,7 @@
       "weight_class": "Welterweight"
     },
     {
-      "event_name": "UFC 332 -",
+      "event_name": "UFC 332 - TBA",
       "fighter1_name": "Ismail Naurdiev",
       "fighter2_name": "Marvin Vettori",
       "fight_finished": false,
@@ -124926,7 +124999,7 @@
       "weight_class": "Middleweight"
     },
     {
-      "event_name": "UFC 332 -",
+      "event_name": "UFC 332 - TBA",
       "fighter1_name": "Roman Kopylov",
       "fighter2_name": "Ateba Abega Gautier",
       "fight_finished": false,
@@ -124937,7 +125010,7 @@
       "weight_class": "Middleweight"
     },
     {
-      "event_name": "UFC 332 -",
+      "event_name": "UFC 332 - TBA",
       "fighter1_name": "Alden Coria",
       "fighter2_name": "Imanol Rodriguez",
       "fight_finished": false,
@@ -124946,6 +125019,17 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight"
+    },
+    {
+      "event_name": "UFC Fight Night - Oct. 10",
+      "fighter1_name": "Andre Fili",
+      "fighter2_name": "Kai Kamaka III",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight"
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125246,6 +125330,28 @@
     },
     {
       "event_name": "UFC Fight Night - Oct. 31",
+      "fighter1_name": "Lucia Szabova",
+      "fighter2_name": "Tainara Lisboa",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight"
+    },
+    {
+      "event_name": "UFC Fight Night - Oct. 31",
+      "fighter1_name": "Andre Petroski",
+      "fighter2_name": "Azamat Bekoev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight"
+    },
+    {
+      "event_name": "UFC Fight Night - Oct. 31",
       "fighter1_name": "Julian Erosa",
       "fighter2_name": "Jeong Yeong Lee",
       "fight_finished": false,
@@ -125287,6 +125393,17 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "UFC Fight Night - Brady vs. Bonfim",
+      "fighter1_name": "Karine Silva",
+      "fighter2_name": "Gabriella Fernandes",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight"
     },
     {
       "event_name": "UFC Fight Night - Brady vs. Bonfim",

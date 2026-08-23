@@ -42,20 +42,28 @@ function loadDataset(orgKey: string): ScrapedOrgData {
 
 const datasets = [loadDataset('ufc'), loadDataset('pfl'), loadDataset('bellator')];
 
-async function upsertEvent(event: { name: string; date: string; event_location: string; event_poster: string }, organizationId: number) {
+async function upsertEvent(
+  event: { name: string; date: string; start_time?: string; event_location: string; event_poster: string },
+  organizationId: number,
+) {
+  // start_time is absent on any org's JSON that hasn't been rescraped since
+  // that field was introduced — fall back to null rather than writing
+  // `undefined` (which would rely on JSON.stringify's implicit undefined->
+  // omitted-array-element behavior in the underlying HTTP driver call).
+  const startTime = event.start_time ?? null;
   const existing = await sql`SELECT id FROM events WHERE name = ${event.name}`;
   if (existing.length > 0) {
     const id = existing[0].id;
     await sql`
-      UPDATE events SET date = ${event.date}, event_location = ${event.event_location},
+      UPDATE events SET date = ${event.date}, start_time = ${startTime}, event_location = ${event.event_location},
         event_poster = ${event.event_poster}, organization_id = ${organizationId}
       WHERE id = ${id}
     `;
     return id;
   }
   const inserted = await sql`
-    INSERT INTO events (name, date, event_location, event_poster, organization_id)
-    VALUES (${event.name}, ${event.date}, ${event.event_location}, ${event.event_poster}, ${organizationId})
+    INSERT INTO events (name, date, start_time, event_location, event_poster, organization_id)
+    VALUES (${event.name}, ${event.date}, ${startTime}, ${event.event_location}, ${event.event_poster}, ${organizationId})
     RETURNING id
   `;
   return inserted[0].id;

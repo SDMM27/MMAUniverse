@@ -60,12 +60,14 @@ async function seedEvents() {
     );
   `;
 
+  await sql`ALTER TABLE events ADD COLUMN IF NOT EXISTS start_time TIMESTAMPTZ;`;
+
   const insertedEvents = [];
   for (const dataset of orgDatasets) {
     for (const event of dataset.events) {
       const result = await sql`
-        INSERT INTO events (name, date, event_location, event_poster, organization_id)
-        VALUES (${event.name}, ${event.date}, ${event.event_location}, ${event.event_poster}, ${dataset.organization_id})
+        INSERT INTO events (name, date, start_time, event_location, event_poster, organization_id)
+        VALUES (${event.name}, ${event.date}, ${event.start_time ?? null}, ${event.event_location}, ${event.event_poster}, ${dataset.organization_id})
         ON CONFLICT (id) DO NOTHING;
       `;
       insertedEvents.push(result);
