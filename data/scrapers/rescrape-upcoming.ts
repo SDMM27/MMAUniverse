@@ -54,8 +54,12 @@ async function main() {
       });
 
       for (const fight of details.fights) {
-        fighterUrlToName[fight.fighter1.sherdogUrl] = fight.fighter1.name;
-        fighterUrlToName[fight.fighter2.sherdogUrl] = fight.fighter2.name;
+        // sherdogUrl is '' when the fight row has no real fighter link (e.g. a
+        // TBD opponent) — skip those rather than queuing an unfetchable "fighter"
+        // (an empty URL resolves to http://localhost/ and fails the fetch below).
+        // Mirrors the same guard already in sherdog.ts's scrapeOrganization.
+        if (fight.fighter1.sherdogUrl) fighterUrlToName[fight.fighter1.sherdogUrl] = fight.fighter1.name;
+        if (fight.fighter2.sherdogUrl) fighterUrlToName[fight.fighter2.sherdogUrl] = fight.fighter2.name;
 
         const finished = fight.fighter1.result !== 'not_finished' || fight.fighter2.result !== 'not_finished';
         const winnerName =
