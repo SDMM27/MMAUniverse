@@ -25,7 +25,7 @@ test('saveProgress then loadProgress round-trips the data', () => {
   const cacheDir = tempCacheDir();
   const progress = loadProgress('pfl', 2, cacheDir);
   progress.processedEventUrls.push('https://www.sherdog.com/events/example-1');
-  progress.data.events.push({ name: 'Example Event', date: '2024-01-01', event_location: 'Somewhere', event_poster: '' });
+  progress.data.events.push({ name: 'Example Event', date: '2024-01-01', start_time: '2024-01-01T00:00:00Z', event_location: 'Somewhere', event_poster: '' });
 
   saveProgress('pfl', progress, cacheDir);
 

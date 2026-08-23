@@ -1,6 +1,7 @@
 export interface ScrapedEvent {
   name: string;
   date: string; // ISO 'YYYY-MM-DD'
+  start_time: string; // full ISO 8601 datetime
   event_location: string;
   event_poster: string;
 }

@@ -48,6 +48,7 @@ async function main() {
       freshEvents.push({
         name: details.name,
         date: details.date,
+        start_time: details.start_time,
         event_location: details.location,
         event_poster: details.poster,
       });
