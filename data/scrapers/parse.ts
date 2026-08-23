@@ -1,7 +1,7 @@
 // data/scrapers/parse.ts
 import type { CheerioAPI, Cheerio } from 'cheerio';
 import type { AnyNode } from 'domhandler';
-import { normalizeDate } from './shared/normalize-date';
+import { normalizeDate, normalizeStartTime } from './shared/normalize-date';
 
 export type FinalResult = 'win' | 'loss' | 'not_finished';
 
@@ -23,6 +23,7 @@ export interface ParsedFight {
 export interface ParsedEventDetails {
   name: string;
   date: string;
+  start_time: string;
   location: string;
   poster: string;
   fights: ParsedFight[];
@@ -96,6 +97,7 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
   const name = $('h1 span[itemprop="name"]').first().text().trim();
   const dateContent = $('.info meta[itemprop="startDate"]').first().attr('content') ?? '';
   const date = normalizeDate(dateContent);
+  const start_time = normalizeStartTime(dateContent);
   const location = $('.info span[itemprop="location"]').first().text().trim();
   const poster = $('meta[itemprop="image"]').first().attr('content') ?? '';
 
@@ -156,7 +158,7 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
     }
   });
 
-  return { name, date, location, poster, fights };
+  return { name, date, start_time, location, poster, fights };
 }
 
 export function parseFighterDetails($: CheerioAPI): ParsedFighterDetails {
