@@ -57,6 +57,7 @@ test('parseEventDetails extracts event metadata and all fights from a finished e
 
   assert.equal(details.name, 'Bellator MMA - Bellator 100');
   assert.equal(details.date, '2013-09-20');
+  assert.equal(details.start_time, '2013-09-20T00:00:00+00:00');
   assert.equal(details.location, 'Grand Canyon University Arena, Phoenix, Arizona, United States');
   assert.equal(details.poster, 'https://www1-cdn.sherdog.com/image_vs/233453');
   assert.equal(details.fights.length, 2);
