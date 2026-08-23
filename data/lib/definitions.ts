@@ -9,6 +9,7 @@ export type Event = {
     id: number;
     name: string;
     date: string;
+    start_time: string | null;
     event_location: string;
     event_poster: string;
     organization_id: number;
