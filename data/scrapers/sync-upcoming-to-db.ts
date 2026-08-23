@@ -4,12 +4,13 @@
 // data/scraped/{ufc,pfl,bellator}.json into Neon, by name/date rather than blind INSERT.
 // Unlike app/seed/route.ts (which has no UNIQUE constraint to lean on and would duplicate
 // every row on a second run), this is safe to re-run: existing events/fighters are matched
-// by name and UPDATEd in place, and each event's fight list is fully replaced (delete-then-
-// insert) rather than appended to.
+// by name and UPDATEd in place, and each event's fights are reconciled by fighter pair
+// (see shared/fight-sync.ts) so unchanged fights keep their `id` across syncs.
 import fs from 'node:fs';
 import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import type { ScrapedOrgData } from './shared/types';
+import { planFightSync, type FreshFight } from './shared/fight-sync';
 
 // tsx doesn't auto-load .env.local the way Next.js does; parse it by hand.
 function loadEnvLocal() {
@@ -64,7 +65,7 @@ async function upsertFighter(
   fighter: { name: string; image_url: string; weight_class: string; record: string; ranking: number },
   organizationId: number,
 ) {
-  const existing = await sql`SELECT id FROM fighters WHERE name = ${fighter.name}`;
+  const existing = await sql`SELECT id FROM fighters WHERE name = ${fighter.name} ORDER BY id ASC`;
   if (existing.length > 0) {
     const id = existing[0].id;
     await sql`
@@ -111,9 +112,7 @@ async function main() {
       const eventId = await upsertEvent(event, dataset.organization_id);
       const eventFights = dataset.fights.filter((f) => f.event_name === event.name);
 
-      // Full replace: this event's card in the JSON is now authoritative.
-      await sql`DELETE FROM fights WHERE event_id = ${eventId}`;
-
+      const freshFights: FreshFight[] = [];
       for (const fight of eventFights) {
         const fighter1 = dataset.fighters.find((f) => f.name === fight.fighter1_name);
         const fighter2 = dataset.fighters.find((f) => f.name === fight.fighter2_name);
@@ -130,13 +129,48 @@ async function main() {
             )
           : null;
 
-        await sql`
-          INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class)
-          VALUES (${eventId}, ${fighter1Id}, ${fighter2Id}, ${fight.fight_finished}, ${winnerId}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class})
-        `;
+        freshFights.push({
+          fighter1_id: fighter1Id,
+          fighter2_id: fighter2Id,
+          fight_finished: fight.fight_finished,
+          winner_id: winnerId,
+          method: fight.method,
+          round: fight.round,
+          time: fight.time,
+          weight_class: fight.weight_class,
+        });
       }
 
-      console.log(`  synced "${event.name}" -> ${eventFights.length} fight(s)`);
+      const existingRows = (await sql`
+        SELECT id, fighter1_id, fighter2_id FROM fights WHERE event_id = ${eventId}
+      `) as { id: number; fighter1_id: number; fighter2_id: number }[];
+      const plan = planFightSync(existingRows, freshFights);
+
+      for (const { id, fight } of plan.toUpdate) {
+        await sql`
+          UPDATE fights SET fighter1_id = ${fight.fighter1_id}, fighter2_id = ${fight.fighter2_id},
+            fight_finished = ${fight.fight_finished}, winner_id = ${fight.winner_id},
+            method = ${fight.method}, round = ${fight.round}, time = ${fight.time}, weight_class = ${fight.weight_class}
+          WHERE id = ${id}
+        `;
+      }
+      for (const fight of plan.toInsert) {
+        await sql`
+          INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class)
+          VALUES (${eventId}, ${fight.fighter1_id}, ${fight.fighter2_id}, ${fight.fight_finished}, ${fight.winner_id}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class})
+        `;
+      }
+      // A fight genuinely pulled from the card (not just unchanged) is deleted here.
+      // picks.fight_id is ON DELETE CASCADE (a later task) so any picks on it are removed
+      // along with it — consistent with the spec's "traité comme si ce combat n'avait
+      // jamais existé" rule for withdrawn fights.
+      for (const id of plan.toDeleteIds) {
+        await sql`DELETE FROM fights WHERE id = ${id}`;
+      }
+
+      console.log(
+        `  synced "${event.name}" -> ${plan.toUpdate.length} updated, ${plan.toInsert.length} new, ${plan.toDeleteIds.length} removed`,
+      );
     }
   }
 
