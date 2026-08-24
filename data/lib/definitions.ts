@@ -76,3 +76,29 @@ export type FighterStats = {
   submission: number;
   decision: number;
 };
+
+export type MethodCategory = 'ko_tko' | 'submission' | 'decision';
+
+// id is BIGSERIAL: the Neon driver (no type parser override, see data/lib/db.ts)
+// returns int8 columns as JS strings, not numbers -- unlike the INT-typed ids
+// elsewhere in this file (see the same note on fight_id/predicted_winner_id
+// below, and app/seed/route.ts's picks table DDL for the full explanation).
+export type PickemUser = {
+  id: string;
+  external_auth_id: string;
+  display_name: string;
+  created_at: string;
+};
+
+// Named PickRecord, not Pick, to avoid shadowing TypeScript's built-in
+// Pick<T, K> utility type in any file that imports this one.
+export type PickRecord = {
+  id: string; // BIGSERIAL -- see the note on PickemUser.id above
+  user_id: string; // BIGINT, references users.id -- same reason
+  fight_id: number; // INT, references fights.id (int4, comes back as a number)
+  predicted_winner_id: number; // INT, references fighters.id (int4, comes back as a number)
+  predicted_method_category: MethodCategory;
+  predicted_round: number | null;
+  created_at: string;
+  updated_at: string;
+};
