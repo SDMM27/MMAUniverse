@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 import { inter, oswald } from "@/components/ui/fonts";
 import Nav from "@/components/ui/nav";
 import "./globals.css";
@@ -14,11 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`${inter.className} ${oswald.variable} bg-base-bg text-ink-primary`}>
-        <Nav />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="fr">
+        <body className={`${inter.className} ${oswald.variable} bg-base-bg text-ink-primary`}>
+          <Nav />
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
