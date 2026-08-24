@@ -163,12 +163,46 @@ async function seedFighters() {
   return insertedFighters;
 }
 
+async function seedPickemSchema() {
+  await sql`
+    CREATE TABLE IF NOT EXISTS users (
+      id BIGSERIAL PRIMARY KEY,
+      external_auth_id TEXT NOT NULL UNIQUE,
+      display_name TEXT NOT NULL,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    );
+  `;
+
+  await sql`
+    CREATE TABLE IF NOT EXISTS picks (
+      id BIGSERIAL PRIMARY KEY,
+      user_id BIGINT NOT NULL REFERENCES users(id),
+      -- fight_id/predicted_winner_id are INT (not BIGINT) to match fights.id/
+      -- fighters.id, both SERIAL (int4). Mismatched int4/int8 FKs are legal in
+      -- Postgres but the driver (@neondatabase/serverless, no type parser
+      -- override -- see data/lib/db.ts) returns int8 columns as JS strings and
+      -- int4 as numbers; a BIGINT here would make every strict equality
+      -- comparison against a fights/fighters id (scorePick's winner check,
+      -- Map lookups keyed by fight_id) silently fail. Confirmed empirically
+      -- against the real driver while reviewing this task.
+      fight_id INT NOT NULL REFERENCES fights(id) ON DELETE CASCADE,
+      predicted_winner_id INT NOT NULL REFERENCES fighters(id),
+      predicted_method_category TEXT NOT NULL CHECK (predicted_method_category IN ('ko_tko', 'submission', 'decision')),
+      predicted_round SMALLINT CHECK (predicted_round IS NULL OR predicted_round BETWEEN 1 AND 5),
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      UNIQUE (user_id, fight_id)
+    );
+  `;
+}
+
 export async function GET() {
   try {
     await seedOrganizations(); // Cette fonction doit être exécutée en premier
     await seedEvents();        // Dépend de `organizations`
     await seedFighters();      // Peut dépendre de `organizations`
     await seedFights();        // Dépend de `events` et `fighters`
+    await seedPickemSchema();  // Dépend de `fighters` (predicted_winner_id FK)
 
     return Response.json({ message: 'Database seeded successfully' });
   } catch (error) {
