@@ -1,9 +1,12 @@
 import { notFound } from 'next/navigation';
 import { fetchEventById, fetchFightsByEvent } from '@/data/lib/data';
 import { splitMainEvent } from '@/data/lib/fight-utils';
+import { isEventLocked } from '@/data/lib/pick-lock';
+import { fetchPicksForEvent, fetchEventLeaderboard, getOrCreateCurrentUser, type StoredPick } from '@/data/lib/picks-data';
 import { CoverImage } from '@/components/ui/shared/media';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightRow from '@/components/ui/fights/fight-row';
+import FightPickSection from '@/components/ui/picks/fight-pick-section';
 import EmptyState from '@/components/ui/shared/empty-state';
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -15,6 +18,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const fights = await fetchFightsByEvent(params.slug);
   const { mainEvent, rest } = splitMainEvent(fights);
+  const locked = isEventLocked(event, new Date());
+
+  const userId = await getOrCreateCurrentUser();
+  const userPicks: Map<number, StoredPick> = userId ? await fetchPicksForEvent(userId, params.slug) : new Map();
+
+  const leaderboard = locked ? await fetchEventLeaderboard(params.slug) : [];
 
   return (
     <main className="flex min-h-screen flex-col gap-6 p-6">
@@ -35,16 +44,52 @@ export default async function Page({ params }: { params: { slug: string } }) {
       ) : (
         <>
           {mainEvent && (
-            <div>
+            <div className="flex flex-col gap-3">
               <FightCard fight={mainEvent} event={event} />
+              <FightPickSection
+                fight={mainEvent}
+                locked={locked}
+                signedIn={Boolean(userId)}
+                pick={userPicks.get(mainEvent.id) ?? null}
+              />
             </div>
           )}
           <div className="flex flex-col gap-3">
             {rest.map((fight) => (
-              <FightRow key={fight.id} fight={fight} />
+              <div key={fight.id} className="flex flex-col gap-3">
+                <FightRow fight={fight} />
+                <FightPickSection
+                  fight={fight}
+                  locked={locked}
+                  signedIn={Boolean(userId)}
+                  pick={userPicks.get(fight.id) ?? null}
+                />
+              </div>
             ))}
           </div>
         </>
+      )}
+      {locked && (
+        <div className="flex flex-col gap-3 border-t border-base-border pt-6">
+          <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Classement de cet événement</h2>
+          {leaderboard.length === 0 ? (
+            <EmptyState title="Aucun pronostic" description="Personne n'a pronostiqué cet événement." />
+          ) : (
+            <ol className="flex flex-col gap-2">
+              {leaderboard.map((entry, index) => (
+                <li
+                  key={entry.userId}
+                  className="flex items-center justify-between rounded-lg border border-base-border bg-base-card px-4 py-2"
+                >
+                  <span className="text-sm text-ink-primary">
+                    #{index + 1} {entry.displayName}
+                  </span>
+                  <span className="font-display text-sm text-accent">{entry.points} pts</span>
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
       )}
     </main>
   );
