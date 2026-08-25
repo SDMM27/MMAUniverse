@@ -22,7 +22,7 @@
 
 **Why:** `sync-upcoming-to-db.ts` currently does `DELETE FROM fights WHERE event_id = ...` then re-`INSERT`s every fight for that event on every run, even when nothing changed. Once `picks.fight_id REFERENCES fights(id)` exists (Task 7), this either blocks the sync (FK violation) or — if the FK is `ON DELETE CASCADE` — silently wipes user picks on every sync. This task extracts the "what changed" decision into a pure, testable function; Task 2 wires it into the script.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 ```ts
 // data/scrapers/shared/fight-sync.test.ts
@@ -96,12 +96,12 @@ test('planFightSync handles a full card unchanged run with zero updates needed a
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `npx tsx --test data/scrapers/shared/fight-sync.test.ts`
 Expected: FAIL — `Cannot find module './fight-sync'`
 
-- [ ] **Step 3: Write the implementation**
+- [x] **Step 3: Write the implementation**
 
 ```ts
 // data/scrapers/shared/fight-sync.ts
@@ -161,12 +161,12 @@ export function planFightSync(existing: ExistingFightRow[], fresh: FreshFight[])
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `npx tsx --test data/scrapers/shared/fight-sync.test.ts`
 Expected: PASS, 4 tests
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/scrapers/shared/fight-sync.ts data/scrapers/shared/fight-sync.test.ts
@@ -180,7 +180,7 @@ git commit -m "feat(scrapers): add planFightSync pure diff for stable fight ids"
 **Files:**
 - Modify: `data/scrapers/sync-upcoming-to-db.ts`
 
-- [ ] **Step 1: Replace the per-event fight sync block**
+- [x] **Step 1: Replace the per-event fight sync block**
 
 In `data/scrapers/sync-upcoming-to-db.ts`, replace this block (currently around lines 110–139):
 
@@ -286,7 +286,7 @@ with:
     }
 ```
 
-- [ ] **Step 2: Add the import**
+- [x] **Step 2: Add the import**
 
 At the top of `data/scrapers/sync-upcoming-to-db.ts`, add:
 
@@ -294,14 +294,14 @@ At the top of `data/scrapers/sync-upcoming-to-db.ts`, add:
 import { planFightSync, type FreshFight } from './shared/fight-sync';
 ```
 
-- [ ] **Step 3: Manual verification — fight ids stay stable across two runs**
+- [x] **Step 3: Manual verification — fight ids stay stable across two runs**
 
 Run: `npx tsx data/scrapers/sync-upcoming-to-db.ts`
 Then note an `id` from `SELECT id, fighter1_id, fighter2_id FROM fights WHERE event_id = <any synced event id>` (via `/seed`-adjacent DB access or a one-off query).
 Run the sync script again with no data changes: `npx tsx data/scrapers/sync-upcoming-to-db.ts`
 Expected: same `fights.id` values as before (log line shows `0 updated → still N updated` — i.e. rows matched and UPDATEd in place, not `N new`).
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add data/scrapers/sync-upcoming-to-db.ts
@@ -318,7 +318,7 @@ git commit -m "fix(scrapers): upsert fights in place during sync instead of dele
 
 **Why:** `events.date` is date-only (`YYYY-MM-DD`); the pick lock (Task 11) needs the actual kickoff time. Sherdog's `startDate` meta tag already carries the full ISO 8601 datetime — `normalizeDate` currently throws away everything but the date part. This adds a sibling function that keeps the full value, without changing `normalizeDate`'s existing contract (still used for date-only comparisons elsewhere, e.g. `sync-upcoming-to-db.ts`'s `date >= today` filter).
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 Append to `data/scrapers/shared/normalize-date.test.ts`:
 
@@ -344,12 +344,12 @@ test('normalizeStartTime throws on an empty string', () => {
 
 (Add the `normalizeStartTime` import to the existing `import { normalizeDate } from './normalize-date';` line instead of a duplicate import line.)
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `npx tsx --test data/scrapers/shared/normalize-date.test.ts`
 Expected: FAIL — `normalizeStartTime is not a function` / not exported
 
-- [ ] **Step 3: Write the implementation**
+- [x] **Step 3: Write the implementation**
 
 Append to `data/scrapers/shared/normalize-date.ts`:
 
@@ -368,12 +368,12 @@ export function normalizeStartTime(sherdogStartDate: string): string {
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `npx tsx --test data/scrapers/shared/normalize-date.test.ts`
 Expected: PASS, all tests (existing `normalizeDate` tests + new `normalizeStartTime` tests)
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/scrapers/shared/normalize-date.ts data/scrapers/shared/normalize-date.test.ts
@@ -388,7 +388,7 @@ git commit -m "feat(scrapers): add normalizeStartTime alongside normalizeDate"
 - Modify: `data/scrapers/parse.ts`
 - Modify: `data/scrapers/parse.test.ts`
 
-- [ ] **Step 1: Update the failing test expectation**
+- [x] **Step 1: Update the failing test expectation**
 
 In `data/scrapers/parse.test.ts`, in the `'parseEventDetails extracts event metadata and all fights from a finished event'` test, add after the existing `assert.equal(details.date, '2013-09-20');` line:
 
@@ -396,12 +396,12 @@ In `data/scrapers/parse.test.ts`, in the `'parseEventDetails extracts event meta
   assert.equal(details.start_time, '2013-09-20T00:00:00+00:00');
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `npx tsx --test data/scrapers/parse.test.ts`
 Expected: FAIL — `details.start_time` is `undefined`
 
-- [ ] **Step 3: Update the types and implementation**
+- [x] **Step 3: Update the types and implementation**
 
 In `data/scrapers/parse.ts`, update the import:
 
@@ -440,12 +440,12 @@ to:
   return { name, date, start_time, location, poster, fights };
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `npx tsx --test data/scrapers/parse.test.ts`
 Expected: PASS, all tests
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/scrapers/parse.ts data/scrapers/parse.test.ts
@@ -463,7 +463,7 @@ git commit -m "feat(scrapers): capture start_time in parseEventDetails"
 
 **Why:** `parseEventDetails` now returns `start_time`, but it still needs to flow into `ScrapedEvent` (the shape written to `data/scraped/*.json`) at both call sites that build events from parsed details.
 
-- [ ] **Step 1: Add the field to `ScrapedEvent`**
+- [x] **Step 1: Add the field to `ScrapedEvent`**
 
 In `data/scrapers/shared/types.ts`, update:
 
@@ -477,7 +477,7 @@ export interface ScrapedEvent {
 }
 ```
 
-- [ ] **Step 2: Wire it in `sherdog.ts`**
+- [x] **Step 2: Wire it in `sherdog.ts`**
 
 In `data/scrapers/sherdog.ts`, update the `progress.data.events.push(...)` call (around line 54):
 
@@ -491,7 +491,7 @@ In `data/scrapers/sherdog.ts`, update the `progress.data.events.push(...)` call 
     });
 ```
 
-- [ ] **Step 3: Wire it in `rescrape-upcoming.ts`**
+- [x] **Step 3: Wire it in `rescrape-upcoming.ts`**
 
 In `data/scrapers/rescrape-upcoming.ts`, update the `freshEvents.push(...)` call (around line 48):
 
@@ -505,12 +505,12 @@ In `data/scrapers/rescrape-upcoming.ts`, update the `freshEvents.push(...)` call
       });
 ```
 
-- [ ] **Step 4: Type-check**
+- [x] **Step 4: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no new errors (both call sites now satisfy the `ScrapedEvent` shape)
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/scrapers/shared/types.ts data/scrapers/sherdog.ts data/scrapers/rescrape-upcoming.ts
@@ -526,7 +526,7 @@ git commit -m "feat(scrapers): thread start_time through ScrapedEvent"
 - Modify: `app/seed/route.ts`
 - Modify: `data/scrapers/sync-upcoming-to-db.ts`
 
-- [ ] **Step 1: Add the field to the `Event` type**
+- [x] **Step 1: Add the field to the `Event` type**
 
 In `data/lib/definitions.ts`, update:
 
@@ -542,7 +542,7 @@ export type Event = {
   };
 ```
 
-- [ ] **Step 2: Add the column and backfill it on seed**
+- [x] **Step 2: Add the column and backfill it on seed**
 
 In `app/seed/route.ts`, inside `seedEvents()`, after the existing `CREATE TABLE IF NOT EXISTS events (...)` block, add:
 
@@ -572,7 +572,7 @@ to:
 
 (The `as { start_time?: string }` cast is because `data/scraped/*.json` on disk may predate this field until someone re-runs the scraper — `seedEvents()` must tolerate rows without it rather than crash.)
 
-- [ ] **Step 3: Set it during incremental sync**
+- [x] **Step 3: Set it during incremental sync**
 
 In `data/scrapers/sync-upcoming-to-db.ts`, update `upsertEvent`'s signature and body from:
 
@@ -623,13 +623,13 @@ async function upsertEvent(
 }
 ```
 
-- [ ] **Step 4: Manual verification**
+- [x] **Step 4: Manual verification**
 
 Run: `curl -s <local-dev-url>/seed` (with the dev server running) to apply the `ALTER TABLE`.
 Then query `SELECT name, date, start_time FROM events LIMIT 5` (e.g. via the Neon console) — `start_time` is `NULL` for pre-existing rows (expected, since `data/scraped/*.json` hasn't been re-scraped) and column exists without error.
 Run `npx tsx data/scrapers/rescrape-upcoming.ts ufc` then `npx tsx data/scrapers/sync-upcoming-to-db.ts` — confirm at least one UFC upcoming event now has a non-null `start_time`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/lib/definitions.ts app/seed/route.ts data/scrapers/sync-upcoming-to-db.ts
@@ -643,7 +643,7 @@ git commit -m "feat(db): add events.start_time column, populated by seed and syn
 **Files:**
 - Modify: `app/seed/route.ts`
 
-- [ ] **Step 1: Add the schema function**
+- [x] **Step 1: Add the schema function**
 
 In `app/seed/route.ts`, add a new function (after `seedFights`, before `GET`):
 
@@ -676,7 +676,7 @@ async function seedPickemSchema() {
 
 `fight_id` is `ON DELETE CASCADE`: when a fight is genuinely withdrawn from a card (Task 2's `toDeleteIds` path), its picks are removed along with it — matching the spec's rule that a withdrawn fight is excluded from scoring "comme s'il n'avait jamais existé". This never fires for unchanged fights any more, since Task 2 upserts those in place.
 
-- [ ] **Step 2: Call it from `GET`**
+- [x] **Step 2: Call it from `GET`**
 
 In `app/seed/route.ts`, update the `GET` handler from:
 
@@ -715,12 +715,12 @@ export async function GET() {
 }
 ```
 
-- [ ] **Step 3: Manual verification**
+- [x] **Step 3: Manual verification**
 
 Run: `curl -s <local-dev-url>/seed`
 Expected: `{"message":"Database seeded successfully"}`. Query `\d users` and `\d picks` (or the Neon console table view) — both tables exist with the columns above.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add app/seed/route.ts
@@ -734,7 +734,7 @@ git commit -m "feat(db): add users and picks tables"
 **Files:**
 - Modify: `data/lib/definitions.ts`
 
-- [ ] **Step 1: Add the types**
+- [x] **Step 1: Add the types**
 
 In `data/lib/definitions.ts`, add:
 
@@ -760,12 +760,12 @@ export type Pick = {
 };
 ```
 
-- [ ] **Step 2: Type-check**
+- [x] **Step 2: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add data/lib/definitions.ts
@@ -782,7 +782,7 @@ git commit -m "feat(types): add Pick and PickemUser"
 
 **Why:** `fights.method` is free-text scraped from Sherdog (321 distinct values seen across the current scraped datasets, e.g. `"TKO (Doctor Stoppage)"`, `"Submission (Rear-Naked Choke)"`, even a scraper typo `"Submision (Arm-Triangle Choke)"`). Picks only ever predict one of three categories; this maps the real-world text onto those three (plus a catch-all `'other'` for methods no one can predict, e.g. `"Disqualification (...)"`, `"No Contest"`, `"Draw (...)"` — a fight scored via `scorePick`, Task 10, never reaches the method comparison for those anyway, since `winner_id` is null).
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 ```ts
 // data/lib/method-category.test.ts
@@ -830,12 +830,12 @@ test('normalizeMethodCategory is case-insensitive', () => {
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `npx tsx --test data/lib/method-category.test.ts`
 Expected: FAIL — `Cannot find module './method-category'`
 
-- [ ] **Step 3: Write the implementation**
+- [x] **Step 3: Write the implementation**
 
 ```ts
 // data/lib/method-category.ts
@@ -859,12 +859,12 @@ export function normalizeMethodCategory(method: string): MethodCategory | 'other
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `npx tsx --test data/lib/method-category.test.ts`
 Expected: PASS, all tests
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/lib/method-category.ts data/lib/method-category.test.ts
@@ -879,7 +879,7 @@ git commit -m "feat(picks): add normalizeMethodCategory"
 - Create: `data/lib/scoring.ts`
 - Test: `data/lib/scoring.test.ts`
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 ```ts
 // data/lib/scoring.test.ts
@@ -944,12 +944,12 @@ test('scorePick awards only the winner bonus when the real method is unpredictab
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `npx tsx --test data/lib/scoring.test.ts`
 Expected: FAIL — `Cannot find module './scoring'`
 
-- [ ] **Step 3: Write the implementation**
+- [x] **Step 3: Write the implementation**
 
 ```ts
 // data/lib/scoring.ts
@@ -991,12 +991,12 @@ export function scorePick(pick: PickInput, result: FightResult): number {
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `npx tsx --test data/lib/scoring.test.ts`
 Expected: PASS, all 7 tests
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/lib/scoring.ts data/lib/scoring.test.ts
@@ -1011,7 +1011,7 @@ git commit -m "feat(picks): add scorePick"
 - Create: `data/lib/pick-lock.ts`
 - Test: `data/lib/pick-lock.test.ts`
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 ```ts
 // data/lib/pick-lock.test.ts
@@ -1042,12 +1042,12 @@ test('isEventLocked falls back to 00:00 UTC on `date` when start_time is null', 
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `npx tsx --test data/lib/pick-lock.test.ts`
 Expected: FAIL — `Cannot find module './pick-lock'`
 
-- [ ] **Step 3: Write the implementation**
+- [x] **Step 3: Write the implementation**
 
 ```ts
 // data/lib/pick-lock.ts
@@ -1064,12 +1064,12 @@ export function isEventLocked(event: { start_time: string | null; date: string }
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes**
+- [x] **Step 4: Run test to verify it passes**
 
 Run: `npx tsx --test data/lib/pick-lock.test.ts`
 Expected: PASS, all 4 tests
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add data/lib/pick-lock.ts data/lib/pick-lock.test.ts
@@ -1088,23 +1088,23 @@ git commit -m "feat(picks): add isEventLocked"
 - Modify: `.env.local` (not committed)
 - Modify: `package.json`
 
-- [ ] **Step 1: Install Clerk via the Vercel Marketplace**
+- [x] **Step 1: Install Clerk via the Vercel Marketplace**
 
 Run: `vercel link` (if this project isn't linked to a Vercel project yet — follow the prompts)
 Run: `vercel integration add clerk --yes`
 
 This needs the user's Vercel account / a dashboard step to finish connecting the Clerk account (native Marketplace integration, not fully CLI-driven) — **stop here and ask the user to complete that step** before continuing. It auto-provisions `CLERK_SECRET_KEY` and `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`.
 
-- [ ] **Step 2: Pull the provisioned env vars**
+- [x] **Step 2: Pull the provisioned env vars**
 
 Run: `vercel env pull --yes`
 Expected: `.env.local` now contains `CLERK_SECRET_KEY` and `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
 
-- [ ] **Step 3: Install the SDK**
+- [x] **Step 3: Install the SDK**
 
 Run: `npm install @clerk/nextjs`
 
-- [ ] **Step 4: Add middleware**
+- [x] **Step 4: Add middleware**
 
 ```ts
 // middleware.ts
@@ -1120,7 +1120,7 @@ export const config = {
 };
 ```
 
-- [ ] **Step 5: Wrap the root layout**
+- [x] **Step 5: Wrap the root layout**
 
 In `app/layout.tsx`, update:
 
@@ -1183,7 +1183,7 @@ export default function RootLayout({
 }
 ```
 
-- [ ] **Step 6: Add sign-in and sign-up pages**
+- [x] **Step 6: Add sign-in and sign-up pages**
 
 ```tsx
 // app/sign-in/[[...sign-in]]/page.tsx
@@ -1211,7 +1211,7 @@ export default function Page() {
 }
 ```
 
-- [ ] **Step 7: Add routing env vars**
+- [x] **Step 7: Add routing env vars**
 
 Append to `.env.local`:
 
@@ -1220,12 +1220,12 @@ NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 ```
 
-- [ ] **Step 8: Manual verification**
+- [x] **Step 8: Manual verification**
 
 Run: `npm run dev`, open `/sign-up`, create an account, confirm redirect and that the app renders without errors.
 Open `/sign-in` in a private window, sign in with the same account, confirm it succeeds.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add middleware.ts app/layout.tsx "app/sign-in" "app/sign-up" package.json package-lock.json
@@ -1239,7 +1239,7 @@ git commit -m "feat(auth): install and configure Clerk"
 **Files:**
 - Modify: `components/ui/nav.tsx`
 
-- [ ] **Step 1: Update the implementation**
+- [x] **Step 1: Update the implementation**
 
 In `components/ui/nav.tsx`, update:
 
@@ -1338,11 +1338,11 @@ export default function Nav() {
 }
 ```
 
-- [ ] **Step 2: Manual verification**
+- [x] **Step 2: Manual verification**
 
 Run: `npm run dev`. Signed out: nav shows "Connexion". Sign in: nav shows "Mes pronostics" and the Clerk user avatar/menu instead.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add components/ui/nav.tsx
@@ -1358,7 +1358,7 @@ git commit -m "feat(nav): show signed-in state and pronostics links"
 
 **Why:** Follows the existing `data/lib/data.ts` convention (try/catch, throw a descriptive `Error`, one function per query) rather than a new pattern. No automated test — this project has no DB test harness (`data/lib/data.ts` itself has none either); verified manually in Tasks 15/17/18/19.
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```ts
 // data/lib/picks-data.ts
@@ -1563,12 +1563,12 @@ export async function fetchUserPickHistory(userId: number): Promise<PickHistoryE
 }
 ```
 
-- [ ] **Step 2: Type-check**
+- [x] **Step 2: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add data/lib/picks-data.ts
@@ -1582,7 +1582,7 @@ git commit -m "feat(picks): add picks-data persistence and leaderboard functions
 **Files:**
 - Create: `app/api/picks/route.ts`
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```ts
 // app/api/picks/route.ts
@@ -1638,7 +1638,7 @@ export async function POST(request: Request) {
 }
 ```
 
-- [ ] **Step 2: Manual verification**
+- [x] **Step 2: Manual verification**
 
 With `npm run dev` running and signed in via a browser (to get a session cookie), from that browser's devtools console:
 
@@ -1654,7 +1654,7 @@ Expected: `{ ok: true }`. Query `SELECT * FROM picks WHERE fight_id = 1` — one
 Repeat against a fight whose event has already started (or force one via a test row) — expect `{ error: '...clos.' }` with status 403.
 Sign out and repeat — expect `{ error: '...connecté...' }` with status 401.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add app/api/picks/route.ts
@@ -1670,7 +1670,7 @@ git commit -m "feat(picks): add POST /api/picks"
 - Create: `components/ui/picks/pick-result.tsx`
 - Create: `components/ui/picks/fight-pick-section.tsx`
 
-- [ ] **Step 1: Write `pick-form.tsx`**
+- [x] **Step 1: Write `pick-form.tsx`**
 
 ```tsx
 // components/ui/picks/pick-form.tsx
@@ -1782,7 +1782,7 @@ export default function PickForm({
 }
 ```
 
-- [ ] **Step 2: Write `pick-result.tsx`**
+- [x] **Step 2: Write `pick-result.tsx`**
 
 ```tsx
 // components/ui/picks/pick-result.tsx
@@ -1839,7 +1839,7 @@ export default function PickResult({
 }
 ```
 
-- [ ] **Step 3: Write `fight-pick-section.tsx`**
+- [x] **Step 3: Write `fight-pick-section.tsx`**
 
 ```tsx
 // components/ui/picks/fight-pick-section.tsx
@@ -1879,12 +1879,12 @@ export default function FightPickSection({
 }
 ```
 
-- [ ] **Step 4: Type-check**
+- [x] **Step 4: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add components/ui/picks
@@ -1898,7 +1898,7 @@ git commit -m "feat(picks): add pick form, result, and section components"
 **Files:**
 - Modify: `app/events/[slug]/page.tsx`
 
-- [ ] **Step 1: Update the implementation**
+- [x] **Step 1: Update the implementation**
 
 Replace the full contents of `app/events/[slug]/page.tsx` with:
 
@@ -2001,11 +2001,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
 }
 ```
 
-- [ ] **Step 2: Manual verification**
+- [x] **Step 2: Manual verification**
 
 Run: `npm run dev`. Signed out: open an upcoming event, each fight shows "Connecte-toi pour pronostiquer". Sign in: each fight shows the pick form; submit one, confirm the page refreshes with the selection reflected. Open an event whose `start_time` is in the past (or a finished one): each fight shows the read-only `PickResult` instead of the form, and a "Classement de cet événement" section appears below.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add "app/events/[slug]/page.tsx"
@@ -2021,7 +2021,7 @@ git commit -m "feat(events): wire pronostics section into the event page"
 - Create: `app/classement/loading.tsx`
 - Create: `app/classement/error.tsx`
 
-- [ ] **Step 1: Write `page.tsx`**
+- [x] **Step 1: Write `page.tsx`**
 
 ```tsx
 // app/classement/page.tsx
@@ -2056,7 +2056,7 @@ export default async function Page() {
 }
 ```
 
-- [ ] **Step 2: Write `loading.tsx`**
+- [x] **Step 2: Write `loading.tsx`**
 
 ```tsx
 // app/classement/loading.tsx
@@ -2071,7 +2071,7 @@ export default function Loading() {
 }
 ```
 
-- [ ] **Step 3: Write `error.tsx`**
+- [x] **Step 3: Write `error.tsx`**
 
 ```tsx
 // app/classement/error.tsx
@@ -2094,11 +2094,11 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
 }
 ```
 
-- [ ] **Step 4: Manual verification**
+- [x] **Step 4: Manual verification**
 
 Run: `npm run dev`, open `/classement`. With no picks scored yet, expect the empty state. After Task 17's manual verification produced a scored pick, expect that user listed with their points.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add app/classement
@@ -2114,7 +2114,7 @@ git commit -m "feat(classement): add all-time leaderboard page"
 - Create: `app/mes-pronostics/loading.tsx`
 - Create: `app/mes-pronostics/error.tsx`
 
-- [ ] **Step 1: Write `page.tsx`**
+- [x] **Step 1: Write `page.tsx`**
 
 ```tsx
 // app/mes-pronostics/page.tsx
@@ -2173,7 +2173,7 @@ export default async function Page() {
 }
 ```
 
-- [ ] **Step 2: Write `loading.tsx`**
+- [x] **Step 2: Write `loading.tsx`**
 
 ```tsx
 // app/mes-pronostics/loading.tsx
@@ -2188,7 +2188,7 @@ export default function Loading() {
 }
 ```
 
-- [ ] **Step 3: Write `error.tsx`**
+- [x] **Step 3: Write `error.tsx`**
 
 ```tsx
 // app/mes-pronostics/error.tsx
@@ -2211,11 +2211,11 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
 }
 ```
 
-- [ ] **Step 4: Manual verification**
+- [x] **Step 4: Manual verification**
 
 Run: `npm run dev`. Signed out, open `/mes-pronostics` — prompt to sign in. Signed in with at least one pick from Task 17 — the pick is listed, with "À venir" if the fight hasn't happened yet, or a point value if it's finished. Total points at the top matches the sum.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add app/mes-pronostics
@@ -2242,12 +2242,14 @@ git commit -m "feat(mes-pronostics): add pick history page"
 
 Expected: every step behaves as described, no console errors, no 500s.
 
-- [ ] **Step 2: Run the full test suite**
+**Automated check (2026-08-25):** signed-out render of `/events/818` confirmed via browser — every fight correctly shows "Connecte-toi pour pronostiquer ce combat.", no server errors, no unexpected console errors (a pre-existing `SyntaxError: Invalid or unexpected token` also reproduces on unrelated pages like `/fighters` on `main` — not a regression from this plan). Steps 1.1, 1.3, 1.4, 1.6, 1.7, and 1.9 require signing up/in a real Clerk account and mutating live DB rows — both need a human, since Claude does not create accounts or enter credentials. **Remaining for a human:** sign up on `/sign-in`, submit picks on an upcoming event, then follow steps 4–9 above to verify the lock/scoring flow end-to-end.
+
+- [x] **Step 2: Run the full test suite**
 
 Run: `npm test`
 Expected: PASS — all of `data/scrapers/shared/fight-sync.test.ts`, `data/scrapers/shared/normalize-date.test.ts`, `data/scrapers/parse.test.ts`, `data/lib/method-category.test.ts`, `data/lib/scoring.test.ts`, `data/lib/pick-lock.test.ts`, plus every pre-existing test file, all passing.
 
-- [ ] **Step 3: Type-check the whole project**
+- [x] **Step 3: Type-check the whole project**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
