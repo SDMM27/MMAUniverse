@@ -185,6 +185,43 @@ export async function fetchAllFighters() {
   }
 }
 
+// Paginated, searchable fighters query for the /fighters page — fetchAllFighters()
+// above loads the entire table and stays that way for the mobile API, which does
+// its own client-side filtering, but the web page can't afford an unbounded
+// SELECT once the fighters table grows into the thousands.
+export async function fetchFighters({
+  query = '',
+  organizationId = null,
+  page = 1,
+  pageSize = 24,
+}: {
+  query?: string;
+  organizationId?: number | null;
+  page?: number;
+  pageSize?: number;
+}) {
+  try {
+    const offset = (page - 1) * pageSize;
+    const likeTerm = `%${query}%`;
+
+    const data = await sql<Fighter & { organization_abbreviation: string; total_count: string }>`
+      SELECT f.*, o.abbreviation AS organization_abbreviation, COUNT(*) OVER() AS total_count
+      FROM fighters f
+      JOIN organizations o ON f.organization_id = o.id
+      WHERE (${query} = '' OR f.name ILIKE ${likeTerm})
+        AND (${organizationId}::int IS NULL OR f.organization_id = ${organizationId})
+      ORDER BY f.name ASC
+      LIMIT ${pageSize} OFFSET ${offset}
+    `;
+
+    const total = data.rows.length > 0 ? Number(data.rows[0].total_count) : 0;
+    return { fighters: data.rows, total };
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch fighters.');
+  }
+}
+
 export async function fetchFighterById(id: string) {
   try {
     const data = await sql<Fighter & { organization_abbreviation: string }>`
