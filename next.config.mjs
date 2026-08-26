@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    // Fighter photos and event posters are hotlinked from Sherdog (scraped source,
+    // see data/scrapers/sherdog.ts) — allow next/image to optimize them. Wildcard
+    // covers both the main domain (fighter photos) and its CDN subdomains (event
+    // posters, e.g. www1-cdn.sherdog.com).
+    remotePatterns: [{ protocol: 'https', hostname: '**.sherdog.com' }],
+  },
   async headers() {
     return [
       {
