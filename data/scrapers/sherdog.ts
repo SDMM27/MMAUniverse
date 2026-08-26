@@ -80,6 +80,7 @@ export async function scrapeOrganization(config: OrgScrapeConfig, cacheDir: stri
         round: fight.round,
         time: fight.time,
         weight_class: fight.weight_class,
+        is_main_event: fight.is_main_event,
       };
       progress.data.fights.push(scrapedFight);
     }
