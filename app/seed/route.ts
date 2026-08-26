@@ -4,8 +4,9 @@ import type { ScrapedOrgData } from '@/data/scrapers/shared/types';
 import ufcData from '@/data/scraped/ufc.json';
 import pflData from '@/data/scraped/pfl.json';
 import bellatorData from '@/data/scraped/bellator.json';
+import oneData from '@/data/scraped/one.json';
 
-const orgDatasets = [ufcData, pflData, bellatorData] as ScrapedOrgData[];
+const orgDatasets = [ufcData, pflData, bellatorData, oneData] as ScrapedOrgData[];
 
 // Route Handlers cache underlying fetch() calls by default in Next.js 14's App
 // Router. @neondatabase/serverless issues its queries as POST fetch() calls
@@ -85,8 +86,15 @@ async function getEventIdByName(eventName: string) {
 }
 
 async function getFighterIdByName(fighterName: string) {
+  // ORDER BY id ASC pins this to the original row deterministically. Without
+  // it, once a name has duplicates (see seedFighters below) this picks
+  // whichever row Postgres happens to return first, which can differ between
+  // runs — that in turn broke seedFights' (event_id, fighter1_id,
+  // fighter2_id) dedup key and left both the old and a new duplicate fight
+  // row behind. See data/scrapers/dedupe-seed-duplicates.ts for the one-time
+  // cleanup this required.
   const res = await sql`
-    SELECT id FROM fighters WHERE name = ${fighterName};
+    SELECT id FROM fighters WHERE name = ${fighterName} ORDER BY id ASC;
   `;
   return res.rows[0] ? res.rows[0].id : null;
 }
@@ -117,8 +125,16 @@ async function seedFights() {
       const fighter2Id = await getFighterIdByName(fight.fighter2_name);
       const winnerId = fight.winner_name ? await getFighterIdByName(fight.winner_name) : null;
 
+      // IS NOT DISTINCT FROM, not `=`: when a fighter name doesn't resolve
+      // (getFighterIdByName returns null — see data/scrapers/dedupe-seed-
+      // duplicates.ts for why that happens), fighter1Id/fighter2Id is NULL,
+      // and `column = NULL` is never true in SQL regardless of the row's
+      // actual value. With plain `=` this DELETE silently matched nothing
+      // for every such fight, so each re-run of /seed left the old
+      // null-sided row behind *and* inserted a fresh duplicate — this is how
+      // 6 re-runs turned ~30 unresolvable fights into 180 duplicate rows.
       await sql`
-        DELETE FROM fights WHERE event_id = ${eventId} AND fighter1_id = ${fighter1Id} AND fighter2_id = ${fighter2Id};
+        DELETE FROM fights WHERE event_id IS NOT DISTINCT FROM ${eventId} AND fighter1_id IS NOT DISTINCT FROM ${fighter1Id} AND fighter2_id IS NOT DISTINCT FROM ${fighter2Id};
       `;
 
       const result = await sql`
@@ -148,13 +164,30 @@ async function seedFighters() {
 
   await sql`ALTER TABLE fighters ADD COLUMN IF NOT EXISTS nationality VARCHAR(2);`;
 
+  // `ON CONFLICT (id) DO NOTHING` below never actually fires: `id` is a fresh
+  // SERIAL value on every INSERT since it's never supplied, so there's never
+  // a conflicting id to skip. With no UNIQUE constraint on (name,
+  // organization_id) either, every re-run of /seed silently duplicated the
+  // entire fighter roster. Checking for an existing row first (same pattern
+  // as upsertFighter in data/scrapers/sync-upcoming-to-db.ts) makes this
+  // idempotent instead.
   const insertedFighters = [];
   for (const dataset of orgDatasets) {
     for (const fighter of dataset.fighters) {
+      const existing = await sql`
+        SELECT id FROM fighters WHERE name = ${fighter.name} AND organization_id = ${dataset.organization_id} ORDER BY id ASC;
+      `;
+      if (existing.rows[0]) {
+        const result = await sql`
+          UPDATE fighters SET image_url = ${fighter.image_url}, weight_class = ${fighter.weight_class}, record = ${fighter.record}, ranking = ${fighter.ranking}
+          WHERE id = ${existing.rows[0].id};
+        `;
+        insertedFighters.push(result);
+        continue;
+      }
       const result = await sql`
         INSERT INTO fighters (name, image_url, weight_class, organization_id, record, ranking)
-        VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${dataset.organization_id}, ${fighter.record}, ${fighter.ranking})
-        ON CONFLICT (id) DO NOTHING;
+        VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${dataset.organization_id}, ${fighter.record}, ${fighter.ranking});
       `;
       insertedFighters.push(result);
     }
