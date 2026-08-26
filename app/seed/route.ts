@@ -125,8 +125,16 @@ async function seedFights() {
       const fighter2Id = await getFighterIdByName(fight.fighter2_name);
       const winnerId = fight.winner_name ? await getFighterIdByName(fight.winner_name) : null;
 
+      // IS NOT DISTINCT FROM, not `=`: when a fighter name doesn't resolve
+      // (getFighterIdByName returns null — see data/scrapers/dedupe-seed-
+      // duplicates.ts for why that happens), fighter1Id/fighter2Id is NULL,
+      // and `column = NULL` is never true in SQL regardless of the row's
+      // actual value. With plain `=` this DELETE silently matched nothing
+      // for every such fight, so each re-run of /seed left the old
+      // null-sided row behind *and* inserted a fresh duplicate — this is how
+      // 6 re-runs turned ~30 unresolvable fights into 180 duplicate rows.
       await sql`
-        DELETE FROM fights WHERE event_id = ${eventId} AND fighter1_id = ${fighter1Id} AND fighter2_id = ${fighter2Id};
+        DELETE FROM fights WHERE event_id IS NOT DISTINCT FROM ${eventId} AND fighter1_id IS NOT DISTINCT FROM ${fighter1Id} AND fighter2_id IS NOT DISTINCT FROM ${fighter2Id};
       `;
 
       const result = await sql`

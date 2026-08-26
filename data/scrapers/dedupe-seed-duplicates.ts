@@ -24,6 +24,14 @@
 //      only when a complete duplicate for the same event + known fighter
 //      already exists — a null-sided row with no such counterpart is left
 //      alone and reported, since deleting it could lose a real fixture.
+//   4. Collapses null-sided rows that duplicate *each other* — same event_id
+//      and same (fighter1_id, fighter2_id) pair, NULLs included, since
+//      Postgres groups NULLs together in PARTITION BY/GROUP BY (unlike `=`
+//      in a WHERE clause). This is the seedFights counterpart to step 1:
+//      before its DELETE was fixed to use IS NOT DISTINCT FROM (see
+//      app/seed/route.ts), every /seed re-run added one more copy of every
+//      fight whose fighter name never resolves — 6 pre-fix runs turned ~30
+//      unresolvable fights into 180 rows. Keeps the lowest id per group.
 //
 // Defaults to a dry run that only reports counts. Pass --apply to commit.
 //
@@ -173,12 +181,39 @@ async function dedupeNullSidedFightRows() {
   console.log(`Fights: removed ${ids.length} broken null-sided rows.`);
 }
 
+async function dedupeNullSidedRowsAgainstEachOther() {
+  // PARTITION BY groups NULLs together (unlike `=` in a WHERE clause), so
+  // this correctly finds e.g. 6 rows that are all (event_id: 430,
+  // fighter1_id: 1516, fighter2_id: NULL) as one group of duplicates.
+  const ranked = (await sql`
+    SELECT id, rn FROM (
+      SELECT id,
+        ROW_NUMBER() OVER (
+          PARTITION BY event_id, fighter1_id, fighter2_id
+          ORDER BY id ASC
+        ) AS rn
+      FROM fights
+      WHERE fighter1_id IS NULL OR fighter2_id IS NULL
+    ) t
+    WHERE rn > 1
+  `) as { id: number; rn: number }[];
+
+  console.log(`Fights: ${ranked.length} null-sided rows duplicate another null-sided row for the same event/fighter and will be collapsed.`);
+
+  if (!apply || ranked.length === 0) return;
+
+  const ids = ranked.map((r) => r.id);
+  await sql`DELETE FROM fights WHERE id = ANY(${ids})`;
+  console.log(`Fights: removed ${ids.length} duplicate null-sided rows.`);
+}
+
 async function main() {
   console.log(apply ? 'Running in APPLY mode — changes will be committed.\n' : 'Running in DRY-RUN mode — pass --apply to commit changes.\n');
 
   await mergeDuplicateFighters();
   await dedupeExactFightRows();
   await dedupeNullSidedFightRows();
+  await dedupeNullSidedRowsAgainstEachOther();
 
   if (!apply) {
     console.log('\nDry run complete. Re-run with --apply to make these changes.');
