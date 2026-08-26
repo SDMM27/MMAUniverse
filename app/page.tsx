@@ -18,22 +18,36 @@ export default async function Page() {
   const events = await fetchAllEvents();
   const next = computeNextEvent(events);
 
-  // Only fetch the hero event's fight card when the hero is actually an
-  // upcoming event — when there's no future event in DB, computeNextEvent
-  // falls back to the last past event, which has nothing left "à venir".
-  const heroEvent = next && next.isUpcoming ? next.event : null;
-
-  const [heroFights, recentResults] = await Promise.all([
-    heroEvent ? fetchFightsByEvent(String(heroEvent.id)) : Promise.resolve([]),
+  // Fetched unconditionally (not just when isUpcoming) because the hero now
+  // builds its visual from the main-event fighters' photos rather than
+  // Sherdog's event poster — see NextEventHero. The "Combats à venir" section
+  // below still only lists fights for an actually-upcoming hero event: when
+  // there's no future event in DB, computeNextEvent falls back to the last
+  // past event, which has nothing left "à venir" to show there.
+  const [nextEventFights, recentResults] = await Promise.all([
+    next ? fetchFightsByEvent(String(next.event.id)) : Promise.resolve([]),
     fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
   ]);
 
-  const { mainEvent, rest } = splitMainEvent(heroFights);
+  const { mainEvent, rest } = splitMainEvent(nextEventFights);
+  const heroEvent = next && next.isUpcoming ? next.event : null;
+  const heroFights = heroEvent ? nextEventFights : [];
+
+  // The hero's matchup visual can't use `mainEvent` above: is_main_event is
+  // never actually set to true anywhere in the scrapers/seed, so it's always
+  // null in practice. Falling back to the first fetched fight instead — it's
+  // the same fight already shown first in "Combats à venir" below.
+  const heroFight = nextEventFights[0] ?? null;
 
   return (
     <main className="flex min-h-screen flex-col gap-8 p-6">
       {next ? (
-        <NextEventHero event={next.event} isUpcoming={next.isUpcoming} />
+        <NextEventHero
+          event={next.event}
+          isUpcoming={next.isUpcoming}
+          fighter1={heroFight?.fighter1}
+          fighter2={heroFight?.fighter2}
+        />
       ) : (
         <EmptyState title="Aucun événement pour le moment" />
       )}

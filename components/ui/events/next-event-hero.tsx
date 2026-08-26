@@ -1,20 +1,49 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
-import { Event } from '@/data/lib/definitions';
+import { Event, Fighter } from '@/data/lib/definitions';
 
 export default function NextEventHero({
   event,
   isUpcoming,
+  fighter1,
+  fighter2,
 }: {
   event: Event & { organization_abbreviation: string };
   isUpcoming: boolean;
+  /** Main-event fighters, when known — used to build a fighter-vs-fighter hero
+   *  visual instead of Sherdog's own event poster (see below). */
+  fighter1?: Fighter | null;
+  fighter2?: Fighter | null;
 }) {
+  // Sherdog doesn't have real event posters — every event, including numbered
+  // PPVs, only exposes a tiny 200x100 auto-generated "vs" thumbnail, which
+  // looks pixelated stretched across a full-width hero. The two fighters'
+  // profile photos, on the other hand, can be requested at a much higher
+  // resolution (see data/lib/image-utils.ts), so when we know both main-event
+  // fighters we build the matchup visual ourselves instead of relying on
+  // Sherdog's poster. Falls back to the poster when a fighter or its photo
+  // is missing (e.g. a TBD opponent).
+  const hasMatchup = Boolean(fighter1?.image_url && fighter2?.image_url);
+
   return (
     <Link
       href={`/events/${event.id}`}
-      className="relative flex min-h-[280px] flex-col justify-end overflow-hidden rounded-lg border border-base-border"
+      className="relative flex min-h-[280px] flex-col justify-end overflow-hidden rounded-lg border border-base-border bg-base-card"
     >
-      <CoverImage src={event.event_poster} alt={event.name} className="absolute inset-0 h-full w-full" />
+      {hasMatchup ? (
+        <div className="absolute inset-0 flex">
+          <CoverImage src={fighter1!.image_url} alt={fighter1!.name} className="h-full w-1/2" sizes="50vw" />
+          <CoverImage src={fighter2!.image_url} alt={fighter2!.name} className="h-full w-1/2" sizes="50vw" />
+          <span
+            aria-hidden="true"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-2xl italic text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.85)] sm:text-4xl"
+          >
+            VS
+          </span>
+        </div>
+      ) : (
+        <CoverImage src={event.event_poster} alt={event.name} className="absolute inset-0 h-full w-full" />
+      )}
       <div className="relative z-10 bg-gradient-to-t from-base-bg via-base-bg/80 to-transparent p-6">
         <span className="font-display text-xs uppercase tracking-wide text-accent">
           {isUpcoming ? 'Prochain événement' : 'Dernier événement'} · {event.organization_abbreviation}
