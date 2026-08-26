@@ -85,8 +85,15 @@ async function getEventIdByName(eventName: string) {
 }
 
 async function getFighterIdByName(fighterName: string) {
+  // ORDER BY id ASC pins this to the original row deterministically. Without
+  // it, once a name has duplicates (see seedFighters below) this picks
+  // whichever row Postgres happens to return first, which can differ between
+  // runs — that in turn broke seedFights' (event_id, fighter1_id,
+  // fighter2_id) dedup key and left both the old and a new duplicate fight
+  // row behind. See data/scrapers/dedupe-seed-duplicates.ts for the one-time
+  // cleanup this required.
   const res = await sql`
-    SELECT id FROM fighters WHERE name = ${fighterName};
+    SELECT id FROM fighters WHERE name = ${fighterName} ORDER BY id ASC;
   `;
   return res.rows[0] ? res.rows[0].id : null;
 }
@@ -148,13 +155,30 @@ async function seedFighters() {
 
   await sql`ALTER TABLE fighters ADD COLUMN IF NOT EXISTS nationality VARCHAR(2);`;
 
+  // `ON CONFLICT (id) DO NOTHING` below never actually fires: `id` is a fresh
+  // SERIAL value on every INSERT since it's never supplied, so there's never
+  // a conflicting id to skip. With no UNIQUE constraint on (name,
+  // organization_id) either, every re-run of /seed silently duplicated the
+  // entire fighter roster. Checking for an existing row first (same pattern
+  // as upsertFighter in data/scrapers/sync-upcoming-to-db.ts) makes this
+  // idempotent instead.
   const insertedFighters = [];
   for (const dataset of orgDatasets) {
     for (const fighter of dataset.fighters) {
+      const existing = await sql`
+        SELECT id FROM fighters WHERE name = ${fighter.name} AND organization_id = ${dataset.organization_id} ORDER BY id ASC;
+      `;
+      if (existing.rows[0]) {
+        const result = await sql`
+          UPDATE fighters SET image_url = ${fighter.image_url}, weight_class = ${fighter.weight_class}, record = ${fighter.record}, ranking = ${fighter.ranking}
+          WHERE id = ${existing.rows[0].id};
+        `;
+        insertedFighters.push(result);
+        continue;
+      }
       const result = await sql`
         INSERT INTO fighters (name, image_url, weight_class, organization_id, record, ranking)
-        VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${dataset.organization_id}, ${fighter.record}, ${fighter.ranking})
-        ON CONFLICT (id) DO NOTHING;
+        VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${dataset.organization_id}, ${fighter.record}, ${fighter.ranking});
       `;
       insertedFighters.push(result);
     }
