@@ -8,18 +8,6 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895009"
     },
     {
-      "name": "ACA 207 - Goncharov vs. Almeida",
-      "date": "2026-09-12",
-      "event_location": "Basket Ball, Krasnodar, Krasnodar Krai, Russia",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892124"
-    },
-    {
-      "name": "ACA 208 - Kerimov vs. Podlesnyi",
-      "date": "2026-10-04",
-      "event_location": "Sport Hall Colloseum, Grozny, Chechnya, Russia",
-      "event_poster": ""
-    },
-    {
       "name": "ACA 206 - Vakhaev vs. Aliakbari",
       "date": "2026-08-15",
       "event_location": "CSKA Arena, Moscow, Russia",
@@ -1698,6 +1686,20 @@
       "date": "2012-10-20",
       "event_location": "Olympic Center, Grozny, Chechenya, Russia",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/287971"
+    },
+    {
+      "name": "ACA 207 - Goncharov vs. Almeida",
+      "date": "2026-09-12",
+      "start_time": "2026-09-12T00:00:00+00:00",
+      "event_location": "Basket Ball, Krasnodar, Krasnodar Krai, Russia",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892124"
+    },
+    {
+      "name": "ACA 208 - Kerimov vs. Podlesnyi",
+      "date": "2026-10-04",
+      "start_time": "2026-10-04T00:00:00+00:00",
+      "event_location": "Sport Hall Colloseum, Grozny, Chechnya, Russia",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895840"
     }
   ],
   "fighters": [
@@ -16974,6 +16976,13 @@
       "weight_class": "Bantamweight",
       "record": "3-2-0",
       "ranking": 0
+    },
+    {
+      "name": "Sharapudin Magomedov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1767710440magomedovsharapudin.jpg",
+      "weight_class": "Lightweight",
+      "record": "7-1-0",
+      "ranking": 0
     }
   ],
   "fights": [
@@ -17130,116 +17139,6 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Evgeniy Goncharov",
-      "fighter2_name": "Jailton Almeida",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Zhakshylyk Myrzabekov",
-      "fighter2_name": "Albert Tumenov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Mukhamed Kokov",
-      "fighter2_name": "Alexey Polpudnikov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Brent Primus",
-      "fighter2_name": "Vadim Ogar",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Bogdan Plutakhin",
-      "fighter2_name": "Nemat Abdrashitov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Khadis Ibragimov",
-      "fighter2_name": "Kirill Kornilov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Khasan Dadalov",
-      "fighter2_name": "Bagama Nikabagamaev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Nikolai Galochkin",
-      "fighter2_name": "Gegam Manavazyan",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Shamil Ramazanov",
-      "fighter2_name": "Denis Maher",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Andrei Koshkin",
-      "fighter2_name": "Herdeson Batista",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
     },
     {
       "event_name": "ACA 206 - Vakhaev vs. Aliakbari",
@@ -63594,6 +63493,174 @@
       "round": 2,
       "time": "5:00",
       "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Evgeniy Goncharov",
+      "fighter2_name": "Jailton Almeida",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": true
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Khadis Ibragimov",
+      "fighter2_name": "Kirill Kornilov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Mukhamed Kokov",
+      "fighter2_name": "Alexey Polpudnikov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Brent Primus",
+      "fighter2_name": "Vadim Ogar",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Andrei Koshkin",
+      "fighter2_name": "Herdeson Batista",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Shamil Ramazanov",
+      "fighter2_name": "Denis Maher",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Sharapudin Magomedov",
+      "fighter2_name": "Albert Misikov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Goga Shamatava",
+      "fighter2_name": "Dzhaddal Alibekov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Murad Kalamov",
+      "fighter2_name": "Ruslan Abiltarov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Akhmed Musakaev",
+      "fighter2_name": "Chermen Gobaev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Nikolai Galochkin",
+      "fighter2_name": "Gegam Manavazyan",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Khasan Dadalov",
+      "fighter2_name": "Bagama Nikabagamaev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 207 - Goncharov vs. Almeida",
+      "fighter1_name": "Nemat Abdrashitov",
+      "fighter2_name": "Bogdan Plutakhin",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false
+    },
+    {
+      "event_name": "ACA 208 - Kerimov vs. Podlesnyi",
+      "fighter1_name": "Rustam Kerimov",
+      "fighter2_name": "Alexander Podlesniy",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": true
     }
   ]
 }
