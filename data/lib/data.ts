@@ -125,6 +125,7 @@ export async function fetchFightsByEvent(eventId: string) {
       LEFT JOIN fighters f1 ON f.fighter1_id = f1.id
       LEFT JOIN fighters f2 ON f.fighter2_id = f2.id
       WHERE f.event_id = ${eventId}
+      ORDER BY f.is_main_event DESC, f.id ASC
     `;
 
     return data.rows.map((row) => ({
