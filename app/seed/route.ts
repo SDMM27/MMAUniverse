@@ -4,8 +4,9 @@ import type { ScrapedOrgData } from '@/data/scrapers/shared/types';
 import ufcData from '@/data/scraped/ufc.json';
 import pflData from '@/data/scraped/pfl.json';
 import bellatorData from '@/data/scraped/bellator.json';
+import oneData from '@/data/scraped/one.json';
 
-const orgDatasets = [ufcData, pflData, bellatorData] as ScrapedOrgData[];
+const orgDatasets = [ufcData, pflData, bellatorData, oneData] as ScrapedOrgData[];
 
 // Route Handlers cache underlying fetch() calls by default in Next.js 14's App
 // Router. @neondatabase/serverless issues its queries as POST fetch() calls

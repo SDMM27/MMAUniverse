@@ -1,0 +1,297 @@
+{
+  "organization_id": 4,
+  "events": [
+    {
+      "name": "One Championship - One Friday Fights 168",
+      "date": "2026-08-28",
+      "start_time": "2026-08-28T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895835"
+    },
+    {
+      "name": "One Championship - One Friday Fights 169",
+      "date": "2026-09-04",
+      "start_time": "2026-09-04T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - One on Prime Video 47",
+      "date": "2026-09-04",
+      "start_time": "2026-09-04T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/893757"
+    },
+    {
+      "name": "One Championship - One Friday Fights 170",
+      "date": "2026-09-11",
+      "start_time": "2026-09-11T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - ONE Samurai 3",
+      "date": "2026-09-11",
+      "start_time": "2026-09-11T00:00:00+00:00",
+      "event_location": "Yokohama Buntai, Naka-ku, Yokohama, Japan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892292"
+    },
+    {
+      "name": "One Championship - One Friday Fights 171",
+      "date": "2026-09-18",
+      "start_time": "2026-09-18T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - One Friday Fights 172",
+      "date": "2026-09-25",
+      "start_time": "2026-09-25T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - One on Prime Video 48",
+      "date": "2026-10-02",
+      "start_time": "2026-10-02T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895598"
+    },
+    {
+      "name": "One Championship - ONE Samurai 4",
+      "date": "2026-10-17",
+      "start_time": "2026-10-17T00:00:00+00:00",
+      "event_location": "Ariake Arena, Koto, Tokyo, Japan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896012"
+    }
+  ],
+  "fighters": [
+    {
+      "name": "Geun Ho Son",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240406080349_Geun_Ho_Son.JPG",
+      "weight_class": "Featherweight",
+      "record": "5-1-0",
+      "ranking": 0
+    },
+    {
+      "name": "Ryoto Nishiyama",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250908050234_Ryoto_Nishiyama.JPG",
+      "weight_class": "Bantamweight",
+      "record": "4-2-0",
+      "ranking": 0
+    },
+    {
+      "name": "Gilbert Nakatani",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1774529099Gilbert_Nakatani-Hero-1200x1165-1-600x583.jpg",
+      "weight_class": "Bantamweight",
+      "record": "9-4-0",
+      "ranking": 0
+    },
+    {
+      "name": "Nazareth Lalthazuala",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1764335173Nazareth_Lalthazuala-hero-1200x1165-1-600x583.png",
+      "weight_class": "Flyweight",
+      "record": "8-0-0",
+      "ranking": 0
+    },
+    {
+      "name": "Ryohei Kurosawa",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1757679405Ryohei_Kurosawa-1200x1165-1-600x583.png",
+      "weight_class": "Flyweight",
+      "record": "20-6-0",
+      "ranking": 0
+    },
+    {
+      "name": "Fabio Henrique Dourado",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1773398891Fabio_Henrique-hero-1200x1165-1-600x582.png",
+      "weight_class": "Flyweight",
+      "record": "15-2-0",
+      "ranking": 0
+    },
+    {
+      "name": "Gabriela Fujimoto",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1734538285IMG_3235.jpeg",
+      "weight_class": "Strawweight",
+      "record": "7-1-0",
+      "ranking": 0
+    },
+    {
+      "name": "Macarena Aragon",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1750356840Macarena_Aragon-hero-1200x1165-2-600x583.jpg",
+      "weight_class": "Flyweight",
+      "record": "5-3-0",
+      "ranking": 0
+    },
+    {
+      "name": "Hector Almonacid",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1766454769hectoralmonacid.jpg",
+      "weight_class": "Lightweight",
+      "record": "11-1-0",
+      "ranking": 0
+    },
+    {
+      "name": "Pedro Dantas",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1750356871Pedro-Dantas-Hero-1200x1165-1-600x583.jpg",
+      "weight_class": "Lightweight",
+      "record": "6-1-0",
+      "ranking": 0
+    },
+    {
+      "name": "Yuya Wakamatsu",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250320014113_Yuya_Wakamatsuhero1200x1165600x583.JPG",
+      "weight_class": "Bantamweight",
+      "record": "20-7-0",
+      "ranking": 0
+    },
+    {
+      "name": "Willie van Rooyen",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1762521025Willie_Van_Rooyen-hero-1200x1165-1-600x583.jpg",
+      "weight_class": "Bantamweight",
+      "record": "8-1-0",
+      "ranking": 0
+    },
+    {
+      "name": "Koha Minowa",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1752713433Hiroba_Minowa-Hero-1200x1165-1-600x583.jpg",
+      "weight_class": "Flyweight",
+      "record": "15-6-0",
+      "ranking": 0
+    },
+    {
+      "name": "Yuta Miyazawa",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240116034636_Yuta_Miyazawa.JPG",
+      "weight_class": "Strawweight",
+      "record": "17-6-0",
+      "ranking": 0
+    },
+    {
+      "name": "Shamil Erdogan",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1492469689unnamed.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "13-0-0",
+      "ranking": 0
+    },
+    {
+      "name": "Paul Elliott",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20231028011449_Paul_Elliott.JPG",
+      "weight_class": "Heavyweight",
+      "record": "8-2-0",
+      "ranking": 0
+    },
+    {
+      "name": "Jihin Radzuan",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1710786320Jihin_Radzuan-hero-1200x1165-1.jpg",
+      "weight_class": "Strawweight",
+      "record": "10-6-0",
+      "ranking": 0
+    },
+    {
+      "name": "Itsuki Hirata",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230330081018_Itsuki_Hirata.PNG",
+      "weight_class": "Flyweight",
+      "record": "8-5-0",
+      "ranking": 0
+    }
+  ],
+  "fights": [
+    {
+      "event_name": "One Championship - One Friday Fights 168",
+      "fighter1_name": "Geun Ho Son",
+      "fighter2_name": "Ryoto Nishiyama",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 47",
+      "fighter1_name": "Gilbert Nakatani",
+      "fighter2_name": "Nazareth Lalthazuala",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight"
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 47",
+      "fighter1_name": "Ryohei Kurosawa",
+      "fighter2_name": "Fabio Henrique Dourado",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight"
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 47",
+      "fighter1_name": "Gabriela Fujimoto",
+      "fighter2_name": "Macarena Aragon",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight"
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 47",
+      "fighter1_name": "Hector Almonacid",
+      "fighter2_name": "Pedro Dantas",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "One Championship - ONE Samurai 3",
+      "fighter1_name": "Yuya Wakamatsu",
+      "fighter2_name": "Willie van Rooyen",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "One Championship - ONE Samurai 3",
+      "fighter1_name": "Koha Minowa",
+      "fighter2_name": "Yuta Miyazawa",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight"
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 48",
+      "fighter1_name": "Shamil Erdogan",
+      "fighter2_name": "Paul Elliott",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight"
+    },
+    {
+      "event_name": "One Championship - ONE Samurai 4",
+      "fighter1_name": "Jihin Radzuan",
+      "fighter2_name": "Itsuki Hirata",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight"
+    }
+  ]
+}
