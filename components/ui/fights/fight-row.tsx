@@ -1,6 +1,15 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
-import { FightWithFighters } from '@/data/lib/definitions';
+import { Fighter, FightWithFighters } from '@/data/lib/definitions';
+
+type FightOutcome = 'win' | 'loss' | 'draw';
+
+const outcomeLabel: Record<FightOutcome, string> = { win: 'V', loss: 'D', draw: 'N' };
+const outcomeColor: Record<FightOutcome, string> = {
+  win: 'text-win',
+  loss: 'text-ink-secondary',
+  draw: 'text-ink-secondary',
+};
 
 function formatFightResult(fight: FightWithFighters): string {
   if (!fight.fight_finished) return 'À venir';
@@ -18,41 +27,33 @@ export default function FightRow({ fight }: { fight: FightWithFighters }) {
   }
 
   return (
-    <div className="flex items-center justify-between gap-4 rounded-lg border border-base-border bg-base-card p-4">
+    <div className="flex items-center justify-between gap-3 rounded-lg border border-base-border bg-base-card p-3">
       <FighterSide
-        id={fight.fighter1.id}
-        name={fight.fighter1.name}
-        record={fight.fighter1.record}
-        image={fight.fighter1.image_url}
+        fighter={fight.fighter1}
         align="left"
+        outcome={fight.fight_finished ? (fight.winner_id === null ? 'draw' : fight.winner_id === fight.fighter1.id ? 'win' : 'loss') : null}
       />
-      <div className="flex shrink-0 flex-col items-center gap-1 text-center">
-        <span className="font-display text-xs uppercase tracking-wide text-accent">{fight.weight_class}</span>
-        <span className="text-xs text-ink-secondary">{formatFightResult(fight)}</span>
+      <div className="flex w-36 shrink-0 flex-col items-center gap-1.5 text-center">
+        <span className="font-display text-sm uppercase tracking-wide text-accent">{fight.weight_class}</span>
+        <span className="text-sm text-ink-secondary">{formatFightResult(fight)}</span>
       </div>
       <FighterSide
-        id={fight.fighter2.id}
-        name={fight.fighter2.name}
-        record={fight.fighter2.record}
-        image={fight.fighter2.image_url}
+        fighter={fight.fighter2}
         align="right"
+        outcome={fight.fight_finished ? (fight.winner_id === null ? 'draw' : fight.winner_id === fight.fighter2.id ? 'win' : 'loss') : null}
       />
     </div>
   );
 }
 
 function FighterSide({
-  id,
-  name,
-  record,
-  image,
+  fighter,
   align,
+  outcome,
 }: {
-  id: number;
-  name: string;
-  record: string;
-  image: string;
+  fighter: Fighter;
   align: 'left' | 'right';
+  outcome: FightOutcome | null;
 }) {
   return (
     // min-w-0 on both this Link and the div below: a flex item's default
@@ -62,13 +63,27 @@ function FighterSide({
     // wider than its container. Setting it only on the innermost div isn't
     // enough; this Link is itself the flex item FightRow needs to shrink.
     <Link
-      href={`/fighters/${id}`}
+      href={`/fighters/${fighter.id}`}
       className={`flex min-w-0 flex-1 items-center gap-3 rounded-md transition-colors hover:text-accent ${align === 'right' ? 'flex-row-reverse text-right' : ''}`}
     >
-      <CoverImage src={image} alt={name} className="h-12 w-12 shrink-0 rounded-md" />
+      <CoverImage src={fighter.image_url} alt={fighter.name} className="h-16 w-16 shrink-0 rounded-md" />
       <div className="min-w-0">
-        <p className="truncate font-display text-sm uppercase tracking-wide text-ink-primary">{name}</p>
-        <p className="text-xs text-ink-secondary">{record}</p>
+        <div className={`flex items-center gap-2 ${align === 'right' ? 'flex-row-reverse' : ''}`}>
+          {outcome && (
+            <span className={`shrink-0 font-display text-sm font-bold ${outcomeColor[outcome]}`} aria-hidden="true">
+              {outcomeLabel[outcome]}
+            </span>
+          )}
+          <p
+            className={`truncate font-display text-base uppercase tracking-wide ${outcome === 'loss' ? 'text-ink-secondary' : 'text-ink-primary'}`}
+          >
+            {fighter.name}
+          </p>
+        </div>
+        <p className="text-sm text-ink-secondary">
+          {fighter.record}
+          {outcome === 'win' && <span className="ml-1.5 text-win">Vainqueur</span>}
+        </p>
       </div>
     </Link>
   );
