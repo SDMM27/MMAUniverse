@@ -55,13 +55,19 @@ function FighterSide({
   align: 'left' | 'right';
 }) {
   return (
+    // min-w-0 on both this Link and the div below: a flex item's default
+    // min-width is the width of its content — without it at *every* nested
+    // flex level between the row and the actual text, a long fighter name
+    // refuses to shrink and pushes the row (and the page, on narrow screens)
+    // wider than its container. Setting it only on the innermost div isn't
+    // enough; this Link is itself the flex item FightRow needs to shrink.
     <Link
       href={`/fighters/${id}`}
-      className={`flex flex-1 items-center gap-3 rounded-md transition-colors hover:text-accent ${align === 'right' ? 'flex-row-reverse text-right' : ''}`}
+      className={`flex min-w-0 flex-1 items-center gap-3 rounded-md transition-colors hover:text-accent ${align === 'right' ? 'flex-row-reverse text-right' : ''}`}
     >
       <CoverImage src={image} alt={name} className="h-12 w-12 shrink-0 rounded-md" />
-      <div>
-        <p className="font-display text-sm uppercase tracking-wide text-ink-primary">{name}</p>
+      <div className="min-w-0">
+        <p className="truncate font-display text-sm uppercase tracking-wide text-ink-primary">{name}</p>
         <p className="text-xs text-ink-secondary">{record}</p>
       </div>
     </Link>

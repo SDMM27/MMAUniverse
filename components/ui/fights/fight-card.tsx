@@ -100,14 +100,19 @@ function FighterColumn({
   const result = winnerId === null ? 'draw' : winnerId === fighter.id ? 'win' : 'loss';
 
   return (
-    <div className="flex flex-1 flex-col items-center gap-1 text-center">
+    // min-w-0: this column sits in a flex row alongside the other fighter's
+    // column — without it, a long name refuses to shrink below its own
+    // content width and pushes the card wider than its container.
+    <div className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
       <CoverImage src={fighter.image_url} alt={fighter.name} className="h-12 w-12 rounded-md" />
       {flag && (
         <span className="text-sm" aria-hidden="true">
           {flag}
         </span>
       )}
-      <span className="font-display text-sm uppercase tracking-wide text-ink-primary">{fighter.name}</span>
+      <span className="w-full truncate font-display text-sm uppercase tracking-wide text-ink-primary">
+        {fighter.name}
+      </span>
       {status === 'finished' ? (
         <span className={`font-display text-lg font-bold ${resultColor[result]}`}>{resultLabel[result]}</span>
       ) : (
