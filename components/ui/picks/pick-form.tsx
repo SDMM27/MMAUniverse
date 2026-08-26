@@ -25,7 +25,16 @@ export default function PickForm({
   const [round, setRound] = useState<number | null>(initialPick?.predicted_round ?? null);
   const [status, setStatus] = useState<'idle' | 'saving' | 'error'>('idle');
 
-  if (!fight.fighter1 || !fight.fighter2) return null;
+  // Matches FightRow's own message above this component for the same fight —
+  // silently rendering nothing here left the pronostic UI looking simply
+  // missing, with no indication of why.
+  if (!fight.fighter1 || !fight.fighter2) {
+    return (
+      <p className="rounded-lg border border-base-border bg-base-card p-4 text-center text-xs text-ink-secondary">
+        Pronostic indisponible : données des combattants manquantes.
+      </p>
+    );
+  }
 
   async function handleSubmit() {
     if (!winnerId || !method) return;

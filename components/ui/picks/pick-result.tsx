@@ -16,7 +16,14 @@ export default function PickResult({
   fight: FightWithFighters;
   pick: StoredPick | null;
 }) {
-  if (!fight.fighter1 || !fight.fighter2) return null;
+  // Same reasoning as PickForm: don't render nothing, say why there's nothing to show.
+  if (!fight.fighter1 || !fight.fighter2) {
+    return (
+      <p className="rounded-lg border border-base-border bg-base-card p-4 text-center text-xs text-ink-secondary">
+        Pronostic indisponible : données des combattants manquantes.
+      </p>
+    );
+  }
 
   if (!pick) {
     return (
