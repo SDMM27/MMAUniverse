@@ -1,33 +1,39 @@
 // data/scrapers/dedupe-seed-duplicates.ts
 //
 // One-time cleanup for duplicate rows created by re-running app/seed/route.ts
-// before it was fixed to be idempotent (see the comments in seedFighters /
-// getFighterIdByName there). Symptom: the same fight card rendered twice on
-// an event page.
+// before it was fixed to be idempotent (see the comments in seedEvents /
+// seedFighters / getFighterIdByName there). Symptom: duplicate events in
+// listings, and the same fight card rendered twice on an event page.
 //
-// Root cause: every /seed run re-inserted every fighter (its ON CONFLICT
-// (id) DO NOTHING never matched, since `id` was always a fresh SERIAL value).
-// Once a name had duplicate rows, seedFights' undeterministic
-// `SELECT id FROM fighters WHERE name = ...` could resolve to a different
-// row on each run, so its (event_id, fighter1_id, fighter2_id) dedup key
-// stopped matching the previously-inserted fight — leaving both the old row
-// and a new duplicate behind.
+// Root cause: every /seed run re-inserted every event and every fighter
+// (their ON CONFLICT (id) DO NOTHING never matched, since `id` was always a
+// fresh SERIAL value). Once an event name had duplicate rows, seedFights'
+// `getEventIdByName` could resolve to a different row on each run; same for
+// fighter names via `getFighterIdByName`. Either way, seedFights' (event_id,
+// fighter1_id, fighter2_id) dedup key stopped matching the previously-
+// inserted fight — leaving both the old row and a new duplicate behind.
 //
 // This script:
-//   1. Merges duplicate fighters (same name + organization_id) into the
+//   1. Merges duplicate events (same name — the key getEventIdByName uses)
+//      into the earliest (lowest id) row, repointing every fights.event_id
+//      that pointed at a duplicate before deleting the duplicate rows. Runs
+//      before every fight-dedup step below, since those all partition by
+//      event_id and would otherwise treat fights on unmerged duplicate
+//      events as distinct.
+//   2. Merges duplicate fighters (same name + organization_id) into the
 //      earliest (lowest id) row, repointing every fights/picks foreign key
 //      that pointed at a duplicate before deleting the duplicate rows.
-//   2. Removes duplicate fight rows for the same (event_id, fighter pair)
+//   3. Removes duplicate fight rows for the same (event_id, fighter pair)
 //      once fighter ids are merged, keeping the most complete row (finished
 //      result over unfinished, then lowest id).
-//   3. Removes broken fight rows with a NULL fighter1_id/fighter2_id, but
+//   4. Removes broken fight rows with a NULL fighter1_id/fighter2_id, but
 //      only when a complete duplicate for the same event + known fighter
 //      already exists — a null-sided row with no such counterpart is left
 //      alone and reported, since deleting it could lose a real fixture.
-//   4. Collapses null-sided rows that duplicate *each other* — same event_id
+//   5. Collapses null-sided rows that duplicate *each other* — same event_id
 //      and same (fighter1_id, fighter2_id) pair, NULLs included, since
 //      Postgres groups NULLs together in PARTITION BY/GROUP BY (unlike `=`
-//      in a WHERE clause). This is the seedFights counterpart to step 1:
+//      in a WHERE clause). This is the seedFights counterpart to step 2:
 //      before its DELETE was fixed to use IS NOT DISTINCT FROM (see
 //      app/seed/route.ts), every /seed re-run added one more copy of every
 //      fight whose fighter name never resolves — 6 pre-fix runs turned ~30
@@ -93,6 +99,46 @@ const dupesCte = `
     WHERE f.id <> g.keep_id
   )
 `;
+
+async function mergeDuplicateEvents() {
+  // Same root cause as fighters (see mergeDuplicateFighters below), but in
+  // seedEvents: `ON CONFLICT (id) DO NOTHING` never fired since `id` was
+  // never supplied on INSERT, and there was no UNIQUE constraint on `name`
+  // either. Every /seed re-run duplicated the entire events table. Keyed by
+  // name alone (not name+organization_id) because that's the only key
+  // getEventIdByName uses to resolve a fight's event_id, so it's the key that
+  // actually matters for merging fights.event_id correctly.
+  const groups = (await sql`
+    SELECT name, MIN(id) AS keep_id, COUNT(*) AS c
+    FROM events
+    GROUP BY name
+    HAVING COUNT(*) > 1
+  `) as { name: string; keep_id: number; c: string }[];
+
+  const extraRows = groups.reduce((sum, g) => sum + (Number(g.c) - 1), 0);
+  console.log(`Events: ${groups.length} duplicate name groups, ${extraRows} extra rows to remove.`);
+
+  if (!apply || groups.length === 0) return;
+
+  const eventDupesCte = `
+    WITH groups AS (
+      SELECT name, MIN(id) AS keep_id
+      FROM events
+      GROUP BY name
+      HAVING COUNT(*) > 1
+    ),
+    dupes AS (
+      SELECT e.id AS dup_id, g.keep_id AS keep_id
+      FROM events e
+      JOIN groups g ON e.name = g.name
+      WHERE e.id <> g.keep_id
+    )
+  `;
+
+  await sql.query(`${eventDupesCte} UPDATE fights SET event_id = dupes.keep_id FROM dupes WHERE fights.event_id = dupes.dup_id`);
+  const deleted = await sql.query(`${eventDupesCte} DELETE FROM events USING dupes WHERE events.id = dupes.dup_id RETURNING events.id`);
+  console.log(`Events: merged ${groups.length} groups, removed ${(deleted as unknown as { id: number }[]).length} rows.`);
+}
 
 async function mergeDuplicateFighters() {
   const groups = (await sql`
@@ -210,6 +256,11 @@ async function dedupeNullSidedRowsAgainstEachOther() {
 async function main() {
   console.log(apply ? 'Running in APPLY mode — changes will be committed.\n' : 'Running in DRY-RUN mode — pass --apply to commit changes.\n');
 
+  // Events merge first: dedupeExactFightRows/dedupeNullSidedFightRows below
+  // both partition by fights.event_id, so duplicate events left unmerged
+  // would hide fights that are otherwise identical duplicates of each other
+  // (each pointing at a different duplicate event row).
+  await mergeDuplicateEvents();
   await mergeDuplicateFighters();
   await dedupeExactFightRows();
   await dedupeNullSidedFightRows();
