@@ -124145,7 +124145,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124156,7 +124157,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124167,7 +124169,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124178,7 +124181,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124189,7 +124193,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124200,7 +124205,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124211,7 +124217,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124222,7 +124229,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124233,7 +124241,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
@@ -124244,7 +124253,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124255,7 +124265,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124266,7 +124277,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124277,7 +124289,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124288,7 +124301,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124299,7 +124313,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124310,7 +124325,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124321,7 +124337,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124332,7 +124349,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124343,7 +124361,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124354,7 +124373,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124365,7 +124385,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124376,7 +124397,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 286 - Nurmagomedov vs. Song",
@@ -124387,7 +124409,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124398,7 +124421,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124409,7 +124433,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124420,7 +124445,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124431,7 +124457,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124442,7 +124469,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124453,7 +124481,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124464,7 +124493,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124475,7 +124505,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124486,7 +124517,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124497,7 +124529,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124508,7 +124541,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124519,7 +124553,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124530,7 +124565,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 287 - Hooker vs. Parnasse",
@@ -124541,7 +124577,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124552,7 +124589,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124563,7 +124601,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124574,7 +124613,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124585,7 +124625,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124596,7 +124637,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124607,7 +124649,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124618,7 +124661,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124629,7 +124673,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124640,7 +124685,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124651,7 +124697,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124662,7 +124709,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124673,7 +124721,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 288 - Noche UFC 4",
@@ -124684,7 +124733,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124695,7 +124745,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124706,7 +124757,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124717,7 +124769,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124728,7 +124781,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124739,7 +124793,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124750,7 +124805,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124761,7 +124817,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124772,7 +124829,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124783,7 +124841,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124794,7 +124853,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124805,7 +124865,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124816,7 +124877,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 331 - Van vs. Pantoja 2",
@@ -124827,7 +124889,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124838,7 +124901,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124849,7 +124913,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124860,7 +124925,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124871,7 +124937,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124882,7 +124949,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124893,7 +124961,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124904,7 +124973,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124915,7 +124985,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124926,7 +124997,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night 289 - Barcelos vs. Rosas Jr.",
@@ -124937,7 +125009,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 332 - TBA",
@@ -124948,7 +125021,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC 332 - TBA",
@@ -124959,7 +125033,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 332 - TBA",
@@ -124970,7 +125045,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 332 - TBA",
@@ -124981,7 +125057,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 332 - TBA",
@@ -124992,7 +125069,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 332 - TBA",
@@ -125003,7 +125081,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 332 - TBA",
@@ -125014,7 +125093,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 332 - TBA",
@@ -125025,7 +125105,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125036,7 +125117,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125047,7 +125129,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125058,7 +125141,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125069,7 +125153,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125080,7 +125165,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125091,7 +125177,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125102,7 +125189,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125113,7 +125201,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125124,7 +125213,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 10",
@@ -125135,7 +125225,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125146,7 +125237,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125157,7 +125249,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125168,7 +125261,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125179,7 +125273,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125190,7 +125285,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125201,7 +125297,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125212,7 +125309,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125223,7 +125321,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125234,7 +125333,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Buckley vs. Malott",
@@ -125245,7 +125345,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125256,7 +125357,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125267,7 +125369,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125278,7 +125381,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125289,7 +125393,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125300,7 +125405,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125311,7 +125417,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125322,7 +125429,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125333,7 +125441,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
@@ -125344,7 +125453,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 31",
@@ -125355,7 +125465,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC Fight Night - Oct. 31",
@@ -125366,7 +125477,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 31",
@@ -125377,7 +125489,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 31",
@@ -125388,7 +125501,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 31",
@@ -125399,7 +125513,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Oct. 31",
@@ -125410,7 +125525,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Brady vs. Bonfim",
@@ -125421,7 +125537,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": true
     },
     {
       "event_name": "UFC Fight Night - Brady vs. Bonfim",
@@ -125432,7 +125549,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "UFC Fight Night - Brady vs. Bonfim",
@@ -125443,7 +125561,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     }
   ]
 }

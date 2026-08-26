@@ -203,7 +203,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": true
     },
     {
       "event_name": "One Championship - One on Prime Video 47",
@@ -214,7 +215,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": true
     },
     {
       "event_name": "One Championship - One on Prime Video 47",
@@ -225,7 +227,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "One Championship - One on Prime Video 47",
@@ -236,7 +239,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": false
     },
     {
       "event_name": "One Championship - One on Prime Video 47",
@@ -247,7 +251,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "One Championship - ONE Samurai 3",
@@ -258,7 +263,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": true
     },
     {
       "event_name": "One Championship - ONE Samurai 3",
@@ -269,7 +275,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight"
+      "weight_class": "Flyweight",
+      "is_main_event": false
     },
     {
       "event_name": "One Championship - One on Prime Video 48",
@@ -280,7 +287,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": true
     },
     {
       "event_name": "One Championship - ONE Samurai 4",
@@ -291,7 +299,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight"
+      "weight_class": "Strawweight",
+      "is_main_event": true
     }
   ]
 }

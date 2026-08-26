@@ -17848,7 +17848,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": true
     },
     {
       "event_name": "KSW 121 - De Fries vs. Vojcak 2",
@@ -17859,7 +17860,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 121 - De Fries vs. Vojcak 2",
@@ -17870,7 +17872,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 121 - De Fries vs. Vojcak 2",
@@ -17881,7 +17884,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 121 - De Fries vs. Vojcak 2",
@@ -17892,7 +17896,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 121 - De Fries vs. Vojcak 2",
@@ -17903,7 +17908,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 121 - De Fries vs. Vojcak 2",
@@ -17914,7 +17920,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 121 - De Fries vs. Vojcak 2",
@@ -17925,7 +17932,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight"
+      "weight_class": "Middleweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 121 - De Fries vs. Vojcak 2",
@@ -17936,7 +17944,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 122 - Bartosinski vs. Masaev",
@@ -17947,7 +17956,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight"
+      "weight_class": "Welterweight",
+      "is_main_event": true
     },
     {
       "event_name": "KSW 122 - Bartosinski vs. Masaev",
@@ -17958,7 +17968,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 122 - Bartosinski vs. Masaev",
@@ -17969,7 +17980,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 122 - Bartosinski vs. Masaev",
@@ -17980,7 +17992,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Light Heavyweight"
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 122 - Bartosinski vs. Masaev",
@@ -17991,7 +18004,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 122 - Bartosinski vs. Masaev",
@@ -18002,7 +18016,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight"
+      "weight_class": "Heavyweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 122 - Bartosinski vs. Masaev",
@@ -18013,7 +18028,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "KSW 122 - Bartosinski vs. Masaev",
@@ -18024,7 +18040,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     }
   ]
 }

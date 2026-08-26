@@ -72,6 +72,7 @@ test('parseEventDetails extracts event metadata and all fights from a finished e
   assert.equal(mainEvent.method, 'KO (Head Kick)');
   assert.equal(mainEvent.round, 2);
   assert.equal(mainEvent.time, '4:33');
+  assert.equal(mainEvent.is_main_event, true);
 
   const undercardFight = details.fights[1];
   assert.equal(undercardFight.weight_class, 'Welterweight');
@@ -82,6 +83,7 @@ test('parseEventDetails extracts event metadata and all fights from a finished e
   assert.equal(undercardFight.method, 'Technical Submission (Rear-Naked Choke)');
   assert.equal(undercardFight.round, 2);
   assert.equal(undercardFight.time, '4:01');
+  assert.equal(undercardFight.is_main_event, false);
 });
 
 test('parseEventDetails marks fights as not finished on an upcoming event', () => {
@@ -95,12 +97,14 @@ test('parseEventDetails marks fights as not finished on an upcoming event', () =
   const mainEvent = details.fights[0];
   assert.equal(mainEvent.fighter1.result, 'not_finished');
   assert.equal(mainEvent.fighter2.result, 'not_finished');
+  assert.equal(mainEvent.is_main_event, true);
 
   const undercardFight = details.fights[1];
   assert.equal(undercardFight.fighter1.name, 'Gadzhi Rabadanov');
   assert.equal(undercardFight.fighter1.result, 'not_finished');
   assert.equal(undercardFight.fighter2.result, 'not_finished');
   assert.equal(undercardFight.method, '');
+  assert.equal(undercardFight.is_main_event, false);
 });
 
 test('parseFighterDetails extracts name, weight class, image and win/loss counts', () => {

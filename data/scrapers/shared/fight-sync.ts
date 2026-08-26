@@ -19,6 +19,7 @@ export type FreshFight = {
   round: number;
   time: string;
   weight_class: string;
+  is_main_event: boolean;
 };
 
 export type FightSyncPlan = {

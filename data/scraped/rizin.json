@@ -13869,7 +13869,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": true
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13880,7 +13881,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13891,7 +13893,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13902,7 +13905,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13913,7 +13917,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13924,7 +13929,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13935,7 +13941,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "108lb Catchweight"
+      "weight_class": "108lb Catchweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13946,7 +13953,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "130lb Catchweight"
+      "weight_class": "130lb Catchweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
@@ -13957,7 +13965,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight"
+      "weight_class": "Lightweight",
+      "is_main_event": true
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
@@ -13968,7 +13977,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight"
+      "weight_class": "Featherweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
@@ -13979,7 +13989,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight"
+      "weight_class": "Bantamweight",
+      "is_main_event": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
@@ -13990,7 +14001,8 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "108lb Catchweight"
+      "weight_class": "108lb Catchweight",
+      "is_main_event": false
     }
   ]
 }
