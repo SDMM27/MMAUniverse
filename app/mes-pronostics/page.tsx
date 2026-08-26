@@ -3,6 +3,11 @@ import Link from 'next/link';
 import { getOrCreateCurrentUser, fetchUserPickHistory } from '@/data/lib/picks-data';
 import EmptyState from '@/components/ui/shared/empty-state';
 
+// Queries the DB (and Clerk, for the current user) on every request instead
+// of at build time — Vercel's build step doesn't reliably have DATABASE_URL /
+// Clerk keys available yet (see data/lib/db.ts).
+export const dynamic = 'force-dynamic';
+
 export default async function Page() {
   const userId = await getOrCreateCurrentUser();
 
