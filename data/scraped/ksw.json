@@ -2,18 +2,6 @@
   "organization_id": 7,
   "events": [
     {
-      "name": "KSW 121 - De Fries vs. Vojcak 2",
-      "date": "2026-09-19",
-      "event_location": "Home Credit Arena, Liberec, Czech Republic",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/891242"
-    },
-    {
-      "name": "KSW 122 - Bartosinski vs. Masaev",
-      "date": "2026-10-10",
-      "event_location": "Podpromie Hall, Rzeszow, Poland",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892480"
-    },
-    {
       "name": "KSW 120 - Haratyk vs. Lesko",
       "date": "2026-07-18",
       "event_location": "Polsat Plus Arena, Gdynia, Poland",
@@ -774,6 +762,20 @@
       "date": "2004-02-27",
       "event_location": "Marriott Hotel, Warsaw, Masovian Voivodeship, Poland",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/25970"
+    },
+    {
+      "name": "KSW 121 - De Fries vs. Vojcak 2",
+      "date": "2026-09-19",
+      "start_time": "2026-09-19T00:00:00+00:00",
+      "event_location": "Home Credit Arena, Liberec, Czech Republic",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/891242"
+    },
+    {
+      "name": "KSW 122 - Bartosinski vs. Masaev",
+      "date": "2026-10-10",
+      "start_time": "2026-10-10T00:00:00+00:00",
+      "event_location": "Podpromie Hall, Rzeszow, Poland",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892480"
     }
   ],
   "fighters": [
@@ -5539,182 +5541,6 @@
     }
   ],
   "fights": [
-    {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Phil De Fries",
-      "fighter2_name": "Stefan Vojcak",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight"
-    },
-    {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Michal Michalski",
-      "fighter2_name": "Radoslaw Paczuski",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight"
-    },
-    {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Lukasz Charzewski",
-      "fighter2_name": "Josef Stummer",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Leo Brichta",
-      "fighter2_name": "Kacper Formela",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Adrian Dudek",
-      "fighter2_name": "Borys Dzikowski",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight"
-    },
-    {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Hanka Gelnarova",
-      "fighter2_name": "Malgorzata Popowicz",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight"
-    },
-    {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Tagir Machmudov",
-      "fighter2_name": "Djibril Nsenga",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Dominik Zadora",
-      "fighter2_name": "Samuel Bily",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Adrian Bartosinski",
-      "fighter2_name": "Adam Masaev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Vitalii Yakymenko",
-      "fighter2_name": "Marcello Morelli",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight"
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Adam Soldaev",
-      "fighter2_name": "Mateusz Makarowski",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Szymon Bajor",
-      "fighter2_name": "Kacper Paczoski",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight"
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Sergiusz Zajac",
-      "fighter2_name": "Bartosz Szewczyk",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Light Heavyweight"
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Sebastian Decowski",
-      "fighter2_name": "Andrzej Karkula",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight"
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Kristians Boguzs",
-      "fighter2_name": "Kacper Cholewa",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Welisson Paiva",
-      "fighter2_name": "Igor Wlodarczyk",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
     {
       "event_name": "KSW 120 - Haratyk vs. Lesko",
       "fighter1_name": "Bartosz Lesko",
@@ -18012,6 +17838,193 @@
       "round": 1,
       "time": "1:22",
       "weight_class": ""
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Phil De Fries",
+      "fighter2_name": "Stefan Vojcak",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight"
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Michal Michalski",
+      "fighter2_name": "Radoslaw Paczuski",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight"
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Lukasz Charzewski",
+      "fighter2_name": "Josef Stummer",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight"
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Muslim Tulshaev",
+      "fighter2_name": "Kacper Koziorzebski",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Leo Brichta",
+      "fighter2_name": "Kacper Formela",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Hanka Gelnarova",
+      "fighter2_name": "Malgorzata Popowicz",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Tagir Machmudov",
+      "fighter2_name": "Djibril Nsenga",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Adrian Dudek",
+      "fighter2_name": "Borys Dzikowski",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight"
+    },
+    {
+      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "fighter1_name": "Dominik Zadora",
+      "fighter2_name": "Samuel Bily",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Adrian Bartosinski",
+      "fighter2_name": "Adam Masaev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Vitalii Yakymenko",
+      "fighter2_name": "Marcello Morelli",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Adam Soldaev",
+      "fighter2_name": "Mateusz Makarowski",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Sergiusz Zajac",
+      "fighter2_name": "Bartosz Szewczyk",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight"
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Welisson Paiva",
+      "fighter2_name": "Igor Wlodarczyk",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Szymon Bajor",
+      "fighter2_name": "Kacper Paczoski",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight"
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Sebastian Decowski",
+      "fighter2_name": "Andrzej Karkula",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Kristians Boguzs",
+      "fighter2_name": "Kacper Cholewa",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
     }
   ]
 }

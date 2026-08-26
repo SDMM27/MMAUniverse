@@ -2,30 +2,6 @@
   "organization_id": 6,
   "events": [
     {
-      "name": "Rizin FF - Super Rizin 5",
-      "date": "2026-09-10",
-      "event_location": "Kyocera Dome Osaka, Osaka, Osaka, Japan",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892043"
-    },
-    {
-      "name": "Rizin FF - Landmark Vol. 16",
-      "date": "2026-10-03",
-      "event_location": "Happiness Arena, Nagasaki, Nagasaki, Japan",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/894391"
-    },
-    {
-      "name": "Rizin FF - Rizin 55",
-      "date": "2026-11-08",
-      "event_location": "LaLa Arena Tokyo-Bay, Funabashi, Chiba, Japan",
-      "event_poster": ""
-    },
-    {
-      "name": "Rizin FF - New Year's Eve Event",
-      "date": "2026-12-31",
-      "event_location": "Vantelin Dome Nagoya, Nagoya, Aichi, Japan",
-      "event_poster": ""
-    },
-    {
       "name": "Rizin FF - Rizin 54",
       "date": "2026-08-11",
       "event_location": "Toyota Arena Tokyo, Koto, Tokyo, Japan",
@@ -510,6 +486,34 @@
       "date": "2015-12-29",
       "event_location": "Saitama Super Arena, Saitama, Japan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/359185"
+    },
+    {
+      "name": "Rizin FF - Super Rizin 5",
+      "date": "2026-09-10",
+      "start_time": "2026-09-10T00:00:00+00:00",
+      "event_location": "Kyocera Dome Osaka, Osaka, Osaka, Japan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892043"
+    },
+    {
+      "name": "Rizin FF - Landmark Vol. 16",
+      "date": "2026-10-03",
+      "start_time": "2026-10-03T00:00:00+00:00",
+      "event_location": "Happiness Arena, Nagasaki, Nagasaki, Japan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/894391"
+    },
+    {
+      "name": "Rizin FF - Rizin 55",
+      "date": "2026-11-08",
+      "start_time": "2026-11-08T00:00:00+00:00",
+      "event_location": "LaLa Arena Tokyo-Bay, Funabashi, Chiba, Japan",
+      "event_poster": ""
+    },
+    {
+      "name": "Rizin FF - New Year's Eve Event",
+      "date": "2026-12-31",
+      "start_time": "2026-12-31T00:00:00+00:00",
+      "event_location": "Vantelin Dome Nagoya, Nagoya, Aichi, Japan",
+      "event_poster": ""
     }
   ],
   "fighters": [
@@ -4561,138 +4565,6 @@
     }
   ],
   "fights": [
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Rajabali Shaidullaev",
-      "fighter2_name": "A.J. McKee",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Mikuru Asakura",
-      "fighter2_name": "Shinya Aoki",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Roberto Satoshi de Souza",
-      "fighter2_name": "Shunta Nomura",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Karshyga Dautbek",
-      "fighter2_name": "Ren Hiramoto",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Yutaka Saito",
-      "fighter2_name": "Ren Sugiyama",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Vugar Karamov",
-      "fighter2_name": "Ryo Takagi",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Rena Kubota",
-      "fighter2_name": "Natalia Kuziutina",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "108lb Catchweight"
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Daichi Tomizawa",
-      "fighter2_name": "Ryo Kawabata",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "130lb Catchweight"
-    },
-    {
-      "event_name": "Rizin FF - Landmark Vol. 16",
-      "fighter1_name": "Yoshinori Horie",
-      "fighter2_name": "Sho Patrick Usami",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "Rizin FF - Landmark Vol. 16",
-      "fighter1_name": "Viktor Kolesnik",
-      "fighter2_name": "Koyomi Matsushima",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "Rizin FF - Landmark Vol. 16",
-      "fighter1_name": "Ryusei Ashizawa",
-      "fighter2_name": "Seiya Inoue",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight"
-    },
-    {
-      "event_name": "Rizin FF - Landmark Vol. 16",
-      "fighter1_name": "Keito Oyama",
-      "fighter2_name": "Noeru Narita",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "108lb Catchweight"
-    },
     {
       "event_name": "Rizin FF - Rizin 54",
       "fighter1_name": "Kyoma Akimoto",
@@ -13987,6 +13859,138 @@
       "round": 2,
       "time": "1:58",
       "weight_class": "Super Heavyweight"
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Rajabali Shaidullaev",
+      "fighter2_name": "A.J. McKee",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight"
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Mikuru Asakura",
+      "fighter2_name": "Shinya Aoki",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Roberto Satoshi de Souza",
+      "fighter2_name": "Shunta Nomura",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Karshyga Dautbek",
+      "fighter2_name": "Ren Hiramoto",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight"
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Yutaka Saito",
+      "fighter2_name": "Ren Sugiyama",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight"
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Vugar Karamov",
+      "fighter2_name": "Ryo Takagi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight"
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Rena Kubota",
+      "fighter2_name": "Natalia Kuziutina",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "108lb Catchweight"
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Daichi Tomizawa",
+      "fighter2_name": "Ryo Kawabata",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "130lb Catchweight"
+    },
+    {
+      "event_name": "Rizin FF - Landmark Vol. 16",
+      "fighter1_name": "Yoshinori Horie",
+      "fighter2_name": "Sho Patrick Usami",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "Rizin FF - Landmark Vol. 16",
+      "fighter1_name": "Viktor Kolesnik",
+      "fighter2_name": "Koyomi Matsushima",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight"
+    },
+    {
+      "event_name": "Rizin FF - Landmark Vol. 16",
+      "fighter1_name": "Ryusei Ashizawa",
+      "fighter2_name": "Seiya Inoue",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "Rizin FF - Landmark Vol. 16",
+      "fighter1_name": "Keito Oyama",
+      "fighter2_name": "Noeru Narita",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "108lb Catchweight"
     }
   ]
 }

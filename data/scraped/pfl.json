@@ -808,18 +808,21 @@
     {
       "name": "Professional Fighters League - PFL MENA 11: 2026 Semifinals",
       "date": "2026-10-02",
+      "start_time": "2026-10-02T00:00:00+00:00",
       "event_location": "Riyadh, Saudi Arabia",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/890937"
     },
     {
       "name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
       "date": "2026-10-10",
+      "start_time": "2026-10-10T00:00:00+00:00",
       "event_location": "Mohammed V Sports Complex, Casablanca, Morocco",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/894541"
     },
     {
-      "name": "Professional Fighters League - PFL Chicago: Carmouche vs. Bishop 2",
+      "name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
       "date": "2026-10-16",
+      "start_time": "2026-10-16T00:00:00+00:00",
       "event_location": "Wintrust Arena, Chicago, Illinois, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895387"
     }
@@ -7977,6 +7980,48 @@
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1786561711Morquez_Forest.jpg",
       "weight_class": "Lightweight",
       "record": "8-1-0",
+      "ranking": 0
+    },
+    {
+      "name": "Ridouan Errami",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230202070953_Ridouan_Errami.JPEG",
+      "weight_class": "Bantamweight",
+      "record": "5-0-0",
+      "ranking": 0
+    },
+    {
+      "name": "Reda Abdellaoui",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1773980827Reda.png",
+      "weight_class": "Bantamweight",
+      "record": "4-0-0",
+      "ranking": 0
+    },
+    {
+      "name": "Salim Mhamdi",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "2-0-0",
+      "ranking": 0
+    },
+    {
+      "name": "Sanaa Mandar",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "3-2-0",
+      "ranking": 0
+    },
+    {
+      "name": "Oussama El Idrissi",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230708033039_Oussama_El_Idrissi.JPG",
+      "weight_class": "Featherweight",
+      "record": "3-0-0",
+      "ranking": 0
+    },
+    {
+      "name": "Oualy Tandia",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1731473455tandy.jpg",
+      "weight_class": "Welterweight",
+      "record": "5-0-0",
       "ranking": 0
     }
   ],
@@ -22525,6 +22570,17 @@
     },
     {
       "event_name": "Professional Fighters League - PFL MENA 11: 2026 Semifinals",
+      "fighter1_name": "Hassan Shaaban",
+      "fighter2_name": "Assem Ghanem",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL MENA 11: 2026 Semifinals",
       "fighter1_name": "Mostafa Rashed Nada",
       "fighter2_name": "Osama ElSeady",
       "fight_finished": false,
@@ -22558,17 +22614,6 @@
     },
     {
       "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
-      "fighter1_name": "Peace Nguphane",
-      "fighter2_name": "Shido Boris Esperanca",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
       "fighter1_name": "Patrick Ocheme",
       "fighter2_name": "Cornel Thompson",
       "fight_finished": false,
@@ -22580,8 +22625,8 @@
     },
     {
       "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
-      "fighter1_name": "Rivaldo Pereira",
-      "fighter2_name": "David Samuel",
+      "fighter1_name": "Peace Nguphane",
+      "fighter2_name": "Shido Boris Esperanca",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -22612,7 +22657,73 @@
       "weight_class": "Bantamweight"
     },
     {
-      "event_name": "Professional Fighters League - PFL Chicago: Carmouche vs. Bishop 2",
+      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
+      "fighter1_name": "Rivaldo Pereira",
+      "fighter2_name": "David Samuel",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
+      "fighter1_name": "Ridouan Errami",
+      "fighter2_name": "Alain Majorique",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
+      "fighter1_name": "Yabna N'Tchala",
+      "fighter2_name": "Mouhamed Ba",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
+      "fighter1_name": "Reda Abdellaoui",
+      "fighter2_name": "Salim Mhamdi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
+      "fighter1_name": "Jane Osigwe",
+      "fighter2_name": "Sanaa Mandar",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "132lb Catchweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
+      "fighter1_name": "Abderrahman Errachidy",
+      "fighter2_name": "Oussama El Idrissi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
       "fighter1_name": "Liz Carmouche",
       "fighter2_name": "Jena Bishop",
       "fight_finished": false,
@@ -22621,6 +22732,61 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Timur Khizriev",
+      "fighter2_name": "Gabriel Braga",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Alexandr Shabliy",
+      "fighter2_name": "Landry Ward",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Oualy Tandia",
+      "fighter2_name": "Kendly St. Louis",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Denis Goltsov",
+      "fighter2_name": "Maxwell Djantou Nana",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight"
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Sarvarjon Khamidov",
+      "fighter2_name": "Rafael do Nascimento",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight"
     }
   ]
 }
