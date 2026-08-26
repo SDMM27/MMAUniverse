@@ -18,6 +18,8 @@ export interface ParsedFight {
   method: string;
   round: number;
   time: string;
+  /** True for the single fight parsed from `.fight_card` — Sherdog's featured/main-event bout for the page. */
+  is_main_event: boolean;
 }
 
 export interface ParsedEventDetails {
@@ -126,7 +128,7 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
     const time = resumeCells.length > 4 ? textAfterLabel($, resumeCells.eq(4)) : '';
 
     if (fighter1.name && fighter2.name) {
-      fights.push({ weight_class: weightClass, fighter1, fighter2, method, round, time });
+      fights.push({ weight_class: weightClass, fighter1, fighter2, method, round, time, is_main_event: true });
     }
   }
 
@@ -154,7 +156,7 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
     const time = trailingCells.eq(1).text().trim();
 
     if (fighter1.name && fighter2.name) {
-      fights.push({ weight_class: weightClass, fighter1, fighter2, method, round, time });
+      fights.push({ weight_class: weightClass, fighter1, fighter2, method, round, time, is_main_event: false });
     }
   });
 
