@@ -24,6 +24,9 @@ export interface ScrapedFight {
   round: number;
   time: string;
   weight_class: string;
+  // Absent on any org's JSON that hasn't been rescraped since this field was
+  // introduced — treat as false, same pattern as ScrapedEvent.start_time.
+  is_main_event?: boolean;
 }
 
 export interface ScrapedOrgData {
