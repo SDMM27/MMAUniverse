@@ -2,6 +2,10 @@
 import { fetchAllTimeLeaderboard } from '@/data/lib/picks-data';
 import EmptyState from '@/components/ui/shared/empty-state';
 
+// Queries the DB on every request instead of at build time — Vercel's build
+// step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
+export const dynamic = 'force-dynamic';
+
 export default async function Page() {
   const leaderboard = await fetchAllTimeLeaderboard();
 
