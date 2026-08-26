@@ -63,13 +63,30 @@ async function seedEvents() {
 
   await sql`ALTER TABLE events ADD COLUMN IF NOT EXISTS start_time TIMESTAMPTZ;`;
 
+  // `ON CONFLICT (id) DO NOTHING` below never actually fires: `id` is a fresh
+  // SERIAL value on every INSERT since it's never supplied, so there's never
+  // a conflicting id to skip. Same bug as seedFighters had (see the comment
+  // there) — every re-run of /seed silently duplicated the entire events
+  // table. Checking for an existing row first (matched by name, the same key
+  // getEventIdByName uses to resolve fights to their event) makes this
+  // idempotent instead.
   const insertedEvents = [];
   for (const dataset of orgDatasets) {
     for (const event of dataset.events) {
+      const existing = await sql`
+        SELECT id FROM events WHERE name = ${event.name} ORDER BY id ASC;
+      `;
+      if (existing.rows[0]) {
+        const result = await sql`
+          UPDATE events SET date = ${event.date}, start_time = ${event.start_time ?? null}, event_location = ${event.event_location}, event_poster = ${event.event_poster}, organization_id = ${dataset.organization_id}
+          WHERE id = ${existing.rows[0].id};
+        `;
+        insertedEvents.push(result);
+        continue;
+      }
       const result = await sql`
         INSERT INTO events (name, date, start_time, event_location, event_poster, organization_id)
-        VALUES (${event.name}, ${event.date}, ${event.start_time ?? null}, ${event.event_location}, ${event.event_poster}, ${dataset.organization_id})
-        ON CONFLICT (id) DO NOTHING;
+        VALUES (${event.name}, ${event.date}, ${event.start_time ?? null}, ${event.event_location}, ${event.event_poster}, ${dataset.organization_id});
       `;
       insertedEvents.push(result);
     }
