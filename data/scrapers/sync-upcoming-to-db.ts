@@ -1,7 +1,7 @@
 // data/scrapers/sync-upcoming-to-db.ts
 //
-// Targeted DB sync: upserts only the not-yet-happened events (date >= today) from
-// data/scraped/{ufc,pfl,bellator}.json into Neon, by name/date rather than blind INSERT.
+// Targeted DB sync: upserts only the not-yet-happened events (date >= today) from each org's
+// data/scraped/{orgKey}.json into Neon, by name/date rather than blind INSERT.
 // Unlike app/seed/route.ts (which has no UNIQUE constraint to lean on and would duplicate
 // every row on a second run), this is safe to re-run: existing events/fighters are matched
 // by name and UPDATEd in place, and each event's fights are reconciled by fighter pair
@@ -11,6 +11,7 @@ import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import type { ScrapedOrgData } from './shared/types';
 import { planFightSync, type FreshFight } from './shared/fight-sync';
+import { ORG_CONFIGS } from './orgs.config';
 
 // tsx doesn't auto-load .env.local the way Next.js does; parse it by hand.
 function loadEnvLocal() {
@@ -46,7 +47,10 @@ function loadDataset(orgKey: string): ScrapedOrgData {
   return JSON.parse(fs.readFileSync(path.resolve('data/scraped', `${orgKey}.json`), 'utf-8'));
 }
 
-const datasets = [loadDataset('ufc'), loadDataset('pfl'), loadDataset('bellator')];
+// Every configured org, not just ufc/pfl/bellator — rescrape-upcoming.ts (and run-all.ts)
+// write a data/scraped/{orgKey}.json for each entry in ORG_CONFIGS, so sync should pick up
+// all of them rather than silently ignoring one, cagewarriors, rizin, ksw, aca, invicta, lfa.
+const datasets = ORG_CONFIGS.map((config) => loadDataset(config.orgKey));
 
 async function upsertEvent(
   event: { name: string; date: string; start_time?: string; event_location: string; event_poster: string },

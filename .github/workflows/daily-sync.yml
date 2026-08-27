@@ -1,0 +1,44 @@
+name: Daily data sync
+
+# Baseline refresh: rescrapes every org's upcoming events from Sherdog once a day and syncs
+# them into Neon. See data/scrapers/rescrape-upcoming.ts and sync-upcoming-to-db.ts for what
+# "targeted" means here — this only touches not-yet-happened events, not the full history.
+on:
+  schedule:
+    - cron: '0 9 * * *' # 09:00 UTC daily
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mma-universe-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Rescrape upcoming events (all orgs)
+        run: npx tsx data/scrapers/rescrape-upcoming.ts
+
+      - name: Commit refreshed scraped data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/scraped/*.json
+          git diff --cached --quiet || git commit -m "chore(scrape): daily upcoming-events refresh"
+          git push
+
+      - name: Sync to Neon
+        run: npx tsx data/scrapers/sync-upcoming-to-db.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
