@@ -19,6 +19,9 @@
     "scrape:aca": "tsx data/scrapers/run-all.ts aca",
     "scrape:invicta": "tsx data/scrapers/run-all.ts invicta",
     "scrape:lfa": "tsx data/scrapers/run-all.ts lfa",
+    "scrape:hexagone": "tsx data/scrapers/run-all.ts hexagone",
+    "scrape:ares": "tsx data/scrapers/run-all.ts ares",
+    "scrape:oktagon": "tsx data/scrapers/run-all.ts oktagon",
     "scrape:all": "tsx data/scrapers/run-all.ts",
     "seed:additional-orgs": "tsx data/scrapers/seed-additional-orgs.ts"
   },
