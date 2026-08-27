@@ -12,4 +12,7 @@ export const ORG_CONFIGS: OrgScrapeConfig[] = [
   { orgKey: 'aca', organizationId: 8, sherdogOrgPath: 'organizations/Absolute-Championship-Akhmat-8185' },
   { orgKey: 'invicta', organizationId: 9, sherdogOrgPath: 'organizations/Invicta-Fighting-Championships-4469' },
   { orgKey: 'lfa', organizationId: 10, sherdogOrgPath: 'organizations/Legacy-Fighting-Alliance-LFA-11339' },
+  { orgKey: 'hexagone', organizationId: 11, sherdogOrgPath: 'organizations/Hexagone-MMA-16693' },
+  { orgKey: 'ares', organizationId: 12, sherdogOrgPath: 'organizations/Ares-Fighting-Championship-15823' },
+  { orgKey: 'oktagon', organizationId: 13, sherdogOrgPath: 'organizations/Oktagon-MMA-5383' },
 ];
