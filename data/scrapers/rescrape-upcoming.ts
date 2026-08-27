@@ -9,7 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fetchAndLoad } from './shared/fetch-throttled';
-import { parseEventTableUrls, parseEventDetails, parseFighterDetails } from './parse';
+import { parseEventTableUrls, parseEventDetails, parseFighterDetails, toScrapedFightHistory } from './parse';
 import { ORG_CONFIGS } from './orgs.config';
 import type { ScrapedOrgData, ScrapedEvent, ScrapedFighter, ScrapedFight } from './shared/types';
 
@@ -95,6 +95,8 @@ async function main() {
         weight_class: details.weightClass,
         record: `${details.wins}-${details.losses}-${details.draws}`,
         ranking: 0,
+        sherdog_url: fighterUrl,
+        fight_history: toScrapedFightHistory(details.fightHistory),
       });
     }
 

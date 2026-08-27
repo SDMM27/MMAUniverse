@@ -23,7 +23,9 @@
     "scrape:ares": "tsx data/scrapers/run-all.ts ares",
     "scrape:oktagon": "tsx data/scrapers/run-all.ts oktagon",
     "scrape:all": "tsx data/scrapers/run-all.ts",
-    "seed:additional-orgs": "tsx data/scrapers/seed-additional-orgs.ts"
+    "seed:additional-orgs": "tsx data/scrapers/seed-additional-orgs.ts",
+    "backfill:fighter-history": "tsx data/scrapers/backfill-fighter-history.ts",
+    "sync:fighter-history": "tsx data/scrapers/sync-fighter-history.ts"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.39.6",

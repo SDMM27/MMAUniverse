@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { fetchFighterById, fetchFightsByFighterId } from '@/data/lib/data';
+import { fetchFighterById, fetchFighterFightHistory } from '@/data/lib/data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
 import { CoverImage } from '@/components/ui/shared/media';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
@@ -12,7 +12,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  const fights = await fetchFightsByFighterId(params.slug);
+  const fights = await fetchFighterFightHistory(params.slug);
   const stats = computeFighterStats(fights);
 
   return (

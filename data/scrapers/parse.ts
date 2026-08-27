@@ -2,6 +2,7 @@
 import type { CheerioAPI, Cheerio } from 'cheerio';
 import type { AnyNode } from 'domhandler';
 import { normalizeDate, normalizeStartTime } from './shared/normalize-date';
+import type { ScrapedFightHistoryEntry } from './shared/types';
 
 export type FinalResult = 'win' | 'loss' | 'not_finished';
 
@@ -40,6 +41,21 @@ export interface ParsedFighterDetails {
   wins: number;
   losses: number;
   draws: number;
+  fightHistory: ParsedFighterHistoryEntry[];
+}
+
+export interface ParsedFighterHistoryEntry {
+  opponentName: string;
+  opponentSherdogUrl: string;
+  eventName: string;
+  eventSherdogUrl: string;
+  date: string; // ISO 'YYYY-MM-DD' when parseable, else '' — Sherdog renders it as "May / 16 / 2026"
+  /** Sherdog's own lowercase label for the row: 'win' | 'loss' | 'draw' | 'nc' (no contest) — kept as raw text rather than a fixed union since new labels shouldn't crash parsing. */
+  result: string;
+  method: string;
+  referee: string;
+  round: number;
+  time: string;
 }
 
 // Sherdog sometimes renders a disabled/placeholder link as `href="javascript:void();"`
@@ -167,6 +183,97 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
   return { name, date, start_time, location, poster, fights };
 }
 
+const MONTH_ABBREVIATIONS = [
+  'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec',
+];
+
+// Sherdog renders a fight history date as "May / 16 / 2026" — reformat to ISO
+// 'YYYY-MM-DD' so it sorts/compares like every other date in this codebase.
+// Parsed as UTC calendar fields (not `new Date(string)`, which reads the
+// pieces as local time and can shift the date by a day once converted back
+// via toISOString depending on the host's timezone) — returns '' rather than
+// throwing on anything that doesn't match the expected shape.
+function normalizeHistoryDate(text: string): string {
+  const match = text.match(/^([A-Za-z]{3})[A-Za-z]*\s*\/\s*(\d{1,2})\s*\/\s*(\d{4})$/);
+  if (!match) return '';
+  const monthIndex = MONTH_ABBREVIATIONS.indexOf(match[1].toLowerCase());
+  if (monthIndex === -1) return '';
+  const day = Number(match[2]);
+  const year = Number(match[3]);
+  const iso = new Date(Date.UTC(year, monthIndex, day));
+  return iso.toISOString().slice(0, 10);
+}
+
+/**
+ * Parses the "Fight History - Pro" table from a fighter's own Sherdog page —
+ * the same page `parseFighterDetails` already loads, so this costs no extra
+ * request. This is the fighter's complete career record across every
+ * organization Sherdog knows about, independent of which orgs we scrape —
+ * unlike `fights` rows (reconstructed from our own scraped events), it still
+ * has a fighter's full history even when they just transferred into a
+ * tracked org from one we've never scraped.
+ * Only the first `.module.fight_history` is used: Sherdog repeats the same
+ * table markup elsewhere on the page in a smaller "recent fights" widget.
+ */
+export function parseFighterFightHistory($: CheerioAPI): ParsedFighterHistoryEntry[] {
+  const baseUrl = 'https://www.sherdog.com';
+  const entries: ParsedFighterHistoryEntry[] = [];
+
+  $('.module.fight_history')
+    .first()
+    .find('table.new_table.fighter tbody tr')
+    .each((_, row) => {
+      const $row = $(row);
+      if ($row.hasClass('table_head')) return;
+
+      const cells = $row.find('td');
+      if (cells.length < 6) return;
+
+      const result = cells.eq(0).find('.final_result').first().text().trim().toLowerCase();
+
+      const opponentLink = cells.eq(1).find('a').first();
+      const opponentName = opponentLink.text().trim();
+      const opponentSherdogUrl = absoluteUrl(opponentLink.attr('href'), baseUrl);
+
+      const eventCell = cells.eq(2);
+      const eventLink = eventCell.find('a').first();
+      const eventClone = eventLink.clone();
+      eventClone.find('.sub_line').remove();
+      const eventName = eventClone.text().trim();
+      const eventSherdogUrl = absoluteUrl(eventLink.attr('href'), baseUrl);
+      const date = normalizeHistoryDate(eventCell.find('.sub_line').first().text().trim());
+
+      const methodCell = cells.eq(3);
+      const method = methodCell.find('b').first().text().trim();
+      const referee = methodCell.find('.sub_line').first().text().trim();
+
+      const round = parseInt(cells.eq(4).text().trim(), 10) || 0;
+      const time = cells.eq(5).text().trim();
+
+      if (!opponentName || !eventName) return;
+
+      entries.push({ opponentName, opponentSherdogUrl, eventName, eventSherdogUrl, date, result, method, referee, round, time });
+    });
+
+  return entries;
+}
+
+/** Maps the camelCase parser shape onto the snake_case shape written to data/scraped/*.json — shared by every scraper entry point that fetches a fighter page. */
+export function toScrapedFightHistory(entries: ParsedFighterHistoryEntry[]): ScrapedFightHistoryEntry[] {
+  return entries.map((entry) => ({
+    opponent_name: entry.opponentName,
+    opponent_sherdog_url: entry.opponentSherdogUrl,
+    event_name: entry.eventName,
+    event_sherdog_url: entry.eventSherdogUrl,
+    date: entry.date,
+    result: entry.result,
+    method: entry.method,
+    referee: entry.referee,
+    round: entry.round,
+    time: entry.time,
+  }));
+}
+
 export function parseFighterDetails($: CheerioAPI): ParsedFighterDetails {
   const name = $('h1[itemprop="name"] span.fn').first().text().trim();
   const imageSrc = $('.fighter-info img[itemprop="image"]').first().attr('src') ?? '';
@@ -176,6 +283,7 @@ export function parseFighterDetails($: CheerioAPI): ParsedFighterDetails {
   const losses = parseInt($('.winloses.lose span').eq(1).text().trim(), 10) || 0;
   const drawsText = $('.winloses.draw span').eq(1).text().trim();
   const draws = drawsText ? parseInt(drawsText, 10) || 0 : 0;
+  const fightHistory = parseFighterFightHistory($);
 
-  return { name, imageUrl, weightClass, wins, losses, draws };
+  return { name, imageUrl, weightClass, wins, losses, draws, fightHistory };
 }
