@@ -32,17 +32,17 @@ export default function FightCard({ fight, event, live }: FightCardProps) {
   return (
     <Link
       href={`/events/${event.id}`}
-      className="flex flex-col gap-4 rounded-lg border border-base-border bg-base-card p-4 transition-colors hover:border-accent"
+      className="flex flex-col gap-5 rounded-xl border-2 border-accent bg-base-card p-6 shadow-lg transition-shadow hover:shadow-accent/20 sm:p-8"
     >
+      <p className="text-center font-display text-sm font-bold uppercase tracking-[0.2em] text-accent">
+        Événement principal
+      </p>
       <FightCardHeader status={status} event={event} liveRound={live?.round} />
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex items-center justify-between gap-4 sm:gap-6">
         <FighterColumn fighter={fight.fighter1} status={status} winnerId={fight.winner_id} />
         <FightCardCenter status={status} fight={fight} />
         <FighterColumn fighter={fight.fighter2} status={status} winnerId={fight.winner_id} />
       </div>
-      <p className="border-t border-base-border pt-2 text-center font-display text-xs uppercase tracking-wide text-accent">
-        Événement principal
-      </p>
     </Link>
   );
 }
@@ -103,21 +103,25 @@ function FighterColumn({
     // min-w-0: this column sits in a flex row alongside the other fighter's
     // column — without it, a long name refuses to shrink below its own
     // content width and pushes the card wider than its container.
-    <div className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
-      <CoverImage src={fighter.image_url} alt={fighter.name} className="h-12 w-12 rounded-md" />
+    <div className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center">
+      <CoverImage
+        src={fighter.image_url}
+        alt={fighter.name}
+        className="h-20 w-20 rounded-md sm:h-28 sm:w-28"
+      />
       {flag && (
-        <span className="text-sm" aria-hidden="true">
+        <span className="text-xl" aria-hidden="true">
           {flag}
         </span>
       )}
-      <span className="w-full truncate font-display text-sm uppercase tracking-wide text-ink-primary">
+      <span className="w-full truncate font-display text-base uppercase tracking-wide text-ink-primary sm:text-xl">
         {fighter.name}
       </span>
       {status === 'finished' ? (
-        <span className={`font-display text-lg font-bold ${resultColor[result]}`}>{resultLabel[result]}</span>
+        <span className={`font-display text-2xl font-bold ${resultColor[result]}`}>{resultLabel[result]}</span>
       ) : (
         fighter.ranking > 0 && (
-          <span className="text-[10px] font-bold uppercase tracking-wide text-accent">#{fighter.ranking}</span>
+          <span className="text-xs font-bold uppercase tracking-wide text-accent">#{fighter.ranking}</span>
         )
       )}
     </div>
@@ -126,17 +130,17 @@ function FighterColumn({
 
 function FightCardCenter({ status, fight }: { status: FightStatus; fight: FightWithFighters }) {
   if (status === 'live') {
-    return <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-accent" aria-hidden="true" />;
+    return <span className="h-3 w-3 shrink-0 animate-pulse rounded-full bg-accent" aria-hidden="true" />;
   }
 
   if (status === 'finished') {
     const parts = [fight.method, fight.round ? `Round ${fight.round}` : null].filter(Boolean);
     return (
-      <span className="shrink-0 text-center text-xs text-ink-secondary">
+      <span className="w-16 shrink-0 text-center text-xs text-ink-secondary sm:w-24 sm:text-sm">
         {parts.length > 0 ? parts.join(' · ') : 'Résultat non précisé'}
       </span>
     );
   }
 
-  return <span className="shrink-0 text-xs font-bold text-ink-secondary">VS</span>;
+  return <span className="shrink-0 font-display text-xl font-bold text-ink-secondary sm:text-2xl">VS</span>;
 }
