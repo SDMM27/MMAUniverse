@@ -30,20 +30,19 @@ export default function FightCard({ fight, event, live }: FightCardProps) {
   const status: FightStatus = fight.fight_finished ? 'finished' : live ? 'live' : 'upcoming';
 
   return (
-    <Link
-      href={`/events/${event.id}`}
-      className="flex flex-col gap-5 rounded-xl border-2 border-accent bg-base-card p-6 shadow-lg transition-shadow hover:shadow-accent/20 sm:p-8"
-    >
-      <p className="text-center font-display text-sm font-bold uppercase tracking-[0.2em] text-accent">
-        Événement principal
-      </p>
-      <FightCardHeader status={status} event={event} liveRound={live?.round} />
+    <div className="flex flex-col gap-5 rounded-xl border-2 border-accent bg-base-card p-6 shadow-lg transition-shadow hover:shadow-accent/20 sm:p-8">
+      <Link href={`/events/${event.id}`} className="flex flex-col gap-5">
+        <p className="text-center font-display text-sm font-bold uppercase tracking-[0.2em] text-accent">
+          Événement principal
+        </p>
+        <FightCardHeader status={status} event={event} liveRound={live?.round} />
+      </Link>
       <div className="flex items-center justify-between gap-4 sm:gap-6">
         <FighterColumn fighter={fight.fighter1} status={status} winnerId={fight.winner_id} />
         <FightCardCenter status={status} fight={fight} />
         <FighterColumn fighter={fight.fighter2} status={status} winnerId={fight.winner_id} />
       </div>
-    </Link>
+    </div>
   );
 }
 
@@ -103,7 +102,10 @@ function FighterColumn({
     // min-w-0: this column sits in a flex row alongside the other fighter's
     // column — without it, a long name refuses to shrink below its own
     // content width and pushes the card wider than its container.
-    <div className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center">
+    <Link
+      href={`/fighters/${fighter.id}`}
+      className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center transition-colors hover:text-accent"
+    >
       <CoverImage
         src={fighter.image_url}
         alt={fighter.name}
@@ -124,7 +126,7 @@ function FighterColumn({
           <span className="text-xs font-bold uppercase tracking-wide text-accent">#{fighter.ranking}</span>
         )
       )}
-    </div>
+    </Link>
   );
 }
 
