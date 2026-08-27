@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import type { FightWithFighters, MethodCategory } from '@/data/lib/definitions';
 import type { StoredPick } from '@/data/lib/picks-data';
+import { getScheduledRounds } from '@/data/lib/fight-utils';
 
 const methodLabels: Record<MethodCategory, string> = {
   ko_tko: 'KO / TKO',
@@ -90,7 +91,7 @@ export default function PickForm({
       </div>
       {method && method !== 'decision' && (
         <div className="flex justify-center gap-2">
-          {[1, 2, 3, 4, 5].map((r) => (
+          {Array.from({ length: getScheduledRounds(fight) }, (_, i) => i + 1).map((r) => (
             <button
               key={r}
               type="button"
