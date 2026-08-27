@@ -2,7 +2,9 @@ import { FighterStats } from './definitions';
 
 type ScorableFight = {
   method: string | null;
-  result: 'win' | 'loss' | 'draw' | 'upcoming';
+  // 'nc' (no contest) falls through untallied below, same as 'upcoming' —
+  // neither counts toward a fighter's win/loss/draw record.
+  result: 'win' | 'loss' | 'draw' | 'nc' | 'upcoming';
 };
 
 function categorizeMethod(method: string | null | undefined): 'ko' | 'submission' | 'decision' | 'other' {

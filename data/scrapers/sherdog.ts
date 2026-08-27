@@ -1,7 +1,7 @@
 // data/scrapers/sherdog.ts
 import { fetchAndLoad } from './shared/fetch-throttled';
 import { loadProgress, saveProgress } from './shared/checkpoint';
-import { parseEventTableUrls, parseOlderEventsUrl, parseEventDetails, parseFighterDetails } from './parse';
+import { parseEventTableUrls, parseOlderEventsUrl, parseEventDetails, parseFighterDetails, toScrapedFightHistory } from './parse';
 import type { ScrapedOrgData, ScrapedFight } from './shared/types';
 
 const SHERDOG_BASE = 'https://www.sherdog.com';
@@ -105,6 +105,8 @@ export async function scrapeOrganization(config: OrgScrapeConfig, cacheDir: stri
       weight_class: details.weightClass,
       record: `${details.wins}-${details.losses}-${details.draws}`,
       ranking: 0,
+      sherdog_url: fighterUrl,
+      fight_history: toScrapedFightHistory(details.fightHistory),
     });
     progress.processedFighterUrls.push(fighterUrl);
     saveProgress(config.orgKey, progress, cacheDir);
