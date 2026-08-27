@@ -76,6 +76,7 @@ async function main() {
           time: fight.time,
           weight_class: fight.weight_class,
           is_main_event: fight.is_main_event,
+          is_title_fight: fight.is_title_fight,
         });
       }
       console.log(`[${config.orgKey}] parsed "${details.name}" -> ${details.fights.length} fight(s)`);

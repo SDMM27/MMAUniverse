@@ -100,6 +100,7 @@ export async function fetchFightsByEvent(eventId: string) {
       time: string;
       weight_class: string;
       is_main_event: boolean;
+      is_title_fight: boolean;
       f1_id: number | null;
       f1_name: string | null;
       f1_image_url: string | null;
@@ -118,7 +119,7 @@ export async function fetchFightsByEvent(eventId: string) {
       f2_nationality: string | null;
     }>`
       SELECT
-        f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class, f.is_main_event,
+        f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class, f.is_main_event, f.is_title_fight,
         f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking, f1.nationality AS f1_nationality,
         f2.id AS f2_id, f2.name AS f2_name, f2.image_url AS f2_image_url, f2.weight_class AS f2_weight_class, f2.organization_id AS f2_organization_id, f2.record AS f2_record, f2.ranking AS f2_ranking, f2.nationality AS f2_nationality
       FROM fights f
@@ -140,6 +141,7 @@ export async function fetchFightsByEvent(eventId: string) {
       time: row.time,
       weight_class: row.weight_class,
       is_main_event: row.is_main_event,
+      is_title_fight: row.is_title_fight,
       fighter1: row.f1_id
         ? {
             id: row.f1_id,

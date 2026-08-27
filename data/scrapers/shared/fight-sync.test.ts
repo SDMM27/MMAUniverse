@@ -13,6 +13,7 @@ function freshFight(overrides: Partial<Parameters<typeof planFightSync>[1][numbe
     time: '',
     weight_class: 'Lightweight',
     is_main_event: false,
+    is_title_fight: false,
     ...overrides,
   };
 }
