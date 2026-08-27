@@ -45202,7 +45202,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": true
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45214,7 +45215,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45226,7 +45228,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45238,7 +45241,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45250,7 +45254,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45262,7 +45267,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45274,7 +45280,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45286,7 +45293,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45298,7 +45306,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45310,7 +45319,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45322,7 +45332,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45334,7 +45345,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
@@ -45346,7 +45358,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45358,7 +45371,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45370,7 +45384,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45382,7 +45397,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45394,7 +45410,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45406,7 +45423,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45418,7 +45436,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45430,7 +45449,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45442,7 +45462,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45454,7 +45475,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45466,7 +45488,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45478,7 +45501,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45490,7 +45514,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
@@ -45502,7 +45527,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }

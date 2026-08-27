@@ -1700,6 +1700,13 @@
       "start_time": "2026-10-04T00:00:00+00:00",
       "event_location": "Sport Hall Colloseum, Grozny, Chechnya, Russia",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895840"
+    },
+    {
+      "name": "ACA 209 - Frolov vs. Odilov",
+      "date": "2026-10-31",
+      "start_time": "2026-10-31T00:00:00+00:00",
+      "event_location": "Dushanbe, Tajikistan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896159"
     }
   ],
   "fighters": [
@@ -16982,6 +16989,13 @@
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1767710440magomedovsharapudin.jpg",
       "weight_class": "Lightweight",
       "record": "7-1-0",
+      "ranking": 0
+    },
+    {
+      "name": "Loik Radzhabov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/14992592151.jpg",
+      "weight_class": "Lightweight",
+      "record": "18-6-0",
       "ranking": 0
     }
   ],
@@ -63504,7 +63518,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Heavyweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63516,7 +63531,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Heavyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63528,7 +63544,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63540,7 +63557,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63552,7 +63570,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63564,7 +63583,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63576,7 +63596,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63588,7 +63609,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63600,7 +63622,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63612,7 +63635,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63624,7 +63648,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63636,7 +63661,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
@@ -63648,7 +63674,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "ACA 208 - Kerimov vs. Podlesnyi",
@@ -63660,7 +63687,47 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 208 - Kerimov vs. Podlesnyi",
+      "fighter1_name": "Ali Suleymanov",
+      "fighter2_name": "Valery Dashkevich",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Faridun Odilov",
+      "fighter2_name": "Artem Frolov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Loik Radzhabov",
+      "fighter2_name": "Nikolay Aleksakhin",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }

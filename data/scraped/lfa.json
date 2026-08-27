@@ -50436,7 +50436,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50448,7 +50449,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50460,7 +50462,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50472,7 +50475,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50484,7 +50488,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50496,7 +50501,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50508,7 +50514,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50520,7 +50527,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Catchweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50532,7 +50540,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50544,7 +50553,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50556,7 +50566,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Heavyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50568,7 +50579,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
@@ -50580,7 +50592,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50592,7 +50605,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": true
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50604,7 +50618,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50616,7 +50631,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50628,7 +50644,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50640,7 +50657,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50652,7 +50670,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50664,7 +50683,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50676,7 +50696,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50688,7 +50709,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50700,7 +50722,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50712,7 +50735,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50724,7 +50748,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50736,7 +50761,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50748,7 +50774,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50760,7 +50787,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
@@ -50772,7 +50800,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50784,7 +50813,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50796,7 +50826,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50808,7 +50839,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50820,7 +50852,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50832,7 +50865,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50844,7 +50878,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50856,7 +50891,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50868,7 +50904,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50880,7 +50917,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50892,7 +50930,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50904,7 +50943,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50916,7 +50956,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50928,7 +50969,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
@@ -50940,7 +50982,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }

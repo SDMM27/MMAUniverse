@@ -204,7 +204,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - One on Prime Video 47",
@@ -216,7 +217,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - One on Prime Video 47",
@@ -228,7 +230,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - One on Prime Video 47",
@@ -240,7 +243,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - One on Prime Video 47",
@@ -252,7 +256,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - ONE Samurai 3",
@@ -264,7 +269,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - ONE Samurai 3",
@@ -276,7 +282,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - One on Prime Video 48",
@@ -288,7 +295,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Heavyweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - ONE Samurai 4",
@@ -300,7 +308,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     }
   ]
 }

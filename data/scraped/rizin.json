@@ -13870,7 +13870,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": true
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13882,7 +13883,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13894,7 +13896,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13906,7 +13909,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13918,7 +13922,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13930,7 +13935,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13942,7 +13948,8 @@
       "round": 0,
       "time": "",
       "weight_class": "108lb Catchweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
@@ -13954,7 +13961,8 @@
       "round": 0,
       "time": "",
       "weight_class": "130lb Catchweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
@@ -13966,7 +13974,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": true
+      "is_main_event": true,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
@@ -13978,7 +13987,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
@@ -13990,7 +14000,8 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
@@ -14002,7 +14013,8 @@
       "round": 0,
       "time": "",
       "weight_class": "108lb Catchweight",
-      "is_main_event": false
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }

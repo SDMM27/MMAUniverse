@@ -124205,19 +124205,6 @@
     },
     {
       "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
-      "fighter1_name": "Niushiyue Ji",
-      "fighter2_name": "Takeru Uchida",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "UFC - Road to UFC Season 5: Shanghai Semifinals",
       "fighter1_name": "Kasib Murdoch",
       "fighter2_name": "Rabindra Dhant",
       "fight_finished": false,
