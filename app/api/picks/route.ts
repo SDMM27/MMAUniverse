@@ -2,6 +2,7 @@
 import { sql } from '@/data/lib/db';
 import { isEventLocked } from '@/data/lib/pick-lock';
 import { getOrCreateCurrentUser, upsertPick } from '@/data/lib/picks-data';
+import { getScheduledRounds } from '@/data/lib/fight-utils';
 import type { MethodCategory } from '@/data/lib/definitions';
 
 // Same reasoning as app/seed/route.ts: without this, @neondatabase/serverless's
@@ -23,12 +24,20 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Catégorie de méthode invalide.' }, { status: 400 });
   }
 
-  const fightRows = await sql<{ id: number; event_id: number }>`
-    SELECT id, event_id FROM fights WHERE id = ${fightId}
+  const fightRows = await sql<{ id: number; event_id: number; is_main_event: boolean; is_title_fight: boolean }>`
+    SELECT id, event_id, is_main_event, is_title_fight FROM fights WHERE id = ${fightId}
   `;
   const fight = fightRows.rows[0];
   if (!fight) {
     return Response.json({ error: 'Combat introuvable.' }, { status: 404 });
+  }
+
+  const scheduledRounds = getScheduledRounds(fight);
+  if (
+    predictedMethodCategory !== 'decision' &&
+    (!Number.isInteger(predictedRound) || predictedRound < 1 || predictedRound > scheduledRounds)
+  ) {
+    return Response.json({ error: 'Round invalide pour ce combat.' }, { status: 400 });
   }
 
   const eventRows = await sql<{ start_time: string | null; date: string }>`
