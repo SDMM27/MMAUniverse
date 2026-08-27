@@ -246,39 +246,46 @@ export async function fetchFighterById(id: string) {
 // orgs (e.g. Bellator -> UFC) therefore has several ids, and their fights
 // are split across those ids' rows. To show a fighter's full history we
 // first resolve every sibling id that represents the same real person.
+// `sherdog_url` is included alongside name+image_url once a row has it
+// (backfilled by data/scrapers/sync-fighter-history.ts) — it's a more
+// reliable match than image_url, which can legitimately change between two
+// independent scrapes if Sherdog swaps a fighter's photo.
 async function resolveFighterIds(fighterId: string): Promise<number[]> {
   const siblings = await sql<{ id: number }>`
     SELECT sibling.id
     FROM fighters self
-    JOIN fighters sibling ON sibling.name = self.name AND sibling.image_url = self.image_url
+    JOIN fighters sibling ON sibling.name = self.name
+      AND (sibling.image_url = self.image_url OR (self.sherdog_url IS NOT NULL AND sibling.sherdog_url = self.sherdog_url))
     WHERE self.id = ${fighterId}
   `;
   const ids = siblings.rows.map((row) => row.id);
   return ids.length > 0 ? ids : [Number(fighterId)];
 }
 
-export async function fetchFightsByFighterId(fighterId: string) {
+// A fighter's page combines two independent sources:
+//  - upcoming (not-yet-fought) bouts, still read from our own `fights`/`events`
+//    tables — Sherdog's fight history table only ever lists completed fights,
+//    so this is the one thing it can't give us.
+//  - every completed fight, read from `fighter_fight_history` — scraped
+//    directly off the fighter's own Sherdog page, so it's complete across
+//    every organization Sherdog knows about, not just the ones we track. This
+//    is what fixes a fighter having no history right after transferring into
+//    a tracked org from one we've never scraped (see data/scrapers/parse.ts's
+//    parseFighterFightHistory).
+export async function fetchFighterFightHistory(fighterId: string) {
   try {
     const fighterIds = await resolveFighterIds(fighterId);
 
-    const data = await sql<{
+    const upcoming = await sql<{
       id: number;
       event_id: number;
-      fighter1_id: number;
-      fighter2_id: number;
-      fight_finished: boolean;
-      winner_id: number | null;
-      method: string;
-      round: number;
-      time: string;
-      weight_class: string;
       event_name: string;
       event_date: string;
       opponent_name: string | null;
       opponent_image_url: string | null;
     }>`
       SELECT
-        f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class,
+        f.id, f.event_id,
         e.name AS event_name, e.date AS event_date,
         opponent.name AS opponent_name, opponent.image_url AS opponent_image_url
       FROM fights f
@@ -286,20 +293,71 @@ export async function fetchFightsByFighterId(fighterId: string) {
       LEFT JOIN fighters opponent ON opponent.id = (
         CASE WHEN f.fighter1_id = ANY(${fighterIds}) THEN f.fighter2_id ELSE f.fighter1_id END
       )
-      WHERE f.fighter1_id = ANY(${fighterIds}) OR f.fighter2_id = ANY(${fighterIds})
-      ORDER BY e.date DESC
+      WHERE (f.fighter1_id = ANY(${fighterIds}) OR f.fighter2_id = ANY(${fighterIds}))
+        AND f.fight_finished = false
+      ORDER BY e.date ASC
     `;
 
-    return data.rows.map((row) => ({
-      ...row,
-      result: !row.fight_finished
-        ? 'upcoming'
-        : row.winner_id === null
-          ? 'draw'
-          : fighterIds.includes(row.winner_id)
-            ? 'win'
-            : 'loss',
-    })) as FightHistoryEntry[];
+    const history = await sql<{
+      id: number;
+      opponent_name: string;
+      event_name: string;
+      event_date: string | null;
+      event_sherdog_url: string | null;
+      result: string;
+      method: string | null;
+      referee: string | null;
+      round: number | null;
+      time: string | null;
+    }>`
+      SELECT id, opponent_name, event_name, event_date, event_sherdog_url, result, method, referee, round, time
+      FROM fighter_fight_history
+      WHERE fighter_id = ANY(${fighterIds})
+      ORDER BY event_date DESC NULLS LAST
+    `;
+
+    // Sibling fighter rows above share the exact same Sherdog page, so their
+    // fighter_fight_history rows are identical — de-dupe by the natural
+    // (event, opponent) key rather than showing the same fight twice.
+    const seen = new Set<string>();
+    const dedupedHistory = history.rows.filter((row) => {
+      const key = `${row.event_name}::${row.opponent_name}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+
+    const upcomingEntries: FightHistoryEntry[] = upcoming.rows.map((row) => ({
+      id: `upcoming-${row.id}`,
+      event_id: row.event_id,
+      event_name: row.event_name,
+      event_date: row.event_date,
+      event_sherdog_url: null,
+      opponent_name: row.opponent_name,
+      opponent_image_url: row.opponent_image_url,
+      result: 'upcoming',
+      method: null,
+      referee: null,
+      round: null,
+      time: null,
+    }));
+
+    const historyEntries: FightHistoryEntry[] = dedupedHistory.map((row) => ({
+      id: `history-${row.id}`,
+      event_id: null,
+      event_name: row.event_name,
+      event_date: row.event_date ?? '',
+      event_sherdog_url: row.event_sherdog_url,
+      opponent_name: row.opponent_name,
+      opponent_image_url: null,
+      result: (row.result as FightHistoryEntry['result']) ?? 'draw',
+      method: row.method,
+      referee: row.referee,
+      round: row.round,
+      time: row.time,
+    }));
+
+    return [...upcomingEntries, ...historyEntries];
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch fight history.');
