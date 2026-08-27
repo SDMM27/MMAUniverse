@@ -20,6 +20,7 @@ export type FreshFight = {
   time: string;
   weight_class: string;
   is_main_event: boolean;
+  is_title_fight: boolean;
 };
 
 export type FightSyncPlan = {

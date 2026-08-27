@@ -73,6 +73,7 @@ test('parseEventDetails extracts event metadata and all fights from a finished e
   assert.equal(mainEvent.round, 2);
   assert.equal(mainEvent.time, '4:33');
   assert.equal(mainEvent.is_main_event, true);
+  assert.equal(mainEvent.is_title_fight, false);
 
   const undercardFight = details.fights[1];
   assert.equal(undercardFight.weight_class, 'Welterweight');
@@ -84,6 +85,7 @@ test('parseEventDetails extracts event metadata and all fights from a finished e
   assert.equal(undercardFight.round, 2);
   assert.equal(undercardFight.time, '4:01');
   assert.equal(undercardFight.is_main_event, false);
+  assert.equal(undercardFight.is_title_fight, false);
 });
 
 test('parseEventDetails marks fights as not finished on an upcoming event', () => {
@@ -105,6 +107,28 @@ test('parseEventDetails marks fights as not finished on an upcoming event', () =
   assert.equal(undercardFight.fighter2.result, 'not_finished');
   assert.equal(undercardFight.method, '');
   assert.equal(undercardFight.is_main_event, false);
+});
+
+test('parseEventDetails marks the main event and a title co-main via span.title_fight, independently of is_main_event', () => {
+  const $ = loadFixture('event-page-title-fight.html');
+  const details = parseEventDetails($, BASE_URL);
+
+  assert.equal(details.fights.length, 3);
+
+  const mainEvent = details.fights[0];
+  assert.equal(mainEvent.fighter1.name, 'Ilia Topuria');
+  assert.equal(mainEvent.is_main_event, true);
+  assert.equal(mainEvent.is_title_fight, true);
+
+  const titleCoMain = details.fights[1];
+  assert.equal(titleCoMain.fighter1.name, 'Alexandre Pantoja');
+  assert.equal(titleCoMain.is_main_event, false);
+  assert.equal(titleCoMain.is_title_fight, true);
+
+  const plainUndercard = details.fights[2];
+  assert.equal(plainUndercard.fighter1.name, 'Beneil Dariush');
+  assert.equal(plainUndercard.is_main_event, false);
+  assert.equal(plainUndercard.is_title_fight, false);
 });
 
 test('parseFighterDetails extracts name, weight class, image and win/loss counts', () => {

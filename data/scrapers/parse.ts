@@ -20,6 +20,8 @@ export interface ParsedFight {
   time: string;
   /** True for the single fight parsed from `.fight_card` — Sherdog's featured/main-event bout for the page. */
   is_main_event: boolean;
+  /** True when Sherdog marks the bout with its `span.title_fight` "TITLE FIGHT" badge — independent of is_main_event, since a title bout can also sit as a co-main. */
+  is_title_fight: boolean;
 }
 
 export interface ParsedEventDetails {
@@ -110,6 +112,7 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
     const left = mainCard.find('.fighter.left_side');
     const right = mainCard.find('.fighter.right_side');
     const weightClass = mainCard.find('.versus span.weight_class').first().text().trim();
+    const isTitleFight = mainCard.find('.versus span.title_fight').length > 0;
 
     const fighter1: ParsedFighterSide = {
       name: left.find('h3 span[itemprop="name"]').first().text().trim(),
@@ -128,13 +131,14 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
     const time = resumeCells.length > 4 ? textAfterLabel($, resumeCells.eq(4)) : '';
 
     if (fighter1.name && fighter2.name) {
-      fights.push({ weight_class: weightClass, fighter1, fighter2, method, round, time, is_main_event: true });
+      fights.push({ weight_class: weightClass, fighter1, fighter2, method, round, time, is_main_event: true, is_title_fight: isTitleFight });
     }
   }
 
   $('table.new_table.result tr[itemprop="subEvent"], table.new_table.upcoming tr[itemprop="subEvent"]').each((_, row) => {
     const $row = $(row);
     const weightClass = $row.find('td.text_center span.weight_class').first().text().trim();
+    const isTitleFight = $row.find('td.text_center span.title_fight').length > 0;
     const leftCell = $row.find('td.text_right').first();
     const rightCell = $row.find('td.text_left').first();
 
@@ -156,7 +160,7 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
     const time = trailingCells.eq(1).text().trim();
 
     if (fighter1.name && fighter2.name) {
-      fights.push({ weight_class: weightClass, fighter1, fighter2, method, round, time, is_main_event: false });
+      fights.push({ weight_class: weightClass, fighter1, fighter2, method, round, time, is_main_event: false, is_title_fight: isTitleFight });
     }
   });
 

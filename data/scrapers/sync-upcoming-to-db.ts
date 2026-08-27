@@ -153,6 +153,7 @@ async function main() {
           time: fight.time,
           weight_class: fight.weight_class,
           is_main_event: fight.is_main_event ?? false,
+          is_title_fight: fight.is_title_fight ?? false,
         });
       }
 
@@ -166,14 +167,14 @@ async function main() {
           UPDATE fights SET fighter1_id = ${fight.fighter1_id}, fighter2_id = ${fight.fighter2_id},
             fight_finished = ${fight.fight_finished}, winner_id = ${fight.winner_id},
             method = ${fight.method}, round = ${fight.round}, time = ${fight.time}, weight_class = ${fight.weight_class},
-            is_main_event = ${fight.is_main_event}
+            is_main_event = ${fight.is_main_event}, is_title_fight = ${fight.is_title_fight}
           WHERE id = ${id}
         `;
       }
       for (const fight of plan.toInsert) {
         await sql`
-          INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class, is_main_event)
-          VALUES (${eventId}, ${fight.fighter1_id}, ${fight.fighter2_id}, ${fight.fight_finished}, ${fight.winner_id}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class}, ${fight.is_main_event})
+          INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class, is_main_event, is_title_fight)
+          VALUES (${eventId}, ${fight.fighter1_id}, ${fight.fighter2_id}, ${fight.fight_finished}, ${fight.winner_id}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class}, ${fight.is_main_event}, ${fight.is_title_fight})
         `;
       }
       // A fight genuinely pulled from the card (not just unchanged) is deleted here.
