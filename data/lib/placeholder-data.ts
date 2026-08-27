@@ -59,6 +59,24 @@ const organizations = [
     abbreviation: 'LFA',
     logo_link: 'https://a3.espncdn.com/redesign/assets/img/icons/ESPN-icon-mma.png',
   },
+  {
+    id: 11,
+    name: 'Hexagone MMA',
+    abbreviation: 'HMMA',
+    logo_link: 'https://a3.espncdn.com/redesign/assets/img/icons/ESPN-icon-mma.png',
+  },
+  {
+    id: 12,
+    name: 'Ares Fighting Championship',
+    abbreviation: 'ARES',
+    logo_link: 'https://a3.espncdn.com/redesign/assets/img/icons/ESPN-icon-mma.png',
+  },
+  {
+    id: 13,
+    name: 'Oktagon MMA',
+    abbreviation: 'OKTAGON',
+    logo_link: 'https://a3.espncdn.com/redesign/assets/img/icons/ESPN-icon-mma.png',
+  },
 ];
 
 export { organizations };
