@@ -133,6 +133,7 @@ async function seedFights() {
   `;
 
   await sql`ALTER TABLE fights ADD COLUMN IF NOT EXISTS is_main_event BOOLEAN NOT NULL DEFAULT false;`;
+  await sql`ALTER TABLE fights ADD COLUMN IF NOT EXISTS is_title_fight BOOLEAN NOT NULL DEFAULT false;`;
 
   const insertedFights = [];
   for (const dataset of orgDatasets) {
@@ -155,8 +156,8 @@ async function seedFights() {
       `;
 
       const result = await sql`
-        INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class, is_main_event)
-        VALUES (${eventId}, ${fighter1Id}, ${fighter2Id}, ${fight.fight_finished}, ${winnerId}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class}, ${fight.is_main_event ?? false})
+        INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class, is_main_event, is_title_fight)
+        VALUES (${eventId}, ${fighter1Id}, ${fighter2Id}, ${fight.fight_finished}, ${winnerId}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class}, ${fight.is_main_event ?? false}, ${fight.is_title_fight ?? false})
         ON CONFLICT (id) DO NOTHING;
       `;
       insertedFights.push(result);
