@@ -27,6 +27,8 @@ export interface ScrapedFight {
   // Absent on any org's JSON that hasn't been rescraped since this field was
   // introduced — treat as false, same pattern as ScrapedEvent.start_time.
   is_main_event?: boolean;
+  // Same story: absent until rescraped with the title-fight parser change — treat as false.
+  is_title_fight?: boolean;
 }
 
 export interface ScrapedOrgData {

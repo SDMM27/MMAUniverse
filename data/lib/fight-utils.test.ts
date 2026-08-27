@@ -1,7 +1,7 @@
 // data/lib/fight-utils.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { splitMainEvent } from './fight-utils';
+import { splitMainEvent, getScheduledRounds } from './fight-utils';
 
 type FightStub = { id: number; is_main_event: boolean };
 
@@ -50,4 +50,13 @@ test('splitMainEvent excludes every flagged fight from rest, even if more than o
     rest.map((f) => f.id),
     [2],
   );
+});
+
+test('getScheduledRounds returns 5 for the main event and 3 for every other fight', () => {
+  assert.equal(getScheduledRounds({ is_main_event: true, is_title_fight: false }), 5);
+  assert.equal(getScheduledRounds({ is_main_event: false, is_title_fight: false }), 3);
+});
+
+test('getScheduledRounds returns 5 for a title fight even when it is not the main event (a title co-main)', () => {
+  assert.equal(getScheduledRounds({ is_main_event: false, is_title_fight: true }), 5);
 });
