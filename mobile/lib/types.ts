@@ -49,22 +49,21 @@ export type FightWithFighters = {
   fighter2: Fighter | null;
 };
 
+// Mirrors data/lib/definitions.ts's FightHistoryEntry on the web side — see
+// that file's comment for how upcoming vs. completed fights are sourced.
 export type FightHistoryEntry = {
-  id: number;
-  event_id: number;
-  fighter1_id: number;
-  fighter2_id: number;
-  fight_finished: boolean;
-  winner_id: number | null;
-  method: string;
-  round: number;
-  time: string;
-  weight_class: string;
+  id: string;
+  event_id: number | null;
   event_name: string;
   event_date: string;
+  event_sherdog_url: string | null;
   opponent_name: string | null;
   opponent_image_url: string | null;
-  result: 'win' | 'loss' | 'draw' | 'upcoming';
+  result: 'win' | 'loss' | 'draw' | 'nc' | 'upcoming';
+  method: string | null;
+  referee: string | null;
+  round: number | null;
+  time: string | null;
 };
 
 export type FighterStats = {

@@ -42,3 +42,8 @@ jobs:
         run: npx tsx data/scrapers/sync-upcoming-to-db.ts
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Sync fighter Sherdog history to Neon
+        run: npx tsx data/scrapers/sync-fighter-history.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}

@@ -4,11 +4,12 @@ import { getFighter } from '../../../lib/api';
 import { useApi } from '../../../lib/use-api';
 import { Loading, ErrorState, EmptyState } from '../../../components/state';
 
-const RESULT_LABEL: Record<string, string> = { win: 'V', loss: 'D', draw: 'N', upcoming: 'À venir' };
+const RESULT_LABEL: Record<string, string> = { win: 'V', loss: 'D', draw: 'N', nc: 'SD', upcoming: 'À venir' };
 const RESULT_COLOR: Record<string, string> = {
   win: 'text-accent',
   loss: 'text-ink-secondary',
   draw: 'text-ink-secondary',
+  nc: 'text-ink-secondary',
   upcoming: 'text-ink-secondary',
 };
 

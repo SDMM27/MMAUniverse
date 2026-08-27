@@ -60,13 +60,25 @@ export type FightResultWithContext = FightWithFighters & {
   organization_abbreviation: string;
 };
 
-export type FightHistoryEntry = Omit<Fight, 'winner_id'> & {
-  winner_id: number | null;
+// Merges two sources — see fetchFighterFightHistory in data/lib/data.ts:
+// upcoming (not-yet-fought) bouts still come from our own `fights`/`events`
+// tables (event_id set, event_sherdog_url null); every completed fight comes
+// from `fighter_fight_history`, scraped straight off the fighter's own
+// Sherdog page (event_id null, event_sherdog_url set — Sherdog is the source
+// of truth there, not necessarily one of the orgs/events we track).
+export type FightHistoryEntry = {
+  id: string;
+  event_id: number | null;
   event_name: string;
   event_date: string;
+  event_sherdog_url: string | null;
   opponent_name: string | null;
   opponent_image_url: string | null;
-  result: 'win' | 'loss' | 'draw' | 'upcoming';
+  result: 'win' | 'loss' | 'draw' | 'nc' | 'upcoming';
+  method: string | null;
+  referee: string | null;
+  round: number | null;
+  time: string | null;
 };
 
 export type FighterStats = {

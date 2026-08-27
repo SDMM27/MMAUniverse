@@ -12,6 +12,30 @@ export interface ScrapedFighter {
   weight_class: string;
   record: string; // 'W-L-D'
   ranking: number;
+  // Absent on any fighter scraped before this field was introduced (same
+  // "absent until rescraped" pattern as ScrapedEvent.start_time above).
+  sherdog_url?: string;
+  // The fighter's complete career record as scraped straight from their own
+  // Sherdog page's "Fight History" table — every organization Sherdog knows
+  // about, not just the ones we track. This is what backfills history for a
+  // fighter who just transferred into a tracked org from one we've never
+  // scraped (e.g. a KSW veteran signed by the UFC).
+  fight_history?: ScrapedFightHistoryEntry[];
+}
+
+export interface ScrapedFightHistoryEntry {
+  opponent_name: string;
+  opponent_sherdog_url: string;
+  event_name: string;
+  event_sherdog_url: string;
+  date: string; // ISO 'YYYY-MM-DD', or '' if Sherdog's date text didn't parse
+  // Sherdog's own lowercase label: 'win' | 'loss' | 'draw' | 'nc' — kept as
+  // raw text rather than a fixed union, see ParsedFighterHistoryEntry.
+  result: string;
+  method: string;
+  referee: string;
+  round: number;
+  time: string;
 }
 
 export interface ScrapedFight {

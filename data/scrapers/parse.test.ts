@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
-import { parseEventTableUrls, parseOlderEventsUrl, parseEventDetails, parseFighterDetails } from './parse';
+import { parseEventTableUrls, parseOlderEventsUrl, parseEventDetails, parseFighterDetails, parseFighterFightHistory } from './parse';
 
 // package.json has "type": "module", so this file runs as native ESM under
 // tsx --test — __dirname isn't defined there, unlike the plan's CJS-style snippet.
@@ -141,4 +141,40 @@ test('parseFighterDetails extracts name, weight class, image and win/loss counts
   assert.equal(details.wins, 33);
   assert.equal(details.losses, 12);
   assert.equal(details.draws, 0);
+});
+
+test('parseFighterFightHistory extracts every completed fight from the Fight History table', () => {
+  const $ = loadFixture('fighter-page.html');
+  const history = parseFighterFightHistory($);
+
+  assert.equal(history.length, 3);
+
+  const win = history[0];
+  assert.equal(win.result, 'win');
+  assert.equal(win.opponentName, 'Ben Saunders');
+  assert.equal(win.opponentSherdogUrl, 'https://www.sherdog.com/fighter/Ben-Saunders-6153');
+  assert.equal(win.eventName, 'Bellator 100');
+  assert.equal(win.eventSherdogUrl, 'https://www.sherdog.com/events/Bellator-100-Lima-vs-Saunders-58221');
+  assert.equal(win.date, '2013-09-20');
+  assert.equal(win.method, 'KO (Head Kick)');
+  assert.equal(win.referee, 'Referee Name');
+  assert.equal(win.round, 2);
+  assert.equal(win.time, '4:33');
+
+  const loss = history[1];
+  assert.equal(loss.result, 'loss');
+  assert.equal(loss.opponentName, 'Rory MacDonald');
+  assert.equal(loss.eventName, 'Bellator 192 - MacDonald vs. Lima');
+  assert.equal(loss.method, 'Decision (Unanimous)');
+
+  const draw = history[2];
+  assert.equal(draw.result, 'draw');
+  assert.equal(draw.referee, 'N/A');
+});
+
+test('parseFighterDetails includes fightHistory alongside the bio fields', () => {
+  const $ = loadFixture('fighter-page.html');
+  const details = parseFighterDetails($);
+
+  assert.equal(details.fightHistory.length, 3);
 });
