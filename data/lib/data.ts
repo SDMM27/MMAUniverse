@@ -281,13 +281,14 @@ export async function fetchFighterFightHistory(fighterId: string) {
       event_id: number;
       event_name: string;
       event_date: string;
+      opponent_id: number | null;
       opponent_name: string | null;
       opponent_image_url: string | null;
     }>`
       SELECT
         f.id, f.event_id,
         e.name AS event_name, e.date AS event_date,
-        opponent.name AS opponent_name, opponent.image_url AS opponent_image_url
+        opponent.id AS opponent_id, opponent.name AS opponent_name, opponent.image_url AS opponent_image_url
       FROM fights f
       JOIN events e ON f.event_id = e.id
       LEFT JOIN fighters opponent ON opponent.id = (
@@ -301,10 +302,12 @@ export async function fetchFighterFightHistory(fighterId: string) {
     const history = await sql<{
       id: number;
       opponent_name: string;
+      opponent_sherdog_url: string | null;
       event_name: string;
       event_date: string | null;
       event_sherdog_url: string | null;
       event_id: number | null;
+      opponent_id: number | null;
       result: string;
       method: string | null;
       referee: string | null;
@@ -312,11 +315,16 @@ export async function fetchFighterFightHistory(fighterId: string) {
       time: string | null;
     }>`
       SELECT
-        fhh.id, fhh.opponent_name, fhh.event_name, fhh.event_date, fhh.event_sherdog_url,
+        fhh.id, fhh.opponent_name, fhh.opponent_sherdog_url, fhh.event_name, fhh.event_date, fhh.event_sherdog_url,
         fhh.result, fhh.method, fhh.referee, fhh.round, fhh.time,
         (
           SELECT e.id FROM events e WHERE e.name = fhh.event_name ORDER BY e.id ASC LIMIT 1
-        ) AS event_id
+        ) AS event_id,
+        (
+          SELECT fi.id FROM fighters fi
+          WHERE fhh.opponent_sherdog_url IS NOT NULL AND fi.sherdog_url = fhh.opponent_sherdog_url
+          ORDER BY fi.id ASC LIMIT 1
+        ) AS opponent_id
       FROM fighter_fight_history fhh
       WHERE fhh.fighter_id = ANY(${fighterIds})
       ORDER BY fhh.event_date DESC NULLS LAST
@@ -339,8 +347,10 @@ export async function fetchFighterFightHistory(fighterId: string) {
       event_name: row.event_name,
       event_date: row.event_date,
       event_sherdog_url: null,
+      opponent_id: row.opponent_id,
       opponent_name: row.opponent_name,
       opponent_image_url: row.opponent_image_url,
+      opponent_sherdog_url: null,
       result: 'upcoming',
       method: null,
       referee: null,
@@ -359,8 +369,13 @@ export async function fetchFighterFightHistory(fighterId: string) {
       event_name: row.event_name,
       event_date: row.event_date ?? '',
       event_sherdog_url: row.event_sherdog_url,
+      // Matched by opponent_sherdog_url against fighters.sherdog_url — see
+      // the FightHistoryEntry doc comment in definitions.ts for why this is
+      // preferred over matching on opponent_name.
+      opponent_id: row.opponent_id,
       opponent_name: row.opponent_name,
       opponent_image_url: null,
+      opponent_sherdog_url: row.opponent_sherdog_url,
       result: (row.result as FightHistoryEntry['result']) ?? 'draw',
       method: row.method,
       referee: row.referee,
