@@ -52272,6 +52272,100 @@
           "time": "2:05"
         }
       ]
+    },
+    {
+      "name": "Lee Hammond",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1772726272leehamond.jpg",
+      "weight_class": "Lightweight",
+      "record": "6-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Lee-Hammond-212407",
+      "fight_history": [
+        {
+          "opponent_name": "Nicolas Santos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolas-Santos-457685",
+          "event_name": "WOW 27 - Madrid",
+          "event_sherdog_url": "https://www.sherdog.com/events/WOW-27-Madrid-111031",
+          "date": "2026-03-07",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Carlos Nunes",
+          "round": 1,
+          "time": "2:09"
+        },
+        {
+          "opponent_name": "Ivan Castillo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Castillo-85758",
+          "event_name": "Combate Global - Ireland vs. Mexico",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Ireland-vs-Mexico-99959",
+          "date": "2023-12-17",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Marcos Perez",
+          "round": 2,
+          "time": "1:37"
+        },
+        {
+          "opponent_name": "Nikola Ivanovic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nikola-Ivanovic-268925",
+          "event_name": "Eire FC 1 - Eire Fighting Championship 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eire-FC-1-Eire-Fighting-Championship-1-95211",
+          "date": "2022-12-02",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Karomatullo Sufiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Karomatullo-Sufiev-362025",
+          "event_name": "SLM 3 - Super League MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/SLM-3-Super-League-MMA-93501",
+          "date": "2022-06-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Vaclav Pribyl",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Bogdan Blajan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bogdan-Blajan-301881",
+          "event_name": "HFL 3 - Heroes 3: Battle In Bucharest",
+          "event_sherdog_url": "https://www.sherdog.com/events/HFL-3-Heroes-3-Battle-In-Bucharest-92626",
+          "date": "2022-03-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Yamato Zaharia",
+          "round": 1,
+          "time": "1:44"
+        },
+        {
+          "opponent_name": "Jamie Hay",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jamie-Hay-67535",
+          "event_name": "Bellator 275 - Mousasi vs. Vanderford",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bellator-275-Mousasi-vs-Vanderford-91509",
+          "date": "2022-02-25",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Bryan Miner",
+          "round": 1,
+          "time": "3:32"
+        },
+        {
+          "opponent_name": "Ionut Brostic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ionut-Brostic-188323",
+          "event_name": "HFL 2 - Heroes 2: Battle in the Pandemic",
+          "event_sherdog_url": "https://www.sherdog.com/events/HFL-2-Heroes-2-Battle-in-the-Pandemic-91274",
+          "date": "2021-11-19",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Yamato Zaharia",
+          "round": 1,
+          "time": "3:50"
+        }
+      ]
     }
   ],
   "fights": [
@@ -91823,6 +91917,19 @@
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
       "fighter1_name": "Conor McCarthy",
       "fighter2_name": "Torpal Merjoev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Lee Hammond",
+      "fighter2_name": "Christian Soda",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

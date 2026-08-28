@@ -764,7 +764,7 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/25970"
     },
     {
-      "name": "KSW 121 - De Fries vs. Vojcak 2",
+      "name": "KSW 121 - Vojcak vs. Wojcik",
       "date": "2026-09-19",
       "start_time": "2026-09-19T00:00:00+00:00",
       "event_location": "Home Credit Arena, Liberec, Czech Republic",
@@ -164754,6 +164754,40 @@
           "time": "1:22"
         }
       ]
+    },
+    {
+      "name": "Szymon Kasprzynski",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1787929922Screenshot_2026-08-28_111143.png",
+      "weight_class": "Middleweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Szymon-Kasprzynski-420055",
+      "fight_history": [
+        {
+          "opponent_name": "Denys Pelykh",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Denys-Pelykh-436146",
+          "event_name": "Hybrid MMA 9 - Nowe Rozdanie",
+          "event_sherdog_url": "https://www.sherdog.com/events/Hybrid-MMA-9-Nowe-Rozdanie-109482",
+          "date": "2025-09-13",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "Piotr Szyba",
+          "round": 1,
+          "time": "1:49"
+        },
+        {
+          "opponent_name": "Ivan Curak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Curak-79880",
+          "event_name": "Lewy Prosty - Fight Night 6: Hrvatska vs. Poljska",
+          "event_sherdog_url": "https://www.sherdog.com/events/Lewy-Prosty-Fight-Night-6-Hrvatska-vs-Poljska-103546",
+          "date": "2024-07-06",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Piotr Jarosz",
+          "round": 1,
+          "time": "1:58"
+        }
+      ]
     }
   ],
   "fights": [
@@ -177056,8 +177090,8 @@
       "weight_class": ""
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
-      "fighter1_name": "Phil De Fries",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
+      "fighter1_name": "Marcin Wojcik",
       "fighter2_name": "Stefan Vojcak",
       "fight_finished": false,
       "winner_name": null,
@@ -177069,7 +177103,7 @@
       "is_title_fight": true
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Michal Michalski",
       "fighter2_name": "Radoslaw Paczuski",
       "fight_finished": false,
@@ -177082,7 +177116,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Lukasz Charzewski",
       "fighter2_name": "Josef Stummer",
       "fight_finished": false,
@@ -177095,7 +177129,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Muslim Tulshaev",
       "fighter2_name": "Kacper Koziorzebski",
       "fight_finished": false,
@@ -177108,7 +177142,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Leo Brichta",
       "fighter2_name": "Kacper Formela",
       "fight_finished": false,
@@ -177121,7 +177155,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Hanka Gelnarova",
       "fighter2_name": "Malgorzata Popowicz",
       "fight_finished": false,
@@ -177134,20 +177168,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Tagir Machmudov",
-      "fighter2_name": "Djibril Nsenga",
+      "fighter2_name": "Szymon Kasprzynski",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight",
+      "weight_class": "174lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Adrian Dudek",
       "fighter2_name": "Borys Dzikowski",
       "fight_finished": false,
@@ -177160,7 +177194,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 121 - De Fries vs. Vojcak 2",
+      "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Dominik Zadora",
       "fighter2_name": "Samuel Bily",
       "fight_finished": false,
@@ -177208,6 +177242,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "fighter1_name": "Laid Zerhouni",
+      "fighter2_name": "Andrzej Grzebyk",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     },

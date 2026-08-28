@@ -423611,6 +423611,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "ACA 208 - Kerimov vs. Podlesnyi",
+      "fighter1_name": "Kurban Taygibov",
+      "fighter2_name": "Dzhambulat Selimkhanov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "ACA 209 - Frolov vs. Odilov",
       "fighter1_name": "Faridun Odilov",
       "fighter2_name": "Artem Frolov",
