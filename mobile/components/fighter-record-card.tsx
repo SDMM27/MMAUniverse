@@ -51,7 +51,7 @@ function RecordColumn({
     <View className="flex-1">
       <View className="mb-2 flex-row items-center gap-2">
         <View className={`rounded px-2 py-0.5 ${badgeBg}`}>
-          <Text className={`font-display text-xs uppercase tracking-wide ${badgeText}`}>{label}</Text>
+          <Text className={`font-display text-xs font-bold uppercase tracking-wide ${badgeText}`}>{label}</Text>
         </View>
         <Text className="font-display text-xl text-ink-primary">{total}</Text>
       </View>
