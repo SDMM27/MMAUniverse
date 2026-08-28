@@ -64,8 +64,12 @@ export type FightResultWithContext = FightWithFighters & {
 // upcoming (not-yet-fought) bouts still come from our own `fights`/`events`
 // tables (event_id set, event_sherdog_url null); every completed fight comes
 // from `fighter_fight_history`, scraped straight off the fighter's own
-// Sherdog page (event_id null, event_sherdog_url set — Sherdog is the source
-// of truth there, not necessarily one of the orgs/events we track).
+// Sherdog page (event_sherdog_url always set — Sherdog is the source of
+// truth there, not necessarily one of the orgs/events we track). event_id is
+// only populated when that row's event_name also matches one of our own
+// `events` rows (e.g. it was synced in while upcoming and has since
+// happened) — the UI prefers that internal link and falls back to
+// event_sherdog_url otherwise.
 export type FightHistoryEntry = {
   id: string;
   event_id: number | null;
