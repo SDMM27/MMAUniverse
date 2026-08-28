@@ -1976,13 +1976,13 @@
   "fights": [
     {
       "event_name": "One Championship - One Friday Fights 168",
-      "fighter1_name": "Geun Ho Son",
-      "fighter2_name": "Ryoto Nishiyama",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Ryoto Nishiyama",
+      "fighter2_name": "Geun Ho Son",
+      "fight_finished": true,
+      "winner_name": "Ryoto Nishiyama",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "4:36",
       "weight_class": "Bantamweight",
       "is_main_event": true,
       "is_title_fight": false

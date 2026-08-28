@@ -406585,6 +406585,482 @@
       "weight_class": "Middleweight",
       "record": "0-0-0",
       "ranking": 0
+    },
+    {
+      "name": "Paul Capaldo",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1630333779Paul_Capaldo.jpg",
+      "weight_class": "Featherweight",
+      "record": "8-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Paul-Capaldo-225993",
+      "fight_history": [
+        {
+          "opponent_name": "Tyler Listi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tyler-Listi-154691",
+          "event_name": "FW - FightWorld 42",
+          "event_sherdog_url": "https://www.sherdog.com/events/FW-FightWorld-42-110367",
+          "date": "2025-12-20",
+          "result": "win",
+          "method": "TKO (Strikes)",
+          "referee": "",
+          "round": 1,
+          "time": "1:43"
+        },
+        {
+          "opponent_name": "Elijah Harris",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elijah-Harris-175451",
+          "event_name": "CFFC 120 - Cage Fury Fighting Championships 120: Ndregjoni vs. Araujo",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-120-Cage-Fury-Fighting-Championships-120-Ndregjoni-vs-Araujo-97458",
+          "date": "2023-06-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Gasper Oliver",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jose Perez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jose-Perez-250557",
+          "event_name": "CFFC 105 - Cage Fury Fighting Championships 105",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-105-Cage-Fury-Fighting-Championships-105-91736",
+          "date": "2022-01-29",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "David Osaghae",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Chris Vasil",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chris-Vasil-233269",
+          "event_name": "CFFC 95 - Cage Fury Fighting Championships 95",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-95-Cage-Fury-Fighting-Championships-95-88901",
+          "date": "2021-04-02",
+          "result": "win",
+          "method": "KO (Spinning Wheel Kick)",
+          "referee": "Bill Bookwalter",
+          "round": 3,
+          "time": "0:21"
+        },
+        {
+          "opponent_name": "Jamal Johnson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jamal-Johnson-144861",
+          "event_name": "CFFC 83 - Cage Fury Fighting Championships 83",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-83-Cage-Fury-Fighting-Championships-83-87226",
+          "date": "2020-08-13",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Bill Bookwalter",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mark Trader",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mark-Trader-267615",
+          "event_name": "CFFC 79 - Cage Fury Fighting Championships 79",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-79-Cage-Fury-Fighting-Championships-79-81643",
+          "date": "2019-11-16",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Keith Peterson",
+          "round": 3,
+          "time": "1:04"
+        },
+        {
+          "opponent_name": "Lashawn Alcocks",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lashawn-Alcocks-175611",
+          "event_name": "CFFC 77 - Cage Fury Fighting Championships 77",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-77-Cage-Fury-Fighting-Championships-77-78719",
+          "date": "2019-08-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Gasper Oliver",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Tyler Mathison",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tyler-Mathison-70435",
+          "event_name": "CFFC 72 - Brady vs. Abdul-Hakim",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-72-Brady-vs-AbdulHakim-74051",
+          "date": "2019-02-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Liam Kerrigan",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Bobby Malcolm",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bobby-Malcolm-152969",
+          "event_name": "CFFC 71 - Cage Fury Fighting Championships 71",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-71-Cage-Fury-Fighting-Championships-71-67845",
+          "date": "2018-12-14",
+          "result": "win",
+          "method": "KO (Head Kick)",
+          "referee": "Gasper Oliver",
+          "round": 2,
+          "time": "3:04"
+        }
+      ]
+    },
+    {
+      "name": "Devan Worth",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "5-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Devan-Worth-385293",
+      "fight_history": [
+        {
+          "opponent_name": "Dominic Ducharme",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dominic-Ducharme-408953",
+          "event_name": "ROC 89 - Ring of Combat 89",
+          "event_sherdog_url": "https://www.sherdog.com/events/ROC-89-Ring-of-Combat-89-111885",
+          "date": "2026-03-06",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Vitor Ribeiro",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Alex Brown",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Brown-289887",
+          "event_name": "ROC 86 - Ring of Combat 86",
+          "event_sherdog_url": "https://www.sherdog.com/events/ROC-86-Ring-of-Combat-86-103771",
+          "date": "2025-06-13",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Giovanna Scano",
+          "round": 1,
+          "time": "0:46"
+        },
+        {
+          "opponent_name": "David Bergida",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Bergida-408805",
+          "event_name": "Flex Fight Series Vol. 43 - Let's Just Fight",
+          "event_sherdog_url": "https://www.sherdog.com/events/Flex-Fight-Series-Vol-43-Lets-Just-Fight-106905",
+          "date": "2025-02-22",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "2:23"
+        },
+        {
+          "opponent_name": "Ryan Gerena",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Gerena-286235",
+          "event_name": "Flex Fight Series Vol. 39 - Colosseum",
+          "event_sherdog_url": "https://www.sherdog.com/events/Flex-Fight-Series-Vol-39-Colosseum-104472",
+          "date": "2024-09-28",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Brian Topp",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brian-Topp-384601",
+          "event_name": "Flex Fight Series Vol. 32 - The Saloon Slammer",
+          "event_sherdog_url": "https://www.sherdog.com/events/Flex-Fight-Series-Vol-32-The-Saloon-Slammer-101294",
+          "date": "2024-02-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Michael Walter",
+          "round": 1,
+          "time": "0:45"
+        }
+      ]
+    },
+    {
+      "name": "Thomas Blackorby",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "5-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Thomas-Blackorby-382959",
+      "fight_history": [
+        {
+          "opponent_name": "Kyron Bowen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyron-Bowen-166817",
+          "event_name": "Caged Aggression 40 - The Big Show Night 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Caged-Aggression-40-The-Big-Show-Night-1-109257",
+          "date": "2025-10-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Bruce Allen",
+          "round": 2,
+          "time": "2:31"
+        },
+        {
+          "opponent_name": "Craig Willingham",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Craig-Willingham-284027",
+          "event_name": "Elite Fight Night - EFN 27: Redemption",
+          "event_sherdog_url": "https://www.sherdog.com/events/Elite-Fight-Night-EFN-27-Redemption-108318",
+          "date": "2025-06-14",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "4:43"
+        },
+        {
+          "opponent_name": "Will Gibson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Will-Gibson-383301",
+          "event_name": "Caged Aggression 39 - The Triad: Rising Warriors",
+          "event_sherdog_url": "https://www.sherdog.com/events/Caged-Aggression-39-The-Triad-Rising-Warriors-106213",
+          "date": "2025-03-21",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Bruce Allen",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Shawn Brooks",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shawn-Brooks-310905",
+          "event_name": "Caged Aggression 38 - Retaliation 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Caged-Aggression-38-Retaliation-1-102747",
+          "date": "2024-10-11",
+          "result": "win",
+          "method": "TKO (Leg Kicks)",
+          "referee": "Josh Stewart",
+          "round": 3,
+          "time": "0:27"
+        },
+        {
+          "opponent_name": "Owen Tschantz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Owen-Tschantz-394311",
+          "event_name": "Caged Aggression 37 - Path to Glory Night 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Caged-Aggression-37-Path-to-Glory-Night-1-101890",
+          "date": "2024-03-22",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Josh Stewart",
+          "round": 2,
+          "time": "3:00"
+        }
+      ]
+    },
+    {
+      "name": "Maikel Reinoso",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1784769971Maikel_Reinoso.jpg",
+      "weight_class": "Flyweight",
+      "record": "6-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Maikel-Reinoso-221369",
+      "fight_history": [
+        {
+          "opponent_name": "Joe Poirier",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joe-Poirier-340831",
+          "event_name": "Cage Titans FC - Cage Titans 76",
+          "event_sherdog_url": "https://www.sherdog.com/events/Cage-Titans-FC-Cage-Titans-76-112802",
+          "date": "2026-05-09",
+          "result": "win",
+          "method": "TKO (Corner Stoppage)",
+          "referee": "Tommy Santana",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Alejandro Alcazar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alejandro-Alcazar-440586",
+          "event_name": "SFC 33 - Striker Fighting Championship 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFC-33-Striker-Fighting-Championship-33-99698",
+          "date": "2023-07-01",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Alex Leme",
+          "round": 1,
+          "time": "2:13"
+        },
+        {
+          "opponent_name": "Danny Lincango",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Danny-Lincango-242347",
+          "event_name": "AWKA 9 - AWKA Championship 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/AWKA-9-AWKA-Championship-9-96690",
+          "date": "2023-02-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Wuillinton Guaicha",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jean Tejena",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jean-Tejena-300375",
+          "event_name": "Pasaje Underground Combat 5 - Parejo vs. Torres",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pasaje-Underground-Combat-5-Parejo-vs-Torres-95761",
+          "date": "2022-11-19",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Wuilinton Guaicha",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jonathan Camacas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jonathan-Camacas-378331",
+          "event_name": "Troncal Fight League 1 - Zona de Guerra",
+          "event_sherdog_url": "https://www.sherdog.com/events/Troncal-Fight-League-1-Zona-de-Guerra-92130",
+          "date": "2022-02-19",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Mauricio Naranjo",
+          "round": 2,
+          "time": "1:28"
+        },
+        {
+          "opponent_name": "Brayan Leiva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brayan-Leiva-221371",
+          "event_name": "Latin American Championship - The One",
+          "event_sherdog_url": "https://www.sherdog.com/events/Latin-American-Championship-The-One-51627",
+          "date": "2016-02-20",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Manolo Sosa",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Austin Halik",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Austin-Halik-389771",
+      "fight_history": [
+        {
+          "opponent_name": "Asliddin Jumanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Asliddin-Jumanov-469257",
+          "event_name": "SFL 3 - Stealth Fighters League",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFL-3-Stealth-Fighters-League-109283",
+          "date": "2025-08-30",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Gustavo Granados",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gustavo-Granados-356801",
+          "event_name": "Flex Fight Series Vol. 44 - MMA Madness",
+          "event_sherdog_url": "https://www.sherdog.com/events/Flex-Fight-Series-Vol-44-MMA-Madness-107144",
+          "date": "2025-03-22",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Keith Peterson",
+          "round": 2,
+          "time": "4:45"
+        }
+      ]
+    },
+    {
+      "name": "Xavier Zeruth",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Xavier-Zeruth-479019",
+      "fight_history": [
+        {
+          "opponent_name": "Antonio Viscomi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Antonio-Viscomi-449125",
+          "event_name": "Full Contact Promotions - Rage in the Cage 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/Full-Contact-Promotions-Rage-in-the-Cage-33-111237",
+          "date": "2026-03-21",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Josh Amato",
+          "round": 1,
+          "time": "2:46"
+        },
+        {
+          "opponent_name": "Kenny Correa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kenny-Correa-416773",
+          "event_name": "Full Contact Promotions - Rage in the Cage 32",
+          "event_sherdog_url": "https://www.sherdog.com/events/Full-Contact-Promotions-Rage-in-the-Cage-32-110731",
+          "date": "2025-12-13",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Todd Anderson",
+          "round": 2,
+          "time": "2:27"
+        },
+        {
+          "opponent_name": "Martin McCooligan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Martin-McCooligan-411120",
+          "event_name": "Full Contact Promotions - Rage in the Cage 31",
+          "event_sherdog_url": "https://www.sherdog.com/events/Full-Contact-Promotions-Rage-in-the-Cage-31-109849",
+          "date": "2025-10-11",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Todd Anderson",
+          "round": 1,
+          "time": "2:56"
+        },
+        {
+          "opponent_name": "Chandler Moody",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chandler-Moody-444444",
+          "event_name": "Full Contact Promotions - Rage in the Cage 29",
+          "event_sherdog_url": "https://www.sherdog.com/events/Full-Contact-Promotions-Rage-in-the-Cage-29-107973",
+          "date": "2025-05-31",
+          "result": "win",
+          "method": "TKO (Injury)",
+          "referee": "Todd Anderson",
+          "round": 3,
+          "time": "0:32"
+        }
+      ]
+    },
+    {
+      "name": "Luis Melendez",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1773373880Screenshot_2026-03-12_235034.jpg",
+      "weight_class": "Middleweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Luis-Melendez-393681",
+      "fight_history": [
+        {
+          "opponent_name": "Jairo Villasenor",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jairo-Villasenor-382265",
+          "event_name": "Combate Global 97 - Enriquez vs. McBride",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-97-Enriquez-vs-McBride-111947",
+          "date": "2026-03-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Matheus Moraes",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230905020315_1DX_5141.JPG",
+      "weight_class": "Heavyweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Matheus-Moraes-353735",
+      "fight_history": [
+        {
+          "opponent_name": "Paea Tukuafu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paea-Tukuafu-440173",
+          "event_name": "LXF 16 - Lights Out Xtreme Fighting 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/LXF-16-Lights-Out-Xtreme-Fighting-16-102795",
+          "date": "2024-05-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "0:51"
+        }
+      ]
     }
   ],
   "fights": [
@@ -435192,7 +435668,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight",
+      "weight_class": "152lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -435237,14 +435713,14 @@
     },
     {
       "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Rakim Talley",
-      "fighter2_name": "Darius Parker",
+      "fighter1_name": "Darius Parker",
+      "fighter2_name": "Rakim Talley",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Catchweight",
+      "weight_class": "195lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -435270,7 +435746,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "160lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -435715,6 +436191,110 @@
       "weight_class": "Middleweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Joe Giannetti",
+      "fighter2_name": "Ednilson Barros Santos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Paul Capaldo",
+      "fighter2_name": "Sebastian Ruiz",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Devan Worth",
+      "fighter2_name": "Thomas Blackorby",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Maikel Reinoso",
+      "fighter2_name": "Oscar Jurado Sanchez",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Hilarie Rose",
+      "fighter2_name": "Bruna Ellen",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Austin Halik",
+      "fighter2_name": "Xavier Zeruth",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Luis Melendez",
+      "fighter2_name": "Elton Dedaj",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Austin Ross",
+      "fighter2_name": "Matheus Moraes",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }
