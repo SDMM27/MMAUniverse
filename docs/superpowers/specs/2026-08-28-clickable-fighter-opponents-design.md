@@ -49,3 +49,7 @@ Résolution de `opponent_id`, par ordre de priorité :
 - Requête manuelle contre la base live : un combat historique dont l'adversaire est un fighter tracké (même `sherdog_url`) résout bien un `opponent_id` non nul.
 - Un combat historique dont l'adversaire n'est pas tracké résout `opponent_id: null` et conserve son `opponent_sherdog_url`.
 - Rendu de la fiche combattant : vérifier visuellement (ou via `read_page`) que les noms d'adversaires sont bien des liens, internes ou externes selon le cas.
+
+## Statut
+
+Implémenté — voir `docs/superpowers/plans/2026-08-28-clickable-fighter-opponents.md`.
