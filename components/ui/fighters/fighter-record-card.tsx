@@ -59,9 +59,12 @@ function RecordColumn({
   );
 }
 
+// No outer border/background of its own — it's embedded straight into the
+// fighter page's hero card (app/fighters/[slug]/page.tsx), which already
+// supplies that container.
 export default function FighterRecordCard({ stats }: { stats: FighterStats }) {
   return (
-    <div className="rounded-lg border border-base-border bg-base-card p-4">
+    <div>
       {stats.draws > 0 && (
         <p className="mb-3 text-xs text-ink-secondary">
           {stats.wins}-{stats.losses} · {stats.draws} nul{stats.draws > 1 ? 's' : ''}
