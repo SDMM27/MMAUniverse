@@ -66,13 +66,18 @@ export type FightHistoryEntry = {
   time: string | null;
 };
 
+export type MethodBreakdown = {
+  koTko: number;
+  submission: number;
+  decision: number;
+};
+
 export type FighterStats = {
   wins: number;
   losses: number;
   draws: number;
-  ko: number;
-  submission: number;
-  decision: number;
+  winMethods: MethodBreakdown;
+  lossMethods: MethodBreakdown;
 };
 
 export type NextEventPayload = {

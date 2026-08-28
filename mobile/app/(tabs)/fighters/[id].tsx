@@ -3,6 +3,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { getFighter } from '../../../lib/api';
 import { useApi } from '../../../lib/use-api';
 import { Loading, ErrorState, EmptyState } from '../../../components/state';
+import FighterRecordCard from '../../../components/fighter-record-card';
 
 const RESULT_LABEL: Record<string, string> = { win: 'V', loss: 'D', draw: 'N', nc: 'SD', upcoming: 'À venir' };
 const RESULT_COLOR: Record<string, string> = {
@@ -40,14 +41,7 @@ export default function FighterDetailScreen() {
               <Text className="text-sm text-ink-secondary">{fighter.record}</Text>
             </View>
           </View>
-          <View className="flex-row justify-between rounded-lg border border-base-border bg-base-card p-3">
-            <Text className="text-ink-secondary">V {stats.wins}</Text>
-            <Text className="text-ink-secondary">D {stats.losses}</Text>
-            <Text className="text-ink-secondary">N {stats.draws}</Text>
-            <Text className="text-ink-secondary">KO {stats.ko}</Text>
-            <Text className="text-ink-secondary">Sub {stats.submission}</Text>
-            <Text className="text-ink-secondary">Déc {stats.decision}</Text>
-          </View>
+          <FighterRecordCard stats={stats} />
           <Text className="font-display text-lg uppercase text-ink-primary">Historique</Text>
         </View>
       }
