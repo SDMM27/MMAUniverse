@@ -27,18 +27,32 @@ export default function FighterHistoryList({ fights }: { fights: FightHistoryEnt
         <ul className="flex flex-col gap-2">
           {upcoming.map((fight) => (
             <li key={fight.id}>
-              <Link
-                href={`/events/${fight.event_id}`}
-                className="flex items-center justify-between rounded-lg border border-accent bg-base-card p-3 hover:border-accent"
-              >
+              <div className="flex items-center justify-between rounded-lg border border-accent bg-base-card p-3 hover:border-accent">
                 <div>
-                  <p className="text-sm text-ink-primary">vs {fight.opponent_name ?? 'Adversaire inconnu'}</p>
-                  <p className="text-xs text-ink-secondary">
-                    {fight.event_name} · {fight.event_date}
+                  <p className="text-sm text-ink-primary">
+                    vs{' '}
+                    {fight.opponent_id ? (
+                      <Link
+                        href={`/fighters/${fight.opponent_id}`}
+                        className="text-ink-primary underline-offset-2 hover:underline"
+                      >
+                        {fight.opponent_name ?? 'Adversaire inconnu'}
+                      </Link>
+                    ) : (
+                      (fight.opponent_name ?? 'Adversaire inconnu')
+                    )}
                   </p>
+                  <Link href={`/events/${fight.event_id}`} className="text-xs text-ink-secondary hover:underline">
+                    {fight.event_name} · {fight.event_date}
+                  </Link>
                 </div>
-                <span className="font-display text-xs uppercase tracking-wide text-accent">À venir</span>
-              </Link>
+                <Link
+                  href={`/events/${fight.event_id}`}
+                  className="font-display text-xs uppercase tracking-wide text-accent hover:underline"
+                >
+                  À venir
+                </Link>
+              </div>
             </li>
           ))}
         </ul>
@@ -70,7 +84,24 @@ export default function FighterHistoryList({ fights }: { fights: FightHistoryEnt
                       {resultLabel[fight.result]}
                     </span>
                   </td>
-                  <td className="p-3 align-top text-ink-primary">{fight.opponent_name ?? 'Adversaire inconnu'}</td>
+                  <td className="p-3 align-top text-ink-primary">
+                    {fight.opponent_id ? (
+                      <Link href={`/fighters/${fight.opponent_id}`} className="text-accent hover:underline">
+                        {fight.opponent_name ?? 'Adversaire inconnu'}
+                      </Link>
+                    ) : fight.opponent_sherdog_url ? (
+                      <a
+                        href={fight.opponent_sherdog_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-accent hover:underline"
+                      >
+                        {fight.opponent_name ?? 'Adversaire inconnu'}
+                      </a>
+                    ) : (
+                      (fight.opponent_name ?? 'Adversaire inconnu')
+                    )}
+                  </td>
                   <td className="p-3 align-top">
                     {fight.event_id ? (
                       <Link href={`/events/${fight.event_id}`} className="text-accent hover:underline">
