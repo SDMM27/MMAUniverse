@@ -44,9 +44,6 @@ export default function FighterDetailScreen() {
             <Text className="text-ink-secondary">V {stats.wins}</Text>
             <Text className="text-ink-secondary">D {stats.losses}</Text>
             <Text className="text-ink-secondary">N {stats.draws}</Text>
-            <Text className="text-ink-secondary">KO {stats.ko}</Text>
-            <Text className="text-ink-secondary">Sub {stats.submission}</Text>
-            <Text className="text-ink-secondary">Déc {stats.decision}</Text>
           </View>
           <Text className="font-display text-lg uppercase text-ink-primary">Historique</Text>
         </View>
