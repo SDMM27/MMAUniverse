@@ -70,14 +70,25 @@ export type FightResultWithContext = FightWithFighters & {
 // `events` rows (e.g. it was synced in while upcoming and has since
 // happened) — the UI prefers that internal link and falls back to
 // event_sherdog_url otherwise.
+//
+// opponent_id follows the same pattern: for upcoming bouts it's the opposing
+// fighter's own id, taken directly from the `fighters` join (the opponent is
+// always one of our tracked fighters there). For history rows it's resolved
+// by matching this row's opponent_sherdog_url against `fighters.sherdog_url`
+// — a stronger key than opponent name, which can collide between two
+// fighters who share a name. It's null when no internal fighter matches;
+// the UI then falls back to opponent_sherdog_url, and to plain text if
+// neither is set.
 export type FightHistoryEntry = {
   id: string;
   event_id: number | null;
   event_name: string;
   event_date: string;
   event_sherdog_url: string | null;
+  opponent_id: number | null;
   opponent_name: string | null;
   opponent_image_url: string | null;
+  opponent_sherdog_url: string | null;
   result: 'win' | 'loss' | 'draw' | 'nc' | 'upcoming';
   method: string | null;
   referee: string | null;
