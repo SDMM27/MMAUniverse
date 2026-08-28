@@ -304,16 +304,22 @@ export async function fetchFighterFightHistory(fighterId: string) {
       event_name: string;
       event_date: string | null;
       event_sherdog_url: string | null;
+      event_id: number | null;
       result: string;
       method: string | null;
       referee: string | null;
       round: number | null;
       time: string | null;
     }>`
-      SELECT id, opponent_name, event_name, event_date, event_sherdog_url, result, method, referee, round, time
-      FROM fighter_fight_history
-      WHERE fighter_id = ANY(${fighterIds})
-      ORDER BY event_date DESC NULLS LAST
+      SELECT
+        fhh.id, fhh.opponent_name, fhh.event_name, fhh.event_date, fhh.event_sherdog_url,
+        fhh.result, fhh.method, fhh.referee, fhh.round, fhh.time,
+        (
+          SELECT e.id FROM events e WHERE e.name = fhh.event_name ORDER BY e.id ASC LIMIT 1
+        ) AS event_id
+      FROM fighter_fight_history fhh
+      WHERE fhh.fighter_id = ANY(${fighterIds})
+      ORDER BY fhh.event_date DESC NULLS LAST
     `;
 
     // Sibling fighter rows above share the exact same Sherdog page, so their
@@ -344,7 +350,12 @@ export async function fetchFighterFightHistory(fighterId: string) {
 
     const historyEntries: FightHistoryEntry[] = dedupedHistory.map((row) => ({
       id: `history-${row.id}`,
-      event_id: null,
+      // Matched by name against our own `events` table (same natural key
+      // getEventIdByName/dedupe-seed-duplicates.ts use elsewhere) — a
+      // fighter_fight_history row for an event we already track (e.g. it was
+      // synced in while upcoming and has since happened) should still link to
+      // our internal event page, not fall through to Sherdog.
+      event_id: row.event_id,
       event_name: row.event_name,
       event_date: row.event_date ?? '',
       event_sherdog_url: row.event_sherdog_url,
