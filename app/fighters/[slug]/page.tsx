@@ -3,6 +3,7 @@ import { fetchFighterById, fetchFighterFightHistory } from '@/data/lib/data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
 import { CoverImage } from '@/components/ui/shared/media';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
+import FighterRecordCard from '@/components/ui/fighters/fighter-record-card';
 import EmptyState from '@/components/ui/shared/empty-state';
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -30,11 +31,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </p>
         <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{fighter.name}</h1>
       </div>
-      <div className="grid grid-cols-3 gap-3">
-        <StatBox label="Wins" value={stats.wins} />
-        <StatBox label="Losses" value={stats.losses} />
-        <StatBox label="KO" value={stats.ko} />
-      </div>
+      <FighterRecordCard stats={stats} />
       <div>
         <h2 className="mb-3 font-display text-sm uppercase tracking-wide text-ink-secondary">Historique</h2>
         {fights.length === 0 ? (
@@ -44,14 +41,5 @@ export default async function Page({ params }: { params: { slug: string } }) {
         )}
       </div>
     </main>
-  );
-}
-
-function StatBox({ label, value }: { label: string; value: number }) {
-  return (
-    <div className="rounded-lg border border-base-border bg-base-card p-3 text-center">
-      <p className="font-display text-xl text-ink-primary">{value}</p>
-      <p className="text-xs uppercase tracking-wide text-ink-secondary">{label}</p>
-    </div>
   );
 }
