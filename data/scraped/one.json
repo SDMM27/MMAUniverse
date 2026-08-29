@@ -13,7 +13,7 @@
       "date": "2026-09-04",
       "start_time": "2026-09-04T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896616"
     },
     {
       "name": "One Championship - One on Prime Video 47",
@@ -1971,6 +1971,153 @@
           "time": "0:30"
         }
       ]
+    },
+    {
+      "name": "Ruslan Bulut",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Bulut-469078",
+      "fight_history": [
+        {
+          "opponent_name": "Reza Jalalzaei",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Reza-Jalalzaei-478660",
+          "event_name": "VFN 46 - Vendetta Fight Nights 46",
+          "event_sherdog_url": "https://www.sherdog.com/events/VFN-46-Vendetta-Fight-Nights-46-108308",
+          "date": "2025-05-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mahdi Mustafavi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahdi-Mustafavi-433532",
+          "event_name": "The Last Round - Invitational 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/The-Last-Round-Invitational-2-106413",
+          "date": "2024-11-17",
+          "result": "win",
+          "method": "TKO (Knee)",
+          "referee": "Cumhur Solak",
+          "round": 2,
+          "time": "0:38"
+        }
+      ]
+    },
+    {
+      "name": "Sanzhar Mansurov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sanzhar-Mansurov-506152",
+      "fight_history": []
+    },
+    {
+      "name": "Ethan Brockett",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1772796192Ethan_Brockett-hero-1200x1165-1-600x583.png",
+      "weight_class": "Welterweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ethan-Brockett-413128",
+      "fight_history": [
+        {
+          "opponent_name": "Sora Enmei",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sora-Enmei-334601",
+          "event_name": "One Championship - One Friday Fights 158",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-158-113000",
+          "date": "2026-06-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Kemp Cheng",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Rayyan Butt",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rayyan-Butt-329731",
+          "event_name": "One Championship - One Friday Fights 145",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-145-111193",
+          "date": "2026-03-06",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "2:16"
+        },
+        {
+          "opponent_name": "Ben Paterson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ben-Paterson-417393",
+          "event_name": "HFS - Hex Fight Series 37",
+          "event_sherdog_url": "https://www.sherdog.com/events/HFS-Hex-Fight-Series-37-106150",
+          "date": "2025-11-22",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Talor Wetere",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Talor-Wetere-153411",
+          "event_name": "SFL 2 - Stealth Fighters League",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFL-2-Stealth-Fighters-League-107605",
+          "date": "2025-05-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Pedro Duarte",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Pedro-Duarte-425876",
+      "fight_history": [
+        {
+          "opponent_name": "Diego Mejias",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Diego-Mejias-460616",
+          "event_name": "WOW 30 - Lisboa",
+          "event_sherdog_url": "https://www.sherdog.com/events/WOW-30-Lisboa-112613",
+          "date": "2026-05-22",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Jesus Arjona",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Ricardo Reis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ricardo-Reis-439601",
+          "event_name": "FFL MMA 3 - Fusion Fight League MMA 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFL-MMA-3-Fusion-Fight-League-MMA-3-100110",
+          "date": "2023-12-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Olivio da Cunha",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Olivio-da-Cunha-404204",
+          "event_name": "Power Fighting Championship - PFC 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/Power-Fighting-Championship-PFC-7-97782",
+          "date": "2023-04-15",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Philip Vanheuden",
+          "round": 1,
+          "time": "0:57"
+        }
+      ]
     }
   ],
   "fights": [
@@ -1985,6 +2132,32 @@
       "time": "4:36",
       "weight_class": "Bantamweight",
       "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 169",
+      "fighter1_name": "Ruslan Bulut",
+      "fighter2_name": "Sanzhar Mansurov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 169",
+      "fighter1_name": "Ethan Brockett",
+      "fighter2_name": "Pedro Duarte",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
       "is_title_fight": false
     },
     {

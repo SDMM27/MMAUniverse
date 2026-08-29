@@ -423648,6 +423648,19 @@
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Alexey Makhno",
+      "fighter2_name": "Kuat Khamitov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }
