@@ -110,6 +110,7 @@ function FighterColumn({
         src={fighter.image_url}
         alt={fighter.name}
         className="h-20 w-20 rounded-md sm:h-28 sm:w-28"
+        objectPosition="top"
       />
       {flag && (
         <span className="text-xl" aria-hidden="true">

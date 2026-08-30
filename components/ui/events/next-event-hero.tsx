@@ -32,8 +32,24 @@ export default function NextEventHero({
     >
       {hasMatchup ? (
         <div className="absolute inset-0 flex">
-          <CoverImage src={fighter1!.image_url} alt={fighter1!.name} className="h-full w-1/2" sizes="50vw" />
-          <CoverImage src={fighter2!.image_url} alt={fighter2!.name} className="h-full w-1/2" sizes="50vw" />
+          {/* This box is far wider than it is tall, so only ~40% of the
+              source portrait's height ever shows. `top` (0%) crops down to
+              hairline only; centering the window a bit below the very top
+              keeps the whole face (eyes through chin) in frame instead. */}
+          <CoverImage
+            src={fighter1!.image_url}
+            alt={fighter1!.name}
+            className="h-full w-1/2"
+            sizes="50vw"
+            objectPosition="50% 20%"
+          />
+          <CoverImage
+            src={fighter2!.image_url}
+            alt={fighter2!.name}
+            className="h-full w-1/2"
+            sizes="50vw"
+            objectPosition="50% 20%"
+          />
           <span
             aria-hidden="true"
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-2xl italic text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.85)] sm:text-4xl"
