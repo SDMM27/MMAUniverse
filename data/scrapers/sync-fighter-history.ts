@@ -7,6 +7,13 @@
 // the JSON — safe to re-run: matches existing `fighters` rows by name + organization_id
 // (same natural key seed-additional-orgs.ts's findFighterId uses) rather than creating new
 // ones, and upserts fighter_fight_history by its own natural key so nothing duplicates.
+//
+// Run with no args (as daily-sync.yml does) to sync every fighter in every org — that's one
+// row-by-row DB round trip per fight per fighter, tens of thousands of them for a roster the
+// size of the UFC's, fine for a once-a-day job with no time pressure. The event-day workflow
+// runs every 15 minutes and can't afford that, so it instead passes `<orgKey> --date=YYYY-MM-DD`
+// (see sync-live-fighter-history.ts, which refreshes the same fighters' JSON right before this
+// runs) to scope the push down to just the handful of fighters who fought that day in that org.
 import fs from 'node:fs';
 import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
@@ -79,14 +86,34 @@ async function findFighterId(name: string, organizationId: number): Promise<numb
 async function main() {
   await ensureSchema();
 
+  const rawArgs = process.argv.slice(2);
+  const dateArg = rawArgs.find((a) => a.startsWith('--date='));
+  const requestedKeys = rawArgs.filter((a) => !a.startsWith('--date='));
+  const scopedToday = dateArg ? dateArg.slice('--date='.length) : null;
+  const configs = requestedKeys.length > 0 ? ORG_CONFIGS.filter((c) => requestedKeys.includes(c.orgKey)) : ORG_CONFIGS;
+
   let fightersUpdated = 0;
   let historyRows = 0;
 
-  for (const config of ORG_CONFIGS) {
+  for (const config of configs) {
     const dataset = loadDataset(config.orgKey);
     if (!dataset) continue;
 
+    // Event-day scoping: only push the fighters who actually fought on `scopedToday` in this
+    // org, instead of every fighter this org has ever had — see the module doc comment above.
+    let namesToSync: Set<string> | null = null;
+    if (scopedToday) {
+      const todaysEventNames = new Set(dataset.events.filter((e) => e.date === scopedToday).map((e) => e.name));
+      namesToSync = new Set<string>();
+      for (const fight of dataset.fights) {
+        if (!todaysEventNames.has(fight.event_name)) continue;
+        namesToSync.add(fight.fighter1_name);
+        namesToSync.add(fight.fighter2_name);
+      }
+    }
+
     for (const fighter of dataset.fighters) {
+      if (namesToSync && !namesToSync.has(fighter.name)) continue;
       if (!fighter.sherdog_url) continue; // not yet backfilled for this fighter
 
       const fighterId = await findFighterId(fighter.name, config.organizationId);

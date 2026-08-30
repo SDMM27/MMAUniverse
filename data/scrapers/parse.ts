@@ -4,7 +4,7 @@ import type { AnyNode } from 'domhandler';
 import { normalizeDate, normalizeStartTime } from './shared/normalize-date';
 import type { ScrapedFightHistoryEntry } from './shared/types';
 
-export type FinalResult = 'win' | 'loss' | 'not_finished';
+export type FinalResult = 'win' | 'loss' | 'draw' | 'nc' | 'not_finished';
 
 export interface ParsedFighterSide {
   name: string;
@@ -89,6 +89,13 @@ function parseFinalResult(el: Cheerio<AnyNode>): FinalResult {
   const className = el.attr('class') ?? '';
   if (className.includes('win')) return 'win';
   if (className.includes('loss')) return 'loss';
+  // A completed draw or overturned no-contest is still a *finished* fight — Sherdog
+  // renders those with their own badge classes rather than win/loss. Without this,
+  // finished draws/no-contests fall through to 'not_finished' below and sherdog.ts's
+  // `fight_finished` derivation (fighter1.result !== 'not_finished' || fighter2...)
+  // then treats an already-fought bout as permanently upcoming.
+  if (className.includes('draw')) return 'draw';
+  if (className.includes('no_contest')) return 'nc';
   return 'not_finished';
 }
 
