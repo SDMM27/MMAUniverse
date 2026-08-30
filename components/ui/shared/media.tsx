@@ -20,12 +20,23 @@ export function CoverImage({
   alt,
   className = '',
   sizes = '(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw',
+  objectPosition = 'center',
 }: {
   src?: string | null;
   alt: string;
   className?: string;
   /** Passed straight to next/image — tune per usage so it isn't always fetching for a full-bleed hero. */
   sizes?: string;
+  /**
+   * Sherdog's fighter photos are tall 2:3 portraits framed with the face near
+   * the top — cropping them to a box with the default center position lops
+   * off the head and centers on the chest/shoulders instead. 'top' works for
+   * boxes reasonably close to the source ratio (square, h-16, h-28, ...).
+   * For boxes far wider than they are tall (the vs-matchup hero split), pure
+   * 'top' only shows hairline — pass an explicit "x% y%" CSS position (e.g.
+   * '50% 20%') tuned to that box's crop window instead.
+   */
+  objectPosition?: 'center' | 'top' | (string & {});
 }) {
   const [failed, setFailed] = useState(false);
 
@@ -53,6 +64,7 @@ export function CoverImage({
           fill
           sizes={sizes}
           className="object-cover"
+          style={{ objectPosition }}
           onError={() => setFailed(true)}
         />
       </div>
