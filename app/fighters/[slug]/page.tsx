@@ -30,6 +30,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             alt={fighter.name}
             sizes="(max-width: 640px) 60vw, 280px"
             className="aspect-[3/4] w-40 shrink-0 rounded-lg border-2 border-base-bg sm:w-56"
+            objectPosition="top"
           />
           <div className="flex flex-1 flex-col gap-4 sm:justify-between">
             <div>

@@ -8,7 +8,12 @@ export default function FighterCard({ fighter }: { fighter: FighterWithOrganizat
       href={`/fighters/${fighter.id}`}
       className="flex flex-col overflow-hidden rounded-lg border border-base-border bg-base-card transition-colors hover:border-accent"
     >
-      <CoverImage src={fighter.image_url} alt={fighter.name} className="aspect-square w-full" />
+      <CoverImage
+        src={fighter.image_url}
+        alt={fighter.name}
+        className="aspect-square w-full"
+        objectPosition="top"
+      />
       <div className="flex flex-col gap-1 p-3">
         <span className="font-display text-xs uppercase tracking-wide text-accent">
           {fighter.organization_abbreviation}
