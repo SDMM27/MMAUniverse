@@ -1695,11 +1695,11 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/892124"
     },
     {
-      "name": "ACA 208 - Kerimov vs. Podlesnyi",
+      "name": "ACA 208 - Shaikhaev vs. Tumenov",
       "date": "2026-10-04",
       "start_time": "2026-10-04T00:00:00+00:00",
       "event_location": "Sport Hall Colloseum, Grozny, Chechnya, Russia",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895840"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896682"
     },
     {
       "name": "ACA 209 - Frolov vs. Odilov",
@@ -423585,7 +423585,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "ACA 208 - Kerimov vs. Podlesnyi",
+      "event_name": "ACA 208 - Shaikhaev vs. Tumenov",
+      "fighter1_name": "Daud Shaikhaev",
+      "fighter2_name": "Bibert Tumenov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "ACA 208 - Shaikhaev vs. Tumenov",
       "fighter1_name": "Rustam Kerimov",
       "fighter2_name": "Alexander Podlesniy",
       "fight_finished": false,
@@ -423594,11 +423607,11 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": true,
+      "is_main_event": false,
       "is_title_fight": false
     },
     {
-      "event_name": "ACA 208 - Kerimov vs. Podlesnyi",
+      "event_name": "ACA 208 - Shaikhaev vs. Tumenov",
       "fighter1_name": "Ali Suleymanov",
       "fighter2_name": "Valery Dashkevich",
       "fight_finished": false,
@@ -423611,7 +423624,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "ACA 208 - Kerimov vs. Podlesnyi",
+      "event_name": "ACA 208 - Shaikhaev vs. Tumenov",
       "fighter1_name": "Kurban Taygibov",
       "fighter2_name": "Dzhambulat Selimkhanov",
       "fight_finished": false,
