@@ -5,6 +5,10 @@ name: Event-day live sync
 # (a single cheap DB query, no Sherdog traffic at all). On a live day it only rescrapes the
 # org(s) fighting tonight — not the whole roster — keeping Sherdog traffic minimal even
 # during a live card. See data/scrapers/check-live-orgs.ts for the gate logic.
+#
+# Also refreshes the Sherdog "Fight History" page of just the fighters on tonight's card (see
+# sync-live-fighter-history.ts) so a fighter's own Historique picks up their result right away,
+# instead of waiting on a manual backfill:fighter-history run.
 on:
   schedule:
     - cron: '*/15 * * * *'
@@ -44,6 +48,10 @@ jobs:
             npx tsx data/scrapers/rescrape-upcoming.ts "$org"
           done
 
+      - name: Refresh tonight's fighters' Sherdog history
+        if: steps.live.outputs.orgs != ''
+        run: npx tsx data/scrapers/sync-live-fighter-history.ts ${{ steps.live.outputs.orgs }}
+
       - name: Commit refreshed scraped data
         if: steps.live.outputs.orgs != ''
         run: |
@@ -56,5 +64,11 @@ jobs:
       - name: Sync to Neon
         if: steps.live.outputs.orgs != ''
         run: npx tsx data/scrapers/sync-upcoming-to-db.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Sync tonight's fighter Sherdog history to Neon
+        if: steps.live.outputs.orgs != ''
+        run: npx tsx data/scrapers/sync-fighter-history.ts ${{ steps.live.outputs.orgs }} "--date=$(date -u +%F)"
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
