@@ -1,0 +1,76 @@
+<!-- data/scrapers/__fixtures__/event-page-draw-nc.html -->
+<!-- Trimmed from https://www.sherdog.com/events/UFC-on-ESPN-7-Overeem-vs-Rozenstruik-76605 (main event)
+     and https://www.sherdog.com/events/Bellator-300-Nurmagomedov-vs-Primus-98827 (undercard),
+     covering the two "not win/loss" final_result classes Sherdog actually renders: a majority
+     draw and an overturned no-contest — see parse.test.ts's "marks a draw/no-contest as finished". -->
+<html><body>
+<div class="col-left" itemscope itemtype="http://schema.org/Event">
+  <div class="event_detail">
+    <div>
+      <h1><span itemprop="name">UFC on ESPN 7 - Overeem vs. Rozenstruik</span></h1>
+      <div class="info">
+        <span><meta itemprop="startDate" content="2019-12-07T00:00:00+00:00">Dec 07, 2019</span>
+        <span><span itemprop="location">Capital One Arena, Washington, D.C., United States</span></span>
+      </div>
+    </div>
+    <meta itemprop="image" content="https://www1-cdn.sherdog.com/image_vs/588223">
+    <div itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
+      <div class="fight_card">
+        <div class="fighter left_side" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+          <a href="/fighter/Cody-Stamann-61896" itemprop="url"><img itemprop="image" src="/image_crop/200/300/_images/fighter/Cody-Stamann.JPG" /></a>
+          <h3><a href="/fighter/Cody-Stamann-61896"><span itemprop="name">Cody Stamann</span></a></h3>
+          <span class="record">22-8-0 <em>(Win-Loss-Draw)</em> </span>
+          <span class="final_result draw">draw</span>
+        </div>
+        <div class="versus">
+          <b>MAIN EVENT</b>
+          <span class="weight_class">Bantamweight</span>
+        </div>
+        <div class="fighter right_side" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+          <a href="/fighter/Yadong-Song-103807" itemprop="url"><img itemprop="image" src="/image_crop/200/300/_images/fighter/Yadong-Song.JPG" /></a>
+          <h3><a href="/fighter/Yadong-Song-103807"><span itemprop="name">Yadong Song</span></a></h3>
+          <span class="record">23-9-1 <em>(Win-Loss-Draw)</em> </span>
+          <span class="final_result draw">draw</span>
+        </div>
+      </div>
+      <table class="fight_card_resume">
+        <tr>
+          <td><em>Match</em><br /> 12</td>
+          <td><em>Method</em><br /> Draw (Majority)</td>
+          <td><em>Referee</em><br /> <a href="/referee/Kevin-Mulhall-1">Kevin Mulhall</a></td>
+          <td><em>Round</em><br /> 3</td>
+          <td><em>Time</em><br /> 5:00</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <table border="0" class="new_table result">
+    <tbody>
+      <tr class="table_head"><td class="col_one">Match</td><td></td><td class="col_two">Fighters</td><td></td><td class="col_three">Method/Referee</td><td class="col_four">R</td><td class="col_five">Time</td></tr>
+      <tr itemprop="subEvent" itemscope itemtype="http://schema.org/Event">
+        <td>11</td>
+        <td class="text_right col_fc_upcoming" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+          <div class="fighter_list left">
+            <div class="fighter_result_data">
+              <a itemprop="url" href="/fighter/Usman-Nurmagomedov-234099"><span itemprop="name">Usman<br />Nurmagomedov</span></a><br>
+              <span class="final_result no_contest">NC</span>
+            </div>
+          </div>
+        </td>
+        <td class="text_center"><span class="weight_class">Lightweight</span></td>
+        <td class="text_left col_fc_upcoming" itemprop="performer" itemscope itemtype="http://schema.org/Person">
+          <div class="fighter_list right">
+            <div class="fighter_result_data">
+              <a itemprop="url" href="/fighter/Brent-Primus-73439"><span itemprop="name">Brent<br />Primus</span></a><br>
+              <span class="final_result no_contest">NC</span>
+            </div>
+          </div>
+        </td>
+        <td class="winby"><b>No Contest (Overturned)</b><br /><span class="sub_line"><a href="/referee/Herb-Dean-99">Herb Dean</a></span></td>
+        <td>5</td>
+        <td>5:00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body></html>

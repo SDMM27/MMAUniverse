@@ -109,6 +109,21 @@ test('parseEventDetails marks fights as not finished on an upcoming event', () =
   assert.equal(undercardFight.is_main_event, false);
 });
 
+test('parseEventDetails marks a draw and a no-contest as finished, not upcoming', () => {
+  const $ = loadFixture('event-page-draw-nc.html');
+  const details = parseEventDetails($, BASE_URL);
+
+  const mainEvent = details.fights[0];
+  assert.equal(mainEvent.fighter1.result, 'draw');
+  assert.equal(mainEvent.fighter2.result, 'draw');
+  assert.equal(mainEvent.method, 'Draw (Majority)');
+
+  const undercardFight = details.fights[1];
+  assert.equal(undercardFight.fighter1.result, 'nc');
+  assert.equal(undercardFight.fighter2.result, 'nc');
+  assert.equal(undercardFight.method, 'No Contest (Overturned)');
+});
+
 test('parseEventDetails marks the main event and a title co-main via span.title_fight, independently of is_main_event', () => {
   const $ = loadFixture('event-page-title-fight.html');
   const details = parseEventDetails($, BASE_URL);
