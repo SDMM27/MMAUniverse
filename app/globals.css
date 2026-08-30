@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  /* Chromium's CSS scroll-anchoring heuristic fights Next.js App Router's
+   * scroll-to-top-on-navigation: it picks an anchor node right as the new
+   * page's content settles, then "corrects" scrollY back toward wherever the
+   * previous page was scrolled to if that node shifts size afterward (e.g. a
+   * server-rendered value swapping in after hydration). Reproduced on
+   * /fighters -> /fighters/[slug]: navigating from deep in the fighters grid
+   * left the detail page scrolled hundreds of px down instead of at the top.
+   * Disabling anchoring at the document root removes the browser's
+   * involvement entirely and leaves Next's own scroll-to-top in full control. */
+  overflow-anchor: none;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
