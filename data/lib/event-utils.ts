@@ -13,6 +13,31 @@ export function splitEventsByStatus<T extends Event>(
   return { upcoming, past };
 }
 
+/**
+ * Splits an already-upcoming event list (soonest-first, from
+ * splitEventsByStatus) into the current calendar week (through the coming
+ * Sunday, Monday-start ISO week) and everything after — so /events can put
+ * "cette semaine" front and center instead of dumping every future event
+ * into one flat list.
+ *
+ * Uses UTC day-of-week to match splitEventsByStatus's UTC-based "today"
+ * (toISOString().slice(0, 10)) — mixing local and UTC calendars here would
+ * make the week boundary drift by up to a day from the upcoming/past split
+ * it's built on top of.
+ */
+export function groupUpcomingByWeek<T extends Event>(upcoming: T[]): { thisWeek: T[]; later: T[] } {
+  const now = new Date();
+  const day = now.getUTCDay(); // 0 (Sun) .. 6 (Sat)
+  const daysUntilSunday = day === 0 ? 0 : 7 - day;
+  const endOfWeek = new Date(now);
+  endOfWeek.setUTCDate(now.getUTCDate() + daysUntilSunday);
+  const endOfWeekDate = endOfWeek.toISOString().slice(0, 10);
+
+  const thisWeek = upcoming.filter((event) => event.date <= endOfWeekDate);
+  const later = upcoming.filter((event) => event.date > endOfWeekDate);
+  return { thisWeek, later };
+}
+
 export function computeNextEvent<T extends Event & { organization_abbreviation: string }>(
   events: T[],
 ): { event: T; isUpcoming: boolean } | null {
