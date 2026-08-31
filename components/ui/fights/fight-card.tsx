@@ -120,6 +120,7 @@ function FighterColumn({
       <span className="w-full truncate font-display text-base uppercase tracking-wide text-ink-primary sm:text-xl">
         {fighter.name}
       </span>
+      <span className="text-xs text-ink-secondary sm:text-sm">{fighter.record}</span>
       {status === 'finished' ? (
         <span className={`font-display text-2xl font-bold ${resultColor[result]}`}>{resultLabel[result]}</span>
       ) : (
