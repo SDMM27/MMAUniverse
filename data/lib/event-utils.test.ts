@@ -1,7 +1,7 @@
 // data/lib/event-utils.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { splitEventsByStatus } from './event-utils';
+import { groupUpcomingByWeek, splitEventsByStatus } from './event-utils';
 import type { Event } from './definitions';
 
 // Dates far enough in the past/future to stay stable regardless of when the
@@ -76,4 +76,54 @@ test('splitEventsByStatus returns empty groups for an empty input', () => {
 
   assert.deepEqual(upcoming, []);
   assert.deepEqual(past, []);
+});
+
+test('groupUpcomingByWeek puts an event dated today in thisWeek', () => {
+  const today = new Date().toISOString().slice(0, 10);
+  const { thisWeek, later } = groupUpcomingByWeek([makeEvent(1, today)]);
+
+  assert.deepEqual(
+    thisWeek.map((e) => e.id),
+    [1],
+  );
+  assert.equal(later.length, 0);
+});
+
+test('groupUpcomingByWeek puts an event 60 days out in later', () => {
+  const farFuture = new Date();
+  farFuture.setUTCDate(farFuture.getUTCDate() + 60);
+  const farFutureDate = farFuture.toISOString().slice(0, 10);
+
+  const { thisWeek, later } = groupUpcomingByWeek([makeEvent(1, farFutureDate)]);
+
+  assert.equal(thisWeek.length, 0);
+  assert.deepEqual(
+    later.map((e) => e.id),
+    [1],
+  );
+});
+
+test('groupUpcomingByWeek splits a mixed list correctly', () => {
+  const today = new Date().toISOString().slice(0, 10);
+  const farFuture = new Date();
+  farFuture.setUTCDate(farFuture.getUTCDate() + 60);
+  const farFutureDate = farFuture.toISOString().slice(0, 10);
+
+  const { thisWeek, later } = groupUpcomingByWeek([makeEvent(1, today), makeEvent(2, farFutureDate)]);
+
+  assert.deepEqual(
+    thisWeek.map((e) => e.id),
+    [1],
+  );
+  assert.deepEqual(
+    later.map((e) => e.id),
+    [2],
+  );
+});
+
+test('groupUpcomingByWeek returns empty groups for an empty input', () => {
+  const { thisWeek, later } = groupUpcomingByWeek([]);
+
+  assert.deepEqual(thisWeek, []);
+  assert.deepEqual(later, []);
 });
