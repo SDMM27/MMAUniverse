@@ -867,7 +867,7 @@
       "date": "2026-11-21",
       "start_time": "2026-11-21T00:00:00+00:00",
       "event_location": "Werk Arena, Třinec, Czech Republic",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896739"
     },
     {
       "name": "Oktagon MMA - Oktagon 99",
@@ -5952,6 +5952,254 @@
       "weight_class": "Featherweight",
       "record": "0-1-0",
       "ranking": 0
+    },
+    {
+      "name": "David Daniel Komar",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1788178203cs.1787674870037.png",
+      "weight_class": "Bantamweight",
+      "record": "5-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/David-Daniel-Komar-399658",
+      "fight_history": [
+        {
+          "opponent_name": "Changhao Ding",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Changhao-Ding-465505",
+          "event_name": "CombatX - Fight Night 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/CombatX-Fight-Night-3-113071",
+          "date": "2026-06-06",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Karoly Laszlo",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "David Sagna",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Sagna-431877",
+          "event_name": "CombatX MMA Hungary - Fight Night",
+          "event_sherdog_url": "https://www.sherdog.com/events/CombatX-MMA-Hungary-Fight-Night-111912",
+          "date": "2026-03-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Alan Nkeletela",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alan-Nkeletela-443461",
+          "event_name": "HXMMA 36 - Hexagone MMA 36",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-36-Hexagone-MMA-36-109112",
+          "date": "2025-11-07",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Paul Denis Navero",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paul-Denis-Navero-408149",
+          "event_name": "HXMMA 34 - Hexagone MMA 34",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-34-Hexagone-MMA-34-109113",
+          "date": "2025-09-19",
+          "result": "loss",
+          "method": "TKO (Punch to the Body)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "4:44"
+        },
+        {
+          "opponent_name": "Azam Khan Folladi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Azam-Khan-Folladi-441677",
+          "event_name": "HXMMA 26 - Hexagone MMA 26",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-26-Hexagone-MMA-26-105867",
+          "date": "2025-04-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ilie Meryacre",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ilie-Meryacre-394724",
+          "event_name": "MMA Battle Arena - Battle Arena 83: Northampton",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Battle-Arena-Battle-Arena-83-Northampton-105589",
+          "date": "2024-11-30",
+          "result": "loss",
+          "method": "TKO (Spinning Back Kick)",
+          "referee": "",
+          "round": 1,
+          "time": "1:23"
+        },
+        {
+          "opponent_name": "Antonio Louca",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Antonio-Louca-331327",
+          "event_name": "MMA Battle Arena - Battle Arena 79: Pro",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Battle-Arena-Battle-Arena-79-Pro-102324",
+          "date": "2024-03-02",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "3:28"
+        }
+      ]
+    },
+    {
+      "name": "Nikola Jankovic",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1783781703cs.1782825468830.png",
+      "weight_class": "Welterweight",
+      "record": "9-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Nikola-Jankovic-419564",
+      "fight_history": [
+        {
+          "opponent_name": "Jan Berus",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jan-Berus-420963",
+          "event_name": "Valhalla Fight Night 11 - VFN 11: Grand Prix",
+          "event_sherdog_url": "https://www.sherdog.com/events/Valhalla-Fight-Night-11-VFN-11-Grand-Prix-105795",
+          "date": "2025-02-01",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Ilija Lucic",
+          "round": 1,
+          "time": "0:30"
+        },
+        {
+          "opponent_name": "Jovan Kandic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jovan-Kandic-249757",
+          "event_name": "Sambo Club Belisce - Baraber Fight Night 5: New Generation",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sambo-Club-Belisce-Baraber-Fight-Night-5-New-Generation-105694",
+          "date": "2024-11-30",
+          "result": "nc",
+          "method": "No Contest (Accidental Groin Kick)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Dragoljub Stanojevic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dragoljub-Stanojevic-229393",
+          "event_name": "Sambo Club Belisce - Baraber Underground 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sambo-Club-Belisce-Baraber-Underground-4-101896",
+          "date": "2024-03-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "2:00"
+        },
+        {
+          "opponent_name": "Stefan Vukic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Stefan-Vukic-441132",
+          "event_name": "Absolute Combat Federation - ACF 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Absolute-Combat-Federation-ACF-2-100656",
+          "date": "2023-12-29",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:49"
+        },
+        {
+          "opponent_name": "Bozidar Trivunovic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bozidar-Trivunovic-403808",
+          "event_name": "ARMMADA - ARMMADA 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/ARMMADA-ARMMADA-6-99767",
+          "date": "2023-10-21",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "4:04"
+        },
+        {
+          "opponent_name": "Matej Simic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matej-Simic-429603",
+          "event_name": "Sambo Club Belisce - Baraber Underground 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sambo-Club-Belisce-Baraber-Underground-2-99638",
+          "date": "2023-09-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "0:21"
+        },
+        {
+          "opponent_name": "Ivan Nikolin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Nikolin-426708",
+          "event_name": "GF 3 - Golden Fight 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/GF-3-Golden-Fight-3-99085",
+          "date": "2023-09-09",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "0:12"
+        },
+        {
+          "opponent_name": "Alexandru Leonte",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexandru-Leonte-429604",
+          "event_name": "Absolute Combat Federation - ACF 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Absolute-Combat-Federation-ACF-1-98522",
+          "date": "2023-07-14",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:49"
+        },
+        {
+          "opponent_name": "Nikola Bajci",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nikola-Bajci-428447",
+          "event_name": "Sambo Club Belisce - Baraber Underground",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sambo-Club-Belisce-Baraber-Underground-98093",
+          "date": "2023-06-11",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:36"
+        },
+        {
+          "opponent_name": "Zoltan Segedi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zoltan-Segedi-425882",
+          "event_name": "EDMASS - Fight Night Mladenovac 2023",
+          "event_sherdog_url": "https://www.sherdog.com/events/EDMASS-Fight-Night-Mladenovac-2023-97789",
+          "date": "2023-05-20",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Aleksandar Vickovic",
+          "round": 1,
+          "time": "2:11"
+        },
+        {
+          "opponent_name": "Marko Maric",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marko-Maric-429601",
+          "event_name": "GF 2 - Golden Fight 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/GF-2-Golden-Fight-2-96246",
+          "date": "2023-03-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:03"
+        },
+        {
+          "opponent_name": "Blaz Ivkovic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Blaz-Ivkovic-413361",
+          "event_name": "GF 1 - Golden Fight 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/GF-1-Golden-Fight-1-96245",
+          "date": "2022-09-17",
+          "result": "win",
+          "method": "Submission",
+          "referee": "",
+          "round": 3,
+          "time": "0:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -19983,6 +20231,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
+      "fighter1_name": "Ali Gunduz",
+      "fighter2_name": "David Daniel Komar",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
       "fighter1_name": "Christian Eckerlin",
       "fighter2_name": "David Kozma",
@@ -20044,6 +20305,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
+      "fighter1_name": "Tamerlan Dulatov",
+      "fighter2_name": "Nikola Jankovic",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -20127,19 +20401,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
-      "fighter1_name": "Alex Hutyra",
-      "fighter2_name": "Frantisek Fodor",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
       "fighter1_name": "Matus Juracek",
       "fighter2_name": "Jozef Wittner",
       "fight_finished": false,
@@ -20148,6 +20409,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "fighter1_name": "Alex Hutyra",
+      "fighter2_name": "Frantisek Fodor",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -20179,19 +20453,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
-      "fighter1_name": "Lazar Todev",
-      "fighter2_name": "Simon Biyong",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
       "fighter1_name": "Ion Surdu",
       "fighter2_name": "Jessin Ayari",
       "fight_finished": false,
@@ -20200,6 +20461,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "fighter1_name": "Lazar Todev",
+      "fighter2_name": "Simon Biyong",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -20278,6 +20552,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 98",
+      "fighter1_name": "Tomasz Mudroch",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 98",
+      "fighter1_name": "Jakub Batfalsky",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     }

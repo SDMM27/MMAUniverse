@@ -1469,11 +1469,25 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/892959"
     },
     {
+      "name": "LFA 243 - Legacy Fighting Alliance",
+      "date": "2026-10-09",
+      "start_time": "2026-10-09T00:00:00+00:00",
+      "event_location": "Kaiser Permanente Arena, Santa Cruz, California, United States",
+      "event_poster": ""
+    },
+    {
       "name": "LFA 244 - Woodley vs. Havener",
       "date": "2026-10-23",
       "start_time": "2026-10-23T00:00:00+00:00",
       "event_location": "Foxwoods Resort Casino, Mashantucket, Connecticut, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896411"
+    },
+    {
+      "name": "LFA 245 - Legacy Fighting Alliance",
+      "date": "2026-10-30",
+      "start_time": "2026-10-30T00:00:00+00:00",
+      "event_location": "Seneca Niagara Resort and Casino, Niagara Falls, New York, United States",
+      "event_poster": ""
     }
   ],
   "fighters": [
