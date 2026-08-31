@@ -216983,6 +216983,24 @@
           "time": "1:50"
         }
       ]
+    },
+    {
+      "name": "Fatima Al Ammari",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Fatima-Al-Ammari-506215",
+      "fight_history": []
+    },
+    {
+      "name": "Aya Lounes",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Aya-Lounes-506216",
+      "fight_history": []
     }
   ],
   "fights": [
@@ -234182,6 +234200,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL MENA 11: 2026 Semifinals",
+      "fighter1_name": "Fatima Al Ammari",
+      "fighter2_name": "Aya Lounes",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
