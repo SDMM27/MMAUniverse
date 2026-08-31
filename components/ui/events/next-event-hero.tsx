@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { Event, Fighter } from '@/data/lib/definitions';
+import { formatEventTime } from '@/data/lib/event-utils';
 
 export default function NextEventHero({
   event,
@@ -24,6 +25,7 @@ export default function NextEventHero({
   // Sherdog's poster. Falls back to the poster when a fighter or its photo
   // is missing (e.g. a TBD opponent).
   const hasMatchup = Boolean(fighter1?.image_url && fighter2?.image_url);
+  const eventTime = formatEventTime(event.main_card_start) ?? formatEventTime(event.start_time);
 
   return (
     <Link
@@ -66,7 +68,8 @@ export default function NextEventHero({
         </span>
         <h1 className="mt-2 font-display text-3xl uppercase tracking-wide text-ink-primary">{event.name}</h1>
         <p className="mt-1 text-sm text-ink-secondary">
-          {event.date} · {event.event_location}
+          {event.date}
+          {eventTime && ` · ${eventTime}`} · {event.event_location}
         </p>
       </div>
     </Link>

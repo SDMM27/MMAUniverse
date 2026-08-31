@@ -62,6 +62,13 @@ async function seedEvents() {
   `;
 
   await sql`ALTER TABLE events ADD COLUMN IF NOT EXISTS start_time TIMESTAMPTZ;`;
+  // UFC-only for now (see data/scrapers/sync-ufc-broadcast-times.ts) — the real broadcast
+  // schedule scraped from ufc.com, distinct from the coarse Sherdog-sourced start_time above
+  // (which is a real time only when Sherdog happens to have one; otherwise midnight UTC on
+  // `date`, see formatEventTime's placeholder filtering in data/lib/event-utils.ts). Null for
+  // every other organization and for any UFC event ufc.com hasn't published a page for yet.
+  await sql`ALTER TABLE events ADD COLUMN IF NOT EXISTS prelims_start TIMESTAMPTZ;`;
+  await sql`ALTER TABLE events ADD COLUMN IF NOT EXISTS main_card_start TIMESTAMPTZ;`;
 
   // `ON CONFLICT (id) DO NOTHING` below never actually fires: `id` is a fresh
   // SERIAL value on every INSERT since it's never supplied, so there's never

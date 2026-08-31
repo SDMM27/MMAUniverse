@@ -24,3 +24,12 @@ test('isEventLocked falls back to 00:00 UTC on `date` when start_time is null', 
   assert.equal(notYetLocked, false);
   assert.equal(locked, true);
 });
+
+test('isEventLocked prefers prelims_start over start_time when both are set', () => {
+  const event = { prelims_start: '2026-08-22T18:00:00Z', start_time: '2026-08-22T22:00:00Z', date: '2026-08-22' };
+  // Between the two: locked because prelims_start has passed, even though start_time hasn't.
+  const locked = isEventLocked(event, new Date('2026-08-22T19:00:00Z'));
+  const notYetLocked = isEventLocked(event, new Date('2026-08-22T17:59:59Z'));
+  assert.equal(locked, true);
+  assert.equal(notYetLocked, false);
+});
