@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { Event } from '@/data/lib/definitions';
+import { formatEventTime } from '@/data/lib/event-utils';
 
 export default function EventCard({
   event,
 }: {
   event: Event & { organization_abbreviation?: string };
 }) {
+  const eventTime = formatEventTime(event.main_card_start) ?? formatEventTime(event.start_time);
+
   return (
     <Link
       href={`/events/${event.id}`}
@@ -21,7 +24,8 @@ export default function EventCard({
         )}
         <p className="font-display text-sm uppercase tracking-wide text-ink-primary">{event.name}</p>
         <p className="text-xs text-ink-secondary">
-          {event.date} · {event.event_location}
+          {event.date}
+          {eventTime && ` · ${eventTime}`} · {event.event_location}
         </p>
       </div>
     </Link>
