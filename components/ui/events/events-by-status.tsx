@@ -2,7 +2,7 @@
 
 import { Suspense } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { splitEventsByStatus } from '@/data/lib/event-utils';
+import { groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
 import { Event } from '@/data/lib/definitions';
 import EventCard from './event-card';
 
@@ -49,6 +49,7 @@ function EventsByStatusInner<T extends Event>({
 
   const active = tab === 'upcoming' ? upcoming : past;
   const emptyMessage = tab === 'upcoming' ? emptyUpcoming : emptyPast;
+  const { thisWeek, later } = tab === 'upcoming' ? groupUpcomingByWeek(upcoming) : { thisWeek: [], later: [] };
 
   return (
     <div className="flex flex-col gap-4">
@@ -77,6 +78,11 @@ function EventsByStatusInner<T extends Event>({
       </div>
       {active.length === 0 ? (
         <p className="text-sm text-ink-secondary">{emptyMessage}</p>
+      ) : tab === 'upcoming' ? (
+        <div className="flex flex-col gap-6">
+          {thisWeek.length > 0 && <EventGroup title={`Cette semaine (${thisWeek.length})`} events={thisWeek} />}
+          {later.length > 0 && <EventGroup title={`À venir (${later.length})`} events={later} />}
+        </div>
       ) : (
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {active.map((event) => (
@@ -84,6 +90,19 @@ function EventsByStatusInner<T extends Event>({
           ))}
         </div>
       )}
+    </div>
+  );
+}
+
+function EventGroup<T extends Event>({ title, events }: { title: string; events: T[] }) {
+  return (
+    <div className="flex flex-col gap-3">
+      <h2 className="font-display text-sm uppercase tracking-wide text-ink-secondary">{title}</h2>
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+        {events.map((event) => (
+          <EventCard key={event.id} event={event} />
+        ))}
+      </div>
     </div>
   );
 }
