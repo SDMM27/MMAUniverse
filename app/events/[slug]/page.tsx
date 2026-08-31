@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { fetchEventById, fetchEventsByOrg, fetchFightsByEvent } from '@/data/lib/data';
+import { formatEventTime } from '@/data/lib/event-utils';
 import { splitMainEvent } from '@/data/lib/fight-utils';
 import { isEventLocked } from '@/data/lib/pick-lock';
 import { fetchPicksForEvent, fetchEventLeaderboard, getOrCreateCurrentUser, type StoredPick } from '@/data/lib/picks-data';
@@ -23,6 +24,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   ]);
   const { mainEvent, rest } = splitMainEvent(fights);
   const locked = isEventLocked(event, new Date());
+  const eventTime = formatEventTime(event.main_card_start) ?? formatEventTime(event.start_time);
+  const prelimsTime = formatEventTime(event.prelims_start);
 
   const userId = await getOrCreateCurrentUser();
   const userPicks: Map<number, StoredPick> = userId ? await fetchPicksForEvent(userId, params.slug) : new Map();
@@ -37,8 +40,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div>
           <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{event.name}</h1>
           <p className="text-sm text-ink-secondary">
-            {event.date} · {event.event_location}
+            {event.date}
+            {eventTime && ` · ${eventTime}`} · {event.event_location}
           </p>
+          {prelimsTime && (
+            <p className="mt-1 text-xs text-ink-secondary">
+              Préliminaires à {prelimsTime}
+            </p>
+          )}
         </div>
       </div>
       {fights.length === 0 ? (

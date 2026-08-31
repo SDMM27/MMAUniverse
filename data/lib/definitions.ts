@@ -10,6 +10,11 @@ export type Event = {
     name: string;
     date: string;
     start_time: string | null;
+    // UFC-only, scraped from ufc.com's own broadcast schedule (see
+    // data/scrapers/sync-ufc-broadcast-times.ts) — null for every other
+    // organization and for any UFC event not yet published there.
+    prelims_start: string | null;
+    main_card_start: string | null;
     event_location: string;
     event_poster: string;
     organization_id: number;

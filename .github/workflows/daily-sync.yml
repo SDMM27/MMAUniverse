@@ -43,6 +43,11 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+      - name: Sync UFC broadcast times (prelims + main card) from ufc.com
+        run: npx tsx data/scrapers/sync-ufc-broadcast-times.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
       - name: Sync fighter Sherdog history to Neon
         run: npx tsx data/scrapers/sync-fighter-history.ts
         env:

@@ -40,8 +40,8 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Round invalide pour ce combat.' }, { status: 400 });
   }
 
-  const eventRows = await sql<{ start_time: string | null; date: string }>`
-    SELECT start_time, date FROM events WHERE id = ${fight.event_id}
+  const eventRows = await sql<{ prelims_start: string | null; start_time: string | null; date: string }>`
+    SELECT prelims_start, start_time, date FROM events WHERE id = ${fight.event_id}
   `;
   const event = eventRows.rows[0];
   if (!event || isEventLocked(event, new Date())) {
