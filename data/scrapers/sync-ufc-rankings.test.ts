@@ -31,6 +31,21 @@ test('parseUfcRankings dedupes the Meta tab against the duplicate Media Panel ta
   assert.equal(flyweight.length, 16);
 });
 
+test('parseUfcRankings drops the redundant champion row for Pound-for-Pound tables (no real titleholder -- ufc.com just repeats the #1 contender in the caption)', () => {
+  const rankings = parseUfcRankings(readFixture('ufc-com-rankings.html'));
+  const p4p = rankings.filter((r) => r.weightClass === "Men's Pound-for-Pound Top Rank");
+  assert.equal(p4p.length, 15); // no rank-0 entry, just #1-15
+  assert.equal(p4p.filter((r) => r.rank === 0).length, 0);
+  assert.equal(p4p.find((r) => r.rank === 1)?.fighterName, 'Islam Makhachev');
+});
+
+test('parseUfcRankings keeps the champion row for a real division (a different person than #1)', () => {
+  const rankings = parseUfcRankings(readFixture('ufc-com-rankings.html'));
+  const flyweight = rankings.filter((r) => r.weightClass === 'Flyweight');
+  assert.equal(flyweight.find((r) => r.rank === 0)?.fighterName, 'Joshua Van');
+  assert.notEqual(flyweight.find((r) => r.rank === 0)?.fighterName, flyweight.find((r) => r.rank === 1)?.fighterName);
+});
+
 test('parseUfcRankings discovers the table list dynamically rather than assuming a fixed set', () => {
   const rankings = parseUfcRankings(readFixture('ufc-com-rankings.html'));
   const weightClasses = new Set(rankings.map((r) => r.weightClass));

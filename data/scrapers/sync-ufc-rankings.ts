@@ -104,10 +104,8 @@ export function parseUfcRankings(html: string): ParsedRanking[] {
     seenWeightClasses.add(weightClass);
 
     const championName = $table.find('caption h5 a').first().text().trim();
-    if (championName) {
-      results.push({ weightClass, rank: 0, fighterName: championName });
-    }
 
+    const contenders: ParsedRanking[] = [];
     $table.find('tbody tr').each((_, row) => {
       const $row = $(row);
       // The rank cell's class has been seen both as `views-field-weight-class-rank`
@@ -119,9 +117,20 @@ export function parseUfcRankings(html: string): ParsedRanking[] {
       // Number('') is 0, which is finite -- an explicit non-empty check keeps a
       // blank cell from being silently mistaken for a rank-0 (champion) row.
       if (rankText !== '' && Number.isFinite(rank) && fighterName) {
-        results.push({ weightClass, rank, fighterName });
+        contenders.push({ weightClass, rank, fighterName });
       }
     });
+
+    // Pound-for-Pound tables have no actual titleholder -- ufc.com still
+    // renders the #1-ranked fighter in the caption (the same "champion"
+    // markup real divisions use), which would otherwise show up in our UI as
+    // a redundant "C" row on top of an identical "#1" row for the same
+    // person. Only keep the caption as a distinct champion (rank 0) entry
+    // when it's someone other than the #1 contender already in the list.
+    if (championName && contenders[0]?.fighterName !== championName) {
+      results.push({ weightClass, rank: 0, fighterName: championName });
+    }
+    results.push(...contenders);
   });
 
   return results;
