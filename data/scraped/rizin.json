@@ -159859,13 +159859,13 @@
     {
       "event_name": "Rizin FF - Super Rizin 5",
       "fighter1_name": "Daichi Tomizawa",
-      "fighter2_name": "Ryo Kawabata",
+      "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "130lb Catchweight",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },

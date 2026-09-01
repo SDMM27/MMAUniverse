@@ -234449,6 +234449,19 @@
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Eliezer Kubanza",
+      "fighter2_name": "Trey Waters",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }
