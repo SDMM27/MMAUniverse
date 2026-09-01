@@ -6,6 +6,8 @@ import {
     FightHistoryEntry,
     FightWithFighters,
     FightResultWithContext,
+    Ranking,
+    RankingWithFighter,
   } from './definitions';
 
 export async function fetchOrganizations() {
@@ -170,6 +172,79 @@ export async function fetchFightsByEvent(eventId: string) {
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch fights for event.');
+  }
+}
+
+// Unpaginated full roster for the org hub's Fighters tab -- distinct from the
+// paginated, searchable fetchFighters() below (which backs the global
+// /fighters page and can't afford an unbounded SELECT at that table's
+// scale). Mirrors fetchEventsByOrg's shape.
+export async function fetchFightersByOrg(organizationId: string) {
+  try {
+    const data = await sql<Fighter & { organization_abbreviation: string }>`
+      SELECT f.*, o.abbreviation AS organization_abbreviation
+      FROM fighters f
+      JOIN organizations o ON f.organization_id = o.id
+      WHERE f.organization_id = ${organizationId}
+      ORDER BY f.name ASC
+    `;
+    return data.rows;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch organization roster.');
+  }
+}
+
+// Ordered by id ASC -- relies on the scraper's delete-then-reinsert-per-org
+// strategy inserting rows in the order encountered on the page (division by
+// division, champion then contenders 1-15), which reproduces the org's own
+// display order for free. groupRankingsByWeightClass (data/lib/ranking-utils.ts)
+// depends on that order.
+export async function fetchRankingsByOrg(organizationId: string) {
+  try {
+    const data = await sql<RankingWithFighter>`
+      SELECT r.*, f.image_url AS fighter_image_url, f.record AS fighter_record
+      FROM rankings r
+      LEFT JOIN fighters f ON r.fighter_id = f.id
+      WHERE r.organization_id = ${organizationId}
+      ORDER BY r.id ASC
+    `;
+    return data.rows;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch rankings.');
+  }
+}
+
+// For the fighter detail page's ranking pill -- a fighter can hold more than
+// one ranking row (weight class + Pound-for-Pound), so this returns all of
+// them and lets the caller pick which to surface.
+export async function fetchFighterRankings(fighterId: string) {
+  try {
+    const data = await sql<Ranking>`
+      SELECT * FROM rankings WHERE fighter_id = ${fighterId} ORDER BY rank ASC
+    `;
+    return data.rows;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch fighter ranking.');
+  }
+}
+
+// Backs the /rankings index -- only organizations that actually have ranking
+// data get listed, so the orgs without a scraper yet don't show as empty
+// tiles. The layout scales automatically as more orgs get scrapers later.
+export async function fetchRankedOrganizations() {
+  try {
+    const data = await sql<Organization>`
+      SELECT DISTINCT o.* FROM organizations o
+      JOIN rankings r ON r.organization_id = o.id
+      ORDER BY o.name ASC
+    `;
+    return data.rows;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch ranked organizations.');
   }
 }
 

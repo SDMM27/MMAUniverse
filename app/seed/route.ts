@@ -221,6 +221,35 @@ async function seedFighters() {
   return insertedFighters;
 }
 
+async function seedRankings() {
+  await sql`
+    CREATE TABLE IF NOT EXISTS rankings (
+      id SERIAL PRIMARY KEY,
+      organization_id INT NOT NULL REFERENCES organizations(id) ON DELETE CASCADE,
+      -- Verbatim division label as published by the org's own source (UFC.com
+      -- for now), e.g. "Flyweight", "Women's Strawweight", "Men's Pound-for-
+      -- Pound Top Rank". Deliberately NOT matched or foreign-keyed against
+      -- fighters.weight_class -- that column is freeform Sherdog text (see
+      -- data/scrapers/parse.ts) that doesn't even distinguish women's
+      -- divisions. Grouping/display for this feature always uses this
+      -- column, never fighters.weight_class.
+      weight_class VARCHAR(100) NOT NULL,
+      -- 0 = champion (UFC.com shows the champion in the table's caption, not
+      -- as a numbered row -- the scraper normalizes that to rank 0).
+      -- 1-15 = numbered contenders.
+      rank SMALLINT NOT NULL,
+      -- Always populated even when fighter_id can't be resolved, so the UI
+      -- can still render the name as plain text.
+      fighter_name VARCHAR(255) NOT NULL,
+      -- SET NULL, not CASCADE: losing the name-match shouldn't delete the
+      -- ranking row itself, just fall back to displaying fighter_name.
+      fighter_id INT REFERENCES fighters(id) ON DELETE SET NULL,
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      UNIQUE (organization_id, weight_class, rank)
+    );
+  `;
+}
+
 async function seedPickemSchema() {
   await sql`
     CREATE TABLE IF NOT EXISTS users (
@@ -260,6 +289,7 @@ export async function GET() {
     await seedEvents();        // Dépend de `organizations`
     await seedFighters();      // Peut dépendre de `organizations`
     await seedFights();        // Dépend de `events` et `fighters`
+    await seedRankings();      // Dépend de `organizations` et `fighters` (fighter_id FK)
     await seedPickemSchema();  // Dépend de `fighters` (predicted_winner_id FK)
 
     return Response.json({ message: 'Database seeded successfully' });
