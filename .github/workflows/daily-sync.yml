@@ -48,6 +48,11 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+      - name: Sync UFC rankings from ufc.com
+        run: npx tsx data/scrapers/sync-ufc-rankings.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
       - name: Sync fighter Sherdog history to Neon
         run: npx tsx data/scrapers/sync-fighter-history.ts
         env:
