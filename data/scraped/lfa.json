@@ -1483,11 +1483,11 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896411"
     },
     {
-      "name": "LFA 245 - Legacy Fighting Alliance",
+      "name": "LFA 245 - Khamzaev vs. Prescendo",
       "date": "2026-10-30",
       "start_time": "2026-10-30T00:00:00+00:00",
       "event_location": "Seneca Niagara Resort and Casino, Niagara Falls, New York, United States",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896910"
     }
   ],
   "fighters": [
@@ -437186,6 +437186,19 @@
       "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Ansar Khamzaev",
+      "fighter2_name": "Juliano Prescendo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }
