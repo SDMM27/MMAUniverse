@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { fetchFighterById, fetchFighterFightHistory } from '@/data/lib/data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
 import { CoverImage } from '@/components/ui/shared/media';
+import { CountryFlag } from '@/components/ui/shared/country-flag';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
 import FighterRecordCard from '@/components/ui/fighters/fighter-record-card';
 import EmptyState from '@/components/ui/shared/empty-state';
@@ -46,7 +47,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     #{fighter.ranking}
                   </span>
                 )}
-                {fighter.nationality && <span>{fighter.nationality}</span>}
+                <CountryFlag code={fighter.nationality} className="text-lg" />
                 {fighter.record && <span className="font-display text-ink-primary">{fighter.record}</span>}
               </div>
             </div>
