@@ -1,6 +1,6 @@
 import { View, Text, Image, Pressable } from 'react-native';
 import type { EventWithOrganization, Fighter, FighterWithOrganization, FightWithFighters, Organization } from '../lib/types';
-import { countryCodeToFlag } from '../lib/flag-utils';
+import { CountryFlag } from './country-flag';
 
 export function OrganizationCard({ organization, onPress }: { organization: Organization; onPress: () => void }) {
   return (
@@ -46,7 +46,10 @@ export function FighterCard({ fighter, onPress }: { fighter: FighterWithOrganiza
     >
       <Image source={{ uri: fighter.image_url }} accessible={false} className="h-12 w-12 rounded-full" />
       <View className="flex-1">
-        <Text className="text-base font-semibold text-ink-primary">{fighter.name}</Text>
+        <View className="flex-row items-center gap-1.5">
+          <CountryFlag code={fighter.nationality} height={12} />
+          <Text className="text-base font-semibold text-ink-primary">{fighter.name}</Text>
+        </View>
         <Text className="text-xs text-ink-secondary">
           {fighter.organization_abbreviation} · {fighter.weight_class} · {fighter.record}
         </Text>
@@ -195,13 +198,12 @@ function FightCardFighterColumn({
   status: FightStatus;
   winnerId: number | null;
 }) {
-  const flag = countryCodeToFlag(fighter.nationality);
   const result = winnerId === null ? 'draw' : winnerId === fighter.id ? 'win' : 'loss';
 
   return (
     <View className="flex-1 items-center gap-1">
       <Image source={{ uri: fighter.image_url }} accessible={false} className="h-12 w-12 rounded-full" />
-      {flag && <Text className="text-sm">{flag}</Text>}
+      <CountryFlag code={fighter.nationality} height={14} />
       <Text className="font-display text-sm uppercase tracking-wide text-ink-primary">{fighter.name}</Text>
       {status === 'finished' ? (
         <Text className={`font-display text-lg font-bold ${resultColor[result]}`}>{resultLabel[result]}</Text>
