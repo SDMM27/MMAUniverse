@@ -965,7 +965,7 @@
       "date": "2026-11-14",
       "start_time": "2026-11-14T00:00:00+00:00",
       "event_location": "Coca-Cola Arena, Dubai, United Arab Emirates",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897133"
     },
     {
       "name": "Professional Fighters League - PFL Lyon",
@@ -234461,6 +234461,19 @@
       "time": "",
       "weight_class": "Welterweight",
       "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Dubai",
+      "fighter1_name": "Oleg Popov",
+      "fighter2_name": "Pouya Rahmani",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": true,
       "is_title_fight": false
     }
   ]
