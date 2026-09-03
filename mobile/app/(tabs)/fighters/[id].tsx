@@ -1,9 +1,11 @@
-import { View, Text, Image, FlatList } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { getFighter } from '../../../lib/api';
 import { useApi } from '../../../lib/use-api';
 import { Loading, ErrorState, EmptyState } from '../../../components/state';
 import FighterRecordCard from '../../../components/fighter-record-card';
+import { CountryFlag } from '../../../components/country-flag';
+import { FighterPhoto } from '../../../components/fighter-photo';
 
 const RESULT_LABEL: Record<string, string> = { win: 'V', loss: 'D', draw: 'N', nc: 'SD', upcoming: 'À venir' };
 const RESULT_COLOR: Record<string, string> = {
@@ -32,13 +34,16 @@ export default function FighterDetailScreen() {
       ListHeaderComponent={
         <View className="mb-4 gap-4">
           <View className="flex-row items-center gap-4">
-            <Image source={{ uri: fighter.image_url }} className="h-20 w-20 rounded-full" />
+            <FighterPhoto uri={fighter.image_url} name={fighter.name} className="h-20 w-20 rounded-full" />
             <View>
               <Text className="font-display text-xs uppercase tracking-wide text-accent">
                 {fighter.organization_abbreviation} · {fighter.weight_class}
               </Text>
               <Text className="font-display text-2xl uppercase text-ink-primary">{fighter.name}</Text>
-              <Text className="text-sm text-ink-secondary">{fighter.record}</Text>
+              <View className="mt-1 flex-row items-center gap-1.5">
+                <CountryFlag code={fighter.nationality} height={14} />
+                <Text className="text-sm text-ink-secondary">{fighter.record}</Text>
+              </View>
             </View>
           </View>
           <FighterRecordCard stats={stats} />

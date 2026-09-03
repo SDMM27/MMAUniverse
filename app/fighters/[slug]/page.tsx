@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { fetchFighterById, fetchFighterFightHistory } from '@/data/lib/data';
+import { fetchFighterById, fetchFighterFightHistory, fetchFighterRankings } from '@/data/lib/data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
 import { CoverImage } from '@/components/ui/shared/media';
+import { CountryFlag } from '@/components/ui/shared/country-flag';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
 import FighterRecordCard from '@/components/ui/fighters/fighter-record-card';
 import EmptyState from '@/components/ui/shared/empty-state';
@@ -15,6 +16,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
   }
 
   const fights = await fetchFighterFightHistory(params.slug);
+  const rankings = await fetchFighterRankings(params.slug);
+  // Prefer a weight-class ranking over Pound-for-Pound for the header pill --
+  // P4P is a bonus distinction, the weight-class rank is the primary one.
+  const primaryRanking = rankings.find((r) => !r.weight_class.includes('Pound-for-Pound')) ?? rankings[0];
   const stats = computeFighterStats(fights);
   // Soonest booked bout, if any — spotlighted in the header. Excluded from the
   // Historique table below (that's completed fights only) so it isn't shown twice.
@@ -41,12 +46,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 {fighter.name}
               </h1>
               <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-secondary">
-                {fighter.ranking > 0 && (
+                {primaryRanking && (
                   <span className="rounded bg-accent/15 px-2 py-0.5 font-display text-xs uppercase tracking-wide text-accent">
-                    #{fighter.ranking}
+                    {primaryRanking.rank === 0 ? 'Champion' : `#${primaryRanking.rank}`}
                   </span>
                 )}
-                {fighter.nationality && <span>{fighter.nationality}</span>}
+                <CountryFlag code={fighter.nationality} className="text-lg" />
                 {fighter.record && <span className="font-display text-ink-primary">{fighter.record}</span>}
               </div>
             </div>

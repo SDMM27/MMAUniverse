@@ -1,8 +1,11 @@
 import { notFound } from 'next/navigation';
-import { fetchOrganizationById, fetchEventsByOrg } from '@/data/lib/data';
+import { fetchOrganizationById, fetchEventsByOrg, fetchFightersByOrg, fetchRankingsByOrg } from '@/data/lib/data';
 import { CoverImage } from '@/components/ui/shared/media';
-import EventsByStatus from '@/components/ui/events/events-by-status';
-import EmptyState from '@/components/ui/shared/empty-state';
+import OrganizationHubTabs from '@/components/ui/organizations/organization-hub-tabs';
+
+// Queries the DB on every request instead of at build time — Vercel's build
+// step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
+export const dynamic = 'force-dynamic';
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const organization = await fetchOrganizationById(params.slug);
@@ -11,7 +14,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  const events = await fetchEventsByOrg(params.slug);
+  // Fetched eagerly (not lazily per-tab) since this is a single server
+  // component render and all three queries are cheap/unpaginated -- avoids a
+  // client-side waterfall or a route handler just to lazy-load a tab's data.
+  const [events, fighters, rankings] = await Promise.all([
+    fetchEventsByOrg(params.slug),
+    fetchFightersByOrg(params.slug),
+    fetchRankingsByOrg(params.slug),
+  ]);
 
   return (
     <main className="flex min-h-screen flex-col gap-6 p-6">
@@ -22,18 +32,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{organization.name}</h1>
         </div>
       </div>
-      {events.length === 0 ? (
-        <EmptyState
-          title="Aucun événement programmé"
-          description="Revenez plus tard pour les prochains events de cette organisation."
-        />
-      ) : (
-        <EventsByStatus
-          events={events}
-          emptyUpcoming="Aucun événement à venir pour cette organisation"
-          emptyPast="Aucun événement passé pour cette organisation"
-        />
-      )}
+      <OrganizationHubTabs events={events} fighters={fighters} rankings={rankings} />
     </main>
   );
 }

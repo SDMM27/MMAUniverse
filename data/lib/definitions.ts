@@ -46,6 +46,29 @@ export type Fighter = {
     nationality: string | null;
   };
 
+export type Ranking = {
+    id: number;
+    organization_id: number;
+    // Verbatim division label as published by the org's own source (UFC.com
+    // for now), e.g. "Flyweight", "Women's Strawweight", "Men's Pound-for-
+    // Pound Top Rank". Deliberately NOT matched or foreign-keyed against
+    // Fighter.weight_class -- that field is freeform Sherdog text (see
+    // data/scrapers/parse.ts) that doesn't even distinguish women's
+    // divisions. Grouping/display for rankings always uses this field.
+    weight_class: string;
+    rank: number; // 0 = champion, 1-15 = ranked contenders
+    fighter_name: string;
+    fighter_id: number | null;
+    updated_at: string;
+  };
+
+// LEFT JOINed with fighters in fetchRankingsByOrg so a row with an unmatched
+// fighter_id (NULL) still renders using fighter_name alone.
+export type RankingWithFighter = Ranking & {
+  fighter_image_url: string | null;
+  fighter_record: string | null;
+};
+
 export type EventWithOrganization = Event & {
   organization_abbreviation: string;
 };

@@ -3,6 +3,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { inter, oswald } from "@/components/ui/fonts";
 import Nav from "@/components/ui/nav";
 import "./globals.css";
+import "flag-icons/css/flag-icons.min.css";
 
 export const metadata: Metadata = {
   title: "MMA Universe",

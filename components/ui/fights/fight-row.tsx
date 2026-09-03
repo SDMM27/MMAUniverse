@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
+import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { Fighter, FightWithFighters } from '@/data/lib/definitions';
 
 type FightOutcome = 'win' | 'loss' | 'draw';
@@ -79,6 +80,7 @@ function FighterSide({
               {outcomeLabel[outcome]}
             </span>
           )}
+          <CountryFlag code={fighter.nationality} className="shrink-0 text-lg" />
           <p
             className={`truncate font-display text-base uppercase tracking-wide ${outcome === 'loss' ? 'text-ink-secondary' : 'text-ink-primary'}`}
           >
