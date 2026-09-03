@@ -1,7 +1,7 @@
 // data/lib/event-utils.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { computeNextEventForHome, groupUpcomingByWeek, splitEventsByStatus } from './event-utils';
+import { computeNextEventForHome, groupUpcomingByWeek, prioritizeOrganization, splitEventsByStatus } from './event-utils';
 import type { Event } from './definitions';
 
 // Dates far enough in the past/future to stay stable regardless of when the
@@ -184,4 +184,38 @@ test('computeNextEventForHome falls back to the last past event of any org when 
 
 test('computeNextEventForHome returns null for an empty input', () => {
   assert.equal(computeNextEventForHome([]), null);
+});
+
+test('prioritizeOrganization moves priority-org items before others, preserving relative order within each group', () => {
+  const items = [
+    { id: 1, organization_abbreviation: 'PFL' },
+    { id: 2, organization_abbreviation: 'UFC' },
+    { id: 3, organization_abbreviation: 'PFL' },
+    { id: 4, organization_abbreviation: 'UFC' },
+  ];
+
+  const result = prioritizeOrganization(items, 'UFC');
+
+  assert.deepEqual(
+    result.map((item) => item.id),
+    [2, 4, 1, 3],
+  );
+});
+
+test('prioritizeOrganization returns items unchanged in order when none match', () => {
+  const items = [
+    { id: 1, organization_abbreviation: 'PFL' },
+    { id: 2, organization_abbreviation: 'Bellator' },
+  ];
+
+  const result = prioritizeOrganization(items, 'UFC');
+
+  assert.deepEqual(
+    result.map((item) => item.id),
+    [1, 2],
+  );
+});
+
+test('prioritizeOrganization returns an empty array for an empty input', () => {
+  assert.deepEqual(prioritizeOrganization([], 'UFC'), []);
 });
