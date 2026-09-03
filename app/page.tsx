@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights } from '@/data/lib/data';
-import { computeNextEventForHome } from '@/data/lib/event-utils';
+import { computeNextEventForHome, groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
 import NextEventHero from '@/components/ui/events/next-event-hero';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightResultRow from '@/components/ui/fights/fight-result-row';
+import EventCard from '@/components/ui/events/event-card';
 import EmptyState from '@/components/ui/shared/empty-state';
 
 // Queries the DB on every request instead of at build time — Vercel's build
@@ -37,6 +38,12 @@ export default async function Page() {
   // the hero's fighter photos and for the "Combat principal" card below.
   const heroFight = nextEventFights[0] ?? null;
 
+  const { upcoming } = splitEventsByStatus(events);
+  const { thisWeek } = groupUpcomingByWeek(upcoming);
+  // The hero's own event already gets its own spotlight above — don't list
+  // it a second time here.
+  const weeklyEvents = thisWeek.filter((event) => event.id !== heroEvent?.id);
+
   return (
     <main className="flex min-h-screen flex-col gap-8 p-6">
       {next ? (
@@ -59,6 +66,22 @@ export default async function Page() {
             </Link>
           </div>
           <FightCard fight={heroFight} event={heroEvent} />
+        </section>
+      )}
+
+      {weeklyEvents.length > 0 && (
+        <section>
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Cette semaine</h2>
+            <Link href="/events" className="text-xs uppercase tracking-wide text-accent hover:underline">
+              Voir tous les événements
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+            {weeklyEvents.map((event) => (
+              <EventCard key={event.id} event={event} />
+            ))}
+          </div>
         </section>
       )}
 
