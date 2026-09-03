@@ -156,3 +156,19 @@ export function computeNextEventForHome<T extends Event & { organization_abbrevi
 
   return computeNextEvent(events);
 }
+
+/**
+ * Stable-sorts `items` so every item whose `organization_abbreviation`
+ * matches `priorityAbbreviation` comes before every item that doesn't,
+ * preserving relative order within each group. Used to bubble UFC results
+ * to the top of "Derniers résultats" without disturbing the date ordering
+ * already applied upstream (Array.prototype.sort is a stable sort in
+ * Node/V8, guaranteed by the spec since ES2019).
+ */
+export function prioritizeOrganization<T extends { organization_abbreviation: string }>(
+  items: T[],
+  priorityAbbreviation: string,
+): T[] {
+  const rank = (item: T) => (item.organization_abbreviation === priorityAbbreviation ? 0 : 1);
+  return [...items].sort((a, b) => rank(a) - rank(b));
+}
