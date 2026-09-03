@@ -1,7 +1,7 @@
 // data/lib/event-utils.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { groupUpcomingByWeek, splitEventsByStatus } from './event-utils';
+import { computeNextEventForHome, groupUpcomingByWeek, splitEventsByStatus } from './event-utils';
 import type { Event } from './definitions';
 
 // Dates far enough in the past/future to stay stable regardless of when the
@@ -128,4 +128,60 @@ test('groupUpcomingByWeek returns empty groups for an empty input', () => {
 
   assert.deepEqual(thisWeek, []);
   assert.deepEqual(later, []);
+});
+
+function makeEventWithOrg(id: number, date: string, organizationAbbreviation: string): Event & { organization_abbreviation: string } {
+  return { ...makeEvent(id, date), organization_abbreviation: organizationAbbreviation };
+}
+
+test('computeNextEventForHome returns the next UFC event even when another org has a sooner one', () => {
+  const events = [
+    makeEventWithOrg(1, FUTURE[0], 'PFL'),
+    makeEventWithOrg(2, FUTURE[1], 'UFC'),
+  ];
+
+  const result = computeNextEventForHome(events);
+
+  assert.equal(result?.event.id, 2);
+  assert.equal(result?.isUpcoming, true);
+});
+
+test('computeNextEventForHome picks the soonest UFC event when several are upcoming', () => {
+  const events = [
+    makeEventWithOrg(1, FUTURE[2], 'UFC'),
+    makeEventWithOrg(2, FUTURE[0], 'UFC'),
+    makeEventWithOrg(3, FUTURE[1], 'UFC'),
+  ];
+
+  const result = computeNextEventForHome(events);
+
+  assert.equal(result?.event.id, 2);
+});
+
+test('computeNextEventForHome falls back to the next event of any org when no UFC event is upcoming', () => {
+  const events = [
+    makeEventWithOrg(1, PAST[0], 'UFC'),
+    makeEventWithOrg(2, FUTURE[0], 'PFL'),
+  ];
+
+  const result = computeNextEventForHome(events);
+
+  assert.equal(result?.event.id, 2);
+  assert.equal(result?.isUpcoming, true);
+});
+
+test('computeNextEventForHome falls back to the last past event of any org when nothing is upcoming anywhere', () => {
+  const events = [
+    makeEventWithOrg(1, PAST[0], 'UFC'),
+    makeEventWithOrg(2, PAST[1], 'PFL'),
+  ];
+
+  const result = computeNextEventForHome(events);
+
+  assert.equal(result?.event.id, 2);
+  assert.equal(result?.isUpcoming, false);
+});
+
+test('computeNextEventForHome returns null for an empty input', () => {
+  assert.equal(computeNextEventForHome([]), null);
 });

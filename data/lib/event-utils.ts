@@ -115,3 +115,44 @@ export function computeNextEventByOrg<T extends Event & { organization_abbreviat
   }
   return result;
 }
+
+// UFC is the most-followed organization and gets priority placement on the
+// home hero. This is a hardcoded rule, not a generic popularity system — a
+// real preference-based ranking (favorited orgs/fighters) needs user
+// accounts, which don't exist yet (see docs/superpowers/specs/2026-08-20-home-editorial-redesign-design.md,
+// Profile section).
+const PRIORITY_ORGANIZATION_ABBREVIATION = 'UFC';
+
+/**
+ * Home hero event selection: prefers the next upcoming UFC event over any
+ * other organization's, even when another org's event is chronologically
+ * sooner. Falls back to computeNextEvent's normal any-org behavior (soonest
+ * upcoming event, or last past event if nothing is upcoming anywhere) when
+ * there's no upcoming UFC event in `events`.
+ *
+ * Precondition: like computeNextEvent, this assumes `events` itself is
+ * already date-ascending (true of events as fetched from the DB). The
+ * `.sort()` below only re-establishes that ordering for the UFC-filtered
+ * subset, which callers can't easily pre-sort themselves after filtering the
+ * full list; it does not protect the `computeNextEvent(events)` fallback
+ * branch, which trusts the caller's original ordering same as
+ * computeNextEvent/computeNextEventByOrg do.
+ */
+export function computeNextEventForHome<T extends Event & { organization_abbreviation: string }>(
+  events: T[],
+): { event: T; isUpcoming: boolean } | null {
+  // computeNextEvent expects date-ascending input (it takes the first match
+  // rather than sorting) — true of events as fetched from the DB, but not
+  // guaranteed once filtered down to just the priority org, so sort
+  // explicitly rather than relying on the caller's original ordering.
+  const priorityEvents = events
+    .filter((event) => event.organization_abbreviation === PRIORITY_ORGANIZATION_ABBREVIATION)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  const nextPriorityEvent = computeNextEvent(priorityEvents);
+
+  if (nextPriorityEvent && nextPriorityEvent.isUpcoming) {
+    return nextPriorityEvent;
+  }
+
+  return computeNextEvent(events);
+}
