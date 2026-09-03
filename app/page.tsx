@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights } from '@/data/lib/data';
-import { computeNextEvent } from '@/data/lib/event-utils';
+import { computeNextEventForHome } from '@/data/lib/event-utils';
 import { splitMainEvent } from '@/data/lib/fight-utils';
 import NextEventHero from '@/components/ui/events/next-event-hero';
 import FightCard from '@/components/ui/fights/fight-card';
@@ -16,14 +16,14 @@ const RECENT_RESULTS_COUNT = 4;
 
 export default async function Page() {
   const events = await fetchAllEvents();
-  const next = computeNextEvent(events);
+  const next = computeNextEventForHome(events);
 
   // Fetched unconditionally (not just when isUpcoming) because the hero now
   // builds its visual from the main-event fighters' photos rather than
   // Sherdog's event poster — see NextEventHero. The "Combats à venir" section
   // below still only lists fights for an actually-upcoming hero event: when
-  // there's no future event in DB, computeNextEvent falls back to the last
-  // past event, which has nothing left "à venir" to show there.
+  // there's no future event in DB, computeNextEventForHome falls back to
+  // the last past event, which has nothing left "à venir" to show there.
   const [nextEventFights, recentResults] = await Promise.all([
     next ? fetchFightsByEvent(String(next.event.id)) : Promise.resolve([]),
     fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
