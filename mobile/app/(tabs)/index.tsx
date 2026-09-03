@@ -2,9 +2,8 @@ import { View, Text, ScrollView, Image, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
 import { getHome } from '../../lib/api';
 import { useApi } from '../../lib/use-api';
-import { splitMainEvent } from '../../lib/fight-utils';
 import { Loading, ErrorState, EmptyState } from '../../components/state';
-import { OrganizationCard, FightCard } from '../../components/cards';
+import { OrganizationCard, FightCard, EventCard } from '../../components/cards';
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -13,8 +12,13 @@ export default function HomeScreen() {
   if (state.status === 'loading') return <Loading />;
   if (state.status === 'error') return <ErrorState message={state.message} onRetry={reload} />;
 
-  const { nextEvent, organizations, fights } = state.data;
-  const { mainEvent } = splitMainEvent(fights);
+  const { nextEvent, organizations, fights, weeklyEvents } = state.data;
+  // is_main_event is never actually set to true anywhere in the
+  // scrapers/seed, so there's no reliable flag to pick "the" main event out
+  // of `fights`. The API orders fights `is_main_event DESC, id ASC` (see
+  // data/lib/data.ts), so the first fetched fight is the closest thing to a
+  // main event the data supports today.
+  const mainEvent = fights[0] ?? null;
 
   return (
     <ScrollView className="flex-1 bg-base-bg" contentContainerStyle={{ padding: 16, gap: 24 }}>
@@ -46,6 +50,15 @@ export default function HomeScreen() {
           event={nextEvent.event}
           onPress={() => router.push(`/events/${nextEvent.event.id}`)}
         />
+      )}
+
+      {weeklyEvents.length > 0 && (
+        <View className="gap-3">
+          <Text className="font-display text-lg uppercase text-ink-primary">Cette semaine</Text>
+          {weeklyEvents.map((event) => (
+            <EventCard key={event.id} event={event} onPress={() => router.push(`/events/${event.id}`)} />
+          ))}
+        </View>
       )}
 
       <View className="gap-3">
