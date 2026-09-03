@@ -159793,19 +159793,6 @@
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Roberto Satoshi de Souza",
-      "fighter2_name": "Shunta Nomura",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
       "fighter1_name": "Karshyga Dautbek",
       "fighter2_name": "Ren Hiramoto",
       "fight_finished": false,
@@ -159814,6 +159801,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Super Rizin 5",
+      "fighter1_name": "Roberto Satoshi de Souza",
+      "fighter2_name": "Shunta Nomura",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -159853,19 +159853,6 @@
       "round": 0,
       "time": "",
       "weight_class": "108lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Daichi Tomizawa",
-      "fighter2_name": "Ryo Kawabata",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "130lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
