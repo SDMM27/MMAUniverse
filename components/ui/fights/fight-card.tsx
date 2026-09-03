@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
+import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { Fighter, FightWithFighters } from '@/data/lib/definitions';
-import { countryCodeToFlag } from '@/data/lib/flag-utils';
 
 type FightStatus = 'upcoming' | 'live' | 'finished';
 
@@ -95,7 +95,6 @@ function FighterColumn({
   status: FightStatus;
   winnerId: number | null;
 }) {
-  const flag = countryCodeToFlag(fighter.nationality);
   const result = winnerId === null ? 'draw' : winnerId === fighter.id ? 'win' : 'loss';
 
   return (
@@ -112,11 +111,7 @@ function FighterColumn({
         className="h-20 w-20 rounded-md sm:h-28 sm:w-28"
         objectPosition="top"
       />
-      {flag && (
-        <span className="text-xl" aria-hidden="true">
-          {flag}
-        </span>
-      )}
+      <CountryFlag code={fighter.nationality} />
       <span className="w-full truncate font-display text-base uppercase tracking-wide text-ink-primary sm:text-xl">
         {fighter.name}
       </span>
