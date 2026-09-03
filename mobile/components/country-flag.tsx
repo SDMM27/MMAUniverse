@@ -23,6 +23,13 @@
 // lipis/flag-icons-adjacent project the web app's `flag-icons` npm package
 // comes from — confirmed it serves the same "gb-eng"/"gb-nir"/"gb-sct"/
 // "gb-wls" subdivision codes) instead of relying on any device's emoji font.
+//
+// flagcdn only serves a fixed list of pixel sizes per axis (h20/h24/h40/h48/
+// h60/h80/..., not arbitrary values — confirmed directly: h28 404s while its
+// neighbors h24 and h40 both work) — so this always fetches the same safe,
+// known-good "w80" source image and lets RN scale it down to `height` via
+// `resizeMode: 'contain'`, rather than trying to compute a source size from
+// the requested display size and risk landing on an unsupported one again.
 import { Image } from 'react-native';
 
 const NON_ISO_UK_CODES: Record<string, string> = {
@@ -46,7 +53,7 @@ export function CountryFlag({ code, height = 16 }: { code: string | null; height
 
   return (
     <Image
-      source={{ uri: `https://flagcdn.com/h${height * 2}/${flagCode}.png` }}
+      source={{ uri: `https://flagcdn.com/w80/${flagCode}.png` }}
       accessible
       accessibilityRole="image"
       accessibilityLabel={`Drapeau : ${code.trim().toUpperCase()}`}
