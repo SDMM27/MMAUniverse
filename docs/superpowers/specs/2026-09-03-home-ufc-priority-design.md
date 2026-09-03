@@ -34,8 +34,8 @@ Comportement résultant :
 Dans `fetchRecentFinishedFights(limit)` ([data/lib/data.ts](../../../data/lib/data.ts:393)) :
 
 - La requête SQL récupère un pool plus large que `limit`, trié par date d'event décroissante (comme aujourd'hui) — `POOL_SIZE = 20` (constante locale au fichier), plutôt que `LIMIT ${limit}` directement.
-- En JS après le mapping des lignes : trier ce pool par `(organization_abbreviation === 'UFC' ? 0 : 1)` d'abord, puis par `event_date` décroissant en cas d'égalité sur ce premier critère (tri stable — `Array.prototype.sort` est stable en JS/V8, donc l'ordre par date déjà appliqué par SQL est préservé à l'intérieur de chaque groupe).
-- Couper à `limit` (4 aujourd'hui, appelant inchangé) après ce tri.
+- Le tri du pool est délégué à une nouvelle fonction pure `prioritizeOrganization` dans [data/lib/event-utils.ts](../../../data/lib/event-utils.ts) (testable unitairement sans DB, voir section Tests) : prend un tableau d'éléments portant `organization_abbreviation` + un critère de tri secondaire déjà appliqué en amont (ici l'ordre par date, préservé), et renvoie le tableau réordonné avec l'org prioritaire (`'UFC'`) en tête, tri stable (`Array.prototype.sort` est stable en JS/V8 — l'ordre par date déjà appliqué par SQL est donc préservé à l'intérieur de chaque groupe UFC / non-UFC).
+- `fetchRecentFinishedFights` appelle `prioritizeOrganization(rows, 'UFC')` après le mapping des lignes, puis coupe à `limit` (4 aujourd'hui, appelant inchangé).
 
 Effet : les résultats UFC parmi les 20 plus récents (toutes orgs) remontent en tête des 4 affichés, sans jamais faire apparaître un vieux résultat UFC (en dehors du pool des 20 plus récents) au-dessus d'un résultat récent d'une autre org — le pool borne la fraîcheur avant que la priorité UFC ne s'applique.
 
@@ -62,10 +62,14 @@ Inchangés par rapport au comportement actuel :
 
 ## Tests
 
-Pas de suite de tests automatisés dans le projet (cf. spec refonte front web du 2026-08-15) ; vérification manuelle via navigateur. Cas à vérifier manuellement :
-- Event UFC à venir + event d'une autre org chronologiquement plus proche → hero affiche l'UFC.
-- Aucun event UFC à venir, autre org en a un → hero affiche cette autre org.
-- Résultats récents mixtes (UFC + autres orgs) → UFC remonte en tête des 4 affichés, ordre chronologique préservé au sein de chaque groupe.
+Le projet a une suite de tests unitaires (`npm test` → `tsx --test "data/**/*.test.ts"`, runner natif Node) pour les fonctions pures de `data/lib/`, dont déjà [event-utils.test.ts](../../../data/lib/event-utils.test.ts). `computeNextEventForHome` étant une fonction pure (pas d'accès DB), elle est testable unitairement selon les mêmes conventions — cas à couvrir :
+- Event UFC à venir + event d'une autre org chronologiquement plus proche → retourne l'event UFC.
+- Aucun event UFC à venir, autre org en a un → retourne l'event de cette autre org (fallback).
+- Aucun event à venir nulle part (toutes orgs) → retourne le dernier event passé, `isUpcoming: false` (fallback du fallback).
+- Liste d'events vide → retourne `null`.
+- Plusieurs events UFC à venir → retourne le plus proche (pas juste le premier de la liste).
+
+`fetchRecentFinishedFights` touche la DB (comme le reste de `data/lib/data.ts`, qui n'a aucun test unitaire aujourd'hui — pas de mock DB dans le projet) ; le tri UFC-d'abord qu'elle applique est en revanche une fonction pure et peut être extraite dans `event-utils.ts` (ex. `sortWithOrgFirst` ou logique inline testable séparément) plutôt que testée seulement via la DB. Vérification manuelle via navigateur pour l'intégration bout-en-bout (hero + section résultats sur la page réelle).
 
 ## Hors périmètre (rappel)
 
