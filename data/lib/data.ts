@@ -7,7 +7,7 @@ import {
     FightWithFighters,
     FightResultWithContext,
   } from './definitions';
-import { prioritizeOrganization } from './event-utils';
+import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization } from './event-utils';
 
 export async function fetchOrganizations() {
     try {
@@ -481,7 +481,7 @@ export async function fetchRecentFinishedFights(limit: number) {
         : null,
     })) as FightResultWithContext[];
 
-    return prioritizeOrganization(mapped, 'UFC').slice(0, limit);
+    return prioritizeOrganization(mapped, PRIORITY_ORGANIZATION_ABBREVIATION).slice(0, limit);
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch recent finished fights.');

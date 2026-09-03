@@ -117,11 +117,14 @@ export function computeNextEventByOrg<T extends Event & { organization_abbreviat
 }
 
 // UFC is the most-followed organization and gets priority placement on the
-// home hero. This is a hardcoded rule, not a generic popularity system — a
-// real preference-based ranking (favorited orgs/fighters) needs user
-// accounts, which don't exist yet (see docs/superpowers/specs/2026-08-20-home-editorial-redesign-design.md,
+// home page (hero selection here, and result ordering in
+// fetchRecentFinishedFights in data.ts, which imports this constant rather
+// than repeating the literal). This is a hardcoded rule, not a generic
+// popularity system — a real preference-based ranking (favorited
+// orgs/fighters) needs user accounts, which don't exist yet (see
+// docs/superpowers/specs/2026-08-20-home-editorial-redesign-design.md,
 // Profile section).
-const PRIORITY_ORGANIZATION_ABBREVIATION = 'UFC';
+export const PRIORITY_ORGANIZATION_ABBREVIATION = 'UFC';
 
 /**
  * Home hero event selection: prefers the next upcoming UFC event over any
