@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights } from '@/data/lib/data';
 import { computeNextEventForHome } from '@/data/lib/event-utils';
-import { splitMainEvent } from '@/data/lib/fight-utils';
 import NextEventHero from '@/components/ui/events/next-event-hero';
 import FightCard from '@/components/ui/fights/fight-card';
-import FightRow from '@/components/ui/fights/fight-row';
 import FightResultRow from '@/components/ui/fights/fight-result-row';
 import EmptyState from '@/components/ui/shared/empty-state';
 
@@ -20,23 +18,23 @@ export default async function Page() {
 
   // Fetched unconditionally (not just when isUpcoming) because the hero now
   // builds its visual from the main-event fighters' photos rather than
-  // Sherdog's event poster — see NextEventHero. The "Combats à venir" section
-  // below still only lists fights for an actually-upcoming hero event: when
+  // Sherdog's event poster — see NextEventHero. The "Combat principal" section
+  // below still only shows a fight for an actually-upcoming hero event: when
   // there's no future event in DB, computeNextEventForHome falls back to
-  // the last past event, which has nothing left "à venir" to show there.
+  // the last past event, which has no upcoming fight left to show there.
   const [nextEventFights, recentResults] = await Promise.all([
     next ? fetchFightsByEvent(String(next.event.id)) : Promise.resolve([]),
     fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
   ]);
 
-  const { mainEvent, rest } = splitMainEvent(nextEventFights);
   const heroEvent = next && next.isUpcoming ? next.event : null;
-  const heroFights = heroEvent ? nextEventFights : [];
 
-  // The hero's matchup visual can't use `mainEvent` above: is_main_event is
-  // never actually set to true anywhere in the scrapers/seed, so it's always
-  // null in practice. Falling back to the first fetched fight instead — it's
-  // the same fight already shown first in "Combats à venir" below.
+  // is_main_event is never actually set to true anywhere in the
+  // scrapers/seed, so there's no reliable flag to pick "the" main event out
+  // of nextEventFights. fetchFightsByEvent orders by `is_main_event DESC,
+  // id ASC` (see data/lib/data.ts), so the first fetched fight is the
+  // closest thing to a main event the data supports today — used both for
+  // the hero's fighter photos and for the "Combat principal" card below.
   const heroFight = nextEventFights[0] ?? null;
 
   return (
@@ -52,24 +50,15 @@ export default async function Page() {
         <EmptyState title="Aucun événement pour le moment" />
       )}
 
-      {heroFights.length > 0 && heroEvent && (
+      {heroFight && heroEvent && (
         <section>
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Combats à venir</h2>
+            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Combat principal</h2>
             <Link href={`/events/${heroEvent.id}`} className="text-xs uppercase tracking-wide text-accent hover:underline">
               Voir l&apos;événement
             </Link>
           </div>
-          {mainEvent && (
-            <div className="mb-3">
-              <FightCard fight={mainEvent} event={heroEvent} />
-            </div>
-          )}
-          <div className="flex flex-col gap-3">
-            {rest.map((fight) => (
-              <FightRow key={fight.id} fight={fight} />
-            ))}
-          </div>
+          <FightCard fight={heroFight} event={heroEvent} />
         </section>
       )}
 
