@@ -11,6 +11,7 @@ const links = [
   { href: '/events', label: 'Événements' },
   { href: '/fighters', label: 'Fighters' },
   { href: '/organizations', label: 'Organisations' },
+  { href: '/rankings', label: 'Rankings' },
   { href: '/classement', label: 'Classement' },
 ];
 

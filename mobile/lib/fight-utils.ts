@@ -1,7 +1,7 @@
 // mobile/lib/fight-utils.ts
 //
 // Duplicated from data/lib/fight-utils.ts (already covered by
-// data/lib/fight-utils.test.ts) — see the note in mobile/lib/flag-utils.ts.
+// data/lib/fight-utils.test.ts) — see the note in mobile/components/country-flag.tsx.
 export function splitMainEvent<T extends { is_main_event: boolean }>(
   fights: T[],
 ): { mainEvent: T | null; rest: T[] } {

@@ -26,7 +26,8 @@
     "seed:additional-orgs": "tsx data/scrapers/seed-additional-orgs.ts",
     "backfill:fighter-history": "tsx data/scrapers/backfill-fighter-history.ts",
     "sync:fighter-history": "tsx data/scrapers/sync-fighter-history.ts",
-    "sync:ufc-times": "tsx data/scrapers/sync-ufc-broadcast-times.ts"
+    "sync:ufc-times": "tsx data/scrapers/sync-ufc-broadcast-times.ts",
+    "sync:ufc-rankings": "tsx data/scrapers/sync-ufc-rankings.ts"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.39.6",
@@ -35,6 +36,7 @@
     "bcrypt": "^5.1.1",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.4.5",
+    "flag-icons": "^7.5.0",
     "fs": "^0.0.1-security",
     "next": "^14.2.35",
     "path": "^0.12.7",

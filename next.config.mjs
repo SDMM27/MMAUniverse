@@ -5,7 +5,17 @@ const nextConfig = {
     // see data/scrapers/sherdog.ts) — allow next/image to optimize them. Wildcard
     // covers both the main domain (fighter photos) and its CDN subdomains (event
     // posters, e.g. www1-cdn.sherdog.com).
-    remotePatterns: [{ protocol: 'https', hostname: '**.sherdog.com' }],
+    //
+    // Organization logos (organizations.logo_link, seeded in app/seed/route.ts)
+    // are hotlinked from ESPN instead, across a few different subdomains
+    // (assets.espn.go.com for UFC, a.espncdn.com / a3.espncdn.com for the rest)
+    // -- every organization page/card was throwing "Invalid src prop... hostname
+    // is not configured" until this was added.
+    remotePatterns: [
+      { protocol: 'https', hostname: '**.sherdog.com' },
+      { protocol: 'https', hostname: 'assets.espn.go.com' },
+      { protocol: 'https', hostname: '**.espncdn.com' },
+    ],
   },
   async headers() {
     return [
