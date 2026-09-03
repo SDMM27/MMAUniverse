@@ -109,13 +109,25 @@ const PRIORITY_ORGANIZATION_ABBREVIATION = 'UFC';
  * sooner. Falls back to computeNextEvent's normal any-org behavior (soonest
  * upcoming event, or last past event if nothing is upcoming anywhere) when
  * there's no upcoming UFC event in `events`.
+ *
+ * Precondition: like computeNextEvent, this assumes `events` itself is
+ * already date-ascending (true of events as fetched from the DB). The
+ * `.sort()` below only re-establishes that ordering for the UFC-filtered
+ * subset, which callers can't easily pre-sort themselves after filtering the
+ * full list; it does not protect the `computeNextEvent(events)` fallback
+ * branch, which trusts the caller's original ordering same as
+ * computeNextEvent/computeNextEventByOrg do.
  */
 export function computeNextEventForHome<T extends Event & { organization_abbreviation: string }>(
   events: T[],
 ): { event: T; isUpcoming: boolean } | null {
-  const priorityEvents = events.filter(
-    (event) => event.organization_abbreviation === PRIORITY_ORGANIZATION_ABBREVIATION,
-  );
+  // computeNextEvent expects date-ascending input (it takes the first match
+  // rather than sorting) — true of events as fetched from the DB, but not
+  // guaranteed once filtered down to just the priority org, so sort
+  // explicitly rather than relying on the caller's original ordering.
+  const priorityEvents = events
+    .filter((event) => event.organization_abbreviation === PRIORITY_ORGANIZATION_ABBREVIATION)
+    .sort((a, b) => a.date.localeCompare(b.date));
   const nextPriorityEvent = computeNextEvent(priorityEvents);
 
   if (nextPriorityEvent && nextPriorityEvent.isUpcoming) {
@@ -125,6 +137,8 @@ export function computeNextEventForHome<T extends Event & { organization_abbrevi
   return computeNextEvent(events);
 }
 ```
+
+(Note post-implémentation : le premier jet de ce snippet, sans `.sort()`, échouait sur le test "picks the soonest UFC event when several are upcoming" — `computeNextEvent` fait `events.find(...)`, pas un scan par date, donc un sous-ensemble UFC non trié après filtrage renvoie le premier match du tableau plutôt que le plus proche. Le `.sort()` ci-dessus corrige ça ; c'est la version qui a effectivement été implémentée et review.)
 
 - [ ] **Step 4: Run tests to verify they pass**
 
