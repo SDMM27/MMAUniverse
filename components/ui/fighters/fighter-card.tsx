@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
+import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { FighterWithOrganization } from '@/data/lib/definitions';
 
 export default function FighterCard({ fighter }: { fighter: FighterWithOrganization }) {
@@ -18,7 +19,10 @@ export default function FighterCard({ fighter }: { fighter: FighterWithOrganizat
         <span className="font-display text-xs uppercase tracking-wide text-accent">
           {fighter.organization_abbreviation}
         </span>
-        <p className="font-display text-sm uppercase tracking-wide text-ink-primary">{fighter.name}</p>
+        <div className="flex items-center gap-1.5">
+          <CountryFlag code={fighter.nationality} className="shrink-0 text-sm" />
+          <p className="truncate font-display text-sm uppercase tracking-wide text-ink-primary">{fighter.name}</p>
+        </div>
         <p className="text-xs text-ink-secondary">
           {fighter.weight_class} · {fighter.record}
         </p>
