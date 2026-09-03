@@ -4,6 +4,7 @@ import { getFighter } from '../../../lib/api';
 import { useApi } from '../../../lib/use-api';
 import { Loading, ErrorState, EmptyState } from '../../../components/state';
 import FighterRecordCard from '../../../components/fighter-record-card';
+import { CountryFlag } from '../../../components/country-flag';
 
 const RESULT_LABEL: Record<string, string> = { win: 'V', loss: 'D', draw: 'N', nc: 'SD', upcoming: 'À venir' };
 const RESULT_COLOR: Record<string, string> = {
@@ -38,7 +39,10 @@ export default function FighterDetailScreen() {
                 {fighter.organization_abbreviation} · {fighter.weight_class}
               </Text>
               <Text className="font-display text-2xl uppercase text-ink-primary">{fighter.name}</Text>
-              <Text className="text-sm text-ink-secondary">{fighter.record}</Text>
+              <View className="mt-1 flex-row items-center gap-1.5">
+                <CountryFlag code={fighter.nationality} height={14} />
+                <Text className="text-sm text-ink-secondary">{fighter.record}</Text>
+              </View>
             </View>
           </View>
           <FighterRecordCard stats={stats} />
