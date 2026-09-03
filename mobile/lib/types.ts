@@ -89,6 +89,7 @@ export type HomeResponse = {
   nextEvent: NextEventPayload;
   organizations: Organization[];
   fights: FightWithFighters[];
+  weeklyEvents: EventWithOrganization[];
 };
 
 export type OrgDetailResponse = {
