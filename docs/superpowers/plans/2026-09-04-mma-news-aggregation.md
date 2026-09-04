@@ -1334,3 +1334,156 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 ```
 
 (Skip this step if verification found nothing to fix.)
+
+## Task 11: Post-final-review fixes
+
+The final whole-branch review (after Task 10) found 1 Critical and 3 Important issues. This task addresses them.
+
+### 11a. Critical: cron trigger mechanism
+
+**Problem:** `vercel.ts`'s `*/20 * * * *` schedule is very likely incompatible with a Vercel Hobby (free) plan, which limits cron jobs to once/day — this can make the whole feature silently never run once deployed.
+
+**Fix:** This project already has a working, plan-tier-independent scheduling mechanism: GitHub Actions (`.github/workflows/daily-sync.yml`, `.github/workflows/event-day-sync.yml`), which runs `tsx` scripts directly against `secrets.DATABASE_URL` on a cron schedule with no Vercel-plan dependency at all. Switch the news ingestion trigger to the same mechanism instead of Vercel Cron:
+
+**Files:**
+- Create: `data/news/run-ingest.ts` — a CLI entrypoint, following the exact `loadEnvLocal()` pattern from `data/scrapers/sync-ufc-rankings.ts` (tsx doesn't auto-load `.env.local`; GitHub Actions sets `DATABASE_URL` directly via `secrets.DATABASE_URL`, so `loadEnvLocal()` is a no-op there — it's only for local runs).
+- Create: `.github/workflows/news-sync.yml` — mirrors `daily-sync.yml`'s structure (`on: schedule` + `workflow_dispatch`, `actions/checkout@v4`, `actions/setup-node@v4` at node 20, `npm ci`), but does NOT need `permissions: contents: write` (unlike the scraper workflows, this one never commits/pushes — it only writes to the DB).
+- Modify: `vercel.ts` — remove the `crons` entry (GitHub Actions is now the trigger). If nothing else needs `@vercel/config`/`vercel.ts` at all, remove the file and the dependency entirely rather than leaving an empty config file.
+- Modify: `app/api/cron/news/route.ts` — update the comment: this route is no longer the scheduled trigger, it's kept as a manually-triggerable HTTP endpoint (e.g. for an admin "refresh now" action later, or ad-hoc debugging via `curl` in production), still protected by the same optional `CRON_SECRET` check.
+
+```ts
+// data/news/run-ingest.ts
+import fs from 'node:fs';
+import path from 'node:path';
+import { ingestAllSources } from './fetch-news';
+
+// tsx doesn't auto-load .env.local the way Next.js does — same hand-rolled
+// loader as data/scrapers/sync-ufc-rankings.ts. In GitHub Actions, DATABASE_URL
+// is already set via secrets.DATABASE_URL, so this is a no-op there.
+function loadEnvLocal() {
+  const envPath = path.resolve('.env.local');
+  if (!fs.existsSync(envPath)) return;
+  for (const line of fs.readFileSync(envPath, 'utf-8').split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const eq = trimmed.indexOf('=');
+    if (eq === -1) continue;
+    const key = trimmed.slice(0, eq).trim();
+    let value = trimmed.slice(eq + 1).trim();
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    }
+    if (!(key in process.env)) process.env[key] = value;
+  }
+}
+
+loadEnvLocal();
+
+async function main() {
+  const results = await ingestAllSources();
+  console.log(JSON.stringify(results, null, 2));
+
+  const allFailed = results.length > 0 && results.every((r) => r.error !== null);
+  if (allFailed) {
+    console.error('All news sources failed to ingest.');
+    process.exitCode = 1;
+  }
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
+```
+
+```yaml
+# .github/workflows/news-sync.yml
+name: News sync
+
+# Polls the RSS/Atom sources in data/news/sources.config.ts and ingests new
+# articles into news_articles, every 20 minutes. Runs via GitHub Actions
+# rather than Vercel Cron for the same reason the other scheduled jobs in
+# this repo do (see daily-sync.yml / event-day-sync.yml): Vercel Cron's
+# frequency is limited on non-Pro plans, GitHub Actions isn't.
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+  workflow_dispatch: {}
+
+concurrency:
+  group: mma-universe-news-sync
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Ingest RSS news sources
+        run: npx tsx data/news/run-ingest.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+```
+
+Verify: `npx tsc --noEmit` clean. `npm test` unaffected (no tests for this CLI script, consistent with the rest of `data/scrapers/*.ts`'s entrypoints, which are also untested — only the pure logic they call is tested, same principle already applied throughout this plan).
+
+### 11b. Important: truncate `title`/`url`/`image_url` before insert
+
+**Problem:** `excerpt` is defensively truncated (`truncateExcerpt` in `parse-feed.ts`), but `title` (`VARCHAR(500)`), `url`, and `image_url` (`VARCHAR(1000)` each) are not — an oversized value throws at `INSERT` time, aborts the rest of that source's batch for the run, and since the failed article never gets added to `recentTitles`, it's retried (and refails) on every subsequent run until it ages out of the source's feed.
+
+**Fix:** In `data/news/parse-feed.ts`, add a small generic truncation helper and apply it to `title`, `url`, and `imageUrl` in `parseFeedXml`'s mapping, using limits comfortably under the actual column widths (leave headroom, don't truncate at exactly 500/1000):
+
+```ts
+const TITLE_MAX_LENGTH = 490;
+const URL_MAX_LENGTH = 990;
+
+function truncatePlain(text: string, maxLength: number): string {
+  const trimmed = text.trim();
+  return trimmed.length <= maxLength ? trimmed : trimmed.slice(0, maxLength);
+}
+```
+
+Apply: `title: truncatePlain(item.title!.trim(), TITLE_MAX_LENGTH)`, `url: truncatePlain(item.link!, URL_MAX_LENGTH)`, `imageUrl: item.enclosure?.url ? truncatePlain(item.enclosure.url, URL_MAX_LENGTH) : null`.
+
+A truncated `url` changes what the article links to (unlike `title`/`excerpt`, where truncation just shortens display text) — an oversized URL is already a pathological/unusual case (not something any of the 3 configured real sources produce), so simply dropping any item whose `url` exceeds the limit (via the same `.filter(...)` that already checks `title`/`link`/`pubDate`/http(s)-scheme) is more correct than silently truncating it into a broken link. Use judgment on this distinction: truncate `title`/`imageUrl` (cosmetic-only impact), filter out (don't truncate) an oversized `url`.
+
+Add test cases to `data/news/parse-feed.test.ts` covering: a title over 490 chars gets truncated, a url over 990 chars gets the item dropped entirely (not truncated).
+
+### 11c. Important: document the organization-filter no-op
+
+**Problem:** All 3 configured sources have `orgId: null` (they're general MMA news sites, not org-specific), so `/actualites`'s organization filter currently has no selection that returns any results — it's correctly coded, just inert given current source data.
+
+**Fix:** Add a one-line comment to `data/news/sources.config.ts` (near `NEWS_SOURCES`) noting this explicitly: the org filter UI is fully wired but will show no results for any specific organization until a source with a non-null `orgId` is added — this is expected with the current source list, not a bug.
+
+### 11d. Important: document the `organizations` FK deploy-order dependency
+
+**Problem:** `ensureNewsTable()`'s `org_id INT REFERENCES organizations(id)` requires the `organizations` table to already exist. On the current production DB this is already the case (seeded). On a brand-new/unseeded database (e.g. a fresh preview-branch DB), the first ingestion run fails until `/seed` has been hit once.
+
+**Fix:** Add a one-line comment to `ensureNewsTable()` in `data/news/fetch-news.ts` documenting this deploy-order dependency (seed the `organizations` table — via `/seed` — before the news ingestion job runs against a brand-new database).
+
+### Commit
+
+One commit for all of 11a-11d (or split if it's cleaner to separate the cron-mechanism change from the smaller doc/truncation fixes — use judgment):
+
+```bash
+git commit -m "fix(news): switch cron trigger to GitHub Actions, truncate long fields, document known limitations
+
+Findings from the final whole-branch review:
+- vercel.ts's */20 cron likely exceeds Vercel Hobby plan's daily-only limit;
+  switched to the same GitHub Actions cron mechanism already used by this
+  repo's other scheduled jobs (see .github/workflows/daily-sync.yml).
+- title/url/image_url weren't truncated before insert like excerpt already
+  is, causing a recurring per-run failure for any oversized value.
+- documented two known, accepted limitations (org filter is currently inert
+  given all-null orgId sources; organizations must be seeded before the
+  first ingestion run against a brand-new database).
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
+```
