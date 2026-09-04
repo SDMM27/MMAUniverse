@@ -5,6 +5,11 @@ name: News sync
 # rather than Vercel Cron for the same reason the other scheduled jobs in
 # this repo do (see daily-sync.yml / event-day-sync.yml): Vercel Cron's
 # frequency is limited on non-Pro plans, GitHub Actions isn't.
+#
+# Same caveats already accepted for those other scheduled jobs apply here
+# too: GitHub may delay a scheduled run under load, and GitHub auto-disables
+# a repo's scheduled workflows after 60 days with no commits (workflow_dispatch
+# above lets anyone re-enable/re-run it manually from the Actions tab).
 on:
   schedule:
     - cron: '*/20 * * * *'
