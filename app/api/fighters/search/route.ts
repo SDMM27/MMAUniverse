@@ -1,3 +1,4 @@
+// app/api/fighters/search/route.ts
 import { fetchFighters } from '@/data/lib/data';
 
 // Same reasoning as app/seed/route.ts: without this, @neondatabase/serverless's
