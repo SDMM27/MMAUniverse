@@ -175,3 +175,42 @@ export function prioritizeOrganization<T extends { organization_abbreviation: st
   const rank = (item: T) => (item.organization_abbreviation === priorityAbbreviation ? 0 : 1);
   return [...items].sort((a, b) => rank(a) - rank(b));
 }
+
+/**
+ * Reduces `items` to one entry per `event_id`: the one with `is_main_event`
+ * true, or — when no row for that event is flagged (older events never got
+ * `is_main_event` backfilled) — the one with the lowest `id`. When more than
+ * one row for the same event is flagged `is_main_event` (a data-quality
+ * fluke observed in the DB, e.g. a card with two "semifinal" main events),
+ * picks the lowest `id` among those flagged rows, for a deterministic
+ * result. This is the same "is_main_event, else lowest id" convention
+ * `fetchFightsByEvent`'s `ORDER BY is_main_event DESC, id ASC` and
+ * `splitMainEvent` already use elsewhere — see
+ * docs/superpowers/specs/2026-09-04-home-recent-results-headline-fight-design.md.
+ *
+ * Preserves the order of each event_id's first appearance in `items` —
+ * callers that already sort by event date should keep that ordering by
+ * feeding this function pre-sorted input.
+ */
+export function selectHeadlineFightPerEvent<T extends { event_id: number; id: number; is_main_event: boolean }>(
+  items: T[],
+): T[] {
+  const byEvent = new Map<number, T>();
+  const eventOrder: number[] = [];
+
+  for (const item of items) {
+    const current = byEvent.get(item.event_id);
+    if (!current) {
+      byEvent.set(item.event_id, item);
+      eventOrder.push(item.event_id);
+      continue;
+    }
+
+    const currentIsBetter = current.is_main_event === item.is_main_event ? current.id < item.id : current.is_main_event;
+    if (!currentIsBetter) {
+      byEvent.set(item.event_id, item);
+    }
+  }
+
+  return eventOrder.map((eventId) => byEvent.get(eventId)!);
+}
