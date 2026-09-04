@@ -11,11 +11,12 @@ export const dynamic = 'force-dynamic';
 // Cron — Vercel Cron's frequency is limited on non-Pro plans, which the
 // */20-minute cadence this feature needs would very likely have exceeded.
 // This route is kept as a manually-triggerable HTTP endpoint (e.g. an admin
-// "refresh now" action later, or ad-hoc debugging via curl in production),
-// still gated by CRON_SECRET when it's set (it is on Vercel by default for
-// cron-triggered routes — see the Vercel Cron docs), so it can't be hit by
-// anyone who finds the URL and spams it. Locally (no CRON_SECRET set), any
-// request is allowed.
+// "refresh now" action later, or ad-hoc debugging via curl in production).
+// Nothing sets CRON_SECRET automatically for this route anymore (that only
+// happens for a route Vercel itself schedules, and this one no longer is) —
+// if you want this endpoint gated in production, set CRON_SECRET manually
+// as a project env var and send it as `Authorization: Bearer <secret>`.
+// Unset (the default now), any request is allowed.
 export async function GET(request: Request) {
   if (process.env.CRON_SECRET) {
     const authHeader = request.headers.get('authorization');
@@ -29,8 +30,9 @@ export async function GET(request: Request) {
 
     // ingestAllSources() isolates per-source failures into each result's `error`
     // field rather than throwing, so a total upstream outage (every source
-    // failing) would otherwise still report HTTP 200. Vercel Cron's own health
-    // monitoring keys off status code, so surface that case as a failure.
+    // failing) would otherwise still report HTTP 200. Surface that case as a
+    // non-2xx instead, for whoever's polling/curling this endpoint (monitoring,
+    // an admin tool, manual debugging) — independent of who's calling it.
     const allFailed = results.length > 0 && results.every((r) => r.error !== null);
     if (allFailed) {
       return NextResponse.json({ results }, { status: 502 });
