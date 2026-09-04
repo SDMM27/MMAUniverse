@@ -303,11 +303,11 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/888956"
     },
     {
-      "name": "Ares 44 - Strasbourg",
+      "name": "Ares 44 - Boughanem vs. Soumah",
       "date": "2026-10-31",
       "start_time": "2026-10-31T00:00:00+00:00",
       "event_location": "Zenith of Strasbourg, Strasbourg, France",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895536"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896580"
     },
     {
       "name": "Ares 45 - Zebo vs. Baki 2",
@@ -8382,7 +8382,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Strasbourg",
+      "event_name": "Ares 44 - Boughanem vs. Soumah",
+      "fighter1_name": "Youssef Boughanem",
+      "fighter2_name": "Mohamed Soumah",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "160lbCatchweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 44 - Boughanem vs. Soumah",
       "fighter1_name": "Maher Belkhadir",
       "fighter2_name": "Marc-Philippe Ngatchou",
       "fight_finished": false,
@@ -8391,11 +8404,11 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": true,
+      "is_main_event": false,
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Strasbourg",
+      "event_name": "Ares 44 - Boughanem vs. Soumah",
       "fighter1_name": "Andrii Misiuk",
       "fighter2_name": "Phruethukorn Chaichongcharden",
       "fight_finished": false,
@@ -8408,7 +8421,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Strasbourg",
+      "event_name": "Ares 44 - Boughanem vs. Soumah",
       "fighter1_name": "Sofiane El Fatni",
       "fighter2_name": "Mario Gagliardi",
       "fight_finished": false,
@@ -8417,19 +8430,6 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Ares 44 - Strasbourg",
-      "fighter1_name": "Youssef Boughanem",
-      "fighter2_name": "Mohamed Soumah",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "160lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },

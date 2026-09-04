@@ -771,11 +771,18 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/891242"
     },
     {
-      "name": "KSW 122 - Bartosinski vs. Masaev",
+      "name": "KSW 122 - Yakymenko vs. Morelli",
       "date": "2026-10-10",
       "start_time": "2026-10-10T00:00:00+00:00",
       "event_location": "Podpromie Hall, Rzeszow, Poland",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892480"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/894796"
+    },
+    {
+      "name": "KSW 123 - Bartosinski vs. Lopaczyk",
+      "date": "2026-11-21",
+      "start_time": "2026-11-21T00:00:00+00:00",
+      "event_location": "Netto Arena, Szczecin, Poland",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897173"
     }
   ],
   "fighters": [
@@ -177207,20 +177214,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
-      "fighter1_name": "Adrian Bartosinski",
-      "fighter2_name": "Adam Masaev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Vitalii Yakymenko",
       "fighter2_name": "Marcello Morelli",
       "fight_finished": false,
@@ -177229,11 +177223,11 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": false,
+      "is_main_event": true,
       "is_title_fight": true
     },
     {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Adam Soldaev",
       "fighter2_name": "Mateusz Makarowski",
       "fight_finished": false,
@@ -177246,7 +177240,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Laid Zerhouni",
       "fighter2_name": "Andrzej Grzebyk",
       "fight_finished": false,
@@ -177259,7 +177253,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Sergiusz Zajac",
       "fighter2_name": "Bartosz Szewczyk",
       "fight_finished": false,
@@ -177272,7 +177266,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Welisson Paiva",
       "fighter2_name": "Igor Wlodarczyk",
       "fight_finished": false,
@@ -177285,7 +177279,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Szymon Bajor",
       "fighter2_name": "Kacper Paczoski",
       "fight_finished": false,
@@ -177298,7 +177292,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Sebastian Decowski",
       "fighter2_name": "Andrzej Karkula",
       "fight_finished": false,
@@ -177311,7 +177305,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "KSW 122 - Bartosinski vs. Masaev",
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Kristians Boguzs",
       "fighter2_name": "Kacper Cholewa",
       "fight_finished": false,
@@ -177322,6 +177316,19 @@
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "KSW 123 - Bartosinski vs. Lopaczyk",
+      "fighter1_name": "Adrian Bartosinski",
+      "fighter2_name": "Tymoteusz Lopaczyk",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }
