@@ -8,6 +8,7 @@ import {
     FightResultWithContext,
     Ranking,
     RankingWithFighter,
+    NewsArticle,
   } from './definitions';
 import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization, selectHeadlineFightPerEvent } from './event-utils';
 
@@ -567,5 +568,36 @@ export async function fetchRecentFinishedFights(limit: number) {
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch recent finished fights.');
+  }
+}
+
+// Paginated news feed for the public /api/news route -- mirrors fetchFighters'
+// pagination convention above.
+export async function fetchNewsArticles({
+  organizationId = null,
+  page = 1,
+  pageSize = 20,
+}: {
+  organizationId?: number | null;
+  page?: number;
+  pageSize?: number;
+} = {}) {
+  try {
+    const offset = (page - 1) * pageSize;
+
+    const data = await sql<NewsArticle & { organization_abbreviation: string | null; total_count: string }>`
+      SELECT n.*, o.abbreviation AS organization_abbreviation, COUNT(*) OVER() AS total_count
+      FROM news_articles n
+      LEFT JOIN organizations o ON n.org_id = o.id
+      WHERE (${organizationId}::int IS NULL OR n.org_id = ${organizationId})
+      ORDER BY n.published_at DESC
+      LIMIT ${pageSize} OFFSET ${offset}
+    `;
+
+    const total = data.rows.length > 0 ? Number(data.rows[0].total_count) : 0;
+    return { articles: data.rows, total };
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch news articles.');
   }
 }
