@@ -739,7 +739,11 @@ export async function GET(request: Request) {
 }
 ```
 
-- [ ] **Step 2: Manually verify the pipeline end-to-end against the dev DB**
+- [ ] **Step 2: Manually verify the pipeline end-to-end against the dev DB — IF a working `DATABASE_URL` is available**
+
+Check first: does `.env.local` exist with a real `DATABASE_URL`, or is one otherwise available in this environment? If NOT (no local Neon connection string, no `vercel env pull` access) — **skip this step entirely**, note in your report that live DB verification was skipped for lack of a `DATABASE_URL`, and rely on `tsc`/lint/a careful read-through instead. Do not attempt to fake or simulate this verification. The user has already been told this step may need to happen later (locally, or against a Vercel preview deployment) once real credentials are available.
+
+If a working `DATABASE_URL` IS available:
 
 ```bash
 npm run dev
@@ -751,7 +755,7 @@ In another terminal:
 curl -s http://localhost:3000/api/cron/news | node -e "const d=JSON.parse(require('fs').readFileSync(0,'utf8')); console.log(JSON.stringify(d,null,2))"
 ```
 
-Expected: a `results` array with one entry per source in `NEWS_SOURCES`, each with `error: null` and `inserted` roughly matching that feed's current item count (`skipped` near 0 on a first run against an empty table). If any entry has a non-null `error`, read it — it's either the interval-query issue from Task 4 Step 2, or a feed URL problem from Task 1 Step 4.
+Expected: a `results` array with one entry per source in `NEWS_SOURCES`, each with `error: null` and `inserted` roughly matching that feed's current item count (`skipped` near 0 on a first run against an empty table). If any entry has a non-null `error`, read it — it's most likely a feed URL problem (see Task 1 Step 4's verification notes) rather than a code bug, since the `interval '48 hours'` query was already fixed to use a literal before Task 4 was implemented.
 
 Then confirm rows actually landed:
 
