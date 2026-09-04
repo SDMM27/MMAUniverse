@@ -44,7 +44,10 @@ export async function parseFeedXml(xml: string, source: NewsSourceConfig): Promi
   const feed = await parser.parseString(xml);
 
   return (feed.items ?? [])
-    .filter((item) => item.title && item.link && item.pubDate)
+    // Requires an http(s) link — a feed item with a javascript: URI or other
+    // non-http(s) scheme would otherwise flow unmodified through to NewsCard's
+    // href, where React does not block it in production (only warns in dev).
+    .filter((item) => item.title && item.link && item.pubDate && /^https?:\/\//i.test(item.link))
     .map((item) => ({
       sourceId: source.sourceId,
       orgId: source.orgId,
