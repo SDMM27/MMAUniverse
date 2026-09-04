@@ -1080,7 +1080,9 @@ Wait — `NewsSection` already renders its own `<section>` (see Step 1); wrappin
 {news.articles.length > 0 && <NewsSection articles={news.articles} />}
 ```
 
-- [ ] **Step 3: Manually verify in the browser**
+- [ ] **Step 3: Manually verify in the browser — IF a working `DATABASE_URL` is available**
+
+Same caveat as Tasks 5/6: this environment has no `DATABASE_URL`, and the home page (`app/page.tsx`) already queries the DB for its existing sections regardless of this task's changes, so `npm run dev` can't render a working page here at all right now — this isn't a new limitation this task introduces. Skip this step (note it in the report) unless a working `DATABASE_URL` is available. If one is:
 
 ```bash
 npm run dev
