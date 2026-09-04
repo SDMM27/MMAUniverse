@@ -9,7 +9,7 @@ import {
     Ranking,
     RankingWithFighter,
   } from './definitions';
-import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization } from './event-utils';
+import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization, selectHeadlineFightPerEvent } from './event-utils';
 
 export async function fetchOrganizations() {
     try {
@@ -468,9 +468,14 @@ export async function fetchFighterFightHistory(fighterId: string) {
 
 export async function fetchRecentFinishedFights(limit: number) {
   try {
-    // Widened pool so prioritizeOrganization below has recent-but-not-UFC
-    // results to compare against — see docs/superpowers/specs/2026-09-03-home-ufc-priority-design.md.
-    const POOL_SIZE = 20;
+    // Widened pool of raw fights (not events) so that, after
+    // selectHeadlineFightPerEvent below collapses it to one fight per event,
+    // enough distinct events survive — a single card can have a dozen-plus
+    // finished fights, which would otherwise starve the reduction — while
+    // still leaving prioritizeOrganization recent-but-not-UFC alternatives
+    // to compare against. See
+    // docs/superpowers/specs/2026-09-04-home-recent-results-headline-fight-design.md.
+    const POOL_SIZE = 60;
     const poolLimit = Math.max(POOL_SIZE, limit);
 
     const data = await sql<{
@@ -556,7 +561,7 @@ export async function fetchRecentFinishedFights(limit: number) {
         : null,
     })) as FightResultWithContext[];
 
-    return prioritizeOrganization(mapped, PRIORITY_ORGANIZATION_ABBREVIATION).slice(0, limit);
+    return prioritizeOrganization(selectHeadlineFightPerEvent(mapped), PRIORITY_ORGANIZATION_ABBREVIATION).slice(0, limit);
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch recent finished fights.');
