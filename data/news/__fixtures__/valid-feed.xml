@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test MMA News</title>
+    <link>https://example-mma-news.test</link>
+    <description>Test feed</description>
+    <item>
+      <title>Jon Jones announces retirement plans</title>
+      <link>https://example-mma-news.test/jon-jones-retirement</link>
+      <description>Jon Jones said Wednesday that he is considering retirement after his next fight.</description>
+      <pubDate>Thu, 03 Sep 2026 14:00:00 GMT</pubDate>
+      <enclosure url="https://example-mma-news.test/images/jon-jones.jpg" type="image/jpeg" length="12345" />
+    </item>
+    <item>
+      <title>UFC 320 fight card updated</title>
+      <link>https://example-mma-news.test/ufc-320-card-update</link>
+      <description>The UFC 320 fight card has been updated with a new co-main event.</description>
+      <pubDate>Wed, 02 Sep 2026 09:30:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
