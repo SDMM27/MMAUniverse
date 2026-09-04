@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights, fetchNewsArticles } from '@/data/lib/data';
 import { computeNextEventForHome, groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
-import NextEventHero from '@/components/ui/events/next-event-hero';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightResultRow from '@/components/ui/fights/fight-result-row';
 import EventCard from '@/components/ui/events/event-card';
@@ -19,12 +18,11 @@ export default async function Page() {
   const events = await fetchAllEvents();
   const next = computeNextEventForHome(events);
 
-  // Fetched unconditionally (not just when isUpcoming) because the hero now
-  // builds its visual from the main-event fighters' photos rather than
-  // Sherdog's event poster — see NextEventHero. The "Combat principal" section
-  // below still only shows a fight for an actually-upcoming hero event: when
-  // there's no future event in DB, computeNextEventForHome falls back to
-  // the last past event, which has no upcoming fight left to show there.
+  // Fetched unconditionally (not just when isUpcoming): the "Evenement de la
+  // semaine" section below only shows a fight for an actually-upcoming hero
+  // event — when there's no future event in DB, computeNextEventForHome
+  // falls back to the last past event, which has no upcoming fight left to
+  // show there.
   const [nextEventFights, recentResults, news] = await Promise.all([
     next ? fetchFightsByEvent(String(next.event.id)) : Promise.resolve([]),
     fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
@@ -37,8 +35,8 @@ export default async function Page() {
   // scrapers/seed, so there's no reliable flag to pick "the" main event out
   // of nextEventFights. fetchFightsByEvent orders by `is_main_event DESC,
   // id ASC` (see data/lib/data.ts), so the first fetched fight is the
-  // closest thing to a main event the data supports today — used both for
-  // the hero's fighter photos and for the "Combat principal" card below.
+  // closest thing to a main event the data supports today — used for the
+  // "Evenement de la semaine" card below.
   const heroFight = nextEventFights[0] ?? null;
 
   const { upcoming } = splitEventsByStatus(events);
@@ -49,26 +47,17 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col gap-8 p-6">
-      {next ? (
-        <NextEventHero
-          event={next.event}
-          isUpcoming={next.isUpcoming}
-          fighter1={heroFight?.fighter1}
-          fighter2={heroFight?.fighter2}
-        />
-      ) : (
-        <EmptyState title="Aucun événement pour le moment" />
-      )}
+      {!next && <EmptyState title="Aucun événement pour le moment" />}
 
       {heroFight && heroEvent && (
         <section>
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Combat principal</h2>
+            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Evenement de la semaine</h2>
             <Link href={`/events/${heroEvent.id}`} className="text-xs uppercase tracking-wide text-accent hover:underline">
               Voir l&apos;événement
             </Link>
           </div>
-          <FightCard fight={heroFight} event={heroEvent} />
+          <FightCard fight={heroFight} event={heroEvent} eventName={heroEvent.name} />
         </section>
       )}
 
