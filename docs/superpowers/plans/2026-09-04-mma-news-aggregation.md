@@ -869,13 +869,15 @@ export async function GET(request: Request) {
 }
 ```
 
-- [ ] **Step 3: Manually verify**
+- [ ] **Step 3: Manually verify — IF a working `DATABASE_URL` is available**
+
+Same caveat as Task 5 Step 2: if there's no working `DATABASE_URL` in this environment, skip this step (note it in the report) rather than fabricating a result. If one is available:
 
 ```bash
 curl -s "http://localhost:3000/api/news?page=1" | node -e "const d=JSON.parse(require('fs').readFileSync(0,'utf8')); console.log('total:', d.total, 'articles:', d.articles.length)"
 ```
 
-Expected: `total` matches the row count inserted in Task 5 Step 2, `articles.length` is `min(total, 20)`.
+Expected: `total` matches the row count inserted earlier, `articles.length` is `min(total, 20)`.
 
 - [ ] **Step 4: Commit**
 
