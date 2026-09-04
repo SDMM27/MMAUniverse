@@ -1,7 +1,7 @@
 // data/lib/event-utils.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { computeNextEventForHome, groupUpcomingByWeek, prioritizeOrganization, splitEventsByStatus } from './event-utils';
+import { computeNextEventForHome, groupUpcomingByWeek, prioritizeOrganization, selectHeadlineFightPerEvent, splitEventsByStatus } from './event-utils';
 import type { Event } from './definitions';
 
 // Dates far enough in the past/future to stay stable regardless of when the
@@ -134,6 +134,10 @@ function makeEventWithOrg(id: number, date: string, organizationAbbreviation: st
   return { ...makeEvent(id, date), organization_abbreviation: organizationAbbreviation };
 }
 
+function makeFight(eventId: number, id: number, isMainEvent: boolean): { event_id: number; id: number; is_main_event: boolean } {
+  return { event_id: eventId, id, is_main_event: isMainEvent };
+}
+
 test('computeNextEventForHome returns the next UFC event even when another org has a sooner one', () => {
   const events = [
     makeEventWithOrg(1, FUTURE[0], 'PFL'),
@@ -218,4 +222,54 @@ test('prioritizeOrganization returns items unchanged in order when none match', 
 
 test('prioritizeOrganization returns an empty array for an empty input', () => {
   assert.deepEqual(prioritizeOrganization([], 'UFC'), []);
+});
+
+test('selectHeadlineFightPerEvent keeps the is_main_event fight for a given event_id', () => {
+  const fights = [makeFight(1, 10, false), makeFight(1, 11, true), makeFight(1, 12, false)];
+
+  const result = selectHeadlineFightPerEvent(fights);
+
+  assert.deepEqual(
+    result.map((f) => f.id),
+    [11],
+  );
+});
+
+test('selectHeadlineFightPerEvent falls back to the lowest id when no fight is flagged is_main_event', () => {
+  const fights = [makeFight(1, 20, false), makeFight(1, 18, false), makeFight(1, 25, false)];
+
+  const result = selectHeadlineFightPerEvent(fights);
+
+  assert.deepEqual(
+    result.map((f) => f.id),
+    [18],
+  );
+});
+
+test('selectHeadlineFightPerEvent picks the lowest id among multiple is_main_event fights for the same event', () => {
+  const fights = [makeFight(1, 30, true), makeFight(1, 28, true)];
+
+  const result = selectHeadlineFightPerEvent(fights);
+
+  assert.deepEqual(
+    result.map((f) => f.id),
+    [28],
+  );
+});
+
+test('selectHeadlineFightPerEvent keeps one entry per distinct event_id, in order of first appearance', () => {
+  const fights = [makeFight(2, 40, true), makeFight(1, 10, true), makeFight(2, 41, false), makeFight(3, 50, true)];
+
+  const result = selectHeadlineFightPerEvent(fights);
+
+  assert.deepEqual(
+    result.map((f) => f.event_id),
+    [2, 1, 3],
+  );
+});
+
+test('selectHeadlineFightPerEvent returns an empty array for empty input', () => {
+  const result = selectHeadlineFightPerEvent([]);
+
+  assert.deepEqual(result, []);
 });
