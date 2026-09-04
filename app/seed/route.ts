@@ -283,6 +283,37 @@ async function seedPickemSchema() {
   `;
 }
 
+async function seedProfilePreferencesSchema() {
+  await sql`
+    CREATE TABLE IF NOT EXISTS user_fighter_preferences (
+      id BIGSERIAL PRIMARY KEY,
+      user_id BIGINT NOT NULL REFERENCES users(id),
+      -- INT, not BIGINT: matches fighters.id (SERIAL/int4). Same reasoning as
+      -- picks.predicted_winner_id (see seedPickemSchema above) -- a BIGINT
+      -- column here would make @neondatabase/serverless return this as a JS
+      -- string while fighters.id comes back as a number, breaking strict
+      -- equality comparisons against it.
+      fighter_id INT NOT NULL REFERENCES fighters(id),
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      UNIQUE (user_id, fighter_id)
+    );
+  `;
+
+  await sql`
+    CREATE TABLE IF NOT EXISTS user_nationality_preferences (
+      id BIGSERIAL PRIMARY KEY,
+      user_id BIGINT NOT NULL REFERENCES users(id),
+      -- No FK: fighters.nationality is itself a free VARCHAR(2), including
+      -- non-ISO UK codes ("en"/"wa"/"nb", see components/ui/shared/country-
+      -- flag.tsx) -- there's no lookup table to reference. Validated instead
+      -- at the API layer against fetchAvailableNationalities() (Task 4).
+      nationality_code TEXT NOT NULL,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+      UNIQUE (user_id, nationality_code)
+    );
+  `;
+}
+
 export async function GET() {
   try {
     await seedOrganizations(); // Cette fonction doit être exécutée en premier
@@ -291,6 +322,7 @@ export async function GET() {
     await seedFights();        // Dépend de `events` et `fighters`
     await seedRankings();      // Dépend de `organizations` et `fighters` (fighter_id FK)
     await seedPickemSchema();  // Dépend de `fighters` (predicted_winner_id FK)
+    await seedProfilePreferencesSchema(); // Dépend de `users` et `fighters`
 
     return Response.json({ message: 'Database seeded successfully' });
   } catch (error) {
