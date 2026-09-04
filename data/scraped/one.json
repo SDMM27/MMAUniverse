@@ -1988,6 +1988,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Bulut-469078",
       "fight_history": [
         {
+          "opponent_name": "Sanzhar Mansurov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sanzhar-Mansurov-506152",
+          "event_name": "One Championship - One Friday Fights 169",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-169-113337",
+          "date": "2026-09-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "George Wellem",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/George-Wellem-506213",
           "event_name": "Combat Games - The First Combat Games",
@@ -2032,7 +2044,20 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Sanzhar-Mansurov-506152",
-      "fight_history": []
+      "fight_history": [
+        {
+          "opponent_name": "Ruslan Bulut",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Bulut-469078",
+          "event_name": "One Championship - One Friday Fights 169",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-169-113337",
+          "date": "2026-09-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     },
     {
       "name": "Ethan Brockett",
@@ -3094,13 +3119,13 @@
     },
     {
       "event_name": "One Championship - One Friday Fights 169",
-      "fighter1_name": "Ruslan Bulut",
-      "fighter2_name": "Sanzhar Mansurov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Sanzhar Mansurov",
+      "fighter2_name": "Ruslan Bulut",
+      "fight_finished": true,
+      "winner_name": "Sanzhar Mansurov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Flyweight",
       "is_main_event": true,
       "is_title_fight": false
