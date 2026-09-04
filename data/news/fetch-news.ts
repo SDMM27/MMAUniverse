@@ -4,6 +4,7 @@ import { NEWS_SOURCES, type NewsSourceConfig } from './sources.config';
 import { parseFeedXml, dedupeAgainstExisting, normalizeTitle, type RecentTitle } from './parse-feed';
 
 const USER_AGENT = 'MMA-Universe-NewsBot/1.0 (hobby project; contact: donsacha27@gmail.com)';
+const FETCH_TIMEOUT_MS = 10_000;
 
 export interface IngestSourceResult {
   sourceId: string;
@@ -61,8 +62,16 @@ async function fetchRecentTitles(): Promise<RecentTitle[]> {
  * stop the rest of the sources from being processed.
  */
 async function ingestSource(source: NewsSourceConfig, recentTitles: RecentTitle[]): Promise<IngestSourceResult> {
+  let inserted = 0;
   try {
-    const response = await fetch(source.feedUrl, { headers: { 'User-Agent': USER_AGENT } });
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+    let response: Response;
+    try {
+      response = await fetch(source.feedUrl, { headers: { 'User-Agent': USER_AGENT }, signal: controller.signal });
+    } finally {
+      clearTimeout(timeout);
+    }
     if (!response.ok) {
       throw new Error(`HTTP ${response.status} fetching ${source.feedUrl}`);
     }
@@ -70,7 +79,6 @@ async function ingestSource(source: NewsSourceConfig, recentTitles: RecentTitle[
     const candidates = await parseFeedXml(xml, source);
     const toInsert = dedupeAgainstExisting(candidates, recentTitles);
 
-    let inserted = 0;
     for (const article of toInsert) {
       const result = await sql<{ id: number }>`
         INSERT INTO news_articles (source_id, org_id, title, excerpt, url, image_url, language, published_at)
@@ -87,7 +95,7 @@ async function ingestSource(source: NewsSourceConfig, recentTitles: RecentTitle[
     return { sourceId: source.sourceId, inserted, skipped: toInsert.length - inserted, error: null };
   } catch (error) {
     console.error(`[news:${source.sourceId}] ingestion failed:`, error);
-    return { sourceId: source.sourceId, inserted: 0, skipped: 0, error: error instanceof Error ? error.message : String(error) };
+    return { sourceId: source.sourceId, inserted, skipped: 0, error: error instanceof Error ? error.message : String(error) };
   }
 }
 
