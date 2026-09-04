@@ -2,13 +2,24 @@ import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { Fighter, FightWithFighters } from '@/data/lib/definitions';
+import { formatEventTime } from '@/data/lib/event-utils';
 
 type FightStatus = 'upcoming' | 'live' | 'finished';
 
 export type FightCardProps = {
   fight: FightWithFighters;
-  event: { id: number; date: string; organization_abbreviation: string };
+  event: {
+    id: number;
+    date: string;
+    organization_abbreviation: string;
+    main_card_start?: string | null;
+    start_time?: string | null;
+  };
   live?: { round: number };
+  /** Event name shown under the "Combat principal" label — only passed where
+   *  the event's own title isn't already displayed elsewhere on the page
+   *  (e.g. the home page, which no longer has a hero banner for it). */
+  eventName?: string;
 };
 
 const resultLabel: Record<'win' | 'loss' | 'draw', string> = { win: 'V', loss: 'D', draw: 'N' };
@@ -18,7 +29,7 @@ const resultColor: Record<'win' | 'loss' | 'draw', string> = {
   draw: 'text-ink-secondary',
 };
 
-export default function FightCard({ fight, event, live }: FightCardProps) {
+export default function FightCard({ fight, event, live, eventName }: FightCardProps) {
   if (!fight.fighter1 || !fight.fighter2) {
     return (
       <div className="rounded-lg border border-base-border bg-base-card p-4 text-sm text-ink-secondary">
@@ -30,18 +41,33 @@ export default function FightCard({ fight, event, live }: FightCardProps) {
   const status: FightStatus = fight.fight_finished ? 'finished' : live ? 'live' : 'upcoming';
 
   return (
-    <div className="flex flex-col gap-5 rounded-xl border-2 border-accent bg-base-card p-6 shadow-lg transition-shadow hover:shadow-accent/20 sm:p-8">
-      <Link href={`/events/${event.id}`} className="flex flex-col gap-5">
+    // relative + the absolutely-positioned Link at the bottom make the whole
+    // card clickable to the event page ("stretched link" pattern) without
+    // nesting an <a> inside the fighters' own <a href="/fighters/...">
+    // below — those get a higher z-index so they stay independently
+    // clickable on top of the stretched one.
+    <div className="relative flex flex-col gap-5 rounded-xl border-2 border-accent bg-base-card p-6 shadow-lg transition-shadow hover:shadow-accent/20 sm:p-8">
+      <div className="flex flex-col gap-5">
         <p className="text-center font-display text-sm font-bold uppercase tracking-[0.2em] text-accent">
-          Événement principal
+          Combat principal
         </p>
+        {eventName && (
+          <p className="-mt-3 text-center font-display text-lg uppercase tracking-wide text-ink-primary">
+            {eventName}
+          </p>
+        )}
         <FightCardHeader status={status} event={event} liveRound={live?.round} />
-      </Link>
+      </div>
       <div className="flex items-center justify-between gap-4 sm:gap-6">
         <FighterColumn fighter={fight.fighter1} status={status} winnerId={fight.winner_id} />
         <FightCardCenter status={status} fight={fight} />
         <FighterColumn fighter={fight.fighter2} status={status} winnerId={fight.winner_id} />
       </div>
+      <Link
+        href={`/events/${event.id}`}
+        aria-label={eventName ? `Voir l'événement ${eventName}` : "Voir l'événement"}
+        className="absolute inset-0 z-[1] rounded-xl"
+      />
     </div>
   );
 }
@@ -52,7 +78,12 @@ function FightCardHeader({
   liveRound,
 }: {
   status: FightStatus;
-  event: { date: string; organization_abbreviation: string };
+  event: {
+    date: string;
+    organization_abbreviation: string;
+    main_card_start?: string | null;
+    start_time?: string | null;
+  };
   liveRound?: number;
 }) {
   if (status === 'live') {
@@ -78,10 +109,15 @@ function FightCardHeader({
     );
   }
 
+  const eventTime = formatEventTime(event.main_card_start ?? null) ?? formatEventTime(event.start_time ?? null);
+
   return (
     <div className="flex items-center justify-between">
       <span className="font-display text-xs uppercase tracking-wide text-accent">{event.organization_abbreviation}</span>
-      <span className="text-xs text-ink-secondary">{event.date}</span>
+      <span className="text-xs text-ink-secondary">
+        {event.date}
+        {eventTime && ` · ${eventTime}`}
+      </span>
     </div>
   );
 }
@@ -103,7 +139,7 @@ function FighterColumn({
     // content width and pushes the card wider than its container.
     <Link
       href={`/fighters/${fighter.id}`}
-      className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center transition-colors hover:text-accent"
+      className="relative z-[2] flex min-w-0 flex-1 flex-col items-center gap-2 text-center transition-colors hover:text-accent"
     >
       <CoverImage
         src={fighter.image_url}
