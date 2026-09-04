@@ -33,6 +33,21 @@ function truncateExcerpt(text: string, maxLength: number = EXCERPT_MAX_LENGTH): 
   return `${clean}…`;
 }
 
+// `title`/`url`/`image_url` have hard column widths (VARCHAR(500)/VARCHAR(1000)
+// each — see ensureNewsTable in fetch-news.ts) that `excerpt` (TEXT) doesn't.
+// Without truncation, an oversized value throws at INSERT time, aborts the
+// rest of that source's batch for the run, and — since the failed article
+// never gets added to recentTitles — gets retried (and refails) on every
+// subsequent run until it ages out of the source's feed. Limits below are
+// comfortably under the actual column widths, not right up against them.
+const TITLE_MAX_LENGTH = 490;
+const URL_MAX_LENGTH = 990;
+
+function truncatePlain(text: string, maxLength: number): string {
+  const trimmed = text.trim();
+  return trimmed.length <= maxLength ? trimmed : trimmed.slice(0, maxLength);
+}
+
 /**
  * Parses raw RSS/Atom XML into normalized articles. Pure aside from the
  * XML parsing itself — no network or DB access, so it's fully testable with
@@ -47,19 +62,30 @@ export async function parseFeedXml(xml: string, source: NewsSourceConfig): Promi
     // Requires an http(s) link — a feed item with a javascript: URI or other
     // non-http(s) scheme would otherwise flow unmodified through to NewsCard's
     // href, where React does not block it in production (only warns in dev).
-    .filter((item) => item.title && item.link && item.pubDate && /^https?:\/\//i.test(item.link))
+    // Also drops (rather than truncates) any item whose link exceeds
+    // URL_MAX_LENGTH: unlike title/imageUrl, truncating a url changes what the
+    // article actually links to — a different, worse failure mode than a
+    // shortened display string, and one none of the 3 configured real sources
+    // trigger, so dropping the item is more correct than silently breaking it.
+    .filter(
+      (item) =>
+        item.title && item.link && item.pubDate && /^https?:\/\//i.test(item.link) && item.link.length <= URL_MAX_LENGTH,
+    )
     .map((item) => ({
       sourceId: source.sourceId,
       orgId: source.orgId,
-      title: item.title!.trim(),
+      title: truncatePlain(item.title!.trim(), TITLE_MAX_LENGTH),
       // item.summary only exists on Atom feeds (rss-parser's short-form
       // field) — it's the actual excerpt there, unlike item.content/
       // contentSnippet which hold the full article body for Atom. RSS 2.0
       // feeds never populate item.summary, so this falls through to
       // contentSnippet/content for them exactly as before.
       excerpt: truncateExcerpt(item.summary ?? item.contentSnippet ?? item.content ?? ''),
-      url: item.link!,
-      imageUrl: item.enclosure?.url ?? null,
+      // Already guaranteed <= URL_MAX_LENGTH by the filter above (oversized
+      // links are dropped, not truncated) — truncatePlain here just trims
+      // whitespace, consistent with title/imageUrl's own normalization.
+      url: truncatePlain(item.link!, URL_MAX_LENGTH),
+      imageUrl: item.enclosure?.url ? truncatePlain(item.enclosure.url, URL_MAX_LENGTH) : null,
       language: source.language,
       // item.isoDate is rss-parser's own pre-validated normalization of
       // pubDate/updated/published (confirmed present on both RSS 2.0 and
