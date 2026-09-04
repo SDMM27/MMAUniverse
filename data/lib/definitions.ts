@@ -163,3 +163,16 @@ export type PickRecord = {
   created_at: string;
   updated_at: string;
 };
+
+export type NewsArticle = {
+  id: number;
+  source_id: string;
+  org_id: number | null;
+  title: string;
+  excerpt: string;
+  url: string;
+  image_url: string | null;
+  language: 'fr' | 'en';
+  published_at: string;
+  fetched_at: string;
+};
