@@ -1279,7 +1279,9 @@ export default async function ActualitesPage({
 }
 ```
 
-- [ ] **Step 4: Manually verify in the browser**
+- [ ] **Step 4: Manually verify in the browser — IF a working `DATABASE_URL` is available**
+
+Same caveat as Tasks 5/6/8: no `DATABASE_URL` in this environment. Skip this step (note it in the report) unless one is available. If one is:
 
 ```bash
 npm run dev
