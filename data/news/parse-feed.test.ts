@@ -102,6 +102,43 @@ test('parseFeedXml drops items whose link is not http(s)', async () => {
   assert.equal(articles[0].title, 'Safe article');
 });
 
+function buildFeedXml(item: { title: string; link: string }): string {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test MMA News</title>
+    <link>https://example-mma-news.test</link>
+    <description>Test feed</description>
+    <item>
+      <title>${item.title}</title>
+      <link>${item.link}</link>
+      <description>Some article body.</description>
+      <pubDate>Thu, 03 Sep 2026 14:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
+`;
+}
+
+test('parseFeedXml truncates a title over 490 characters', async () => {
+  const longTitle = 'A'.repeat(500);
+  const xml = buildFeedXml({ title: longTitle, link: 'https://example-mma-news.test/long-title' });
+  const articles = await parseFeedXml(xml, TEST_SOURCE);
+
+  assert.equal(articles.length, 1);
+  assert.equal(articles[0].title.length, 490);
+  assert.equal(articles[0].title, 'A'.repeat(490));
+});
+
+test('parseFeedXml drops (does not truncate) an item whose url exceeds 990 characters', async () => {
+  const longPath = 'a'.repeat(1000);
+  const longUrl = `https://example-mma-news.test/${longPath}`;
+  const xml = buildFeedXml({ title: 'Article with an oversized url', link: longUrl });
+  const articles = await parseFeedXml(xml, TEST_SOURCE);
+
+  assert.deepEqual(articles, []);
+});
+
 function makeArticle(overrides: Partial<import('./parse-feed').NormalizedNewsArticle> = {}) {
   return {
     sourceId: 'test-source',

@@ -14,6 +14,10 @@ export interface IngestSourceResult {
 }
 
 async function ensureNewsTable() {
+  // org_id REFERENCES organizations(id) requires the organizations table to
+  // already exist — already true on the current production DB, but on a
+  // brand-new/unseeded database (e.g. a fresh preview-branch DB) this will
+  // fail until /seed has been hit once to seed organizations first.
   await sql`
     CREATE TABLE IF NOT EXISTS news_articles (
       id SERIAL PRIMARY KEY,

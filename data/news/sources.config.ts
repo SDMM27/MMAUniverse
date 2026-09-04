@@ -27,6 +27,11 @@ export interface NewsSourceConfig {
 // NewsThumbnail's fallback. It also exposes a short <summary> in addition to
 // the full article body in <content> — see parse-feed.ts's excerpt
 // extraction, which prefers `item.summary` for exactly this reason.
+// All 3 sources below have orgId: null (none is dedicated to a single
+// organization) — the org filter in /actualites is fully wired but is
+// currently inert (no orgId selection returns any results) until a source
+// with a non-null orgId is added. Expected given the current source list,
+// not a bug.
 export const NEWS_SOURCES: NewsSourceConfig[] = [
   { sourceId: 'sherdog', feedUrl: 'https://www.sherdog.com/rss/news.xml', orgId: null, language: 'en' },
   { sourceId: 'mma-fighting', feedUrl: 'https://www.mmafighting.com/rss/index.xml', orgId: null, language: 'en' },
