@@ -588,7 +588,6 @@ import { NEWS_SOURCES, type NewsSourceConfig } from './sources.config';
 import { parseFeedXml, dedupeAgainstExisting, normalizeTitle, type RecentTitle } from './parse-feed';
 
 const USER_AGENT = 'MMA-Universe-NewsBot/1.0 (hobby project; contact: donsacha27@gmail.com)';
-const RECENT_WINDOW_HOURS = 48;
 
 export interface IngestSourceResult {
   sourceId: string;
@@ -617,9 +616,18 @@ async function ensureNewsTable() {
 }
 
 async function fetchRecentTitles(): Promise<RecentTitle[]> {
+  // Literal '48 hours', not a bound parameter: data/lib/db.ts's `sql` tagged
+  // template parameterizes every ${...} interpolation as a query parameter,
+  // and Postgres doesn't accept `INTERVAL $1` — the interval's unit has to be
+  // in the SQL text itself. Fine here since it's a hardcoded constant, not
+  // user input — no injection concern. Matches dedupeAgainstExisting's own
+  // 48h window (data/news/parse-feed.ts's DEDUP_WINDOW_MS) by convention;
+  // if that ever changes, update this literal too (deliberately not sharing
+  // a constant across a DB query and an in-memory duration — different units,
+  // different files, not worth the coupling for one magic number each).
   const rows = await sql<{ title: string; published_at: string }>`
     SELECT title, published_at FROM news_articles
-    WHERE published_at > now() - interval '${sql([`${RECENT_WINDOW_HOURS} hours`])}'
+    WHERE published_at > now() - interval '48 hours'
   `;
   return rows.rows.map((row) => ({
     normalizedTitle: normalizeTitle(row.title),
@@ -684,20 +692,7 @@ export async function ingestAllSources(sources: NewsSourceConfig[] = NEWS_SOURCE
 }
 ```
 
-- [ ] **Step 2: Note on the `interval` query**
-
-`data/lib/db.ts`'s `sql` tagged template parameterizes every interpolated value as a bound query parameter — that's correct for data values, but `INTERVAL '48 hours'` needs the hours count embedded in the SQL text itself, not passed as a parameter (Postgres doesn't accept `INTERVAL $1`). Confirm this by running the manual check in Task 5, Step 2 below; if it errors, replace the query with a literal instead of the `${sql([...])}` escape hatch:
-
-```ts
-const rows = await sql<{ title: string; published_at: string }>`
-  SELECT title, published_at FROM news_articles
-  WHERE published_at > now() - interval '48 hours'
-`;
-```
-
-(`RECENT_WINDOW_HOURS` becomes unused if you take this route — remove the constant too.)
-
-- [ ] **Step 3: Commit**
+- [ ] **Step 2: Commit**
 
 ```bash
 git add data/news/fetch-news.ts
