@@ -489,6 +489,7 @@ export async function fetchRecentFinishedFights(limit: number) {
       round: number;
       time: string;
       weight_class: string;
+      is_main_event: boolean;
       event_name: string;
       event_date: string;
       organization_abbreviation: string;
@@ -508,7 +509,7 @@ export async function fetchRecentFinishedFights(limit: number) {
       f2_ranking: number | null;
     }>`
       SELECT
-        f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class,
+        f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class, f.is_main_event,
         e.name AS event_name, e.date AS event_date,
         o.abbreviation AS organization_abbreviation,
         f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking,
@@ -534,6 +535,7 @@ export async function fetchRecentFinishedFights(limit: number) {
       round: row.round,
       time: row.time,
       weight_class: row.weight_class,
+      is_main_event: row.is_main_event,
       event_name: row.event_name,
       event_date: row.event_date,
       organization_abbreviation: row.organization_abbreviation,
