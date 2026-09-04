@@ -16,10 +16,19 @@ export interface NewsSourceConfig {
 // a hostname that does not resolve (confirmed via public DNS-over-HTTPS, not
 // just this sandbox's resolver). mmajunkie.usatoday.com's own page source
 // also has no <link rel="alternate" type="application/rss+xml"> pointing
-// anywhere else. There is currently no working RSS feed for this source; see
-// Task 1 report for details before deciding whether to substitute another
-// English-language source.
+// anywhere else. There is currently no working RSS feed for this source.
+//
+// 'mma-fighting' substituted in its place as the second English-language
+// source: https://www.mmafighting.com/rss/index.xml verified 2026-09-04 (200,
+// application/xml, 10 <entry> items). Note it's an Atom feed, not RSS 2.0 —
+// rss-parser normalizes both to the same `item.link`/`item.pubDate`/etc.
+// shape, confirmed by parsing it locally. It has no <enclosure> (Atom doesn't
+// have one), so imageUrl will always be null for this source — handled by
+// NewsThumbnail's fallback. It also exposes a short <summary> in addition to
+// the full article body in <content> — see parse-feed.ts's excerpt
+// extraction, which prefers `item.summary` for exactly this reason.
 export const NEWS_SOURCES: NewsSourceConfig[] = [
   { sourceId: 'sherdog', feedUrl: 'https://www.sherdog.com/rss/news.xml', orgId: null, language: 'en' },
+  { sourceId: 'mma-fighting', feedUrl: 'https://www.mmafighting.com/rss/index.xml', orgId: null, language: 'en' },
   { sourceId: 'lequipe-mma', feedUrl: 'https://dwh.lequipe.fr/api/edito/rss?path=/Mma', orgId: null, language: 'fr' },
 ];
