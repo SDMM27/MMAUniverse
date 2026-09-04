@@ -13,6 +13,11 @@ export async function GET(request: Request) {
     return Response.json({ fighters: [] });
   }
 
-  const { fighters } = await fetchFighters({ query, pageSize: 8 });
-  return Response.json({ fighters });
+  try {
+    const { fighters } = await fetchFighters({ query, pageSize: 8 });
+    return Response.json({ fighters });
+  } catch (error) {
+    console.error('API error:', error);
+    return Response.json({ error: 'Erreur lors de la recherche de combattants.' }, { status: 500 });
+  }
 }
