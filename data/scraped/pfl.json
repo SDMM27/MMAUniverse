@@ -217001,6 +217001,112 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Aya-Lounes-506216",
       "fight_history": []
+    },
+    {
+      "name": "Lucero Acosta",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20221017012449_Lucero_Acosta.JPG",
+      "weight_class": "Flyweight",
+      "record": "6-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Lucero-Acosta-323985",
+      "fight_history": [
+        {
+          "opponent_name": "Abril Anguiano",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abril-Anguiano-302233",
+          "event_name": "Combate Global - Acosta vs. Anguiano",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Acosta-vs-Anguiano-107140",
+          "date": "2025-04-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Chris Mignocchi",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Manuela Marconetto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Manuela-Marconetto-225891",
+          "event_name": "Combate Global - Ireland vs. Mexico",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Ireland-vs-Mexico-99959",
+          "date": "2023-12-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Marcos Perez",
+          "round": 2,
+          "time": "0:32"
+        },
+        {
+          "opponent_name": "Silvia Juaneda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Silvia-Juaneda-307251",
+          "event_name": "Combate Global - Mexico vs. Spain",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Mexico-vs-Spain-98774",
+          "date": "2023-08-06",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Marcos Perez",
+          "round": 1,
+          "time": "1:24"
+        },
+        {
+          "opponent_name": "Mariel Celimen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mariel-Celimen-363857",
+          "event_name": "Combate Global - Reina o Nada",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Reina-o-Nada-94769",
+          "date": "2022-09-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marcos Perez",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Chantel Coates",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chantel-Coates-261515",
+          "event_name": "Combate Global - Bandejas vs. Bartholomew",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Bandejas-vs-Bartholomew-90127",
+          "date": "2021-08-06",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "James Larry Folsom Jr.",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Allysen Breeden",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Allysen-Breeden-344119",
+          "event_name": "Combate Global - Mexico vs. USA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Mexico-vs-USA-89136",
+          "date": "2021-04-16",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Russ Greenberg",
+          "round": 1,
+          "time": "2:28"
+        },
+        {
+          "opponent_name": "Maritza Sanchez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maritza-Sanchez-233091",
+          "event_name": "Combate Americas - Mexico vs. USA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Americas-Mexico-vs-USA-84755",
+          "date": "2020-02-28",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Frank Trigg",
+          "round": 1,
+          "time": "2:35"
+        },
+        {
+          "opponent_name": "Valerie Quintero",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valerie-Quintero-191509",
+          "event_name": "Combate Americas - Tucson",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Americas-Tucson-80209",
+          "date": "2019-10-11",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Al Guinee",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -234452,6 +234558,32 @@
     },
     {
       "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Emiliano Sordi",
+      "fighter2_name": "Abraham Bably",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Shannon Clark",
+      "fighter2_name": "Lucero Acosta",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
       "fighter1_name": "Eliezer Kubanza",
       "fighter2_name": "Trey Waters",
       "fight_finished": false,
@@ -234474,6 +234606,19 @@
       "time": "",
       "weight_class": "Heavyweight",
       "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Dubai",
+      "fighter1_name": "Ernesto Rodriguez",
+      "fighter2_name": "Rhys McKee",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
       "is_title_fight": false
     }
   ]
