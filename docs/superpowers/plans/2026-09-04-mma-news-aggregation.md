@@ -77,6 +77,20 @@ export const NEWS_SOURCES: NewsSourceConfig[] = [
 ];
 ```
 
+**Resolution (recorded after Task 1 ran):** `mma-junkie`'s feed URL, and every fallback path checked, resolve to a dead hostname (`archive.mmajunkie.com`, no DNS record). It was replaced with `mma-fighting`, verified working:
+
+```ts
+export const NEWS_SOURCES: NewsSourceConfig[] = [
+  { sourceId: 'sherdog', feedUrl: 'https://www.sherdog.com/rss/news.xml', orgId: null, language: 'en' },
+  { sourceId: 'mma-fighting', feedUrl: 'https://www.mmafighting.com/rss/index.xml', orgId: null, language: 'en' },
+  { sourceId: 'lequipe-mma', feedUrl: 'https://dwh.lequipe.fr/api/edito/rss?path=/Mma', orgId: null, language: 'fr' },
+];
+```
+
+Important: `mma-fighting`'s feed is **Atom, not RSS 2.0** (`<feed>`/`<entry>` instead of `<rss>`/`<item>`). `rss-parser` normalizes both formats to the same `item.link`/`item.pubDate`/`item.content`/`item.contentSnippet` shape — confirmed by parsing it directly. Two consequences carried into Task 2 below:
+- Atom has no `<enclosure>`, so `imageUrl` is always `null` for this source (already handled by `NewsThumbnail`'s fallback icon — no code change needed for that).
+- Atom's `<content>` holds the **full article body** (thousands of characters), not a short excerpt. `rss-parser` also exposes Atom's separate short `<summary>` as `item.summary` — Task 2's `parseFeedXml` must prefer that field over `contentSnippet`/`content` when present, and cap the result length regardless (defense in depth against any feed — RSS or Atom — that doesn't actually truncate). See the updated `parseFeedXml` in Task 2.
+
 - [ ] **Step 4: Verify each feed URL actually returns RSS**
 
 Run each of these and confirm the output starts with `<?xml` and contains `<item>` (or `<entry>` for Atom) elements — do not skip this, feed URLs move without notice:
@@ -109,8 +123,10 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 - Create: `data/news/__fixtures__/valid-feed.xml`
 - Create: `data/news/__fixtures__/empty-feed.xml`
 - Create: `data/news/__fixtures__/malformed-feed.xml`
+- Create: `data/news/__fixtures__/atom-feed.xml`
+- Create: `data/news/__fixtures__/long-description-feed.xml`
 
-`rss-parser`'s `parseString()` maps a `<description>` into both `item.content` and `item.contentSnippet` (already stripped of markup), an `<enclosure url="...">` into `item.enclosure.url`, and computes `item.isoDate` from `<pubDate>` — confirmed by running it locally against a sample feed. `parseFeedXml` below relies on exactly those fields.
+`rss-parser`'s `parseString()` maps an RSS `<description>` into both `item.content` and `item.contentSnippet` (already stripped of markup), an `<enclosure url="...">` into `item.enclosure.url`, and computes `item.isoDate` from `<pubDate>` — confirmed by running it locally against a sample feed. For **Atom** feeds it maps the same way (`item.link`/`item.pubDate`/`item.content`/`item.contentSnippet` all populated from the Atom equivalents) but *also* exposes Atom's short `<summary>` separately as `item.summary` — also confirmed locally. This matters here: one of the real sources configured in Task 1 (`mma-fighting`) is an Atom feed whose `<content>` is the full article body, not an excerpt, so `parseFeedXml` must prefer `item.summary` when it's present, and — as a safety net for any feed (Atom or RSS) that doesn't truncate — cap the excerpt length regardless of which field it came from.
 
 - [ ] **Step 1: Create the fixtures**
 
@@ -162,6 +178,46 @@ Create `data/news/__fixtures__/malformed-feed.xml` (deliberately unterminated �
     <title>Broken Feed
     <item>
       <title>Missing closing tags
+```
+
+Create `data/news/__fixtures__/atom-feed.xml` — models `mma-fighting`'s real feed shape: a short `<summary>` alongside a much longer `<content>`:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Test Atom MMA News</title>
+  <link rel="alternate" type="text/html" href="https://example-mma-news.test" />
+  <id>https://example-mma-news.test/atom</id>
+  <updated>2026-09-03T14:00:00Z</updated>
+  <entry>
+    <title>Jon Jones announces retirement plans</title>
+    <link rel="alternate" type="text/html" href="https://example-mma-news.test/jon-jones-retirement" />
+    <id>https://example-mma-news.test/?p=1</id>
+    <updated>2026-09-03T14:00:00Z</updated>
+    <published>2026-09-03T14:00:00Z</published>
+    <summary type="html"><![CDATA[Jon Jones said Wednesday that he is considering retirement after his next fight.]]></summary>
+    <content type="html"><![CDATA[<p>Jon Jones said Wednesday that he is considering retirement after his next fight. This is a much longer full article body that goes on for a while with a lot more detail than the short summary above, covering his career, his opponents, and his plans for the future in extensive depth that would be far too long to show as a card excerpt on the news page.</p>]]></content>
+  </entry>
+</feed>
+```
+
+Create `data/news/__fixtures__/long-description-feed.xml` — an RSS 2.0 item whose `<description>` is 318 characters (over the 300-char cap), to prove truncation kicks in even without Atom's `<summary>` distinction:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test MMA News</title>
+    <link>https://example-mma-news.test</link>
+    <description>Test feed</description>
+    <item>
+      <title>Jon Jones retirement details in full</title>
+      <link>https://example-mma-news.test/jon-jones-retirement-full</link>
+      <description>Jon Jones said Wednesday that he is considering retirement after his next fight, citing a desire to spend more time with his family and explore business opportunities outside the octagon after more than a decade at the top of the heavyweight and light heavyweight divisions in mixed martial arts competition worldwide.</description>
+      <pubDate>Thu, 03 Sep 2026 14:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
 ```
 
 - [ ] **Step 2: Write the failing tests**
@@ -242,6 +298,28 @@ test('normalizeTitle treats titles differing only by punctuation as equal', () =
     normalizeTitle('Jon Jones I m done'),
   );
 });
+
+test('parseFeedXml prefers the Atom <summary> over the full <content> body', async () => {
+  const xml = loadFixture('atom-feed.xml');
+  const articles = await parseFeedXml(xml, TEST_SOURCE);
+
+  assert.equal(articles.length, 1);
+  assert.equal(articles[0].excerpt, 'Jon Jones said Wednesday that he is considering retirement after his next fight.');
+  assert.equal(articles[0].imageUrl, null); // Atom has no <enclosure>
+});
+
+test('parseFeedXml truncates an excerpt over 300 characters at a word boundary with an ellipsis', async () => {
+  const xml = loadFixture('long-description-feed.xml');
+  const articles = await parseFeedXml(xml, TEST_SOURCE);
+
+  assert.equal(articles.length, 1);
+  assert.ok(articles[0].excerpt.length <= 301); // 300 chars + the ellipsis character
+  assert.ok(articles[0].excerpt.endsWith('…'));
+  assert.equal(
+    articles[0].excerpt,
+    'Jon Jones said Wednesday that he is considering retirement after his next fight, citing a desire to spend more time with his family and explore business opportunities outside the octagon after more than a decade at the top of the heavyweight and light heavyweight divisions in mixed martial arts…',
+  );
+});
 ```
 
 - [ ] **Step 3: Run the tests to verify they fail**
@@ -271,6 +349,24 @@ export interface NormalizedNewsArticle {
 
 const parser = new Parser();
 
+// Hard cap on excerpt length, regardless of which feed field it came from.
+// Not just for Atom feeds whose <content> is the full article (see
+// mma-fighting in sources.config.ts) — any RSS <description> that isn't
+// properly truncated by its source hits this too. Keeps card UI consistent
+// and stays well clear of ever republishing something that reads as the
+// full article (see the design spec's "extrait court + lien externe" rule).
+const EXCERPT_MAX_LENGTH = 300;
+
+function truncateExcerpt(text: string, maxLength: number = EXCERPT_MAX_LENGTH): string {
+  const trimmed = text.trim();
+  if (trimmed.length <= maxLength) return trimmed;
+
+  const cut = trimmed.slice(0, maxLength);
+  const lastSpace = cut.lastIndexOf(' ');
+  const clean = lastSpace > 0 ? cut.slice(0, lastSpace) : cut;
+  return `${clean}…`;
+}
+
 /**
  * Parses raw RSS/Atom XML into normalized articles. Pure aside from the
  * XML parsing itself — no network or DB access, so it's fully testable with
@@ -287,7 +383,12 @@ export async function parseFeedXml(xml: string, source: NewsSourceConfig): Promi
       sourceId: source.sourceId,
       orgId: source.orgId,
       title: item.title!.trim(),
-      excerpt: (item.contentSnippet ?? item.content ?? '').trim(),
+      // item.summary only exists on Atom feeds (rss-parser's short-form
+      // field) — it's the actual excerpt there, unlike item.content/
+      // contentSnippet which hold the full article body for Atom. RSS 2.0
+      // feeds never populate item.summary, so this falls through to
+      // contentSnippet/content for them exactly as before.
+      excerpt: truncateExcerpt(item.summary ?? item.contentSnippet ?? item.content ?? ''),
       url: item.link!,
       imageUrl: item.enclosure?.url ?? null,
       language: source.language,
@@ -312,7 +413,7 @@ export function normalizeTitle(title: string): string {
 - [ ] **Step 5: Run the tests to verify they pass**
 
 Run: `npm test -- --test-name-pattern="parseFeedXml|normalizeTitle"`
-Expected: PASS, 6 tests.
+Expected: PASS, 8 tests.
 
 - [ ] **Step 6: Commit**
 
@@ -458,7 +559,7 @@ Expected: PASS, 6 tests.
 - [ ] **Step 5: Run the whole `data/news` test file to confirm nothing else broke**
 
 Run: `npm test`
-Expected: PASS, all tests including the 6 from Task 2 and the 6 from this task.
+Expected: PASS, all tests including the 8 from Task 2 and the 6 from this task.
 
 - [ ] **Step 6: Commit**
 
@@ -1203,7 +1304,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>"
 - [ ] **Step 1: Run the full test suite**
 
 Run: `npm test`
-Expected: PASS, every test in `data/**/*.test.ts` including the new `data/news/parse-feed.test.ts` (12 tests from Tasks 2–3).
+Expected: PASS, every test in `data/**/*.test.ts` including the new `data/news/parse-feed.test.ts` (14 tests from Tasks 2–3).
 
 - [ ] **Step 2: Run the linter**
 
