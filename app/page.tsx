@@ -1,17 +1,19 @@
 import Link from 'next/link';
-import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights } from '@/data/lib/data';
+import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights, fetchNewsArticles } from '@/data/lib/data';
 import { computeNextEventForHome, groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
 import NextEventHero from '@/components/ui/events/next-event-hero';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightResultRow from '@/components/ui/fights/fight-result-row';
 import EventCard from '@/components/ui/events/event-card';
 import EmptyState from '@/components/ui/shared/empty-state';
+import NewsSection from '@/components/ui/news/news-section';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
 const RECENT_RESULTS_COUNT = 4;
+const HOME_NEWS_COUNT = 4;
 
 export default async function Page() {
   const events = await fetchAllEvents();
@@ -23,9 +25,10 @@ export default async function Page() {
   // below still only shows a fight for an actually-upcoming hero event: when
   // there's no future event in DB, computeNextEventForHome falls back to
   // the last past event, which has no upcoming fight left to show there.
-  const [nextEventFights, recentResults] = await Promise.all([
+  const [nextEventFights, recentResults, news] = await Promise.all([
     next ? fetchFightsByEvent(String(next.event.id)) : Promise.resolve([]),
     fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
+    fetchNewsArticles({ pageSize: HOME_NEWS_COUNT }),
   ]);
 
   const heroEvent = next && next.isUpcoming ? next.event : null;
@@ -95,6 +98,8 @@ export default async function Page() {
           </div>
         </section>
       )}
+
+      {news.articles.length > 0 && <NewsSection articles={news.articles} />}
     </main>
   );
 }
