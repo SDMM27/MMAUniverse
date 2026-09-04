@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test MMA News</title>
+    <link>https://example-mma-news.test</link>
+    <description>Test feed</description>
+    <item>
+      <title>Jon Jones retirement details in full</title>
+      <link>https://example-mma-news.test/jon-jones-retirement-full</link>
+      <description>Jon Jones said Wednesday that he is considering retirement after his next fight, citing a desire to spend more time with his family and explore business opportunities outside the octagon after more than a decade at the top of the heavyweight and light heavyweight divisions in mixed martial arts competition worldwide.</description>
+      <pubDate>Thu, 03 Sep 2026 14:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
