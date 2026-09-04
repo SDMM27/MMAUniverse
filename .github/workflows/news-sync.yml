@@ -1,0 +1,32 @@
+name: News sync
+
+# Polls the RSS/Atom sources in data/news/sources.config.ts and ingests new
+# articles into news_articles, every 20 minutes. Runs via GitHub Actions
+# rather than Vercel Cron for the same reason the other scheduled jobs in
+# this repo do (see daily-sync.yml / event-day-sync.yml): Vercel Cron's
+# frequency is limited on non-Pro plans, GitHub Actions isn't.
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+  workflow_dispatch: {}
+
+concurrency:
+  group: mma-universe-news-sync
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Ingest RSS news sources
+        run: npx tsx data/news/run-ingest.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
