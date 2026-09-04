@@ -1988,6 +1988,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Bulut-469078",
       "fight_history": [
         {
+          "opponent_name": "George Wellem",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/George-Wellem-506213",
+          "event_name": "Combat Games - The First Combat Games",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combat-Games-The-First-Combat-Games-114377",
+          "date": "2026-05-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "3:26"
+        },
+        {
           "opponent_name": "Reza Jalalzaei",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Reza-Jalalzaei-478660",
           "event_name": "VFN 46 - Vendetta Fight Nights 46",
@@ -2087,44 +2099,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Pedro-Duarte-425876",
-      "fight_history": [
-        {
-          "opponent_name": "Diego Mejias",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Diego-Mejias-460616",
-          "event_name": "WOW 30 - Lisboa",
-          "event_sherdog_url": "https://www.sherdog.com/events/WOW-30-Lisboa-112613",
-          "date": "2026-05-22",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "Jesus Arjona",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Ricardo Reis",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ricardo-Reis-439601",
-          "event_name": "FFL MMA 3 - Fusion Fight League MMA 3",
-          "event_sherdog_url": "https://www.sherdog.com/events/FFL-MMA-3-Fusion-Fight-League-MMA-3-100110",
-          "date": "2023-12-02",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Olivio da Cunha",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Olivio-da-Cunha-404204",
-          "event_name": "Power Fighting Championship - PFC 7",
-          "event_sherdog_url": "https://www.sherdog.com/events/Power-Fighting-Championship-PFC-7-97782",
-          "date": "2023-04-15",
-          "result": "win",
-          "method": "TKO",
-          "referee": "Philip Vanheuden",
-          "round": 1,
-          "time": "0:57"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Seiichiro Ito",
