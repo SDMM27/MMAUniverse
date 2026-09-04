@@ -94,6 +94,14 @@ test('parseFeedXml truncates an excerpt over 300 characters at a word boundary w
   );
 });
 
+test('parseFeedXml drops items whose link is not http(s)', async () => {
+  const xml = loadFixture('unsafe-link-feed.xml');
+  const articles = await parseFeedXml(xml, TEST_SOURCE);
+
+  assert.equal(articles.length, 1);
+  assert.equal(articles[0].title, 'Safe article');
+});
+
 function makeArticle(overrides: Partial<import('./parse-feed').NormalizedNewsArticle> = {}) {
   return {
     sourceId: 'test-source',
