@@ -58,7 +58,11 @@ export async function parseFeedXml(xml: string, source: NewsSourceConfig): Promi
       url: item.link!,
       imageUrl: item.enclosure?.url ?? null,
       language: source.language,
-      publishedAt: new Date(item.pubDate!),
+      // item.isoDate is rss-parser's own pre-validated normalization of
+      // pubDate/updated/published (confirmed present on both RSS 2.0 and
+      // Atom items) — preferred over re-parsing the raw string ourselves,
+      // falling back to pubDate for the rare item that lacks it.
+      publishedAt: new Date(item.isoDate ?? item.pubDate!),
     }));
 }
 
