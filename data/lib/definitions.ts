@@ -163,3 +163,18 @@ export type PickRecord = {
   created_at: string;
   updated_at: string;
 };
+
+// News aggregation (RSS -> news_articles) — see data/news/sources.config.ts
+// and docs/superpowers/specs/2026-09-04-mma-news-aggregation-design.md.
+export type NewsArticle = {
+  id: number;
+  source_id: string;
+  org_id: number | null;
+  title: string;
+  excerpt: string;
+  url: string;
+  image_url: string | null;
+  language: 'fr' | 'en';
+  published_at: string;
+  fetched_at: string;
+};
