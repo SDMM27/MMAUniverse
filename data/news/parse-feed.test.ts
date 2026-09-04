@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseFeedXml, normalizeTitle } from './parse-feed';
+import { parseFeedXml, normalizeTitle, dedupeAgainstExisting } from './parse-feed';
 import type { NewsSourceConfig } from './sources.config';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -92,4 +92,65 @@ test('parseFeedXml truncates an excerpt over 300 characters at a word boundary w
     articles[0].excerpt,
     'Jon Jones said Wednesday that he is considering retirement after his next fight, citing a desire to spend more time with his family and explore business opportunities outside the octagon after more than a decade at the top of the heavyweight and light heavyweight divisions in mixed martial arts…',
   );
+});
+
+function makeArticle(overrides: Partial<import('./parse-feed').NormalizedNewsArticle> = {}) {
+  return {
+    sourceId: 'test-source',
+    orgId: null,
+    title: 'Jon Jones announces retirement plans',
+    excerpt: 'excerpt',
+    url: 'https://example-mma-news.test/article-1',
+    imageUrl: null,
+    language: 'en' as const,
+    publishedAt: new Date('2026-09-03T14:00:00.000Z'),
+    ...overrides,
+  };
+}
+
+test('dedupeAgainstExisting keeps an article with no matching recent title', () => {
+  const candidates = [makeArticle()];
+  const result = dedupeAgainstExisting(candidates, []);
+  assert.equal(result.length, 1);
+});
+
+test('dedupeAgainstExisting drops an article whose title matches a recent title within 48h', () => {
+  const candidates = [makeArticle({ publishedAt: new Date('2026-09-03T14:00:00.000Z') })];
+  const recentTitles = [
+    { normalizedTitle: normalizeTitle('Jon Jones announces retirement plans'), publishedAt: new Date('2026-09-03T10:00:00.000Z') },
+  ];
+  const result = dedupeAgainstExisting(candidates, recentTitles);
+  assert.deepEqual(result, []);
+});
+
+test('dedupeAgainstExisting keeps an article whose matching title is more than 48h old', () => {
+  const candidates = [makeArticle({ publishedAt: new Date('2026-09-03T14:00:00.000Z') })];
+  const recentTitles = [
+    { normalizedTitle: normalizeTitle('Jon Jones announces retirement plans'), publishedAt: new Date('2026-09-01T00:00:00.000Z') },
+  ];
+  const result = dedupeAgainstExisting(candidates, recentTitles);
+  assert.equal(result.length, 1);
+});
+
+test('dedupeAgainstExisting drops the second of two near-duplicate candidates in the same batch', () => {
+  const candidates = [
+    makeArticle({ url: 'https://example-mma-news.test/article-1', title: 'Jon Jones announces retirement plans' }),
+    makeArticle({ url: 'https://example-mma-news.test/article-2', title: 'JON JONES ANNOUNCES RETIREMENT PLANS!' }),
+  ];
+  const result = dedupeAgainstExisting(candidates, []);
+  assert.equal(result.length, 1);
+  assert.equal(result[0].url, 'https://example-mma-news.test/article-1');
+});
+
+test('dedupeAgainstExisting keeps two candidates with unrelated titles', () => {
+  const candidates = [
+    makeArticle({ url: 'https://example-mma-news.test/article-1', title: 'Jon Jones announces retirement plans' }),
+    makeArticle({ url: 'https://example-mma-news.test/article-2', title: 'UFC 320 fight card updated' }),
+  ];
+  const result = dedupeAgainstExisting(candidates, []);
+  assert.equal(result.length, 2);
+});
+
+test('dedupeAgainstExisting returns an empty array for an empty input', () => {
+  assert.deepEqual(dedupeAgainstExisting([], []), []);
 });

@@ -84,3 +84,40 @@ export function normalizeTitle(title: string): string {
     .replace(/\s+/g, ' ')
     .trim();
 }
+
+export interface RecentTitle {
+  normalizedTitle: string;
+  publishedAt: Date;
+}
+
+const DEDUP_WINDOW_MS = 48 * 60 * 60 * 1000;
+
+function isNearDuplicate(candidate: NormalizedNewsArticle, recent: RecentTitle): boolean {
+  if (normalizeTitle(candidate.title) !== recent.normalizedTitle) return false;
+  return Math.abs(candidate.publishedAt.getTime() - recent.publishedAt.getTime()) <= DEDUP_WINDOW_MS;
+}
+
+/**
+ * Filters out articles whose (normalized) title matches one already seen
+ * within the last 48h — either already in the DB (`recentTitles`, passed in
+ * by the caller) or earlier in this same candidates array. Exact-URL
+ * duplicates are NOT handled here: they're caught later by the `url` unique
+ * constraint on `news_articles` at insert time (see fetch-news.ts).
+ */
+export function dedupeAgainstExisting(
+  candidates: NormalizedNewsArticle[],
+  recentTitles: RecentTitle[],
+): NormalizedNewsArticle[] {
+  const seen = [...recentTitles];
+  const kept: NormalizedNewsArticle[] = [];
+
+  for (const candidate of candidates) {
+    const isDuplicate = seen.some((recent) => isNearDuplicate(candidate, recent));
+    if (isDuplicate) continue;
+
+    kept.push(candidate);
+    seen.push({ normalizedTitle: normalizeTitle(candidate.title), publishedAt: candidate.publishedAt });
+  }
+
+  return kept;
+}
