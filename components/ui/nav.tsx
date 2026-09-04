@@ -8,6 +8,7 @@ import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
 
 const links = [
   { href: '/', label: 'Accueil' },
+  { href: '/actualites', label: 'Actualités' },
   { href: '/events', label: 'Événements' },
   { href: '/fighters', label: 'Fighters' },
   { href: '/organizations', label: 'Organisations' },
