@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Test Atom MMA News</title>
+  <link rel="alternate" type="text/html" href="https://example-mma-news.test" />
+  <id>https://example-mma-news.test/atom</id>
+  <updated>2026-09-03T14:00:00Z</updated>
+  <entry>
+    <title>Jon Jones announces retirement plans</title>
+    <link rel="alternate" type="text/html" href="https://example-mma-news.test/jon-jones-retirement" />
+    <id>https://example-mma-news.test/?p=1</id>
+    <updated>2026-09-03T14:00:00Z</updated>
+    <published>2026-09-03T14:00:00Z</published>
+    <summary type="html"><![CDATA[Jon Jones said Wednesday that he is considering retirement after his next fight.]]></summary>
+    <content type="html"><![CDATA[<p>Jon Jones said Wednesday that he is considering retirement after his next fight. This is a much longer full article body that goes on for a while with a lot more detail than the short summary above, covering his career, his opponents, and his plans for the future in extensive depth that would be far too long to show as a card excerpt on the news page.</p>]]></content>
+  </entry>
+</feed>
