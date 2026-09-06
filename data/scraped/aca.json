@@ -1695,6 +1695,13 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/892124"
     },
     {
+      "name": "ACA YE 68 - ACA Young Eagles 68",
+      "date": "2026-09-17",
+      "start_time": "2026-09-17T00:00:00+00:00",
+      "event_location": "Sport Hall Colloseum, Grozny, Chechnya, Russia",
+      "event_poster": ""
+    },
+    {
       "name": "ACA 208 - Shaikhaev vs. Tumenov",
       "date": "2026-10-04",
       "start_time": "2026-10-04T00:00:00+00:00",
@@ -424364,6 +424371,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 208 - Shaikhaev vs. Tumenov",
+      "fighter1_name": "Kurban Gadzhiev",
+      "fighter2_name": "Umalat Israpilov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     },

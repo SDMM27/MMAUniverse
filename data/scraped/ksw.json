@@ -783,6 +783,13 @@
       "start_time": "2026-11-21T00:00:00+00:00",
       "event_location": "Netto Arena, Szczecin, Poland",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/897173"
+    },
+    {
+      "name": "KSW 124 - Pawlak vs. Kuberski",
+      "date": "2026-12-19",
+      "start_time": "2026-12-19T00:00:00+00:00",
+      "event_location": "PreZero Arena, Gliwice, Poland",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897393"
     }
   ],
   "fighters": [
@@ -177228,6 +177235,19 @@
     },
     {
       "event_name": "KSW 122 - Yakymenko vs. Morelli",
+      "fighter1_name": "Marian Ziolkowski",
+      "fighter2_name": "Wilson Varela",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "KSW 122 - Yakymenko vs. Morelli",
       "fighter1_name": "Adam Soldaev",
       "fighter2_name": "Mateusz Makarowski",
       "fight_finished": false,
@@ -177327,6 +177347,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "KSW 123 - Bartosinski vs. Lopaczyk",
+      "fighter1_name": "Valeriu Mircea",
+      "fighter2_name": "Marcin Held",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "KSW 124 - Pawlak vs. Kuberski",
+      "fighter1_name": "Pawel Pawlak",
+      "fighter2_name": "Piotr Kuberski",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
       "is_main_event": true,
       "is_title_fight": true
     }
