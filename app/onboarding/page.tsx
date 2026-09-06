@@ -32,7 +32,7 @@ export default async function Page() {
       <div className="flex flex-col gap-2 border-b border-base-border pb-6">
         <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Bienvenue !</h1>
         <p className="text-sm text-ink-secondary">
-          Choisis tes combattants et nationalités préférés — tu pourras toujours les modifier plus tard depuis "Mon profil".
+          Choisis tes combattants et nationalités préférés — tu pourras toujours les modifier plus tard depuis &quot;Mon profil&quot;.
         </p>
       </div>
 
