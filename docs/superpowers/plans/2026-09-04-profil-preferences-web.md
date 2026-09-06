@@ -21,7 +21,7 @@
 **Files:**
 - Modify: `app/seed/route.ts`
 
-- [ ] **Step 1: Add the schema function**
+- [x] **Step 1: Add the schema function**
 
 In `app/seed/route.ts`, add a new function after `seedPickemSchema` and before `export async function GET()`:
 
@@ -58,7 +58,7 @@ async function seedProfilePreferencesSchema() {
 }
 ```
 
-- [ ] **Step 2: Call it from `GET`**
+- [x] **Step 2: Call it from `GET`**
 
 In `app/seed/route.ts`, change:
 
@@ -101,12 +101,12 @@ export async function GET() {
 }
 ```
 
-- [ ] **Step 3: Manual verification**
+- [x] **Step 3: Manual verification**
 
 Run: `npm run dev`, then `curl -s http://localhost:3000/seed`
 Expected: `{"message":"Database seeded successfully"}`. Query the DB (Neon console or `psql`) — `user_fighter_preferences` and `user_nationality_preferences` both exist with the columns above.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add app/seed/route.ts
@@ -122,7 +122,7 @@ git commit -m "feat(db): add user_fighter_preferences and user_nationality_prefe
 
 **Why no test file:** see the plan header's "Deviation from the spec's Tests section" note — this follows the exact precedent of `data/lib/picks-data.ts`, which also has none.
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```ts
 // data/lib/profile-data.ts
@@ -219,12 +219,12 @@ export async function removePreferredNationality(userId: number, code: string): 
 }
 ```
 
-- [ ] **Step 2: Type-check**
+- [x] **Step 2: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add data/lib/profile-data.ts
@@ -240,7 +240,7 @@ git commit -m "feat(profile): add profile-data persistence functions"
 
 **Why:** The fighter picker (Task 6) needs a lightweight live-search endpoint. Reuses `fetchFighters` (already used by `/fighters`) rather than duplicating the query. Bounded to 8 results — this endpoint has no auth requirement (searching isn't sensitive), so keeping results small avoids it becoming a way to dump the whole fighters table.
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```ts
 // app/api/fighters/search/route.ts
@@ -263,14 +263,14 @@ export async function GET(request: Request) {
 }
 ```
 
-- [ ] **Step 2: Manual verification**
+- [x] **Step 2: Manual verification**
 
 Run: `npm run dev`, then `curl -s "http://localhost:3000/api/fighters/search?q=jones"`
 Expected: `{"fighters":[...]}` with up to 8 fighters whose name matches "jones".
 Run: `curl -s "http://localhost:3000/api/fighters/search?q="`
 Expected: `{"fighters":[]}`.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add app/api/fighters/search/route.ts
@@ -284,7 +284,7 @@ git commit -m "feat(profile): add GET /api/fighters/search"
 **Files:**
 - Create: `app/api/profile/fighters/route.ts`
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```ts
 // app/api/profile/fighters/route.ts
@@ -336,7 +336,7 @@ export async function DELETE(request: Request) {
 }
 ```
 
-- [ ] **Step 2: Manual verification**
+- [x] **Step 2: Manual verification**
 
 With `npm run dev` running and signed in via a browser (to get a session cookie), from that browser's devtools console:
 
@@ -354,7 +354,7 @@ Run the same `fetch` with `method: 'DELETE'` — `{ ok: true }`, the row is gone
 Run the POST with `fighterId: 999999999` (doesn't exist) — expect `{ error: 'Combattant introuvable.' }` with status 404.
 Sign out and repeat the POST — expect `{ error: '...connecté...' }` with status 401.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add app/api/profile/fighters/route.ts
@@ -368,7 +368,7 @@ git commit -m "feat(profile): add POST/DELETE /api/profile/fighters"
 **Files:**
 - Create: `app/api/profile/nationalities/route.ts`
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```ts
 // app/api/profile/nationalities/route.ts
@@ -419,7 +419,7 @@ export async function DELETE(request: Request) {
 }
 ```
 
-- [ ] **Step 2: Manual verification**
+- [x] **Step 2: Manual verification**
 
 With `npm run dev` running and signed in via a browser, from devtools console:
 
@@ -436,7 +436,7 @@ Run the same POST with `code: 'zz'` (not a real nationality in the DB) — expec
 Run with `method: 'DELETE'` and `code: 'FR'` — `{ ok: true }`, the row is gone.
 Sign out and repeat the POST — expect `{ error: '...connecté...' }` with status 401.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add app/api/profile/nationalities/route.ts
@@ -452,7 +452,7 @@ git commit -m "feat(profile): add POST/DELETE /api/profile/nationalities"
 
 **Why this shape:** Same "local UI state + `fetch` + `router.refresh()`" pattern as `components/ui/picks/pick-form.tsx` — the server component that renders this (Tasks 8/9) re-fetches `fetchPreferredFighters` on every render, so `router.refresh()` after a successful add/remove is what brings the list back in sync, rather than hand-rolled optimistic state.
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```tsx
 // components/ui/profile/fighter-preference-picker.tsx
@@ -602,12 +602,12 @@ export default function FighterPreferencePicker({
 }
 ```
 
-- [ ] **Step 2: Type-check**
+- [x] **Step 2: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add components/ui/profile/fighter-preference-picker.tsx
@@ -621,7 +621,7 @@ git commit -m "feat(profile): add FighterPreferencePicker component"
 **Files:**
 - Create: `components/ui/profile/nationality-preference-picker.tsx`
 
-- [ ] **Step 1: Write the implementation**
+- [x] **Step 1: Write the implementation**
 
 ```tsx
 // components/ui/profile/nationality-preference-picker.tsx
@@ -687,12 +687,12 @@ export default function NationalityPreferencePicker({
 }
 ```
 
-- [ ] **Step 2: Type-check**
+- [x] **Step 2: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add components/ui/profile/nationality-preference-picker.tsx
@@ -708,7 +708,7 @@ git commit -m "feat(profile): add NationalityPreferencePicker component"
 - Create: `app/onboarding/loading.tsx`
 - Create: `app/onboarding/error.tsx`
 
-- [ ] **Step 1: Write `page.tsx`**
+- [x] **Step 1: Write `page.tsx`**
 
 ```tsx
 // app/onboarding/page.tsx
@@ -767,7 +767,7 @@ export default async function Page() {
 
 Note: "Plus tard" and "Terminer" are both plain links to `/` — every add/remove already persisted the instant it happened (Task 6/7's `fetch` calls), so there's nothing left to submit. The two buttons exist purely so the user always has an explicit way to leave the screen, worded to match whether they engaged with the pickers or not.
 
-- [ ] **Step 2: Write `loading.tsx`**
+- [x] **Step 2: Write `loading.tsx`**
 
 ```tsx
 // app/onboarding/loading.tsx
@@ -782,7 +782,7 @@ export default function Loading() {
 }
 ```
 
-- [ ] **Step 3: Write `error.tsx`**
+- [x] **Step 3: Write `error.tsx`**
 
 ```tsx
 // app/onboarding/error.tsx
@@ -805,16 +805,16 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
 }
 ```
 
-- [ ] **Step 4: Type-check**
+- [x] **Step 4: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 5: Manual verification**
+- [x] **Step 5: Manual verification**
 
 Run: `npm run dev`. Signed out, open `/onboarding` — redirected to `/sign-in`. Signed in, open `/onboarding` — the two pickers render (empty if no preferences yet). Search for a fighter, click "Ajouter" — it moves into the preferred list. Click a nationality flag — it highlights. Click "Terminer" — redirected to `/`.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add app/onboarding
@@ -830,7 +830,7 @@ git commit -m "feat(profile): add /onboarding page"
 - Create: `app/profil/loading.tsx`
 - Create: `app/profil/error.tsx`
 
-- [ ] **Step 1: Write `page.tsx`**
+- [x] **Step 1: Write `page.tsx`**
 
 ```tsx
 // app/profil/page.tsx
@@ -882,7 +882,7 @@ export default async function Page() {
 }
 ```
 
-- [ ] **Step 2: Write `loading.tsx`**
+- [x] **Step 2: Write `loading.tsx`**
 
 ```tsx
 // app/profil/loading.tsx
@@ -897,7 +897,7 @@ export default function Loading() {
 }
 ```
 
-- [ ] **Step 3: Write `error.tsx`**
+- [x] **Step 3: Write `error.tsx`**
 
 ```tsx
 // app/profil/error.tsx
@@ -920,16 +920,16 @@ export default function Error({ reset }: { error: Error; reset: () => void }) {
 }
 ```
 
-- [ ] **Step 4: Type-check**
+- [x] **Step 4: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 5: Manual verification**
+- [x] **Step 5: Manual verification**
 
 Run: `npm run dev`. Signed out, open `/profil` — "Connecte-toi pour voir ton profil." with a sign-in link, no redirect/error. Signed in with preferences already set from Task 8 — they're pre-selected (preferred fighters listed, matching nationality flags highlighted). Remove a fighter and a nationality, add different ones — after each click the list updates (via `router.refresh()`); reload the page — the changes persisted.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add app/profil
@@ -943,7 +943,7 @@ git commit -m "feat(profile): add /profil page"
 **Files:**
 - Modify: `app/sign-up/[[...sign-up]]/page.tsx`
 
-- [ ] **Step 1: Add the redirect prop**
+- [x] **Step 1: Add the redirect prop**
 
 Change `app/sign-up/[[...sign-up]]/page.tsx` from:
 
@@ -977,12 +977,12 @@ export default function Page() {
 }
 ```
 
-- [ ] **Step 2: Type-check**
+- [x] **Step 2: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors — confirms `fallbackRedirectUrl` is a valid prop on this installed `@clerk/nextjs` version (6.39.6).
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add "app/sign-up/[[...sign-up]]/page.tsx"
@@ -997,7 +997,7 @@ git commit -m "feat(profile): redirect to /onboarding after sign-up"
 - Modify: `components/ui/nav.tsx:62-66` (desktop list)
 - Modify: `components/ui/nav.tsx:113-117` (mobile list)
 
-- [ ] **Step 1: Add the link to the desktop nav list**
+- [x] **Step 1: Add the link to the desktop nav list**
 
 In `components/ui/nav.tsx`, change:
 
@@ -1026,7 +1026,7 @@ to:
           <li className="flex items-center">
 ```
 
-- [ ] **Step 2: Add the link to the mobile nav list**
+- [x] **Step 2: Add the link to the mobile nav list**
 
 In the same file, change:
 
@@ -1057,16 +1057,16 @@ to:
             <SignedOut>
 ```
 
-- [ ] **Step 3: Type-check**
+- [x] **Step 3: Type-check**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
 
-- [ ] **Step 4: Manual verification**
+- [x] **Step 4: Manual verification**
 
 Run: `npm run dev`. Signed in, on desktop width — "Mon profil" appears in the top nav next to "Mes pronostics", links to `/profil`, highlights when active. Resize below `md` and open the mobile menu — same link appears there too. Signed out — neither nav shows "Mon profil".
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add components/ui/nav.tsx
@@ -1079,7 +1079,7 @@ git commit -m "feat(profile): add Mon profil nav link"
 
 **Files:** none (verification only)
 
-- [ ] **Step 1: Full flow**
+- [ ] **Step 1: Full flow** (BLOCKED — requires a human to sign up a real Clerk account against a live DB; see final summary)
 
 1. `npm run dev`.
 2. **Requires a human:** sign up a new account via `/sign-up` (Claude does not create accounts or enter credentials) — confirm it lands on `/onboarding` automatically.
@@ -1093,12 +1093,12 @@ git commit -m "feat(profile): add Mon profil nav link"
 
 Expected: every step behaves as described, no console errors, no 500s.
 
-- [ ] **Step 2: Run the full test suite**
+- [x] **Step 2: Run the full test suite**
 
 Run: `npm test`
 Expected: PASS — every pre-existing test file still passes (this plan added no new test file — see the plan header's Deviation note).
 
-- [ ] **Step 3: Type-check the whole project**
+- [x] **Step 3: Type-check the whole project**
 
 Run: `npx tsc --noEmit`
 Expected: no errors
