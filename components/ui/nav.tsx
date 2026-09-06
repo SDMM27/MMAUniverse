@@ -64,6 +64,11 @@ export default function Nav() {
               <NavLink href="/mes-pronostics" label="Mes pronostics" active={isActive(pathname, '/mes-pronostics')} />
             </SignedIn>
           </li>
+          <li>
+            <SignedIn>
+              <NavLink href="/profil" label="Mon profil" active={isActive(pathname, '/profil')} />
+            </SignedIn>
+          </li>
           <li className="flex items-center">
             <SignedOut>
               <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
@@ -113,6 +118,11 @@ export default function Nav() {
           <li>
             <SignedIn>
               <NavLink href="/mes-pronostics" label="Mes pronostics" active={isActive(pathname, '/mes-pronostics')} />
+            </SignedIn>
+          </li>
+          <li>
+            <SignedIn>
+              <NavLink href="/profil" label="Mon profil" active={isActive(pathname, '/profil')} />
             </SignedIn>
           </li>
           <li>
