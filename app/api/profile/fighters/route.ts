@@ -1,3 +1,4 @@
+// app/api/profile/fighters/route.ts
 import { sql } from '@/data/lib/db';
 import { getOrCreateCurrentUser } from '@/data/lib/picks-data';
 import { addPreferredFighter, removePreferredFighter } from '@/data/lib/profile-data';
