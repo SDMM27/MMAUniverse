@@ -407861,6 +407861,146 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Julio Vinicius Assuncao",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1750115844julioassuncao.jpg",
+      "weight_class": "Bantamweight",
+      "record": "6-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Julio-Vinicius-Assuncao-176585",
+      "fight_history": [
+        {
+          "opponent_name": "Paulo Nogueira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paulo-Nogueira-415901",
+          "event_name": "SFT 56 - King Kong vs. Soldado",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFT-56-King-Kong-vs-Soldado-108061",
+          "date": "2025-05-24",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Julian Fabrin Soares",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Rogerio Monteiro de Franca",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rogerio-Monteiro-de-Franca-285065",
+          "event_name": "SPF / PSF - Super Pitbull Fight 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/SPF-PSF-Super-Pitbull-Fight-11-106870",
+          "date": "2025-01-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yann Lucas Ribeiro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yann-Lucas-Ribeiro-274299",
+          "event_name": "ESC 8 - Extreme Show Combat 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/ESC-8-Extreme-Show-Combat-8-104628",
+          "date": "2024-07-20",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Fernando Silva",
+          "round": 2,
+          "time": "2:45"
+        },
+        {
+          "opponent_name": "Alexandre      Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexandre-Silva-250809",
+          "event_name": "BFC 1 - Bogue Fight Championship 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFC-1-Bogue-Fight-Championship-1-103724",
+          "date": "2024-06-14",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "",
+          "round": 1,
+          "time": "2:09"
+        },
+        {
+          "opponent_name": "Lucas Vinicius Azevedo Borges",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lucas-Vinicius-Azevedo-Borges-407162",
+          "event_name": "IFC - Ipixuna Fight Champions 14",
+          "event_sherdog_url": "https://www.sherdog.com/events/IFC-Ipixuna-Fight-Champions-14-97515",
+          "date": "2023-05-13",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Clebson Motta",
+          "round": 1,
+          "time": "1:17"
+        },
+        {
+          "opponent_name": "Alexandre      Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexandre-Silva-250809",
+          "event_name": "Noite de Guerra 2 - MMA Edition",
+          "event_sherdog_url": "https://www.sherdog.com/events/Noite-de-Guerra-2-MMA-Edition-96035",
+          "date": "2023-01-14",
+          "result": "win",
+          "method": "Submission",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Patricio Lima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Patricio-Lima-238127",
+          "event_name": "Bradar Fight - Bradar Gold Edition",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bradar-Fight-Bradar-Gold-Edition-57557",
+          "date": "2016-12-17",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Roberto Piccinini",
+          "round": 2,
+          "time": "2:36"
+        },
+        {
+          "opponent_name": "Jocelio Lira Ferreira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jocelio-Lira-Ferreira-151409",
+          "event_name": "FFC - Fistfight Combat",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFC-Fistfight-Combat-47287",
+          "date": "2015-07-31",
+          "result": "loss",
+          "method": "Submission (North-South Choke)",
+          "referee": "Gildasio Ferreira",
+          "round": 1,
+          "time": "1:45"
+        },
+        {
+          "opponent_name": "Rony Henrique",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rony-Henrique-176587",
+          "event_name": "Spartans Fight - Gladiador vs. Magal",
+          "event_sherdog_url": "https://www.sherdog.com/events/Spartans-Fight-Gladiador-vs-Magal-40321",
+          "date": "2014-08-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Brener Ferreira",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Lucas Dos Santos",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1786558897Lucas_Dos_Santos.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "0-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Lucas-Dos-Santos-429998",
+      "fight_history": [
+        {
+          "opponent_name": "Julio Brodie",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Julio-Brodie-414457",
+          "event_name": "CFFC 155 - Cage Fury Fighting Championships 155: Cunningham vs. Russell",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-155-Cage-Fury-Fighting-Championships-155-Cunningham-vs-Russell-112973",
+          "date": "2026-06-19",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Eric McMahon",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -436630,19 +436770,6 @@
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Derick Garcia Borges",
-      "fighter2_name": "Sukhrobbek Atazhanov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
       "fighter1_name": "Gustavo Rocha",
       "fighter2_name": "Felipe Rosa",
       "fight_finished": false,
@@ -436670,7 +436797,7 @@
     {
       "event_name": "LFA 241 - Pires vs Pereira",
       "fighter1_name": "Eduardo Fiuza Dutra",
-      "fighter2_name": "Fabrizio Pincheira",
+      "fighter2_name": "Julio Vinicius Assuncao",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -436924,6 +437051,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Tyree Overton",
+      "fighter2_name": "Lucas Dos Santos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     },
