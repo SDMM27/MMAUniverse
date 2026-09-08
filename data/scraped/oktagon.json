@@ -6200,6 +6200,214 @@
           "time": "0:00"
         }
       ]
+    },
+    {
+      "name": "Berkan Badur",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Berkan-Badur-428957",
+      "fight_history": [
+        {
+          "opponent_name": "Alexandre Goncalves",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexandre-Goncalves-12474",
+          "event_name": "GMC 47 - German MMA Championship 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-47-German-MMA-Championship-47-112675",
+          "date": "2026-05-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Fernando da Matta",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fernando-da-Matta-25490",
+          "event_name": "GMC 46 - German MMA Championship 46",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-46-German-MMA-Championship-46-111532",
+          "date": "2026-03-07",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Nordin Asrih",
+          "round": 1,
+          "time": "4:58"
+        },
+        {
+          "opponent_name": "Ben Docter",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ben-Docter-471497",
+          "event_name": "GMC 42 - German MMA Championship 42",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-42-German-MMA-Championship-42-106464",
+          "date": "2025-04-26",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Nordin Asrih",
+          "round": 2,
+          "time": "4:35"
+        },
+        {
+          "opponent_name": "Yassin El Atiki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yassin-El-Atiki-376194",
+          "event_name": "GMC Fight Night 17 - German MMA Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-Fight-Night-17-German-MMA-Championship-105956",
+          "date": "2024-11-09",
+          "result": "win",
+          "method": "Submission (Anaconda Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        }
+      ]
+    },
+    {
+      "name": "Viktor Cervinsky",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1729470418IMG_7875.jpeg",
+      "weight_class": "Welterweight",
+      "record": "5-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Viktor-Cervinsky-422464",
+      "fight_history": [
+        {
+          "opponent_name": "Amaury Wako-Zabo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amaury-WakoZabo-411676",
+          "event_name": "KSW 114 - Parnasse vs. Held",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-114-Parnasse-vs-Held-110408",
+          "date": "2026-01-17",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Aleh Miliakou",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Michal Gniady",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michal-Gniady-434535",
+          "event_name": "KSW 109 - Kuberski vs. Paczuski",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-109-Kuberski-vs-Paczuski-108487",
+          "date": "2025-08-09",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Aleh Miliakou",
+          "round": 2,
+          "time": "2:11"
+        },
+        {
+          "opponent_name": "Adam Niedzwiedz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adam-Niedzwiedz-159181",
+          "event_name": "KSW 99 - Vojcak vs. Martinek",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-99-Vojcak-vs-Martinek-103746",
+          "date": "2024-10-19",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Lukasz Bosacki",
+          "round": 1,
+          "time": "3:40"
+        },
+        {
+          "opponent_name": "Kacper Koziorzebski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kacper-Koziorzebski-210391",
+          "event_name": "KSW 91 - Mircea vs. Brichta",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-91-Mircea-vs-Brichta-100022",
+          "date": "2024-02-17",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Marc Goddard",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "David Hosek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Hosek-282605",
+          "event_name": "Real Fight Arena - RFA vs. IAF: Special Title Night",
+          "event_sherdog_url": "https://www.sherdog.com/events/Real-Fight-Arena-RFA-vs-IAF-Special-Title-Night-100129",
+          "date": "2023-11-11",
+          "result": "win",
+          "method": "Submission",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Jixie Molapo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jixie-Molapo-431685",
+          "event_name": "IAF 9\t - I Am Fighter 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/IAF-9-I-Am-Fighter-9-99024",
+          "date": "2023-09-16",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "4:13"
+        },
+        {
+          "opponent_name": "Jan Sindelar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jan-Sindelar-431686",
+          "event_name": "IAF 8 - I Am Fighter 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/IAF-8-I-Am-Fighter-8-97293",
+          "date": "2023-06-09",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Pavel Pilny",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pavel-Pilny-259171",
+          "event_name": "IAF 7 - I Am Fighter 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/IAF-7-I-Am-Fighter-7-97292",
+          "date": "2023-05-06",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 2,
+          "time": "0:00"
+        }
+      ]
+    },
+    {
+      "name": "Marat Nessar",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Marat-Nessar-445190",
+      "fight_history": [
+        {
+          "opponent_name": "Soren Dubielzig",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Soren-Dubielzig-407193",
+          "event_name": "The Cage MMA 9 - Magdeburg",
+          "event_sherdog_url": "https://www.sherdog.com/events/The-Cage-MMA-9-Magdeburg-113758",
+          "date": "2026-08-22",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "",
+          "round": 1,
+          "time": "1:45"
+        }
+      ]
+    },
+    {
+      "name": "Abdul Malik Aliev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Abdul-Malik-Aliev-420339",
+      "fight_history": [
+        {
+          "opponent_name": "Anatoliy Adzhamyan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anatoliy-Adzhamyan-188059",
+          "event_name": "Brave CF 90 - Brave Combat Federation 90",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-90-Brave-Combat-Federation-90-104413",
+          "date": "2024-11-23",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Piotr Jarosz",
+          "round": 1,
+          "time": "2:52"
+        }
+      ]
     }
   ],
   "fights": [
@@ -20167,45 +20375,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
-      "fighter1_name": "Jakub Dohnal",
-      "fighter2_name": "Vojto Barborik",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
-      "fighter1_name": "Tomas Ciganik",
-      "fighter2_name": "Murat Tuysuz",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
-      "fighter1_name": "Niamh Kinehan",
-      "fighter2_name": "Alana Cook",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
       "fighter1_name": "Vojtech Garba",
       "fighter2_name": "Robert Lau",
       "fight_finished": false,
@@ -20219,8 +20388,47 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
+      "fighter1_name": "Jakub Dohnal",
+      "fighter2_name": "Vojto Barborik",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
       "fighter1_name": "Simon Bruknar",
       "fighter2_name": "Nathan Haywood",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
+      "fighter1_name": "Tomas Ciganik",
+      "fighter2_name": "Berkan Badur",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "163lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 93: Rousal vs. Magard",
+      "fighter1_name": "Niamh Kinehan",
+      "fighter2_name": "Alana Cook",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -20258,19 +20466,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
-      "fighter1_name": "Frederic Vosgrone",
-      "fighter2_name": "Karlos Vemola",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "196lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
       "fighter1_name": "Max Coga",
       "fighter2_name": "Christian Jungwirth",
       "fight_finished": false,
@@ -20284,14 +20479,14 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
-      "fighter1_name": "Jaime Cordero",
-      "fighter2_name": "Robert Pukac",
+      "fighter1_name": "Frederic Vosgrone",
+      "fighter2_name": "Karlos Vemola",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight",
+      "weight_class": "196lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -20310,19 +20505,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
-      "fighter1_name": "Tamerlan Dulatov",
-      "fighter2_name": "Nikola Jankovic",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
       "fighter1_name": "Hugo Vach",
       "fighter2_name": "Deniz Ilbay",
       "fight_finished": false,
@@ -20331,6 +20513,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
+      "fighter1_name": "Jaime Cordero",
+      "fighter2_name": "Robert Pukac",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 94: Eckerlin vs. Kozma",
+      "fighter1_name": "Tamerlan Dulatov",
+      "fighter2_name": "Nikola Jankovic",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -20414,6 +20622,32 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "fighter1_name": "Vaclav Stepan",
+      "fighter2_name": "Sami Zarabi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "fighter1_name": "Zdenek Polivka",
+      "fighter2_name": "Timo Feucht",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
       "fighter1_name": "Alex Hutyra",
       "fighter2_name": "Frantisek Fodor",
       "fight_finished": false,
@@ -20422,6 +20656,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "fighter1_name": "Viktor Cervinsky",
+      "fighter2_name": "Daniel Hromek",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -20466,6 +20713,19 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "fighter1_name": "Gokhan Aksu",
+      "fighter2_name": "Niko Samsonidse",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
       "fighter1_name": "Lazar Todev",
       "fighter2_name": "Simon Biyong",
       "fight_finished": false,
@@ -20487,6 +20747,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "fighter1_name": "Marat Nessar",
+      "fighter2_name": "Abdul Malik Aliev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
