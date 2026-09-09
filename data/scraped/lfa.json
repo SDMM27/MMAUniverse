@@ -408001,6 +408001,40 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Adryen Spinks",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20170409081054_spinks.JPG",
+      "weight_class": "Bantamweight",
+      "record": "1-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Adryen-Spinks-205533",
+      "fight_history": [
+        {
+          "opponent_name": "Jeong Joo Choi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jeong-Joo-Choi-312047",
+          "event_name": "FCOC - Fight Club OC",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCOC-Fight-Club-OC-103807",
+          "date": "2025-08-28",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Michael Bell",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Quest Truxton",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Quest-Truxton-392189",
+          "event_name": "FCOC - Fight Club OC",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCOC-Fight-Club-OC-103805",
+          "date": "2025-04-17",
+          "result": "win",
+          "method": "Technical Submission (Rear-Naked Choke)",
+          "referee": "Michael Bell",
+          "round": 1,
+          "time": "3:44"
+        }
+      ]
     }
   ],
   "fights": [
@@ -436999,6 +437033,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Noah Gasho",
+      "fighter2_name": "Adryen Spinks",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "150lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
