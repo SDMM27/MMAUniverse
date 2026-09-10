@@ -68163,6 +68163,216 @@
           "time": "2:07"
         }
       ]
+    },
+    {
+      "name": "Lorenzo Nyambit",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Lorenzo-Nyambit-478462",
+      "fight_history": [
+        {
+          "opponent_name": "Tom Freiwald",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tom-Freiwald-467079",
+          "event_name": "UC 5 - Ultimate Cage 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/UC-5-Ultimate-Cage-5-109666",
+          "date": "2025-09-27",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Jeremy Langlet",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Ridge Mvondo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ridge-Mvondo-441098",
+          "event_name": "IFC 2 - Influence Fight Club 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/IFC-2-Influence-Fight-Club-2-107322",
+          "date": "2025-05-03",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "3:32"
+        }
+      ]
+    },
+    {
+      "name": "Mikail Yavuz",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Mikail-Yavuz-443474",
+      "fight_history": [
+        {
+          "opponent_name": "Morgan Adam",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Morgan-Adam-489509",
+          "event_name": "Arene des Sacres 10 - ADS 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/Arene-des-Sacres-10-ADS-10-112456",
+          "date": "2026-04-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Amar Mraidi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amar-Mraidi-463681",
+          "event_name": "Coliseum 2 - Coliseum Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/Coliseum-2-Coliseum-Fighting-Championship-106451",
+          "date": "2025-02-12",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Yoann Dinal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yoann-Dinal-432337",
+          "event_name": "100% Fight 56 - New Generation",
+          "event_sherdog_url": "https://www.sherdog.com/events/10037-Fight-56-New-Generation-103263",
+          "date": "2024-06-29",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Clement Lazuckiewiez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Clement-Lazuckiewiez-443473",
+          "event_name": "Arene des Sacres 5 - ADS 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Arene-des-Sacres-5-ADS-5-101044",
+          "date": "2024-01-20",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        }
+      ]
+    },
+    {
+      "name": "Sayfoula Becheev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sayfoula-Becheev-433752",
+      "fight_history": [
+        {
+          "opponent_name": "Jason Duval-Masson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jason-DuvalMasson-472203",
+          "event_name": "La Nuit des Combattants - Boxing and MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/La-Nuit-des-Combattants-Boxing-and-MMA-112425",
+          "date": "2026-03-28",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Karim Benmabrouk",
+          "round": 2,
+          "time": "0:50"
+        },
+        {
+          "opponent_name": "Mahamade Demba Samba",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahamade-Demba-Samba-453877",
+          "event_name": "FMMAF - MMA League 19: Miramas - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-19-Miramas-Day-2-105918",
+          "date": "2025-03-30",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "",
+          "round": 3,
+          "time": "2:10"
+        },
+        {
+          "opponent_name": "Erwin Le Thellec",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erwin-Le-Thellec-440872",
+          "event_name": "FMMAF - MMA League 18: Bretagne - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-18-Bretagne-Day-2-105916",
+          "date": "2025-02-23",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "2:56"
+        },
+        {
+          "opponent_name": "Yassine Bedaoudia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yassine-Bedaoudia-461154",
+          "event_name": "FMMAF - MMA League 18: Bretagne - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-18-Bretagne-Day-2-105916",
+          "date": "2025-02-23",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:49"
+        },
+        {
+          "opponent_name": "Vang-Si Yvan Nzaou",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/VangSi-Yvan-Nzaou-451062",
+          "event_name": "FMMAF - MMA League 18: Bretagne - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-18-Bretagne-Day-1-105915",
+          "date": "2025-02-22",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "2:01"
+        },
+        {
+          "opponent_name": "Batuhan Gumustepe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Batuhan-Gumustepe-464969",
+          "event_name": "FMMAF - MMA League 17: Guyancourt - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-17-Guyancourt-Day-2-105912",
+          "date": "2025-01-19",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:22"
+        },
+        {
+          "opponent_name": "Yanis Marouane",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yanis-Marouane-442291",
+          "event_name": "FMMAF - MMA League 17: Guyancourt - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-17-Guyancourt-Day-1-105911",
+          "date": "2025-01-18",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:49"
+        },
+        {
+          "opponent_name": "Nabil Mis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nabil-Mis-395371",
+          "event_name": "Pro Evolution Fighting 2 - PEF 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pro-Evolution-Fighting-2-PEF-2-99070",
+          "date": "2023-09-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "2:49"
+        },
+        {
+          "opponent_name": "Anthony Jean",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anthony-Jean-433753",
+          "event_name": "La Nuit des Combattants - Boxing and MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/La-Nuit-des-Combattants-Boxing-and-MMA-99534",
+          "date": "2023-03-04",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Mohamed El Fadili",
+          "round": 2,
+          "time": "0:36"
+        }
+      ]
     }
   ],
   "fights": [
@@ -73955,6 +74165,45 @@
       "event_name": "HXMMA 46 - Hexagone MMA 46",
       "fighter1_name": "Hugo Boigeol Baggioni",
       "fighter2_name": "Haik Khodedanian",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 46 - Hexagone MMA 46",
+      "fighter1_name": "Erwan Teiga",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 46 - Hexagone MMA 46",
+      "fighter1_name": "Lorenzo Nyambit",
+      "fighter2_name": "Mikail Yavuz",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 46 - Hexagone MMA 46",
+      "fighter1_name": "Sayfoula Becheev",
+      "fighter2_name": "Mathieu Rogez",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

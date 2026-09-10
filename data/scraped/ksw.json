@@ -177364,6 +177364,19 @@
       "is_title_fight": true
     },
     {
+      "event_name": "KSW 123 - Bartosinski vs. Lopaczyk",
+      "fighter1_name": "Kamil Szkaradek",
+      "fighter2_name": "Bruno Azevedo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "KSW 124 - Pawlak vs. Kuberski",
       "fighter1_name": "Pawel Pawlak",
       "fighter2_name": "Piotr Kuberski",

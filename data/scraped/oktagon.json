@@ -867,7 +867,7 @@
       "date": "2026-11-21",
       "start_time": "2026-11-21T00:00:00+00:00",
       "event_location": "Werk Arena, Třinec, Czech Republic",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896739"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897696"
     },
     {
       "name": "Oktagon MMA - Oktagon 99",
@@ -6406,6 +6406,52 @@
           "referee": "Piotr Jarosz",
           "round": 1,
           "time": "2:52"
+        }
+      ]
+    },
+    {
+      "name": "Fayaz Haqparast",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "3-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Fayaz-Haqparast-405038",
+      "fight_history": [
+        {
+          "opponent_name": "Valentin Gjokaj",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valentin-Gjokaj-436675",
+          "event_name": "Innferno 10 - Innferno Fighting Championship 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/Innferno-10-Innferno-Fighting-Championship-10-113035",
+          "date": "2026-05-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Gerd Richter",
+          "round": 2,
+          "time": "1:53"
+        },
+        {
+          "opponent_name": "Zoltan Segedi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zoltan-Segedi-425882",
+          "event_name": "WLMMA - We Love MMA 85",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLMMA-We-Love-MMA-85-108058",
+          "date": "2026-02-14",
+          "result": "win",
+          "method": "TKO (Injury)",
+          "referee": "",
+          "round": 1,
+          "time": "0:17"
+        },
+        {
+          "opponent_name": "Anzor Arsanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anzor-Arsanov-158901",
+          "event_name": "Golden Fist Gym - Creed Fight Nights 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/Golden-Fist-Gym-Creed-Fight-Nights-9-110933",
+          "date": "2025-06-28",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
         }
       ]
     }
@@ -20764,6 +20810,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "fighter1_name": "Shawn Marcos da Silva",
+      "fighter2_name": "Fayaz Haqparast",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "Oktagon MMA - Oktagon 97: Severino vs. Holzer",
       "fighter1_name": "Igor Severino",
       "fighter2_name": "Max Holzer",
@@ -20830,6 +20889,19 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 98",
+      "fighter1_name": "Veronika Smolkova",
+      "fighter2_name": "Ivana Petrovic",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 98",
       "fighter1_name": "Tomasz Mudroch",
       "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
@@ -20838,7 +20910,7 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": true,
+      "is_main_event": false,
       "is_title_fight": false
     },
     {

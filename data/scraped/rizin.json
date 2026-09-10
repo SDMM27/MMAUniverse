@@ -513,7 +513,7 @@
       "date": "2026-12-31",
       "start_time": "2026-12-31T00:00:00+00:00",
       "event_location": "Vantelin Dome Nagoya, Nagoya, Aichi, Japan",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897797"
     }
   ],
   "fighters": [
@@ -160467,6 +160467,19 @@
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - New Year's Eve Event",
+      "fighter1_name": "Rajabali Shaidullaev",
+      "fighter2_name": "Kyoma Akimoto",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }
