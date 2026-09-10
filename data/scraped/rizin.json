@@ -506,7 +506,7 @@
       "date": "2026-11-08",
       "start_time": "2026-11-08T00:00:00+00:00",
       "event_location": "LaLa Arena Tokyo-Bay, Funabashi, Chiba, Japan",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897791"
     },
     {
       "name": "Rizin FF - New Year's Eve Event",
@@ -525,6 +525,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Rajabali-Shaidullaev-365469",
       "fight_history": [
+        {
+          "opponent_name": "A.J. McKee",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/AJ-McKee-194637",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Jason Herzog",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Yuta Kubo",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuta-Kubo-391321",
@@ -712,7 +724,7 @@
           "event_sherdog_url": "https://www.sherdog.com/events/Batyr-Bashy-2019-Tournament-85193",
           "date": "2019-11-06",
           "result": "win",
-          "method": "Submission",
+          "method": "Submission (Heel Hook)",
           "referee": "Marat Bekmuratov",
           "round": 1,
           "time": "1:34"
@@ -763,6 +775,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/AJ-McKee-194637",
       "fight_history": [
+        {
+          "opponent_name": "Rajabali Shaidullaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rajabali-Shaidullaev-365469",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Jason Herzog",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Salamat Isbulaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salamat-Isbulaev-315985",
@@ -1098,6 +1122,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Mikuru-Asakura-113195",
       "fight_history": [
         {
+          "opponent_name": "Shinya Aoki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shinya-Aoki-10774",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Takashi Hashimoto",
+          "round": 1,
+          "time": "2:39"
+        },
+        {
           "opponent_name": "Rajabali Shaidullaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rajabali-Shaidullaev-365469",
           "event_name": "Rizin FF - Shiwasu no Cho Tsuwamono Matsuri",
@@ -1419,6 +1455,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Shinya-Aoki-10774",
       "fight_history": [
+        {
+          "opponent_name": "Mikuru Asakura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mikuru-Asakura-113195",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Takashi Hashimoto",
+          "round": 1,
+          "time": "2:39"
+        },
         {
           "opponent_name": "Hiroyuki Tetsuka",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hiroyuki-Tetsuka-122523",
@@ -2174,6 +2222,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Roberto-Satoshi-de-Souza-148081",
       "fight_history": [
         {
+          "opponent_name": "Shunta Nomura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shunta-Nomura-393461",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Masato Fukuda",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Ilhom Nazimov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ilhom-Nazimov-240729",
           "event_name": "Rizin FF - Shiwasu no Cho Tsuwamono Matsuri",
@@ -2472,6 +2532,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Shunta-Nomura-393461",
       "fight_history": [
         {
+          "opponent_name": "Roberto Satoshi de Souza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Roberto-Satoshi-de-Souza-148081",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Masato Fukuda",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Patricky Freire",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Patricky-Freire-38544",
           "event_name": "Rizin FF - Super Rizin 4",
@@ -2625,6 +2697,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Karshyga-Dautbek-199149",
       "fight_history": [
+        {
+          "opponent_name": "Ren Hiramoto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ren-Hiramoto-378737",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Tatsuro Nagase",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Kyohei Hagiwara",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyohei-Hagiwara-245811",
@@ -2912,6 +2996,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ren-Hiramoto-378737",
       "fight_history": [
         {
+          "opponent_name": "Karshyga Dautbek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Karshyga-Dautbek-199149",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Tatsuro Nagase",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Mikuru Asakura",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mikuru-Asakura-113195",
           "event_name": "Rizin FF - Super Rizin 3",
@@ -3005,6 +3101,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Yutaka-Saito-87378",
       "fight_history": [
+        {
+          "opponent_name": "Ren Sugiyama",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ren-Sugiyama-397380",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Minoru Toyonaga",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Yuta Kubo",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuta-Kubo-391321",
@@ -3400,6 +3508,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ren-Sugiyama-397380",
       "fight_history": [
         {
+          "opponent_name": "Yutaka Saito",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yutaka-Saito-87378",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Minoru Toyonaga",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Masanori Kanehara",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Masanori-Kanehara-13767",
           "event_name": "Rizin FF - Super Rizin 4",
@@ -3469,6 +3589,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Vugar-Karamov-115197",
       "fight_history": [
+        {
+          "opponent_name": "Ryo Takagi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryo-Takagi-390300",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Naoya Uematsu",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Kleber Koike Erbst",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kleber-Koike-Erbst-38593",
@@ -3815,6 +3947,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ryo-Takagi-390300",
       "fight_history": [
+        {
+          "opponent_name": "Vugar Karamov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vugar-Karamov-115197",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Naoya Uematsu",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Kaiwen Li",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kaiwen-Li-183217",
@@ -4267,6 +4411,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Natalia-Kuziutina-419642",
       "fight_history": [
+        {
+          "opponent_name": "Rena Kubota",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rena-Kubota-209061",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Tatsuro Nagase",
+          "round": 2,
+          "time": "3:14"
+        },
         {
           "opponent_name": "Ayaka Hamasaki",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ayaka-Hamasaki-45332",
@@ -150479,6 +150635,242 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Kazuki Aimoto",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20260705013201_Kazuki_Aimoto.JPG",
+      "weight_class": "Lightweight",
+      "record": "10-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Kazuki-Aimoto-424907",
+      "fight_history": [
+        {
+          "opponent_name": "Shoma Yamada",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shoma-Yamada-411184",
+          "event_name": "Deep - 132 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-132-Impact-112825",
+          "date": "2026-07-05",
+          "result": "win",
+          "method": "TKO (Soccer Kick and Punches)",
+          "referee": "Tatsuro Nagase",
+          "round": 3,
+          "time": "1:55"
+        },
+        {
+          "opponent_name": "Ryogo Takahashi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryogo-Takahashi-84427",
+          "event_name": "Deep - 129 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-129-Impact-110079",
+          "date": "2025-12-14",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Naoya Uematsu",
+          "round": 1,
+          "time": "3:28"
+        },
+        {
+          "opponent_name": "Takeaki Kinoshita",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Takeaki-Kinoshita-329741",
+          "event_name": "Deep - 127 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-127-Impact-108859",
+          "date": "2025-09-15",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Masato Fukuda",
+          "round": 1,
+          "time": "0:14"
+        },
+        {
+          "opponent_name": "Kei Maezono",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kei-Maezono-409311",
+          "event_name": "Deep - Tokyo Impact 2024 6th Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2024-6th-Round-105346",
+          "date": "2024-12-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Akira Shibata",
+          "round": 1,
+          "time": "4:21"
+        },
+        {
+          "opponent_name": "Hiroto Gomyo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hiroto-Gomyo-404716",
+          "event_name": "Deep - 121 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-121-Impact-103689",
+          "date": "2024-09-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Minoru Toyonaga",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Shogo Ota",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shogo-Ota-410090",
+          "event_name": "Deep - 120 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-120-Impact-102828",
+          "date": "2024-07-14",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Akira Shibata",
+          "round": 1,
+          "time": "1:53"
+        },
+        {
+          "opponent_name": "Hirokaze Makino",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hirokaze-Makino-386535",
+          "event_name": "Deep - Tokyo Impact 2024 1st Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2024-1st-Round-101504",
+          "date": "2024-03-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Takashi Hashimoto",
+          "round": 1,
+          "time": "1:09"
+        },
+        {
+          "opponent_name": "Riku Fujioka",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Riku-Fujioka-391757",
+          "event_name": "Deep - Tokyo Impact 2023 7th Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2023-7th-Round-100180",
+          "date": "2023-12-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Akira Shibata",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Toshiki Mori",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Toshiki-Mori-404691",
+          "event_name": "Deep - Tokyo Impact 2023 5th Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2023-5th-Round-98636",
+          "date": "2023-09-10",
+          "result": "win",
+          "method": "TKO (Flying Knee and Punches)",
+          "referee": "Takashi Hashimoto",
+          "round": 2,
+          "time": "3:25"
+        },
+        {
+          "opponent_name": "Yuki Saito",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuki-Saito-83546",
+          "event_name": "Deep - Tokyo Impact 2023 4th Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2023-4th-Round-97423",
+          "date": "2023-05-28",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Naoya Uematsu",
+          "round": 2,
+          "time": "0:44"
+        }
+      ]
+    },
+    {
+      "name": "Sei Min Kim",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20241108123710_Sei_Min_Kim.JPG",
+      "weight_class": "Featherweight",
+      "record": "7-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sei-Min-Kim-429413",
+      "fight_history": [
+        {
+          "opponent_name": "Shota Takasu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shota-Takasu-238479",
+          "event_name": "Fighting Nexus - Nexus Mania 2026: 2nd Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Nexus-Mania-2026-2nd-Round-113273",
+          "date": "2026-07-03",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Yoshinori Umeki",
+          "round": 1,
+          "time": "2:52"
+        },
+        {
+          "opponent_name": "Apollo Nakayama",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Apollo-Nakayama-411080",
+          "event_name": "Fighting Nexus - Vol. 42",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-42-110699",
+          "date": "2025-12-21",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Kosuke Umeda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Fabio Harada",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fabio-Harada-390911",
+          "event_name": "Fighting Nexus - Sublime Guys Fight in Kawagoe 2025",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Sublime-Guys-Fight-in-Kawagoe-2025-108183",
+          "date": "2025-06-22",
+          "result": "win",
+          "method": "TKO (Knees to the Body and Punches)",
+          "referee": "Yoshinori Umeki",
+          "round": 2,
+          "time": "3:43"
+        },
+        {
+          "opponent_name": "Arashi Motoki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arashi-Motoki-450685",
+          "event_name": "Fighting Nexus - Vol. 37",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-37-105181",
+          "date": "2024-11-28",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Akira Yamazaki",
+          "round": 1,
+          "time": "1:56"
+        },
+        {
+          "opponent_name": "Kengo Ishikawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kengo-Ishikawa-148689",
+          "event_name": "Fighting Nexus - Vol. 35",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-35-101716",
+          "date": "2024-05-12",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "4:52"
+        },
+        {
+          "opponent_name": "Kaneto Hioki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kaneto-Hioki-435046",
+          "event_name": "Fighting Nexus - Vol. 34",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-34-101022",
+          "date": "2024-02-18",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Kosuke Umeda",
+          "round": 1,
+          "time": "4:03"
+        },
+        {
+          "opponent_name": "Mao Hasegawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mao-Hasegawa-421317",
+          "event_name": "Fighting Nexus - Bayside Battle in Yokosuka 2023",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Bayside-Battle-in-Yokosuka-2023-99774",
+          "date": "2023-10-15",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Yoshinori Umeki",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Tetsuya Fusano",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tetsuya-Fusano-30047",
+          "event_name": "Fighting Nexus - Vol. 32",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-32-98461",
+          "date": "2023-08-20",
+          "result": "loss",
+          "method": "Disqualification (Punches to Back of Head)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "0:49"
+        }
+      ]
     }
   ],
   "fights": [
@@ -159781,11 +160173,11 @@
       "event_name": "Rizin FF - Super Rizin 5",
       "fighter1_name": "Rajabali Shaidullaev",
       "fighter2_name": "A.J. McKee",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Rajabali Shaidullaev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Featherweight",
       "is_main_event": true,
       "is_title_fight": true
@@ -159794,24 +160186,24 @@
       "event_name": "Rizin FF - Super Rizin 5",
       "fighter1_name": "Mikuru Asakura",
       "fighter2_name": "Shinya Aoki",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Mikuru Asakura",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "2:39",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Karshyga Dautbek",
-      "fighter2_name": "Ren Hiramoto",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Ren Hiramoto",
+      "fighter2_name": "Karshyga Dautbek",
+      "fight_finished": true,
+      "winner_name": "Ren Hiramoto",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -159820,11 +160212,11 @@
       "event_name": "Rizin FF - Super Rizin 5",
       "fighter1_name": "Roberto Satoshi de Souza",
       "fighter2_name": "Shunta Nomura",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Roberto Satoshi de Souza",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -159833,11 +160225,11 @@
       "event_name": "Rizin FF - Super Rizin 5",
       "fighter1_name": "Yutaka Saito",
       "fighter2_name": "Ren Sugiyama",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Yutaka Saito",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -159846,24 +160238,24 @@
       "event_name": "Rizin FF - Super Rizin 5",
       "fighter1_name": "Vugar Karamov",
       "fighter2_name": "Ryo Takagi",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Vugar Karamov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Super Rizin 5",
-      "fighter1_name": "Rena Kubota",
-      "fighter2_name": "Natalia Kuziutina",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Natalia Kuziutina",
+      "fighter2_name": "Rena Kubota",
+      "fight_finished": true,
+      "winner_name": "Natalia Kuziutina",
+      "method": "Submission (Guillotine Choke)",
+      "round": 2,
+      "time": "3:14",
       "weight_class": "108lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -160008,6 +160400,71 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Makoto Takahashi",
+      "fighter2_name": "Tony Laramie",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Ryuya Fukuda",
+      "fighter2_name": "Soo Chul Kim",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Jinnosuke Kashimura",
+      "fighter2_name": "Shinobu Ota",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Kaleo Meheula",
+      "fighter2_name": "Kazuki Aimoto",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Hiroaki Suzuki",
+      "fighter2_name": "Sei Min Kim",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     }
