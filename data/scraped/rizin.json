@@ -3994,6 +3994,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Rena-Kubota-209061",
       "fight_history": [
         {
+          "opponent_name": "Natalia Kuziutina",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Natalia-Kuziutina-419642",
+          "event_name": "Rizin FF - Super Rizin 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Super-Rizin-5-112576",
+          "date": "2026-09-10",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Tatsuro Nagase",
+          "round": 2,
+          "time": "3:14"
+        },
+        {
           "opponent_name": "Seika Izawa",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seika-Izawa-375399",
           "event_name": "Rizin FF - Shiwasu no Cho Tsuwamono Matsuri",
