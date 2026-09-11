@@ -8661,6 +8661,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Thalyta-Silva-264439",
       "fight_history": [
         {
+          "opponent_name": "Monica Carvalho Fontes Rodrigues",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Monica-Carvalho-Fontes-Rodrigues-389669",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Harry de Oliveira Santos",
+          "round": 1,
+          "time": "2:53"
+        },
+        {
           "opponent_name": "Jaqueline Ferreira",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jaqueline-Ferreira-188735",
           "event_name": "Gavioes Fight - Gavioes Fight 2026",
@@ -8718,6 +8730,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Monica-Carvalho-Fontes-Rodrigues-389669",
       "fight_history": [
+        {
+          "opponent_name": "Thalyta Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Thalyta-Silva-264439",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Harry de Oliveira Santos",
+          "round": 1,
+          "time": "2:53"
+        },
         {
           "opponent_name": "Summer Onley",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Summer-Onley-354033",
@@ -8788,6 +8812,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Victor-Firmino-Santos-324567",
       "fight_history": [
+        {
+          "opponent_name": "Marcos Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcos-Silva-401049",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Osiris Maia",
+          "round": 1,
+          "time": "4:40"
+        },
         {
           "opponent_name": "Pablo Moura",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pablo-Moura-293099",
@@ -8894,6 +8930,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Marcos-Silva-401049",
       "fight_history": [
+        {
+          "opponent_name": "Victor Firmino Santos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Victor-Firmino-Santos-324567",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Osiris Maia",
+          "round": 1,
+          "time": "4:40"
+        },
         {
           "opponent_name": "Mauricio Maciel Correia Jr.",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mauricio-Maciel-Correia-Jr-202685",
@@ -9036,6 +9084,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Emerson-Richard-377174",
       "fight_history": [
+        {
+          "opponent_name": "Salomao Albuquerque",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salomao-Albuquerque-430569",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Fernando Portella",
+          "round": 2,
+          "time": "0:53"
+        },
         {
           "opponent_name": "Douglas Lapa",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Douglas-Lapa-374446",
@@ -9203,6 +9263,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Salomao-Albuquerque-430569",
       "fight_history": [
         {
+          "opponent_name": "Emerson Richard",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emerson-Richard-377174",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Fernando Portella",
+          "round": 2,
+          "time": "0:53"
+        },
+        {
           "opponent_name": "Roberto Benitez",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Roberto-Benitez-250091",
           "event_name": "Acesso MMA - Acesso MMA 13",
@@ -9309,6 +9381,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Breno-Yuri-Santos-399638",
       "fight_history": [
         {
+          "opponent_name": "Fabio Perpetua",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fabio-Perpetua-173433",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Joao Claudio Soares",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Lucas Sousa Andrade",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lucas-Sousa-Andrade-411352",
           "event_name": "LFA 225 - Degli vs. Aguiar",
@@ -9402,6 +9486,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Fabio-Perpetua-173433",
       "fight_history": [
+        {
+          "opponent_name": "Breno Yuri Santos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Breno-Yuri-Santos-399638",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Joao Claudio Soares",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Victor Hugo Xavier",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Victor-Hugo-Xavier-382329",
@@ -436917,50 +437013,50 @@
       "event_name": "LFA 241 - Pires vs Pereira",
       "fighter1_name": "Thalyta Silva",
       "fighter2_name": "Monica Carvalho Fontes Rodrigues",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Thalyta Silva",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:53",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Victor Firmino Santos",
-      "fighter2_name": "Marcos Silva",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Marcos Silva",
+      "fighter2_name": "Victor Firmino Santos",
+      "fight_finished": true,
+      "winner_name": "Marcos Silva",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "4:40",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Emerson Richard",
-      "fighter2_name": "Salomao Albuquerque",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Salomao Albuquerque",
+      "fighter2_name": "Emerson Richard",
+      "fight_finished": true,
+      "winner_name": "Salomao Albuquerque",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "0:53",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Breno Yuri Santos",
-      "fighter2_name": "Fabio Perpetua",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Fabio Perpetua",
+      "fighter2_name": "Breno Yuri Santos",
+      "fight_finished": true,
+      "winner_name": "Fabio Perpetua",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "137lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436969,11 +437065,11 @@
       "event_name": "LFA 241 - Pires vs Pereira",
       "fighter1_name": "Lucas Silva",
       "fighter2_name": "Lucas Silva",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Lucas Silva",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "1:12",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
