@@ -9697,6 +9697,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Joao-Pereira-426301",
       "fight_history": [
         {
+          "opponent_name": "Adam Santos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adam-Santos-345937",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "KO (Flying Knee)",
+          "referee": "Harry de Oliveira Santos",
+          "round": 1,
+          "time": "3:21"
+        },
+        {
           "opponent_name": "Maycon Douglas Siqueira",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maycon-Douglas-Siqueira-460137",
           "event_name": "R1 Fighting Series 6 - Moreira vs. Solano",
@@ -9766,6 +9778,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Adam-Santos-345937",
       "fight_history": [
+        {
+          "opponent_name": "Joao Pereira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joao-Pereira-426301",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "KO (Flying Knee)",
+          "referee": "Harry de Oliveira Santos",
+          "round": 1,
+          "time": "3:21"
+        },
         {
           "opponent_name": "Matheus Rocha",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matheus-Rocha-277821",
@@ -9849,6 +9873,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Nicollas-Santos-440275",
       "fight_history": [
         {
+          "opponent_name": "Jackson Soares",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jackson-Soares-231383",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Fernando Portella",
+          "round": 3,
+          "time": "3:51"
+        },
+        {
           "opponent_name": "Pedro Nunes Carvalho",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Nunes-Carvalho-463662",
           "event_name": "Jungle Fight 150 - Fight of the Million: Women's Strawweight Grand Prix Quarterfinals",
@@ -9894,6 +9930,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jackson-Soares-231383",
       "fight_history": [
+        {
+          "opponent_name": "Nicollas Santos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicollas-Santos-440275",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Fernando Portella",
+          "round": 3,
+          "time": "3:51"
+        },
         {
           "opponent_name": "Alan Dutra",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alan-Dutra-151729",
@@ -9977,6 +10025,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Laryssa-Leila-403113",
       "fight_history": [
         {
+          "opponent_name": "Fernanda Atomica",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fernanda-Atomica-466696",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Joao Claudio Soares",
+          "round": 1,
+          "time": "0:30"
+        },
+        {
           "opponent_name": "Laisa Silva",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Laisa-Silva-484394",
           "event_name": "LFA 234 - Fernando vs. Soares",
@@ -10046,6 +10106,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Fernanda-Atomica-466696",
       "fight_history": [
+        {
+          "opponent_name": "Laryssa Leila",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Laryssa-Leila-403113",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Joao Claudio Soares",
+          "round": 1,
+          "time": "0:30"
+        },
         {
           "opponent_name": "Nathalia Machado",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nathalia-Machado-467544",
@@ -436771,7 +436843,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": true,
       "is_title_fight": true
@@ -436784,7 +436856,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436797,7 +436869,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436810,7 +436882,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436823,7 +436895,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Strawweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436836,7 +436908,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436849,7 +436921,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436862,7 +436934,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436875,7 +436947,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436888,7 +436960,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "137lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436901,20 +436973,20 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Joao Pereira",
-      "fighter2_name": "Adam Santos",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Adam Santos",
+      "fighter2_name": "Joao Pereira",
+      "fight_finished": true,
+      "winner_name": "Adam Santos",
+      "method": "KO (Flying Knee)",
+      "round": 1,
+      "time": "3:21",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436923,11 +436995,11 @@
       "event_name": "LFA 241 - Pires vs Pereira",
       "fighter1_name": "Nicollas Santos",
       "fighter2_name": "Jackson Soares",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Nicollas Santos",
+      "method": "TKO (Punches)",
+      "round": 3,
+      "time": "3:51",
       "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -436936,11 +437008,11 @@
       "event_name": "LFA 241 - Pires vs Pereira",
       "fighter1_name": "Laryssa Leila",
       "fighter2_name": "Fernanda Atomica",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Laryssa Leila",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "0:30",
       "weight_class": "Strawweight",
       "is_main_event": false,
       "is_title_fight": false
