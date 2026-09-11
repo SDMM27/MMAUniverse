@@ -68373,6 +68373,76 @@
           "time": "0:36"
         }
       ]
+    },
+    {
+      "name": "Yanis Bendhiaf",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Yanis-Bendhiaf-490349",
+      "fight_history": [
+        {
+          "opponent_name": "Norick Prive",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Norick-Prive-448810",
+          "event_name": "AEC 18 - Arena Elite Championship 18",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEC-18-Arena-Elite-Championship-18-110087",
+          "date": "2026-02-14",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Victor Sourisseau",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Victor-Sourisseau-436492",
+          "event_name": "Wild 2 - Wild MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Wild-2-Wild-MMA-111182",
+          "date": "2026-01-31",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "2:26"
+        },
+        {
+          "opponent_name": "Adam Bellal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adam-Bellal-481069",
+          "event_name": "AEC 16 - Arena Elite Championship 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEC-16-Arena-Elite-Championship-16-110085",
+          "date": "2025-11-29",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Turko Lorsanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Turko-Lorsanov-495526",
+          "event_name": "MMA Amateurs - Challengers",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Amateurs-Challengers-111960",
+          "date": "2025-10-12",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 3,
+          "time": "0:12"
+        },
+        {
+          "opponent_name": "Sylvain Coulais",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sylvain-Coulais-404571",
+          "event_name": "MMA Amateurs - Challengers",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Amateurs-Challengers-111960",
+          "date": "2025-10-12",
+          "result": "nc",
+          "method": "No Contest",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -74092,7 +74162,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight",
+      "weight_class": "150lbCatchweight",
       "is_main_event": true,
       "is_title_fight": false
     },
@@ -74177,7 +74247,7 @@
     {
       "event_name": "HXMMA 46 - Hexagone MMA 46",
       "fighter1_name": "Erwan Teiga",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Yanis Bendhiaf",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -74215,7 +74285,7 @@
     },
     {
       "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Owen Jason",
+      "fighter1_name": "Damien Lapilus",
       "fighter2_name": "Nicolae Bivol",
       "fight_finished": false,
       "winner_name": null,
