@@ -7330,6 +7330,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Nikolai-Galochkin-438944",
       "fight_history": [
         {
+          "opponent_name": "Gegam Manavazyan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gegam-Manavazyan-382472",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "1:45"
+        },
+        {
           "opponent_name": "Shamil Basaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shamil-Basaev-429482",
           "event_name": "ACA 199 - Frolov vs. Emeev",
@@ -7472,6 +7484,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Gegam-Manavazyan-382472",
       "fight_history": [
         {
+          "opponent_name": "Nikolai Galochkin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nikolai-Galochkin-438944",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "1:45"
+        },
+        {
           "opponent_name": "Radzhab Ramazanov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Radzhab-Ramazanov-374510",
           "event_name": "ACA 199 - Frolov vs. Emeev",
@@ -7601,6 +7625,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Shamil-Ramazanov-236207",
       "fight_history": [
+        {
+          "opponent_name": "Denis Maher",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Denis-Maher-149969",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Maxim Protasov",
+          "round": 2,
+          "time": "4:37"
+        },
         {
           "opponent_name": "Vitaliy Yakubenya",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vitaliy-Yakubenya-256913",
@@ -7743,6 +7779,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Denis-Maher-149969",
       "fight_history": [
+        {
+          "opponent_name": "Shamil Ramazanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shamil-Ramazanov-236207",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Maxim Protasov",
+          "round": 2,
+          "time": "4:37"
+        },
         {
           "opponent_name": "Alexey Shurkevich",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexey-Shurkevich-176961",
@@ -53716,6 +53764,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Michel-Silva-70412",
       "fight_history": [
         {
+          "opponent_name": "Muslim Ibragimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muslim-Ibragimov-365403",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "TKO (Punch to the Body)",
+          "referee": "Maxim Protasov",
+          "round": 1,
+          "time": "4:18"
+        },
+        {
           "opponent_name": "Dzmitry Zasinets",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dzmitry-Zasinets-290431",
           "event_name": "ACA 201 - Silva vs. Podlesniy",
@@ -68804,6 +68864,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Arbi-Agujev-45729",
       "fight_history": [
         {
+          "opponent_name": "Evgeniy Egemberdiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evgeniy-Egemberdiev-141633",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Andrey Kovalev",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Manas Imarov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Manas-Imarov-271395",
           "event_name": "ACA 198 - Omarov vs. Suleymanov 2",
@@ -69604,6 +69676,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Chermen-Gobaev-379994",
       "fight_history": [
         {
+          "opponent_name": "Akhmed Musakaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Akhmed-Musakaev-218453",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Murad Kalamov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Murad-Kalamov-165727",
           "event_name": "ACA 198 - Omarov vs. Suleymanov 2",
@@ -69721,6 +69805,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Murad-Kalamov-165727",
       "fight_history": [
+        {
+          "opponent_name": "Ruslan Abiltarov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Abiltarov-110931",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "4:11"
+        },
         {
           "opponent_name": "Chermen Gobaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chermen-Gobaev-379994",
@@ -75485,6 +75581,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Hacran-Dias-19789",
       "fight_history": [
+        {
+          "opponent_name": "Ibragim Kantaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibragim-Kantaev-173253",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Technical Submission (Rear-Naked Choke)",
+          "referee": "Dmitry Valuevich",
+          "round": 1,
+          "time": "4:32"
+        },
         {
           "opponent_name": "Ali Suleymanov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ali-Suleymanov-312739",
@@ -86706,6 +86814,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Abiltarov-110931",
       "fight_history": [
         {
+          "opponent_name": "Murad Kalamov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Murad-Kalamov-165727",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "4:11"
+        },
+        {
           "opponent_name": "Mansur Khatuev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mansur-Khatuev-258221",
           "event_name": "ACA 193 - Kerimov vs. Selimkhanov",
@@ -94970,6 +95090,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Muslim-Ibragimov-365403",
       "fight_history": [
         {
+          "opponent_name": "Michel Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michel-Silva-70412",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "TKO (Punch to the Body)",
+          "referee": "Maxim Protasov",
+          "round": 1,
+          "time": "4:18"
+        },
+        {
           "opponent_name": "Kurbanali Isabekov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kurbanali-Isabekov-291439",
           "event_name": "ACA YE 56 - ACA Young Eagles 56",
@@ -96906,6 +97038,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Albert-Misikov-384378",
       "fight_history": [
+        {
+          "opponent_name": "Sharapudin Magomedov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sharapudin-Magomedov-313819",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Dzhaddal Alibekov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dzhaddal-Alibekov-314075",
@@ -104161,6 +104305,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Evgeniy-Egemberdiev-141633",
       "fight_history": [
         {
+          "opponent_name": "Arbi Agujev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arbi-Agujev-45729",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Andrey Kovalev",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Maxim Grishin",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maxim-Grishin-33201",
           "event_name": "ACA 186 - Bogatyrev vs. Kornilov II",
@@ -104732,6 +104888,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Akhmed-Musakaev-218453",
       "fight_history": [
+        {
+          "opponent_name": "Chermen Gobaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chermen-Gobaev-379994",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "David Dzhibilov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Dzhibilov-406764",
@@ -377639,6 +377807,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ibragim-Kantaev-173253",
       "fight_history": [
         {
+          "opponent_name": "Hacran Dias",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hacran-Dias-19789",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Technical Submission (Rear-Naked Choke)",
+          "referee": "Dmitry Valuevich",
+          "round": 1,
+          "time": "4:32"
+        },
+        {
           "opponent_name": "Freddy Alexander Campbell",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Freddy-Alexander-Campbell-132337",
           "event_name": "UMC 1 - Ciumac vs. Ngeleka",
@@ -424668,7 +424848,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": true,
       "is_title_fight": false
@@ -424681,7 +424861,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424694,7 +424874,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424707,7 +424887,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424720,7 +424900,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "161lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424733,7 +424913,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424746,7 +424926,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424759,7 +424939,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424768,37 +424948,37 @@
       "event_name": "ACA 207 - Goncharov vs. Almeida",
       "fighter1_name": "Arbi Agujev",
       "fighter2_name": "Evgeniy Egemberdiev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Arbi Agujev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "214lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Akhmed Musakaev",
-      "fighter2_name": "Chermen Gobaev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Chermen Gobaev",
+      "fighter2_name": "Akhmed Musakaev",
+      "fight_finished": true,
+      "winner_name": "Chermen Gobaev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Shamil Ramazanov",
-      "fighter2_name": "Denis Maher",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Denis Maher",
+      "fighter2_name": "Shamil Ramazanov",
+      "fight_finished": true,
+      "winner_name": "Denis Maher",
+      "method": "TKO (Knee and Punches)",
+      "round": 2,
+      "time": "4:37",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424807,37 +424987,37 @@
       "event_name": "ACA 207 - Goncharov vs. Almeida",
       "fighter1_name": "Nikolai Galochkin",
       "fighter2_name": "Gegam Manavazyan",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Nikolai Galochkin",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 2,
+      "time": "1:45",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Ibragim Kantaev",
-      "fighter2_name": "Hacran Dias",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Hacran Dias",
+      "fighter2_name": "Ibragim Kantaev",
+      "fight_finished": true,
+      "winner_name": "Hacran Dias",
+      "method": "Technical Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "4:32",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Muslim Ibragimov",
-      "fighter2_name": "Michel Silva",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Michel Silva",
+      "fighter2_name": "Muslim Ibragimov",
+      "fight_finished": true,
+      "winner_name": "Michel Silva",
+      "method": "TKO (Punch to the Body)",
+      "round": 1,
+      "time": "4:18",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424846,11 +425026,11 @@
       "event_name": "ACA 207 - Goncharov vs. Almeida",
       "fighter1_name": "Murad Kalamov",
       "fighter2_name": "Ruslan Abiltarov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Murad Kalamov",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 2,
+      "time": "4:11",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424859,11 +425039,11 @@
       "event_name": "ACA 207 - Goncharov vs. Almeida",
       "fighter1_name": "Sharapudin Magomedov",
       "fighter2_name": "Albert Misikov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Sharapudin Magomedov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false

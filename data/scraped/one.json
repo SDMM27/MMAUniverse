@@ -2135,6 +2135,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Seiichiro-Ito-105953",
       "fight_history": [
         {
+          "opponent_name": "Kazusa Kurobe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kazusa-Kurobe-434686",
+          "event_name": "One Championship - ONE Samurai 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-ONE-Samurai-3-113346",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Motohiro Tsuruwa",
+          "round": 2,
+          "time": "2:14"
+        },
+        {
           "opponent_name": "Tatsumitsu Wada",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tatsumitsu-Wada-28152",
           "event_name": "One Championship - ONE Samurai 1",
@@ -2444,6 +2456,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kazusa-Kurobe-434686",
       "fight_history": [
+        {
+          "opponent_name": "Seiichiro Ito",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seiichiro-Ito-105953",
+          "event_name": "One Championship - ONE Samurai 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-ONE-Samurai-3-113346",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Motohiro Tsuruwa",
+          "round": 2,
+          "time": "2:14"
+        },
         {
           "opponent_name": "Koyuru Tanoue",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Koyuru-Tanoue-314375",
