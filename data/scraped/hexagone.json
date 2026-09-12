@@ -987,6 +987,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Veronika-Zajicova-420439",
       "fight_history": [
         {
+          "opponent_name": "Laetitia Gallardo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Laetitia-Gallardo-394154",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "3:34"
+        },
+        {
           "opponent_name": "Maria Rodriguez",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maria-Rodriguez-452431",
           "event_name": "HXMMA 44 - Hexagone MMA 44",
@@ -1104,6 +1116,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Laetitia-Gallardo-394154",
       "fight_history": [
+        {
+          "opponent_name": "Veronika Zajicova",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Veronika-Zajicova-420439",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "3:34"
+        },
         {
           "opponent_name": "Laurane Maamar",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Laurane-Maamar-409536",
@@ -1223,6 +1247,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Souhil-Arezki-395375",
       "fight_history": [
         {
+          "opponent_name": "Zelimkhan Umarov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zelimkhan-Umarov-297231",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamed Khamallah",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Maximilien Vallot",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maximilien-Vallot-226009",
           "event_name": "HXMMA 43 - Hexagone MMA 43",
@@ -1268,6 +1304,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Zelimkhan-Umarov-297231",
       "fight_history": [
+        {
+          "opponent_name": "Souhil Arezki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Souhil-Arezki-395375",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamed Khamallah",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Adel Ain Zerga",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adel-Ain-Zerga-426060",
@@ -1351,6 +1399,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Hugo-Boigeol-Baggioni-424629",
       "fight_history": [
         {
+          "opponent_name": "Haik Khodedanian",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Haik-Khodedanian-461493",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamed Khamallah",
+          "round": 3,
+          "time": "2:52"
+        },
+        {
           "opponent_name": "Louis Banhiet",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Louis-Banhiet-419626",
           "event_name": "CFL 3 - Corsican Fight League 3",
@@ -1397,6 +1457,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Haik-Khodedanian-461493",
       "fight_history": [
         {
+          "opponent_name": "Hugo Boigeol Baggioni",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hugo-Boigeol-Baggioni-424629",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Mohamed Khamallah",
+          "round": 3,
+          "time": "2:52"
+        },
+        {
           "opponent_name": "Raphael Mebenga",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Raphael-Mebenga-449960",
           "event_name": "HXMMA - Hexagone MMA Series 3",
@@ -1418,6 +1490,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jonathan-Garcia-450774",
       "fight_history": [
+        {
+          "opponent_name": "Alan Cordeiro de Jesus",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alan-Cordeiro-de-Jesus-247033",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Loic Pora",
+          "round": 2,
+          "time": "1:25"
+        },
         {
           "opponent_name": "Roberto Mario Ionescu",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Roberto-Mario-Ionescu-393541",
@@ -1512,6 +1596,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alan-Cordeiro-de-Jesus-247033",
       "fight_history": [
+        {
+          "opponent_name": "Jonathan Garcia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jonathan-Garcia-450774",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Loic Pora",
+          "round": 2,
+          "time": "1:25"
+        },
         {
           "opponent_name": "Arnaud Prigent",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arnaud-Prigent-399672",
@@ -16411,6 +16507,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Mathieu-Rogez-459724",
       "fight_history": [
         {
+          "opponent_name": "Sayfoula Becheev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sayfoula-Becheev-433752",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Loic Pora",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
           "opponent_name": "Timorshah Assadzai",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Timorshah-Assadzai-432577",
           "event_name": "100% Fight 65 - Centurion",
@@ -19050,6 +19158,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Erwan-Teiga-477770",
       "fight_history": [
+        {
+          "opponent_name": "Yanis Bendhiaf",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yanis-Bendhiaf-490349",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Karim Benmabrouk",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Oussama Laklit",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oussama-Laklit-457664",
@@ -67715,6 +67835,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Mouhamed-Gueye-500080",
       "fight_history": [
         {
+          "opponent_name": "Jozef Jaloviar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jozef-Jaloviar-353783",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Karim Benmabrouk",
+          "round": 1,
+          "time": "2:53"
+        },
+        {
           "opponent_name": "Evgen Gobov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evgen-Gobov-241891",
           "event_name": "BTT - Fight Night 2",
@@ -67748,6 +67880,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jozef-Jaloviar-353783",
       "fight_history": [
+        {
+          "opponent_name": "Mouhamed Gueye",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mouhamed-Gueye-500080",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Karim Benmabrouk",
+          "round": 1,
+          "time": "2:53"
+        },
         {
           "opponent_name": "Milenko Stamatovic",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Milenko-Stamatovic-410416",
@@ -68265,6 +68409,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Sayfoula-Becheev-433752",
       "fight_history": [
         {
+          "opponent_name": "Mathieu Rogez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mathieu-Rogez-459724",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Loic Pora",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
           "opponent_name": "Jason Duval-Masson",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jason-DuvalMasson-472203",
           "event_name": "La Nuit des Combattants - Boxing and MMA",
@@ -68382,6 +68538,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Yanis-Bendhiaf-490349",
       "fight_history": [
+        {
+          "opponent_name": "Erwan Teiga",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erwan-Teiga-477770",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Karim Benmabrouk",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Norick Prive",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Norick-Prive-448810",
@@ -74161,7 +74329,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "150lbCatchweight",
       "is_main_event": true,
       "is_title_fight": false
@@ -74174,7 +74342,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -74183,11 +74351,11 @@
       "event_name": "HXMMA - Hexagone MMA Series 5",
       "fighter1_name": "Veronika Zajicova",
       "fighter2_name": "Laetitia Gallardo",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Veronika Zajicova",
+      "method": "Submission (Triangle Choke)",
+      "round": 1,
+      "time": "3:34",
       "weight_class": "Strawweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -74196,11 +74364,11 @@
       "event_name": "HXMMA - Hexagone MMA Series 5",
       "fighter1_name": "Souhil Arezki",
       "fighter2_name": "Zelimkhan Umarov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Souhil Arezki",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -74209,11 +74377,11 @@
       "event_name": "HXMMA - Hexagone MMA Series 5",
       "fighter1_name": "Mouhamed Gueye",
       "fighter2_name": "Jozef Jaloviar",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Mouhamed Gueye",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:53",
       "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -74222,11 +74390,11 @@
       "event_name": "HXMMA - Hexagone MMA Series 5",
       "fighter1_name": "Jonathan Garcia",
       "fighter2_name": "Alan Cordeiro de Jesus",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Jonathan Garcia",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "1:25",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -74235,50 +74403,37 @@
       "event_name": "HXMMA - Hexagone MMA Series 5",
       "fighter1_name": "Hugo Boigeol Baggioni",
       "fighter2_name": "Haik Khodedanian",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Hugo Boigeol Baggioni",
+      "method": "TKO (Punches)",
+      "round": 3,
+      "time": "2:52",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "HXMMA - Hexagone MMA Series 5",
-      "fighter1_name": "Erwan Teiga",
-      "fighter2_name": "Yanis Bendhiaf",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Yanis Bendhiaf",
+      "fighter2_name": "Erwan Teiga",
+      "fight_finished": true,
+      "winner_name": "Yanis Bendhiaf",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "3:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "HXMMA - Hexagone MMA Series 5",
-      "fighter1_name": "Lorenzo Nyambit",
-      "fighter2_name": "Mikail Yavuz",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA - Hexagone MMA Series 5",
-      "fighter1_name": "Sayfoula Becheev",
-      "fighter2_name": "Mathieu Rogez",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Mathieu Rogez",
+      "fighter2_name": "Sayfoula Becheev",
+      "fight_finished": true,
+      "winner_name": "Mathieu Rogez",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "3:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false

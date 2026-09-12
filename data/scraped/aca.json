@@ -3002,6 +3002,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Evgeniy-Goncharov-156033",
       "fight_history": [
         {
+          "opponent_name": "Jailton Almeida",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jailton-Almeida-114657",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Khadis Ibragimov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khadis-Ibragimov-265067",
           "event_name": "ACA 204 - Shlemenko vs. Dipchikov",
@@ -3335,6 +3347,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jailton-Almeida-114657",
       "fight_history": [
+        {
+          "opponent_name": "Evgeniy Goncharov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evgeniy-Goncharov-156033",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Rizvan Kuniev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rizvan-Kuniev-86319",
@@ -6414,6 +6438,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Khadis-Ibragimov-265067",
       "fight_history": [
         {
+          "opponent_name": "Kirill Kornilov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kirill-Kornilov-338905",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "TKO (Retirement)",
+          "referee": "Maxim Protasov",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Evgeniy Goncharov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evgeniy-Goncharov-156033",
           "event_name": "ACA 204 - Shlemenko vs. Dipchikov",
@@ -6639,6 +6675,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kirill-Kornilov-338905",
       "fight_history": [
+        {
+          "opponent_name": "Khadis Ibragimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khadis-Ibragimov-265067",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "Maxim Protasov",
+          "round": 2,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Tony Johnson",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tony-Johnson-41069",
@@ -8066,6 +8114,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Andrei-Koshkin-48950",
       "fight_history": [
         {
+          "opponent_name": "Herdeson Batista",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Herdeson-Batista-108243",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Andrey Kovalev",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Vinicius Cruz",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vinicius-Cruz-58601",
           "event_name": "ACA 202 - Johnson vs. Kornilov",
@@ -8531,6 +8591,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Herdeson-Batista-108243",
       "fight_history": [
+        {
+          "opponent_name": "Andrei Koshkin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andrei-Koshkin-48950",
+          "event_name": "ACA 207 - Goncharov vs. Almeida",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-207-Goncharov-vs-Almeida-113801",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Andrey Kovalev",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Daud Shaikhaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daud-Shaikhaev-161979",
@@ -424964,24 +425036,24 @@
       "event_name": "ACA 207 - Goncharov vs. Almeida",
       "fighter1_name": "Evgeniy Goncharov",
       "fighter2_name": "Jailton Almeida",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Evgeniy Goncharov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Heavyweight",
       "is_main_event": true,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 207 - Goncharov vs. Almeida",
-      "fighter1_name": "Khadis Ibragimov",
-      "fighter2_name": "Kirill Kornilov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Kirill Kornilov",
+      "fighter2_name": "Khadis Ibragimov",
+      "fight_finished": true,
+      "winner_name": "Kirill Kornilov",
+      "method": "TKO (Retirement)",
+      "round": 2,
+      "time": "5:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -424990,11 +425062,11 @@
       "event_name": "ACA 207 - Goncharov vs. Almeida",
       "fighter1_name": "Andrei Koshkin",
       "fighter2_name": "Herdeson Batista",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Andrei Koshkin",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
