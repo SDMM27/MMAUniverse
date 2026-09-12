@@ -383,6 +383,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Bozidar-Trivunovic-403808",
       "fight_history": [
         {
+          "opponent_name": "Anzor Baybatyrov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anzor-Baybatyrov-408423",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Mohamed Khamallah",
+          "round": 1,
+          "time": "0:45"
+        },
+        {
           "opponent_name": "Mihai Ciompec",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mihai-Ciompec-392923",
           "event_name": "ARMMADA - ARMMADA 16",
@@ -501,6 +513,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Anzor-Baybatyrov-408423",
       "fight_history": [
         {
+          "opponent_name": "Bozidar Trivunovic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bozidar-Trivunovic-403808",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Mohamed Khamallah",
+          "round": 1,
+          "time": "0:45"
+        },
+        {
           "opponent_name": "Paul Denis Navero",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paul-Denis-Navero-408149",
           "event_name": "HXMMA 45 - Hexagone MMA 45",
@@ -618,6 +642,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alan-Baudot-138183",
       "fight_history": [
+        {
+          "opponent_name": "Mamadou Lamine Sene",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mamadou-Lamine-Sene-318717",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Karim Benmabrouk",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Josh Parisian",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Josh-Parisian-181225",
@@ -784,6 +820,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mamadou-Lamine-Sene-318717",
       "fight_history": [
+        {
+          "opponent_name": "Alan Baudot",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alan-Baudot-138183",
+          "event_name": "HXMMA - Hexagone MMA Series 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-Hexagone-MMA-Series-5-113782",
+          "date": "2026-09-12",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Karim Benmabrouk",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Shota Betlemidze",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shota-Betlemidze-212949",
@@ -74323,13 +74371,13 @@
     },
     {
       "event_name": "HXMMA - Hexagone MMA Series 5",
-      "fighter1_name": "Bozidar Trivunovic",
-      "fighter2_name": "Anzor Baybatyrov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Anzor Baybatyrov",
+      "fighter2_name": "Bozidar Trivunovic",
+      "fight_finished": true,
+      "winner_name": "Anzor Baybatyrov",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "0:45",
       "weight_class": "150lbCatchweight",
       "is_main_event": true,
       "is_title_fight": false
@@ -74338,11 +74386,11 @@
       "event_name": "HXMMA - Hexagone MMA Series 5",
       "fighter1_name": "Alan Baudot",
       "fighter2_name": "Mamadou Lamine Sene",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Alan Baudot",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
