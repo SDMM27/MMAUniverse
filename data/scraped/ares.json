@@ -3243,6 +3243,76 @@
           "time": "1:47"
         }
       ]
+    },
+    {
+      "name": "Lasha Gogishvili",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "4-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Lasha-Gogishvili-435222",
+      "fight_history": [
+        {
+          "opponent_name": "Alison Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alison-Silva-413689",
+          "event_name": "Striker MMA - Striker 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/Striker-MMA-Striker-12-112265",
+          "date": "2026-04-25",
+          "result": "win",
+          "method": "TKO (Punches and Head Kick)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Amine Jmel",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amine-Jmel-397604",
+          "event_name": "Striker MMA - Striker 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/Striker-MMA-Striker-9-110451",
+          "date": "2025-11-28",
+          "result": "win",
+          "method": "KO",
+          "referee": "Karim Benmabrouk",
+          "round": 1,
+          "time": "1:31"
+        },
+        {
+          "opponent_name": "Ibrahima Marna",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibrahima-Marna-409012",
+          "event_name": "Striker MMA - Striker 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/Striker-MMA-Striker-8-109641",
+          "date": "2025-10-25",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Sanan Safarli",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sanan-Safarli-239615",
+          "event_name": "AEC 12 - Arena Elite Championship 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEC-12-Arena-Elite-Championship-12-106187",
+          "date": "2025-02-08",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Zakaria M'Rabet",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zakaria-MRabet-409011",
+          "event_name": "EBD 9 - European Beatdown 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/EBD-9-European-Beatdown-9-99182",
+          "date": "2023-10-07",
+          "result": "win",
+          "method": "KO (Head Kick)",
+          "referee": "",
+          "round": 2,
+          "time": "0:43"
+        }
+      ]
     }
   ],
   "fights": [
@@ -8430,6 +8500,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 44 - Boughanem vs. Soumah",
+      "fighter1_name": "Lasha Gogishvili",
+      "fighter2_name": "Alexandre Carole",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
