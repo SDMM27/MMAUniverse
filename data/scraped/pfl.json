@@ -961,14 +961,14 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895387"
     },
     {
-      "name": "Professional Fighters League - PFL Returns to Dubai",
+      "name": "Professional Fighters League - PFL Returns to Dubai: Nemkov vs. Bilostenniy",
       "date": "2026-11-14",
       "start_time": "2026-11-14T00:00:00+00:00",
       "event_location": "Coca-Cola Arena, Dubai, United Arab Emirates",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/897463"
     },
     {
-      "name": "Professional Fighters League - PFL Lyon 2026",
+      "name": "Professional Fighters League - PFL Lyon 2026: Lapilus vs. McKee",
       "date": "2026-12-12",
       "start_time": "2026-12-12T00:00:00+00:00",
       "event_location": "LDLC Arena, Lyon, France",
@@ -219359,6 +219359,292 @@
           "time": "2:05"
         }
       ]
+    },
+    {
+      "name": "David   Martinez",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1710635544David_Martinez.png",
+      "weight_class": "Middleweight",
+      "record": "17-6-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/David-Martinez-238647",
+      "fight_history": [
+        {
+          "opponent_name": "Giannis Bachar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Giannis-Bachar-215713",
+          "event_name": "Professional Fighters League - PFL Belfast: Kelly vs. Wilson",
+          "event_sherdog_url": "https://www.sherdog.com/events/Professional-Fighters-League-PFL-Belfast-Kelly-vs-Wilson-111830",
+          "date": "2026-04-16",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "John McCarthy",
+          "round": 2,
+          "time": "0:53"
+        },
+        {
+          "opponent_name": "Matt Vaile",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matt-Vaile-212199",
+          "event_name": "Eternal MMA 98 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-98-Gold-Coast-108685",
+          "date": "2025-09-13",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Peter Hickmott",
+          "round": 5,
+          "time": "4:37"
+        },
+        {
+          "opponent_name": "Stephen Costello",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Stephen-Costello-277533",
+          "event_name": "Eternal MMA 92 - Sydney",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-92-Sydney-106017",
+          "date": "2025-02-08",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Mark Christie",
+          "round": 3,
+          "time": "3:45"
+        },
+        {
+          "opponent_name": "Brentin Mumford",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brentin-Mumford-79124",
+          "event_name": "Eternal MMA 90 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-90-Gold-Coast-105226",
+          "date": "2024-11-29",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Peter Hickmott",
+          "round": 1,
+          "time": "2:53"
+        },
+        {
+          "opponent_name": "Luke Dally",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luke-Dally-309481",
+          "event_name": "Eternal MMA 88 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-88-Gold-Coast-103681",
+          "date": "2024-09-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Phil Cassidy",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Wes Capper",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Wes-Capper-42426",
+          "event_name": "Eternal MMA 85 - Perth",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-85-Perth-102606",
+          "date": "2024-06-08",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Peter Hickmott",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Murad Guseinov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Murad-Guseinov-313887",
+          "event_name": "Brave CF 76 - Brave Combat Federation 76",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-76-Brave-Combat-Federation-76-99894",
+          "date": "2023-11-25",
+          "result": "loss",
+          "method": "Technical Submission (Buggy Choke)",
+          "referee": "Joshua Hamilton",
+          "round": 1,
+          "time": "3:41"
+        },
+        {
+          "opponent_name": "Jack Becker",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jack-Becker-84392",
+          "event_name": "Eternal MMA 78 - Sydney",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-78-Sydney-98943",
+          "date": "2023-09-08",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Jim Perdios",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kieran Joblin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kieran-Joblin-56993",
+          "event_name": "Eternal MMA 77 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-77-Gold-Coast-97825",
+          "date": "2023-07-01",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Peter Hickmott",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Blake Donnelly",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Blake-Donnelly-232879",
+          "event_name": "Eternal MMA 74 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-74-Gold-Coast-95794",
+          "date": "2023-03-18",
+          "result": "loss",
+          "method": "TKO (Retirement)",
+          "referee": "Tomas Churchill",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Aidan Aguilera",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aidan-Aguilera-133883",
+          "event_name": "Eternal MMA 69 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-69-Gold-Coast-94265",
+          "date": "2022-09-16",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Peter Hickmott",
+          "round": 2,
+          "time": "1:46"
+        },
+        {
+          "opponent_name": "Tim Schultz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tim-Schultz-240757",
+          "event_name": "Eternal MMA 65 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-65-Gold-Coast-92242",
+          "date": "2022-05-07",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Nakia Melody",
+          "round": 2,
+          "time": "2:58"
+        },
+        {
+          "opponent_name": "Tristan Murphy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tristan-Murphy-96863",
+          "event_name": "Eternal MMA 63 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-63-Gold-Coast-90801",
+          "date": "2021-11-20",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Nakia Melody",
+          "round": 1,
+          "time": "1:21"
+        },
+        {
+          "opponent_name": "Dimps Gillies",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dimps-Gillies-240783",
+          "event_name": "Eternal MMA 61 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-61-Gold-Coast-89616",
+          "date": "2021-09-11",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Nakia Melody",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Daniel Hill",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daniel-Hill-184035",
+          "event_name": "Eternal MMA 54 - Gold Coast",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-54-Gold-Coast-87716",
+          "date": "2020-10-31",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Nakia Melody",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Blake Donnelly",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Blake-Donnelly-232879",
+          "event_name": "AFC 23 - Australian Fighting Championship 23",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFC-23-Australian-Fighting-Championship-23-82273",
+          "date": "2019-12-01",
+          "result": "loss",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "",
+          "round": 3,
+          "time": "4:36"
+        },
+        {
+          "opponent_name": "Josh Togo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Josh-Togo-240617",
+          "event_name": "Eternal MMA 49 - Martinez vs. Togo",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-49-Martinez-vs-Togo-81517",
+          "date": "2019-11-01",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Peter Hickmott",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Sam Flint",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sam-Flint-242383",
+          "event_name": "Coastal Combat 6 - Rise of the Champions",
+          "event_sherdog_url": "https://www.sherdog.com/events/Coastal-Combat-6-Rise-of-the-Champions-79083",
+          "date": "2019-09-07",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Brentin Mumford",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brentin-Mumford-79124",
+          "event_name": "Eternal MMA 45 - Mumford vs. Martinez",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-45-Mumford-vs-Martinez-76769",
+          "date": "2019-05-25",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Peter Hickmott",
+          "round": 1,
+          "time": "3:27"
+        },
+        {
+          "opponent_name": "Mike Wilkinson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mike-Wilkinson-50586",
+          "event_name": "Eternal MMA 42 - Loga vs. Ross",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-42-Loga-vs-Ross-73885",
+          "date": "2019-03-23",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Garth Harriman",
+          "round": 0,
+          "time": "N/A"
+        },
+        {
+          "opponent_name": "Iain Blade",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Iain-Blade-209451",
+          "event_name": "Coastal Combat 5 - Are You Not Entertained?",
+          "event_sherdog_url": "https://www.sherdog.com/events/Coastal-Combat-5-Are-You-Not-Entertained-74179",
+          "date": "2019-02-23",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 2,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Ethan Thomas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ethan-Thomas-247227",
+          "event_name": "XFC 37 - Small vs. Bishop",
+          "event_sherdog_url": "https://www.sherdog.com/events/XFC-37-Small-vs-Bishop-71819",
+          "date": "2018-11-02",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Peter Templer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Peter-Templer-224059",
+          "event_name": "Coastal Combat 4 - Culley vs. Macklin",
+          "event_sherdog_url": "https://www.sherdog.com/events/Coastal-Combat-4-Culley-vs-Macklin-70627",
+          "date": "2018-09-08",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "",
+          "round": 2,
+          "time": "2:05"
+        }
+      ]
     }
   ],
   "fights": [
@@ -236615,6 +236901,19 @@
     },
     {
       "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
+      "fighter1_name": "Peace Nguphane",
+      "fighter2_name": "Shido Boris Esperanca",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
       "fighter1_name": "Yanis Ghemmouri",
       "fighter2_name": "Taha Bendaoud",
       "fight_finished": false,
@@ -236641,19 +236940,6 @@
     },
     {
       "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
-      "fighter1_name": "Peace Nguphane",
-      "fighter2_name": "Shido Boris Esperanca",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
       "fighter1_name": "Hussain Al Kurdi",
       "fighter2_name": "Demba Seck",
       "fight_finished": false,
@@ -236669,6 +236955,19 @@
       "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
       "fighter1_name": "Dwight Joseph",
       "fighter2_name": "Boule Godogo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
+      "fighter1_name": "Reda Abdellaoui",
+      "fighter2_name": "Salim Mhamdi",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -236701,19 +237000,6 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Professional Fighters League - PFL Africa 3: 2026 Playoffs",
-      "fighter1_name": "Reda Abdellaoui",
-      "fighter2_name": "Salim Mhamdi",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -236874,7 +237160,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Professional Fighters League - PFL Returns to Dubai",
+      "event_name": "Professional Fighters League - PFL Chicago 2: Carmouche vs. Bishop 2",
+      "fighter1_name": "Morquez Forest",
+      "fighter2_name": "Levan Khabalaev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Professional Fighters League - PFL Returns to Dubai: Nemkov vs. Bilostenniy",
       "fighter1_name": "Vadim Nemkov",
       "fighter2_name": "Sergey Bilostenniy",
       "fight_finished": false,
@@ -236887,7 +237186,7 @@
       "is_title_fight": true
     },
     {
-      "event_name": "Professional Fighters League - PFL Returns to Dubai",
+      "event_name": "Professional Fighters League - PFL Returns to Dubai: Nemkov vs. Bilostenniy",
       "fighter1_name": "Sergio Pettis",
       "fighter2_name": "Joji Goto",
       "fight_finished": false,
@@ -236900,7 +237199,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Professional Fighters League - PFL Returns to Dubai",
+      "event_name": "Professional Fighters League - PFL Returns to Dubai: Nemkov vs. Bilostenniy",
       "fighter1_name": "Oleg Popov",
       "fighter2_name": "Pouya Rahmani",
       "fight_finished": false,
@@ -236913,7 +237212,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Professional Fighters League - PFL Returns to Dubai",
+      "event_name": "Professional Fighters League - PFL Returns to Dubai: Nemkov vs. Bilostenniy",
       "fighter1_name": "Adam Borics",
       "fighter2_name": "Khasan Magomedsharipov",
       "fight_finished": false,
@@ -236926,7 +237225,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Professional Fighters League - PFL Returns to Dubai",
+      "event_name": "Professional Fighters League - PFL Returns to Dubai: Nemkov vs. Bilostenniy",
       "fighter1_name": "Ernesto Rodriguez",
       "fighter2_name": "Rhys McKee",
       "fight_finished": false,
@@ -236939,7 +237238,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Professional Fighters League - PFL Returns to Dubai",
+      "event_name": "Professional Fighters League - PFL Returns to Dubai: Nemkov vs. Bilostenniy",
       "fighter1_name": "Abubakar Nurmagomedov",
       "fighter2_name": "David Martinez",
       "fight_finished": false,
@@ -236952,7 +237251,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Professional Fighters League - PFL Returns to Dubai",
+      "event_name": "Professional Fighters League - PFL Returns to Dubai: Nemkov vs. Bilostenniy",
       "fighter1_name": "Abdisalam Kubanychbek",
       "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
@@ -236965,7 +237264,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Professional Fighters League - PFL Lyon 2026",
+      "event_name": "Professional Fighters League - PFL Lyon 2026: Lapilus vs. McKee",
       "fighter1_name": "Taylor Lapilus",
       "fighter2_name": "Mitchell McKee",
       "fight_finished": false,
@@ -236978,7 +237277,7 @@
       "is_title_fight": true
     },
     {
-      "event_name": "Professional Fighters League - PFL Lyon 2026",
+      "event_name": "Professional Fighters League - PFL Lyon 2026: Lapilus vs. McKee",
       "fighter1_name": "Bryan Battle",
       "fighter2_name": "Boris Mbarga Atangana",
       "fight_finished": false,

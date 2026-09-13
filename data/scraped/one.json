@@ -41,7 +41,7 @@
       "date": "2026-09-18",
       "start_time": "2026-09-18T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898056"
     },
     {
       "name": "One Championship - One Friday Fights 172",
@@ -3125,6 +3125,238 @@
           "time": "4:51"
         }
       ]
+    },
+    {
+      "name": "Mukhammadaziz Avazov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "5-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Mukhammadaziz-Avazov-467082",
+      "fight_history": [
+        {
+          "opponent_name": "Ruslan Rustamov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Rustamov-489571",
+          "event_name": "Alash Pride 113 - Alimbekov vs. Abdurakhmonov",
+          "event_sherdog_url": "https://www.sherdog.com/events/Alash-Pride-113-Alimbekov-vs-Abdurakhmonov-110334",
+          "date": "2025-10-19",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Azamat Daribekov",
+          "round": 1,
+          "time": "4:15"
+        },
+        {
+          "opponent_name": "Davlat Serikpulov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Davlat-Serikpulov-484400",
+          "event_name": "Alash Pride 110 - Alash Pride FC",
+          "event_sherdog_url": "https://www.sherdog.com/events/Alash-Pride-110-Alash-Pride-FC-109397",
+          "date": "2025-07-25",
+          "result": "win",
+          "method": "Submission",
+          "referee": "Azamat Daribekov",
+          "round": 1,
+          "time": "2:02"
+        },
+        {
+          "opponent_name": "Eltun Sukurov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eltun-Sukurov-361053",
+          "event_name": "Naiza Jekpe-Jek 2 - Akhatzhonov vs. Bragin",
+          "event_sherdog_url": "https://www.sherdog.com/events/Naiza-JekpeJek-2-Akhatzhonov-vs-Bragin-107814",
+          "date": "2025-04-04",
+          "result": "win",
+          "method": "Submission (Neck Crank)",
+          "referee": "Manap Kabdiev",
+          "round": 1,
+          "time": "1:50"
+        },
+        {
+          "opponent_name": "Nurseit Ashimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nurseit-Ashimov-467083",
+          "event_name": "EFC Global 51 - Zhenishbekov vs. Khabibullaev",
+          "event_sherdog_url": "https://www.sherdog.com/events/EFC-Global-51-Zhenishbekov-vs-Khabibullaev-105824",
+          "date": "2024-11-24",
+          "result": "win",
+          "method": "Submission (Kimura)",
+          "referee": "Suyorbek Bakytbek uulu",
+          "round": 1,
+          "time": "2:40"
+        },
+        {
+          "opponent_name": "Kakhraman Uulu Asadbek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kakhraman-Uulu-Asadbek-470228",
+          "event_name": "Aikol Global FC 8 - Aikol Fighting Championship 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/Aikol-Global-FC-8-Aikol-Fighting-Championship-8-106641",
+          "date": "2024-09-25",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Doolot Narmatov",
+          "round": 1,
+          "time": "0:44"
+        }
+      ]
+    },
+    {
+      "name": "Hero Marco Manguray",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1770384773Hero_Marco_Manguray-hero-1200x1165-1-600x583.png",
+      "weight_class": "Welterweight",
+      "record": "5-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Hero-Marco-Manguray-413250",
+      "fight_history": [
+        {
+          "opponent_name": "Kouta Abe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kouta-Abe-380887",
+          "event_name": "One Championship - One Friday Fights 150",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-150-112342",
+          "date": "2026-04-10",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "1:47"
+        },
+        {
+          "opponent_name": "Myke Ohura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Myke-Ohura-473552",
+          "event_name": "One Championship - One Friday Fights 141",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-141-111189",
+          "date": "2026-02-06",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Kemp Cheng",
+          "round": 1,
+          "time": "2:36"
+        },
+        {
+          "opponent_name": "Earl Wayne Villones",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Earl-Wayne-Villones-491129",
+          "event_name": "PCC 7 - Rise of Contenders",
+          "event_sherdog_url": "https://www.sherdog.com/events/PCC-7-Rise-of-Contenders-110727",
+          "date": "2025-12-07",
+          "result": "win",
+          "method": "Submission (Keylock)",
+          "referee": "",
+          "round": 1,
+          "time": "1:45"
+        },
+        {
+          "opponent_name": "Joris Jonker",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joris-Jonker-442538",
+          "event_name": "Zeus Combat League 2 - SPRMCY",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zeus-Combat-League-2-SPRMCY-104567",
+          "date": "2024-10-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Alexander Aballe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Aballe-270959",
+          "event_name": "Kombat Sports Kalayaan - KSK MMA Festival 2024",
+          "event_sherdog_url": "https://www.sherdog.com/events/Kombat-Sports-Kalayaan-KSK-MMA-Festival-2024-101880",
+          "date": "2024-04-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "2:53"
+        },
+        {
+          "opponent_name": "Emmanuel Isuekpe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emmanuel-Isuekpe-406546",
+          "event_name": "ZaNorte - Zamboanga del Norte Amateur Mixed Martial Arts",
+          "event_sherdog_url": "https://www.sherdog.com/events/ZaNorte-Zamboanga-del-Norte-Amateur-Mixed-Martial-Arts-95725",
+          "date": "2022-11-12",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "2:09"
+        }
+      ]
+    },
+    {
+      "name": "Connor Tymon",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1740669532Connor_Tymon-Hero-1200x1165-1.jpg",
+      "weight_class": "Welterweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Connor-Tymon-402693",
+      "fight_history": [
+        {
+          "opponent_name": "Sumit Bhyan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sumit-Bhyan-398616",
+          "event_name": "One Championship - One Friday Fights 98",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-98-107066",
+          "date": "2025-02-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "0:46"
+        }
+      ]
+    },
+    {
+      "name": "Alex Bigander",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Alex-Bigander-440623",
+      "fight_history": [
+        {
+          "opponent_name": "Arvin Chan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arvin-Chan-116895",
+          "event_name": "Zeus Fight League - Road to Olympus 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zeus-Fight-League-Road-to-Olympus-2-107950",
+          "date": "2025-07-25",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Benjie Tabaranza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Benjie-Tabaranza-318265",
+          "event_name": "Zeus Fight League - Road to Olympus",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zeus-Fight-League-Road-to-Olympus-107433",
+          "date": "2025-04-25",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "4:28"
+        },
+        {
+          "opponent_name": "Emmanuel Isuekpe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emmanuel-Isuekpe-406546",
+          "event_name": "Warriors Fight Promotion - WFC 6: 3rd Jose Panganiban MMA Tournament",
+          "event_sherdog_url": "https://www.sherdog.com/events/Warriors-Fight-Promotion-WFC-6-3rd-Jose-Panganiban-MMA-Tournament-101036",
+          "date": "2024-10-03",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "1:01"
+        },
+        {
+          "opponent_name": "Emmanuel Isuekpe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emmanuel-Isuekpe-406546",
+          "event_name": "URCC - Prodigy Progression Series",
+          "event_sherdog_url": "https://www.sherdog.com/events/URCC-Prodigy-Progression-Series-102813",
+          "date": "2024-04-27",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -3229,6 +3461,32 @@
       "round": 2,
       "time": "2:14",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 171",
+      "fighter1_name": "Mukhammadaziz Avazov",
+      "fighter2_name": "Hero Marco Manguray",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 171",
+      "fighter1_name": "Connor Tymon",
+      "fighter2_name": "Alex Bigander",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
