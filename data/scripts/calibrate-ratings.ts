@@ -8,16 +8,6 @@
 // guessed. Not unit tested (I/O script, same rationale as sync-fighter-stats.ts
 // etc.) -- run with `npm run calibrate:ratings`.
 //
-// KNOWN GAP, documented rather than silently worked around: UFCStats'
-// `is_title_fight` isn't captured anywhere yet (parseFightMeta strips
-// "Title" out of the fight-title text when deriving weight_class instead of
-// keeping it -- an oversight found while writing this script). Every fight
-// here is treated as `isTitleFight: false`, which understates title-fight
-// bonuses/discounts in this calibration pass. `isFiveRounds` (from
-// scheduled_rounds) IS accurate. Fix before Task 7 computes real production
-// data -- flagged to the user, not fixed inline (would mean a 3rd multi-hour
-// UFCStats re-crawl, not justified for one boolean on its own -- bundle it
-// with the next reason to re-crawl).
 import fs from 'node:fs';
 import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
@@ -59,6 +49,7 @@ type StatsRow = {
   ufcstats_fight_url: string;
   result: string | null;
   weight_class: string | null;
+  is_title_fight: boolean | null;
   method: string | null;
   finish_round: number | null;
   scheduled_rounds: number | null;
@@ -117,7 +108,7 @@ async function main() {
 
   const statsRows = (await sql`
     SELECT ffs.id, ffs.fighter_id, f.name AS fighter_name, ffs.opponent_name, ffs.event_name, ffs.event_date,
-           ffs.ufcstats_fight_url, ffs.result, ffs.weight_class, ffs.method, ffs.finish_round, ffs.scheduled_rounds,
+           ffs.ufcstats_fight_url, ffs.result, ffs.weight_class, ffs.is_title_fight, ffs.method, ffs.finish_round, ffs.scheduled_rounds,
            ffs.sig_strikes_landed, ffs.control_time_seconds
     FROM fighter_fight_stats ffs
     JOIN fighters f ON f.id = ffs.fighter_id
@@ -235,7 +226,7 @@ async function main() {
     const fights: DivisionFightInput[] = sorted.map((p) => ({
       fightUrl: p.winner.ufcstats_fight_url,
       eventDate: p.winner.event_date!,
-      isTitleFight: false, // KNOWN GAP -- see file header
+      isTitleFight: p.winner.is_title_fight ?? false,
       isFiveRounds: p.winner.scheduled_rounds === 5,
       winnerId: p.winner.fighter_id,
       loserId: p.loser.fighter_id,
