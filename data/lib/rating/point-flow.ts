@@ -29,8 +29,17 @@ const TITLE_LOSS_DIVISOR = 1.3; // losing a title fight costs LESS -- divides th
 const FIVE_ROUND_MULTIPLIER = 1.1;
 const FORMER_CHAMPION_MULTIPLIER = 1.5;
 
-const OPPONENT_SHARE = 0.5; // the winner takes this fraction of the loser's (eroded) points
-const ACTIVITY_CREDIT_SHARE = 0.5; // ... plus this fraction of the division's average points, to reward activity
+// Calibrated 2026-09-14 against the real, fully-backfilled dataset (see
+// data/scripts/calibrate-ratings.ts) -- the spec's original starting point
+// (0.5/0.5) produced runaway exponential growth (division maxima up to
+// ~13,000 after a few hundred fights, since both terms scale with the
+// current, ever-growing state -- opponent points and the division average
+// -- compounding every fight). These smaller shares keep division maxima in
+// the single digits (observed max ~3.8 across all divisions after
+// calibration), a much more plausible scale, without changing the formula's
+// shape or the "beat a well-regarded opponent, gain a lot" property itself.
+const OPPONENT_SHARE = 0.15; // the winner takes this fraction of the loser's (eroded) points
+const ACTIVITY_CREDIT_SHARE = 0.1; // ... plus this fraction of the division's average points, to reward activity
 const FLOOR_RULE_BONUS = 0.01; // winner's points, when the floor rule triggers, land this far above the loser's
 
 const LOSS_BASE_SHARE = 0.1; // starting constant -- see the spec's note on the source text's 10%/20% ambiguity
