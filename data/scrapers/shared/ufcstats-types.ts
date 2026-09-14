@@ -17,6 +17,7 @@ export interface UfcStatsFightRecord {
   // the same fight) -- added for the FightScore rating engine, see
   // docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md.
   weight_class: string;
+  is_title_fight: boolean;
   method: string;
   round: number; // the round the fight ended in (decisions: the last round)
   time: string;

@@ -89,6 +89,7 @@ test('parseFightMeta extracts weight class, method, round, time and scheduled ro
   // Real fixture text: fight-title is "UFC Welterweight Title Bout" -- the
   // "UFC " prefix and "Title" both stripped, leaving just the division.
   assert.equal(meta.weightClass, 'Welterweight');
+  assert.equal(meta.isTitleFight, true);
   assert.equal(meta.method, 'Decision - Unanimous');
   assert.equal(meta.round, 5);
   assert.equal(meta.time, '5:00');
@@ -102,6 +103,7 @@ test('parseFightMeta extracts weight class, method, round, time and scheduled ro
   // Real fixture text: fight-title is "Lightweight Bout" -- no "UFC " prefix,
   // no "Title", on an ordinary (non-championship) bout.
   assert.equal(meta.weightClass, 'Lightweight');
+  assert.equal(meta.isTitleFight, false);
   assert.equal(meta.method, 'KO/TKO');
   assert.equal(meta.round, 1);
   assert.equal(meta.time, '0:39');

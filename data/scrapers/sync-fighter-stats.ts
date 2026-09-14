@@ -87,6 +87,7 @@ async function ensureSchema() {
   // divisions" section); method/finish_round/finish_time/scheduled_rounds
   // feed computeDominanceScore and the point-flow engine's 5-round bonus.
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS weight_class VARCHAR(100);`;
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS is_title_fight BOOLEAN;`;
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS method VARCHAR(50);`;
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS finish_round INT;`;
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS finish_time VARCHAR(10);`;
@@ -153,7 +154,7 @@ async function main() {
     const [statsRow] = (await sql`
       INSERT INTO fighter_fight_stats
         (fighter_id, opponent_name, event_name, event_date, ufcstats_fight_url, result,
-         weight_class, method, finish_round, finish_time, scheduled_rounds,
+         weight_class, is_title_fight, method, finish_round, finish_time, scheduled_rounds,
          knockdowns, sig_strikes_landed, sig_strikes_attempted, total_strikes_landed, total_strikes_attempted,
          takedowns_landed, takedowns_attempted, submission_attempts, reversals, control_time_seconds,
          sig_strikes_head_landed, sig_strikes_head_attempted, sig_strikes_body_landed, sig_strikes_body_attempted,
@@ -161,7 +162,7 @@ async function main() {
          sig_strikes_clinch_landed, sig_strikes_clinch_attempted, sig_strikes_ground_landed, sig_strikes_ground_attempted)
       VALUES
         (${fighterId}, ${record.opponent_name}, ${record.event_name}, ${record.event_date || null}, ${record.ufcstats_fight_url}, ${record.result},
-         ${record.weight_class || null}, ${record.method || null}, ${record.round || null}, ${record.time || null}, ${record.scheduled_rounds || null},
+         ${record.weight_class || null}, ${record.is_title_fight ?? null}, ${record.method || null}, ${record.round || null}, ${record.time || null}, ${record.scheduled_rounds || null},
          ${t.knockdowns}, ${t.sigStrikes.landed}, ${t.sigStrikes.attempted}, ${t.totalStrikes.landed}, ${t.totalStrikes.attempted},
          ${t.takedowns.landed}, ${t.takedowns.attempted}, ${t.submissionAttempts}, ${t.reversals}, ${t.controlTimeSeconds},
          ${s.head.landed}, ${s.head.attempted}, ${s.body.landed}, ${s.body.attempted},
@@ -173,6 +174,7 @@ async function main() {
         event_date = EXCLUDED.event_date,
         result = EXCLUDED.result,
         weight_class = EXCLUDED.weight_class,
+        is_title_fight = EXCLUDED.is_title_fight,
         method = EXCLUDED.method,
         finish_round = EXCLUDED.finish_round,
         finish_time = EXCLUDED.finish_time,

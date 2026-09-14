@@ -67,6 +67,7 @@ export interface UfcStatsFighterSide {
 // the same `.b-fight-details__text` block UFCStats renders once per fight.
 export interface UfcStatsFightMeta {
   weightClass: string;
+  isTitleFight: boolean; // from the same fight-title text as weightClass -- see stripWeightClassSuffix
   method: string;
   round: number; // the round the fight ended in (decisions: the last round)
   time: string;
@@ -165,6 +166,11 @@ function stripWeightClassSuffix(titleText: string): string {
     .trim();
 }
 
+/** True when the fight-title text contains "Title" (case-insensitive) -- e.g. "UFC Welterweight Title Bout". */
+function parseIsTitleFight(titleText: string): boolean {
+  return /\btitle\b/i.test(titleText);
+}
+
 /**
  * Parses the fight-level facts UFCStats renders once per fight (not
  * per-corner): weight class, method/round/time the fight ended, and the
@@ -175,6 +181,7 @@ function stripWeightClassSuffix(titleText: string): string {
 export function parseFightMeta($: CheerioAPI): UfcStatsFightMeta {
   const titleText = $('.b-fight-details__fight-title').first().text().replace(/\s+/g, ' ').trim();
   const weightClass = stripWeightClassSuffix(titleText);
+  const isTitleFight = parseIsTitleFight(titleText);
 
   // The Method/Round/Time/Time-format/Referee line is the first of two
   // `.b-fight-details__text` blocks (the second carries judge scorecards /
@@ -188,6 +195,7 @@ export function parseFightMeta($: CheerioAPI): UfcStatsFightMeta {
 
   return {
     weightClass,
+    isTitleFight,
     method: methodMatch ? methodMatch[1].trim() : '',
     round: roundMatch ? parseInt(roundMatch[1], 10) : 0,
     time: timeMatch ? timeMatch[1].trim() : '',

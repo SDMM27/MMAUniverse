@@ -11,7 +11,7 @@ function toRecord(
   side: UfcStatsFighterSide,
   opponent: UfcStatsFighterSide,
   event: { name: string; date: string },
-  meta: { weightClass: string; method: string; round: number; time: string; scheduledRounds: number },
+  meta: { weightClass: string; isTitleFight: boolean; method: string; round: number; time: string; scheduledRounds: number },
   fightUrl: string,
 ): UfcStatsFightRecord {
   return {
@@ -24,6 +24,7 @@ function toRecord(
     ufcstats_fight_url: fightUrl,
     result: side.result,
     weight_class: meta.weightClass,
+    is_title_fight: meta.isTitleFight,
     method: meta.method,
     round: meta.round,
     time: meta.time,
