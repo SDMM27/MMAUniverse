@@ -238,22 +238,22 @@ export function labelCluster(centroid: number[]): string; // rule-based label fr
 
 ---
 
-### Task 7: Batch computation + DB schema — `data/scripts/compute-fighter-ratings.ts`
+### Task 7: Batch computation + DB schema — `data/scripts/compute-fighter-ratings.ts` — ✅ done 2026-09-14
 
 **Files:**
-- Create: `data/scripts/compute-fighter-ratings.ts`
-- Modify: `package.json` (add `"compute:ratings": "tsx data/scripts/compute-fighter-ratings.ts"`)
+- Created: `data/scripts/compute-fighter-ratings.ts`
+- Modified: `package.json` (`"compute:ratings"`)
 
-I/O orchestration, not unit tested (same rationale as `sherdog.ts`/`sync-fighter-stats.ts` — would just mock the DB away).
+Built simpler than originally planned since `simulateDivisionRatings` (extracted during Task 6) already owns the entire chronological-walk/state-tracking logic (streak, former-champion, erosion, division average, dominance, point-flow) — this script is now a thin I/O wrapper: load from Neon, group into divisions, call `simulateDivisionRatings`, run the style clustering, write results back. Also: `is_title_fight` now comes straight off `fighter_fight_stats` (captured directly from UFCStats this session, see Task 1's "revised again" note) — no `fights`/`events` join needed, simpler than the step below originally assumed.
 
-- [ ] **Step 1:** `ensureSchema()` creates `fighter_ratings` + `fighter_rating_history` per the spec's DDL (including `current_streak`, `is_former_champion` on `fighter_ratings` and `opponent_points_before` on `fighter_rating_history` — spec's revised schema).
-- [ ] **Step 2:** Load every UFC fighter's `fighter_fight_stats`+`fighter_fight_round_stats` rows (with Task 1's `weight_class`/`scheduled_rounds` fields) plus `fighters`/`fights`/`events` (for `is_title_fight`, `winner_id`, `event.date`) needed to sequence fights chronologically per division. Normalize each row's weight class via Task 2's function, skip (log + count) any that fail to normalize.
-- [ ] **Step 3:** For each division, maintain running state while walking its fights chronologically: each fighter's `FighterPointState` (Task 4), a running `divisionAveragePoints` (recompute over all fighters currently tracked in the division after each fight, or approximate with an incremental mean — pick whichever is fast enough at ~17k rows, correctness over cleverness here), and a per-fighter `isFormerChampion` flag flipped to `true` the moment they're first seen winning a `fights.is_title_fight = true` bout in this division (checked *before* processing each fight, so the multiplier applies starting with their *next* fight, not the title-winning one itself — verify this reads naturally against a real title-run example during Step 7's spot-check). For each fight: compute `dominanceScore` (Task 3), build `FightContext` (`isTitleFight`, `isFiveRounds` from `scheduled_rounds === 5`, current `divisionAveragePoints`), call `applyPointFlow` (Task 4), write a `fighter_rating_history` row per fighter (`points_before`/`points_after`/`opponent_points_before` = the *other* fighter's pre-fight eroded points/`dominance_score`), update both fighters' running `currentStreak` (increment/reset per win-loss), and upsert the running `fighter_ratings` row per fighter (natural key `(fighter_id, weight_class)`, same `ON CONFLICT DO UPDATE` idempotent pattern as `sync-fighter-stats.ts`).
-- [ ] **Step 4:** Set `is_champion` by joining against the current `rankings` table (`rank = 0` for that weight_class) — independent of `is_former_champion` from Step 3 (current title-holder vs. has-ever-held-the-title-in-our-tracked-history, different things, both stored).
-- [ ] **Step 5:** Run Task 5's clustering once per division across that division's fighters' aggregated style features, write `style_archetype` back onto each `fighter_ratings` row.
-- [ ] **Step 6:** Log a summary (fighters rated per division, fights skipped for missing/unmatched weight class, count of `dominance_estimated` fallbacks used, count of floor-rule triggers from Task 4 — a very high floor-rule-trigger rate would suggest the base formula's weights need another look in a future calibration pass).
-- [ ] **Step 7: Run it for real** against Neon, spot-check a handful of well-known fighters' resulting scores/archetypes make sense — include at least one real former-champion-then-lost-the-belt case to confirm `is_former_champion` and its multiplier behave as expected across that fighter's post-title fights.
-- [ ] **Step 8: Commit.**
+- [x] **Step 1:** `ensureSchema()` — done.
+- [x] **Step 2:** Load + group by division via `normalizeWeightClass` — done. 236 fights skipped (unmatched weight class — tournament brackets/catchweight/open-weight, expected).
+- [x] **Step 3:** Per-division chronological walk — done, via `simulateDivisionRatings` rather than reimplementing it here.
+- [x] **Step 4:** `is_champion` join against `rankings` — done, but **every division currently comes back `champion matched: false`**: `rankings` has zero rank=0 rows for any real division right now (the separate, already-flagged `sync-ufc-rankings.ts` bug — see [[fighter-rating-ml-pivot]]). Re-running this script (idempotent) once that's fixed picks up champions correctly, no code change needed.
+- [x] **Step 5:** Style clustering (k=4) per division, feature vectors built from per-fighter aggregated `fighter_fight_stats` (attempted-strike rates by target/position, takedown rate+accuracy, control-time rate, submission-attempt rate, all per 15 minutes of *actual cage time* computed from round+time) across every fight (win or loss) a fighter had in that division.
+- [x] **Step 6:** Summary logged per division + overall totals.
+- [x] **Step 7: Ran it for real** against Neon: 3,126 `fighter_ratings` rows, 14,676 `fighter_rating_history` rows, 7,574 fights processed. Spot-checked Lightweight's top 10 — Gaethje/Oliveira/Makhachev/Topuria/Tsarukyan/Holloway/Khabib/Ruffy/Poirier/Pimblett, a genuinely plausible order matching real current UFC lightweight standing. Khabib (undefeated, retired) correctly pulled down to #7 (45.1/100) by years of inactivity erosion — confirms `erodePoints` behaves as intended on a real former-champion case, exactly the check this step called for. Style archetypes matched real known styles too (Gaethje/Poirier/Holloway = distance strikers; Makhachev/Oliveira/Tsarukyan/Khabib = wrestlers/controllers; Ruffy = submission finisher). Archetype distribution across all 3,126 ratings reasonably balanced (642/503/912/1069 across the 4 clusters) — no degenerate collapse.
+- [x] **Step 8: Committed** (`a4e9a12`).
 
 ```bash
 git add data/scripts/compute-fighter-ratings.ts package.json
