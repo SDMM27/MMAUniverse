@@ -408203,6 +408203,64 @@
           "time": "3:44"
         }
       ]
+    },
+    {
+      "name": "Marcelis Edwards",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "1-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Marcelis-Edwards-395524",
+      "fight_history": [
+        {
+          "opponent_name": "Joshua Holtz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joshua-Holtz-369234",
+          "event_name": "Ignite Fights 114 - Tekautz vs. Blockhus",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ignite-Fights-114-Tekautz-vs-Blockhus-113742",
+          "date": "2026-08-15",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "Chris Klavetter",
+          "round": 2,
+          "time": "2:41"
+        },
+        {
+          "opponent_name": "Josh Melichar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Josh-Melichar-11622",
+          "event_name": "Ignite Fights 111 - Blockhus vs. Smerillo",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ignite-Fights-111-Blockhus-vs-Smerillo-111251",
+          "date": "2026-03-21",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "",
+          "round": 1,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Brett Wittmann",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brett-Wittmann-386925",
+          "event_name": "Pure FC 31 - Pure Fighting Championships 31",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pure-FC-31-Pure-Fighting-Championships-31-111452",
+          "date": "2026-02-21",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Morgan Sickinger",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Terry Martin Jr.",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Terry-Martin-Jr-447593",
+          "event_name": "Chicago Cagefighting Championship - CCC: Pro-Am MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Chicago-Cagefighting-Championship-CCC-ProAm-MMA-108229",
+          "date": "2025-06-07",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -437259,13 +437317,13 @@
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
       "fighter1_name": "Tyree Overton",
-      "fighter2_name": "Lucas Dos Santos",
+      "fighter2_name": "Marcelis Edwards",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight",
+      "weight_class": "190lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
