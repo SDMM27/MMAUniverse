@@ -69,6 +69,36 @@ export type RankingWithFighter = Ranking & {
   fighter_record: string | null;
 };
 
+// The computed FightScore ranking -- see docs/superpowers/specs/
+// 2026-09-14-fighter-rating-algorithm-design.md. One row per (fighter,
+// division); `points` is the raw point-flow total (data/lib/rating/point-flow.ts),
+// `display_score` the 0-100 rescale shown in the UI. `is_champion` is
+// copied from Ranking.rank === 0 for this division at compute time --
+// independent of `display_score`/rank order, see order-division.ts's
+// orderDivisionWithChampionPinned for how the two interact on screen.
+// `is_former_champion` is a *different* fact (has ever won a title fight in
+// this division per our own tracked history, feeds the point-flow engine's
+// former-champion bonus) -- both booleans can be true, false, or differ.
+export type FighterRating = {
+  id: number;
+  fighter_id: number;
+  weight_class: string;
+  points: number;
+  display_score: number;
+  current_streak: number;
+  is_former_champion: boolean;
+  style_archetype: string | null;
+  fights_rated: number;
+  last_fight_date: string | null;
+  is_champion: boolean;
+  updated_at: string;
+};
+
+export type FighterRatingWithFighter = FighterRating & {
+  fighter_name: string;
+  fighter_image_url: string | null;
+};
+
 export type EventWithOrganization = Event & {
   organization_abbreviation: string;
 };
