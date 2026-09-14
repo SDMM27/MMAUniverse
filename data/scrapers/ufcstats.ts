@@ -11,6 +11,7 @@ function toRecord(
   side: UfcStatsFighterSide,
   opponent: UfcStatsFighterSide,
   event: { name: string; date: string },
+  meta: { weightClass: string; method: string; round: number; time: string; scheduledRounds: number },
   fightUrl: string,
 ): UfcStatsFightRecord {
   return {
@@ -22,8 +23,14 @@ function toRecord(
     event_date: event.date,
     ufcstats_fight_url: fightUrl,
     result: side.result,
+    weight_class: meta.weightClass,
+    method: meta.method,
+    round: meta.round,
+    time: meta.time,
+    scheduled_rounds: meta.scheduledRounds,
     totals: side.totals,
     strikes: side.strikes,
+    rounds: side.rounds,
   };
 }
 
@@ -57,14 +64,14 @@ export async function scrapeUfcStats(cacheDir: string, maxNewEvents?: number): P
 
     for (const fightUrl of fightUrls) {
       const $fight = await fetchAndLoadPW(fightUrl);
-      const { fighters } = parseFightDetails($fight);
+      const { fighters, meta: fightMeta } = parseFightDetails($fight);
       const [a, b] = fighters;
       // A fight page that failed to resolve either fighter's name (e.g. a
       // cancelled/no-stats bout UFCStats still lists) is skipped rather than
       // pushing half-empty records.
       if (!a.name || !b.name) continue;
-      progress.records.push(toRecord(a, b, meta, fightUrl));
-      progress.records.push(toRecord(b, a, meta, fightUrl));
+      progress.records.push(toRecord(a, b, meta, fightMeta, fightUrl));
+      progress.records.push(toRecord(b, a, meta, fightMeta, fightUrl));
     }
 
     progress.processedEventUrls.push(eventUrl);
