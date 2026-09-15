@@ -608,15 +608,27 @@ export async function fetchNewsArticles({
 // and data/scripts/compute-fighter-ratings.ts, which populates these tables.
 // UFC-only (organization_id = 1 implicitly, via fighter_fight_stats' own scope).
 
-// Ordered by weight_class then display_score DESC -- the page groups by
-// weight_class (groupFighterRatingsByWeightClass, data/lib/rating/order-division.ts)
-// and re-orders each group through orderDivisionWithChampionPinned before display.
-export async function fetchAllFighterRatings() {
+// Top `perDivision` by display_score in each weight class (plus the
+// champion, even if their own score falls outside that top slice -- rare,
+// but matches the official /rankings page's "champion always shown"
+// convention). Unlike the official rankings (capped at 15 by the org
+// itself), fighter_ratings has every fighter with at least one rated fight
+// per division -- several hundred in the deeper ones -- so an unbounded
+// fetch would dump the entire roster onto one page instead of a rankings
+// list. Ordered by weight_class then display_score DESC -- the page groups
+// by weight_class (groupFighterRatingsByWeightClass,
+// data/lib/rating/order-division.ts) and re-orders each group through
+// orderDivisionWithChampionPinned before display.
+export async function fetchAllFighterRatings(perDivision: number = 15) {
   try {
     const data = await sql<FighterRatingWithFighter>`
       SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
-      FROM fighter_ratings fr
+      FROM (
+        SELECT *, ROW_NUMBER() OVER (PARTITION BY weight_class ORDER BY display_score DESC) AS rn
+        FROM fighter_ratings
+      ) fr
       JOIN fighters f ON f.id = fr.fighter_id
+      WHERE fr.rn <= ${perDivision} OR fr.is_champion = true
       ORDER BY fr.weight_class ASC, fr.display_score DESC
     `;
     return data.rows;
@@ -649,24 +661,34 @@ export async function fetchFighterRatingsByFighterId(fighterId: string) {
 // that's how fight-minds itself splits P4P -- no cross-division
 // renormalization beyond the per-division display_score rescale already
 // applied, an acknowledged simplification (see the design spec's
-// "Pound-for-Pound" section).
+// "Pound-for-Pound" section). DISTINCT ON (fighter_id), keeping each
+// fighter's single highest-scoring division -- a fighter rated in two
+// divisions (moved up/down weight, or fought across both early in a career)
+// should appear once in a "pound-for-pound BEST" list, not once per
+// division row.
 export async function fetchTopPoundForPound(limit: number) {
   try {
     const [men, women] = await Promise.all([
       sql<FighterRatingWithFighter>`
-        SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
-        FROM fighter_ratings fr
-        JOIN fighters f ON f.id = fr.fighter_id
-        WHERE fr.weight_class NOT LIKE 'Women''s%'
-        ORDER BY fr.display_score DESC
+        SELECT * FROM (
+          SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+          FROM fighter_ratings fr
+          JOIN fighters f ON f.id = fr.fighter_id
+          WHERE fr.weight_class NOT LIKE 'Women''s%'
+          ORDER BY fr.fighter_id, fr.display_score DESC
+        ) best
+        ORDER BY best.display_score DESC
         LIMIT ${limit}
       `,
       sql<FighterRatingWithFighter>`
-        SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
-        FROM fighter_ratings fr
-        JOIN fighters f ON f.id = fr.fighter_id
-        WHERE fr.weight_class LIKE 'Women''s%'
-        ORDER BY fr.display_score DESC
+        SELECT * FROM (
+          SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+          FROM fighter_ratings fr
+          JOIN fighters f ON f.id = fr.fighter_id
+          WHERE fr.weight_class LIKE 'Women''s%'
+          ORDER BY fr.fighter_id, fr.display_score DESC
+        ) best
+        ORDER BY best.display_score DESC
         LIMIT ${limit}
       `,
     ]);
