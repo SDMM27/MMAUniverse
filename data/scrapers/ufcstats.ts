@@ -1,4 +1,5 @@
 // data/scrapers/ufcstats.ts
+import fs from 'node:fs';
 import { fetchAndLoadPW } from './shared/fetch-playwright';
 import { loadUfcStatsProgress, saveUfcStatsProgress } from './shared/ufcstats-checkpoint';
 import { parseCompletedEventUrls, parseEventMeta, parseEventFightUrls, parseFightDetails } from './parse-ufcstats';
@@ -46,10 +47,33 @@ function toRecord(
  * `maxNewEvents`, when given, stops after scraping that many *not-yet-
  * processed* events — for a smoke-test run scoped to a handful of events
  * rather than the full multi-hour history.
+ *
+ * `existingOutputPath`, when given, seeds this run's records from that
+ * already-scraped JSON file (data/scraped/ufcstats-fight-stats.json) if the
+ * local checkpoint is empty. **This matters for CI**: `cacheDir` lives under
+ * `data/scraped/.cache/`, which is gitignored and never committed, so a
+ * fresh `actions/checkout` in the daily-sync workflow starts every run with
+ * *no* local checkpoint at all -- without this seed, every single daily run
+ * would treat all ~787 historical events as brand new and re-scrape the
+ * entire history from scratch (hours), not just the day's actual new
+ * events (confirmed live 2026-09-15: a daily-sync run was still going after
+ * 13+ minutes on event-page fetches alone). With the seed, already-known
+ * fights (by `ufcstats_fight_url`, already unique per fight) are skipped
+ * even on a from-scratch checkout -- each event still needs one cheap
+ * page fetch to discover its fight-URL list, but the expensive per-fight
+ * detail-page fetch only happens for genuinely new fights. A locally
+ * resumed run (the checkpoint already has `processedEventUrls`) is
+ * unaffected -- that fast path still skips the event-page fetch entirely,
+ * exactly as before.
  */
-export async function scrapeUfcStats(cacheDir: string, maxNewEvents?: number): Promise<UfcStatsFightRecord[]> {
+export async function scrapeUfcStats(cacheDir: string, maxNewEvents?: number, existingOutputPath?: string): Promise<UfcStatsFightRecord[]> {
   const progress = loadUfcStatsProgress(cacheDir);
+  if (progress.records.length === 0 && existingOutputPath && fs.existsSync(existingOutputPath)) {
+    progress.records = JSON.parse(fs.readFileSync(existingOutputPath, 'utf-8'));
+  }
+
   const processedEvents = new Set(progress.processedEventUrls);
+  const knownFightUrls = new Set(progress.records.map((r) => r.ufcstats_fight_url));
 
   const $list = await fetchAndLoadPW(EVENTS_LIST_URL);
   const eventUrls = parseCompletedEventUrls($list);
@@ -62,8 +86,9 @@ export async function scrapeUfcStats(cacheDir: string, maxNewEvents?: number): P
     const $event = await fetchAndLoadPW(eventUrl);
     const meta = parseEventMeta($event);
     const fightUrls = parseEventFightUrls($event);
+    const newFightUrls = fightUrls.filter((url) => !knownFightUrls.has(url));
 
-    for (const fightUrl of fightUrls) {
+    for (const fightUrl of newFightUrls) {
       const $fight = await fetchAndLoadPW(fightUrl);
       const { fighters, meta: fightMeta } = parseFightDetails($fight);
       const [a, b] = fighters;
@@ -73,6 +98,7 @@ export async function scrapeUfcStats(cacheDir: string, maxNewEvents?: number): P
       if (!a.name || !b.name) continue;
       progress.records.push(toRecord(a, b, meta, fightMeta, fightUrl));
       progress.records.push(toRecord(b, a, meta, fightMeta, fightUrl));
+      knownFightUrls.add(fightUrl);
     }
 
     progress.processedEventUrls.push(eventUrl);
