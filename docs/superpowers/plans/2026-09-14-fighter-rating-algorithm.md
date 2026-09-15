@@ -285,48 +285,48 @@ Follow the exact patterns already in `data.ts` for `fetchRankingsByOrg`/`fetchRa
 
 ---
 
-### Task 9: Classement calculé page
+### Task 9: Classement calculé page — ✅ done 2026-09-15
 
 **Files:**
 - New route `app/classement-calcule/`. **Correction (done during this task)**: the plan's original framing of `/rankings` vs `/classement` as "redundant, identical-content routes" was wrong, never verified against the actual pages -- `/classement` is the pick'em leaderboard (`fetchAllTimeLeaderboard`), completely unrelated to official rankings. No redundancy, no repurposing -- `/classement-calcule` is a genuinely new route. See spec's "Impact pages/navigation" section for the correction note.
 - Create: `components/ui/ratings/fightscore-list.tsx` (mirrors `components/ui/rankings/rankings-list.tsx` structure — continuous score + style archetype badge instead of a plain rank number)
 - Create: a short methodology page/section (the spec's "expertise apportée" editorial asset) — plain-language explanation of what feeds the score, linked from the ranking page itself
 
-- [ ] **Step 1:** Build the page against Task 8's fetchers, per-division sections like the existing `/rankings/page.tsx` pattern.
-- [ ] **Step 2:** Order each division through Task 8's `orderDivisionWithChampionPinned`. Champion badge from `is_champion` at position 1; when `championOutranked` is true, render the asterisk next to their name/score with the tooltip/footnote text from the spec, linking to the methodology blurb (Step 3). Style archetype badge from `style_archetype` on every row.
-- [ ] **Step 3:** Methodology blurb/page — must explicitly explain both revised mechanics in plain language: (a) round-by-round is an *estimate* from raw stats, not official judges' scorecards, and (b) why the champion can carry an asterisk (ceinture ≠ toujours le score le plus haut).
-- [ ] **Step 4:** Commit.
+- [x] **Step 1:** Built against `fetchAllFighterRatings` (added a `perDivision` cap via a `ROW_NUMBER()` window function partway through — an unbounded fetch would have dumped the entire multi-hundred-fighter roster per division onto one page, not just a top-15 list) + `fetchTopPoundForPound` (fixed to `DISTINCT ON (fighter_id)` after first noticing a fighter rated in two divisions, e.g. Amanda Nunes, showed up twice).
+- [x] **Step 2:** `orderDivisionWithChampionPinned` wired in via `FightScoreList`; asterisk + tooltip rendered (untestable live right now — every division currently shows `champion matched: false`, the known separate `sync-ufc-rankings.ts` bug, so no champion row exists yet to carry the asterisk; the code path is there for when that's fixed).
+- [x] **Step 3:** `/classement-calcule/methodologie` — covers both required caveats in plain French.
+- [x] **Step 4:** Committed (`a2070dd`). Verified for real in the browser (dev server, real Neon data): renders correctly on desktop and mobile, P4P dedup confirmed.
 
 ---
 
-### Task 10: Nav + homepage reorg
+### Task 10: Nav + homepage reorg — ✅ done 2026-09-15
 
 **Files:**
 - Modify: `components/ui/nav.tsx` — computed ranking gets top billing among the ranking-related nav entries, labeled "Classement" (the natural French word for it, and the site's new flagship feature per the user's original ask). Since "Classement" already labels the pick'em leaderboard's nav entry (`/classement`, a different, unrelated feature -- see Task 9's correction), rename *that* entry to "Pronostics" (matching the existing "Mes pronostics" family) to free up the name, rather than inventing an awkward name for the new feature.
 - Modify: `app/page.tsx` (and whatever homepage components it composes) — feature the computed P4P top-3 (or similar) with a link into the methodology blurb.
 
-- [ ] **Step 1:** Nav changes.
-- [ ] **Step 2:** Homepage feature section.
-- [ ] **Step 3:** Commit.
+- [x] **Step 1:** Nav changes — "Classement" (new FightScore ranking) leads right after Accueil; the pick'em leaderboard's old "Classement" entry renamed "Pronostics". Also fixed a real bug found while verifying in the browser: `isActive`'s plain `pathname.startsWith(href)` made `/classement` and `/classement-calcule` cross-activate each other (one's a string prefix of the other) — now requires an exact match or a `/`-bounded prefix.
+- [x] **Step 2:** Homepage "Classement" section — top 3 Pound-for-Pound overall (men's + women's combined, re-sorted from the two already-fetched lists), linking to the full page and methodology.
+- [x] **Step 3:** Committed (`47d9ac1`). Verified in the browser: nav active-state correct on `/`, `/classement-calcule`, and `/classement` (no cross-contamination); homepage section renders real data.
 
 ---
 
-### Task 11: Fighter page integration
+### Task 11: Fighter page integration — ✅ done 2026-09-15
 
 **Files:**
 - Modify: `app/fighters/[slug]/page.tsx` and/or its child components — surface the fighter's `display_score`, division rank, style archetype, and quality wins (Task 8's `fetchQualityWinsByFighterId`) next to the existing W-L-D record.
 
-- [ ] **Step 1:** Wire in Task 8's per-fighter rating fetch + quality-wins fetch.
-- [ ] **Step 2:** UI placement next to existing record display — quality wins as a short list/badges ("battu [Nom], classé #X au moment du combat"), not buried.
-- [ ] **Step 3:** Commit.
+- [x] **Step 1:** Wired in (also extended `fetchFighterRatingsByFighterId` with a `division_rank` field — plain score-order position, independent of the ranking page's champion-pinning display convention).
+- [x] **Step 2:** `FighterScoreCard`, embedded straight into the existing hero card next to `FighterRecordCard`, same no-own-border convention.
+- [x] **Step 3:** Committed (`5d14c0a`). Verified in the browser against a real multi-division fighter (Islam Makhachev — Welterweight #3 79.3 + Lightweight #3 77.3, both "Wrestler / Contrôleur"; 5 real quality wins listed: Della Maddalena, Oliveira, Poirier, Hooker, Moises).
 
 ---
 
-### Manual verification checklist
+### Manual verification checklist — all done 2026-09-15
 
-1. `npm test` — all new pure-function suites (Tasks 2-5) green alongside the existing suite.
-2. `npm run compute:ratings` against a real (or scratch) Neon DB — completes without crashing, summary log looks sane (low `estimated`/skip counts).
-3. New ranking page — every UFC division renders, the champion is always position 1 with an asterisk shown exactly when their score isn't actually the division's highest, the rest of the division is in descending score order from position 2, style archetype badges present for fighters with enough rated fights.
-4. Fighter page — a well-known fighter's card shows a plausible score + archetype.
-5. Nav + homepage — computed ranking is now the prominent entry point; official rankings still reachable, not broken.
-6. Existing pages (events, fighters list, actualités, pick'em, organizations, profil) — spot-check unaffected.
+1. ✅ `npm test` — 173/173 green throughout (Tasks 2-5 plus everything added since).
+2. ✅ `npm run compute:ratings` ran for real against production Neon: 3,126 `fighter_ratings` rows, 14,676 history rows, 7,574 fights, low skip/estimated counts (236 unmatched-division, 4 dominance-estimated-fallback).
+3. ⚠️ New ranking page — every UFC division renders correctly (verified in-browser, desktop + mobile), descending score order confirmed. **Champion pinning + asterisk are wired and functional in code but unverified live** — `rankings` currently has zero rank=0 rows (the separate, already-flagged `sync-ufc-rankings.ts` bug), so no division has a matched champion yet to pin/asterisk. Re-verify once that bug is fixed and `compute:ratings` re-run.
+4. ✅ Fighter page — verified with Islam Makhachev, plausible score + archetype on both his divisions.
+5. ✅ Nav + homepage — "Classement" (computed) now leads the nav right after Accueil; official "Rankings" still reachable, unchanged; homepage features top-3 P4P.
+6. ✅ Existing pages spot-checked in the browser (`/events`, `/fighters`, `/organizations`, `/rankings`) — no server errors, unaffected.
