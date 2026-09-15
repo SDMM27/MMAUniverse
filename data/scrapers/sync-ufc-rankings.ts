@@ -144,6 +144,25 @@ async function main() {
   }
   const sql = neon(process.env.DATABASE_URL);
 
+  // Fixes an already-existing `rankings` table created before 2026-09-15
+  // with the old, too-strict UNIQUE(organization_id, weight_class, rank) --
+  // confirmed live that ufc.com genuinely ties two fighters at the same
+  // rank sometimes (e.g. Men's P4P: Joshua Van and Ciryl Gane both rank 10,
+  // 11 skipped), which that constraint rejected as a duplicate key,
+  // crashing this sync partway through and leaving `rankings` half-wiped
+  // (the DELETE below had already run). Drop-then-add unconditionally every
+  // run rather than checking existence first -- ALTER TABLE ADD CONSTRAINT
+  // has no IF NOT EXISTS in Postgres, and this table is tiny, so the
+  // redundant work on a no-op run costs nothing. A fresh table
+  // (app/seed/route.ts's seedRankings) is created with the fixed constraint
+  // directly and never hits the DROP.
+  await sql`ALTER TABLE rankings DROP CONSTRAINT IF EXISTS rankings_organization_id_weight_class_rank_key`;
+  await sql`ALTER TABLE rankings DROP CONSTRAINT IF EXISTS rankings_organization_id_weight_class_rank_fighter_name_key`;
+  await sql`
+    ALTER TABLE rankings ADD CONSTRAINT rankings_organization_id_weight_class_rank_fighter_name_key
+    UNIQUE (organization_id, weight_class, rank, fighter_name)
+  `;
+
   console.log(`Fetching ${RANKINGS_URL}...`);
   const html = await fetchEnglishRankingsHtml();
   const parsed = parseUfcRankings(html);
@@ -163,13 +182,19 @@ async function main() {
     return { ...row, fighterId: match?.id ?? null };
   });
 
-  await sql`DELETE FROM rankings WHERE organization_id = ${UFC_ORGANIZATION_ID}`;
-  for (const row of rows) {
-    await sql`
-      INSERT INTO rankings (organization_id, weight_class, rank, fighter_name, fighter_id)
-      VALUES (${UFC_ORGANIZATION_ID}, ${row.weightClass}, ${row.rank}, ${row.fighterName}, ${row.fighterId})
-    `;
-  }
+  // DELETE + every INSERT as one atomic transaction (not sequential awaited
+  // queries) -- if any single row fails, the whole thing rolls back and the
+  // previous sync's data stays intact instead of being left half-wiped
+  // (exactly the failure mode the tie-rank bug above used to trigger).
+  await sql.transaction((txn) => [
+    txn`DELETE FROM rankings WHERE organization_id = ${UFC_ORGANIZATION_ID}`,
+    ...rows.map(
+      (row) => txn`
+        INSERT INTO rankings (organization_id, weight_class, rank, fighter_name, fighter_id)
+        VALUES (${UFC_ORGANIZATION_ID}, ${row.weightClass}, ${row.rank}, ${row.fighterName}, ${row.fighterId})
+      `,
+    ),
+  ]);
 
   console.log(`Synced ${rows.length} ranking rows across ${new Set(parsed.map((r) => r.weightClass)).size} divisions.`);
 }
