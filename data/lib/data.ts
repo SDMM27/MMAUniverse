@@ -640,10 +640,15 @@ export async function fetchAllFighterRatings(perDivision: number = 15) {
 
 // A single fighter's rating row(s) -- more than one only if they've fought
 // across multiple weight classes we've computed separate FightScores for.
+// `division_rank` is the fighter's plain score-order position in that
+// division (1 = highest raw display_score) -- independent of the champion-
+// pinning display convention the ranking page applies (orderDivisionWithChampionPinned),
+// which is a list-page presentation choice, not a fact about this fighter.
 export async function fetchFighterRatingsByFighterId(fighterId: string) {
   try {
-    const data = await sql<FighterRatingWithFighter>`
-      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+    const data = await sql<FighterRatingWithFighter & { division_rank: string }>`
+      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url,
+        (SELECT COUNT(*) + 1 FROM fighter_ratings fr2 WHERE fr2.weight_class = fr.weight_class AND fr2.display_score > fr.display_score) AS division_rank
       FROM fighter_ratings fr
       JOIN fighters f ON f.id = fr.fighter_id
       WHERE fr.fighter_id = ${fighterId}
