@@ -99,6 +99,34 @@ export type FighterRatingWithFighter = FighterRating & {
   fighter_image_url: string | null;
 };
 
+// One row per fighter per fight (each fighter_fight_stats_id's fight
+// produces two of these, one per corner) -- see compute-fighter-ratings.ts.
+export type FighterRatingHistoryEntry = {
+  id: number;
+  fighter_id: number;
+  weight_class: string;
+  fighter_fight_stats_id: number | null;
+  points_before: number;
+  points_after: number;
+  // The *opponent's* points going into this fight -- the "adversaire bien
+  // classé" signal made explicit/visible rather than left implicit in the
+  // point-flow math, per user feedback (see [[fighter-rating-ml-pivot]]).
+  opponent_points_before: number | null;
+  dominance_score: number;
+  dominance_estimated: boolean;
+  computed_at: string;
+};
+
+// fetchQualityWinsByFighterId's row shape -- a win-only history entry joined
+// back to fighter_fight_stats for the opponent's name and the event it
+// happened at, so the fighter/methodology page can show something like "3
+// victoires contre des adversaires classés dans le top de la division".
+export type QualityWin = FighterRatingHistoryEntry & {
+  opponent_name: string;
+  event_name: string;
+  event_date: string | null;
+};
+
 export type EventWithOrganization = Event & {
   organization_abbreviation: string;
 };

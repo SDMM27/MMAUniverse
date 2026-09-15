@@ -1,7 +1,7 @@
 // data/lib/rating/order-division.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { orderDivisionWithChampionPinned } from './order-division';
+import { orderDivisionWithChampionPinned, groupFighterRatingsByWeightClass } from './order-division';
 import type { FighterRatingWithFighter } from '../definitions';
 
 function fighter(overrides: Partial<FighterRatingWithFighter>): FighterRatingWithFighter {
@@ -78,4 +78,22 @@ test('a division of just the champion has no one to be outranked by', () => {
 test('an empty division returns an empty ordering', () => {
   const result = orderDivisionWithChampionPinned([]);
   assert.deepEqual(result, { fighters: [], championOutranked: false });
+});
+
+test('groupFighterRatingsByWeightClass buckets by weight_class, first-seen order', () => {
+  const lw1 = fighter({ fighter_name: 'LW1', weight_class: 'Lightweight' });
+  const hw1 = fighter({ fighter_name: 'HW1', weight_class: 'Heavyweight' });
+  const lw2 = fighter({ fighter_name: 'LW2', weight_class: 'Lightweight' });
+
+  const groups = groupFighterRatingsByWeightClass([lw1, hw1, lw2]);
+
+  assert.deepEqual(
+    groups.map((g) => g.weightClass),
+    ['Lightweight', 'Heavyweight'],
+  );
+  assert.deepEqual(
+    groups[0].fighters.map((f) => f.fighter_name),
+    ['LW1', 'LW2'],
+  );
+  assert.deepEqual(groups[1].fighters.map((f) => f.fighter_name), ['HW1']);
 });

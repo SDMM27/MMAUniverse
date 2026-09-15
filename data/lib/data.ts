@@ -9,6 +9,8 @@ import {
     Ranking,
     RankingWithFighter,
     NewsArticle,
+    FighterRatingWithFighter,
+    QualityWin,
   } from './definitions';
 import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization, selectHeadlineFightPerEvent } from './event-utils';
 
@@ -599,5 +601,100 @@ export async function fetchNewsArticles({
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch news articles.');
+  }
+}
+
+// FightScore — see docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md
+// and data/scripts/compute-fighter-ratings.ts, which populates these tables.
+// UFC-only (organization_id = 1 implicitly, via fighter_fight_stats' own scope).
+
+// Ordered by weight_class then display_score DESC -- the page groups by
+// weight_class (groupFighterRatingsByWeightClass, data/lib/rating/order-division.ts)
+// and re-orders each group through orderDivisionWithChampionPinned before display.
+export async function fetchAllFighterRatings() {
+  try {
+    const data = await sql<FighterRatingWithFighter>`
+      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+      FROM fighter_ratings fr
+      JOIN fighters f ON f.id = fr.fighter_id
+      ORDER BY fr.weight_class ASC, fr.display_score DESC
+    `;
+    return data.rows;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch fighter ratings.');
+  }
+}
+
+// A single fighter's rating row(s) -- more than one only if they've fought
+// across multiple weight classes we've computed separate FightScores for.
+export async function fetchFighterRatingsByFighterId(fighterId: string) {
+  try {
+    const data = await sql<FighterRatingWithFighter>`
+      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+      FROM fighter_ratings fr
+      JOIN fighters f ON f.id = fr.fighter_id
+      WHERE fr.fighter_id = ${fighterId}
+      ORDER BY fr.display_score DESC
+    `;
+    return data.rows;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch fighter rating.');
+  }
+}
+
+// Pound-for-Pound: the top `limit` display_score rows across every division
+// combined, split by gender (weight_class starting with "Women's") since
+// that's how fight-minds itself splits P4P -- no cross-division
+// renormalization beyond the per-division display_score rescale already
+// applied, an acknowledged simplification (see the design spec's
+// "Pound-for-Pound" section).
+export async function fetchTopPoundForPound(limit: number) {
+  try {
+    const [men, women] = await Promise.all([
+      sql<FighterRatingWithFighter>`
+        SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+        FROM fighter_ratings fr
+        JOIN fighters f ON f.id = fr.fighter_id
+        WHERE fr.weight_class NOT LIKE 'Women''s%'
+        ORDER BY fr.display_score DESC
+        LIMIT ${limit}
+      `,
+      sql<FighterRatingWithFighter>`
+        SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+        FROM fighter_ratings fr
+        JOIN fighters f ON f.id = fr.fighter_id
+        WHERE fr.weight_class LIKE 'Women''s%'
+        ORDER BY fr.display_score DESC
+        LIMIT ${limit}
+      `,
+    ]);
+    return { men: men.rows, women: women.rows };
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch pound-for-pound rankings.');
+  }
+}
+
+// Surfaces the "adversaire bien classé" signal explicitly on the fighter/
+// methodology page rather than leaving it implicit in the point-flow math
+// (per user feedback) -- this fighter's wins, ordered by how many points
+// their opponent had going in, so the most impressive wins (by the
+// algorithm's own reckoning) surface first.
+export async function fetchQualityWinsByFighterId(fighterId: string, limit: number = 5) {
+  try {
+    const data = await sql<QualityWin>`
+      SELECT frh.*, ffs.opponent_name, ffs.event_name, ffs.event_date
+      FROM fighter_rating_history frh
+      JOIN fighter_fight_stats ffs ON ffs.id = frh.fighter_fight_stats_id
+      WHERE frh.fighter_id = ${fighterId} AND ffs.result = 'win'
+      ORDER BY frh.opponent_points_before DESC NULLS LAST
+      LIMIT ${limit}
+    `;
+    return data.rows;
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch quality wins.');
   }
 }

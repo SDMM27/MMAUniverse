@@ -1,6 +1,33 @@
 // data/lib/rating/order-division.ts
 import type { FighterRatingWithFighter } from '../definitions';
 
+export type WeightClassRatingGroup = {
+  weightClass: string;
+  fighters: FighterRatingWithFighter[];
+};
+
+/**
+ * Buckets a flat `fighter_ratings` list by weight_class, preserving the
+ * order weight classes first appear in (the query orders by weight_class
+ * already, so this is effectively alphabetical) rather than re-sorting --
+ * mirrors groupRankingsByWeightClass's shape (data/lib/ranking-utils.ts) for
+ * the official-rankings page, but standalone: FighterRatingWithFighter has
+ * no `rank` field to split a champion out by (that's orderDivisionWithChampionPinned's
+ * job, applied per group by the caller), so this is pure bucketing.
+ */
+export function groupFighterRatingsByWeightClass(ratings: FighterRatingWithFighter[]): WeightClassRatingGroup[] {
+  const groups = new Map<string, WeightClassRatingGroup>();
+  for (const rating of ratings) {
+    let group = groups.get(rating.weight_class);
+    if (!group) {
+      group = { weightClass: rating.weight_class, fighters: [] };
+      groups.set(rating.weight_class, group);
+    }
+    group.fighters.push(rating);
+  }
+  return Array.from(groups.values());
+}
+
 export type OrderedDivision = {
   fighters: FighterRatingWithFighter[];
   championOutranked: boolean;
