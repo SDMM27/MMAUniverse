@@ -288,7 +288,7 @@ Follow the exact patterns already in `data.ts` for `fetchRankingsByOrg`/`fetchRa
 ### Task 9: Classement calculé page
 
 **Files:**
-- Decide at implementation time: new route (e.g. `app/classement-calcule/`) vs. repurposing one of the existing `/rankings`/`/classement` routes — see spec's "Impact pages/navigation" section for the open question on naming/redundancy between those two existing (currently identical-content) routes. Resolve that redundancy as part of this task rather than adding a third confusingly-named route.
+- New route `app/classement-calcule/`. **Correction (done during this task)**: the plan's original framing of `/rankings` vs `/classement` as "redundant, identical-content routes" was wrong, never verified against the actual pages -- `/classement` is the pick'em leaderboard (`fetchAllTimeLeaderboard`), completely unrelated to official rankings. No redundancy, no repurposing -- `/classement-calcule` is a genuinely new route. See spec's "Impact pages/navigation" section for the correction note.
 - Create: `components/ui/ratings/fightscore-list.tsx` (mirrors `components/ui/rankings/rankings-list.tsx` structure — continuous score + style archetype badge instead of a plain rank number)
 - Create: a short methodology page/section (the spec's "expertise apportée" editorial asset) — plain-language explanation of what feeds the score, linked from the ranking page itself
 
@@ -302,7 +302,7 @@ Follow the exact patterns already in `data.ts` for `fetchRankingsByOrg`/`fetchRa
 ### Task 10: Nav + homepage reorg
 
 **Files:**
-- Modify: `components/ui/nav.tsx` — computed ranking gets top billing among the ranking-related nav entries; resolve the `/rankings` vs `/classement` naming redundancy noted in Task 9 at the same time.
+- Modify: `components/ui/nav.tsx` — computed ranking gets top billing among the ranking-related nav entries, labeled "Classement" (the natural French word for it, and the site's new flagship feature per the user's original ask). Since "Classement" already labels the pick'em leaderboard's nav entry (`/classement`, a different, unrelated feature -- see Task 9's correction), rename *that* entry to "Pronostics" (matching the existing "Mes pronostics" family) to free up the name, rather than inventing an awkward name for the new feature.
 - Modify: `app/page.tsx` (and whatever homepage components it composes) — feature the computed P4P top-3 (or similar) with a link into the methodology blurb.
 
 - [ ] **Step 1:** Nav changes.
