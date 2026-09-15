@@ -1725,6 +1725,20 @@
       "start_time": "2026-10-17T12:00:00+00:00",
       "event_location": "PalaPellicone, Rome, Italy",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895369"
+    },
+    {
+      "name": "CW 212 - Cage Warriors 212: Unplugged",
+      "date": "2026-11-27",
+      "start_time": "2026-11-27T00:00:00+00:00",
+      "event_location": "BEC Arena, Manchester, Greater Manchester, England",
+      "event_poster": ""
+    },
+    {
+      "name": "CW 213 - Cage Warriors 213: Manchester",
+      "date": "2026-11-28",
+      "start_time": "2026-11-28T00:00:00+00:00",
+      "event_location": "BEC Arena, Manchester, Greater Manchester, England",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898155"
     }
   ],
   "fighters": [
@@ -52373,6 +52387,52 @@
           "time": "3:50"
         }
       ]
+    },
+    {
+      "name": "Diego Giangirolami",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "1-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Diego-Giangirolami-454260",
+      "fight_history": [
+        {
+          "opponent_name": "Ali Sohaiki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ali-Sohaiki-334719",
+          "event_name": "KCC Friday Fight Night - Kingdom Combat Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/KCC-Friday-Fight-Night-Kingdom-Combat-Championship-113301",
+          "date": "2026-06-26",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Junior Morgan",
+          "round": 1,
+          "time": "1:09"
+        },
+        {
+          "opponent_name": "Francesco di Renzo Mannino",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Francesco-di-Renzo-Mannino-249951",
+          "event_name": "WCF 9 - Warriors Cage Fight 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/WCF-9-Warriors-Cage-Fight-9-111161",
+          "date": "2025-11-29",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 3,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Angelo Maria Terenzio",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Angelo-Maria-Terenzio-437884",
+          "event_name": "CWA - Cage Warriors Academy Italy 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/CWA-Cage-Warriors-Academy-Italy-9-107521",
+          "date": "2025-04-05",
+          "result": "loss",
+          "method": "Submission",
+          "referee": "",
+          "round": 2,
+          "time": "0:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -92000,6 +92060,19 @@
     },
     {
       "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Alex Keogh",
+      "fighter2_name": "Cristiano Oliveira",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "150lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
       "fighter1_name": "Stephen Costello",
       "fighter2_name": "Jordan O'Neill",
       "fight_finished": false,
@@ -92205,6 +92278,32 @@
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "CW 211 - Cage Warriors 211: Rome",
+      "fighter1_name": "Kevin Caperna",
+      "fighter2_name": "Diego Giangirolami",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 213 - Cage Warriors 213: Manchester",
+      "fighter1_name": "Ieuan Davies",
+      "fighter2_name": "Jordan Vucenic",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }

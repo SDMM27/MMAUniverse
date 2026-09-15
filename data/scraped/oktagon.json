@@ -863,11 +863,11 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/891059"
     },
     {
-      "name": "Oktagon MMA - Oktagon 98",
+      "name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
       "date": "2026-11-21",
       "start_time": "2026-11-21T00:00:00+00:00",
       "event_location": "Werk Arena, Třinec, Czech Republic",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897696"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898158"
     },
     {
       "name": "Oktagon MMA - Oktagon 99",
@@ -6476,6 +6476,208 @@
           "referee": "",
           "round": 3,
           "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Anatolij Baal",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240306114342_540a01120e8bb991973c94ecd08665e7.PNG",
+      "weight_class": "Lightweight",
+      "record": "10-4-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Anatolij-Baal-165081",
+      "fight_history": [
+        {
+          "opponent_name": "Connor Hughes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Connor-Hughes-287875",
+          "event_name": "Professional Fighters League - PFL Europe 1: 2024 Regular Season",
+          "event_sherdog_url": "https://www.sherdog.com/events/Professional-Fighters-League-PFL-Europe-1-2024-Regular-Season-101240",
+          "date": "2024-03-07",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Derek Hickey",
+          "round": 1,
+          "time": "1:31"
+        },
+        {
+          "opponent_name": "Sebastian Santana Guedes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sebastian-Santana-Guedes-220381",
+          "event_name": "Professional Fighters League - PFL Europe 2: 2023 Regular Season",
+          "event_sherdog_url": "https://www.sherdog.com/events/Professional-Fighters-League-PFL-Europe-2-2023-Regular-Season-96177",
+          "date": "2023-07-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Doug Mitchell",
+          "round": 2,
+          "time": "4:16"
+        },
+        {
+          "opponent_name": "Raymond Jarman",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Raymond-Jarman-15490",
+          "event_name": "GMC Fight Night - Jarman vs. Baal",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-Fight-Night-Jarman-vs-Baal-87790",
+          "date": "2020-08-29",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marco Broersen",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Aleksandr Vertko",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aleksandr-Vertko-180861",
+          "event_name": "GMC 21 - German MMA Championship 21",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-21-German-MMA-Championship-21-77713",
+          "date": "2019-09-07",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ozan Aslaner",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ozan-Aslaner-201483",
+          "event_name": "GMC 20 - German MMA Championship 20",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-20-German-MMA-Championship-20-77711",
+          "date": "2019-06-29",
+          "result": "draw",
+          "method": "Draw (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Djamil Chan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Djamil-Chan-78386",
+          "event_name": "GMC 13 - German MMA Championship 13",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-13-German-MMA-Championship-13-64897",
+          "date": "2017-12-16",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Marco Broersen",
+          "round": 1,
+          "time": "4:41"
+        },
+        {
+          "opponent_name": "Bai-Ali Shaipov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/BaiAli-Shaipov-211229",
+          "event_name": "ACB 66 - Grozny: Young Eagles 20",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACB-66-Grozny-Young-Eagles-20-61779",
+          "date": "2017-08-05",
+          "result": "nc",
+          "method": "No Contest (Premature Stoppage)",
+          "referee": "Viktor Korneev",
+          "round": 1,
+          "time": "2:39"
+        },
+        {
+          "opponent_name": "Alexander Vogt",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Vogt-89973",
+          "event_name": "GMC 10 - German MMA Championship 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-10-German-MMA-Championship-10-57801",
+          "date": "2017-01-07",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "3:01"
+        },
+        {
+          "opponent_name": "Leo Zulic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leo-Zulic-126135",
+          "event_name": "GMC 9 - German MMA Championship 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-9-German-MMA-Championship-9-55755",
+          "date": "2016-11-19",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Marco Broersen",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Abeku Afful",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abeku-Afful-20722",
+          "event_name": "GMC 8 - German MMA Championship 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-8-German-MMA-Championship-8-51745",
+          "date": "2016-04-16",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Ronny Egermann",
+          "round": 1,
+          "time": "4:58"
+        },
+        {
+          "opponent_name": "Ebrahim Hosseinpour",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ebrahim-Hosseinpour-201635",
+          "event_name": "WLMMA - We Love MMA 17",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLMMA-We-Love-MMA-17-49471",
+          "date": "2015-11-28",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Steffen Ramlow",
+          "round": 1,
+          "time": "1:44"
+        },
+        {
+          "opponent_name": "Artur Waiz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Artur-Waiz-71870",
+          "event_name": "RFC - Respect Fighting Championship 14",
+          "event_sherdog_url": "https://www.sherdog.com/events/RFC-Respect-Fighting-Championship-14-47059",
+          "date": "2015-09-19",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:44"
+        },
+        {
+          "opponent_name": "Mick Mokoyoko",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mick-Mokoyoko-42897",
+          "event_name": "GMC 6 - German MMA Championship 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-6-German-MMA-Championship-6-44243",
+          "date": "2015-04-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marco Broersen",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Norman Gaucho",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Norman-Gaucho-176047",
+          "event_name": "AOC 4 - Age of Cage 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/AOC-4-Age-of-Cage-4-43475",
+          "date": "2015-01-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Nenad Brezovec",
+          "round": 1,
+          "time": "0:25"
+        },
+        {
+          "opponent_name": "David Mosebach",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Mosebach-171681",
+          "event_name": "AOC 2 - Age of Cage 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/AOC-2-Age-of-Cage-2-38345",
+          "date": "2014-07-19",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Bernd Kornmaier",
+          "round": 1,
+          "time": "4:57"
+        },
+        {
+          "opponent_name": "David Depannemaecker",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Depannemaecker-101165",
+          "event_name": "Aggrelin 5 - Cage Fight Bavaria",
+          "event_sherdog_url": "https://www.sherdog.com/events/Aggrelin-5-Cage-Fight-Bavaria-37281",
+          "date": "2014-03-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Casey Dittmer",
+          "round": 1,
+          "time": "4:26"
         }
       ]
     }
@@ -20731,6 +20933,19 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "fighter1_name": "Marco Novak",
+      "fighter2_name": "Anatolij Baal",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
       "fighter1_name": "Viktor Cervinsky",
       "fighter2_name": "Daniel Hromek",
       "fight_finished": false,
@@ -20822,19 +21037,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
-      "fighter1_name": "Marat Nessar",
-      "fighter2_name": "Abdul Malik Aliev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
       "fighter1_name": "Shawn Marcos da Silva",
       "fighter2_name": "Fayaz Haqparast",
       "fight_finished": false,
@@ -20843,6 +21045,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "fighter1_name": "Marat Nessar",
+      "fighter2_name": "Abdul Malik Aliev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -20912,20 +21127,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 98",
-      "fighter1_name": "Veronika Smolkova",
-      "fighter2_name": "Ivana Petrovic",
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
+      "fighter1_name": "Mateusz Legierski",
+      "fighter2_name": "Ivan Buchinger",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Flyweight",
+      "weight_class": "Lightweight",
       "is_main_event": true,
-      "is_title_fight": false
+      "is_title_fight": true
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 98",
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
       "fighter1_name": "Tomasz Mudroch",
       "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
@@ -20938,7 +21153,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 98",
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
       "fighter1_name": "Jakub Batfalsky",
       "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
@@ -20947,6 +21162,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
+      "fighter1_name": "Veronika Smolkova",
+      "fighter2_name": "Ivana Petrovic",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     }
