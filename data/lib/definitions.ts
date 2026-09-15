@@ -83,6 +83,13 @@ export type FighterRating = {
   id: number;
   fighter_id: number;
   weight_class: string;
+  // Both NUMERIC columns in Postgres -- the neon driver returns those as
+  // strings at runtime (avoids float-precision loss), not actual numbers,
+  // despite this type. Always coerce with Number(...) before arithmetic or
+  // `<`/`>` comparison -- `-` happens to coerce both operands on its own,
+  // which let a real bug (order-division.ts's championOutranked comparing
+  // two of these with plain `>`, silently doing string comparison) ship
+  // unnoticed until caught live on /classement-calcule 2026-09-15.
   points: number;
   display_score: number;
   current_streak: number;

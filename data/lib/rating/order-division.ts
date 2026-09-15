@@ -52,18 +52,39 @@ export type OrderedDivision = {
  * one rank-0 row per division), the first one encountered is treated as the
  * champion and the rest sort normally among themselves.
  */
+// fighter_ratings.display_score is a Postgres NUMERIC column, which
+// @neondatabase/serverless returns as a **string** at runtime (to avoid
+// float-precision loss), not the `number` FighterRating's type declares --
+// same well-known driver quirk this codebase already documents for
+// BIGSERIAL ids (see PickemUser.id's comment in definitions.ts), just not
+// previously hit for a NUMERIC column. `b.display_score - a.display_score`
+// happens to sort correctly regardless (JS coerces both sides to numbers
+// for `-`), which is why this bug shipped unnoticed -- but `>` does NOT
+// coerce: comparing two strings with `>` is lexicographic ("99.0" > "100.0"
+// is true as strings, backwards from the numeric truth), which silently
+// inverted the asterisk in both directions (confirmed live on
+// /classement-calcule: Bantamweight's champion, genuinely #1, wrongly
+// showed the asterisk; Featherweight's champion, genuinely outranked,
+// wrongly showed none). Every comparison below coerces explicitly with
+// Number(...) rather than relying on operator-specific coercion.
+function toNumber(displayScore: FighterRatingWithFighter['display_score']): number {
+  return Number(displayScore);
+}
+
 export function orderDivisionWithChampionPinned(fighters: FighterRatingWithFighter[]): OrderedDivision {
   const championIndex = fighters.findIndex((f) => f.is_champion);
   if (championIndex === -1) {
     return {
-      fighters: [...fighters].sort((a, b) => b.display_score - a.display_score),
+      fighters: [...fighters].sort((a, b) => toNumber(b.display_score) - toNumber(a.display_score)),
       championOutranked: false,
     };
   }
 
   const champion = fighters[championIndex];
-  const rest = fighters.filter((_, i) => i !== championIndex).sort((a, b) => b.display_score - a.display_score);
-  const championOutranked = rest.length > 0 && rest[0].display_score > champion.display_score;
+  const rest = fighters
+    .filter((_, i) => i !== championIndex)
+    .sort((a, b) => toNumber(b.display_score) - toNumber(a.display_score));
+  const championOutranked = rest.length > 0 && toNumber(rest[0].display_score) > toNumber(champion.display_score);
 
   return { fighters: [champion, ...rest], championOutranked };
 }

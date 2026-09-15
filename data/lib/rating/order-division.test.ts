@@ -80,6 +80,34 @@ test('an empty division returns an empty ordering', () => {
   assert.deepEqual(result, { fighters: [], championOutranked: false });
 });
 
+// Regression test for a real bug (found live on /classement-calcule,
+// 2026-09-15): fighter_ratings.display_score is a Postgres NUMERIC column,
+// which the neon driver returns as a **string** at runtime, not the
+// `number` FighterRating declares (see the type's own doc comment in
+// definitions.ts). The tests above all pass plain JS numbers, which never
+// exercised this -- these two explicitly mimic the real DB shape with
+// string values (`as unknown as number`, matching how the driver actually
+// hands them back despite the type) to lock in that `championOutranked`
+// compares numerically, not lexicographically ("99.0" > "100.0" is true as
+// strings -- backwards from the numeric truth).
+test('championOutranked compares display_score numerically even when it arrives as a string (real DB shape)', () => {
+  const champion = fighter({ fighter_name: 'Champion', is_champion: true, display_score: '100.0' as unknown as number });
+  const contender = fighter({ fighter_name: 'Contender', display_score: '99.0' as unknown as number });
+
+  const result = orderDivisionWithChampionPinned([contender, champion]);
+
+  assert.equal(result.championOutranked, false, 'the champion (100.0) is not outranked by 99.0, despite "99.0" > "100.0" as strings');
+});
+
+test('championOutranked still catches a real outrank when scores are strings with different digit counts', () => {
+  const champion = fighter({ fighter_name: 'Champion', is_champion: true, display_score: '92.3' as unknown as number });
+  const contender = fighter({ fighter_name: 'Contender', display_score: '100.0' as unknown as number });
+
+  const result = orderDivisionWithChampionPinned([contender, champion]);
+
+  assert.equal(result.championOutranked, true, 'the champion (92.3) is genuinely outranked by 100.0, despite "100.0" < "92.3" as strings');
+});
+
 test('groupFighterRatingsByWeightClass buckets by weight_class, first-seen order', () => {
   const lw1 = fighter({ fighter_name: 'LW1', weight_class: 'Lightweight' });
   const hw1 = fighter({ fighter_name: 'HW1', weight_class: 'Heavyweight' });
