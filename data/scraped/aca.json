@@ -1699,7 +1699,7 @@
       "date": "2026-09-17",
       "start_time": "2026-09-17T00:00:00+00:00",
       "event_location": "Sport Hall Colloseum, Grozny, Chechnya, Russia",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897482"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898430"
     },
     {
       "name": "ACA 208 - Shaikhaev vs. Tumenov",
@@ -63550,7 +63550,7 @@
       "fight_history": [
         {
           "opponent_name": "Balabek Abbas",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Balabek-Abbas-462519",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Balabek-Abbas-413948",
           "event_name": "ACA YE 68 - ACA Young Eagles 68",
           "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
           "date": "2026-09-17",
@@ -425878,19 +425878,6 @@
     },
     {
       "event_name": "ACA YE 68 - ACA Young Eagles 68",
-      "fighter1_name": "Magomed Abdusalamov",
-      "fighter2_name": "Islam Inderbiev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
-      "weight_class": "Lightweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "ACA YE 68 - ACA Young Eagles 68",
       "fighter1_name": "Zamir Dzhukkaev",
       "fighter2_name": "Rashid Khazbulatov",
       "fight_finished": true,
@@ -425899,7 +425886,7 @@
       "round": 1,
       "time": "4:24",
       "weight_class": "Middleweight",
-      "is_main_event": false,
+      "is_main_event": true,
       "is_title_fight": false
     },
     {
