@@ -1714,6 +1714,13 @@
       "start_time": "2026-10-31T00:00:00+00:00",
       "event_location": "Dushanbe, Tajikistan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896159"
+    },
+    {
+      "name": "ACA 210 - Myrzabekov vs. Tumenov",
+      "date": "2026-12-05",
+      "start_time": "2026-12-05T00:00:00+00:00",
+      "event_location": "Bishkek, Kyrgyzstan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898337"
     }
   ],
   "fighters": [
@@ -106375,6 +106382,18 @@
           "referee": "",
           "round": 1,
           "time": "2:30"
+        },
+        {
+          "opponent_name": "Georgiy Tskhovrebov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Georgiy-Tskhovrebov-377796",
+          "event_name": "Colosseum MMA - Battle of Champions 18",
+          "event_sherdog_url": "https://www.sherdog.com/events/Colosseum-MMA-Battle-of-Champions-18-88347",
+          "date": "2021-01-24",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 2,
+          "time": "5:00"
         },
         {
           "opponent_name": "Rasul Khazhgeriev",
@@ -425445,6 +425464,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 210 - Myrzabekov vs. Tumenov",
+      "fighter1_name": "Zhakshylyk Myrzabekov",
+      "fighter2_name": "Albert Tumenov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "ACA 210 - Myrzabekov vs. Tumenov",
+      "fighter1_name": "Maharbek Karginov",
+      "fighter2_name": "Alimardan Abdykarov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     }
