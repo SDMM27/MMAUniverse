@@ -96230,6 +96230,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Khamzat-Salakhanov-481689",
       "fight_history": [
         {
+          "opponent_name": "Askhab Ebzaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Askhab-Ebzaev-507150",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "Technical Submission (Triangle Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "3:45"
+        },
+        {
           "opponent_name": "Muslim Padaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muslim-Padaev-481688",
           "event_name": "ACA YE 56 - ACA Young Eagles 56",
@@ -378809,7 +378821,20 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Askhab-Ebzaev-507150",
-      "fight_history": []
+      "fight_history": [
+        {
+          "opponent_name": "Khamzat Salakhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khamzat-Salakhanov-481689",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "Technical Submission (Triangle Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "3:45"
+        }
+      ]
     },
     {
       "name": "Muslim Murtazaliev",
@@ -378819,6 +378844,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Muslim-Murtazaliev-447164",
       "fight_history": [
+        {
+          "opponent_name": "Khamzat Akhmatkhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khamzat-Akhmatkhanov-507149",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Tajialike Yeerbole",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tajialike-Yeerbole-382404",
@@ -378840,7 +378877,20 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Khamzat-Akhmatkhanov-507149",
-      "fight_history": []
+      "fight_history": [
+        {
+          "opponent_name": "Muslim Murtazaliev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muslim-Murtazaliev-447164",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -425568,7 +425618,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": true,
       "is_title_fight": false
@@ -425581,7 +425631,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425594,7 +425644,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425607,7 +425657,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425620,7 +425670,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425633,7 +425683,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425646,7 +425696,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425659,7 +425709,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425672,7 +425722,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425685,7 +425735,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425698,20 +425748,20 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA YE 68 - ACA Young Eagles 68",
-      "fighter1_name": "Khamzat Salakhanov",
-      "fighter2_name": "Askhab Ebzaev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Askhab Ebzaev",
+      "fighter2_name": "Khamzat Salakhanov",
+      "fight_finished": true,
+      "winner_name": "Askhab Ebzaev",
+      "method": "Technical Submission (Triangle Choke)",
+      "round": 2,
+      "time": "3:45",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -425720,11 +425770,11 @@
       "event_name": "ACA YE 68 - ACA Young Eagles 68",
       "fighter1_name": "Muslim Murtazaliev",
       "fighter2_name": "Khamzat Akhmatkhanov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Muslim Murtazaliev",
+      "method": "TKO (Doctor Stoppage)",
+      "round": 2,
+      "time": "5:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
