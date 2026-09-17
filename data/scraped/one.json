@@ -41,7 +41,7 @@
       "date": "2026-09-18",
       "start_time": "2026-09-18T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898056"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898055"
     },
     {
       "name": "One Championship - One Friday Fights 172",
@@ -3466,19 +3466,6 @@
     },
     {
       "event_name": "One Championship - One Friday Fights 171",
-      "fighter1_name": "Mukhammadaziz Avazov",
-      "fighter2_name": "Hero Marco Manguray",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One Friday Fights 171",
       "fighter1_name": "Connor Tymon",
       "fighter2_name": "Alex Bigander",
       "fight_finished": false,
@@ -3487,7 +3474,7 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
-      "is_main_event": false,
+      "is_main_event": true,
       "is_title_fight": false
     },
     {

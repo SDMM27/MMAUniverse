@@ -437485,6 +437485,19 @@
     },
     {
       "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Joe Giannetti",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
       "fighter1_name": "Paul Capaldo",
       "fighter2_name": "Sebastian Ruiz",
       "fight_finished": false,

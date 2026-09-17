@@ -8524,6 +8524,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "Ares 44 - Boughanem vs. Soumah",
+      "fighter1_name": "Bilal Bakhouche-Chareuf",
+      "fighter2_name": "Lionel Kamooze",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "Ares 45 - Zebo vs. Baki 2",
       "fighter1_name": "Jordan Zebo",
       "fighter2_name": "Baissangour Chamsoudinov",

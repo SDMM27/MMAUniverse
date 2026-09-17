@@ -6680,6 +6680,15 @@
           "time": "4:26"
         }
       ]
+    },
+    {
+      "name": "Rastislav Zvara",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1778588870cs.1767358289012.jpg",
+      "weight_class": "Middleweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Rastislav-Zvara-495145",
+      "fight_history": []
     }
   ],
   "fights": [
@@ -20881,6 +20890,19 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "fighter1_name": "David Dvorak",
+      "fighter2_name": "Aaron Aby",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
       "fighter1_name": "Matus Juracek",
       "fighter2_name": "Jozef Wittner",
       "fight_finished": false,
@@ -21084,6 +21106,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 97: Severino vs. Holzer",
+      "fighter1_name": "Jan Holzer",
+      "fighter2_name": "Rastislav Zvara",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
