@@ -12119,56 +12119,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Isupov-Sukhrob-471670",
-      "fight_history": [
-        {
-          "opponent_name": "Cole Cervantes",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cole-Cervantes-489019",
-          "event_name": "Ignite Fights 113 - Mixed Martial Arts and Muay Thai Action",
-          "event_sherdog_url": "https://www.sherdog.com/events/Ignite-Fights-113-Mixed-Martial-Arts-and-Muay-Thai-Action-112458",
-          "date": "2026-05-16",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Neal Gottzmann",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Neal-Gottzmann-227069",
-          "event_name": "Throne MMA 14 - Bouhata vs. Williams",
-          "event_sherdog_url": "https://www.sherdog.com/events/Throne-MMA-14-Bouhata-vs-Williams-108895",
-          "date": "2025-08-09",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Richard Dralu",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Richard-Dralu-445069",
-          "event_name": "Throne MMA 11 - Lord vs. Midas",
-          "event_sherdog_url": "https://www.sherdog.com/events/Throne-MMA-11-Lord-vs-Midas-106881",
-          "date": "2025-05-10",
-          "result": "loss",
-          "method": "Decision",
-          "referee": "",
-          "round": 5,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Cole Surprenant",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cole-Surprenant-446669",
-          "event_name": "Pure FC 29 - Pure Fighting Championships 29",
-          "event_sherdog_url": "https://www.sherdog.com/events/Pure-FC-29-Pure-Fighting-Championships-29-104661",
-          "date": "2025-02-01",
-          "result": "win",
-          "method": "Submission (Arm-Triangle Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "2:38"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Brett Bye",
