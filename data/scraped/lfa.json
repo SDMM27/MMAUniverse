@@ -408198,18 +408198,6 @@
           "referee": "Morgan Sickinger",
           "round": 3,
           "time": "5:00"
-        },
-        {
-          "opponent_name": "Terry Martin Jr.",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Terry-Martin-Jr-447593",
-          "event_name": "Chicago Cagefighting Championship - CCC: Pro-Am MMA",
-          "event_sherdog_url": "https://www.sherdog.com/events/Chicago-Cagefighting-Championship-CCC-ProAm-MMA-108229",
-          "date": "2025-06-07",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "5:00"
         }
       ]
     }
