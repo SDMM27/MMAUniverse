@@ -3287,6 +3287,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Connor-Tymon-402693",
       "fight_history": [
         {
+          "opponent_name": "Alex Bigander",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Bigander-440623",
+          "event_name": "One Championship - One Friday Fights 171",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-171-113335",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "2:29"
+        },
+        {
           "opponent_name": "Sumit Bhyan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sumit-Bhyan-398616",
           "event_name": "One Championship - One Friday Fights 98",
@@ -3308,6 +3320,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alex-Bigander-440623",
       "fight_history": [
+        {
+          "opponent_name": "Connor Tymon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Connor-Tymon-402693",
+          "event_name": "One Championship - One Friday Fights 171",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-171-113335",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "2:29"
+        },
         {
           "opponent_name": "Arvin Chan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arvin-Chan-116895",
@@ -3468,11 +3492,11 @@
       "event_name": "One Championship - One Friday Fights 171",
       "fighter1_name": "Connor Tymon",
       "fighter2_name": "Alex Bigander",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Connor Tymon",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "2:29",
       "weight_class": "Welterweight",
       "is_main_event": true,
       "is_title_fight": false
