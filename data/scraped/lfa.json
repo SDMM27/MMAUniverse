@@ -437183,7 +437183,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight",
+      "weight_class": "188lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -437228,19 +437228,6 @@
     },
     {
       "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Zoe Nowicki",
-      "fighter2_name": "Micaela Rampage",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
       "fighter1_name": "Augustine Hahn",
       "fighter2_name": "Luis Unzueta",
       "fight_finished": false,
@@ -437274,7 +437261,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "190lb Catchweight",
+      "weight_class": "197lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },

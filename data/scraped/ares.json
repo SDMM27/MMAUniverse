@@ -3320,6 +3320,64 @@
           "time": "0:43"
         }
       ]
+    },
+    {
+      "name": "Joelson Ferreira de Souza",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1666707440unnamed.jpg",
+      "weight_class": "Lightweight",
+      "record": "3-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Joelson-Ferreira-de-Souza-414462",
+      "fight_history": [
+        {
+          "opponent_name": "Raimundo Gomes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Raimundo-Gomes-232341",
+          "event_name": "Super Pitbull Combat Mae do Rio - Super Pitbull Combat 18",
+          "event_sherdog_url": "https://www.sherdog.com/events/Super-Pitbull-Combat-Mae-do-Rio-Super-Pitbull-Combat-18-108997",
+          "date": "2025-07-19",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:44"
+        },
+        {
+          "opponent_name": "Rubenilton Pereira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rubenilton-Pereira-98491",
+          "event_name": "PFC - Palmas Fight Championship 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/PFC-Palmas-Fight-Championship-3-108387",
+          "date": "2025-06-14",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Jairo Cordeiro",
+          "round": 2,
+          "time": "0:41"
+        },
+        {
+          "opponent_name": "Williams  Will",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Williams-Will-173057",
+          "event_name": "SPF / PSF - Super Pitbull Fight 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/SPF-PSF-Super-Pitbull-Fight-11-106870",
+          "date": "2025-01-25",
+          "result": "win",
+          "method": "Submission (North-South Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:50"
+        },
+        {
+          "opponent_name": "William de Tarcio Sousa e Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/William-de-Tarcio-Sousa-e-Silva-206275",
+          "event_name": "SPF / PFC - Pit Bull Fight Championship 66",
+          "event_sherdog_url": "https://www.sherdog.com/events/SPF-PFC-Pit-Bull-Fight-Championship-66-105696",
+          "date": "2024-09-14",
+          "result": "win",
+          "method": "Technical Submission (Heel Hook)",
+          "referee": "",
+          "round": 1,
+          "time": "2:07"
+        }
+      ]
     }
   ],
   "fights": [
@@ -8396,7 +8454,7 @@
     {
       "event_name": "Ares 43 - O'Connor vs. Diatta",
       "fighter1_name": "Vincent Yerly",
-      "fighter2_name": "Matej Danek",
+      "fighter2_name": "Joelson Ferreira de Souza",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
