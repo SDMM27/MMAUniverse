@@ -3378,6 +3378,112 @@
           "time": "2:07"
         }
       ]
+    },
+    {
+      "name": "Josenildo da Conceicao Pantoja",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1684809345Sem_t%C3%ADtulo012.jpg",
+      "weight_class": "Featherweight",
+      "record": "5-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Josenildo-da-Conceicao-Pantoja-420077",
+      "fight_history": [
+        {
+          "opponent_name": "Ernesto Schisano",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ernesto-Schisano-393526",
+          "event_name": "WAR MMA 8 - Madrid",
+          "event_sherdog_url": "https://www.sherdog.com/events/WAR-MMA-8-Madrid-110492",
+          "date": "2025-12-06",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "2:47"
+        },
+        {
+          "opponent_name": "Jhonataniel Alves Pinheiro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jhonataniel-Alves-Pinheiro-354771",
+          "event_name": "MBFC - Magalhaes Barata Fight Combat 01",
+          "event_sherdog_url": "https://www.sherdog.com/events/MBFC-Magalhaes-Barata-Fight-Combat-01-110755",
+          "date": "2025-11-07",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "01:50"
+        },
+        {
+          "opponent_name": "Joao Carlos Dias Filho",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joao-Carlos-Dias-Filho-87519",
+          "event_name": "SPF / PSF - Super Pitbull Fight 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/SPF-PSF-Super-Pitbull-Fight-12-108173",
+          "date": "2025-05-10",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "03:38"
+        },
+        {
+          "opponent_name": "Madsom Oliveira Cardoso",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Madsom-Oliveira-Cardoso-379407",
+          "event_name": "Capanema Fight Combat 49 - CFC Cachoeira do Piria",
+          "event_sherdog_url": "https://www.sherdog.com/events/Capanema-Fight-Combat-49-CFC-Cachoeira-do-Piria-102615",
+          "date": "2024-04-13",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Romero Reis",
+          "round": 1,
+          "time": "03:30"
+        },
+        {
+          "opponent_name": "Adilson Souza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adilson-Souza-440208",
+          "event_name": "UMF - Ultimate Marajo Fight 01",
+          "event_sherdog_url": "https://www.sherdog.com/events/UMF-Ultimate-Marajo-Fight-01-100597",
+          "date": "2023-12-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Jefferson Dantas",
+          "round": 1,
+          "time": "02:02"
+        },
+        {
+          "opponent_name": "Manoel Junior Da Silva Araujo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Manoel-Junior-Da-Silva-Araujo-441337",
+          "event_name": "CFC  - Capanema Fight Combat 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFC-Capanema-Fight-Combat-48-101089",
+          "date": "2023-11-18",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "Romero Reis",
+          "round": 2,
+          "time": "02:15"
+        },
+        {
+          "opponent_name": "Nonato Junior",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nonato-Junior-199083",
+          "event_name": "IFC - Ipixuna Fight Champions 14",
+          "event_sherdog_url": "https://www.sherdog.com/events/IFC-Ipixuna-Fight-Champions-14-97515",
+          "date": "2023-05-13",
+          "result": "loss",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Clebson Motta",
+          "round": 1,
+          "time": "1:27"
+        },
+        {
+          "opponent_name": "Marcilio Pontes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcilio-Pontes-391890",
+          "event_name": "DSFN - DS Fight Night 03",
+          "event_sherdog_url": "https://www.sherdog.com/events/DSFN-DS-Fight-Night-03-96011",
+          "date": "2023-01-27",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "Rafael  Barros",
+          "round": 1,
+          "time": "2:12"
+        }
+      ]
     }
   ],
   "fights": [
@@ -8441,13 +8547,13 @@
     {
       "event_name": "Ares 43 - O'Connor vs. Diatta",
       "fighter1_name": "Jimmy Vienot",
-      "fighter2_name": "Jan Stastny",
+      "fighter2_name": "Josenildo da Conceicao Pantoja",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "163lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },

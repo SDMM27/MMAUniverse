@@ -48,7 +48,7 @@
       "date": "2026-09-25",
       "start_time": "2026-09-25T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898717"
     },
     {
       "name": "One Championship - One on Prime Video 48",
@@ -3381,6 +3381,430 @@
           "time": "3:00"
         }
       ]
+    },
+    {
+      "name": "Sarmad Jahanara",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1773398660Sarmad_Jahanara-Hero-1200x1165-1-600x583.png",
+      "weight_class": "Welterweight",
+      "record": "6-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sarmad-Jahanara-300521",
+      "fight_history": [
+        {
+          "opponent_name": "Ryo Goto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryo-Goto-421177",
+          "event_name": "One Championship - One Friday Fights 159",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-159-113001",
+          "date": "2026-06-19",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "2:53"
+        },
+        {
+          "opponent_name": "Chih Cheng Yu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chih-Cheng-Yu-397528",
+          "event_name": "One Championship - One Friday Fights 146",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-146-111194",
+          "date": "2026-03-13",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Max Kelly",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Max-Kelly-388220",
+          "event_name": "Beatdown Promotions 10 - Pereira vs. Wilbraham",
+          "event_sherdog_url": "https://www.sherdog.com/events/Beatdown-Promotions-10-Pereira-vs-Wilbraham-105791",
+          "date": "2025-03-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Petchsila Sit Jae Wai",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Petchsila-Sit-Jae-Wai-474993",
+          "event_name": "Bangla - Super Fights",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bangla-Super-Fights-107551",
+          "date": "2025-02-08",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:11"
+        },
+        {
+          "opponent_name": "Khan Deatta",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khan-Deatta-353199",
+          "event_name": "Eternal MMA 73 - Perth",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eternal-MMA-73-Perth-95793",
+          "date": "2023-02-11",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Peter Hickmott",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Emil Jeries",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emil-Jeries-366075",
+          "event_name": "RMMA 4 - Rogue MMA 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/RMMA-4-Rogue-MMA-4-94822",
+          "date": "2022-09-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yong Ju Lim",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yong-Ju-Lim-264231",
+          "event_name": "HFS - Hex Fight Series 23",
+          "event_sherdog_url": "https://www.sherdog.com/events/HFS-Hex-Fight-Series-23-93051",
+          "date": "2022-08-05",
+          "result": "win",
+          "method": "KO (Knee)",
+          "referee": "Greg Kleynjans",
+          "round": 2,
+          "time": "N/A"
+        }
+      ]
+    },
+    {
+      "name": "Basir Saraliev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1735927457IMG_3270.jpeg",
+      "weight_class": "Middleweight",
+      "record": "11-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Basir-Saraliev-285087",
+      "fight_history": [
+        {
+          "opponent_name": "Shakhban Alkhasov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shakhban-Alkhasov-335179",
+          "event_name": "UAE Warriors 65 - Silva vs. Oliveira",
+          "event_sherdog_url": "https://www.sherdog.com/events/UAE-Warriors-65-Silva-vs-Oliveira-110135",
+          "date": "2025-11-15",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Vitor Ribeiro",
+          "round": 1,
+          "time": "4:24"
+        },
+        {
+          "opponent_name": "Evgeniy Morozov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evgeniy-Morozov-308909",
+          "event_name": "UAE Warriors 63 - Morozov vs. Saraliev",
+          "event_sherdog_url": "https://www.sherdog.com/events/UAE-Warriors-63-Morozov-vs-Saraliev-109365",
+          "date": "2025-09-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marc Goddard",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Zamir Aripshev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zamir-Aripshev-224557",
+          "event_name": "ACA 183 - Tumenov vs. Vagaev",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-183-Tumenov-vs-Vagaev-105938",
+          "date": "2025-02-08",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Viktor Korneev",
+          "round": 1,
+          "time": "0:52"
+        },
+        {
+          "opponent_name": "Amir Elzhurkaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amir-Elzhurkaev-222877",
+          "event_name": "ACA 171 - Omarov vs. Polpudnikov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-171-Omarov-vs-Polpudnikov-101236",
+          "date": "2024-02-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Akhmed Balkizov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Akhmed-Balkizov-100831",
+          "event_name": "ACA 159 - Reznikov vs. Vartanyan",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-159-Reznikov-vs-Vartanyan-96758",
+          "date": "2023-06-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Dzhambulat Selimkhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dzhambulat-Selimkhanov-250071",
+          "event_name": "ACA YE 27 - ACA Young Eagles 27",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-27-ACA-Young-Eagles-27-93494",
+          "date": "2022-06-25",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Andrey Kovalev",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ibragim Askhabov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibragim-Askhabov-359885",
+          "event_name": "ACA YE 20 - ACA Young Eagles 20",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-20-ACA-Young-Eagles-20-90304",
+          "date": "2021-08-16",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Gerikhan Shibilov",
+          "round": 1,
+          "time": "2:54"
+        },
+        {
+          "opponent_name": "Adilet Nurmatov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adilet-Nurmatov-323797",
+          "event_name": "ACA YE 18 - ACA Young Eagles 18: Grand Prix 1/4 Finals",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-18-ACA-Young-Eagles-18-Grand-Prix-14-Finals-89072",
+          "date": "2021-04-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Gerikhan Shibilov",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kalybek Uulu Sydykaly",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kalybek-Uulu-Sydykaly-320565",
+          "event_name": "ACA YE 14 - ACA Young Eagles",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-14-ACA-Young-Eagles-87882",
+          "date": "2020-11-14",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 1,
+          "time": "3:40"
+        },
+        {
+          "opponent_name": "Ortca Gudaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ortca-Gudaev-250705",
+          "event_name": "World Fighters Championship - WFC 12 Grand Prix",
+          "event_sherdog_url": "https://www.sherdog.com/events/World-Fighters-Championship-WFC-12-Grand-Prix-82593",
+          "date": "2019-12-22",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Shamil  Murtazaliev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shamil-Murtazaliev-342343",
+          "event_name": "DFS 5 - Dagestan Fighting Selection 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/DFS-5-Dagestan-Fighting-Selection-5-79037",
+          "date": "2019-08-27",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "3:40"
+        },
+        {
+          "opponent_name": "Iskandar Ziyaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Iskandar-Ziyaev-224645",
+          "event_name": "Eagles MMA Moscow - Race of Fighters",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eagles-MMA-Moscow-Race-of-Fighters-68115",
+          "date": "2018-04-29",
+          "result": "win",
+          "method": "Technical Submission (Guillotine Choke)",
+          "referee": "Alexander Kolesnikov",
+          "round": 1,
+          "time": "3:07"
+        }
+      ]
+    },
+    {
+      "name": "Leevi Heino",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1671233892Leevi_Heino.jpg",
+      "weight_class": "Featherweight",
+      "record": "5-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Leevi-Heino-408757",
+      "fight_history": [
+        {
+          "opponent_name": "Rasberg Gwanzura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rasberg-Gwanzura-376272",
+          "event_name": "RMMA Vol. 1 - Rahina MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/RMMA-Vol-1-Rahina-MMA-112954",
+          "date": "2026-05-23",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Jani Peltonen",
+          "round": 3,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Nicolae Valentin-Dragos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolae-ValentinDragos-276033",
+          "event_name": "TFN 9 - Total Fight Night 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/TFN-9-Total-Fight-Night-9-109984",
+          "date": "2025-11-15",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "0:19"
+        },
+        {
+          "opponent_name": "Hama Dara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hama-Dara-348341",
+          "event_name": "03 Fight Team - Lahti Fight Night",
+          "event_sherdog_url": "https://www.sherdog.com/events/03-Fight-Team-Lahti-Fight-Night-109852",
+          "date": "2025-10-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Nelu Istratuc",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nelu-Istratuc-436848",
+          "event_name": "LFE 4 - Lahti Fight Event Vol. 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFE-4-Lahti-Fight-Event-Vol-4-108992",
+          "date": "2025-06-14",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "2:24"
+        },
+        {
+          "opponent_name": "Dans Bukovskis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dans-Bukovskis-452215",
+          "event_name": "Hamara MMA - Vol. 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/Hamara-MMA-Vol-7-106023",
+          "date": "2025-05-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Vjacheslav Kirpenko",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vjacheslav-Kirpenko-443288",
+          "event_name": "TFN 8 - Total Fight Night 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/TFN-8-Total-Fight-Night-8-105821",
+          "date": "2024-11-23",
+          "result": "loss",
+          "method": "Submission (Anaconda Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:36"
+        },
+        {
+          "opponent_name": "Martin Corney",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Martin-Corney-378673",
+          "event_name": "BoB 10 - Flores vs. Walls",
+          "event_sherdog_url": "https://www.sherdog.com/events/BoB-10-Flores-vs-Walls-102095",
+          "date": "2024-06-08",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:50"
+        }
+      ]
+    },
+    {
+      "name": "Khurshed Gafurov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1744605149Khurshed_Gafurov.jpg",
+      "weight_class": "Lightweight",
+      "record": "5-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Khurshed-Gafurov-467505",
+      "fight_history": [
+        {
+          "opponent_name": "Yawei Ren",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yawei-Ren-408617",
+          "event_name": "WLF - W.A.R.S. 94",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLF-WARS-94-112834",
+          "date": "2026-05-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Junti Jing",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Harlysson Nunes Souza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Harlysson-Nunes-Souza-298509",
+          "event_name": "Striker MMA - Striker 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/Striker-MMA-Striker-10-111092",
+          "date": "2026-01-28",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Colton Kielbasa",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Franck Dijoux",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Franck-Dijoux-448996",
+          "event_name": "Striker MMA - Striker 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/Striker-MMA-Striker-10-111092",
+          "date": "2026-01-28",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Mick Mokoyoko",
+          "round": 3,
+          "time": "3:25"
+        },
+        {
+          "opponent_name": "Cain Morrow",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cain-Morrow-418086",
+          "event_name": "Bangla Super Fights - Gafurov vs. Morrow",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bangla-Super-Fights-Gafurov-vs-Morrow-109856",
+          "date": "2025-02-22",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Nurbek Murzaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nurbek-Murzaev-384531",
+          "event_name": "Bangla - Super Fights",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bangla-Super-Fights-107551",
+          "date": "2025-02-08",
+          "result": "win",
+          "method": "KO (Head Kick)",
+          "referee": "",
+          "round": 2,
+          "time": "2:07"
+        },
+        {
+          "opponent_name": "Ivan Burko",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Burko-467506",
+          "event_name": "OFC 49 - Open Fighting Championship 49",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFC-49-Open-Fighting-Championship-49-105826",
+          "date": "2024-12-07",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "3:10"
+        }
+      ]
     }
   ],
   "fights": [
@@ -3499,6 +3923,32 @@
       "time": "2:29",
       "weight_class": "Welterweight",
       "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 172",
+      "fighter1_name": "Sarmad Jahanara",
+      "fighter2_name": "Basir Saraliev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 172",
+      "fighter1_name": "Leevi Heino",
+      "fighter2_name": "Khurshed Gafurov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
       "is_title_fight": false
     },
     {

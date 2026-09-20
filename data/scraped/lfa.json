@@ -408200,6 +408200,259 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Caleb Woodside",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Caleb-Woodside-411720",
+      "fight_history": [
+        {
+          "opponent_name": "Michael Banks",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michael-Banks-314769",
+          "event_name": "COH 97 - Cage of Honor 97: Stearns vs. Davis 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/COH-97-Cage-of-Honor-97-Stearns-vs-Davis-2-113679",
+          "date": "2026-07-27",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Josh Stewart",
+          "round": 1,
+          "time": "1:18"
+        },
+        {
+          "opponent_name": "Thomas Thatcher",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Thomas-Thatcher-224735",
+          "event_name": "COH 96 - Cage of Honor 96",
+          "event_sherdog_url": "https://www.sherdog.com/events/COH-96-Cage-of-Honor-96-112211",
+          "date": "2026-04-11",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Dwayne Bess",
+          "round": 1,
+          "time": "1:49"
+        },
+        {
+          "opponent_name": "Tyri Washington",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tyri-Washington-407183",
+          "event_name": "COH 95 - Cage of Honor 95",
+          "event_sherdog_url": "https://www.sherdog.com/events/COH-95-Cage-of-Honor-95-109498",
+          "date": "2025-11-08",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Tim Francis",
+          "round": 1,
+          "time": "1:01"
+        },
+        {
+          "opponent_name": "Tremiere Hollie",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tremiere-Hollie-248429",
+          "event_name": "COH 94 - Cage of Honor 94",
+          "event_sherdog_url": "https://www.sherdog.com/events/COH-94-Cage-of-Honor-94-108846",
+          "date": "2025-07-26",
+          "result": "win",
+          "method": "TKO (Knee to the Body and Punches)",
+          "referee": "Josh Stewart",
+          "round": 1,
+          "time": "0:29"
+        }
+      ]
+    },
+    {
+      "name": "Haseeb Khetab",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1786914235Haseem_Khetab.jpg",
+      "weight_class": "Bantamweight",
+      "record": "3-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Haseeb-Khetab-409610",
+      "fight_history": [
+        {
+          "opponent_name": "David Kim",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Kim-393783",
+          "event_name": "Fierce FC 51 - Fierce Fighting Championship 51",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fierce-FC-51-Fierce-Fighting-Championship-51-113893",
+          "date": "2026-08-15",
+          "result": "win",
+          "method": "Technical Submission (Ninja Choke)",
+          "referee": "Dave Seljestad",
+          "round": 2,
+          "time": "4:49"
+        },
+        {
+          "opponent_name": "Hector Iglesias",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hector-Iglesias-401871",
+          "event_name": "DSMMA - Dead Serious 59",
+          "event_sherdog_url": "https://www.sherdog.com/events/DSMMA-Dead-Serious-59-107128",
+          "date": "2025-03-28",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Vitor Ribeiro",
+          "round": 2,
+          "time": "1:29"
+        },
+        {
+          "opponent_name": "Anthony Lichtenberger",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anthony-Lichtenberger-325331",
+          "event_name": "Bizzarro Promotions - Bayfront Brawl 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bizzarro-Promotions-Bayfront-Brawl-16-104385",
+          "date": "2024-11-27",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:34"
+        },
+        {
+          "opponent_name": "Justice Harris",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Justice-Harris-282885",
+          "event_name": "ROC 82 - Ring of Combat 82",
+          "event_sherdog_url": "https://www.sherdog.com/events/ROC-82-Ring-of-Combat-82-96952",
+          "date": "2023-12-01",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Vincent Dudley",
+          "round": 1,
+          "time": "0:51"
+        },
+        {
+          "opponent_name": "Asher Frederick",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Asher-Frederick-365617",
+          "event_name": "OCL - Ohio Combat League 25",
+          "event_sherdog_url": "https://www.sherdog.com/events/OCL-Ohio-Combat-League-25-97839",
+          "date": "2023-06-17",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Brent Balik",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ben Coyle",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ben-Coyle-285455",
+          "event_name": "CW - Cage Wars 56",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-Cage-Wars-56-96253",
+          "date": "2023-03-04",
+          "result": "loss",
+          "method": "KO (Elbows)",
+          "referee": "Dan Miragliotta",
+          "round": 1,
+          "time": "1:57"
+        }
+      ]
+    },
+    {
+      "name": "Matias Valdes",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1698369559Snapinsta.app_240573642_583102093053561_4699995926577401196_n_1080.jpg",
+      "weight_class": "Flyweight",
+      "record": "6-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Matias-Valdes-326165",
+      "fight_history": [
+        {
+          "opponent_name": "Dionel Sosa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dionel-Sosa-337559",
+          "event_name": "SFH 25 - El Duende vs. Miletich",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFH-25-El-Duende-vs-Miletich-109762",
+          "date": "2025-11-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dario Gutierrez",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "John Alvarez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/John-Alvarez-326161",
+          "event_name": "OFL 13 - Open Fight LATAM 13",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFL-13-Open-Fight-LATAM-13-107790",
+          "date": "2025-06-15",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Edward Olea",
+          "round": 2,
+          "time": "2:53"
+        },
+        {
+          "opponent_name": "Ramiro Biallas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ramiro-Biallas-429683",
+          "event_name": "SFH  19 / RyskCombat MMA 13 - Reynoso vs. La 22",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFH-19-RyskCombat-MMA-13-Reynoso-vs-La-22-104444",
+          "date": "2024-12-22",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Romina Montoya",
+          "round": 1,
+          "time": "2:33"
+        },
+        {
+          "opponent_name": "Michel Rosa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michel-Rosa-341891",
+          "event_name": "SFH 18 / RyskCombat MMA 12 - El Fino vs. El Charrua",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFH-18-RyskCombat-MMA-12-El-Fino-vs-El-Charrua-103819",
+          "date": "2024-10-27",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Leandro Cassano",
+          "round": 2,
+          "time": "2:27"
+        },
+        {
+          "opponent_name": "Lucas Lopez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lucas-Lopez-440204",
+          "event_name": "SFH 14 - Tito vs. El Toro",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFH-14-Tito-vs-El-Toro-99031",
+          "date": "2023-12-22",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Juan Carmona",
+          "round": 2,
+          "time": "1:17"
+        },
+        {
+          "opponent_name": "Edgar Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edgar-Silva-363371",
+          "event_name": "Productora LFN - Live Fight Night 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Productora-LFN-Live-Fight-Night-3-90163",
+          "date": "2021-08-28",
+          "result": "win",
+          "method": "TKO (Strikes)",
+          "referee": "Edward Olea",
+          "round": 3,
+          "time": "0:15"
+        }
+      ]
+    },
+    {
+      "name": "Isaiah Parks",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Isaiah-Parks-507334",
+      "fight_history": []
+    },
+    {
+      "name": "Christian Getsey",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Christian-Getsey-346759",
+      "fight_history": [
+        {
+          "opponent_name": "Seth Pelfrey",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seth-Pelfrey-431878",
+          "event_name": "CFS 7 - Carnage Fight Series 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFS-7-Carnage-Fight-Series-7-111637",
+          "date": "2026-04-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Jerry Poe",
+          "round": 1,
+          "time": "0:53"
+        }
+      ]
     }
   ],
   "fights": [
@@ -437320,6 +437573,19 @@
     },
     {
       "event_name": "LFA 243 - Maximov vs. Santos",
+      "fighter1_name": "Kevin Fernandez",
+      "fighter2_name": "Enrique Pacheco",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 243 - Maximov vs. Santos",
       "fighter1_name": "Mason Carzino-Hartshorn",
       "fighter2_name": "Kelvin Martinez",
       "fight_finished": false,
@@ -437354,6 +437620,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 243 - Maximov vs. Santos",
+      "fighter1_name": "Edmund Kwan",
+      "fighter2_name": "Caleb Woodside",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -437424,19 +437703,6 @@
     },
     {
       "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Paul Capaldo",
-      "fighter2_name": "Sebastian Ruiz",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
       "fighter1_name": "Devan Worth",
       "fighter2_name": "Thomas Blackorby",
       "fight_finished": false,
@@ -437471,6 +437737,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Paul Capaldo",
+      "fighter2_name": "Sebastian Ruiz",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -437551,6 +437830,84 @@
       "weight_class": "Lightweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "David Wright",
+      "fighter2_name": "Lance Wright",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Matthew Adams",
+      "fighter2_name": "Shealor Ladd",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Haseeb Khetab",
+      "fighter2_name": "Matias Valdes",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Naomie Young",
+      "fighter2_name": "Aline David",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Travon Eller",
+      "fighter2_name": "Akeem Lewis",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Isaiah Parks",
+      "fighter2_name": "Christian Getsey",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }
