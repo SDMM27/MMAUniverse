@@ -1,0 +1,102 @@
+{
+  "tunedAt": "2026-09-17T13:17:02.278Z",
+  "testFromDate": "2023-03-11",
+  "fightCount": 7338,
+  "shipped": {
+    "params": {
+      "erosionGraceMonths": 4,
+      "erosionRatePerMonth": 0.96,
+      "erosionFloorShare": 0.65,
+      "streakCap": 20,
+      "streakStep": 0,
+      "titleWinMultiplier": 1.6,
+      "titleLossDivisor": 8,
+      "fiveRoundMultiplier": 1,
+      "formerChampionMultiplier": 1,
+      "opponentShare": 0.24,
+      "activityCreditShare": 0.066,
+      "floorRuleBonus": 0.00063,
+      "lossBaseShare": 0.1,
+      "gainDominanceBase": 0.19,
+      "gainDominanceSlope": 1.1,
+      "lossDominanceBase": 0,
+      "lossDominanceSlope": 2.6
+    },
+    "train": {
+      "logLoss": 0.6811828363084445,
+      "accuracy": 0.5671209540034071,
+      "count": 5870
+    },
+    "test": {
+      "logLoss": 0.6767415982765598,
+      "accuracy": 0.5701634877384196,
+      "count": 1468
+    },
+    "winProbabilityScale": 0.5523477725542794
+  },
+  "candidate": {
+    "params": {
+      "erosionGraceMonths": 4,
+      "erosionRatePerMonth": 0.97,
+      "erosionFloorShare": 0.76,
+      "streakCap": 20,
+      "streakStep": 0,
+      "titleWinMultiplier": 1.6,
+      "titleLossDivisor": 8,
+      "fiveRoundMultiplier": 1,
+      "formerChampionMultiplier": 1,
+      "opponentShare": 0.13,
+      "activityCreditShare": 0.11,
+      "floorRuleBonus": 0.00001,
+      "lossBaseShare": 0.094,
+      "gainDominanceBase": 0,
+      "gainDominanceSlope": 1.1,
+      "lossDominanceBase": 0,
+      "lossDominanceSlope": 2.2
+    },
+    "train": {
+      "logLoss": 0.6811753842189098,
+      "accuracy": 0.5604770017035775,
+      "count": 5870
+    },
+    "test": {
+      "logLoss": 0.676397193237358,
+      "accuracy": 0.5728882833787466,
+      "count": 1468
+    },
+    "winProbabilityScale": 0.8006539420684696
+  },
+  "handPicked": {
+    "params": {
+      "erosionGraceMonths": 12,
+      "erosionRatePerMonth": 0.98,
+      "erosionFloorShare": 0.4,
+      "streakCap": 20,
+      "streakStep": 0.005,
+      "titleWinMultiplier": 1.5,
+      "titleLossDivisor": 1.3,
+      "fiveRoundMultiplier": 1.1,
+      "formerChampionMultiplier": 1.5,
+      "opponentShare": 0.15,
+      "activityCreditShare": 0.1,
+      "floorRuleBonus": 0.01,
+      "lossBaseShare": 0.1,
+      "gainDominanceBase": 0.8,
+      "gainDominanceSlope": 0.9,
+      "lossDominanceBase": 0.6,
+      "lossDominanceSlope": 0.8
+    },
+    "train": {
+      "logLoss": 0.6880405667523881,
+      "accuracy": 0.5502555366269165,
+      "count": 5870
+    },
+    "test": {
+      "logLoss": 0.6930779884611095,
+      "accuracy": 0.5384877384196185,
+      "count": 1468
+    },
+    "winProbabilityScale": 0.1442145244952361
+  },
+  "coinFlipLogLoss": 0.6931471805599453
+}

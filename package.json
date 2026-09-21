@@ -31,7 +31,8 @@
     "scrape:ufcstats": "tsx data/scrapers/scrape-ufcstats.ts",
     "sync:fighter-stats": "tsx data/scrapers/sync-fighter-stats.ts",
     "calibrate:ratings": "tsx data/scripts/calibrate-ratings.ts",
-    "compute:ratings": "tsx data/scripts/compute-fighter-ratings.ts"
+    "compute:ratings": "tsx data/scripts/compute-fighter-ratings.ts",
+    "tune:ratings": "tsx data/scripts/tune-point-flow.ts"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.39.6",
