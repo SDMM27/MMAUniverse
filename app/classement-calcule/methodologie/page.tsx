@@ -54,9 +54,24 @@ export default function Page() {
           qu&apos;une victoire contre un adversaire reconnu compte vraiment, pas seulement sur le papier.
         </p>
         <p>
-          Le score tient aussi compte de l&apos;activité (rester actif rapporte), des séries de victoires/défaites, du
-          format du combat (titre, 5 rounds), et de l&apos;inactivité prolongée : un combattant qui ne s&apos;est pas
-          battu depuis longtemps voit son score redescendre doucement, même s&apos;il n&apos;a jamais perdu.
+          Le score tient aussi compte de l&apos;activité (rester actif rapporte), des combats pour le titre (une
+          victoire rapporte plus, une défaite coûte beaucoup moins) et de l&apos;inactivité : au-delà de 4 mois sans
+          combattre, le score redescend doucement, même si le combattant n&apos;a jamais perdu. Un no contest compte
+          comme une activité.
+        </p>
+        <p>
+          Le classement ne montre que les combattants actifs : sans combat dans la catégorie depuis plus de 18 mois,
+          un combattant en sort (son score reste visible sur sa fiche, marqué « Inactif »). Le champion en titre
+          garde toujours sa place, même s&apos;il est absent depuis longtemps.
+        </p>
+        <p>
+          Les réglages de cette formule (part des points prise à l&apos;adversaire, vitesse d&apos;érosion, poids des
+          combats pour le titre…) n&apos;ont pas été choisis à l&apos;œil : ce sont ceux qui, sur l&apos;historique UFC,
+          prédisent le mieux le vainqueur des combats suivants. Ils ont été réglés sur les combats antérieurs à mars
+          2023, puis vérifiés sur les 1 468 combats suivants, jamais vus pendant le réglage : le combattant au score
+          le plus élevé a gagné dans 57 % des cas, contre 54 % avec les réglages d&apos;origine. Cette mesure a aussi
+          permis d&apos;écarter des bonus qui semblaient logiques mais n&apos;apportaient rien (séries de victoires,
+          combats en 5 rounds, statut d&apos;ancien champion).
         </p>
       </Section>
 

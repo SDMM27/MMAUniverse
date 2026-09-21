@@ -21,7 +21,8 @@ import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import { computeDominanceScore, type FightStatsSide, type RoundStatsSide } from '../lib/rating/dominance-score';
 import { normalizeWeightClass } from '../lib/rating/normalize-weight-class';
-import { simulateDivisionRatings, type DivisionFightInput } from '../lib/rating/simulate-division';
+import { simulateDivisionRatings, pointsAsOf, type DivisionFightInput, type DivisionNoResultInput } from '../lib/rating/simulate-division';
+import { isRankingEligible } from '../lib/rating/ranking-eligibility';
 import { normalizeFeatures, kMeans, labelCluster, type StyleFeatures } from '../lib/rating/style-clustering';
 
 function loadEnvLocal() {
@@ -80,6 +81,8 @@ async function ensureSchema() {
       computed_at TIMESTAMP NOT NULL DEFAULT now()
     );
   `;
+  // Added 2026-09-17 -- see data/lib/rating/ranking-eligibility.ts.
+  await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS is_ranking_eligible BOOLEAN NOT NULL DEFAULT true`;
 }
 
 type StatsRow = {
@@ -145,6 +148,7 @@ function minutesFought(round: number | null, time: string | null): number {
 }
 
 async function main() {
+  const todayIso = new Date().toISOString().slice(0, 10);
   console.log('Ensuring schema...');
   await ensureSchema();
 
@@ -195,8 +199,19 @@ async function main() {
 
   type Pair = { winner: StatsRow; loser: StatsRow };
   const pairs: Pair[] = [];
+  // No contests / draws: no points move, but they count as activity for the
+  // inactivity erosion (see DivisionNoResultInput).
+  const noResultsByDivision = new Map<string, DivisionNoResultInput[]>();
   Array.from(byFightUrl.values()).forEach((rows) => {
     if (rows.length !== 2) return;
+    if (rows.every((r) => r.result === 'nc' || r.result === 'draw') && rows[0].event_date) {
+      const division = normalizeWeightClass(rows[0].weight_class ?? '');
+      if (!division) return;
+      const list = noResultsByDivision.get(division) ?? [];
+      list.push({ eventDate: rows[0].event_date, fighterIds: [rows[0].fighter_id, rows[1].fighter_id], isDraw: rows[0].result === 'draw' });
+      noResultsByDivision.set(division, list);
+      return;
+    }
     const winner = rows.find((r) => r.result === 'win');
     const loser = rows.find((r) => r.result === 'loss');
     if (!winner || !loser) return;
@@ -237,8 +252,23 @@ async function main() {
       loserSide: toFightStatsSide(p.loser, roundsByStatsId.get(p.loser.id) ?? []),
     }));
 
-    const { fighterStates, history } = simulateDivisionRatings(fights);
-    const ceiling = Math.max(...Array.from(fighterStates.values()).map((s) => s.points), 1e-9);
+    const noResults = (noResultsByDivision.get(division) ?? []).sort((a, b) => (a.eventDate < b.eventDate ? -1 : 1));
+    const { fighterStates, history } = simulateDivisionRatings(fights, undefined, noResults);
+    // Ranked/displayed points are eroded up to TODAY, not frozen at each
+    // fighter's last fight -- otherwise a retired fighter keeps their peak
+    // forever (the simulation only erodes someone when they fight again).
+    // fighter_rating_history keeps the raw per-fight values.
+    const currentPoints = new Map(Array.from(fighterStates.entries()).map(([id, s]) => [id, pointsAsOf(s, todayIso)]));
+    // 100 = the best fighter who actually appears in the ranking (active, or
+    // the champion). A retired fighter still above that caps at 100 on their
+    // own page, flagged as inactive there.
+    const eligibleIds = new Set(
+      Array.from(fighterStates.entries())
+        .filter(([id, s]) => isRankingEligible({ lastFightDate: s.lastFightDate, isChampion: championIdByDivision.get(division) === id }, todayIso))
+        .map(([id]) => id),
+    );
+    const ceilingPool = eligibleIds.size > 0 ? Array.from(eligibleIds, (id) => currentPoints.get(id)!) : Array.from(currentPoints.values());
+    const ceiling = Math.max(...ceilingPool, 1e-9);
 
     // Style features: aggregated across every fight (win or loss) this
     // fighter had in this division -- style is about how they fight, not
@@ -301,15 +331,16 @@ async function main() {
     // Upsert fighter_ratings.
     for (const fighterId of fighterIds) {
       const state = fighterStates.get(fighterId)!;
-      const displayScore = Math.min(100, Math.max(0, (state.points / ceiling) * 100));
+      const points = currentPoints.get(fighterId)!;
+      const displayScore = Math.min(100, Math.max(0, (points / ceiling) * 100));
       const isChampion = championIdByDivision.get(division) === fighterId;
       await sql`
         INSERT INTO fighter_ratings
           (fighter_id, weight_class, points, display_score, current_streak, is_former_champion,
-           style_archetype, fights_rated, last_fight_date, is_champion, updated_at)
+           style_archetype, fights_rated, last_fight_date, is_champion, is_ranking_eligible, updated_at)
         VALUES
-          (${fighterId}, ${division}, ${state.points}, ${displayScore}, ${state.currentStreak}, ${state.isFormerChampion},
-           ${archetypeByFighter.get(fighterId) ?? null}, ${state.fightsSimulated}, ${state.lastFightDate}, ${isChampion}, now())
+          (${fighterId}, ${division}, ${points}, ${displayScore}, ${state.currentStreak}, ${state.isFormerChampion},
+           ${archetypeByFighter.get(fighterId) ?? null}, ${state.fightsSimulated}, ${state.lastFightDate}, ${isChampion}, ${eligibleIds.has(fighterId)}, now())
         ON CONFLICT (fighter_id, weight_class) DO UPDATE SET
           points = EXCLUDED.points,
           display_score = EXCLUDED.display_score,
@@ -319,6 +350,7 @@ async function main() {
           fights_rated = EXCLUDED.fights_rated,
           last_fight_date = EXCLUDED.last_fight_date,
           is_champion = EXCLUDED.is_champion,
+          is_ranking_eligible = EXCLUDED.is_ranking_eligible,
           updated_at = now()
       `;
       totalFightersRated++;

@@ -17,6 +17,7 @@ function fighter(overrides: Partial<FighterRatingWithFighter>): FighterRatingWit
     fights_rated: 5,
     last_fight_date: '2026-01-01',
     is_champion: false,
+    is_ranking_eligible: true,
     updated_at: '2026-01-01T00:00:00.000Z',
     fighter_name: 'Fighter',
     fighter_image_url: null,

@@ -19,7 +19,7 @@ export default function FighterScoreCard({ ratings, qualityWins }: { ratings: Ra
         {ratings.map((rating) => (
           <div key={rating.id} className="flex flex-wrap items-center gap-2">
             <span className="rounded bg-accent/15 px-2 py-0.5 font-display text-xs uppercase tracking-wide text-accent">
-              {rating.is_champion ? 'Champion' : `#${rating.division_rank}`} {rating.weight_class}
+              {rating.is_champion ? 'Champion' : rating.is_ranking_eligible ? `#${rating.division_rank}` : 'Inactif'} {rating.weight_class}
             </span>
             <span className="font-display text-lg text-ink-primary">{Number(rating.display_score).toFixed(1)}</span>
             {rating.style_archetype && (

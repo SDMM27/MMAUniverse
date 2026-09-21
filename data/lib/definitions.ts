@@ -98,6 +98,10 @@ export type FighterRating = {
   fights_rated: number;
   last_fight_date: string | null;
   is_champion: boolean;
+  // false = inactive in this division for more than 18 months and not the
+  // champion: kept out of the ranking lists, score still shown on the
+  // fighter page (data/lib/rating/ranking-eligibility.ts).
+  is_ranking_eligible: boolean;
   updated_at: string;
 };
 

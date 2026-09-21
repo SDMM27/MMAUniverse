@@ -626,6 +626,7 @@ export async function fetchAllFighterRatings(perDivision: number = 15) {
       FROM (
         SELECT *, ROW_NUMBER() OVER (PARTITION BY weight_class ORDER BY display_score DESC) AS rn
         FROM fighter_ratings
+        WHERE is_ranking_eligible = true
       ) fr
       JOIN fighters f ON f.id = fr.fighter_id
       WHERE fr.rn <= ${perDivision} OR fr.is_champion = true
@@ -644,11 +645,14 @@ export async function fetchAllFighterRatings(perDivision: number = 15) {
 // division (1 = highest raw display_score) -- independent of the champion-
 // pinning display convention the ranking page applies (orderDivisionWithChampionPinned),
 // which is a list-page presentation choice, not a fact about this fighter.
+// Counted among ranking-eligible fighters only (inactive fighters don't
+// occupy ranks); meaningless for an ineligible row, which the UI labels as
+// inactive instead.
 export async function fetchFighterRatingsByFighterId(fighterId: string) {
   try {
     const data = await sql<FighterRatingWithFighter & { division_rank: string }>`
       SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url,
-        (SELECT COUNT(*) + 1 FROM fighter_ratings fr2 WHERE fr2.weight_class = fr.weight_class AND fr2.display_score > fr.display_score) AS division_rank
+        (SELECT COUNT(*) + 1 FROM fighter_ratings fr2 WHERE fr2.weight_class = fr.weight_class AND fr2.is_ranking_eligible = true AND fr2.display_score > fr.display_score) AS division_rank
       FROM fighter_ratings fr
       JOIN fighters f ON f.id = fr.fighter_id
       WHERE fr.fighter_id = ${fighterId}
@@ -679,7 +683,7 @@ export async function fetchTopPoundForPound(limit: number) {
           SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
           FROM fighter_ratings fr
           JOIN fighters f ON f.id = fr.fighter_id
-          WHERE fr.weight_class NOT LIKE 'Women''s%'
+          WHERE fr.weight_class NOT LIKE 'Women''s%' AND fr.is_ranking_eligible = true
           ORDER BY fr.fighter_id, fr.display_score DESC
         ) best
         ORDER BY best.display_score DESC
@@ -690,7 +694,7 @@ export async function fetchTopPoundForPound(limit: number) {
           SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
           FROM fighter_ratings fr
           JOIN fighters f ON f.id = fr.fighter_id
-          WHERE fr.weight_class LIKE 'Women''s%'
+          WHERE fr.weight_class LIKE 'Women''s%' AND fr.is_ranking_eligible = true
           ORDER BY fr.fighter_id, fr.display_score DESC
         ) best
         ORDER BY best.display_score DESC
