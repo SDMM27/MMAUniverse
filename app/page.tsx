@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights, fetchNewsArticles } from '@/data/lib/data';
+import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights, fetchNewsArticles, fetchTopPoundForPound } from '@/data/lib/data';
 import { computeNextEventForHome, groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightResultRow from '@/components/ui/fights/fight-result-row';
@@ -13,6 +13,12 @@ export const dynamic = 'force-dynamic';
 
 const RECENT_RESULTS_COUNT = 4;
 const HOME_NEWS_COUNT = 4;
+// Fetched a bit deeper than the 3 actually shown so the true top 3 overall
+// (men's + women's combined, re-sorted below) isn't accidentally missing a
+// fighter who'd rank in the true top 3 but wasn't in the top 3 of their own
+// gender's list alone (unlikely at this scale, but cheap to guard against).
+const HOME_P4P_FETCH_COUNT = 5;
+const HOME_P4P_SHOWN_COUNT = 3;
 
 export default async function Page() {
   const events = await fetchAllEvents();
@@ -23,11 +29,19 @@ export default async function Page() {
   // event — when there's no future event in DB, computeNextEventForHome
   // falls back to the last past event, which has no upcoming fight left to
   // show there.
-  const [nextEventFights, recentResults, news] = await Promise.all([
+  const [nextEventFights, recentResults, news, topP4P] = await Promise.all([
     next ? fetchFightsByEvent(String(next.event.id)) : Promise.resolve([]),
     fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
     fetchNewsArticles({ pageSize: HOME_NEWS_COUNT }),
+    fetchTopPoundForPound(HOME_P4P_FETCH_COUNT),
   ]);
+  // True top 3 overall (men's + women's combined) by display_score, not
+  // "top 3 men's then top 3 women's" -- P4P is meant to cross divisions,
+  // crossing gender lists too for this compact homepage teaser (the full
+  // /classement-calcule page keeps them separate, matching fight-minds).
+  const homeP4P = [...topP4P.men, ...topP4P.women]
+    .sort((a, b) => Number(b.display_score) - Number(a.display_score))
+    .slice(0, HOME_P4P_SHOWN_COUNT);
 
   const heroEvent = next && next.isUpcoming ? next.event : null;
 
@@ -58,6 +72,40 @@ export default async function Page() {
             </Link>
           </div>
           <FightCard fight={heroFight} event={heroEvent} eventName={heroEvent.name} />
+        </section>
+      )}
+
+      {homeP4P.length > 0 && (
+        <section>
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Classement</h2>
+            <Link href="/classement-calcule" className="text-xs uppercase tracking-wide text-accent hover:underline">
+              Voir le classement complet
+            </Link>
+          </div>
+          <p className="mb-4 max-w-2xl text-sm text-ink-secondary">
+            Un score calculé à partir des vraies statistiques de chaque combat — pas juste l&apos;avis d&apos;une
+            organisation.{' '}
+            <Link href="/classement-calcule/methodologie" className="text-accent hover:underline">
+              Comment ça marche
+            </Link>
+            .
+          </p>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {homeP4P.map((fighter) => (
+              <Link
+                key={fighter.id}
+                href={`/fighters/${fighter.fighter_id}`}
+                className="flex items-center justify-between rounded-lg border border-base-border bg-base-card px-4 py-3 hover:border-accent"
+              >
+                <div>
+                  <p className="text-sm text-ink-primary">{fighter.fighter_name}</p>
+                  <p className="text-xs text-ink-secondary">{fighter.weight_class}</p>
+                </div>
+                <span className="font-display text-sm text-accent">{Number(fighter.display_score).toFixed(1)}</span>
+              </Link>
+            ))}
+          </div>
         </section>
       )}
 

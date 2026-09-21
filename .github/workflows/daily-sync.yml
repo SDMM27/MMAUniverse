@@ -27,15 +27,29 @@ jobs:
 
       - run: npm ci
 
+      # UFCStats.com sits behind a JS anti-bot challenge that a plain HTTP
+      # client never gets past -- see data/scrapers/shared/fetch-playwright.ts's
+      # doc comment. Only the UFCStats scrape below needs this; every other
+      # scraper in this workflow is axios+cheerio and doesn't.
+      - name: Install Playwright Chromium (for the UFCStats scraper)
+        run: npx playwright install --with-deps chromium
+
       - name: Rescrape upcoming events (all orgs)
         run: npx tsx data/scrapers/rescrape-upcoming.ts
+
+      # Incremental by design (data/scrapers/shared/ufcstats-checkpoint.ts) --
+      # only fetches events not already in data/scraped/.cache/ufcstats-progress.json,
+      # so a normal day (0-2 new UFC events) is a handful of requests, not the
+      # multi-hour full-history crawl a from-scratch run would be.
+      - name: Scrape UFC fight-level stats from UFCStats.com
+        run: npx tsx data/scrapers/scrape-ufcstats.ts
 
       - name: Commit refreshed scraped data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/scraped/*.json
-          git diff --cached --quiet || git commit -m "chore(scrape): daily upcoming-events refresh"
+          git diff --cached --quiet || git commit -m "chore(scrape): daily data refresh"
           git push
 
       - name: Sync to Neon
@@ -55,5 +69,20 @@ jobs:
 
       - name: Sync fighter Sherdog history to Neon
         run: npx tsx data/scrapers/sync-fighter-history.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      - name: Sync UFC fight-level stats to Neon
+        run: npx tsx data/scrapers/sync-fighter-stats.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+      # Recomputes FightScore (docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md)
+      # from whatever's now in Neon -- picks up any new fights from the sync
+      # above, the current champions from the UFC-rankings sync above that,
+      # and lets inactivity erosion catch up even on a day with no new fights
+      # at all. Must run last: every other step in this job feeds it.
+      - name: Compute FightScore ratings
+        run: npx tsx data/scripts/compute-fighter-ratings.ts
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}

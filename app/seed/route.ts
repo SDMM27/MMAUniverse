@@ -245,7 +245,15 @@ async function seedRankings() {
       -- ranking row itself, just fall back to displaying fighter_name.
       fighter_id INT REFERENCES fighters(id) ON DELETE SET NULL,
       updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-      UNIQUE (organization_id, weight_class, rank)
+      -- fighter_name is part of the key, not just (organization_id,
+      -- weight_class, rank): ufc.com's own rankings genuinely tie two
+      -- fighters at the same rank sometimes (confirmed live 2026-09-15,
+      -- e.g. Men's P4P had Joshua Van and Ciryl Gane both at rank 10, with
+      -- 11 skipped) -- a rank-only unique constraint rejects that as a
+      -- duplicate-key error and crashes the sync. See sync-ufc-rankings.ts's
+      -- own migration for how an already-existing table with the old
+      -- (broken) constraint gets fixed.
+      UNIQUE (organization_id, weight_class, rank, fighter_name)
     );
   `;
 }

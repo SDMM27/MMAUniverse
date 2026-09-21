@@ -80,6 +80,36 @@ async function ensureSchema() {
       UNIQUE (fighter_id, ufcstats_fight_url)
     );
   `;
+  // Added for the FightScore rating engine (see docs/superpowers/specs/
+  // 2026-09-14-fighter-rating-algorithm-design.md): weight_class groups
+  // fighters into divisions per-fight (fighters.weight_class is freeform
+  // Sherdog text, not reliable for that -- see the spec's "normalisation des
+  // divisions" section); method/finish_round/finish_time/scheduled_rounds
+  // feed computeDominanceScore and the point-flow engine's 5-round bonus.
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS weight_class VARCHAR(100);`;
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS is_title_fight BOOLEAN;`;
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS method VARCHAR(50);`;
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS finish_round INT;`;
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS finish_time VARCHAR(10);`;
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS scheduled_rounds INT;`;
+  await sql`
+    CREATE TABLE IF NOT EXISTS fighter_fight_round_stats (
+      id SERIAL PRIMARY KEY,
+      fighter_fight_stats_id INT NOT NULL REFERENCES fighter_fight_stats(id) ON DELETE CASCADE,
+      round INT NOT NULL,
+      knockdowns INT NOT NULL DEFAULT 0,
+      sig_strikes_landed INT NOT NULL DEFAULT 0,
+      sig_strikes_attempted INT NOT NULL DEFAULT 0,
+      total_strikes_landed INT NOT NULL DEFAULT 0,
+      total_strikes_attempted INT NOT NULL DEFAULT 0,
+      takedowns_landed INT NOT NULL DEFAULT 0,
+      takedowns_attempted INT NOT NULL DEFAULT 0,
+      submission_attempts INT NOT NULL DEFAULT 0,
+      reversals INT NOT NULL DEFAULT 0,
+      control_time_seconds INT,
+      UNIQUE (fighter_fight_stats_id, round)
+    );
+  `;
 }
 
 function loadRecords(): UfcStatsFightRecord[] {
@@ -106,6 +136,7 @@ async function main() {
   const records = loadRecords();
   let fightersUpdated = 0;
   let statsRows = 0;
+  let roundRows = 0;
   let unmatched = 0;
 
   for (const record of records) {
@@ -120,9 +151,10 @@ async function main() {
 
     const t = record.totals;
     const s = record.strikes;
-    await sql`
+    const [statsRow] = (await sql`
       INSERT INTO fighter_fight_stats
         (fighter_id, opponent_name, event_name, event_date, ufcstats_fight_url, result,
+         weight_class, is_title_fight, method, finish_round, finish_time, scheduled_rounds,
          knockdowns, sig_strikes_landed, sig_strikes_attempted, total_strikes_landed, total_strikes_attempted,
          takedowns_landed, takedowns_attempted, submission_attempts, reversals, control_time_seconds,
          sig_strikes_head_landed, sig_strikes_head_attempted, sig_strikes_body_landed, sig_strikes_body_attempted,
@@ -130,6 +162,7 @@ async function main() {
          sig_strikes_clinch_landed, sig_strikes_clinch_attempted, sig_strikes_ground_landed, sig_strikes_ground_attempted)
       VALUES
         (${fighterId}, ${record.opponent_name}, ${record.event_name}, ${record.event_date || null}, ${record.ufcstats_fight_url}, ${record.result},
+         ${record.weight_class || null}, ${record.is_title_fight ?? null}, ${record.method || null}, ${record.round || null}, ${record.time || null}, ${record.scheduled_rounds || null},
          ${t.knockdowns}, ${t.sigStrikes.landed}, ${t.sigStrikes.attempted}, ${t.totalStrikes.landed}, ${t.totalStrikes.attempted},
          ${t.takedowns.landed}, ${t.takedowns.attempted}, ${t.submissionAttempts}, ${t.reversals}, ${t.controlTimeSeconds},
          ${s.head.landed}, ${s.head.attempted}, ${s.body.landed}, ${s.body.attempted},
@@ -140,6 +173,12 @@ async function main() {
         event_name = EXCLUDED.event_name,
         event_date = EXCLUDED.event_date,
         result = EXCLUDED.result,
+        weight_class = EXCLUDED.weight_class,
+        is_title_fight = EXCLUDED.is_title_fight,
+        method = EXCLUDED.method,
+        finish_round = EXCLUDED.finish_round,
+        finish_time = EXCLUDED.finish_time,
+        scheduled_rounds = EXCLUDED.scheduled_rounds,
         knockdowns = EXCLUDED.knockdowns,
         sig_strikes_landed = EXCLUDED.sig_strikes_landed,
         sig_strikes_attempted = EXCLUDED.sig_strikes_attempted,
@@ -162,11 +201,37 @@ async function main() {
         sig_strikes_clinch_attempted = EXCLUDED.sig_strikes_clinch_attempted,
         sig_strikes_ground_landed = EXCLUDED.sig_strikes_ground_landed,
         sig_strikes_ground_attempted = EXCLUDED.sig_strikes_ground_attempted
-    `;
+      RETURNING id
+    `) as { id: number }[];
     statsRows++;
+
+    for (const r of record.rounds ?? []) {
+      await sql`
+        INSERT INTO fighter_fight_round_stats
+          (fighter_fight_stats_id, round, knockdowns, sig_strikes_landed, sig_strikes_attempted,
+           total_strikes_landed, total_strikes_attempted, takedowns_landed, takedowns_attempted,
+           submission_attempts, reversals, control_time_seconds)
+        VALUES
+          (${statsRow.id}, ${r.round}, ${r.knockdowns}, ${r.sigStrikes.landed}, ${r.sigStrikes.attempted},
+           ${r.totalStrikes.landed}, ${r.totalStrikes.attempted}, ${r.takedowns.landed}, ${r.takedowns.attempted},
+           ${r.submissionAttempts}, ${r.reversals}, ${r.controlTimeSeconds})
+        ON CONFLICT (fighter_fight_stats_id, round) DO UPDATE SET
+          knockdowns = EXCLUDED.knockdowns,
+          sig_strikes_landed = EXCLUDED.sig_strikes_landed,
+          sig_strikes_attempted = EXCLUDED.sig_strikes_attempted,
+          total_strikes_landed = EXCLUDED.total_strikes_landed,
+          total_strikes_attempted = EXCLUDED.total_strikes_attempted,
+          takedowns_landed = EXCLUDED.takedowns_landed,
+          takedowns_attempted = EXCLUDED.takedowns_attempted,
+          submission_attempts = EXCLUDED.submission_attempts,
+          reversals = EXCLUDED.reversals,
+          control_time_seconds = EXCLUDED.control_time_seconds
+      `;
+      roundRows++;
+    }
   }
 
-  console.log(`Done. ${fightersUpdated} fighter row(s) updated with a ufcstats_url, ${statsRows} stats row(s) upserted, ${unmatched} record(s) skipped (fighter not found in UFC org).`);
+  console.log(`Done. ${fightersUpdated} fighter row(s) updated with a ufcstats_url, ${statsRows} stats row(s) upserted, ${roundRows} round-stat row(s) upserted, ${unmatched} record(s) skipped (fighter not found in UFC org).`);
 }
 
 main().catch((error) => {

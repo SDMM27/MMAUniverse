@@ -57,3 +57,35 @@ test('parseUfcRankings discovers the table list dynamically rather than assuming
 test('parseUfcRankings returns an empty array for HTML with no ranking tables', () => {
   assert.deepEqual(parseUfcRankings('<html><body>not found</body></html>'), []);
 });
+
+// Regression test for a real bug (found 2026-09-15): ufc.com genuinely ties
+// two fighters at the same rank sometimes (confirmed live -- Men's P4P had
+// Joshua Van and Ciryl Gane both at rank 10, 11 skipped). The parser itself
+// was never the problem -- it already preserved both rows correctly, no
+// dedup-by-rank logic exists here to begin with -- the crash was a DB
+// UNIQUE(organization_id, weight_class, rank) constraint rejecting the tie
+// as a duplicate key (fixed in sync-ufc-rankings.ts's ensureSchema). This
+// test locks in that the parser keeps both tied rows rather than silently
+// dropping one, so a future refactor doesn't reintroduce the same bug from
+// the other direction.
+test('parseUfcRankings keeps both fighters when ufc.com ties two of them at the same rank', () => {
+  const html = `
+    <table>
+      <caption><h4>Lightweight</h4></caption>
+      <tbody>
+        <tr><td class="views-field-weight-class-rank">9</td><td class="views-field-title"><a>Fighter Nine</a></td></tr>
+        <tr><td class="views-field-weight-class-rank">10</td><td class="views-field-title"><a>Fighter Ten A</a></td></tr>
+        <tr><td class="views-field-weight-class-rank">10</td><td class="views-field-title"><a>Fighter Ten B</a></td></tr>
+        <tr><td class="views-field-weight-class-rank">12</td><td class="views-field-title"><a>Fighter Twelve</a></td></tr>
+      </tbody>
+    </table>
+  `;
+  const rankings = parseUfcRankings(html);
+  const tiedAtTen = rankings.filter((r) => r.rank === 10);
+
+  assert.equal(tiedAtTen.length, 2);
+  assert.deepEqual(
+    tiedAtTen.map((r) => r.fighterName).sort(),
+    ['Fighter Ten A', 'Fighter Ten B'],
+  );
+});

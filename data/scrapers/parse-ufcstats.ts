@@ -43,16 +43,40 @@ export interface UfcStatsStrikeBreakdown {
   ground: UfcStatsLandedAttempted;
 }
 
+// One row per round actually fought (row order in the page = round order;
+// UFCStats doesn't print a separate round-number column on this table, see
+// parseFightDetails). Same shape as UfcStatsFightTotals -- the round-by-round
+// "Totals" table UFCStats renders behind its "Per round" toggle has the exact
+// same column layout as the fight-level totals table, just one row per round
+// instead of one row for the whole fight.
+export interface UfcStatsRoundStats extends UfcStatsFightTotals {
+  round: number;
+}
+
 export interface UfcStatsFighterSide {
   name: string;
   ufcstatsUrl: string;
   result: 'win' | 'loss' | 'draw' | 'nc' | null;
   totals: UfcStatsFightTotals;
   strikes: UfcStatsStrikeBreakdown;
+  rounds: UfcStatsRoundStats[];
+}
+
+// Fight-level facts that apply to both corners, not a specific fighter --
+// weight class, how/when it ended, and the scheduled format. All read off
+// the same `.b-fight-details__text` block UFCStats renders once per fight.
+export interface UfcStatsFightMeta {
+  weightClass: string;
+  isTitleFight: boolean; // from the same fight-title text as weightClass -- see stripWeightClassSuffix
+  method: string;
+  round: number; // the round the fight ended in (decisions: the last round)
+  time: string;
+  scheduledRounds: number; // 3 or 5, from "Time format: N Rnd (...)"
 }
 
 export interface UfcStatsFight {
   fighters: [UfcStatsFighterSide, UfcStatsFighterSide];
+  meta: UfcStatsFightMeta;
 }
 
 const MONTHS = [
@@ -130,12 +154,65 @@ const RESULT_BY_STATUS: Record<string, UfcStatsFighterSide['result']> = {
 };
 
 /**
+ * "Lightweight Bout" -> "Lightweight"; "UFC Welterweight Title Bout" ->
+ * "Welterweight" (both real strings seen on live UFCStats pages -- the "UFC "
+ * prefix and "Title" appear to correlate with championship bouts, ordinary
+ * bouts have neither).
+ */
+function stripWeightClassSuffix(titleText: string): string {
+  return titleText
+    .replace(/^UFC\s+/i, '')
+    .replace(/\s+(?:Title\s+)?Bout$/i, '')
+    .trim();
+}
+
+/** True when the fight-title text contains "Title" (case-insensitive) -- e.g. "UFC Welterweight Title Bout". */
+function parseIsTitleFight(titleText: string): boolean {
+  return /\btitle\b/i.test(titleText);
+}
+
+/**
+ * Parses the fight-level facts UFCStats renders once per fight (not
+ * per-corner): weight class, method/round/time the fight ended, and the
+ * scheduled round format -- all read off the same
+ * `.b-fight-details__fight-title` / `.b-fight-details__text` blocks, e.g.
+ * "Method: KO/TKO Round: 1 Time: 0:39 Time format: 3 Rnd (5-5-5) Referee: ...".
+ */
+export function parseFightMeta($: CheerioAPI): UfcStatsFightMeta {
+  const titleText = $('.b-fight-details__fight-title').first().text().replace(/\s+/g, ' ').trim();
+  const weightClass = stripWeightClassSuffix(titleText);
+  const isTitleFight = parseIsTitleFight(titleText);
+
+  // The Method/Round/Time/Time-format/Referee line is the first of two
+  // `.b-fight-details__text` blocks (the second carries judge scorecards /
+  // finish details) -- `.first()` picks it regardless of that second block's
+  // presence.
+  const detailsText = $('.b-fight-details__content .b-fight-details__text').first().text().replace(/\s+/g, ' ').trim();
+  const methodMatch = detailsText.match(/Method:\s*(.+?)\s*Round:/i);
+  const roundMatch = detailsText.match(/Round:\s*(\d+)\s*Time:/i);
+  const timeMatch = detailsText.match(/Time:\s*([\d:]+)\s*Time format:/i);
+  const scheduledMatch = detailsText.match(/Time format:\s*(\d+)\s*Rnd/i);
+
+  return {
+    weightClass,
+    isTitleFight,
+    method: methodMatch ? methodMatch[1].trim() : '',
+    round: roundMatch ? parseInt(roundMatch[1], 10) : 0,
+    time: timeMatch ? timeMatch[1].trim() : '',
+    scheduledRounds: scheduledMatch ? parseInt(scheduledMatch[1], 10) : 0,
+  };
+}
+
+/**
  * Parses a fight-details page's two always-visible "Totals" tables (overall
- * fight totals + sig-strike location breakdown) into one record per fighter,
- * in page order. Deliberately skips the per-round tables UFCStats hides
- * behind its "Round-by-round" toggle (same columns, plus a `js-fight-table`
- * class marker) — fight-level totals are enough for a rating model; per-round
- * detail can be added later without touching this shape.
+ * fight totals + sig-strike location breakdown), the fight-level meta
+ * (weight class/method/round/time/scheduled rounds), and the round-by-round
+ * "Totals" table UFCStats hides behind its "Per round" toggle -- same column
+ * layout as the fight-level totals table, one row per round actually fought,
+ * marked with a `js-fight-table` class. Deliberately does NOT parse the
+ * round-by-round *strike-location* breakdown (head/body/leg/distance/
+ * clinch/ground per round, the second `js-fight-table`) -- nothing in the
+ * rating engine needs per-round location detail, only per-round totals.
  */
 export function parseFightDetails($: CheerioAPI): UfcStatsFight {
   const persons = $('.b-fight-details__person');
@@ -152,6 +229,30 @@ export function parseFightDetails($: CheerioAPI): UfcStatsFight {
 
   const totalsCell = (col: number, side: number) => totalsCells.eq(col).find('p').eq(side).text().trim();
   const strikesCell = (col: number, side: number) => strikesCells.eq(col).find('p').eq(side).text().trim();
+
+  // First `js-fight-table` = round-by-round "Totals" (same 10-column layout
+  // as `tables.eq(0)` above); rows span multiple sibling <tbody> elements (one
+  // per round, each preceded by its own "Round N" <thead>) but `.find()`
+  // collects them across all of them in document order regardless.
+  const roundRows = $('table.js-fight-table').eq(0).find('tbody tr.b-fight-details__table-row');
+  const roundsFor = (side: number): UfcStatsRoundStats[] => {
+    const rounds: UfcStatsRoundStats[] = [];
+    roundRows.each((i, row) => {
+      const $row = $(row);
+      const cell = (col: number) => $row.find('td').eq(col).find('p').eq(side).text().trim();
+      rounds.push({
+        round: i + 1,
+        knockdowns: parseIntOr0(cell(1)),
+        sigStrikes: parseLandedAttempted(cell(2)),
+        totalStrikes: parseLandedAttempted(cell(4)),
+        takedowns: parseLandedAttempted(cell(5)),
+        submissionAttempts: parseIntOr0(cell(7)),
+        reversals: parseIntOr0(cell(8)),
+        controlTimeSeconds: parseControlTime(cell(9)),
+      });
+    });
+    return rounds;
+  };
 
   const sideFor = (i: 0 | 1): UfcStatsFighterSide => ({
     name: nameFor(i),
@@ -174,7 +275,8 @@ export function parseFightDetails($: CheerioAPI): UfcStatsFight {
       clinch: parseLandedAttempted(strikesCell(7, i)),
       ground: parseLandedAttempted(strikesCell(8, i)),
     },
+    rounds: roundsFor(i),
   });
 
-  return { fighters: [sideFor(0), sideFor(1)] };
+  return { fighters: [sideFor(0), sideFor(1)], meta: parseFightMeta($) };
 }

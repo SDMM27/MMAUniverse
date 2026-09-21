@@ -20,7 +20,7 @@ async function main() {
   const limit = limitArg ? Number(limitArg.slice('--limit='.length)) : undefined;
 
   try {
-    const records = await scrapeUfcStats(CACHE_DIR, limit);
+    const records = await scrapeUfcStats(CACHE_DIR, limit, OUTPUT_FILE);
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(records, null, 2));
     console.log(`Done. ${records.length} fight-stat row(s) written to ${OUTPUT_FILE}.`);
   } finally {
