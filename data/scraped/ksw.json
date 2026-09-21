@@ -1244,6 +1244,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Stefan-Vojcak-362241",
       "fight_history": [
         {
+          "opponent_name": "Marcin Wojcik",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcin-Wojcik-44714",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "win",
+          "method": "TKO (Head Kick and Punches)",
+          "referee": "Lukasz Bosacki",
+          "round": 4,
+          "time": "2:36"
+        },
+        {
           "opponent_name": "Arkadiusz Wrzosek",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arkadiusz-Wrzosek-388439",
           "event_name": "KSW 119 - Kaczmarczyk vs. Brichta",
@@ -1397,6 +1409,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Michal-Michalski-139687",
       "fight_history": [
+        {
+          "opponent_name": "Radoslaw Paczuski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Radoslaw-Paczuski-316157",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Aleh Miliakou",
+          "round": 1,
+          "time": "4:15"
+        },
         {
           "opponent_name": "Piotr Kuberski",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Piotr-Kuberski-120537",
@@ -1648,6 +1672,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Radoslaw-Paczuski-316157",
       "fight_history": [
         {
+          "opponent_name": "Michal Michalski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michal-Michalski-139687",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Aleh Miliakou",
+          "round": 1,
+          "time": "4:15"
+        },
+        {
           "opponent_name": "Piotr Kuberski",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Piotr-Kuberski-120537",
           "event_name": "KSW 109 - Kuberski vs. Paczuski",
@@ -1789,6 +1825,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Lukasz-Charzewski-255553",
       "fight_history": [
+        {
+          "opponent_name": "Josef Stummer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Josef-Stummer-375326",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Paulina Bonkowska",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Alioune Nahaye",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alioune-Nahaye-117789",
@@ -2028,6 +2076,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Josef-Stummer-375326",
       "fight_history": [
         {
+          "opponent_name": "Lukasz Charzewski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lukasz-Charzewski-255553",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Paulina Bonkowska",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Michal Domin",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michal-Domin-255563",
           "event_name": "KSW 115 - Przybysz vs. Yakymenko",
@@ -2145,6 +2205,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Leo-Brichta-212373",
       "fight_history": [
+        {
+          "opponent_name": "Kacper Formela",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kacper-Formela-168921",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Paulina Bonkowska",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Patryk Kaczmarczyk",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Patryk-Kaczmarczyk-288887",
@@ -2419,6 +2491,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kacper-Formela-168921",
       "fight_history": [
+        {
+          "opponent_name": "Leo Brichta",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leo-Brichta-212373",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Paulina Bonkowska",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Krzysztof Mendlewski",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Krzysztof-Mendlewski-191881",
@@ -2742,6 +2826,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Adrian-Dudek-281515",
       "fight_history": [
         {
+          "opponent_name": "Borys Dzikowski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Borys-Dzikowski-356251",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "loss",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Lukasz Bosacki",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Adam Lazar",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adam-Lazar-409896",
           "event_name": "MMA Attack 6 - MMA Attack",
@@ -2908,6 +3004,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Borys-Dzikowski-356251",
       "fight_history": [
         {
+          "opponent_name": "Adrian Dudek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adrian-Dudek-281515",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Lukasz Bosacki",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Kacper Pakeltys",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kacper-Pakeltys-428985",
           "event_name": "KSW 115 - Przybysz vs. Yakymenko",
@@ -3014,6 +3122,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Hanka-Gelnarova-459294",
       "fight_history": [
         {
+          "opponent_name": "Malgorzata Popowicz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Malgorzata-Popowicz-439727",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "Paulina Bonkowska",
+          "round": 3,
+          "time": "1:50"
+        },
+        {
           "opponent_name": "Dominika Steczkowska",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dominika-Steczkowska-388245",
           "event_name": "KSW 99 - Vojcak vs. Martinek",
@@ -3036,196 +3156,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Malgorzata-Popowicz-439727",
       "fight_history": [
         {
-          "opponent_name": "Paula Szczepanska",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paula-Szczepanska-475446",
-          "event_name": "MMA Polska Stowarzyszenie 15 - Klatka 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Polska-Stowarzyszenie-15-Klatka-1-110876",
-          "date": "2025-12-13",
+          "opponent_name": "Hanka Gelnarova",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hanka-Gelnarova-459294",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
           "result": "win",
-          "method": "TKO (Punches)",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Natalia Palat",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Natalia-Palat-491719",
-          "event_name": "MMA Polska Stowarzyszenie 15 - Klatka 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Polska-Stowarzyszenie-15-Klatka-1-110876",
-          "date": "2025-12-13",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 1,
-          "time": "4:00"
-        },
-        {
-          "opponent_name": "Zofia Rybika",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zofia-Rybika-491718",
-          "event_name": "MMA Polska Stowarzyszenie 15 - Klatka 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Polska-Stowarzyszenie-15-Klatka-1-110876",
-          "date": "2025-12-13",
-          "result": "win",
-          "method": "TKO (Punches)",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Nini Tskvitaria",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nini-Tskvitaria-473090",
-          "event_name": "Extra Gale Sportow Walki - Strefa Walki Poniec 5",
-          "event_sherdog_url": "https://www.sherdog.com/events/Extra-Gale-Sportow-Walki-Strefa-Walki-Poniec-5-111239",
-          "date": "2025-12-06",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "Piotr Jarosz",
+          "method": "Submission (Armbar)",
+          "referee": "Paulina Bonkowska",
           "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Daria Brzozowska",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daria-Brzozowska-415795",
-          "event_name": "Babilon MMA 52 - Mendlewski vs. Skrzek",
-          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-52-Mendlewski-vs-Skrzek-107959",
-          "date": "2025-05-17",
-          "result": "loss",
-          "method": "Submission (Triangle Armbar)",
-          "referee": "Piotr Jarosz",
-          "round": 3,
-          "time": "2:23"
-        },
-        {
-          "opponent_name": "Yana Shelemba",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yana-Shelemba-462700",
-          "event_name": "IMMAF - 2025 European Championships: Day 7, Cage 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2025-European-Championships-Day-7-Cage-1-106987",
-          "date": "2025-02-22",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Anna Vitol",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anna-Vitol-462530",
-          "event_name": "IMMAF - 2025 European Championships: Day 6, Cage 4",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2025-European-Championships-Day-6-Cage-4-107186",
-          "date": "2025-02-21",
-          "result": "win",
-          "method": "Submission (Kneebar)",
-          "referee": "",
-          "round": 1,
-          "time": "2:37"
-        },
-        {
-          "opponent_name": "Katharina Roesen",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Katharina-Roesen-463843",
-          "event_name": "IMMAF - 2025 European Championships: Day 5, Cage 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2025-European-Championships-Day-5-Cage-2-107188",
-          "date": "2025-02-20",
-          "result": "win",
-          "method": "Submission",
-          "referee": "",
-          "round": 2,
-          "time": "2:44"
-        },
-        {
-          "opponent_name": "Martyna Ciaskowska",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Martyna-Ciaskowska-468763",
-          "event_name": "ACL 2 - Amateur Combat League",
-          "event_sherdog_url": "https://www.sherdog.com/events/ACL-2-Amateur-Combat-League-106330",
-          "date": "2024-11-30",
-          "result": "win",
-          "method": "TKO (Leg Injury)",
-          "referee": "",
-          "round": 1,
-          "time": "2:59"
-        },
-        {
-          "opponent_name": "Mariia Klein",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mariia-Klein-462529",
-          "event_name": "IMMAF - 2024 World Championships: Day 3",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2024-World-Championships-Day-3-105389",
-          "date": "2024-11-07",
-          "result": "loss",
-          "method": "Submission (Kimura)",
-          "referee": "",
-          "round": 1,
-          "time": "1:34"
-        },
-        {
-          "opponent_name": "Oliwia Stawska",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oliwia-Stawska-415805",
-          "event_name": "SCF 6 - Solo Combat Federation",
-          "event_sherdog_url": "https://www.sherdog.com/events/SCF-6-Solo-Combat-Federation-109880",
-          "date": "2024-10-04",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Julia Ratajczak",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Julia-Ratajczak-439710",
-          "event_name": "CFN 10 - Contender Fight Night 10",
-          "event_sherdog_url": "https://www.sherdog.com/events/CFN-10-Contender-Fight-Night-10-102071",
-          "date": "2024-04-26",
-          "result": "win",
-          "method": "TKO (Punches)",
-          "referee": "Grzegorz Szczepanik",
-          "round": 2,
-          "time": "2:10"
-        },
-        {
-          "opponent_name": "Magdalena Giec",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Magdalena-Giec-388249",
-          "event_name": "CFN 9 - Contender Fight Night 9",
-          "event_sherdog_url": "https://www.sherdog.com/events/CFN-9-Contender-Fight-Night-9-100677",
-          "date": "2023-12-08",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Oleksandra Kychak",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oleksandra-Kychak-448614",
-          "event_name": "MMA Polska Stowarzyszenie 8 - Klatka 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Polska-Stowarzyszenie-8-Klatka-1-104785",
-          "date": "2023-10-28",
-          "result": "loss",
-          "method": "Submission",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Zarina Stasiuk",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zarina-Stasiuk-463723",
-          "event_name": "MMA Polska Stowarzyszenie 8 - Klatka 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Polska-Stowarzyszenie-8-Klatka-1-104785",
-          "date": "2023-10-28",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Anna Jalocha",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anna-Jalocha-424966",
-          "event_name": "Contender Fight Night - CFN Challengers 2: West Coast Edition",
-          "event_sherdog_url": "https://www.sherdog.com/events/Contender-Fight-Night-CFN-Challengers-2-West-Coast-Edition-98804",
-          "date": "2023-09-02",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
+          "time": "1:50"
         }
       ]
     },
@@ -3354,6 +3294,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Dominik-Zadora-436596",
       "fight_history": [
         {
+          "opponent_name": "Samuel Bily",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Samuel-Bily-446410",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Aleh Miliakou",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Alan Kwiecinski",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alan-Kwiecinski-163877",
           "event_name": "FAME - Friday Arena 2",
@@ -3375,6 +3327,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Samuel-Bily-446410",
       "fight_history": [
+        {
+          "opponent_name": "Dominik Zadora",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dominik-Zadora-436596",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Aleh Miliakou",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Jacek Gac",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jacek-Gac-422623",
@@ -16214,6 +16178,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Marcin-Wojcik-44714",
       "fight_history": [
         {
+          "opponent_name": "Stefan Vojcak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Stefan-Vojcak-362241",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "loss",
+          "method": "TKO (Head Kick and Punches)",
+          "referee": "Lukasz Bosacki",
+          "round": 4,
+          "time": "2:36"
+        },
+        {
           "opponent_name": "Phil De Fries",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Phil-De-Fries-46202",
           "event_name": "KSW 117 - Pawlak vs. Khalidov",
@@ -20224,6 +20200,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Kacper-Koziorzebski-210391",
       "fight_history": [
         {
+          "opponent_name": "Muslim Tulshaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muslim-Tulshaev-97073",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "nc",
+          "method": "No Contest (Accidental Groin Kick)",
+          "referee": "Lukasz Bosacki",
+          "round": 1,
+          "time": "4:54"
+        },
+        {
           "opponent_name": "Artur Szczepaniak",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Artur-Szczepaniak-194413",
           "event_name": "KSW 115 - Przybysz vs. Yakymenko",
@@ -24093,6 +24081,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Muslim-Tulshaev-97073",
       "fight_history": [
+        {
+          "opponent_name": "Kacper Koziorzebski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kacper-Koziorzebski-210391",
+          "event_name": "KSW 121 - Vojcak vs. Wojcik",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-121-Vojcak-vs-Wojcik-113372",
+          "date": "2026-09-19",
+          "result": "nc",
+          "method": "No Contest (Accidental Groin Kick)",
+          "referee": "Lukasz Bosacki",
+          "round": 1,
+          "time": "4:54"
+        },
         {
           "opponent_name": "Adrian Bartosinski",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adrian-Bartosinski-269009",
@@ -177105,13 +177105,13 @@
     },
     {
       "event_name": "KSW 121 - Vojcak vs. Wojcik",
-      "fighter1_name": "Marcin Wojcik",
-      "fighter2_name": "Stefan Vojcak",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Stefan Vojcak",
+      "fighter2_name": "Marcin Wojcik",
+      "fight_finished": true,
+      "winner_name": "Stefan Vojcak",
+      "method": "TKO (Head Kick and Punches)",
+      "round": 4,
+      "time": "2:36",
       "weight_class": "Heavyweight",
       "is_main_event": true,
       "is_title_fight": true
@@ -177120,25 +177120,25 @@
       "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Michal Michalski",
       "fighter2_name": "Radoslaw Paczuski",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Michal Michalski",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "4:15",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "KSW 121 - Vojcak vs. Wojcik",
-      "fighter1_name": "Lukasz Charzewski",
-      "fighter2_name": "Josef Stummer",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
+      "fighter1_name": "Kacper Formela",
+      "fighter2_name": "Leo Brichta",
+      "fight_finished": true,
+      "winner_name": "Kacper Formela",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -177146,63 +177146,50 @@
       "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Muslim Tulshaev",
       "fighter2_name": "Kacper Koziorzebski",
-      "fight_finished": false,
+      "fight_finished": true,
       "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "method": "No Contest (Accidental Groin Kick)",
+      "round": 1,
+      "time": "4:54",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "KSW 121 - Vojcak vs. Wojcik",
-      "fighter1_name": "Leo Brichta",
-      "fighter2_name": "Kacper Formela",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
+      "fighter1_name": "Josef Stummer",
+      "fighter2_name": "Lukasz Charzewski",
+      "fight_finished": true,
+      "winner_name": "Josef Stummer",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "KSW 121 - Vojcak vs. Wojcik",
-      "fighter1_name": "Hanka Gelnarova",
-      "fighter2_name": "Malgorzata Popowicz",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Malgorzata Popowicz",
+      "fighter2_name": "Hanka Gelnarova",
+      "fight_finished": true,
+      "winner_name": "Malgorzata Popowicz",
+      "method": "Submission (Armbar)",
+      "round": 3,
+      "time": "1:50",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "KSW 121 - Vojcak vs. Wojcik",
-      "fighter1_name": "Tagir Machmudov",
-      "fighter2_name": "Szymon Kasprzynski",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "174lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "KSW 121 - Vojcak vs. Wojcik",
-      "fighter1_name": "Adrian Dudek",
-      "fighter2_name": "Borys Dzikowski",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Borys Dzikowski",
+      "fighter2_name": "Adrian Dudek",
+      "fight_finished": true,
+      "winner_name": "Borys Dzikowski",
+      "method": "TKO (Doctor Stoppage)",
+      "round": 2,
+      "time": "5:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -177211,11 +177198,11 @@
       "event_name": "KSW 121 - Vojcak vs. Wojcik",
       "fighter1_name": "Dominik Zadora",
       "fighter2_name": "Samuel Bily",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Dominik Zadora",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false

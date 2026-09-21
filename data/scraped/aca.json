@@ -1699,7 +1699,7 @@
       "date": "2026-09-17",
       "start_time": "2026-09-17T00:00:00+00:00",
       "event_location": "Sport Hall Colloseum, Grozny, Chechnya, Russia",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/897484"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898430"
     },
     {
       "name": "ACA 208 - Shaikhaev vs. Tumenov",
@@ -1714,6 +1714,13 @@
       "start_time": "2026-10-31T00:00:00+00:00",
       "event_location": "Dushanbe, Tajikistan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896159"
+    },
+    {
+      "name": "ACA 210 - Myrzabekov vs. Tumenov",
+      "date": "2026-12-05",
+      "start_time": "2026-12-05T00:00:00+00:00",
+      "event_location": "Bishkek, Kyrgyzstan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898337"
     }
   ],
   "fighters": [
@@ -57248,6 +57255,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/AbuSufyan-Zagayev-494131",
       "fight_history": [
         {
+          "opponent_name": "Sheroz Abdusaidov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sheroz-Abdusaidov-505672",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "Technical Submission (Triangle Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 1,
+          "time": "1:01"
+        },
+        {
           "opponent_name": "Artem Ilchuk",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Artem-Ilchuk-483639",
           "event_name": "ACA YE 63 - ACA Young Eagles 63",
@@ -63529,6 +63548,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alambek-Borshikov-481686",
       "fight_history": [
+        {
+          "opponent_name": "Balabek Abbas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Balabek-Abbas-413948",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "1:33"
+        },
         {
           "opponent_name": "Magomed Termulaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Magomed-Termulaev-493277",
@@ -70884,6 +70915,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Rashid-Khazbulatov-411932",
       "fight_history": [
         {
+          "opponent_name": "Zamir Dzhukkaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zamir-Dzhukkaev-497986",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Andrey Kovalev",
+          "round": 1,
+          "time": "4:24"
+        },
+        {
           "opponent_name": "Imran Dzhavadov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Imran-Dzhavadov-116287",
           "event_name": "ACA YE 61 - ACA Young Eagles 61",
@@ -71071,6 +71114,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Magomed-Dukuev-413495",
       "fight_history": [
+        {
+          "opponent_name": "Sergey Gorin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sergey-Gorin-398141",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Gerikhan Shibilov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Beslan Shibzukhov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Beslan-Shibzukhov-324299",
@@ -77822,6 +77877,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Alikhan-Arsanukaev-454353",
       "fight_history": [
         {
+          "opponent_name": "Hafizullo Ayubov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hafizullo-Ayubov-500014",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "3:03"
+        },
+        {
           "opponent_name": "Kkhiri Kkhiriev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kkhiri-Kkhiriev-447179",
           "event_name": "ACA YE 60 - ACA Young Eagles 60",
@@ -78037,6 +78104,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Adam-Khamsurkaev-488945",
       "fight_history": [
+        {
+          "opponent_name": "Dzaurbek Patiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dzaurbek-Patiev-507155",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Andrey Kovalev",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Zelimkhan Islamov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zelimkhan-Islamov-488946",
@@ -96223,6 +96302,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Khamzat-Salakhanov-481689",
       "fight_history": [
         {
+          "opponent_name": "Askhab Ebzaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Askhab-Ebzaev-507150",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "Technical Submission (Triangle Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "3:45"
+        },
+        {
           "opponent_name": "Muslim Padaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muslim-Padaev-481688",
           "event_name": "ACA YE 56 - ACA Young Eagles 56",
@@ -106375,6 +106466,18 @@
           "referee": "",
           "round": 1,
           "time": "2:30"
+        },
+        {
+          "opponent_name": "Georgiy Tskhovrebov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Georgiy-Tskhovrebov-377796",
+          "event_name": "Colosseum MMA - Battle of Champions 18",
+          "event_sherdog_url": "https://www.sherdog.com/events/Colosseum-MMA-Battle-of-Champions-18-88347",
+          "date": "2021-01-24",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 2,
+          "time": "5:00"
         },
         {
           "opponent_name": "Rasul Khazhgeriev",
@@ -152614,6 +152717,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/TurpalAli-Magomadov-413494",
       "fight_history": [
+        {
+          "opponent_name": "Dayanat Dzhabarov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dayanat-Dzhabarov-253487",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "Submission (Ninja Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 3,
+          "time": "3:42"
+        },
         {
           "opponent_name": "Valeriy Slozhenko",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valeriy-Slozhenko-301493",
@@ -378223,6 +378338,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Sergey-Gorin-398141",
       "fight_history": [
         {
+          "opponent_name": "Magomed Dukuev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Magomed-Dukuev-413495",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Gerikhan Shibilov",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Maxim Fedorov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maxim-Fedorov-410440",
           "event_name": "Bears FC 6 - Bears Fighting Championship",
@@ -378519,6 +378646,515 @@
           "referee": "Flavio Almendra",
           "round": 1,
           "time": "4:44"
+        }
+      ]
+    },
+    {
+      "name": "Zamir Dzhukkaev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1776624402Zamir_Dzhukkaev.jpg",
+      "weight_class": "Welterweight",
+      "record": "3-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Zamir-Dzhukkaev-497986",
+      "fight_history": [
+        {
+          "opponent_name": "Rashid Khazbulatov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rashid-Khazbulatov-411932",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Andrey Kovalev",
+          "round": 1,
+          "time": "4:24"
+        },
+        {
+          "opponent_name": "Abdul-Khalim Isaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/AbdulKhalim-Isaev-500019",
+          "event_name": "Stavropol School of MMA - CCE 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Stavropol-School-of-MMA-CCE-1-112959",
+          "date": "2026-05-03",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Yunoshev Yunoshev",
+          "round": 2,
+          "time": "4:35"
+        },
+        {
+          "opponent_name": "Timur Tskhovrebov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Timur-Tskhovrebov-497996",
+          "event_name": "EFC 21 - Elbrus Fighting Championship 21",
+          "event_sherdog_url": "https://www.sherdog.com/events/EFC-21-Elbrus-Fighting-Championship-21-112595",
+          "date": "2025-12-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ruslan Ibragimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Ibragimov-400040",
+          "event_name": "Fight Nights - RDD Series: Kavkaz Warriors",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fight-Nights-RDD-Series-Kavkaz-Warriors-112592",
+          "date": "2025-11-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "2:20"
+        },
+        {
+          "opponent_name": "Izamadin Izamadinov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Izamadin-Izamadinov-422454",
+          "event_name": "LFC 6 - Legion Fight Club 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFC-6-Legion-Fight-Club-6-97058",
+          "date": "2022-08-21",
+          "result": "loss",
+          "method": "KO (Head Kick)",
+          "referee": "Musa Ibragimov",
+          "round": 1,
+          "time": "1:18"
+        }
+      ]
+    },
+    {
+      "name": "Balabek Abbas",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "1-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Balabek-Abbas-462519",
+      "fight_history": [
+        {
+          "opponent_name": "Alambek Borshikov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alambek-Borshikov-481686",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "1:33"
+        },
+        {
+          "opponent_name": "Fateh Valizada",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fateh-Valizada-485071",
+          "event_name": "TFL 1 - Top Fighters League 1: Antalya",
+          "event_sherdog_url": "https://www.sherdog.com/events/TFL-1-Top-Fighters-League-1-Antalya-109700",
+          "date": "2025-07-13",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Firat Gok",
+          "round": 1,
+          "time": "1:40"
+        },
+        {
+          "opponent_name": "Konstantin Alyoshin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Konstantin-Alyoshin-450488",
+          "event_name": "TFC Event 01 - Uluslararasi MMA Turnuvasi",
+          "event_sherdog_url": "https://www.sherdog.com/events/TFC-Event-01-Uluslararasi-MMA-Turnuvasi-106951",
+          "date": "2024-12-27",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "Sultan Berrak Alan",
+          "round": 2,
+          "time": "3:45"
+        }
+      ]
+    },
+    {
+      "name": "Hafizullo Ayubov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Hafizullo-Ayubov-500014",
+      "fight_history": [
+        {
+          "opponent_name": "Alikhan Arsanukaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alikhan-Arsanukaev-454353",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "3:03"
+        },
+        {
+          "opponent_name": "Ibragim Kurbanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibragim-Kurbanov-500015",
+          "event_name": "Stavropol School of MMA - CCE 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Stavropol-School-of-MMA-CCE-1-112959",
+          "date": "2026-05-03",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Gerikhan Shibilov",
+          "round": 1,
+          "time": "4:05"
+        }
+      ]
+    },
+    {
+      "name": "Sheroz Abdusaidov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Heavyweight",
+      "record": "0-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sheroz-Abdusaidov-505672",
+      "fight_history": [
+        {
+          "opponent_name": "Abu-Sufyan Zagayev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/AbuSufyan-Zagayev-494131",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "Technical Submission (Triangle Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 1,
+          "time": "1:01"
+        },
+        {
+          "opponent_name": "Dmitry Shevorakov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dmitry-Shevorakov-178641",
+          "event_name": "Sarmat FC 1 - Battle for Sol-Iletsk",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sarmat-FC-1-Battle-for-SolIletsk-114206",
+          "date": "2026-08-01",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "1:02"
+        }
+      ]
+    },
+    {
+      "name": "Dayanat Dzhabarov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "1-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Dayanat-Dzhabarov-253487",
+      "fight_history": [
+        {
+          "opponent_name": "Turpal-Ali Magomadov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/TurpalAli-Magomadov-413494",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "Submission (Ninja Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 3,
+          "time": "3:42"
+        },
+        {
+          "opponent_name": "Sarvarjon Khamidov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sarvarjon-Khamidov-233691",
+          "event_name": "ASC - Absolute Siberian Championship 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/ASC-Absolute-Siberian-Championship-2-84255",
+          "date": "2019-11-17",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Alexander Peremyshlev",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mairbek Makhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mairbek-Makhanov-167057",
+          "event_name": "KZMMAF - Battle of Nomads 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/KZMMAF-Battle-of-Nomads-8-54585",
+          "date": "2016-06-10",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "1:31"
+        }
+      ]
+    },
+    {
+      "name": "Adam Aushev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "1-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Adam-Aushev-253121",
+      "fight_history": [
+        {
+          "opponent_name": "Askhab Ismailov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Askhab-Ismailov-499783",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Andrey Kovalev",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Artem Dolotov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Artem-Dolotov-485123",
+          "event_name": "Fight Nights 133 - Tsoloev vs. Butorin",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fight-Nights-133-Tsoloev-vs-Butorin-111262",
+          "date": "2026-02-13",
+          "result": "win",
+          "method": "KO (Body Kick)",
+          "referee": "Andrey Kovalev",
+          "round": 1,
+          "time": "0:54"
+        },
+        {
+          "opponent_name": "Saipudin Magomedov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Saipudin-Magomedov-253153",
+          "event_name": "M-1 Global - Road to M-1: Battle in Nazran 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/M1-Global-Road-to-M1-Battle-in-Nazran-6-60011",
+          "date": "2017-03-11",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "1:22"
+        },
+        {
+          "opponent_name": "Viktor Donskoy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Viktor-Donskoy-253119",
+          "event_name": "M-1 Global - Road to M-1: Battle in Nazran 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/M1-Global-Road-to-M1-Battle-in-Nazran-5-60009",
+          "date": "2016-12-24",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "Viktor Korneev",
+          "round": 3,
+          "time": "1:13"
+        }
+      ]
+    },
+    {
+      "name": "Dzaurbek Patiev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Dzaurbek-Patiev-507155",
+      "fight_history": [
+        {
+          "opponent_name": "Adam Khamsurkaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adam-Khamsurkaev-488945",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Andrey Kovalev",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "German Mikityuk",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Heavyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/German-Mikityuk-507153",
+      "fight_history": []
+    },
+    {
+      "name": "Turpal Zurmaev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Heavyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Turpal-Zurmaev-507154",
+      "fight_history": [
+        {
+          "opponent_name": "Eldar Garafutdinov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eldar-Garafutdinov-380056",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Gerikhan Shibilov",
+          "round": 1,
+          "time": "2:10"
+        }
+      ]
+    },
+    {
+      "name": "Amin Tomov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Amin-Tomov-507151",
+      "fight_history": [
+        {
+          "opponent_name": "Anzaur Khasavov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anzaur-Khasavov-507152",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "1:39"
+        }
+      ]
+    },
+    {
+      "name": "Anzaur Khasavov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Anzaur-Khasavov-507152",
+      "fight_history": [
+        {
+          "opponent_name": "Amin Tomov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amin-Tomov-507151",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Andrey Kovalev",
+          "round": 2,
+          "time": "1:39"
+        }
+      ]
+    },
+    {
+      "name": "Askhab Ebzaev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Askhab-Ebzaev-507150",
+      "fight_history": [
+        {
+          "opponent_name": "Khamzat Salakhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khamzat-Salakhanov-481689",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "Technical Submission (Triangle Choke)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "3:45"
+        }
+      ]
+    },
+    {
+      "name": "Muslim Murtazaliev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Muslim-Murtazaliev-447164",
+      "fight_history": [
+        {
+          "opponent_name": "Khamzat Akhmatkhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khamzat-Akhmatkhanov-507149",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Tajialike Yeerbole",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tajialike-Yeerbole-382404",
+          "event_name": "Bangla Super Fighters - Saturday Super Fights",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bangla-Super-Fighters-Saturday-Super-Fights-114423",
+          "date": "2025-01-04",
+          "result": "win",
+          "method": "Submission (Kimura)",
+          "referee": "Bobur Hamitov",
+          "round": 1,
+          "time": "3:41"
+        }
+      ]
+    },
+    {
+      "name": "Khamzat Akhmatkhanov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Khamzat-Akhmatkhanov-507149",
+      "fight_history": [
+        {
+          "opponent_name": "Muslim Murtazaliev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muslim-Murtazaliev-447164",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Gerikhan Shibilov",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Eldar Garafutdinov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "0-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Eldar-Garafutdinov-380056",
+      "fight_history": [
+        {
+          "opponent_name": "Turpal Zurmaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Turpal-Zurmaev-507154",
+          "event_name": "ACA YE 68 - ACA Young Eagles 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-68-ACA-Young-Eagles-68-114451",
+          "date": "2026-09-17",
+          "result": "loss",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Gerikhan Shibilov",
+          "round": 1,
+          "time": "2:10"
+        },
+        {
+          "opponent_name": "Evgeni Myakinkin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evgeni-Myakinkin-43645",
+          "event_name": "CFC 3 - Champion Fight Club 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFC-3-Champion-Fight-Club-3-96270",
+          "date": "2023-01-28",
+          "result": "loss",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "3:38"
+        },
+        {
+          "opponent_name": "Deni Rasaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Deni-Rasaev-272259",
+          "event_name": "Fight Club Champion - Omsk",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fight-Club-Champion-Omsk-94181",
+          "date": "2022-05-29",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
         }
       ]
     }
@@ -425242,53 +425878,157 @@
     },
     {
       "event_name": "ACA YE 68 - ACA Young Eagles 68",
-      "fighter1_name": "Gerikhan Mazaev",
-      "fighter2_name": "Murad Khasaev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
-      "event_name": "ACA YE 68 - ACA Young Eagles 68",
-      "fighter1_name": "Rashid Khazbulatov",
-      "fighter2_name": "Magomed Bilalov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Zamir Dzhukkaev",
+      "fighter2_name": "Rashid Khazbulatov",
+      "fight_finished": true,
+      "winner_name": "Zamir Dzhukkaev",
+      "method": "TKO (Doctor Stoppage)",
+      "round": 1,
+      "time": "4:24",
       "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "ACA YE 68 - ACA Young Eagles 68",
-      "fighter1_name": "Magomed Abdusalamov",
-      "fighter2_name": "Islam Inderbiev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
+      "is_main_event": true,
       "is_title_fight": false
     },
     {
       "event_name": "ACA YE 68 - ACA Young Eagles 68",
       "fighter1_name": "Magomed Dukuev",
       "fighter2_name": "Sergey Gorin",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Magomed Dukuev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Balabek Abbas",
+      "fighter2_name": "Alambek Borshikov",
+      "fight_finished": true,
+      "winner_name": "Balabek Abbas",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "1:33",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Hafizullo Ayubov",
+      "fighter2_name": "Alikhan Arsanukaev",
+      "fight_finished": true,
+      "winner_name": "Hafizullo Ayubov",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 2,
+      "time": "3:03",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Abu-Sufyan Zagayev",
+      "fighter2_name": "Sheroz Abdusaidov",
+      "fight_finished": true,
+      "winner_name": "Abu-Sufyan Zagayev",
+      "method": "Technical Submission (Triangle Choke)",
+      "round": 1,
+      "time": "1:01",
+      "weight_class": "Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Turpal-Ali Magomadov",
+      "fighter2_name": "Dayanat Dzhabarov",
+      "fight_finished": true,
+      "winner_name": "Turpal-Ali Magomadov",
+      "method": "Submission (Ninja Choke)",
+      "round": 3,
+      "time": "3:42",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Adam Aushev",
+      "fighter2_name": "Askhab Ismailov",
+      "fight_finished": true,
+      "winner_name": "Adam Aushev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Adam Khamsurkaev",
+      "fighter2_name": "Dzaurbek Patiev",
+      "fight_finished": true,
+      "winner_name": "Adam Khamsurkaev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Turpal Zurmaev",
+      "fighter2_name": "Eldar Garafutdinov",
+      "fight_finished": true,
+      "winner_name": "Turpal Zurmaev",
+      "method": "TKO (Elbows and Punches)",
+      "round": 1,
+      "time": "2:10",
+      "weight_class": "Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Anzaur Khasavov",
+      "fighter2_name": "Amin Tomov",
+      "fight_finished": true,
+      "winner_name": "Anzaur Khasavov",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "1:39",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Askhab Ebzaev",
+      "fighter2_name": "Khamzat Salakhanov",
+      "fight_finished": true,
+      "winner_name": "Askhab Ebzaev",
+      "method": "Technical Submission (Triangle Choke)",
+      "round": 2,
+      "time": "3:45",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 68 - ACA Young Eagles 68",
+      "fighter1_name": "Muslim Murtazaliev",
+      "fighter2_name": "Khamzat Akhmatkhanov",
+      "fight_finished": true,
+      "winner_name": "Muslim Murtazaliev",
+      "method": "TKO (Doctor Stoppage)",
+      "round": 2,
+      "time": "5:00",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -425445,6 +426185,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 210 - Myrzabekov vs. Tumenov",
+      "fighter1_name": "Zhakshylyk Myrzabekov",
+      "fighter2_name": "Albert Tumenov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "ACA 210 - Myrzabekov vs. Tumenov",
+      "fighter1_name": "Maharbek Karginov",
+      "fighter2_name": "Alimardan Abdykarov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     }
