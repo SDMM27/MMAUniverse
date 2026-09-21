@@ -84,6 +84,26 @@ export default function Page() {
         </p>
       </Section>
 
+      <Section title="4. La probabilité de victoire (modèle entraîné)">
+        <p>
+          En complément du score, chaque fiche affiche une probabilité de victoire estimée face à un adversaire moyen
+          de la catégorie. Elle vient d&apos;un modèle statistique (une régression logistique) entraîné sur l&apos;historique
+          des combats UFC : il apprend, combat après combat, quels signaux annoncent le mieux un vainqueur.
+        </p>
+        <p>
+          Il s&apos;appuie sur le score, la série en cours, le statut d&apos;ancien champion, le temps écoulé depuis le
+          dernier combat, la dominance moyenne des 3 derniers combats et le style de combat sur les 5 derniers
+          (frappes par zone, takedowns, contrôle, soumissions). Le signal le plus utile s&apos;est révélé être la forme
+          récente, à égalité avec le score cumulé sur toute la carrière.
+        </p>
+        <p className="rounded-lg border border-base-border bg-base-card p-3 text-xs">
+          <strong className="text-ink-primary">À prendre avec recul :</strong> sur les 1 468 combats les plus récents,
+          jamais vus à l&apos;entraînement, ce modèle désigne le vainqueur dans environ 58 % des cas (50 % au hasard,
+          57 % avec le seul score). C&apos;est un signal utile, mais un léger complément du score plutôt qu&apos;une
+          prédiction fiable : un combat reste très incertain.
+        </p>
+      </Section>
+
       <Section title="Pourquoi le champion a parfois une astérisque">
         <p>
           Le champion en titre est toujours affiché en première position de sa catégorie, quel que soit son score —
