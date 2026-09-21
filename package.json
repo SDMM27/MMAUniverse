@@ -33,6 +33,7 @@
     "calibrate:ratings": "tsx data/scripts/calibrate-ratings.ts",
     "compute:ratings": "tsx data/scripts/compute-fighter-ratings.ts",
     "explore:ml-rating": "tsx data/scripts/prototype-ml-rating.ts",
+    "train:win-predictor": "tsx data/scripts/train-win-predictor.ts",
     "tune:ratings": "tsx data/scripts/tune-point-flow.ts"
   },
   "dependencies": {
