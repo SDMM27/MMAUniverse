@@ -110,6 +110,16 @@ export type FighterRating = {
 export type FighterRatingWithFighter = FighterRating & {
   fighter_name: string;
   fighter_image_url: string | null;
+  fighter_nationality: string | null; // fighters.nationality -- a 2-letter Sherdog flag code, see CountryFlag
+};
+
+// fetchFightScoreSummary's row -- the headline numbers shown next to the
+// ranking (homepage hero, /classement-calcule header). COUNT(*) comes back
+// from the neon driver as a string, hence the string types.
+export type FightScoreSummary = {
+  ranked_count: string;
+  division_count: string;
+  updated_at: string | null;
 };
 
 // One row per fighter per fight (each fighter_fight_stats_id's fight

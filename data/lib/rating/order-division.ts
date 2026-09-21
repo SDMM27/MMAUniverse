@@ -88,3 +88,30 @@ export function orderDivisionWithChampionPinned(fighters: FighterRatingWithFight
 
   return { fighters: [champion, ...rest], championOutranked };
 }
+
+// Lightest to heaviest, men's divisions first -- the order the UFC itself
+// lists its divisions in, which reads far more naturally on the ranking
+// page than the alphabetical order the query returns.
+const WEIGHT_CLASS_ORDER = [
+  'Flyweight',
+  'Bantamweight',
+  'Featherweight',
+  'Lightweight',
+  'Welterweight',
+  'Middleweight',
+  'Light Heavyweight',
+  'Heavyweight',
+  "Women's Strawweight",
+  "Women's Flyweight",
+  "Women's Bantamweight",
+  "Women's Featherweight",
+];
+
+/** Sorts weight-class groups lightest to heaviest (men's, then women's); an unknown weight class goes last, alphabetically. */
+export function sortWeightClassGroups<T extends { weightClass: string }>(groups: T[]): T[] {
+  const rank = (weightClass: string) => {
+    const index = WEIGHT_CLASS_ORDER.indexOf(weightClass);
+    return index === -1 ? WEIGHT_CLASS_ORDER.length : index;
+  };
+  return [...groups].sort((a, b) => rank(a.weightClass) - rank(b.weightClass) || a.weightClass.localeCompare(b.weightClass));
+}

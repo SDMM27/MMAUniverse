@@ -1,11 +1,23 @@
 import Link from 'next/link';
-import { fetchAllEvents, fetchFightsByEvent, fetchRecentFinishedFights, fetchNewsArticles, fetchTopPoundForPound } from '@/data/lib/data';
+import {
+  fetchAllEvents,
+  fetchAllFighterRatings,
+  fetchFightScoreSummary,
+  fetchFightsByEvent,
+  fetchRecentFinishedFights,
+  fetchNewsArticles,
+  fetchTopPoundForPound,
+} from '@/data/lib/data';
 import { computeNextEventForHome, groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightResultRow from '@/components/ui/fights/fight-result-row';
 import EventCard from '@/components/ui/events/event-card';
 import EmptyState from '@/components/ui/shared/empty-state';
 import NewsSection from '@/components/ui/news/news-section';
+import FightScoreHero from '@/components/ui/ratings/fightscore-hero';
+import PoundForPoundList from '@/components/ui/ratings/pound-for-pound-list';
+import DivisionLeadersGrid from '@/components/ui/ratings/division-leaders-grid';
+import { FighterRatingWithFighter } from '@/data/lib/definitions';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
@@ -13,12 +25,17 @@ export const dynamic = 'force-dynamic';
 
 const RECENT_RESULTS_COUNT = 4;
 const HOME_NEWS_COUNT = 4;
-// Fetched a bit deeper than the 3 actually shown so the true top 3 overall
-// (men's + women's combined, re-sorted below) isn't accidentally missing a
-// fighter who'd rank in the true top 3 but wasn't in the top 3 of their own
-// gender's list alone (unlikely at this scale, but cheap to guard against).
-const HOME_P4P_FETCH_COUNT = 5;
-const HOME_P4P_SHOWN_COUNT = 3;
+const HOME_P4P_COUNT = 5;
+// Top 3 per division for the division cards (the champion comes along
+// regardless, see fetchAllFighterRatings) -- the full lists live on
+// /classement-calcule.
+const HOME_DIVISION_DEPTH = 3;
+
+// Same order as fetchTopPoundForPound: score, then the ML win probability
+// to break the ties at 100 every division's #1 shares.
+function byPoundForPound(a: FighterRatingWithFighter, b: FighterRatingWithFighter) {
+  return Number(b.display_score) - Number(a.display_score) || Number(b.ml_win_probability ?? 0) - Number(a.ml_win_probability ?? 0);
+}
 
 export default async function Page() {
   const events = await fetchAllEvents();
@@ -29,19 +46,17 @@ export default async function Page() {
   // event — when there's no future event in DB, computeNextEventForHome
   // falls back to the last past event, which has no upcoming fight left to
   // show there.
-  const [nextEventFights, recentResults, news, topP4P] = await Promise.all([
+  const [nextEventFights, recentResults, news, p4p, divisionRatings, summary] = await Promise.all([
     next ? fetchFightsByEvent(String(next.event.id)) : Promise.resolve([]),
     fetchRecentFinishedFights(RECENT_RESULTS_COUNT),
     fetchNewsArticles({ pageSize: HOME_NEWS_COUNT }),
-    fetchTopPoundForPound(HOME_P4P_FETCH_COUNT),
+    fetchTopPoundForPound(HOME_P4P_COUNT),
+    fetchAllFighterRatings(HOME_DIVISION_DEPTH),
+    fetchFightScoreSummary(),
   ]);
-  // True top 3 overall (men's + women's combined) by display_score, not
-  // "top 3 men's then top 3 women's" -- P4P is meant to cross divisions,
-  // crossing gender lists too for this compact homepage teaser (the full
-  // /classement-calcule page keeps them separate, matching fight-minds).
-  const homeP4P = [...topP4P.men, ...topP4P.women]
-    .sort((a, b) => Number(b.display_score) - Number(a.display_score))
-    .slice(0, HOME_P4P_SHOWN_COUNT);
+  // The hero spotlights the single best fighter overall, men's and women's
+  // lists combined (the lists themselves stay split, matching fight-minds).
+  const p4pLeader = [...p4p.men, ...p4p.women].sort(byPoundForPound)[0] ?? null;
 
   const heroEvent = next && next.isUpcoming ? next.event : null;
 
@@ -60,83 +75,71 @@ export default async function Page() {
   const weeklyEvents = thisWeek.filter((event) => event.id !== heroEvent?.id);
 
   return (
-    <main className="flex min-h-screen flex-col gap-8 p-6">
-      {!next && <EmptyState title="Aucun événement pour le moment" />}
+    <main className="flex min-h-screen flex-col">
+      <FightScoreHero leader={p4pLeader} summary={summary} />
 
-      {heroFight && heroEvent && (
-        <section>
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Evenement de la semaine</h2>
-            <Link href={`/events/${heroEvent.id}`} className="text-xs uppercase tracking-wide text-accent hover:underline">
-              Voir l&apos;événement
-            </Link>
-          </div>
-          <FightCard fight={heroFight} event={heroEvent} eventName={heroEvent.name} />
-        </section>
-      )}
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-10">
+        {(p4p.men.length > 0 || p4p.women.length > 0) && (
+          <section>
+            <SectionHeader title="Pound-for-Pound" href="/classement-calcule" linkLabel="Classement complet" />
+            <div className="grid gap-4 md:grid-cols-2">
+              {p4p.men.length > 0 && <PoundForPoundList fighters={p4p.men} title="Hommes" />}
+              {p4p.women.length > 0 && <PoundForPoundList fighters={p4p.women} title="Femmes" />}
+            </div>
+          </section>
+        )}
 
-      {homeP4P.length > 0 && (
-        <section>
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Classement</h2>
-            <Link href="/classement-calcule" className="text-xs uppercase tracking-wide text-accent hover:underline">
-              Voir le classement complet
-            </Link>
-          </div>
-          <p className="mb-4 max-w-2xl text-sm text-ink-secondary">
-            Un score calculé à partir des vraies statistiques de chaque combat — pas juste l&apos;avis d&apos;une
-            organisation.{' '}
-            <Link href="/classement-calcule/methodologie" className="text-accent hover:underline">
-              Comment ça marche
-            </Link>
-            .
-          </p>
-          <div className="grid gap-3 sm:grid-cols-3">
-            {homeP4P.map((fighter) => (
-              <Link
-                key={fighter.id}
-                href={`/fighters/${fighter.fighter_id}`}
-                className="flex items-center justify-between rounded-lg border border-base-border bg-base-card px-4 py-3 hover:border-accent"
-              >
-                <div>
-                  <p className="text-sm text-ink-primary">{fighter.fighter_name}</p>
-                  <p className="text-xs text-ink-secondary">{fighter.weight_class}</p>
-                </div>
-                <span className="font-display text-sm text-accent">{Number(fighter.display_score).toFixed(1)}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+        {divisionRatings.length > 0 && (
+          <section>
+            <SectionHeader title="Catégorie par catégorie" href="/classement-calcule" linkLabel="Toutes les catégories" />
+            <DivisionLeadersGrid ratings={divisionRatings} shownPerDivision={HOME_DIVISION_DEPTH} />
+          </section>
+        )}
 
-      {weeklyEvents.length > 0 && (
-        <section>
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Cette semaine</h2>
-            <Link href="/events" className="text-xs uppercase tracking-wide text-accent hover:underline">
-              Voir tous les événements
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-            {weeklyEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-        </section>
-      )}
+        {!next && <EmptyState title="Aucun événement pour le moment" />}
 
-      {recentResults.length > 0 && (
-        <section>
-          <h2 className="mb-4 font-display text-lg uppercase tracking-wide text-ink-primary">Derniers résultats</h2>
-          <div className="flex flex-col gap-3">
-            {recentResults.map((result) => (
-              <FightResultRow key={result.id} result={result} />
-            ))}
-          </div>
-        </section>
-      )}
+        {heroFight && heroEvent && (
+          <section>
+            <SectionHeader title="Evenement de la semaine" href={`/events/${heroEvent.id}`} linkLabel="Voir l'événement" />
+            <FightCard fight={heroFight} event={heroEvent} eventName={heroEvent.name} />
+          </section>
+        )}
 
-      {news.articles.length > 0 && <NewsSection articles={news.articles} />}
+        {weeklyEvents.length > 0 && (
+          <section>
+            <SectionHeader title="Cette semaine" href="/events" linkLabel="Voir tous les événements" />
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+              {weeklyEvents.map((event) => (
+                <EventCard key={event.id} event={event} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {recentResults.length > 0 && (
+          <section>
+            <h2 className="mb-4 font-display text-lg uppercase tracking-wide text-ink-primary">Derniers résultats</h2>
+            <div className="flex flex-col gap-3">
+              {recentResults.map((result) => (
+                <FightResultRow key={result.id} result={result} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {news.articles.length > 0 && <NewsSection articles={news.articles} />}
+      </div>
     </main>
+  );
+}
+
+function SectionHeader({ title, href, linkLabel }: { title: string; href: string; linkLabel: string }) {
+  return (
+    <div className="mb-4 flex items-center justify-between gap-4">
+      <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">{title}</h2>
+      <Link href={href} className="shrink-0 text-xs uppercase tracking-wide text-accent hover:underline">
+        {linkLabel}
+      </Link>
+    </div>
   );
 }

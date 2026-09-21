@@ -67,7 +67,7 @@ export default function Nav() {
           <MMAUniverseLogo />
         </Link>
 
-        <ul className="hidden items-center gap-6 md:flex">
+        <ul className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} />
@@ -95,9 +95,9 @@ export default function Nav() {
           </li>
         </ul>
 
-        {/* Below md, links collapse into the toggled menu; the account avatar
+        {/* Below lg, links collapse into the toggled menu; the account avatar
             stays visible next to the toggle rather than hiding inside it. */}
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-3 lg:hidden">
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
           </SignedIn>
@@ -123,7 +123,7 @@ export default function Nav() {
       </div>
 
       {open && (
-        <ul id="mobile-nav-menu" className="mt-4 flex flex-col gap-4 border-t border-base-border pt-4 md:hidden">
+        <ul id="mobile-nav-menu" className="mt-4 flex flex-col gap-4 border-t border-base-border pt-4 lg:hidden">
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} />
