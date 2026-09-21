@@ -20,3 +20,15 @@ html {
     text-wrap: balance;
   }
 }
+
+/* Horizontally scrollable chip rows (e.g. the FightScore division tabs):
+   still scrollable by touch/trackpad/shift-wheel, without Windows' chunky
+   scrollbar showing under the row. */
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

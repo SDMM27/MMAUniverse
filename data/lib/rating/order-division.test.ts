@@ -1,7 +1,7 @@
 // data/lib/rating/order-division.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { orderDivisionWithChampionPinned, groupFighterRatingsByWeightClass } from './order-division';
+import { orderDivisionWithChampionPinned, groupFighterRatingsByWeightClass, sortWeightClassGroups } from './order-division';
 import type { FighterRatingWithFighter } from '../definitions';
 
 function fighter(overrides: Partial<FighterRatingWithFighter>): FighterRatingWithFighter {
@@ -22,6 +22,7 @@ function fighter(overrides: Partial<FighterRatingWithFighter>): FighterRatingWit
     updated_at: '2026-01-01T00:00:00.000Z',
     fighter_name: 'Fighter',
     fighter_image_url: null,
+    fighter_nationality: null,
     ...overrides,
   };
 }
@@ -126,4 +127,12 @@ test('groupFighterRatingsByWeightClass buckets by weight_class, first-seen order
     ['LW1', 'LW2'],
   );
   assert.deepEqual(groups[1].fighters.map((f) => f.fighter_name), ['HW1']);
+});
+
+test('sortWeightClassGroups orders lightest to heaviest, men before women, unknown last', () => {
+  const groups = ['Heavyweight', "Women's Flyweight", 'Openweight', 'Flyweight', "Women's Strawweight", 'Lightweight'].map((weightClass) => ({ weightClass }));
+  assert.deepEqual(
+    sortWeightClassGroups(groups).map((g) => g.weightClass),
+    ['Flyweight', 'Lightweight', 'Heavyweight', "Women's Strawweight", "Women's Flyweight", 'Openweight'],
+  );
 });

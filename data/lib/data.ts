@@ -10,6 +10,7 @@ import {
     RankingWithFighter,
     NewsArticle,
     FighterRatingWithFighter,
+    FightScoreSummary,
     QualityWin,
   } from './definitions';
 import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization, selectHeadlineFightPerEvent } from './event-utils';
@@ -622,7 +623,7 @@ export async function fetchNewsArticles({
 export async function fetchAllFighterRatings(perDivision: number = 15) {
   try {
     const data = await sql<FighterRatingWithFighter>`
-      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality
       FROM (
         SELECT *, ROW_NUMBER() OVER (PARTITION BY weight_class ORDER BY display_score DESC) AS rn
         FROM fighter_ratings
@@ -651,7 +652,7 @@ export async function fetchAllFighterRatings(perDivision: number = 15) {
 export async function fetchFighterRatingsByFighterId(fighterId: string) {
   try {
     const data = await sql<FighterRatingWithFighter & { division_rank: string }>`
-      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url,
+      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality,
         (SELECT COUNT(*) + 1 FROM fighter_ratings fr2 WHERE fr2.weight_class = fr.weight_class AND fr2.is_ranking_eligible = true AND fr2.display_score > fr.display_score) AS division_rank
       FROM fighter_ratings fr
       JOIN fighters f ON f.id = fr.fighter_id
@@ -665,6 +666,24 @@ export async function fetchFighterRatingsByFighterId(fighterId: string) {
   }
 }
 
+// The headline numbers next to the ranking: how many fighters are currently
+// ranked (ranking-eligible), across how many divisions, and when the daily
+// recompute (data/scripts/compute-fighter-ratings.ts) last ran.
+export async function fetchFightScoreSummary() {
+  try {
+    const data = await sql<FightScoreSummary>`
+      SELECT COUNT(*) FILTER (WHERE is_ranking_eligible) AS ranked_count,
+             COUNT(DISTINCT weight_class) AS division_count,
+             MAX(updated_at) AS updated_at
+      FROM fighter_ratings
+    `;
+    return data.rows[0];
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch the FightScore summary.');
+  }
+}
+
 // Pound-for-Pound: the top `limit` display_score rows across every division
 // combined, split by gender (weight_class starting with "Women's") since
 // that's how fight-minds itself splits P4P -- no cross-division
@@ -675,29 +694,34 @@ export async function fetchFighterRatingsByFighterId(fighterId: string) {
 // divisions (moved up/down weight, or fought across both early in a career)
 // should appear once in a "pound-for-pound BEST" list, not once per
 // division row.
+//
+// Every division's #1 sits at display_score 100 (the per-division rescale),
+// so ties at the top are the norm, not an edge case -- they're broken by the
+// ML win probability against an average opponent of the fighter's own
+// division, the closest thing the data has to a cross-division comparison.
 export async function fetchTopPoundForPound(limit: number) {
   try {
     const [men, women] = await Promise.all([
       sql<FighterRatingWithFighter>`
         SELECT * FROM (
-          SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+          SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality
           FROM fighter_ratings fr
           JOIN fighters f ON f.id = fr.fighter_id
           WHERE fr.weight_class NOT LIKE 'Women''s%' AND fr.is_ranking_eligible = true
           ORDER BY fr.fighter_id, fr.display_score DESC
         ) best
-        ORDER BY best.display_score DESC
+        ORDER BY best.display_score DESC, best.ml_win_probability DESC NULLS LAST
         LIMIT ${limit}
       `,
       sql<FighterRatingWithFighter>`
         SELECT * FROM (
-          SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url
+          SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality
           FROM fighter_ratings fr
           JOIN fighters f ON f.id = fr.fighter_id
           WHERE fr.weight_class LIKE 'Women''s%' AND fr.is_ranking_eligible = true
           ORDER BY fr.fighter_id, fr.display_score DESC
         ) best
-        ORDER BY best.display_score DESC
+        ORDER BY best.display_score DESC, best.ml_win_probability DESC NULLS LAST
         LIMIT ${limit}
       `,
     ]);
