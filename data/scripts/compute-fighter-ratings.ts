@@ -24,6 +24,17 @@ import { normalizeWeightClass } from '../lib/rating/normalize-weight-class';
 import { simulateDivisionRatings, pointsAsOf, type DivisionFightInput, type DivisionNoResultInput } from '../lib/rating/simulate-division';
 import { isRankingEligible } from '../lib/rating/ranking-eligibility';
 import { normalizeFeatures, kMeans, labelCluster, type StyleFeatures } from '../lib/rating/style-clustering';
+import { predictProbability } from '../lib/rating/logistic-regression';
+import { loadWinPredictor } from '../lib/rating/win-predictor-model';
+import {
+  replayDivision,
+  styleSampleFromRow,
+  toMatchupProfile,
+  averageMatchupProfiles,
+  buildMatchupFeaturesFromProfiles,
+  minutesFought,
+  type ReplayFight,
+} from '../lib/rating/win-predictor-features';
 
 function loadEnvLocal() {
   const envPath = path.resolve('.env.local');
@@ -48,6 +59,8 @@ if (!process.env.DATABASE_URL) {
   process.exit(1);
 }
 const sql = neon(process.env.DATABASE_URL);
+
+const WIN_PREDICTOR_PATH = path.resolve('data/ml-models/win-predictor.json');
 
 async function ensureSchema() {
   await sql`
@@ -83,6 +96,8 @@ async function ensureSchema() {
   `;
   // Added 2026-09-17 -- see data/lib/rating/ranking-eligibility.ts.
   await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS is_ranking_eligible BOOLEAN NOT NULL DEFAULT true`;
+  // Added 2026-09-21 -- see data/lib/rating/win-predictor-features.ts.
+  await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS ml_win_probability NUMERIC`;
 }
 
 type StatsRow = {
@@ -138,17 +153,10 @@ function toFightStatsSide(row: StatsRow, rounds: RoundRow[]): FightStatsSide {
   };
 }
 
-/** Minutes actually fought: full rounds at 5 min each, plus the partial finishing round. 0 if round/time didn't parse. */
-function minutesFought(round: number | null, time: string | null): number {
-  if (!round || !time) return 0;
-  const match = time.match(/^(\d+):(\d{2})$/);
-  if (!match) return 0;
-  const seconds = Number(match[1]) * 60 + Number(match[2]);
-  return Math.max(0, (round - 1) * 5 + seconds / 60);
-}
-
 async function main() {
   const todayIso = new Date().toISOString().slice(0, 10);
+  // Fail loudly before touching the DB if the trained model is missing/stale.
+  const winPredictor = loadWinPredictor(WIN_PREDICTOR_PATH);
   console.log('Ensuring schema...');
   await ensureSchema();
 
@@ -328,6 +336,39 @@ async function main() {
       fighterIds.forEach((id, i) => archetypeByFighter.set(id, labels[assignments[i]]));
     }
 
+    // Win predictor: each fighter's CURRENT state (last-5-fights style, recent
+    // performance, activity as of today) vs a synthetic division-average
+    // opponent, averaged over the same active pool as the score ceiling.
+    const replayFights: ReplayFight[] = sorted.map((p, i) => ({
+      eventDate: p.winner.event_date!,
+      isTitleFight: p.winner.is_title_fight ?? false,
+      winnerId: p.winner.fighter_id,
+      loserId: p.loser.fighter_id,
+      winnerSample: styleSampleFromRow(p.winner),
+      loserSample: styleSampleFromRow(p.loser),
+      dominanceScore: history[i].dominanceScore,
+      winnerPointsAfter: history[i].winnerPointsAfter,
+      loserPointsAfter: history[i].loserPointsAfter,
+    }));
+    const runningStates = replayDivision(replayFights);
+    const profileByFighter = new Map<number, ReturnType<typeof toMatchupProfile>>();
+    for (const [fighterId, running] of Array.from(runningStates.entries())) {
+      // The simulation is authoritative for points/streak/champion/last-fight
+      // (it also accounts for no contests/draws, which the replay doesn't see).
+      const simulated = fighterStates.get(fighterId)!;
+      running.points = simulated.points;
+      running.currentStreak = simulated.currentStreak;
+      running.isFormerChampion = simulated.isFormerChampion;
+      running.lastFightDate = simulated.lastFightDate;
+      profileByFighter.set(fighterId, toMatchupProfile(running, todayIso));
+    }
+    const averagePool = eligibleIds.size > 0 ? Array.from(eligibleIds) : Array.from(profileByFighter.keys());
+    const divisionAverageProfile = averageMatchupProfiles(averagePool.map((id) => profileByFighter.get(id)!));
+    const mlWinProbabilityByFighter = new Map<number, number>();
+    for (const [fighterId, profile] of Array.from(profileByFighter.entries())) {
+      mlWinProbabilityByFighter.set(fighterId, predictProbability(winPredictor, buildMatchupFeaturesFromProfiles(profile, divisionAverageProfile)));
+    }
+
     // Upsert fighter_ratings.
     for (const fighterId of fighterIds) {
       const state = fighterStates.get(fighterId)!;
@@ -337,10 +378,10 @@ async function main() {
       await sql`
         INSERT INTO fighter_ratings
           (fighter_id, weight_class, points, display_score, current_streak, is_former_champion,
-           style_archetype, fights_rated, last_fight_date, is_champion, is_ranking_eligible, updated_at)
+           style_archetype, fights_rated, last_fight_date, is_champion, is_ranking_eligible, ml_win_probability, updated_at)
         VALUES
           (${fighterId}, ${division}, ${points}, ${displayScore}, ${state.currentStreak}, ${state.isFormerChampion},
-           ${archetypeByFighter.get(fighterId) ?? null}, ${state.fightsSimulated}, ${state.lastFightDate}, ${isChampion}, ${eligibleIds.has(fighterId)}, now())
+           ${archetypeByFighter.get(fighterId) ?? null}, ${state.fightsSimulated}, ${state.lastFightDate}, ${isChampion}, ${eligibleIds.has(fighterId)}, ${mlWinProbabilityByFighter.get(fighterId) ?? null}, now())
         ON CONFLICT (fighter_id, weight_class) DO UPDATE SET
           points = EXCLUDED.points,
           display_score = EXCLUDED.display_score,
@@ -351,6 +392,7 @@ async function main() {
           last_fight_date = EXCLUDED.last_fight_date,
           is_champion = EXCLUDED.is_champion,
           is_ranking_eligible = EXCLUDED.is_ranking_eligible,
+          ml_win_probability = EXCLUDED.ml_win_probability,
           updated_at = now()
       `;
       totalFightersRated++;

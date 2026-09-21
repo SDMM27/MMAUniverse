@@ -92,6 +92,8 @@ export type FighterRating = {
   // unnoticed until caught live on /classement-calcule 2026-09-15.
   points: number;
   display_score: number;
+  // Also NUMERIC -> string at runtime (see above), and null for a row not yet recomputed. Number(...) before comparing.
+  ml_win_probability: number | null;
   current_streak: number;
   is_former_champion: boolean;
   style_archetype: string | null;

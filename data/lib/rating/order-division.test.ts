@@ -11,6 +11,7 @@ function fighter(overrides: Partial<FighterRatingWithFighter>): FighterRatingWit
     weight_class: 'Lightweight',
     points: 0.1,
     display_score: 50,
+    ml_win_probability: null,
     current_streak: 0,
     is_former_champion: false,
     style_archetype: null,
