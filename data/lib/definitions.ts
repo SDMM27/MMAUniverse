@@ -69,6 +69,75 @@ export type RankingWithFighter = Ranking & {
   fighter_record: string | null;
 };
 
+// The computed FightScore ranking -- see docs/superpowers/specs/
+// 2026-09-14-fighter-rating-algorithm-design.md. One row per (fighter,
+// division); `points` is the raw point-flow total (data/lib/rating/point-flow.ts),
+// `display_score` the 0-100 rescale shown in the UI. `is_champion` is
+// copied from Ranking.rank === 0 for this division at compute time --
+// independent of `display_score`/rank order, see order-division.ts's
+// orderDivisionWithChampionPinned for how the two interact on screen.
+// `is_former_champion` is a *different* fact (has ever won a title fight in
+// this division per our own tracked history, feeds the point-flow engine's
+// former-champion bonus) -- both booleans can be true, false, or differ.
+export type FighterRating = {
+  id: number;
+  fighter_id: number;
+  weight_class: string;
+  // Both NUMERIC columns in Postgres -- the neon driver returns those as
+  // strings at runtime (avoids float-precision loss), not actual numbers,
+  // despite this type. Always coerce with Number(...) before arithmetic or
+  // `<`/`>` comparison -- `-` happens to coerce both operands on its own,
+  // which let a real bug (order-division.ts's championOutranked comparing
+  // two of these with plain `>`, silently doing string comparison) ship
+  // unnoticed until caught live on /classement-calcule 2026-09-15.
+  points: number;
+  display_score: number;
+  current_streak: number;
+  is_former_champion: boolean;
+  style_archetype: string | null;
+  fights_rated: number;
+  last_fight_date: string | null;
+  is_champion: boolean;
+  // false = inactive in this division for more than 18 months and not the
+  // champion: kept out of the ranking lists, score still shown on the
+  // fighter page (data/lib/rating/ranking-eligibility.ts).
+  is_ranking_eligible: boolean;
+  updated_at: string;
+};
+
+export type FighterRatingWithFighter = FighterRating & {
+  fighter_name: string;
+  fighter_image_url: string | null;
+};
+
+// One row per fighter per fight (each fighter_fight_stats_id's fight
+// produces two of these, one per corner) -- see compute-fighter-ratings.ts.
+export type FighterRatingHistoryEntry = {
+  id: number;
+  fighter_id: number;
+  weight_class: string;
+  fighter_fight_stats_id: number | null;
+  points_before: number;
+  points_after: number;
+  // The *opponent's* points going into this fight -- the "adversaire bien
+  // classé" signal made explicit/visible rather than left implicit in the
+  // point-flow math, per user feedback (see [[fighter-rating-ml-pivot]]).
+  opponent_points_before: number | null;
+  dominance_score: number;
+  dominance_estimated: boolean;
+  computed_at: string;
+};
+
+// fetchQualityWinsByFighterId's row shape -- a win-only history entry joined
+// back to fighter_fight_stats for the opponent's name and the event it
+// happened at, so the fighter/methodology page can show something like "3
+// victoires contre des adversaires classés dans le top de la division".
+export type QualityWin = FighterRatingHistoryEntry & {
+  opponent_name: string;
+  event_name: string;
+  event_date: string | null;
+};
+
 export type EventWithOrganization = Event & {
   organization_abbreviation: string;
 };

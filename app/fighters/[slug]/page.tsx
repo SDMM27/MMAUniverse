@@ -1,11 +1,18 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { fetchFighterById, fetchFighterFightHistory, fetchFighterRankings } from '@/data/lib/data';
+import {
+  fetchFighterById,
+  fetchFighterFightHistory,
+  fetchFighterRankings,
+  fetchFighterRatingsByFighterId,
+  fetchQualityWinsByFighterId,
+} from '@/data/lib/data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
 import FighterRecordCard from '@/components/ui/fighters/fighter-record-card';
+import FighterScoreCard from '@/components/ui/ratings/fighter-score-card';
 import EmptyState from '@/components/ui/shared/empty-state';
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -17,6 +24,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const fights = await fetchFighterFightHistory(params.slug);
   const rankings = await fetchFighterRankings(params.slug);
+  const ratings = await fetchFighterRatingsByFighterId(params.slug);
+  // Quality wins only make sense for a fighter we actually rated -- skip the
+  // extra query for one who isn't (not yet matched, or all draws/no-contests).
+  const qualityWins = ratings.length > 0 ? await fetchQualityWinsByFighterId(params.slug) : [];
   // Prefer a weight-class ranking over Pound-for-Pound for the header pill --
   // P4P is a bonus distinction, the weight-class rank is the primary one.
   const primaryRanking = rankings.find((r) => !r.weight_class.includes('Pound-for-Pound')) ?? rankings[0];
@@ -76,6 +87,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div className="mt-6 border-t border-base-border pt-4">
           <FighterRecordCard stats={stats} />
         </div>
+        <FighterScoreCard ratings={ratings} qualityWins={qualityWins} />
       </div>
       <div>
         <h2 className="mb-3 font-display text-sm uppercase tracking-wide text-ink-secondary">Historique</h2>
