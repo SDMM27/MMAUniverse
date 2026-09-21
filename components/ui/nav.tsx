@@ -6,19 +6,33 @@ import { usePathname } from 'next/navigation';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
 
+// "Classement" (the calculated FightScore ranking, the site's flagship
+// feature — see docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md)
+// sits right after Accueil, ahead of everything else that used to come
+// first. The pick'em leaderboard's own entry, previously also labeled
+// "Classement" (a naming collision with an unrelated feature, never
+// resolved before this — see that spec's correction note), is relabeled
+// "Pronostics" to free the name up, matching the existing "Mes pronostics"
+// family rather than inventing a new name for the calculated ranking.
 const links = [
   { href: '/', label: 'Accueil' },
+  { href: '/classement-calcule', label: 'Classement' },
   { href: '/actualites', label: 'Actualités' },
   { href: '/events', label: 'Événements' },
   { href: '/fighters', label: 'Fighters' },
   { href: '/organizations', label: 'Organisations' },
   { href: '/rankings', label: 'Rankings' },
-  { href: '/classement', label: 'Classement' },
+  { href: '/classement', label: 'Pronostics' },
 ];
 
 function isActive(pathname: string, href: string) {
-  // '/' would otherwise match every path as a prefix.
-  return href === '/' ? pathname === '/' : pathname.startsWith(href);
+  // '/' would otherwise match every path as a prefix. Exact match or a '/'-
+  // bounded prefix (for subroutes, e.g. /classement-calcule/methodologie)
+  // -- a plain `startsWith` would wrongly mark '/classement' active while
+  // viewing '/classement-calcule' (or vice versa), two distinct routes that
+  // happen to share a string prefix.
+  if (href === '/') return pathname === '/';
+  return pathname === href || pathname.startsWith(`${href}/`);
 }
 
 function NavLink({ href, label, active }: { href: string; label: string; active: boolean }) {
