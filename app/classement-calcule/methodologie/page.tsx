@@ -47,31 +47,43 @@ export default function Page() {
         </p>
       </Section>
 
-      <Section title="2. Le score qui s'accumule au fil de la carrière">
+      <Section title="2. Une note unique pour toute la carrière">
         <p>
-          Chaque combattant part d&apos;un score proche de zéro et le fait grandir combat après combat. Battre un
-          adversaire qui a déjà un score élevé rapporte beaucoup plus que battre un débutant — c&apos;est ce qui fait
-          qu&apos;une victoire contre un adversaire reconnu compte vraiment, pas seulement sur le papier.
+          Chaque combattant a une seule note, qui le suit dans toutes les catégories où il combat. Changer de
+          catégorie ne remet pas les compteurs à zéro : un champion qui monte d&apos;une catégorie garde sa
+          réputation, avec simplement un peu plus d&apos;incertitude le temps de confirmer à son nouveau poids.
         </p>
         <p>
-          Le score tient aussi compte de l&apos;activité (rester actif rapporte), des combats pour le titre (une
-          victoire rapporte plus, une défaite coûte beaucoup moins) et de l&apos;inactivité : au-delà de 4 mois sans
-          combattre, le score redescend doucement, même si le combattant n&apos;a jamais perdu. Un no contest compte
-          comme une activité.
+          Après chaque combat, la note du vainqueur monte et celle du perdant descend, d&apos;autant plus que le
+          résultat était inattendu : battre un adversaire très bien noté (un champion, un membre du top 5) rapporte
+          beaucoup, battre un débutant presque rien. Enchaîner les combats ne suffit donc pas à grimper : seule la
+          qualité des adversaires battus compte. Plus la victoire est dominante, plus elle rapporte.
         </p>
         <p>
-          Le classement ne montre que les combattants actifs : sans combat dans la catégorie depuis plus de 18 mois,
-          un combattant en sort (son score reste visible sur sa fiche, marqué « Inactif »). Le champion en titre
-          garde toujours sa place, même s&apos;il est absent depuis longtemps.
+          Chaque note est accompagnée d&apos;une marge d&apos;incertitude. Elle est grande pour un nouveau venu, se
+          resserre à chaque combat, et s&apos;élargit à nouveau avec l&apos;inactivité ou un changement de catégorie.
+          Le classement utilise une note prudente, la note moins deux fois cette marge : ce que l&apos;on peut affirmer
+          avec une bonne confiance. Quelques victoires éclatantes ne suffisent pas à dépasser un combattant qui a fait
+          ses preuves pendant des années, et une longue absence fait reculer au classement sans rien effacer du
+          parcours. Un no contest compte comme une activité.
         </p>
         <p>
-          Les réglages de cette formule (part des points prise à l&apos;adversaire, vitesse d&apos;érosion, poids des
-          combats pour le titre…) n&apos;ont pas été choisis à l&apos;œil : ce sont ceux qui, sur l&apos;historique UFC,
-          prédisent le mieux le vainqueur des combats suivants. Ils ont été réglés sur les combats antérieurs à mars
-          2023, puis vérifiés sur les 1 468 combats suivants, jamais vus pendant le réglage : le combattant au score
-          le plus élevé a gagné dans 57 % des cas, contre 54 % avec les réglages d&apos;origine. Cette mesure a aussi
-          permis d&apos;écarter des bonus qui semblaient logiques mais n&apos;apportaient rien (séries de victoires,
-          combats en 5 rounds, statut d&apos;ancien champion).
+          Le score de 0 à 100 se lit ainsi : c&apos;est deux fois la chance estimée de battre le n°1 de la catégorie.
+          Le n°1 vaut donc 100, et un combattant qui aurait environ une chance sur quatre de le battre vaut près de 50.
+        </p>
+        <p>
+          Le classement ne montre que les combattants actifs dans leur catégorie actuelle : sans combat dans la
+          catégorie depuis plus de 18 mois, ou après être passé dans une autre catégorie, un combattant sort de la
+          liste (son score reste visible sur sa fiche). Le champion en titre garde toujours sa place.
+        </p>
+        <p>
+          Les réglages (vitesse à laquelle l&apos;incertitude grandit, part de la note conservée au changement de
+          catégorie, poids de la dominance) ont été vérifiés sur l&apos;historique UFC : réglés sur les combats
+          antérieurs à mars 2023, puis testés sur les 1 468 combats suivants, jamais vus pendant le réglage. Cette
+          note prédit le vainqueur au moins aussi bien que l&apos;ancien système, qui repartait de zéro à chaque
+          changement de catégorie. Le classement est aussi soumis à une série de contrôles de cohérence (par exemple :
+          aucun n°1 de catégorie avec une poignée de combats et aucune victoire contre le top 10), sans qu&apos;aucun
+          nom ne soit jamais imposé au calcul.
         </p>
       </Section>
 
@@ -91,26 +103,37 @@ export default function Page() {
           des combats UFC : il apprend, combat après combat, quels signaux annoncent le mieux un vainqueur.
         </p>
         <p>
-          Il s&apos;appuie sur le score, la série en cours, le statut d&apos;ancien champion, le temps écoulé depuis le
+          Il s&apos;appuie sur un score de carrière calculé par catégorie, la série en cours, le statut d&apos;ancien champion, le temps écoulé depuis le
           dernier combat, la dominance moyenne des 3 derniers combats et le style de combat sur les 5 derniers
           (frappes par zone, takedowns, contrôle, soumissions). Le signal le plus utile s&apos;est révélé être la forme
-          récente, à égalité avec le score cumulé sur toute la carrière.
+          récente, à égalité avec ce score de carrière.
         </p>
         <p className="rounded-lg border border-base-border bg-base-card p-3 text-xs">
           <strong className="text-ink-primary">À prendre avec recul :</strong> sur les 1 468 combats les plus récents,
           jamais vus à l&apos;entraînement, ce modèle désigne le vainqueur dans environ 58 % des cas (50 % au hasard,
-          57 % avec le seul score). C&apos;est un signal utile, mais un léger complément du score plutôt qu&apos;une
+          57 % avec le seul score de carrière). C&apos;est un signal utile, mais un léger complément du score plutôt qu&apos;une
           prédiction fiable : un combat reste très incertain.
         </p>
       </Section>
 
-      <Section title="Pourquoi le champion a parfois une astérisque">
+      <Section title="5. Le pound-for-pound">
         <p>
-          Le champion en titre est toujours affiché en première position de sa catégorie, quel que soit son score —
-          la ceinture est un fait sportif, pas juste un résultat de calcul. Mais quand son score n&apos;est en réalité{' '}
-          <strong className="text-ink-primary">pas</strong> le plus élevé de la catégorie, une astérisque{' '}
-          <sup>*</sup> apparaît à côté de son nom : ça veut dire qu&apos;un autre combattant a, statistiquement, un
-          parcours plus dominant en ce moment — sans que ça change qui porte la ceinture.
+          Comme la note est la même dans toutes les catégories, elle permet de comparer directement un poids mouche
+          et un poids lourd : le classement pound-for-pound trie tous les combattants actifs sur cette échelle
+          commune (hommes et femmes séparément). Le n°1 pound-for-pound vaut 100, les autres sont notés par rapport
+          à lui, avec la même lecture que dans les catégories.
+        </p>
+      </Section>
+
+      <Section title="Le champion est toujours n°1 de sa catégorie">
+        <p>
+          Dans chaque catégorie, le champion en titre est affiché en première position avec un score de 100 — la
+          ceinture est un fait sportif, pas juste un résultat de calcul. Les autres combattants gardent l&apos;ordre
+          de leur note, avec un score plafonné juste en dessous (99,9). Un challenger peut donc avoir, sur le papier,
+          une note plus élevée que le champion : c&apos;est dans l&apos;octogone que ça se règle.
+        </p>
+        <p>
+          Cette règle ne s&apos;applique pas au pound-for-pound : là, chaque champion est classé selon sa note réelle.
         </p>
       </Section>
 

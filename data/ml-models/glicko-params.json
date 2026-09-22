@@ -1,0 +1,67 @@
+{
+  "tunedAt": "2026-09-22T07:24:42.770Z",
+  "testFromDate": "2023-03-11",
+  "fightCount": 7338,
+  "pointFlowReference": {
+    "test": {
+      "logLoss": 0.6767415982765598,
+      "accuracy": 0.5701634877384196,
+      "count": 1468
+    },
+    "winProbabilityScale": 0.5523477725542794
+  },
+  "shipped": {
+    "params": {
+      "initialRating": 1500,
+      "initialRd": 300,
+      "rdPerMonth": 20,
+      "rdOnDivisionChange": 50,
+      "carryOverShare": 1,
+      "winScoreFloor": 0.5,
+      "minRd": 30
+    },
+    "scale": 0.0034922470056572173,
+    "train": {
+      "logLoss": 0.6740562013742072,
+      "accuracy": 0.5715502555366269,
+      "count": 5870
+    },
+    "test": {
+      "logLoss": 0.6744762756641813,
+      "accuracy": 0.5653950953678474,
+      "count": 1468
+    },
+    "movers": {
+      "logLoss": 0.6782430579053292,
+      "accuracy": 0.5546448087431693,
+      "count": 732
+    }
+  },
+  "candidate": {
+    "params": {
+      "initialRating": 1500,
+      "initialRd": 500,
+      "rdPerMonth": 80,
+      "rdOnDivisionChange": 0,
+      "carryOverShare": 1,
+      "winScoreFloor": 0.5,
+      "minRd": 30
+    },
+    "scale": 0.001956644772244303,
+    "train": {
+      "logLoss": 0.6718325980485302,
+      "accuracy": 0.5843270868824532,
+      "count": 5870
+    },
+    "test": {
+      "logLoss": 0.6752461018758624,
+      "accuracy": 0.5688010899182562,
+      "count": 1468
+    },
+    "movers": {
+      "logLoss": 0.6787027542674818,
+      "accuracy": 0.5560109289617486,
+      "count": 732
+    }
+  }
+}
