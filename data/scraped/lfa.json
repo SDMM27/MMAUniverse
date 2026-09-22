@@ -408453,6 +408453,312 @@
           "time": "0:53"
         }
       ]
+    },
+    {
+      "name": "Thomas Picciano",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1785045319Tom_Picciano.jpg",
+      "weight_class": "Welterweight",
+      "record": "9-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Thomas-Picciano-299735",
+      "fight_history": [
+        {
+          "opponent_name": "Gilbert Patrocinio",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gilbert-Patrocinio-132891",
+          "event_name": "Victory Fighting League 4 - Havoc on the Hudson",
+          "event_sherdog_url": "https://www.sherdog.com/events/Victory-Fighting-League-4-Havoc-on-the-Hudson-113174",
+          "date": "2026-07-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Vitor Ribeiro",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jay Pressley",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jay-Pressley-99439",
+          "event_name": "Victory Fighting League - The Road to Redemption",
+          "event_sherdog_url": "https://www.sherdog.com/events/Victory-Fighting-League-The-Road-to-Redemption-110214",
+          "date": "2025-12-12",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Keith Peterson",
+          "round": 2,
+          "time": "1:12"
+        },
+        {
+          "opponent_name": "Jay Pressley",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jay-Pressley-99439",
+          "event_name": "Victory Fighting League - Battle of the Burroughs",
+          "event_sherdog_url": "https://www.sherdog.com/events/Victory-Fighting-League-Battle-of-the-Burroughs-109125",
+          "date": "2025-08-15",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:49"
+        },
+        {
+          "opponent_name": "Abdelghani Saber",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdelghani-Saber-359581",
+          "event_name": "Flex Fight Series Vol. 45 - Home of the Brave",
+          "event_sherdog_url": "https://www.sherdog.com/events/Flex-Fight-Series-Vol-45-Home-of-the-Brave-107597",
+          "date": "2025-04-26",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Marcel Varela",
+          "round": 1,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Carlos Lozoya",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlos-Lozoya-180831",
+          "event_name": "Combat FC 8 - Oliveira vs. Foster",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combat-FC-8-Oliveira-vs-Foster-103073",
+          "date": "2024-09-13",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Alan Lau",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jartavis Jackson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jartavis-Jackson-360273",
+          "event_name": "CFFC 131 - Cage Fury Fighting Championships 131: Fernandez vs. Dicke",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-131-Cage-Fury-Fighting-Championships-131-Fernandez-vs-Dicke-101783",
+          "date": "2024-04-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Vitor Ribeiro",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Michael Billups",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michael-Billups-241161",
+          "event_name": "CFFC 128 - Cage Fury Fighting Championships 128: Watley vs. Gjetja",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-128-Cage-Fury-Fighting-Championships-128-Watley-vs-Gjetja-100417",
+          "date": "2023-12-15",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Giovanna Scano",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hunter Starner",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hunter-Starner-370481",
+          "event_name": "CFFC 120 - Cage Fury Fighting Championships 120: Ndregjoni vs. Araujo",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-120-Cage-Fury-Fighting-Championships-120-Ndregjoni-vs-Araujo-97458",
+          "date": "2023-06-16",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Vitor Ribeiro",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Joseph Schick",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joseph-Schick-205369",
+          "event_name": "CFFC 118 - Cage Fury Fighting Championships 118: Forest vs. Radtke",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-118-Cage-Fury-Fighting-Championships-118-Forest-vs-Radtke-96437",
+          "date": "2023-04-01",
+          "result": "win",
+          "method": "Submission (Keylock)",
+          "referee": "Dan Miragliotta",
+          "round": 2,
+          "time": "1:06"
+        },
+        {
+          "opponent_name": "Damion Nelson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Damion-Nelson-314275",
+          "event_name": "CFFC 116 - Cage Fury Fighting Championships 116: Torres vs. Mathison",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-116-Cage-Fury-Fighting-Championships-116-Torres-vs-Mathison-95391",
+          "date": "2022-12-16",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Vitor Ribeiro",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Elijah Humes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elijah-Humes-225623",
+          "event_name": "CFFC 112 - Cage Fury Fighting Championships 112",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-112-Cage-Fury-Fighting-Championships-112-93831",
+          "date": "2022-08-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "David Osaghae",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Vincent Oristaglio",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vincent-Oristaglio-121329",
+          "event_name": "CFFC 106 - Cage Fury Fighting Championships 106",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-106-Cage-Fury-Fighting-Championships-106-92053",
+          "date": "2022-03-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Andrew Glenn",
+          "round": 1,
+          "time": "4:17"
+        }
+      ]
+    },
+    {
+      "name": "Raul Zaragoza",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1777987992raulzaragoza.jpg",
+      "weight_class": "Welterweight",
+      "record": "7-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Raul-Zaragoza-396674",
+      "fight_history": [
+        {
+          "opponent_name": "Mario Martinez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mario-Martinez-293127",
+          "event_name": "Riot 18 - Solorzano vs. Zambrano 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Riot-18-Solorzano-vs-Zambrano-2-113023",
+          "date": "2026-05-29",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Marco Antonio Diaz Rogel",
+          "round": 1,
+          "time": "0:40"
+        },
+        {
+          "opponent_name": "Alfrego Ruelas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alfrego-Ruelas-299387",
+          "event_name": "MFL 4 - Zaragoza vs. Ruelas",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFL-4-Zaragoza-vs-Ruelas-111988",
+          "date": "2026-04-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Moises Ruiz",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hugo Flores",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hugo-Flores-215083",
+          "event_name": "LUX 052 - Guadalajara",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-052-Guadalajara-107509",
+          "date": "2025-05-16",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Gerardo Cruz",
+          "round": 2,
+          "time": "2:23"
+        },
+        {
+          "opponent_name": "Carlos Arana",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlos-Arana-377333",
+          "event_name": "LUX 049 - CDMX",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-049-CDMX-106312",
+          "date": "2025-01-31",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Gerardo Cruz",
+          "round": 3,
+          "time": "1:45"
+        },
+        {
+          "opponent_name": "Anuar Aburto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anuar-Aburto-390543",
+          "event_name": "LUX 040 - CDMX",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-040-CDMX-101323",
+          "date": "2024-02-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daniela Modad",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jesus Wong",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jesus-Wong-41062",
+          "event_name": "LUX 033 - Puebla",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-033-Puebla-97925",
+          "date": "2023-06-30",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Edgard Lopez",
+          "round": 2,
+          "time": "2:50"
+        },
+        {
+          "opponent_name": "Bryan Ulises",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bryan-Ulises-409420",
+          "event_name": "LUX 029 - CDMX",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-029-CDMX-95559",
+          "date": "2022-12-09",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Edgard Lopez",
+          "round": 2,
+          "time": "3:11"
+        },
+        {
+          "opponent_name": "Erick Garibay",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erick-Garibay-254537",
+          "event_name": "LUX 026 - CDMX",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-026-CDMX-94527",
+          "date": "2022-09-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daniela Modad",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Julian Flenory",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Heavyweight",
+      "record": "2-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Julian-Flenory-335723",
+      "fight_history": [
+        {
+          "opponent_name": "Dale Reed, Jr.",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dale-Reed-Jr-368659",
+          "event_name": "247 FC - Friday Fight Nights",
+          "event_sherdog_url": "https://www.sherdog.com/events/247-FC-Friday-Fight-Nights-113020",
+          "date": "2026-05-29",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "David Brogan",
+          "round": 3,
+          "time": "2:46"
+        },
+        {
+          "opponent_name": "Jeremy Riley",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jeremy-Riley-393548",
+          "event_name": "247 FC - MMA at the Venue 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/247-FC-MMA-at-the-Venue-2-109372",
+          "date": "2025-09-06",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Chip Snider",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Nelson Best",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nelson-Best-72713",
+          "event_name": "Made Men Promotions - Live MMA at Mountaineer Casino 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/Made-Men-Promotions-Live-MMA-at-Mountaineer-Casino-7-106199",
+          "date": "2025-02-15",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Tony Sigmund",
+          "round": 1,
+          "time": "1:14"
+        }
+      ]
     }
   ],
   "fights": [
@@ -437833,6 +438139,32 @@
     },
     {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Thomas Picciano",
+      "fighter2_name": "Santos Verdinez",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Joey Hart",
+      "fighter2_name": "Raul Zaragoza",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
       "fighter1_name": "David Wright",
       "fighter2_name": "Lance Wright",
       "fight_finished": false,
@@ -437880,6 +438212,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Julian Flenory",
+      "fighter2_name": "Ryan Firinaiu",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
