@@ -61,7 +61,7 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <nav className="border-b border-base-border bg-base-bg px-6 py-4">
+    <nav className="border-b border-base-border bg-base-bg px-6 py-3 sm:px-10 lg:px-16">
       <div className="flex items-center justify-between gap-4">
         <Link href="/" className="shrink-0">
           <MMAUniverseLogo />
