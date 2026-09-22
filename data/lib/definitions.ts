@@ -90,8 +90,12 @@ export type FighterRating = {
   // which let a real bug (order-division.ts's championOutranked comparing
   // two of these with plain `>`, silently doing string comparison) ship
   // unnoticed until caught live on /classement-calcule 2026-09-15.
+  // Since FightScore v2 (2026-09-22): the fighter's Glicko rating R, the
+  // same on every one of their rows (one rating across all divisions).
   points: number;
-  display_score: number;
+  rating_deviation: number | null; // Glicko RD as of the last recompute; NUMERIC -> string at runtime
+  display_score: number; // 0-100 within the division; the champion is always 100
+  p4p_score: number | null; // 0-100 on the common pound-for-pound scale (per gender); NUMERIC -> string at runtime
   // Also NUMERIC -> string at runtime (see above), and null for a row not yet recomputed. Number(...) before comparing.
   ml_win_probability: number | null;
   current_streak: number;

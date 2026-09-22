@@ -108,9 +108,10 @@ export type ParamSearchSpec = {
   integer?: boolean;
 };
 
-export type ParamSearchSpace = Partial<Record<keyof PointFlowParams, ParamSearchSpec>>;
+// Generic over the parameter set: used for PointFlowParams and GlickoParams alike.
+export type ParamSearchSpace<T extends Record<string, number> = PointFlowParams> = Partial<Record<keyof T, ParamSearchSpec>>;
 
-export type TuningResult = { params: PointFlowParams; objective: number; evaluations: number };
+export type TuningResult<T extends Record<string, number> = PointFlowParams> = { params: T; objective: number; evaluations: number };
 
 /**
  * Derivative-free pattern search (coordinate descent with shrinking steps):
@@ -121,15 +122,15 @@ export type TuningResult = { params: PointFlowParams; objective: number; evaluat
  * not smooth (floor rule, streak cap, integer grace months) and over a
  * black-box optimizer because every move stays readable in the log.
  */
-export function patternSearch(
-  objective: (params: PointFlowParams) => number,
-  start: PointFlowParams,
-  space: ParamSearchSpace,
-  options: { refinements?: number; maxEvaluations?: number; onImprove?: (key: keyof PointFlowParams, value: number, objective: number) => void } = {},
-): TuningResult {
+export function patternSearch<T extends Record<string, number> = PointFlowParams>(
+  objective: (params: T) => number,
+  start: T,
+  space: ParamSearchSpace<T>,
+  options: { refinements?: number; maxEvaluations?: number; onImprove?: (key: keyof T, value: number, objective: number) => void } = {},
+): TuningResult<T> {
   const refinements = options.refinements ?? 4;
   const maxEvaluations = options.maxEvaluations ?? 2000;
-  const keys = Object.keys(space) as (keyof PointFlowParams)[];
+  const keys = Object.keys(space) as (keyof T)[];
   const steps = new Map(keys.map((key) => [key, space[key]!.step]));
 
   const clampToSpec = (value: number, spec: ParamSearchSpec) => {
@@ -137,8 +138,8 @@ export function patternSearch(
     return Math.min(spec.max, Math.max(spec.min, rounded));
   };
 
-  let best = { ...start };
-  for (const key of keys) best[key] = clampToSpec(best[key], space[key]!);
+  let best: T = { ...start };
+  for (const key of keys) best[key] = clampToSpec(best[key], space[key]!) as T[keyof T];
   let bestObjective = objective(best);
   let evaluations = 1;
 
@@ -154,7 +155,7 @@ export function patternSearch(
         for (const raw of candidates) {
           const value = clampToSpec(raw, spec);
           if (value === current || evaluations >= maxEvaluations) continue;
-          const candidate = { ...best, [key]: value };
+          const candidate: T = { ...best, [key]: value };
           const score = objective(candidate);
           evaluations++;
           if (score < bestObjective - 1e-7) {

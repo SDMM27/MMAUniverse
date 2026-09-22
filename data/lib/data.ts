@@ -684,42 +684,47 @@ export async function fetchFightScoreSummary() {
   }
 }
 
-// Pound-for-Pound: the top `limit` display_score rows across every division
-// combined, split by gender (weight_class starting with "Women's") since
-// that's how fight-minds itself splits P4P -- no cross-division
-// renormalization beyond the per-division display_score rescale already
-// applied, an acknowledged simplification (see the design spec's
-// "Pound-for-Pound" section). DISTINCT ON (fighter_id), keeping each
-// fighter's single highest-scoring division -- a fighter rated in two
-// divisions (moved up/down weight, or fought across both early in a career)
-// should appear once in a "pound-for-pound BEST" list, not once per
-// division row.
-//
-// Every division's #1 sits at display_score 100 (the per-division rescale),
-// so ties at the top are the norm, not an edge case -- they're broken by the
-// ML win probability against an average opponent of the fighter's own
-// division, the closest thing the data has to a cross-division comparison.
+// Pound-for-Pound, split by gender (weight_class starting with "Women's").
+// Since FightScore v2 (2026-09-22) it sorts by p4p_score -- one common 0-100
+// scale across divisions, built from the fighter's single Glicko rating (see
+// docs/superpowers/specs/2026-09-22-fightscore-glicko-design.md) -- and
+// returns it AS display_score, so the P4P components keep reading
+// display_score unchanged (a division's display_score would put every
+// champion at 100). COALESCE falls back to the per-division score for rows
+// not recomputed since the column was added. DISTINCT ON (fighter_id): one
+// row per fighter, their champion row first if they hold a belt (the rating
+// is the same on every row). ml_win_probability only breaks exact ties.
 export async function fetchTopPoundForPound(limit: number) {
   try {
     const [men, women] = await Promise.all([
       sql<FighterRatingWithFighter>`
         SELECT * FROM (
-          SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality
+          SELECT DISTINCT ON (fr.fighter_id)
+            fr.id, fr.fighter_id, fr.weight_class, fr.points, fr.rating_deviation,
+            COALESCE(fr.p4p_score, fr.display_score) AS display_score, fr.p4p_score,
+            fr.ml_win_probability, fr.current_streak, fr.is_former_champion, fr.style_archetype, fr.fights_rated,
+            fr.last_fight_date, fr.is_champion, fr.is_ranking_eligible, fr.updated_at,
+            f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality
           FROM fighter_ratings fr
           JOIN fighters f ON f.id = fr.fighter_id
           WHERE fr.weight_class NOT LIKE 'Women''s%' AND fr.is_ranking_eligible = true
-          ORDER BY fr.fighter_id, fr.display_score DESC
+          ORDER BY fr.fighter_id, fr.is_champion DESC, fr.display_score DESC
         ) best
         ORDER BY best.display_score DESC, best.ml_win_probability DESC NULLS LAST
         LIMIT ${limit}
       `,
       sql<FighterRatingWithFighter>`
         SELECT * FROM (
-          SELECT DISTINCT ON (fr.fighter_id) fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality
+          SELECT DISTINCT ON (fr.fighter_id)
+            fr.id, fr.fighter_id, fr.weight_class, fr.points, fr.rating_deviation,
+            COALESCE(fr.p4p_score, fr.display_score) AS display_score, fr.p4p_score,
+            fr.ml_win_probability, fr.current_streak, fr.is_former_champion, fr.style_archetype, fr.fights_rated,
+            fr.last_fight_date, fr.is_champion, fr.is_ranking_eligible, fr.updated_at,
+            f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality
           FROM fighter_ratings fr
           JOIN fighters f ON f.id = fr.fighter_id
           WHERE fr.weight_class LIKE 'Women''s%' AND fr.is_ranking_eligible = true
-          ORDER BY fr.fighter_id, fr.display_score DESC
+          ORDER BY fr.fighter_id, fr.is_champion DESC, fr.display_score DESC
         ) best
         ORDER BY best.display_score DESC, best.ml_win_probability DESC NULLS LAST
         LIMIT ${limit}

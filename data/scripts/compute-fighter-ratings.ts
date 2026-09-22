@@ -3,10 +3,15 @@
 // Batch computation for FightScore -- see docs/superpowers/specs/
 // 2026-09-14-fighter-rating-algorithm-design.md. Reads every UFC fighter's
 // fighter_fight_stats + fighter_fight_round_stats from Neon, groups fights
-// into divisions (normalizeWeightClass), runs simulateDivisionRatings
-// chronologically per division, clusters each division's fighters into
-// style archetypes (k-means), and upserts fighter_ratings +
-// fighter_rating_history. I/O orchestration, not unit tested -- same
+// into divisions (normalizeWeightClass), builds each fighter's single Glicko
+// rating across every division (simulateCareerRatings -- FightScore v2, see
+// docs/superpowers/specs/2026-09-22-fightscore-glicko-design.md), turns it
+// into per-division and pound-for-pound 0-100 scores (display-scores.ts),
+// clusters each division's fighters into style archetypes (k-means), and
+// upserts fighter_ratings + fighter_rating_history. The v1 per-division point
+// flow (simulateDivisionRatings) still runs, only to feed the win predictor
+// (trained on its points) and the per-division streak / former-champion /
+// fight-count fields. I/O orchestration, not unit tested -- same
 // rationale as sync-fighter-stats.ts etc. Run with `npm run compute:ratings`.
 //
 // KNOWN LIMITATION as of 2026-09-14: `rankings` (the official UFC rankings
@@ -21,8 +26,10 @@ import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import { computeDominanceScore, type FightStatsSide, type RoundStatsSide } from '../lib/rating/dominance-score';
 import { normalizeWeightClass } from '../lib/rating/normalize-weight-class';
-import { simulateDivisionRatings, pointsAsOf, type DivisionFightInput, type DivisionNoResultInput } from '../lib/rating/simulate-division';
-import { isRankingEligible } from '../lib/rating/ranking-eligibility';
+import { simulateDivisionRatings, type DivisionFightInput, type DivisionNoResultInput } from '../lib/rating/simulate-division';
+import { simulateCareerRatings, ratingAsOf, type CareerFightInput, type CareerNoResultInput } from '../lib/rating/simulate-career';
+import { conservativeRating } from '../lib/rating/glicko-rating';
+import { isEligibleInDivision, divisionDisplayScores, poundForPoundScores } from '../lib/rating/display-scores';
 import { normalizeFeatures, kMeans, labelCluster, type StyleFeatures } from '../lib/rating/style-clustering';
 import { predictProbability } from '../lib/rating/logistic-regression';
 import { loadWinPredictor } from '../lib/rating/win-predictor-model';
@@ -98,6 +105,9 @@ async function ensureSchema() {
   await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS is_ranking_eligible BOOLEAN NOT NULL DEFAULT true`;
   // Added 2026-09-21 -- see data/lib/rating/win-predictor-features.ts.
   await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS ml_win_probability NUMERIC`;
+  // Added 2026-09-22 (FightScore v2): `points` now holds the Glicko rating R.
+  await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS rating_deviation NUMERIC`;
+  await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS p4p_score NUMERIC`;
 }
 
 type StatsRow = {
@@ -240,6 +250,66 @@ async function main() {
   }
   console.log(`Grouped ${pairs.length} fights into ${byDivision.size} divisions (${skippedUnmatchedDivision} skipped -- unmatched weight class).`);
 
+  const toFightInput = (p: Pair): DivisionFightInput => ({
+    fightUrl: p.winner.ufcstats_fight_url,
+    eventDate: p.winner.event_date!,
+    isTitleFight: p.winner.is_title_fight ?? false,
+    isFiveRounds: p.winner.scheduled_rounds === 5,
+    winnerId: p.winner.fighter_id,
+    loserId: p.loser.fighter_id,
+    winnerSide: toFightStatsSide(p.winner, roundsByStatsId.get(p.winner.id) ?? []),
+    loserSide: toFightStatsSide(p.loser, roundsByStatsId.get(p.loser.id) ?? []),
+  });
+  const byDate = <T extends { eventDate: string }>(a: T, b: T) => (a.eventDate < b.eventDate ? -1 : a.eventDate > b.eventDate ? 1 : 0);
+
+  // FightScore v2: one chronological pass over every division.
+  const careerFights: CareerFightInput[] = Array.from(byDivision.entries())
+    .flatMap(([division, divisionPairs]) => divisionPairs.filter((p) => p.winner.event_date).map((p) => ({ ...toFightInput(p), division })))
+    .sort(byDate);
+  const careerNoResults: CareerNoResultInput[] = Array.from(noResultsByDivision.entries())
+    .flatMap(([division, list]) => list.map((n) => ({ ...n, division })))
+    .sort(byDate);
+  const career = simulateCareerRatings(careerFights, careerNoResults);
+  const ratingToday = new Map(Array.from(career.fighterStates.entries()).map(([id, state]) => [id, ratingAsOf(state, todayIso)]));
+  const conservativeToday = (id: number) => conservativeRating(ratingToday.get(id)!.rating, ratingToday.get(id)!.rd);
+
+  // Eligibility + display scores for every (fighter, division) row up front:
+  // the P4P scale needs every division's eligible fighters at once.
+  const fighterIdsByDivision = new Map<string, number[]>();
+  for (const [division, divisionPairs] of Array.from(byDivision.entries())) {
+    const ids = new Set<number>();
+    for (const p of divisionPairs) if (p.winner.event_date) ids.add(p.winner.fighter_id).add(p.loser.fighter_id);
+    fighterIdsByDivision.set(division, Array.from(ids));
+  }
+  const eligibleIdsByDivision = new Map<string, Set<number>>();
+  const displayScoreByDivision = new Map<string, Map<number, number>>();
+  for (const [division, ids] of Array.from(fighterIdsByDivision.entries())) {
+    const rows = ids.map((fighterId) => {
+      const state = career.fighterStates.get(fighterId)!;
+      const isChampion = championIdByDivision.get(division) === fighterId;
+      const eligible = isEligibleInDivision(
+        { lastFightDateInDivision: state.lastFightDateByDivision.get(division) ?? null, isChampion, isLatestDivision: state.lastDivision === division },
+        todayIso,
+      );
+      return { fighterId, conservative: conservativeToday(fighterId), isChampion, eligible };
+    });
+    eligibleIdsByDivision.set(division, new Set(rows.filter((r) => r.eligible).map((r) => r.fighterId)));
+    displayScoreByDivision.set(division, divisionDisplayScores(rows));
+  }
+  // Pound-for-pound: one common scale per gender, no champion rule.
+  const p4pScoreByFighter = new Map<number, number>();
+  for (const women of [false, true]) {
+    const eligible = new Set<number>();
+    const all = new Set<number>();
+    for (const [division, ids] of Array.from(fighterIdsByDivision.entries())) {
+      if (division.startsWith("Women's") !== women) continue;
+      ids.forEach((id) => all.add(id));
+      eligibleIdsByDivision.get(division)!.forEach((id) => eligible.add(id));
+    }
+    const scores = poundForPoundScores(Array.from(all, (fighterId) => ({ fighterId, conservative: conservativeToday(fighterId), eligible: eligible.has(fighterId) })));
+    scores.forEach((score, id) => p4pScoreByFighter.set(id, score));
+  }
+
   let totalFightersRated = 0;
   let totalHistoryRows = 0;
   let totalEstimatedFallbacks = 0;
@@ -249,34 +319,13 @@ async function main() {
       .filter((p) => p.winner.event_date)
       .sort((a, b) => (a.winner.event_date! < b.winner.event_date! ? -1 : 1));
 
-    const fights: DivisionFightInput[] = sorted.map((p) => ({
-      fightUrl: p.winner.ufcstats_fight_url,
-      eventDate: p.winner.event_date!,
-      isTitleFight: p.winner.is_title_fight ?? false,
-      isFiveRounds: p.winner.scheduled_rounds === 5,
-      winnerId: p.winner.fighter_id,
-      loserId: p.loser.fighter_id,
-      winnerSide: toFightStatsSide(p.winner, roundsByStatsId.get(p.winner.id) ?? []),
-      loserSide: toFightStatsSide(p.loser, roundsByStatsId.get(p.loser.id) ?? []),
-    }));
+    const fights: DivisionFightInput[] = sorted.map(toFightInput);
 
     const noResults = (noResultsByDivision.get(division) ?? []).sort((a, b) => (a.eventDate < b.eventDate ? -1 : 1));
+    // v1 point flow: win-predictor input (it was trained on these points) and per-division streak/former-champion/fight counts.
     const { fighterStates, history } = simulateDivisionRatings(fights, undefined, noResults);
-    // Ranked/displayed points are eroded up to TODAY, not frozen at each
-    // fighter's last fight -- otherwise a retired fighter keeps their peak
-    // forever (the simulation only erodes someone when they fight again).
-    // fighter_rating_history keeps the raw per-fight values.
-    const currentPoints = new Map(Array.from(fighterStates.entries()).map(([id, s]) => [id, pointsAsOf(s, todayIso)]));
-    // 100 = the best fighter who actually appears in the ranking (active, or
-    // the champion). A retired fighter still above that caps at 100 on their
-    // own page, flagged as inactive there.
-    const eligibleIds = new Set(
-      Array.from(fighterStates.entries())
-        .filter(([id, s]) => isRankingEligible({ lastFightDate: s.lastFightDate, isChampion: championIdByDivision.get(division) === id }, todayIso))
-        .map(([id]) => id),
-    );
-    const ceilingPool = eligibleIds.size > 0 ? Array.from(eligibleIds, (id) => currentPoints.get(id)!) : Array.from(currentPoints.values());
-    const ceiling = Math.max(...ceilingPool, 1e-9);
+    const eligibleIds = eligibleIdsByDivision.get(division)!;
+    const displayScores = displayScoreByDivision.get(division)!;
 
     // Style features: aggregated across every fight (win or loss) this
     // fighter had in this division -- style is about how they fight, not
@@ -372,19 +421,21 @@ async function main() {
     // Upsert fighter_ratings.
     for (const fighterId of fighterIds) {
       const state = fighterStates.get(fighterId)!;
-      const points = currentPoints.get(fighterId)!;
-      const displayScore = Math.min(100, Math.max(0, (points / ceiling) * 100));
+      const { rating, rd } = ratingToday.get(fighterId)!;
+      const displayScore = displayScores.get(fighterId)!;
       const isChampion = championIdByDivision.get(division) === fighterId;
       await sql`
         INSERT INTO fighter_ratings
-          (fighter_id, weight_class, points, display_score, current_streak, is_former_champion,
+          (fighter_id, weight_class, points, rating_deviation, display_score, p4p_score, current_streak, is_former_champion,
            style_archetype, fights_rated, last_fight_date, is_champion, is_ranking_eligible, ml_win_probability, updated_at)
         VALUES
-          (${fighterId}, ${division}, ${points}, ${displayScore}, ${state.currentStreak}, ${state.isFormerChampion},
+          (${fighterId}, ${division}, ${rating}, ${rd}, ${displayScore}, ${p4pScoreByFighter.get(fighterId)!}, ${state.currentStreak}, ${state.isFormerChampion},
            ${archetypeByFighter.get(fighterId) ?? null}, ${state.fightsSimulated}, ${state.lastFightDate}, ${isChampion}, ${eligibleIds.has(fighterId)}, ${mlWinProbabilityByFighter.get(fighterId) ?? null}, now())
         ON CONFLICT (fighter_id, weight_class) DO UPDATE SET
           points = EXCLUDED.points,
+          rating_deviation = EXCLUDED.rating_deviation,
           display_score = EXCLUDED.display_score,
+          p4p_score = EXCLUDED.p4p_score,
           current_streak = EXCLUDED.current_streak,
           is_former_champion = EXCLUDED.is_former_champion,
           style_archetype = EXCLUDED.style_archetype,
@@ -399,11 +450,21 @@ async function main() {
     }
 
     // Insert fighter_rating_history: one row per fighter per fight (winner
-    // and loser each get their own row for the same fight).
+    // and loser each get their own row for the same fight), with the Glicko
+    // rating before/after -- so "quality wins" rank opponents by the rating
+    // they actually had going in.
     const statsIdLookup = new Map<string, { winnerId: number; loserId: number }>();
     for (const p of sorted) statsIdLookup.set(p.winner.ufcstats_fight_url, { winnerId: p.winner.id, loserId: p.loser.id });
 
-    for (const entry of history) {
+    for (const careerEntry of career.history) {
+      if (careerEntry.division !== division) continue;
+      const entry = {
+        ...careerEntry,
+        winnerPointsBefore: careerEntry.winnerBefore.rating,
+        winnerPointsAfter: careerEntry.winnerAfter.rating,
+        loserPointsBefore: careerEntry.loserBefore.rating,
+        loserPointsAfter: careerEntry.loserAfter.rating,
+      };
       const ids = statsIdLookup.get(entry.fightUrl);
       await sql`
         INSERT INTO fighter_rating_history

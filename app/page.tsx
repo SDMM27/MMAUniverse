@@ -31,8 +31,9 @@ const HOME_P4P_COUNT = 5;
 // /classement-calcule.
 const HOME_DIVISION_DEPTH = 3;
 
-// Same order as fetchTopPoundForPound: score, then the ML win probability
-// to break the ties at 100 every division's #1 shares.
+// Same order as fetchTopPoundForPound: P4P score (returned as display_score),
+// then the ML win probability -- which settles the hero between the men's and
+// women's #1, both at 100 on their own scale.
 function byPoundForPound(a: FighterRatingWithFighter, b: FighterRatingWithFighter) {
   return Number(b.display_score) - Number(a.display_score) || Number(b.ml_win_probability ?? 0) - Number(a.ml_win_probability ?? 0);
 }
