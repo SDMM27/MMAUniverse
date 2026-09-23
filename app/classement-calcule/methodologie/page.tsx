@@ -57,7 +57,9 @@ export default function Page() {
           Après chaque combat, la note du vainqueur monte et celle du perdant descend, d&apos;autant plus que le
           résultat était inattendu : battre un adversaire très bien noté (un champion, un membre du top 5) rapporte
           beaucoup, battre un débutant presque rien. Enchaîner les combats ne suffit donc pas à grimper : seule la
-          qualité des adversaires battus compte. Plus la victoire est dominante, plus elle rapporte.
+          qualité des adversaires battus compte. Plus la victoire est dominante, plus elle rapporte, mais même une
+          décision serrée reste une vraie victoire : elle compte au moins pour 80 % d&apos;une victoire nette, pour
+          qu&apos;un combattant ne puisse pas rester classé devant quelqu&apos;un qui vient de le battre.
         </p>
         <p>
           Chaque note est accompagnée d&apos;une marge d&apos;incertitude. Elle est grande pour un nouveau venu, se
@@ -72,9 +74,10 @@ export default function Page() {
           Le n°1 vaut donc 100, et un combattant qui aurait environ une chance sur quatre de le battre vaut près de 50.
         </p>
         <p>
-          Le classement ne montre que les combattants actifs dans leur catégorie actuelle : sans combat dans la
-          catégorie depuis plus de 18 mois, ou après être passé dans une autre catégorie, un combattant sort de la
-          liste (son score reste visible sur sa fiche). Le champion en titre garde toujours sa place.
+          Chaque combattant n&apos;apparaît que dans une catégorie : celle où le classement officiel de l&apos;UFC le
+          place, sinon celle de son dernier combat (un combat ponctuel dans une autre catégorie, comme un superfight,
+          ne le déplace donc pas). Sans combat dans cette catégorie depuis plus de 18 mois, il sort de la liste (son
+          score reste visible sur sa fiche). Le champion en titre garde toujours sa place.
         </p>
         <p>
           Les réglages (vitesse à laquelle l&apos;incertitude grandit, part de la note conservée au changement de
@@ -133,7 +136,9 @@ export default function Page() {
           une note plus élevée que le champion : c&apos;est dans l&apos;octogone que ça se règle.
         </p>
         <p>
-          Cette règle ne s&apos;applique pas au pound-for-pound : là, chaque champion est classé selon sa note réelle.
+          En pound-for-pound, les champions ne sont pas tous mis à 100 (ils seraient tous à égalité), mais le
+          classement ne contredit jamais celui d&apos;une catégorie : personne ne passe devant le champion de sa
+          propre catégorie. Un challenger dont la note dépasse celle de son champion est replacé juste derrière lui.
         </p>
       </Section>
 

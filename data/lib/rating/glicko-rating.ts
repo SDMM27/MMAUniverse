@@ -16,17 +16,23 @@ export type GlickoParams = {
   carryOverShare: number; // share of (rating - initialRating) kept on a division change; 1 = full carry-over
   winScoreFloor: number; // the winner's outcome score for a zero-dominance win (0.5 = no better than a draw); 1 for a total rout
   minRd: number; // RD never shrinks below this -- MMA careers are short, a rating is never "certain"
+  conservativeRdMultiplier: number; // the ranking sorts by R - this x RD (see conservativeRating)
 };
 
-// Chosen by `npm run tune:glicko` -- see data/ml-models/glicko-params.json.
+// Chosen by `npm run tune:glicko` -- see data/ml-models/glicko-params.json --
+// except winScoreFloor: log-loss prefers 0.5 (a close win scored like a
+// draw), but then an unbeaten fighter can stay ranked below the people he
+// just beat (Evloev behind Sterling and Lopes). 0.8 costs ~0.005 held-out
+// log-loss (0.6650 -> 0.6698 on 2026-09-22 data) for rankings fans accept.
 export const DEFAULT_GLICKO_PARAMS: GlickoParams = {
   initialRating: 1500,
   initialRd: 300,
   rdPerMonth: 20,
   rdOnDivisionChange: 50,
   carryOverShare: 1,
-  winScoreFloor: 0.5,
+  winScoreFloor: 0.8,
   minRd: 30,
+  conservativeRdMultiplier: 2,
 };
 
 export type GlickoRating = { rating: number; rd: number };
@@ -69,8 +75,8 @@ export function updateGlicko(a: GlickoRating, b: GlickoRating, score: number, pa
 }
 
 /** What the ranking sorts by: "reasonably sure they're at least this good". Penalizes both thin records and long layoffs. */
-export function conservativeRating(rating: number, rd: number): number {
-  return rating - 2 * rd;
+export function conservativeRating(rating: number, rd: number, params: GlickoParams = DEFAULT_GLICKO_PARAMS): number {
+  return rating - params.conservativeRdMultiplier * rd;
 }
 
 /**
