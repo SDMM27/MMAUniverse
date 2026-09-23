@@ -25,7 +25,9 @@ export default function FighterDetailScreen() {
   if (state.status === 'error') return <ErrorState message={state.message} onRetry={reload} />;
 
   const { fighter, fights, stats } = state.data;
-  const physique = formatPhysique(fighter.height_cm, fighter.reach_cm);
+  const physique = [fighter.age ? `${fighter.age} ans` : null, formatPhysique(fighter.height_cm, fighter.reach_cm)]
+    .filter(Boolean)
+    .join(' · ');
 
   return (
     <FlatList

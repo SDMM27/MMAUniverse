@@ -88,11 +88,14 @@ const MONTHS = [
 // the "August 15, 2026" text as local midnight and then converts to UTC —
 // an off-by-one day in any timezone ahead of UTC. Date.UTC sidesteps local
 // time entirely.
-/** Parses the month-name date UFCStats prints (e.g. "August 15, 2026") into ISO 'YYYY-MM-DD'; '' if unparseable. */
+/**
+ * Parses the month-name date UFCStats prints (e.g. "August 15, 2026", or
+ * "Dec 13, 1996" for a fighter's DOB) into ISO 'YYYY-MM-DD'; '' if unparseable.
+ */
 function parseUfcStatsDate(text: string): string {
-  const match = text.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
+  const match = text.match(/^([A-Za-z]{3,})\s+(\d{1,2}),\s*(\d{4})$/);
   if (!match) return '';
-  const monthIndex = MONTHS.indexOf(match[1].toLowerCase());
+  const monthIndex = MONTHS.findIndex((month) => month.startsWith(match[1].toLowerCase()));
   if (monthIndex === -1) return '';
   const date = new Date(Date.UTC(Number(match[3]), monthIndex, Number(match[2])));
   return date.toISOString().slice(0, 10);
@@ -307,11 +310,18 @@ export function imperialToCm(text: string): number | null {
  * fighters from the early UFC era.
  */
 export function parseFighterPhysique($: CheerioAPI): UfcStatsFighterPhysique {
-  const valueFor = (label: string): string => {
-    const item = $('.b-list__info-box_style_small-width li')
-      .filter((_, li) => $(li).find('i').text().trim().toLowerCase() === `${label}:`)
-      .first();
-    return item.clone().children('i').remove().end().text().trim();
-  };
-  return { heightCm: imperialToCm(valueFor('height')), reachCm: imperialToCm(valueFor('reach')) };
+  return { heightCm: imperialToCm(bioValue($, 'height')), reachCm: imperialToCm(bioValue($, 'reach')) };
+}
+
+/** DOB off the same bio box ("DOB: Dec 13, 1996"), as ISO 'YYYY-MM-DD'; null for '--'. */
+export function parseFighterBirthDate($: CheerioAPI): string | null {
+  return parseUfcStatsDate(bioValue($, 'dob').replace(/\s+/g, ' ')) || null;
+}
+
+// Text of one "Label: value" row of a fighter-details bio box, label stripped.
+function bioValue($: CheerioAPI, label: string): string {
+  const item = $('.b-list__info-box_style_small-width li')
+    .filter((_, li) => $(li).find('i').text().trim().toLowerCase() === `${label}:`)
+    .first();
+  return item.clone().children('i').remove().end().text().trim();
 }

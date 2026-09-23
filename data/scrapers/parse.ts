@@ -308,3 +308,17 @@ export function parseFighterHeightCm($: CheerioAPI): number | null {
   const cm = Math.round(Number(match[1]));
   return cm > 0 ? cm : null;
 }
+
+/**
+ * Birth date off a Sherdog fighter page's bio table (`Jul 19, 1987`), as ISO
+ * 'YYYY-MM-DD' -- parsed by hand for the same timezone reason as
+ * normalizeHistoryDate above. null when Sherdog shows "N/A" or no row at all.
+ */
+export function parseFighterBirthDate($: CheerioAPI): string | null {
+  const text = $('.bio-holder [itemprop="birthDate"]').first().text().trim();
+  const match = text.match(/^([A-Za-z]{3})[A-Za-z]*\.?\s+(\d{1,2}),\s*(\d{4})$/);
+  if (!match) return null;
+  const monthIndex = MONTH_ABBREVIATIONS.indexOf(match[1].toLowerCase());
+  if (monthIndex === -1) return null;
+  return new Date(Date.UTC(Number(match[3]), monthIndex, Number(match[2]))).toISOString().slice(0, 10);
+}

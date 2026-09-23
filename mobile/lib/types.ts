@@ -29,6 +29,8 @@ export type Fighter = {
   nationality: string | null;
   height_cm: number | null;
   reach_cm: number | null;
+  // Only sent by the fighter-detail endpoint (computed server-side from birth_date).
+  age?: number | null;
 };
 
 export type FighterWithOrganization = Fighter & {
