@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
-import { parseEventMeta, parseCompletedEvents, parseCompletedEventUrls, parseEventFightUrls, parseFightDetails, parseFightMeta } from './parse-ufcstats';
+import { parseEventMeta, parseCompletedEvents, parseCompletedEventUrls, parseEventFightUrls, parseFightDetails, parseFightMeta, parseFighterPhysique, imperialToCm } from './parse-ufcstats';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FIXTURES_DIR = path.join(__dirname, '__fixtures__');
@@ -162,4 +162,23 @@ test('parseFightDetails returns a single round-by-round entry for a round-1 fini
   assert.equal(winner.rounds.length, 1);
   assert.equal(winner.rounds[0].round, 1);
   assert.deepEqual(winner.rounds[0].sigStrikes, { landed: 9, attempted: 14 });
+});
+
+test('parseFighterPhysique reads height and reach off the fighter-details bio box, in cm', () => {
+  assert.deepEqual(parseFighterPhysique(loadFixture('ufcstats-fighter-details.html')), { heightCm: 170, reachCm: 175 });
+});
+
+test('parseFighterPhysique returns null for a measurement UFCStats prints as --', () => {
+  const $ = cheerio.load(
+    '<div class="b-list__info-box_style_small-width"><ul>' +
+      '<li><i>Height:</i> 6\' 0"</li><li><i>Reach:</i> --</li>' +
+      '</ul></div>',
+  );
+  assert.deepEqual(parseFighterPhysique($), { heightCm: 183, reachCm: null });
+});
+
+test('imperialToCm handles feet+inches, bare inches and junk', () => {
+  assert.equal(imperialToCm('5\' 11"'), 180);
+  assert.equal(imperialToCm('84.5"'), 215);
+  assert.equal(imperialToCm('--'), null);
 });

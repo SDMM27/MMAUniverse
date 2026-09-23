@@ -286,3 +286,32 @@ export function parseFightDetails($: CheerioAPI): UfcStatsFight {
 
   return { fighters: [sideFor(0), sideFor(1)], meta: parseFightMeta($) };
 }
+
+export interface UfcStatsFighterPhysique {
+  heightCm: number | null;
+  reachCm: number | null;
+}
+
+/** `5' 7"` -> 170, `69"` -> 175 (inches only, as UFCStats prints reach); null for '--' or anything else. */
+export function imperialToCm(text: string): number | null {
+  const match = text.trim().match(/^(?:(\d+)'\s*)?(\d+(?:\.\d+)?)"$/);
+  if (!match) return null;
+  const inches = Number(match[1] ?? 0) * 12 + Number(match[2]);
+  return inches > 0 ? Math.round(inches * 2.54) : null;
+}
+
+/**
+ * Height and reach off a UFCStats fighter-details page's bio box
+ * ("Height: 5' 7"", "Reach: 69""), converted to centimeters. UFCStats prints
+ * '--' for a fighter it has no measurement for -- common for reach on
+ * fighters from the early UFC era.
+ */
+export function parseFighterPhysique($: CheerioAPI): UfcStatsFighterPhysique {
+  const valueFor = (label: string): string => {
+    const item = $('.b-list__info-box_style_small-width li')
+      .filter((_, li) => $(li).find('i').text().trim().toLowerCase() === `${label}:`)
+      .first();
+    return item.clone().children('i').remove().end().text().trim();
+  };
+  return { heightCm: imperialToCm(valueFor('height')), reachCm: imperialToCm(valueFor('reach')) };
+}

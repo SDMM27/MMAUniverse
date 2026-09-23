@@ -44,6 +44,8 @@ export type Fighter = {
     record: string;
     ranking: number;
     nationality: string | null;
+    height_cm: number | null;
+    reach_cm: number | null;
   };
 
 export type Ranking = {

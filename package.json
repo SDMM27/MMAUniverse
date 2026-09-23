@@ -30,6 +30,7 @@
     "sync:ufc-rankings": "tsx data/scrapers/sync-ufc-rankings.ts",
     "scrape:ufcstats": "tsx data/scrapers/scrape-ufcstats.ts",
     "sync:fighter-stats": "tsx data/scrapers/sync-fighter-stats.ts",
+    "sync:fighter-physique": "tsx data/scrapers/sync-fighter-physique.ts",
     "calibrate:ratings": "tsx data/scripts/calibrate-ratings.ts",
     "compute:ratings": "tsx data/scripts/compute-fighter-ratings.ts",
     "explore:ml-rating": "tsx data/scripts/prototype-ml-rating.ts",

@@ -83,5 +83,13 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+      # After the two steps above, so fighters that just got a sherdog_url / ufcstats_url are
+      # covered. Each page is only ever fetched once (physique_*_checked_at), so on a normal day
+      # this is a few requests for newly added fighters.
+      - name: Sync fighter height and reach
+        run: npx tsx data/scrapers/sync-fighter-physique.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
       # FightScore is no longer recomputed here: it runs once a week, on Monday,
       # from .github/workflows/weekly-fightscore.yml (after the weekend's events).
