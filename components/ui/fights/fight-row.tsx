@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { Fighter, FightWithFighters } from '@/data/lib/definitions';
+import TitleFightBadge from '@/components/ui/fights/title-fight-badge';
 
 type FightOutcome = 'win' | 'loss' | 'draw';
 
@@ -36,6 +37,7 @@ export default function FightRow({ fight }: { fight: FightWithFighters }) {
       />
       <div className="flex w-36 shrink-0 flex-col items-center gap-1.5 text-center">
         <span className="font-display text-sm uppercase tracking-wide text-accent">{fight.weight_class}</span>
+        {fight.is_title_fight && <TitleFightBadge />}
         <span className="text-sm text-ink-secondary">{formatFightResult(fight)}</span>
       </div>
       <FighterSide
