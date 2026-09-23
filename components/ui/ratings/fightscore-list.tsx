@@ -92,7 +92,7 @@ export default function FightScoreList({ ratings }: { ratings: FighterRatingWith
 
   return (
     <div>
-      <div role="tablist" aria-label="Catégories" className="scrollbar-none -mx-6 mb-4 flex gap-2 overflow-x-auto px-6 pb-1">
+      <div role="tablist" aria-label="Catégories" className="scrollbar-none -mx-6 mb-4 flex gap-2 overflow-x-auto px-6 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
         {groups.map((g) => {
           const active = g.weightClass === group.weightClass;
           return (
