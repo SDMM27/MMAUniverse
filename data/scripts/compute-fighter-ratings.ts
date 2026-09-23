@@ -28,8 +28,8 @@ import { computeDominanceScore, type FightStatsSide, type RoundStatsSide } from 
 import { normalizeWeightClass } from '../lib/rating/normalize-weight-class';
 import { simulateDivisionRatings, type DivisionFightInput, type DivisionNoResultInput } from '../lib/rating/simulate-division';
 import { simulateCareerRatings, ratingAsOf, type CareerFightInput, type CareerNoResultInput } from '../lib/rating/simulate-career';
-import { conservativeRating } from '../lib/rating/glicko-rating';
-import { isEligibleInDivision, divisionDisplayScores, poundForPoundScores } from '../lib/rating/display-scores';
+import { conservativeRating, DEFAULT_GLICKO_PARAMS } from '../lib/rating/glicko-rating';
+import { homeDivision, isEligibleInDivision, divisionDisplayScores, poundForPoundScores, capChallengersBelowChampion } from '../lib/rating/display-scores';
 import { normalizeFeatures, kMeans, labelCluster, type StyleFeatures } from '../lib/rating/style-clustering';
 import { predictProbability } from '../lib/rating/logistic-regression';
 import { loadWinPredictor } from '../lib/rating/win-predictor-model';
@@ -203,10 +203,15 @@ async function main() {
   }
 
   const championIdByDivision = new Map<string, number>();
+  const officialDivisionByFighter = new Map<number, string>();
   const rankingRows = (await sql`
-    SELECT weight_class, fighter_id FROM rankings WHERE organization_id = 1 AND rank = 0 AND fighter_id IS NOT NULL
-  `) as { weight_class: string; fighter_id: number }[];
-  for (const r of rankingRows) championIdByDivision.set(r.weight_class, r.fighter_id);
+    SELECT weight_class, rank, fighter_id FROM rankings
+    WHERE organization_id = 1 AND fighter_id IS NOT NULL AND weight_class NOT ILIKE '%pound-for-pound%'
+  `) as { weight_class: string; rank: number; fighter_id: number }[];
+  for (const r of rankingRows) {
+    if (r.rank === 0) championIdByDivision.set(r.weight_class, r.fighter_id);
+    officialDivisionByFighter.set(r.fighter_id, r.weight_class);
+  }
 
   const byFightUrl = new Map<string, StatsRow[]>();
   for (const row of statsRows) {
@@ -271,7 +276,7 @@ async function main() {
     .sort(byDate);
   const career = simulateCareerRatings(careerFights, careerNoResults);
   const ratingToday = new Map(Array.from(career.fighterStates.entries()).map(([id, state]) => [id, ratingAsOf(state, todayIso)]));
-  const conservativeToday = (id: number) => conservativeRating(ratingToday.get(id)!.rating, ratingToday.get(id)!.rd);
+  const conservativeToday = (id: number) => conservativeRating(ratingToday.get(id)!.rating, ratingToday.get(id)!.rd, DEFAULT_GLICKO_PARAMS);
 
   // Eligibility + display scores for every (fighter, division) row up front:
   // the P4P scale needs every division's eligible fighters at once.
@@ -288,7 +293,11 @@ async function main() {
       const state = career.fighterStates.get(fighterId)!;
       const isChampion = championIdByDivision.get(division) === fighterId;
       const eligible = isEligibleInDivision(
-        { lastFightDateInDivision: state.lastFightDateByDivision.get(division) ?? null, isChampion, isLatestDivision: state.lastDivision === division },
+        {
+          lastFightDateInDivision: state.lastFightDateByDivision.get(division) ?? null,
+          isChampion,
+          isHomeDivision: homeDivision(state, officialDivisionByFighter.get(fighterId), todayIso) === division,
+        },
         todayIso,
       );
       return { fighterId, conservative: conservativeToday(fighterId), isChampion, eligible };
@@ -296,7 +305,7 @@ async function main() {
     eligibleIdsByDivision.set(division, new Set(rows.filter((r) => r.eligible).map((r) => r.fighterId)));
     displayScoreByDivision.set(division, divisionDisplayScores(rows));
   }
-  // Pound-for-pound: one common scale per gender, no champion rule.
+  // Pound-for-pound: one common scale per gender; champions kept above their own division's challengers.
   const p4pScoreByFighter = new Map<number, number>();
   for (const women of [false, true]) {
     const eligible = new Set<number>();
@@ -307,7 +316,10 @@ async function main() {
       eligibleIdsByDivision.get(division)!.forEach((id) => eligible.add(id));
     }
     const scores = poundForPoundScores(Array.from(all, (fighterId) => ({ fighterId, conservative: conservativeToday(fighterId), eligible: eligible.has(fighterId) })));
-    scores.forEach((score, id) => p4pScoreByFighter.set(id, score));
+    const divisions = Array.from(fighterIdsByDivision.keys())
+      .filter((division) => division.startsWith("Women's") === women)
+      .map((division) => ({ championId: championIdByDivision.get(division), eligibleIds: eligibleIdsByDivision.get(division)! }));
+    capChallengersBelowChampion(scores, divisions).forEach((score, id) => p4pScoreByFighter.set(id, score));
   }
 
   let totalFightersRated = 0;
