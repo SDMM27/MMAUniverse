@@ -33,6 +33,7 @@ import { homeDivision, isEligibleInDivision, divisionDisplayScores, poundForPoun
 import { normalizeFeatures, kMeans, labelCluster, type StyleFeatures } from '../lib/rating/style-clustering';
 import { predictProbability } from '../lib/rating/logistic-regression';
 import { loadWinPredictor } from '../lib/rating/win-predictor-model';
+import { poundForPoundList, weekStartIso } from '../lib/rating/weekly-trend';
 import {
   replayDivision,
   styleSampleFromRow,
@@ -108,6 +109,50 @@ async function ensureSchema() {
   // Added 2026-09-22 (FightScore v2): `points` now holds the Glicko rating R.
   await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS rating_deviation NUMERIC`;
   await sql`ALTER TABLE fighter_ratings ADD COLUMN IF NOT EXISTS p4p_score NUMERIC`;
+  // Added 2026-09-23 -- week-over-week movement, see data/lib/rating/weekly-trend.ts.
+  // `list` is a weight_class, or poundForPoundList(...) for P4P; `rank` is the
+  // position shown on that list (a division's champion 0, contenders from 1).
+  await sql`
+    CREATE TABLE IF NOT EXISTS fighter_rating_snapshots (
+      week_start DATE NOT NULL,
+      list VARCHAR(100) NOT NULL,
+      fighter_id INT NOT NULL REFERENCES fighters(id) ON DELETE CASCADE,
+      rank INT NOT NULL,
+      score NUMERIC NOT NULL,
+      PRIMARY KEY (week_start, list, fighter_id)
+    );
+  `;
+}
+
+// Snapshots this week's lists from the just-written fighter_ratings, with the
+// same orderings the pages use: orderDivisionWithChampionPinned for divisions
+// (champion first, then display_score) and fetchTopPoundForPound for P4P
+// (one row per fighter, champion row first; p4p_score, then ml_win_probability).
+// Replaces this week's snapshot if the job is rerun (manual dispatch).
+async function writeWeeklySnapshot(weekStart: string) {
+  await sql`DELETE FROM fighter_rating_snapshots WHERE week_start = ${weekStart}`;
+  await sql`
+    INSERT INTO fighter_rating_snapshots (week_start, list, fighter_id, rank, score)
+    SELECT ${weekStart}::date, weight_class, fighter_id,
+      (ROW_NUMBER() OVER (PARTITION BY weight_class ORDER BY is_champion DESC, display_score DESC)
+        - CASE WHEN bool_or(is_champion) OVER (PARTITION BY weight_class) THEN 1 ELSE 0 END)::int,
+      display_score
+    FROM fighter_ratings
+    WHERE is_ranking_eligible = true
+  `;
+  for (const women of [false, true]) {
+    await sql`
+      INSERT INTO fighter_rating_snapshots (week_start, list, fighter_id, rank, score)
+      SELECT ${weekStart}::date, ${poundForPoundList(women)}, fighter_id,
+        ROW_NUMBER() OVER (ORDER BY score DESC, ml_win_probability DESC NULLS LAST)::int, score
+      FROM (
+        SELECT DISTINCT ON (fighter_id) fighter_id, COALESCE(p4p_score, display_score) AS score, ml_win_probability
+        FROM fighter_ratings
+        WHERE is_ranking_eligible = true AND (weight_class LIKE 'Women''s%') = ${women}
+        ORDER BY fighter_id, is_champion DESC, display_score DESC
+      ) best
+    `;
+  }
 }
 
 type StatsRow = {
@@ -169,6 +214,13 @@ async function main() {
   const winPredictor = loadWinPredictor(WIN_PREDICTOR_PATH);
   console.log('Ensuring schema...');
   await ensureSchema();
+  // `--snapshot-only`: just (re)write this week's snapshot from the current
+  // fighter_ratings, without recomputing -- e.g. to seed the first week.
+  if (process.argv.includes('--snapshot-only')) {
+    await writeWeeklySnapshot(weekStartIso(todayIso));
+    console.log(`Weekly snapshot written for the week of ${weekStartIso(todayIso)} (no recompute).`);
+    return;
+  }
 
   // fighter_rating_history is a full recomputation every run (not an
   // incremental append) -- fighter_ratings itself upserts by (fighter_id,
@@ -505,6 +557,10 @@ async function main() {
     `Done. ${totalFightersRated} fighter_ratings row(s) upserted, ${totalHistoryRows} fighter_rating_history row(s) inserted, ` +
       `${totalEstimatedFallbacks} used the dominance-estimated fallback, ${skippedUnmatchedDivision} fights skipped (unmatched weight class).`,
   );
+
+  const weekStart = weekStartIso(todayIso);
+  await writeWeeklySnapshot(weekStart);
+  console.log(`Weekly snapshot written for the week of ${weekStart}.`);
 }
 
 main().catch((error) => {

@@ -609,6 +609,13 @@ export async function fetchNewsArticles({
 // and data/scripts/compute-fighter-ratings.ts, which populates these tables.
 // UFC-only (organization_id = 1 implicitly, via fighter_fight_stats' own scope).
 
+// Every ranking query below also returns the fighter's position on the same
+// list the previous week, for the week-over-week arrows (previous_rank / previous_week,
+// data/lib/rating/weekly-trend.ts): `prev` is the most recent
+// fighter_rating_snapshots week BEFORE the latest one -- the latest being the
+// snapshot of what the lists show now -- so previous_week stays NULL until two
+// weekly runs exist.
+
 // Top `perDivision` by display_score in each weight class (plus the
 // champion, even if their own score falls outside that top slice -- rare,
 // but matches the official /rankings page's "champion always shown"
@@ -623,13 +630,17 @@ export async function fetchNewsArticles({
 export async function fetchAllFighterRatings(perDivision: number = 15) {
   try {
     const data = await sql<FighterRatingWithFighter>`
-      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality
+      WITH prev AS (SELECT MAX(week_start) AS week FROM fighter_rating_snapshots WHERE week_start < (SELECT MAX(week_start) FROM fighter_rating_snapshots))
+      SELECT fr.*, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality,
+        s.rank AS previous_rank, prev.week::text AS previous_week
       FROM (
         SELECT *, ROW_NUMBER() OVER (PARTITION BY weight_class ORDER BY display_score DESC) AS rn
         FROM fighter_ratings
         WHERE is_ranking_eligible = true
       ) fr
       JOIN fighters f ON f.id = fr.fighter_id
+      CROSS JOIN prev
+      LEFT JOIN fighter_rating_snapshots s ON s.week_start = prev.week AND s.list = fr.weight_class AND s.fighter_id = fr.fighter_id
       WHERE fr.rn <= ${perDivision} OR fr.is_champion = true
       ORDER BY fr.weight_class ASC, fr.display_score DESC
     `;
@@ -667,7 +678,7 @@ export async function fetchFighterRatingsByFighterId(fighterId: string) {
 }
 
 // The headline numbers next to the ranking: how many fighters are currently
-// ranked (ranking-eligible), across how many divisions, and when the daily
+// ranked (ranking-eligible), across how many divisions, and when the weekly
 // recompute (data/scripts/compute-fighter-ratings.ts) last ran.
 export async function fetchFightScoreSummary() {
   try {
@@ -698,7 +709,8 @@ export async function fetchTopPoundForPound(limit: number) {
   try {
     const [men, women] = await Promise.all([
       sql<FighterRatingWithFighter>`
-        SELECT * FROM (
+        WITH prev AS (SELECT MAX(week_start) AS week FROM fighter_rating_snapshots WHERE week_start < (SELECT MAX(week_start) FROM fighter_rating_snapshots))
+        SELECT best.*, s.rank AS previous_rank, prev.week::text AS previous_week FROM (
           SELECT DISTINCT ON (fr.fighter_id)
             fr.id, fr.fighter_id, fr.weight_class, fr.points, fr.rating_deviation,
             COALESCE(fr.p4p_score, fr.display_score) AS display_score, fr.p4p_score,
@@ -710,11 +722,14 @@ export async function fetchTopPoundForPound(limit: number) {
           WHERE fr.weight_class NOT LIKE 'Women''s%' AND fr.is_ranking_eligible = true
           ORDER BY fr.fighter_id, fr.is_champion DESC, fr.display_score DESC
         ) best
+        CROSS JOIN prev
+        LEFT JOIN fighter_rating_snapshots s ON s.week_start = prev.week AND s.list = 'P4P' AND s.fighter_id = best.fighter_id
         ORDER BY best.display_score DESC, best.ml_win_probability DESC NULLS LAST
         LIMIT ${limit}
       `,
       sql<FighterRatingWithFighter>`
-        SELECT * FROM (
+        WITH prev AS (SELECT MAX(week_start) AS week FROM fighter_rating_snapshots WHERE week_start < (SELECT MAX(week_start) FROM fighter_rating_snapshots))
+        SELECT best.*, s.rank AS previous_rank, prev.week::text AS previous_week FROM (
           SELECT DISTINCT ON (fr.fighter_id)
             fr.id, fr.fighter_id, fr.weight_class, fr.points, fr.rating_deviation,
             COALESCE(fr.p4p_score, fr.display_score) AS display_score, fr.p4p_score,
@@ -726,6 +741,8 @@ export async function fetchTopPoundForPound(limit: number) {
           WHERE fr.weight_class LIKE 'Women''s%' AND fr.is_ranking_eligible = true
           ORDER BY fr.fighter_id, fr.is_champion DESC, fr.display_score DESC
         ) best
+        CROSS JOIN prev
+        LEFT JOIN fighter_rating_snapshots s ON s.week_start = prev.week AND s.list = 'Women''s P4P' AND s.fighter_id = best.fighter_id
         ORDER BY best.display_score DESC, best.ml_win_probability DESC NULLS LAST
         LIMIT ${limit}
       `,
