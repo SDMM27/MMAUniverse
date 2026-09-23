@@ -5,13 +5,14 @@
 // upserts one fighter_fight_stats row per (fighter, fight) pair. UFC-only —
 // UFCStats doesn't cover any other organization, so every match is scoped to
 // organization_id = 1 (see data/scrapers/orgs.config.ts). Safe to re-run:
-// matches existing `fighters` rows by name + organization_id (same natural
-// key sync-fighter-history.ts's findFighterId uses) and upserts
+// matches existing `fighters` rows by name + organization_id (exact, then
+// fuzzy -- see resolveFighterIds) and upserts
 // fighter_fight_stats by its own natural key (fighter_id, ufcstats_fight_url).
 import fs from 'node:fs';
 import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import type { UfcStatsFightRecord } from './shared/ufcstats-types';
+import { matchFighterByName } from './ranking-name-match';
 
 const UFC_ORGANIZATION_ID = 1;
 
@@ -118,29 +119,56 @@ function loadRecords(): UfcStatsFightRecord[] {
   return JSON.parse(fs.readFileSync(file, 'utf-8'));
 }
 
-const fighterIdByName = new Map<string, number | null>();
+/**
+ * UFCStats fighter name -> fighters.id, for every name in the scraped file.
+ * Exact name first; otherwise matchFighterByName's fuzzy levels (UFCStats'
+ * spelling often differs from our Sherdog-sourced names -- "Benoit Saint
+ * Denis" vs "Benoit St. Denis"), restricted to fighters no other scraped name
+ * matches exactly, and accepted only when no other scraped name fuzzily lands
+ * on the same fighter (never merge two people into one row).
+ */
+async function resolveFighterIds(records: UfcStatsFightRecord[]): Promise<Map<string, number>> {
+  const fighters = (await sql`
+    SELECT id, name FROM fighters WHERE organization_id = ${UFC_ORGANIZATION_ID}
+  `) as { id: number; name: string }[];
+  const scrapedNames = Array.from(new Set(records.map((r) => r.fighter_name)));
+  const idByExactName = new Map(fighters.map((f) => [f.name, f.id]));
 
-async function findFighterId(name: string): Promise<number | null> {
-  if (fighterIdByName.has(name)) return fighterIdByName.get(name)!;
-  const res = (await sql`
-    SELECT id FROM fighters WHERE name = ${name} AND organization_id = ${UFC_ORGANIZATION_ID}
-  `) as { id: number }[];
-  const id = res[0]?.id ?? null;
-  fighterIdByName.set(name, id);
-  return id;
+  const resolved = new Map<string, number>();
+  for (const name of scrapedNames) if (idByExactName.has(name)) resolved.set(name, idByExactName.get(name)!);
+  const claimed = new Set(resolved.values());
+  const unclaimed = fighters.filter((f) => !claimed.has(f.id));
+
+  const fuzzy = new Map<string, number>();
+  const claimsById = new Map<number, number>();
+  for (const name of scrapedNames) {
+    if (resolved.has(name)) continue;
+    const match = matchFighterByName(name, unclaimed);
+    if (!match) continue;
+    fuzzy.set(name, match.id);
+    claimsById.set(match.id, (claimsById.get(match.id) ?? 0) + 1);
+  }
+  for (const [name, id] of Array.from(fuzzy.entries())) {
+    if (claimsById.get(id) !== 1) continue;
+    const fighterName = fighters.find((f) => f.id === id)!.name;
+    console.log(`  Matched "${name}" -> "${fighterName}"`);
+    resolved.set(name, id);
+  }
+  return resolved;
 }
 
 async function main() {
   await ensureSchema();
 
   const records = loadRecords();
+  const fighterIdByName = await resolveFighterIds(records);
   let fightersUpdated = 0;
   let statsRows = 0;
   let roundRows = 0;
   let unmatched = 0;
 
   for (const record of records) {
-    const fighterId = await findFighterId(record.fighter_name);
+    const fighterId = fighterIdByName.get(record.fighter_name);
     if (!fighterId) {
       unmatched++;
       continue; // fighter isn't synced into the UFC org yet — the regular sync scripts own creating that row
