@@ -9,20 +9,6 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895835"
     },
     {
-      "name": "One Championship - One Friday Fights 169",
-      "date": "2026-09-04",
-      "start_time": "2026-09-04T00:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896616"
-    },
-    {
-      "name": "One Championship - One on Prime Video 47",
-      "date": "2026-09-04",
-      "start_time": "2026-09-04T00:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/894932"
-    },
-    {
       "name": "One Championship - One Friday Fights 170",
       "date": "2026-09-11",
       "start_time": "2026-09-11T00:00:00+00:00",
@@ -70,6 +56,20 @@
       "start_time": "2026-11-18T00:00:00+00:00",
       "event_location": "Ebara Wave Arena Ota, Ota, Tokyo, Japan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896715"
+    },
+    {
+      "name": "One Championship - One on Prime Video 47",
+      "date": "2026-09-04",
+      "start_time": "2026-09-04T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/894932"
+    },
+    {
+      "name": "One Championship - One Friday Fights 169",
+      "date": "2026-09-04",
+      "start_time": "2026-09-04T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896616"
     }
   ],
   "fighters": [
@@ -367,6 +367,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ryohei-Kurosawa-129433",
       "fight_history": [
+        {
+          "opponent_name": "Fabio Henrique Dourado",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fabio-Henrique-Dourado-199573",
+          "event_name": "One Championship - One on Prime Video 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-47-113345",
+          "date": "2026-09-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Keito Yamakita",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Keito-Yamakita-364807",
@@ -690,6 +702,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Fabio-Henrique-Dourado-199573",
       "fight_history": [
         {
+          "opponent_name": "Ryohei Kurosawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryohei-Kurosawa-129433",
+          "event_name": "One Championship - One on Prime Video 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-47-113345",
+          "date": "2026-09-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Yosuke Saruta",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yosuke-Saruta-28145",
           "event_name": "One Championship - One on Prime Video 43",
@@ -904,6 +928,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Gabriela-Fujimoto-415749",
       "fight_history": [
         {
+          "opponent_name": "Macarena Aragon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Macarena-Aragon-430959",
+          "event_name": "One Championship - One on Prime Video 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-47-113345",
+          "date": "2026-09-04",
+          "result": "loss",
+          "method": "Submission (Scarf Hold Armlock)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "2:06"
+        },
+        {
           "opponent_name": "Jihin Radzuan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jihin-Radzuan-200255",
           "event_name": "One Championship - One on Prime Video 40",
@@ -1010,6 +1046,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Macarena-Aragon-430959",
       "fight_history": [
         {
+          "opponent_name": "Gabriela Fujimoto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriela-Fujimoto-415749",
+          "event_name": "One Championship - One on Prime Video 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-47-113345",
+          "date": "2026-09-04",
+          "result": "win",
+          "method": "Submission (Scarf Hold Armlock)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "2:06"
+        },
+        {
           "opponent_name": "Maria Clara Pereira",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maria-Clara-Pereira-437763",
           "event_name": "SFT 61 - King Kong vs. Blasco",
@@ -1115,6 +1163,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Hector-Almonacid-395145",
       "fight_history": [
+        {
+          "opponent_name": "Pedro Dantas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Dantas-397998",
+          "event_name": "One Championship - One on Prime Video 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-47-113345",
+          "date": "2026-09-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Facundo Puertas",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Facundo-Puertas-293513",
@@ -1269,6 +1329,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Pedro-Dantas-397998",
       "fight_history": [
+        {
+          "opponent_name": "Hector Almonacid",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hector-Almonacid-395145",
+          "event_name": "One Championship - One on Prime Video 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-47-113345",
+          "date": "2026-09-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Ibragim Dauev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibragim-Dauev-328797",
@@ -3822,58 +3894,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "One Championship - One Friday Fights 169",
-      "fighter1_name": "Sanzhar Mansurov",
-      "fighter2_name": "Ruslan Bulut",
-      "fight_finished": true,
-      "winner_name": "Sanzhar Mansurov",
-      "method": "Decision (Unanimous)",
-      "round": 3,
-      "time": "5:00",
-      "weight_class": "Flyweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 47",
-      "fighter1_name": "Ryohei Kurosawa",
-      "fighter2_name": "Fabio Henrique Dourado",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 47",
-      "fighter1_name": "Hector Almonacid",
-      "fighter2_name": "Pedro Dantas",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 47",
-      "fighter1_name": "Gabriela Fujimoto",
-      "fighter2_name": "Macarena Aragon",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Strawweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "One Championship - ONE Samurai 3",
       "fighter1_name": "Yuya Wakamatsu",
       "fighter2_name": "Willie van Rooyen",
@@ -4015,6 +4035,58 @@
       "weight_class": "Flyweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 47",
+      "fighter1_name": "Fabio Henrique Dourado",
+      "fighter2_name": "Ryohei Kurosawa",
+      "fight_finished": true,
+      "winner_name": "Fabio Henrique Dourado",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 47",
+      "fighter1_name": "Pedro Dantas",
+      "fighter2_name": "Hector Almonacid",
+      "fight_finished": true,
+      "winner_name": "Pedro Dantas",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 47",
+      "fighter1_name": "Macarena Aragon",
+      "fighter2_name": "Gabriela Fujimoto",
+      "fight_finished": true,
+      "winner_name": "Macarena Aragon",
+      "method": "Submission (Scarf Hold Armlock)",
+      "round": 2,
+      "time": "2:06",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 169",
+      "fighter1_name": "Sanzhar Mansurov",
+      "fighter2_name": "Ruslan Bulut",
+      "fight_finished": true,
+      "winner_name": "Sanzhar Mansurov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": false
     }
   ]
 }

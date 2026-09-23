@@ -1448,27 +1448,6 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/418101"
     },
     {
-      "name": "LFA 240 - Sanders vs. Gomez",
-      "date": "2026-08-28",
-      "start_time": "2026-08-28T00:00:00+00:00",
-      "event_location": "F&M Bank Arena, Clarksville, Tennessee, United States",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/891720"
-    },
-    {
-      "name": "LFA 241 - Pires vs Pereira",
-      "date": "2026-09-11",
-      "start_time": "2026-09-11T00:00:00+00:00",
-      "event_location": "Mineirinho Arena, Belo Horizonte, Minas Gerais, Brazil",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895206"
-    },
-    {
-      "name": "LFA 242 - Lozej vs. Bittencourt",
-      "date": "2026-09-18",
-      "start_time": "2026-09-18T00:00:00+00:00",
-      "event_location": "Mystic Lake Hotel & Casino, Prior Lake, Minnesota, United States",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892959"
-    },
-    {
       "name": "LFA 243 - Maximov vs. Santos",
       "date": "2026-10-09",
       "start_time": "2026-10-09T00:00:00+00:00",
@@ -1488,6 +1467,27 @@
       "start_time": "2026-10-30T00:00:00+00:00",
       "event_location": "Seneca Niagara Resort and Casino, Niagara Falls, New York, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896910"
+    },
+    {
+      "name": "LFA 242 - Lozej vs. Bittencourt",
+      "date": "2026-09-18",
+      "start_time": "2026-09-18T00:00:00+00:00",
+      "event_location": "Mystic Lake Hotel & Casino, Prior Lake, Minnesota, United States",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/892959"
+    },
+    {
+      "name": "LFA 241 - Pires vs Pereira",
+      "date": "2026-09-11",
+      "start_time": "2026-09-11T00:00:00+00:00",
+      "event_location": "Mineirinho Arena, Belo Horizonte, Minas Gerais, Brazil",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895206"
+    },
+    {
+      "name": "LFA 240 - Sanders vs. Gomez",
+      "date": "2026-08-28",
+      "start_time": "2026-08-28T00:00:00+00:00",
+      "event_location": "F&M Bank Arena, Clarksville, Tennessee, United States",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/891720"
     }
   ],
   "fighters": [
@@ -3425,6 +3425,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Dedrek-Sanders-216647",
       "fight_history": [
         {
+          "opponent_name": "Luis Gomez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luis-Gomez-207041",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Luke Wilson",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Nikolay Kiosse",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nikolay-Kiosse-349443",
           "event_name": "LFA 226 - Allakhverdiev vs. Kropschot",
@@ -3626,6 +3638,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Luis-Gomez-207041",
       "fight_history": [
+        {
+          "opponent_name": "Dedrek Sanders",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dedrek-Sanders-216647",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Luke Wilson",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Chris Guariglia",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chris-Guariglia-286195",
@@ -3840,6 +3864,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Elvis-Silva-137371",
       "fight_history": [
+        {
+          "opponent_name": "Akbarjon Islomboev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Akbarjon-Islomboev-395432",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Eric McMahon",
+          "round": 1,
+          "time": "4:13"
+        },
         {
           "opponent_name": "Jonas Magard",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jonas-Magard-99955",
@@ -4151,6 +4187,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Akbarjon-Islomboev-395432",
       "fight_history": [
         {
+          "opponent_name": "Elvis Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elvis-Silva-137371",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Eric McMahon",
+          "round": 1,
+          "time": "4:13"
+        },
+        {
           "opponent_name": "Irmeson Cavalcante de Oliveira",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Irmeson-Cavalcante-de-Oliveira-30920",
           "event_name": "Mangu Professional League - Mangu MMA 2",
@@ -4281,6 +4329,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Andrew-Stewart-389322",
       "fight_history": [
         {
+          "opponent_name": "Shane Sobnosky",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shane-Sobnosky-165273",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "KO (Punch and Elbows)",
+          "referee": "Eric McMahon",
+          "round": 1,
+          "time": "0:27"
+        },
+        {
           "opponent_name": "Zayne Havener",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zayne-Havener-388083",
           "event_name": "LFA 235 - Stewart vs. Havener",
@@ -4386,6 +4446,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Shane-Sobnosky-165273",
       "fight_history": [
+        {
+          "opponent_name": "Andrew Stewart",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andrew-Stewart-389322",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "KO (Punch and Elbows)",
+          "referee": "Eric McMahon",
+          "round": 1,
+          "time": "0:27"
+        },
         {
           "opponent_name": "Steven Jones",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Steven-Jones-266801",
@@ -4873,6 +4945,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Alexander-Schenk-323075",
       "fight_history": [
         {
+          "opponent_name": "Francisco Hernandez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Francisco-Hernandez-300791",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Travis Lawrence",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Jess Martinez",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jess-Martinez-176917",
           "event_name": "Anthony Pettis FC 22 - New Mexico Fight Night 3",
@@ -5051,6 +5135,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Francisco-Hernandez-300791",
       "fight_history": [
         {
+          "opponent_name": "Alexander Schenk",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Schenk-323075",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Travis Lawrence",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Delio Lopez",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Delio-Lopez-396728",
           "event_name": "Empire MMA 10 - Hernandez vs. Lopez",
@@ -5145,6 +5241,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Finn-Martin-397635",
       "fight_history": [
         {
+          "opponent_name": "Mataeo Garner",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mataeo-Garner-351271",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Eric McMahon",
+          "round": 1,
+          "time": "4:17"
+        },
+        {
           "opponent_name": "Chris Conners",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chris-Conners-391278",
           "event_name": "LFA 230 - Bartling vs. Cleveland",
@@ -5178,6 +5286,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mataeo-Garner-351271",
       "fight_history": [
+        {
+          "opponent_name": "Finn Martin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Finn-Martin-397635",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Eric McMahon",
+          "round": 1,
+          "time": "4:17"
+        },
         {
           "opponent_name": "Jackson McVey",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jackson-McVey-349347",
@@ -5341,6 +5461,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Austin-Miller-386215",
       "fight_history": [
         {
+          "opponent_name": "Quadarrius McGinnis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Quadarrius-McGinnis-308109",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Luke Wilson",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Ethan Moore",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ethan-Moore-404885",
           "event_name": "LFA 230 - Bartling vs. Cleveland",
@@ -5386,6 +5518,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Quadarrius-McGinnis-308109",
       "fight_history": [
+        {
+          "opponent_name": "Austin Miller",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Austin-Miller-386215",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Luke Wilson",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Dustin Dipuma",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dustin-Dipuma-371129",
@@ -5445,6 +5589,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Myles-Dillahunty-406140",
       "fight_history": [
         {
+          "opponent_name": "Sam Fournier",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sam-Fournier-449118",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Travis Lawrence",
+          "round": 1,
+          "time": "1:28"
+        },
+        {
           "opponent_name": "Pedro Lay Jr.",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Lay-Jr-451628",
           "event_name": "NFC 186 - National Fighting Championship 186",
@@ -5478,6 +5634,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Sam-Fournier-449118",
       "fight_history": [
+        {
+          "opponent_name": "Myles Dillahunty",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Myles-Dillahunty-406140",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Travis Lawrence",
+          "round": 1,
+          "time": "1:28"
+        },
         {
           "opponent_name": "Kyle Clark",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyle-Clark-412370",
@@ -5593,64 +5761,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Chuy-Rodriguez-434645",
       "fight_history": [
         {
-          "opponent_name": "Eduardo Ramirez",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eduardo-Ramirez-468097",
-          "event_name": "AFS 33 - Aries Fight Series 33",
-          "event_sherdog_url": "https://www.sherdog.com/events/AFS-33-Aries-Fight-Series-33-109538",
-          "date": "2025-11-14",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
-          "round": 1,
-          "time": "2:55"
-        },
-        {
-          "opponent_name": "Jamal Swain",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jamal-Swain-440607",
-          "event_name": "Blue Collar Fight Club - Clash at the Coosa",
-          "event_sherdog_url": "https://www.sherdog.com/events/Blue-Collar-Fight-Club-Clash-at-the-Coosa-108819",
-          "date": "2025-07-12",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Brandon Stinson",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brandon-Stinson-379383",
-          "event_name": "AFS 26 - Aries Fight Series 26",
-          "event_sherdog_url": "https://www.sherdog.com/events/AFS-26-Aries-Fight-Series-26-102880",
-          "date": "2024-05-10",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
-          "round": 1,
-          "time": "2:48"
-        },
-        {
-          "opponent_name": "Kyle Castelein",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyle-Castelein-411367",
-          "event_name": "AFS 24 - Aries Fight Series 24",
-          "event_sherdog_url": "https://www.sherdog.com/events/AFS-24-Aries-Fight-Series-24-101609",
-          "date": "2024-03-08",
-          "result": "loss",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "",
-          "round": 3,
-          "time": "2:21"
-        },
-        {
-          "opponent_name": "Tevin Beene",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tevin-Beene-434646",
-          "event_name": "AFS 20 - Aries Fight Series 20",
-          "event_sherdog_url": "https://www.sherdog.com/events/AFS-20-Aries-Fight-Series-20-98410",
-          "date": "2023-08-11",
+          "opponent_name": "Jarred Gonzales",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jarred-Gonzales-371782",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
           "result": "win",
           "method": "Submission (Guillotine Choke)",
-          "referee": "",
+          "referee": "Travis Lawrence",
           "round": 1,
-          "time": "2:02"
+          "time": "1:30"
         }
       ]
     },
@@ -5663,124 +5783,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Jarred-Gonzales-371782",
       "fight_history": [
         {
-          "opponent_name": "Sean Clabough",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sean-Clabough-433019",
-          "event_name": "C4 Fighting Championships - Rival FC: Pro-Am MMA and Kickboxing",
-          "event_sherdog_url": "https://www.sherdog.com/events/C4-Fighting-Championships-Rival-FC-ProAm-MMA-and-Kickboxing-112794",
-          "date": "2026-05-09",
-          "result": "loss",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "Eric Davis",
-          "round": 2,
-          "time": "0:30"
-        },
-        {
-          "opponent_name": "Manny Falcasantos",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Manny-Falcasantos-424167",
-          "event_name": "C4 Fighting Championships - Rival FC: Beacon Beatdown 3",
-          "event_sherdog_url": "https://www.sherdog.com/events/C4-Fighting-Championships-Rival-FC-Beacon-Beatdown-3-107539",
-          "date": "2025-04-19",
-          "result": "loss",
-          "method": "TKO (Strikes)",
-          "referee": "Caleb Miller",
-          "round": 2,
-          "time": "1:01"
-        },
-        {
-          "opponent_name": "Liam Hamill",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Liam-Hamill-388814",
-          "event_name": "HRMMA - Hardrock MMA 122: The Return",
-          "event_sherdog_url": "https://www.sherdog.com/events/HRMMA-Hardrock-MMA-122-The-Return-103540",
-          "date": "2024-08-03",
+          "opponent_name": "Chuy Rodriguez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chuy-Rodriguez-434645",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
           "result": "loss",
           "method": "Submission (Guillotine Choke)",
-          "referee": "",
+          "referee": "Travis Lawrence",
           "round": 1,
-          "time": "1:14"
-        },
-        {
-          "opponent_name": "Kelton Lance Dial",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kelton-Lance-Dial-433893",
-          "event_name": "C4 Fighting Championships - Rival FC: Beacon Beatdown",
-          "event_sherdog_url": "https://www.sherdog.com/events/C4-Fighting-Championships-Rival-FC-Beacon-Beatdown-96741",
-          "date": "2023-03-04",
-          "result": "win",
-          "method": "Submission",
-          "referee": "",
-          "round": 1,
-          "time": "0:35"
-        },
-        {
-          "opponent_name": "Quintin Richards",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Quintin-Richards-386844",
-          "event_name": "Nightmare Promotions - ECC Cage Wars 4",
-          "event_sherdog_url": "https://www.sherdog.com/events/Nightmare-Promotions-ECC-Cage-Wars-4-96042",
-          "date": "2023-01-28",
-          "result": "loss",
-          "method": "Submission (Peruvian Necktie)",
-          "referee": "",
-          "round": 2,
-          "time": "2:06"
-        },
-        {
-          "opponent_name": "Ryan Webb",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Webb-46927",
-          "event_name": "Nightmare Promotions - ECC Cage Wars 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/Nightmare-Promotions-ECC-Cage-Wars-2-94953",
-          "date": "2022-09-24",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
-          "round": 3,
-          "time": "2:23"
-        },
-        {
-          "opponent_name": "Jerry Arreola",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jerry-Arreola-380012",
-          "event_name": "Elite Fight Night - EFN: Title Time",
-          "event_sherdog_url": "https://www.sherdog.com/events/Elite-Fight-Night-EFN-Title-Time-94137",
-          "date": "2022-08-20",
-          "result": "loss",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "1:58"
-        },
-        {
-          "opponent_name": "Arvin Mills",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arvin-Mills-259553",
-          "event_name": "Hub City MMA - Fight Night 4",
-          "event_sherdog_url": "https://www.sherdog.com/events/Hub-City-MMA-Fight-Night-4-93647",
-          "date": "2022-05-07",
-          "result": "win",
-          "method": "Submission",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Wallace McCoy Jr.",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Wallace-McCoy-Jr-390890",
-          "event_name": "C4 Fighting Championships 8 - War In The Cage 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/C4-Fighting-Championships-8-War-In-The-Cage-2-89751",
-          "date": "2021-07-24",
-          "result": "win",
-          "method": "KO",
-          "referee": "",
-          "round": 1,
-          "time": "1:48"
-        },
-        {
-          "opponent_name": "Alex Nuanez",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Nuanez-323073",
-          "event_name": "JICFC - Johnathan Ivey's Cage Fighting Championships 5: Fright Fights",
-          "event_sherdog_url": "https://www.sherdog.com/events/JICFC-Johnathan-Iveys-Cage-Fighting-Championships-5-Fright-Fights-71555",
-          "date": "2018-10-20",
-          "result": "loss",
-          "method": "Submission",
-          "referee": "",
-          "round": 1,
-          "time": "1:28"
+          "time": "1:30"
         }
       ]
     },
@@ -5793,124 +5805,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Kue-Htoo-384380",
       "fight_history": [
         {
-          "opponent_name": "Jordan Gast",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jordan-Gast-400993",
-          "event_name": "Future of Fighting 9 - 4th Street Live!",
-          "event_sherdog_url": "https://www.sherdog.com/events/Future-of-Fighting-9-4th-Street-Live-110174",
-          "date": "2025-12-06",
+          "opponent_name": "Ray Taylor",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ray-Taylor-466412",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
           "result": "win",
           "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "0:31"
-        },
-        {
-          "opponent_name": "Winston Acosta",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Winston-Acosta-442045",
-          "event_name": "AFS 31 - Aries Fight Series 31",
-          "event_sherdog_url": "https://www.sherdog.com/events/AFS-31-Aries-Fight-Series-31-107402",
-          "date": "2025-05-03",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
-          "round": 1,
-          "time": "0:14"
-        },
-        {
-          "opponent_name": "Chris Capshaw",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chris-Capshaw-408205",
-          "event_name": "Aries Fight Series - Nashville Underground",
-          "event_sherdog_url": "https://www.sherdog.com/events/Aries-Fight-Series-Nashville-Underground-105699",
-          "date": "2024-12-21",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Dylan Booker",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dylan-Booker-405887",
-          "event_name": "Aries Fight Series - Nashville Underground",
-          "event_sherdog_url": "https://www.sherdog.com/events/Aries-Fight-Series-Nashville-Underground-103816",
-          "date": "2024-07-13",
-          "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 5,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Quinton Sims",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Quinton-Sims-383844",
-          "event_name": "AFS 21 - Aries Fight Series 21",
-          "event_sherdog_url": "https://www.sherdog.com/events/AFS-21-Aries-Fight-Series-21-99704",
-          "date": "2023-10-06",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "0:50"
-        },
-        {
-          "opponent_name": "Noah Basinger",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Noah-Basinger-421204",
-          "event_name": "AFS 19 - Aries Fight Series 19",
-          "event_sherdog_url": "https://www.sherdog.com/events/AFS-19-Aries-Fight-Series-19-98409",
-          "date": "2023-07-29",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Michael Robinson",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michael-Robinson-397637",
-          "event_name": "VFC - Valor Underground 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/VFC-Valor-Underground-2-91672",
-          "date": "2021-11-20",
-          "result": "win",
-          "method": "TKO (Strikes)",
-          "referee": "David Ferguson",
-          "round": 1,
-          "time": "0:25"
-        },
-        {
-          "opponent_name": "Josh Delgadillo",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Josh-Delgadillo-337847",
-          "event_name": "VFC - Valor: Underground",
-          "event_sherdog_url": "https://www.sherdog.com/events/VFC-Valor-Underground-89216",
-          "date": "2021-07-10",
-          "result": "loss",
-          "method": "Submission (Triangle Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "0:57"
-        },
-        {
-          "opponent_name": "Joel Mesa",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joel-Mesa-388198",
-          "event_name": "PC 3 - Primal Combat 3",
-          "event_sherdog_url": "https://www.sherdog.com/events/PC-3-Primal-Combat-3-89483",
-          "date": "2021-06-12",
-          "result": "win",
-          "method": "TKO (Strikes)",
-          "referee": "",
-          "round": 1,
-          "time": "1:11"
-        },
-        {
-          "opponent_name": "Brandon Serrano",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brandon-Serrano-384381",
-          "event_name": "PC 2 - Primal Combat 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/PC-2-Primal-Combat-2-88691",
-          "date": "2021-03-12",
-          "result": "win",
-          "method": "Submission (Choke)",
-          "referee": "",
+          "referee": "Luke Wilson",
           "round": 2,
-          "time": "0:47"
+          "time": "3:51"
         }
       ]
     },
@@ -5923,76 +5827,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ray-Taylor-466412",
       "fight_history": [
         {
-          "opponent_name": "Dominic Savoca",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dominic-Savoca-419799",
-          "event_name": "Caged Thunder 39 - Fight Night in the Land",
-          "event_sherdog_url": "https://www.sherdog.com/events/Caged-Thunder-39-Fight-Night-in-the-Land-112294",
-          "date": "2026-05-23",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "Chad Trukovich",
-          "round": 3,
-          "time": "0:33"
-        },
-        {
-          "opponent_name": "Frank Lasota",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Frank-Lasota-459093",
-          "event_name": "OCL - Ohio Combat League 44",
-          "event_sherdog_url": "https://www.sherdog.com/events/OCL-Ohio-Combat-League-44-111216",
-          "date": "2026-03-07",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "Gary Copeland",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Sean Burns",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sean-Burns-476004",
-          "event_name": "OCL - Ohio Combat League 42",
-          "event_sherdog_url": "https://www.sherdog.com/events/OCL-Ohio-Combat-League-42-110886",
-          "date": "2025-12-20",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "Brent Balik",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Robi Cvitic",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Robi-Cvitic-437641",
-          "event_name": "OCL - Ohio Combat League 37",
-          "event_sherdog_url": "https://www.sherdog.com/events/OCL-Ohio-Combat-League-37-107205",
-          "date": "2025-04-19",
+          "opponent_name": "Kue Htoo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kue-Htoo-384380",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
           "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "Tony Sigmund",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Tyler Silverthorn",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tyler-Silverthorn-374638",
-          "event_name": "OCL - Ohio Combat League 36",
-          "event_sherdog_url": "https://www.sherdog.com/events/OCL-Ohio-Combat-League-36-106059",
-          "date": "2025-03-01",
-          "result": "win",
-          "method": "Submission (Shoulder Choke)",
-          "referee": "Gary Copeland",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Luke Wilson",
           "round": 2,
-          "time": "2:00"
-        },
-        {
-          "opponent_name": "Frank Lasota",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Frank-Lasota-459093",
-          "event_name": "OCL - Ohio Combat League 32",
-          "event_sherdog_url": "https://www.sherdog.com/events/OCL-Ohio-Combat-League-32-103553",
-          "date": "2024-11-09",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "Gary Copeland",
-          "round": 3,
-          "time": "3:00"
+          "time": "3:51"
         }
       ]
     },
@@ -6004,6 +5848,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Dakota-Ballard-494148",
       "fight_history": [
+        {
+          "opponent_name": "Triston Rutherford",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Triston-Rutherford-440261",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Eric McMahon",
+          "round": 2,
+          "time": "1:54"
+        },
         {
           "opponent_name": "Kellen Battles",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kellen-Battles-503030",
@@ -6050,6 +5906,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Triston-Rutherford-440261",
       "fight_history": [
+        {
+          "opponent_name": "Dakota Ballard",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dakota-Ballard-494148",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Eric McMahon",
+          "round": 2,
+          "time": "1:54"
+        },
         {
           "opponent_name": "Theodore Bostert",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Theodore-Bostert-499912",
@@ -6145,6 +6013,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ethan-Cunningham-477906",
       "fight_history": [
         {
+          "opponent_name": "Hector Allatore",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hector-Allatore-469549",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Travis Lawrence",
+          "round": 1,
+          "time": "2:09"
+        },
+        {
           "opponent_name": "John Morrison",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/John-Morrison-479899",
           "event_name": "SFC - Summit Fighting Championships 50",
@@ -6179,6 +6059,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Hector-Allatore-469549",
       "fight_history": [
         {
+          "opponent_name": "Ethan Cunningham",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ethan-Cunningham-477906",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Travis Lawrence",
+          "round": 1,
+          "time": "2:09"
+        },
+        {
           "opponent_name": "Darius Crutcher",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Darius-Crutcher-453925",
           "event_name": "Agoge Fight League - AFL 7: Entering the Agoge",
@@ -6200,6 +6092,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Randy-Shores-Jr-492834",
       "fight_history": [
+        {
+          "opponent_name": "Ernesto Pinuelas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ernesto-Pinuelas-453937",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Luke Wilson",
+          "round": 2,
+          "time": "0:56"
+        },
         {
           "opponent_name": "Don Green",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Don-Green-499021",
@@ -6246,6 +6150,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ernesto-Pinuelas-453937",
       "fight_history": [
+        {
+          "opponent_name": "Randy Shores Jr.",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Randy-Shores-Jr-492834",
+          "event_name": "LFA 240 - Sanders vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-240-Sanders-vs-Gomez-113718",
+          "date": "2026-08-28",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Luke Wilson",
+          "round": 2,
+          "time": "0:56"
+        },
         {
           "opponent_name": "Austin Little",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Austin-Little-424168",
@@ -6304,6 +6220,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Vinicius-Pires-208133",
       "fight_history": [
+        {
+          "opponent_name": "Rafael Pereira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafael-Pereira-179439",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Fernando Portella",
+          "round": 2,
+          "time": "4:50"
+        },
         {
           "opponent_name": "Tawan Regis Ribeiro",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tawan-Regis-Ribeiro-402745",
@@ -6494,6 +6422,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Rafael-Pereira-179439",
       "fight_history": [
+        {
+          "opponent_name": "Vinicius Pires",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vinicius-Pires-208133",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Fernando Portella",
+          "round": 2,
+          "time": "4:50"
+        },
         {
           "opponent_name": "Lionel Abojer",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lionel-Abojer-323551",
@@ -6732,6 +6672,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Carlos-Soares-143863",
       "fight_history": [
+        {
+          "opponent_name": "Gustavo Pintos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gustavo-Pintos-412780",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Joao Claudio Soares",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Anderson Leal",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anderson-Leal-435048",
@@ -6983,6 +6935,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Gustavo-Pintos-412780",
       "fight_history": [
         {
+          "opponent_name": "Carlos Soares",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlos-Soares-143863",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Joao Claudio Soares",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Erick Visconde",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erick-Visconde-265709",
           "event_name": "LFA 232 - Visconde vs. Pintos",
@@ -7125,6 +7089,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Neemias-Santana-223047",
       "fight_history": [
         {
+          "opponent_name": "Marcos Silva do Nascimento",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcos-Silva-do-Nascimento-237079",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Osiris Maia",
+          "round": 2,
+          "time": "2:50"
+        },
+        {
           "opponent_name": "Ilian Bouafia",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ilian-Bouafia-389398",
           "event_name": "Dana White's Contender Series - Contender Series 2025: Week 1",
@@ -7266,6 +7242,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Marcos-Silva-do-Nascimento-237079",
       "fight_history": [
+        {
+          "opponent_name": "Neemias Santana",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Neemias-Santana-223047",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Osiris Maia",
+          "round": 2,
+          "time": "2:50"
+        },
         {
           "opponent_name": "Bruno Vinicius Santos Da Silva",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bruno-Vinicius-Santos-Da-Silva-389057",
@@ -7825,6 +7813,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Gustavo-Rocha-275831",
       "fight_history": [
         {
+          "opponent_name": "Felipe Rosa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Felipe-Rosa-496193",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Fernando Portella",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Maicon Patricio de Jesus",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maicon-Patricio-de-Jesus-361937",
           "event_name": "LFA 234 - Fernando vs. Soares",
@@ -7931,6 +7931,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Felipe-Rosa-496193",
       "fight_history": [
         {
+          "opponent_name": "Gustavo Rocha",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gustavo-Rocha-275831",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Fernando Portella",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Rayan Kadosoe",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rayan-Kadosoe-402175",
           "event_name": "LFA 238 - Distrito #1",
@@ -7988,6 +8000,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Raiane-Vinuto-386143",
       "fight_history": [
+        {
+          "opponent_name": "Marina Monteiro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marina-Monteiro-426335",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Osiris Maia",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Laura Fontoura",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Laura-Fontoura-300005",
@@ -8070,6 +8094,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Marina-Monteiro-426335",
       "fight_history": [
+        {
+          "opponent_name": "Raiane Vinuto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Raiane-Vinuto-386143",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Osiris Maia",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Taynara Silva",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taynara-Silva-222113",
@@ -8164,6 +8200,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Eduardo-Fiuza-Dutra-451088",
       "fight_history": [
+        {
+          "opponent_name": "Julio Vinicius Assuncao",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Julio-Vinicius-Assuncao-176585",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Joao Claudio Soares",
+          "round": 2,
+          "time": "2:07"
+        },
         {
           "opponent_name": "Stefan Magalhaes",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Stefan-Magalhaes-394699",
@@ -10237,6 +10285,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Devon-Lozej-319677",
       "fight_history": [
         {
+          "opponent_name": "Davi Bittencourt",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Davi-Bittencourt-263121",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "KO (Head Kick)",
+          "referee": "Rob Madrigal",
+          "round": 2,
+          "time": "4:13"
+        },
+        {
           "opponent_name": "Ernesto Ibarra",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ernesto-Ibarra-203957",
           "event_name": "LFA 231 - Lozej vs. Ibarra",
@@ -10390,6 +10450,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Davi-Bittencourt-263121",
       "fight_history": [
+        {
+          "opponent_name": "Devon Lozej",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Devon-Lozej-319677",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "KO (Head Kick)",
+          "referee": "Rob Madrigal",
+          "round": 2,
+          "time": "4:13"
+        },
         {
           "opponent_name": "Adenysson Alves",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adenysson-Alves-387255",
@@ -10640,6 +10712,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Shuya-Kamikubo-176663",
       "fight_history": [
+        {
+          "opponent_name": "Marcos Breno",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcos-Breno-198717",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Rob Madrigal",
+          "round": 1,
+          "time": "0:21"
+        },
         {
           "opponent_name": "Rafael do Nascimento",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafael-do-Nascimento-275059",
@@ -11045,6 +11129,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Steve-Collins-392702",
       "fight_history": [
         {
+          "opponent_name": "Kevin Carrier",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kevin-Carrier-168857",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Chris Klavetter",
+          "round": 2,
+          "time": "0:33"
+        },
+        {
           "opponent_name": "Cole Faust",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cole-Faust-338185",
           "event_name": "LFA 231 - Lozej vs. Ibarra",
@@ -11138,6 +11234,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kevin-Carrier-168857",
       "fight_history": [
+        {
+          "opponent_name": "Steve Collins",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Steve-Collins-392702",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Chris Klavetter",
+          "round": 2,
+          "time": "0:33"
+        },
         {
           "opponent_name": "Zaki Mohsin",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zaki-Mohsin-387007",
@@ -11233,6 +11341,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Kelton-Sneve-318045",
       "fight_history": [
         {
+          "opponent_name": "Julio Cesar Chaves",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Julio-Cesar-Chaves-162089",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Chris Klavetter",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Cedric Katambwa",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cedric-Katambwa-251665",
           "event_name": "LFA 231 - Lozej vs. Ibarra",
@@ -11326,6 +11446,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Julio-Cesar-Chaves-162089",
       "fight_history": [
+        {
+          "opponent_name": "Kelton Sneve",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kelton-Sneve-318045",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Chris Klavetter",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Sitik Muduev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sitik-Muduev-243137",
@@ -11529,6 +11661,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Marcus-Nash-413804",
       "fight_history": [
         {
+          "opponent_name": "Willer Alves Borges Junior",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Willer-Alves-Borges-Junior-386495",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Josh Stewart",
+          "round": 1,
+          "time": "2:39"
+        },
+        {
           "opponent_name": "Moses Afoa",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Moses-Afoa-222763",
           "event_name": "LFA 236 - Ikei vs. Parra",
@@ -11623,6 +11767,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Willer-Alves-Borges-Junior-386495",
       "fight_history": [
         {
+          "opponent_name": "Marcus Nash",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcus-Nash-413804",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Josh Stewart",
+          "round": 1,
+          "time": "2:39"
+        },
+        {
           "opponent_name": "Santiago Giraldo Taborda",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Santiago-Giraldo-Taborda-453808",
           "event_name": "Hyperstrike FC 2 - Leal vs. Sausser",
@@ -11681,6 +11837,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Elias-Rodriguez-392625",
       "fight_history": [
         {
+          "opponent_name": "Romello Union",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Romello-Union-433883",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Josh Stewart",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Nick Fields",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nick-Fields-365529",
           "event_name": "LFA 230 - Bartling vs. Cleveland",
@@ -11738,6 +11906,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Romello-Union-433883",
       "fight_history": [
+        {
+          "opponent_name": "Elias Rodriguez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elias-Rodriguez-392625",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Josh Stewart",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Soufiane Kabil",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Soufiane-Kabil-397259",
@@ -11809,6 +11989,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Mitchell-Wilson-388646",
       "fight_history": [
         {
+          "opponent_name": "Allen Holloway",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Allen-Holloway-421934",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Rob Madrigal",
+          "round": 1,
+          "time": "4:44"
+        },
+        {
           "opponent_name": "Sedric Richard",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sedric-Richard-426648",
           "event_name": "LFA 224 - Adams vs. Bilalov",
@@ -11842,6 +12034,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Allen-Holloway-421934",
       "fight_history": [
+        {
+          "opponent_name": "Mitchell Wilson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mitchell-Wilson-388646",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Rob Madrigal",
+          "round": 1,
+          "time": "4:44"
+        },
         {
           "opponent_name": "Jake Hixenbaugh",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jake-Hixenbaugh-289919",
@@ -12041,6 +12245,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Augustine-Hahn-413678",
       "fight_history": [
         {
+          "opponent_name": "Luis Unzueta",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luis-Unzueta-342111",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Chris Klavetter",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Vicente Flores Jr.",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vicente-Flores-Jr-331105",
           "event_name": "Ignite Fights 111 - Blockhus vs. Smerillo",
@@ -12062,6 +12278,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Luis-Unzueta-342111",
       "fight_history": [
+        {
+          "opponent_name": "Augustine Hahn",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Augustine-Hahn-413678",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Chris Klavetter",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Aaron Skipitaris",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aaron-Skipitaris-414654",
@@ -12130,6 +12358,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Brett-Bye-403485",
       "fight_history": [
         {
+          "opponent_name": "Sukhrob Iusupov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sukhrob-Iusupov-471670",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Josh Stewart",
+          "round": 1,
+          "time": "2:11"
+        },
+        {
           "opponent_name": "Taylor Michels",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taylor-Michels-430946",
           "event_name": "Professional Fighters League - PFL Sioux Falls: Storley vs. Zendeli",
@@ -12151,6 +12391,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Xavier-Rosenbloom-429530",
       "fight_history": [
+        {
+          "opponent_name": "Gift Harding",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gift-Harding-475148",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Dalan Jones",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dalan-Jones-436346",
@@ -12209,6 +12461,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Gift-Harding-475148",
       "fight_history": [
+        {
+          "opponent_name": "Xavier Rosenbloom",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Xavier-Rosenbloom-429530",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Cole Lafreniere",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cole-Lafreniere-455136",
@@ -12279,6 +12543,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Cadin-Vowels-488377",
       "fight_history": [
+        {
+          "opponent_name": "Kaden Moon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kaden-Moon-499093",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "2:08"
+        },
         {
           "opponent_name": "Angelo Barron",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Angelo-Barron-431562",
@@ -12420,6 +12696,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Gunnar-Nelson-495620",
       "fight_history": [
         {
+          "opponent_name": "Kyler Dunn",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyler-Dunn-430049",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:35"
+        },
+        {
           "opponent_name": "Erick Medrano",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erick-Medrano-466205",
           "event_name": "LFA 231 - Lozej vs. Ibarra",
@@ -12441,6 +12729,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kyler-Dunn-430049",
       "fight_history": [
+        {
+          "opponent_name": "Gunnar Nelson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gunnar-Nelson-495620",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:35"
+        },
         {
           "opponent_name": "Tyler Renfro",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tyler-Renfro-450014",
@@ -12536,6 +12836,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ricky-Rodriguez-483623",
       "fight_history": [
         {
+          "opponent_name": "Trey White",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Trey-White-468558",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:13"
+        },
+        {
           "opponent_name": "Nick Rivers",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nick-Rivers-477559",
           "event_name": "Throne MMA 21 - Hart vs. Huckbody",
@@ -12569,6 +12881,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Trey-White-468558",
       "fight_history": [
+        {
+          "opponent_name": "Ricky Rodriguez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ricky-Rodriguez-483623",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:13"
+        },
         {
           "opponent_name": "Alex Zapata",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Zapata-368561",
@@ -31035,6 +31359,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Noah-Gasho-413082",
       "fight_history": [
         {
+          "opponent_name": "Adryen Spinks",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adryen-Spinks-205533",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Rob Madrigal",
+          "round": 1,
+          "time": "2:32"
+        },
+        {
           "opponent_name": "Miljan Djukanovic",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Miljan-Djukanovic-380009",
           "event_name": "LFA 231 - Lozej vs. Ibarra",
@@ -43075,6 +43411,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Tyree-Overton-389405",
       "fight_history": [
+        {
+          "opponent_name": "Marcelis Edwards",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcelis-Edwards-395524",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:24"
+        },
         {
           "opponent_name": "Pedro Trujillo",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Trujillo-398927",
@@ -220103,6 +220451,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Marcos-Breno-198717",
       "fight_history": [
+        {
+          "opponent_name": "Shuya Kamikubo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shuya-Kamikubo-176663",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Rob Madrigal",
+          "round": 1,
+          "time": "0:21"
+        },
         {
           "opponent_name": "Raufeon Stots",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Raufeon-Stots-175345",
@@ -407990,6 +408350,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Julio-Vinicius-Assuncao-176585",
       "fight_history": [
         {
+          "opponent_name": "Eduardo Fiuza Dutra",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eduardo-Fiuza-Dutra-451088",
+          "event_name": "LFA 241 - Pires vs Pereira",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-241-Pires-vs-Pereira-114078",
+          "date": "2026-09-11",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Joao Claudio Soares",
+          "round": 2,
+          "time": "2:07"
+        },
+        {
           "opponent_name": "Paulo Nogueira",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paulo-Nogueira-415901",
           "event_name": "SFT 56 - King Kong vs. Soldado",
@@ -408130,6 +408502,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Adryen-Spinks-205533",
       "fight_history": [
         {
+          "opponent_name": "Noah Gasho",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Noah-Gasho-413082",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Rob Madrigal",
+          "round": 1,
+          "time": "2:32"
+        },
+        {
           "opponent_name": "Jeong Joo Choi",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jeong-Joo-Choi-312047",
           "event_name": "FCOC - Fight Club OC",
@@ -408163,6 +408547,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Marcelis-Edwards-395524",
       "fight_history": [
+        {
+          "opponent_name": "Tyree Overton",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tyree-Overton-389405",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "loss",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:24"
+        },
         {
           "opponent_name": "Joshua Holtz",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joshua-Holtz-369234",
@@ -408757,6 +409153,28 @@
           "referee": "Tony Sigmund",
           "round": 1,
           "time": "1:14"
+        }
+      ]
+    },
+    {
+      "name": "Sukhrob Iusupov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sukhrob-Iusupov-471670",
+      "fight_history": [
+        {
+          "opponent_name": "Brett Bye",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brett-Bye-403485",
+          "event_name": "LFA 242 - Lozej vs. Bittencourt",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-242-Lozej-vs-Bittencourt-113926",
+          "date": "2026-09-18",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Josh Stewart",
+          "round": 1,
+          "time": "2:11"
         }
       ]
     }
@@ -437319,552 +437737,6 @@
       "weight_class": "Flyweight"
     },
     {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Dedrek Sanders",
-      "fighter2_name": "Luis Gomez",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Elvis Silva",
-      "fighter2_name": "Akbarjon Islomboev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Andrew Stewart",
-      "fighter2_name": "Shane Sobnosky",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Alexander Schenk",
-      "fighter2_name": "Francisco Hernandez",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "152lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Finn Martin",
-      "fighter2_name": "Mataeo Garner",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Light Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Austin Miller",
-      "fighter2_name": "Quadarrius McGinnis",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Myles Dillahunty",
-      "fighter2_name": "Sam Fournier",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Light Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Darius Parker",
-      "fighter2_name": "Rakim Talley",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "195lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Kue Htoo",
-      "fighter2_name": "Ray Taylor",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Chuy Rodriguez",
-      "fighter2_name": "Jarred Gonzales",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "160lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Dakota Ballard",
-      "fighter2_name": "Triston Rutherford",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Ethan Cunningham",
-      "fighter2_name": "Hector Allatore",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 240 - Sanders vs. Gomez",
-      "fighter1_name": "Randy Shores Jr.",
-      "fighter2_name": "Ernesto Pinuelas",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Vinicius Pires",
-      "fighter2_name": "Rafael Pereira",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
-      "weight_class": "Bantamweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Carlos Soares",
-      "fighter2_name": "Gustavo Pintos",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Neemias Santana",
-      "fighter2_name": "Marcos Silva do Nascimento",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Gustavo Rocha",
-      "fighter2_name": "Felipe Rosa",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Raiane Vinuto",
-      "fighter2_name": "Marina Monteiro",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
-      "weight_class": "Strawweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Eduardo Fiuza Dutra",
-      "fighter2_name": "Julio Vinicius Assuncao",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Thalyta Silva",
-      "fighter2_name": "Monica Carvalho Fontes Rodrigues",
-      "fight_finished": true,
-      "winner_name": "Thalyta Silva",
-      "method": "TKO (Punches)",
-      "round": 1,
-      "time": "2:53",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Marcos Silva",
-      "fighter2_name": "Victor Firmino Santos",
-      "fight_finished": true,
-      "winner_name": "Marcos Silva",
-      "method": "Submission (Rear-Naked Choke)",
-      "round": 1,
-      "time": "4:40",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Salomao Albuquerque",
-      "fighter2_name": "Emerson Richard",
-      "fight_finished": true,
-      "winner_name": "Salomao Albuquerque",
-      "method": "TKO (Punches)",
-      "round": 2,
-      "time": "0:53",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Fabio Perpetua",
-      "fighter2_name": "Breno Yuri Santos",
-      "fight_finished": true,
-      "winner_name": "Fabio Perpetua",
-      "method": "Decision (Split)",
-      "round": 3,
-      "time": "5:00",
-      "weight_class": "137lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Lucas Silva",
-      "fighter2_name": "Lucas Silva",
-      "fight_finished": true,
-      "winner_name": "Lucas Silva",
-      "method": "KO (Punches)",
-      "round": 1,
-      "time": "1:12",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Adam Santos",
-      "fighter2_name": "Joao Pereira",
-      "fight_finished": true,
-      "winner_name": "Adam Santos",
-      "method": "KO (Flying Knee)",
-      "round": 1,
-      "time": "3:21",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Nicollas Santos",
-      "fighter2_name": "Jackson Soares",
-      "fight_finished": true,
-      "winner_name": "Nicollas Santos",
-      "method": "TKO (Punches)",
-      "round": 3,
-      "time": "3:51",
-      "weight_class": "Light Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 241 - Pires vs Pereira",
-      "fighter1_name": "Laryssa Leila",
-      "fighter2_name": "Fernanda Atomica",
-      "fight_finished": true,
-      "winner_name": "Laryssa Leila",
-      "method": "KO (Punches)",
-      "round": 1,
-      "time": "0:30",
-      "weight_class": "Strawweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Devon Lozej",
-      "fighter2_name": "Davi Bittencourt",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Shuya Kamikubo",
-      "fighter2_name": "Marcos Breno",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Steve Collins",
-      "fighter2_name": "Kevin Carrier",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Kelton Sneve",
-      "fighter2_name": "Julio Cesar Chaves",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Marcus Nash",
-      "fighter2_name": "Willer Alves Borges Junior",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "188lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Elias Rodriguez",
-      "fighter2_name": "Romello Union",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Noah Gasho",
-      "fighter2_name": "Adryen Spinks",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "150lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Mitchell Wilson",
-      "fighter2_name": "Allen Holloway",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Augustine Hahn",
-      "fighter2_name": "Luis Unzueta",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Isupov Sukhrob",
-      "fighter2_name": "Brett Bye",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Tyree Overton",
-      "fighter2_name": "Marcelis Edwards",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "197lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Xavier Rosenbloom",
-      "fighter2_name": "Gift Harding",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Cadin Vowels",
-      "fighter2_name": "Kaden Moon",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Gunnar Nelson",
-      "fighter2_name": "Kyler Dunn",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 242 - Lozej vs. Bittencourt",
-      "fighter1_name": "Ricky Rodriguez",
-      "fighter2_name": "Trey White",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "LFA 243 - Maximov vs. Santos",
       "fighter1_name": "Nick Maximov",
       "fighter2_name": "Wildemar Souza Santos",
@@ -438251,6 +438123,539 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Davi Bittencourt",
+      "fighter2_name": "Devon Lozej",
+      "fight_finished": true,
+      "winner_name": "Davi Bittencourt",
+      "method": "KO (Head Kick)",
+      "round": 2,
+      "time": "4:13",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Marcos Breno",
+      "fighter2_name": "Shuya Kamikubo",
+      "fight_finished": true,
+      "winner_name": "Marcos Breno",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "0:21",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Steve Collins",
+      "fighter2_name": "Kevin Carrier",
+      "fight_finished": true,
+      "winner_name": "Steve Collins",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "0:33",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Kelton Sneve",
+      "fighter2_name": "Julio Cesar Chaves",
+      "fight_finished": true,
+      "winner_name": "Kelton Sneve",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Willer Alves Borges Junior",
+      "fighter2_name": "Marcus Nash",
+      "fight_finished": true,
+      "winner_name": "Willer Alves Borges Junior",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "2:39",
+      "weight_class": "188lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Elias Rodriguez",
+      "fighter2_name": "Romello Union",
+      "fight_finished": true,
+      "winner_name": "Elias Rodriguez",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Noah Gasho",
+      "fighter2_name": "Adryen Spinks",
+      "fight_finished": true,
+      "winner_name": "Noah Gasho",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "2:32",
+      "weight_class": "150lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Allen Holloway",
+      "fighter2_name": "Mitchell Wilson",
+      "fight_finished": true,
+      "winner_name": "Allen Holloway",
+      "method": "Submission (Brabo Choke)",
+      "round": 1,
+      "time": "4:44",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Augustine Hahn",
+      "fighter2_name": "Luis Unzueta",
+      "fight_finished": true,
+      "winner_name": "Augustine Hahn",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Sukhrob Iusupov",
+      "fighter2_name": "Brett Bye",
+      "fight_finished": true,
+      "winner_name": "Sukhrob Iusupov",
+      "method": "KO (Punch)",
+      "round": 1,
+      "time": "2:11",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Tyree Overton",
+      "fighter2_name": "Marcelis Edwards",
+      "fight_finished": true,
+      "winner_name": "Tyree Overton",
+      "method": "Submission (Arm-Triangle Choke)",
+      "round": 1,
+      "time": "3:24",
+      "weight_class": "197lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Xavier Rosenbloom",
+      "fighter2_name": "Gift Harding",
+      "fight_finished": true,
+      "winner_name": "Xavier Rosenbloom",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "3:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Cadin Vowels",
+      "fighter2_name": "Kaden Moon",
+      "fight_finished": true,
+      "winner_name": "Cadin Vowels",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "2:08",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Gunnar Nelson",
+      "fighter2_name": "Kyler Dunn",
+      "fight_finished": true,
+      "winner_name": "Gunnar Nelson",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "2:35",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 242 - Lozej vs. Bittencourt",
+      "fighter1_name": "Ricky Rodriguez",
+      "fighter2_name": "Trey White",
+      "fight_finished": true,
+      "winner_name": "Ricky Rodriguez",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "1:13",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Rafael Pereira",
+      "fighter2_name": "Vinicius Pires",
+      "fight_finished": true,
+      "winner_name": "Rafael Pereira",
+      "method": "KO (Punch)",
+      "round": 2,
+      "time": "4:50",
+      "weight_class": "Bantamweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Gustavo Pintos",
+      "fighter2_name": "Carlos Soares",
+      "fight_finished": true,
+      "winner_name": "Gustavo Pintos",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Neemias Santana",
+      "fighter2_name": "Marcos Silva do Nascimento",
+      "fight_finished": true,
+      "winner_name": "Neemias Santana",
+      "method": "TKO (Knee and Punches)",
+      "round": 2,
+      "time": "2:50",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Gustavo Rocha",
+      "fighter2_name": "Felipe Rosa",
+      "fight_finished": true,
+      "winner_name": "Gustavo Rocha",
+      "method": "TKO (Doctor Stoppage)",
+      "round": 2,
+      "time": "5:00",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Raiane Vinuto",
+      "fighter2_name": "Marina Monteiro",
+      "fight_finished": true,
+      "winner_name": "Raiane Vinuto",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Eduardo Fiuza Dutra",
+      "fighter2_name": "Julio Vinicius Assuncao",
+      "fight_finished": true,
+      "winner_name": "Eduardo Fiuza Dutra",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "2:07",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Thalyta Silva",
+      "fighter2_name": "Monica Carvalho Fontes Rodrigues",
+      "fight_finished": true,
+      "winner_name": "Thalyta Silva",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:53",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Marcos Silva",
+      "fighter2_name": "Victor Firmino Santos",
+      "fight_finished": true,
+      "winner_name": "Marcos Silva",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "4:40",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Salomao Albuquerque",
+      "fighter2_name": "Emerson Richard",
+      "fight_finished": true,
+      "winner_name": "Salomao Albuquerque",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "0:53",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Fabio Perpetua",
+      "fighter2_name": "Breno Yuri Santos",
+      "fight_finished": true,
+      "winner_name": "Fabio Perpetua",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "137lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Lucas Silva",
+      "fighter2_name": "Lucas Silva",
+      "fight_finished": true,
+      "winner_name": "Lucas Silva",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "1:12",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Adam Santos",
+      "fighter2_name": "Joao Pereira",
+      "fight_finished": true,
+      "winner_name": "Adam Santos",
+      "method": "KO (Flying Knee)",
+      "round": 1,
+      "time": "3:21",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Nicollas Santos",
+      "fighter2_name": "Jackson Soares",
+      "fight_finished": true,
+      "winner_name": "Nicollas Santos",
+      "method": "TKO (Punches)",
+      "round": 3,
+      "time": "3:51",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 241 - Pires vs Pereira",
+      "fighter1_name": "Laryssa Leila",
+      "fighter2_name": "Fernanda Atomica",
+      "fight_finished": true,
+      "winner_name": "Laryssa Leila",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "0:30",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Dedrek Sanders",
+      "fighter2_name": "Luis Gomez",
+      "fight_finished": true,
+      "winner_name": "Dedrek Sanders",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Akbarjon Islomboev",
+      "fighter2_name": "Elvis Silva",
+      "fight_finished": true,
+      "winner_name": "Akbarjon Islomboev",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "4:13",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Shane Sobnosky",
+      "fighter2_name": "Andrew Stewart",
+      "fight_finished": true,
+      "winner_name": "Shane Sobnosky",
+      "method": "KO (Punch and Elbows)",
+      "round": 1,
+      "time": "0:27",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Francisco Hernandez",
+      "fighter2_name": "Alexander Schenk",
+      "fight_finished": true,
+      "winner_name": "Francisco Hernandez",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "152lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Finn Martin",
+      "fighter2_name": "Mataeo Garner",
+      "fight_finished": true,
+      "winner_name": "Finn Martin",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "4:17",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Quadarrius McGinnis",
+      "fighter2_name": "Austin Miller",
+      "fight_finished": true,
+      "winner_name": "Quadarrius McGinnis",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Myles Dillahunty",
+      "fighter2_name": "Sam Fournier",
+      "fight_finished": true,
+      "winner_name": "Myles Dillahunty",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "1:28",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Kue Htoo",
+      "fighter2_name": "Ray Taylor",
+      "fight_finished": true,
+      "winner_name": "Kue Htoo",
+      "method": "Submission (Guillotine Choke)",
+      "round": 2,
+      "time": "3:51",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Chuy Rodriguez",
+      "fighter2_name": "Jarred Gonzales",
+      "fight_finished": true,
+      "winner_name": "Chuy Rodriguez",
+      "method": "Submission (Guillotine Choke)",
+      "round": 1,
+      "time": "1:30",
+      "weight_class": "160lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Dakota Ballard",
+      "fighter2_name": "Triston Rutherford",
+      "fight_finished": true,
+      "winner_name": "Dakota Ballard",
+      "method": "KO (Punch)",
+      "round": 2,
+      "time": "1:54",
+      "weight_class": "Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Hector Allatore",
+      "fighter2_name": "Ethan Cunningham",
+      "fight_finished": true,
+      "winner_name": "Hector Allatore",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:09",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 240 - Sanders vs. Gomez",
+      "fighter1_name": "Ernesto Pinuelas",
+      "fighter2_name": "Randy Shores Jr.",
+      "fight_finished": true,
+      "winner_name": "Ernesto Pinuelas",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 2,
+      "time": "0:56",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     }
