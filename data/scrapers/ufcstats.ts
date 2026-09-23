@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import { fetchAndLoadPW } from './shared/fetch-playwright';
 import { loadUfcStatsProgress, saveUfcStatsProgress } from './shared/ufcstats-checkpoint';
-import { parseCompletedEventUrls, parseEventMeta, parseEventFightUrls, parseFightDetails } from './parse-ufcstats';
+import { parseCompletedEvents, parseEventMeta, parseEventFightUrls, parseFightDetails } from './parse-ufcstats';
 import type { UfcStatsFighterSide } from './parse-ufcstats';
 import type { UfcStatsFightRecord } from './shared/ufcstats-types';
 
@@ -76,10 +76,20 @@ export async function scrapeUfcStats(cacheDir: string, maxNewEvents?: number, ex
   const knownFightUrls = new Set(progress.records.map((r) => r.ufcstats_fight_url));
 
   const $list = await fetchAndLoadPW(EVENTS_LIST_URL);
-  const eventUrls = parseCompletedEventUrls($list);
+  const events = parseCompletedEvents($list);
+
+  // data/scraped/.cache/ is gitignored, so on CI (daily-sync.yml) the checkpoint is always
+  // empty and only the records come back, seeded from the committed output file above. Without
+  // this, every daily run re-opened all ~800 event pages through the headless browser just to
+  // find the one new event — about 5 hours. An event already present in the records was fully
+  // processed (records are only written out after a whole run), so skip it by name.
+  const recordedEventNames = new Set(progress.records.map((r) => r.event_name));
+  for (const event of events) {
+    if (recordedEventNames.has(event.name)) processedEvents.add(event.url);
+  }
 
   let newlyProcessed = 0;
-  for (const eventUrl of eventUrls) {
+  for (const { url: eventUrl } of events) {
     if (processedEvents.has(eventUrl)) continue;
     if (maxNewEvents !== undefined && newlyProcessed >= maxNewEvents) break;
 
