@@ -149,6 +149,10 @@ export default function Page() {
           augmente la marge d&apos;incertitude d&apos;un combattant, et un n°1 inactif fait légèrement remonter les
           scores du reste de sa catégorie.
         </p>
+        <p>
+          Les flèches à côté de chaque nom indiquent l&apos;évolution depuis le classement de la semaine précédente :
+          ▲ places gagnées, ▼ places perdues, « New » pour un combattant qui fait son entrée dans la liste.
+        </p>
       </Section>
 
       <Section title="Ce qui n'est pas encore pris en compte">

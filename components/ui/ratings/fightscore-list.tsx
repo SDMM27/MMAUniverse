@@ -6,7 +6,7 @@ import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { groupFighterRatingsByWeightClass, orderDivisionWithChampionPinned, sortWeightClassGroups } from '@/data/lib/rating/order-division';
 import { FighterRatingWithFighter } from '@/data/lib/definitions';
-import { FighterRankRow, formatScore, ScoreBar, StreakBadge, weightClassSlug } from './fightscore-parts';
+import { FighterRankRow, formatScore, ScoreBar, StreakBadge, TrendBadge, weightClassSlug } from './fightscore-parts';
 
 // One division at a time behind a row of division tabs, rather than all
 // twelve stacked (~180 rows): the selected division lives in the URL hash
@@ -49,6 +49,7 @@ function ChampionCard({ champion, outranked }: { champion: FighterRatingWithFigh
         <p className="mt-0.5 flex items-center gap-2 text-xs text-ink-secondary">
           {champion.style_archetype}
           <StreakBadge streak={champion.current_streak} />
+          <TrendBadge fighter={champion} rank={0} />
         </p>
       </div>
       <div className="w-20 shrink-0 text-right sm:w-28">
@@ -118,6 +119,7 @@ export default function FightScoreList({ ratings }: { ratings: FighterRatingWith
             key={fighter.id}
             fighter={fighter}
             rankLabel={String(i + 1)}
+            rank={i + 1}
             highlight={!champion && i === 0}
             subtitle={fighter.style_archetype ?? undefined}
           />

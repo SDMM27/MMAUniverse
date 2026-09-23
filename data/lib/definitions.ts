@@ -115,6 +115,11 @@ export type FighterRatingWithFighter = FighterRating & {
   fighter_name: string;
   fighter_image_url: string | null;
   fighter_nationality: string | null; // fighters.nationality -- a 2-letter Sherdog flag code, see CountryFlag
+  // Week-over-week movement, only on the ranking-list queries (fetchAllFighterRatings,
+  // fetchTopPoundForPound): position on the same list at the previous weekly snapshot
+  // (null = not on it), and that snapshot's Monday (null = no earlier snapshot yet).
+  previous_rank?: number | null;
+  previous_week?: string | null;
 };
 
 // fetchFightScoreSummary's row -- the headline numbers shown next to the

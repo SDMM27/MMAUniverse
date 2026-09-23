@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { FighterRatingWithFighter } from '@/data/lib/definitions';
+import { rankTrend } from '@/data/lib/rating/weekly-trend';
 
 // display_score is NUMERIC -> string at runtime (see FighterRating's type comment).
 export function formatScore(score: FighterRatingWithFighter['display_score']) {
@@ -53,6 +54,32 @@ export function StreakBadge({ streak }: { streak: number }) {
 }
 
 /**
+ * Week-over-week movement on a ranking list: "▲ 2" / "▼ 1" / "NEW", nothing
+ * when unchanged or before the first comparable week. `rank` is the fighter's
+ * position on the list as shown (a division's champion is 0).
+ */
+export function TrendBadge({ fighter, rank }: { fighter: FighterRatingWithFighter; rank: number }) {
+  const trend = rankTrend(rank, fighter.previous_rank, Boolean(fighter.previous_week));
+  if (trend.kind === 'none' || trend.kind === 'same') return null;
+  const since = `depuis le classement du ${formatUpdatedAt(fighter.previous_week!)}`;
+  if (trend.kind === 'new') {
+    return (
+      <span className="shrink-0 font-display text-[11px] uppercase tracking-wide text-win" title={`Nouveau dans ce classement ${since}`}>
+        New
+      </span>
+    );
+  }
+  const up = trend.kind === 'up';
+  const label = `${up ? 'Gagne' : 'Perd'} ${trend.places} place${trend.places > 1 ? 's' : ''} ${since}`;
+  return (
+    <span className={`shrink-0 font-display text-[11px] tabular-nums ${up ? 'text-win' : 'text-accent'}`} title={label} aria-label={label}>
+      {up ? '▲' : '▼'}
+      {trend.places}
+    </span>
+  );
+}
+
+/**
  * One ranked fighter: position, photo, flag + name, a secondary line
  * (division, style...), and the score with its bar. `highlight` gives the
  * row the accent treatment used for #1 / the champion.
@@ -60,11 +87,13 @@ export function StreakBadge({ streak }: { streak: number }) {
 export function FighterRankRow({
   fighter,
   rankLabel,
+  rank,
   subtitle,
   highlight = false,
 }: {
   fighter: FighterRatingWithFighter;
   rankLabel: string;
+  rank?: number; // position on the list, for the week-over-week TrendBadge (omit to show none)
   subtitle?: React.ReactNode;
   highlight?: boolean;
 }) {
@@ -94,6 +123,7 @@ export function FighterRankRow({
         </p>
         {subtitle && <p className="truncate text-xs text-ink-secondary">{subtitle}</p>}
       </div>
+      {rank !== undefined && <TrendBadge fighter={fighter} rank={rank} />}
       <StreakBadge streak={fighter.current_streak} />
       <div className="w-16 shrink-0 text-right sm:w-24">
         <span className="font-display text-base text-ink-primary">{formatScore(fighter.display_score)}</span>

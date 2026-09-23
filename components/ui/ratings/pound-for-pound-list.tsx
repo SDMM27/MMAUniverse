@@ -16,6 +16,7 @@ export default function PoundForPoundList({ fighters, title }: { fighters: Fight
           key={fighter.id}
           fighter={fighter}
           rankLabel={String(i + 1)}
+          rank={i + 1}
           highlight={i === 0}
           subtitle={fighter.weight_class}
         />
