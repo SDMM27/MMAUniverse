@@ -111,13 +111,19 @@ export function parseEventMeta($: CheerioAPI): UfcStatsEventMeta {
 }
 
 /** Every completed-event URL on a `statistics/events/completed?page=all` listing page. */
-export function parseCompletedEventUrls($: CheerioAPI): string[] {
-  const urls: string[] = [];
+/** Every completed event on the listing page, with the name its row links under. */
+export function parseCompletedEvents($: CheerioAPI): { url: string; name: string }[] {
+  const events: { url: string; name: string }[] = [];
   $('table.b-statistics__table-events tbody tr.b-statistics__table-row').each((_, row) => {
-    const href = $(row).find('a').first().attr('href');
-    if (href) urls.push(href);
+    const $link = $(row).find('a').first();
+    const href = $link.attr('href');
+    if (href) events.push({ url: href, name: $link.text().trim() });
   });
-  return urls;
+  return events;
+}
+
+export function parseCompletedEventUrls($: CheerioAPI): string[] {
+  return parseCompletedEvents($).map((e) => e.url);
 }
 
 /** Every fight-details URL on an event-details page. */

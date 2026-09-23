@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
-import { parseEventMeta, parseCompletedEventUrls, parseEventFightUrls, parseFightDetails, parseFightMeta } from './parse-ufcstats';
+import { parseEventMeta, parseCompletedEvents, parseCompletedEventUrls, parseEventFightUrls, parseFightDetails, parseFightMeta } from './parse-ufcstats';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FIXTURES_DIR = path.join(__dirname, '__fixtures__');
@@ -21,6 +21,17 @@ test('parseCompletedEventUrls extracts every event URL from the completed-events
   assert.equal(urls.length, 3);
   assert.ok(urls.every((u) => u.startsWith('http://ufcstats.com/event-details/')));
   assert.ok(urls.includes('http://ufcstats.com/event-details/2144954270be834d'));
+});
+
+test('parseCompletedEvents pairs each event URL with its listed name (matches the records event_name)', () => {
+  const $ = loadFixture('ufcstats-events-completed.html');
+  const events = parseCompletedEvents($);
+
+  assert.equal(events.length, 3);
+  assert.deepEqual(events[0], {
+    url: 'http://ufcstats.com/event-details/2144954270be834d',
+    name: 'UFC Fight Night: Hooker vs. Parnasse',
+  });
 });
 
 test('parseEventMeta extracts the event name, ISO date and location', () => {
