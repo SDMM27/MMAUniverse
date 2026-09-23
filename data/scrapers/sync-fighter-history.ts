@@ -11,13 +11,16 @@
 // Run with no args (as daily-sync.yml does) to sync every fighter in every org — that's one
 // row-by-row DB round trip per fight per fighter, tens of thousands of them for a roster the
 // size of the UFC's, fine for a once-a-day job with no time pressure. The event-day workflow
-// runs every 15 minutes and can't afford that, so it instead passes `<orgKey> --date=YYYY-MM-DD`
-// (see sync-live-fighter-history.ts, which refreshes the same fighters' JSON right before this
-// runs) to scope the push down to just the handful of fighters who fought that day in that org.
+// runs every 15 minutes and can't afford that, so it instead passes `<orgKey> --live` (or an
+// explicit `--date=YYYY-MM-DD[,YYYY-MM-DD]`) — see sync-live-fighter-history.ts, which refreshes
+// the same fighters' JSON right before this runs — to scope the push down to just the handful of
+// fighters who fought that day in that org. `--live` = today plus, overnight, yesterday (see
+// shared/live-dates.ts: an American card runs past 00:00 UTC).
 import fs from 'node:fs';
 import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import { ORG_CONFIGS } from './orgs.config';
+import { liveEventDates } from './shared/live-dates';
 import type { ScrapedOrgData } from './shared/types';
 
 // tsx doesn't auto-load .env.local the way Next.js does; parse it by hand.
@@ -88,8 +91,12 @@ async function main() {
 
   const rawArgs = process.argv.slice(2);
   const dateArg = rawArgs.find((a) => a.startsWith('--date='));
-  const requestedKeys = rawArgs.filter((a) => !a.startsWith('--date='));
-  const scopedToday = dateArg ? dateArg.slice('--date='.length) : null;
+  const requestedKeys = rawArgs.filter((a) => !a.startsWith('--'));
+  const scopedDates = rawArgs.includes('--live')
+    ? liveEventDates()
+    : dateArg
+      ? dateArg.slice('--date='.length).split(',')
+      : null;
   const configs = requestedKeys.length > 0 ? ORG_CONFIGS.filter((c) => requestedKeys.includes(c.orgKey)) : ORG_CONFIGS;
 
   let fightersUpdated = 0;
@@ -99,11 +106,11 @@ async function main() {
     const dataset = loadDataset(config.orgKey);
     if (!dataset) continue;
 
-    // Event-day scoping: only push the fighters who actually fought on `scopedToday` in this
+    // Event-day scoping: only push the fighters who actually fought on `scopedDates` in this
     // org, instead of every fighter this org has ever had — see the module doc comment above.
     let namesToSync: Set<string> | null = null;
-    if (scopedToday) {
-      const todaysEventNames = new Set(dataset.events.filter((e) => e.date === scopedToday).map((e) => e.name));
+    if (scopedDates) {
+      const todaysEventNames = new Set(dataset.events.filter((e) => scopedDates.includes(e.date)).map((e) => e.name));
       namesToSync = new Set<string>();
       for (const fight of dataset.fights) {
         if (!todaysEventNames.has(fight.event_name)) continue;
