@@ -294,3 +294,17 @@ export function parseFighterDetails($: CheerioAPI): ParsedFighterDetails {
 
   return { name, imageUrl, weightClass, wins, losses, draws, fightHistory };
 }
+
+/**
+ * Height in centimeters off a Sherdog fighter page's bio table
+ * (`6'4" / 193.04 cm`), rounded to the nearest cm. Sherdog has no reach
+ * field -- that only comes from UFCStats (see parse-ufcstats.ts). null when
+ * the row is missing, which Sherdog does for many regional fighters.
+ */
+export function parseFighterHeightCm($: CheerioAPI): number | null {
+  const cell = $('.bio-holder b[itemprop="height"]').first().parent().text();
+  const match = cell.match(/(\d+(?:\.\d+)?)\s*cm/);
+  if (!match) return null;
+  const cm = Math.round(Number(match[1]));
+  return cm > 0 ? cm : null;
+}

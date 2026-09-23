@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
-import { parseEventTableUrls, parseOlderEventsUrl, parseEventDetails, parseFighterDetails, parseFighterFightHistory } from './parse';
+import { parseEventTableUrls, parseOlderEventsUrl, parseEventDetails, parseFighterDetails, parseFighterFightHistory, parseFighterHeightCm } from './parse';
 
 // package.json has "type": "module", so this file runs as native ESM under
 // tsx --test — __dirname isn't defined there, unlike the plan's CJS-style snippet.
@@ -192,4 +192,12 @@ test('parseFighterDetails includes fightHistory alongside the bio fields', () =>
   const details = parseFighterDetails($);
 
   assert.equal(details.fightHistory.length, 3);
+});
+
+test('parseFighterHeightCm reads the metric height out of the Sherdog bio table', () => {
+  assert.equal(parseFighterHeightCm(loadFixture('sherdog-fighter-bio.html')), 193);
+});
+
+test('parseFighterHeightCm returns null when Sherdog has no height row', () => {
+  assert.equal(parseFighterHeightCm(cheerio.load('<div class="bio-holder"><table><tr><td>AGE</td><td>30</td></tr></table></div>')), null);
 });

@@ -6,6 +6,7 @@ import { Loading, ErrorState, EmptyState } from '../../../components/state';
 import FighterRecordCard from '../../../components/fighter-record-card';
 import { CountryFlag } from '../../../components/country-flag';
 import { FighterPhoto } from '../../../components/fighter-photo';
+import { formatPhysique } from '../../../lib/fighter-physique';
 
 const RESULT_LABEL: Record<string, string> = { win: 'V', loss: 'D', draw: 'N', nc: 'SD', upcoming: 'À venir' };
 const RESULT_COLOR: Record<string, string> = {
@@ -24,6 +25,7 @@ export default function FighterDetailScreen() {
   if (state.status === 'error') return <ErrorState message={state.message} onRetry={reload} />;
 
   const { fighter, fights, stats } = state.data;
+  const physique = formatPhysique(fighter.height_cm, fighter.reach_cm);
 
   return (
     <FlatList
@@ -44,6 +46,7 @@ export default function FighterDetailScreen() {
                 <CountryFlag code={fighter.nationality} height={14} />
                 <Text className="text-sm text-ink-secondary">{fighter.record}</Text>
               </View>
+              {physique && <Text className="mt-0.5 text-xs text-ink-secondary">{physique}</Text>}
             </View>
           </View>
           <FighterRecordCard stats={stats} />

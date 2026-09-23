@@ -8,6 +8,7 @@ import {
   fetchQualityWinsByFighterId,
 } from '@/data/lib/data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
+import { formatPhysique } from '@/data/lib/fighter-physique';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
@@ -32,6 +33,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   // P4P is a bonus distinction, the weight-class rank is the primary one.
   const primaryRanking = rankings.find((r) => !r.weight_class.includes('Pound-for-Pound')) ?? rankings[0];
   const stats = computeFighterStats(fights);
+  const physique = formatPhysique(fighter.height_cm, fighter.reach_cm);
   // Soonest booked bout, if any — spotlighted in the header. Excluded from the
   // Historique table below (that's completed fights only) so it isn't shown twice.
   const nextFight = fights.find((fight) => fight.result === 'upcoming');
@@ -64,6 +66,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 )}
                 <CountryFlag code={fighter.nationality} className="text-lg" />
                 {fighter.record && <span className="font-display text-ink-primary">{fighter.record}</span>}
+                {physique && <span>{physique}</span>}
               </div>
             </div>
             {nextFight && (
