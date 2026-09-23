@@ -83,12 +83,5 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-      # Recomputes FightScore (docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md)
-      # from whatever's now in Neon -- picks up any new fights from the sync
-      # above, the current champions from the UFC-rankings sync above that,
-      # and lets inactivity erosion catch up even on a day with no new fights
-      # at all. Must run last: every other step in this job feeds it.
-      - name: Compute FightScore ratings
-        run: npx tsx data/scripts/compute-fighter-ratings.ts
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      # FightScore is no longer recomputed here: it runs once a week, on Monday,
+      # from .github/workflows/weekly-fightscore.yml (after the weekend's events).
