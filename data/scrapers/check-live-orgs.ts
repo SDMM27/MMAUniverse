@@ -8,6 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import { ORG_CONFIGS } from './orgs.config';
+import { liveEventDates } from './shared/live-dates';
 
 // tsx doesn't auto-load .env.local the way Next.js does; parse it by hand.
 function loadEnvLocal() {
@@ -40,9 +41,11 @@ if (!process.env.DATABASE_URL) {
 const sql = neon(process.env.DATABASE_URL);
 
 async function main() {
-  const today = new Date().toISOString().slice(0, 10);
+  // Today plus, overnight, yesterday — see shared/live-dates.ts for why the UTC date alone
+  // cuts an American card off halfway through.
+  const dates = liveEventDates();
   const rows = (await sql`
-    SELECT DISTINCT organization_id FROM events WHERE date = ${today}
+    SELECT DISTINCT organization_id FROM events WHERE date = ANY(${dates})
   `) as { organization_id: number }[];
 
   const idToKey = new Map(ORG_CONFIGS.map((c) => [c.organizationId, c.orgKey]));

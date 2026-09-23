@@ -44,6 +44,12 @@ jobs:
       - name: Scrape UFC fight-level stats from UFCStats.com
         run: npx tsx data/scrapers/scrape-ufcstats.ts
 
+      # Self-healing counterpart to the event-day polling: re-fetches the Sherdog page of any
+      # fighter whose history is still missing a finished fight from the last 30 days (e.g. the
+      # live polling missed the end of the card). No-op -- zero Sherdog requests -- on a normal day.
+      - name: Catch up fighters' Sherdog history on recent fights
+        run: npx tsx data/scrapers/sync-live-fighter-history.ts --catch-up
+
       - name: Commit refreshed scraped data
         run: |
           git config user.name "github-actions[bot]"

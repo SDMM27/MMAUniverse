@@ -1,7 +1,8 @@
 name: Event-day live sync
 
 # Tighter polling for the days an event is actually happening. Runs every 15 minutes, but
-# check-live-orgs.ts gates everything: if no org has an event dated today it exits immediately
+# check-live-orgs.ts gates everything: if no org has an event dated today (or, until noon UTC,
+# yesterday -- an American card runs past 00:00 UTC, see shared/live-dates.ts) it exits immediately
 # (a single cheap DB query, no Sherdog traffic at all). On a live day it only rescrapes the
 # org(s) fighting tonight — not the whole roster — keeping Sherdog traffic minimal even
 # during a live card. See data/scrapers/check-live-orgs.ts for the gate logic.
@@ -69,6 +70,6 @@ jobs:
 
       - name: Sync tonight's fighter Sherdog history to Neon
         if: steps.live.outputs.orgs != ''
-        run: npx tsx data/scrapers/sync-fighter-history.ts ${{ steps.live.outputs.orgs }} "--date=$(date -u +%F)"
+        run: npx tsx data/scrapers/sync-fighter-history.ts ${{ steps.live.outputs.orgs }} --live
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}

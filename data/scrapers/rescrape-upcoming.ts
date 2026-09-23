@@ -6,11 +6,18 @@
 //
 // Use this after a scraper/parser fix that only affects not-yet-fought events, so we don't
 // have to re-walk the entire event history to see the fix take effect.
+//
+// Also catches up on recently-past events still missing results: once a card is over Sherdog
+// moves it from the "upcoming" to the "recent" tab, so if the event-day polling didn't see the
+// final results (e.g. it stopped at 00:00 UTC in the middle of UFC 331's main card) nothing
+// would ever re-fetch it. Any event from the last 30 days with a fight still not finished in the
+// JSON gets re-fetched from the recent tab, until Sherdog has its results.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fetchAndLoad } from './shared/fetch-throttled';
 import { parseEventTableUrls, parseEventDetails, parseFighterDetails, toScrapedFightHistory } from './parse';
 import { ORG_CONFIGS } from './orgs.config';
+import { isRecentPastDate } from './shared/live-dates';
 import type { ScrapedOrgData, ScrapedEvent, ScrapedFighter, ScrapedFight } from './shared/types';
 
 const SHERDOG_BASE = 'https://www.sherdog.com';
@@ -41,9 +48,27 @@ async function main() {
     const freshFights: ScrapedFight[] = [];
     const fighterUrlToName: Record<string, string> = {};
 
-    for (const eventUrl of upcomingUrls) {
+    // Recently-past events with at least one fight the JSON still has as not finished.
+    const unfinishedEventNames = new Set(existing.fights.filter((f) => !f.fight_finished).map((f) => f.event_name));
+    const incompleteDates = new Set(
+      existing.events.filter((e) => unfinishedEventNames.has(e.name) && isRecentPastDate(e.date)).map((e) => e.date),
+    );
+    const oldestIncompleteDate = Array.from(incompleteDates).sort()[0];
+
+    const eventPages: { url: string; recent: boolean }[] = upcomingUrls.map((url) => ({ url, recent: false }));
+    if (incompleteDates.size > 0) {
+      console.log(`[${config.orgKey}] catching up on ${incompleteDates.size} recent event(s) with missing results`);
+      eventPages.push(...parseEventTableUrls($org, 'recent_tab', SHERDOG_BASE).map((url) => ({ url, recent: true })));
+    }
+
+    for (const { url: eventUrl, recent } of eventPages) {
       const $event = await fetchAndLoad(eventUrl);
       const details = parseEventDetails($event, SHERDOG_BASE);
+      if (recent) {
+        // The recent tab is newest-first: once we're past the oldest incomplete event, stop.
+        if (details.date < oldestIncompleteDate) break;
+        if (!incompleteDates.has(details.date)) continue;
+      }
 
       freshEvents.push({
         name: details.name,
