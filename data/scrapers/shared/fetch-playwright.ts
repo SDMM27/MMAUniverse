@@ -41,7 +41,17 @@ export async function fetchAndLoadPW(url: string): Promise<cheerio.CheerioAPI> {
   lastRequestAt = Date.now();
 
   const ctx = await getContext();
-  const page = await ctx.newPage();
+  let page;
+  try {
+    page = await ctx.newPage();
+  } catch (error) {
+    // A crashed Chromium ("Target crashed", "has been closed") never comes back,
+    // and reusing it made every later call of a long run fail too (seen on the
+    // physique backfill: 1200+ failures in a row). Drop it so the next call
+    // launches a fresh one; this URL just fails, and the caller retries it later.
+    await resetBrowser();
+    throw error;
+  }
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded' });
     // Tables render only once the anti-bot challenge resolves and the real
@@ -61,4 +71,13 @@ export async function closeBrowser(): Promise<void> {
   await browser?.close();
   context = null;
   browser = null;
+}
+
+// Like closeBrowser, but for a browser that may already be dead: closing a
+// crashed one can itself throw, which must not hide the original error.
+async function resetBrowser(): Promise<void> {
+  const dead = browser;
+  context = null;
+  browser = null;
+  await dead?.close().catch(() => {});
 }
