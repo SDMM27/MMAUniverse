@@ -1,0 +1,39 @@
+name: Weekly FightScore
+
+# Recomputes FightScore (docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md)
+# once a week instead of daily, so the ranking stays stable between events and
+# moves week to week. Monday 12:00 UTC: UFC cards end around 05:00 UTC Sunday,
+# and the Sunday + Monday 09:00 runs of daily-sync.yml have pulled the results,
+# stats and current champions into Neon by then. The recomputation is a full,
+# deterministic replay of every fight, so running it weekly changes when new
+# results show up, not what the ratings are. Run it by hand (workflow_dispatch)
+# after a data fix that shouldn't wait for Monday.
+on:
+  schedule:
+    - cron: '0 12 * * 1' # Monday 12:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+# Same group as daily-sync.yml: never recompute while a sync is still writing to Neon.
+concurrency:
+  group: mma-universe-sync
+  cancel-in-progress: false
+
+jobs:
+  ratings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Compute FightScore ratings
+        run: npx tsx data/scripts/compute-fighter-ratings.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}

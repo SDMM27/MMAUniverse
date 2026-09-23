@@ -142,6 +142,15 @@ export default function Page() {
         </p>
       </Section>
 
+      <Section title="Une mise à jour par semaine">
+        <p>
+          Le classement est recalculé chaque lundi, une fois les résultats du week-end intégrés. Entre deux mises à
+          jour, il ne bouge pas. Une semaine sans combat peut quand même faire évoluer les scores : l&apos;inactivité
+          augmente la marge d&apos;incertitude d&apos;un combattant, et un n°1 inactif fait légèrement remonter les
+          scores du reste de sa catégorie.
+        </p>
+      </Section>
+
       <Section title="Ce qui n'est pas encore pris en compte">
         <p>
           Les organisations autres que l&apos;UFC (pas encore assez de données détaillées disponibles), les bonus

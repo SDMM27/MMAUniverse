@@ -25,7 +25,7 @@ export default function FightScoreHero({ leader, summary }: { leader: FighterRat
           </h1>
           <p className="mt-5 max-w-xl text-base text-ink-secondary">
             Chaque combat UFC passé au crible : dominance round par round, niveau des adversaires battus, activité. Le
-            résultat : un score sur 100 dans chaque catégorie, recalculé tous les jours.
+            résultat : un score sur 100 dans chaque catégorie, recalculé chaque lundi, après les combats du week-end.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
