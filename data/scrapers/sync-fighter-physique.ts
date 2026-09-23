@@ -1,17 +1,21 @@
 // data/scrapers/sync-fighter-physique.ts
 //
-// Fills fighters.height_cm / fighters.reach_cm, shown in the header of the
-// fighter page (web + mobile). Two sources, because neither covers both:
-//  - Sherdog: height only (it has no reach field), but every org -- one
-//    fetch per unique sherdog_url, applied to every same-person row sharing it.
-//  - UFCStats: height AND reach, UFC fighters only (the ones
+// Fills fighters.height_cm / reach_cm / birth_date, shown in the header of the
+// fighter page (web + mobile; birth_date as an age). Two sources, because
+// neither covers everything:
+//  - Sherdog: height and birth date (it has no reach field), but every org --
+//    one fetch per unique sherdog_url, applied to every same-person row sharing it.
+//  - UFCStats: height, reach and DOB, UFC fighters only (the ones
 //    sync-fighter-stats.ts already matched to a ufcstats_url). Needs the
 //    headless browser, see shared/fetch-playwright.ts.
 // Sherdog's height wins when both have one (it's published in cm; UFCStats
-// rounds to the inch); UFCStats only fills a height Sherdog didn't have.
+// rounds to the inch); UFCStats only fills a height Sherdog didn't have. Same
+// for the birth date: Sherdog's, else UFCStats'.
 //
 // Every row is stamped physique_*_checked_at once its page was read, found
-// or not, so each page is fetched once ever: the first run is a ~2h backfill
+// or not, so each page is fetched once ever (birth date came later: Sherdog
+// pages read before it existed are fetched once more, via
+// birth_date_sherdog_checked_at): the first run is a ~2h backfill
 // (resumable -- stop it and re-run, it picks up where it was), every later
 // run (daily-sync.yml) only touches fighters that got a URL since.
 //
@@ -21,8 +25,8 @@ import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import { fetchAndLoad } from './shared/fetch-throttled';
 import { fetchAndLoadPW, closeBrowser } from './shared/fetch-playwright';
-import { parseFighterHeightCm } from './parse';
-import { parseFighterPhysique } from './parse-ufcstats';
+import { parseFighterHeightCm, parseFighterBirthDate } from './parse';
+import { parseFighterPhysique, parseFighterBirthDate as parseUfcStatsBirthDate } from './parse-ufcstats';
 
 // Duplicated from sync-fighter-history.ts rather than shared — see that file's own note on why
 // (tsx doesn't auto-load .env.local the way Next.js does; it's a few lines, not worth a module).
@@ -57,36 +61,50 @@ async function ensureSchema() {
   await sql`ALTER TABLE fighters ADD COLUMN IF NOT EXISTS reach_cm SMALLINT;`;
   await sql`ALTER TABLE fighters ADD COLUMN IF NOT EXISTS physique_sherdog_checked_at TIMESTAMPTZ;`;
   await sql`ALTER TABLE fighters ADD COLUMN IF NOT EXISTS physique_ufcstats_checked_at TIMESTAMPTZ;`;
+  await sql`ALTER TABLE fighters ADD COLUMN IF NOT EXISTS birth_date DATE;`;
+  await sql`ALTER TABLE fighters ADD COLUMN IF NOT EXISTS birth_date_sherdog_checked_at TIMESTAMPTZ;`;
 }
 
 async function syncFromSherdog(limit: number | null) {
   const rows = (await sql`
     SELECT DISTINCT sherdog_url FROM fighters
-    WHERE sherdog_url IS NOT NULL AND physique_sherdog_checked_at IS NULL
+    WHERE sherdog_url IS NOT NULL
+      AND (physique_sherdog_checked_at IS NULL OR birth_date_sherdog_checked_at IS NULL)
   `) as { sherdog_url: string }[];
   const urls = rows.map((r) => r.sherdog_url).slice(0, limit ?? undefined);
   console.log(`Sherdog: ${rows.length} unchecked URL(s), fetching ${urls.length}.`);
 
   let found = 0;
+  let withBirthDate = 0;
   let failed = 0;
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i];
     let heightCm: number | null;
+    let birthDate: string | null;
     try {
-      heightCm = parseFighterHeightCm(await fetchAndLoad(url));
+      const $ = await fetchAndLoad(url);
+      heightCm = parseFighterHeightCm($);
+      birthDate = parseFighterBirthDate($);
     } catch (error) {
       failed++; // left unchecked, so the next run retries it
       console.warn(`  failed to fetch ${url}: ${(error as Error).message}`);
       continue;
     }
     if (heightCm !== null) found++;
+    if (birthDate !== null) withBirthDate++;
     await sql`
-      UPDATE fighters SET height_cm = COALESCE(${heightCm}, height_cm), physique_sherdog_checked_at = NOW()
+      UPDATE fighters SET
+        height_cm = COALESCE(${heightCm}, height_cm),
+        birth_date = COALESCE(${birthDate}::date, birth_date),
+        physique_sherdog_checked_at = NOW(),
+        birth_date_sherdog_checked_at = NOW()
       WHERE sherdog_url = ${url}
     `;
-    if ((i + 1) % 100 === 0) console.log(`  ...${i + 1}/${urls.length} (${found} with a height)`);
+    if ((i + 1) % 100 === 0) {
+      console.log(`  ...${i + 1}/${urls.length} (${found} with a height, ${withBirthDate} with a birth date)`);
+    }
   }
-  console.log(`Sherdog: done, ${found}/${urls.length} had a height, ${failed} failed.`);
+  console.log(`Sherdog: done, ${found}/${urls.length} had a height, ${withBirthDate} a birth date, ${failed} failed.`);
 }
 
 async function syncFromUfcStats(limit: number | null) {
@@ -102,8 +120,11 @@ async function syncFromUfcStats(limit: number | null) {
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i];
     let physique;
+    let birthDate: string | null;
     try {
-      physique = parseFighterPhysique(await fetchAndLoadPW(url));
+      const $ = await fetchAndLoadPW(url);
+      physique = parseFighterPhysique($);
+      birthDate = parseUfcStatsBirthDate($);
     } catch (error) {
       failed++;
       console.warn(`  failed to fetch ${url}: ${(error as Error).message}`);
@@ -114,6 +135,7 @@ async function syncFromUfcStats(limit: number | null) {
       UPDATE fighters SET
         reach_cm = COALESCE(${physique.reachCm}, reach_cm),
         height_cm = COALESCE(height_cm, ${physique.heightCm}),
+        birth_date = COALESCE(birth_date, ${birthDate}::date),
         physique_ufcstats_checked_at = NOW()
       WHERE ufcstats_url = ${url}
     `;
@@ -129,13 +151,16 @@ async function propagateToSiblings() {
   const updated = (await sql`
     UPDATE fighters f SET
       reach_cm = COALESCE(f.reach_cm, s.reach_cm),
-      height_cm = COALESCE(f.height_cm, s.height_cm)
+      height_cm = COALESCE(f.height_cm, s.height_cm),
+      birth_date = COALESCE(f.birth_date, s.birth_date)
     FROM fighters s
     WHERE s.sherdog_url = f.sherdog_url AND s.id <> f.id
-      AND ((f.reach_cm IS NULL AND s.reach_cm IS NOT NULL) OR (f.height_cm IS NULL AND s.height_cm IS NOT NULL))
+      AND ((f.reach_cm IS NULL AND s.reach_cm IS NOT NULL)
+        OR (f.height_cm IS NULL AND s.height_cm IS NOT NULL)
+        OR (f.birth_date IS NULL AND s.birth_date IS NOT NULL))
     RETURNING f.id
   `) as { id: number }[];
-  console.log(`Copied height/reach onto ${updated.length} same-person row(s) in other orgs.`);
+  console.log(`Copied height/reach/birth date onto ${updated.length} same-person row(s) in other orgs.`);
 }
 
 async function main() {

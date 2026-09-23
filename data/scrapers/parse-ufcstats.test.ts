@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
-import { parseEventMeta, parseCompletedEvents, parseCompletedEventUrls, parseEventFightUrls, parseFightDetails, parseFightMeta, parseFighterPhysique, imperialToCm } from './parse-ufcstats';
+import { parseEventMeta, parseCompletedEvents, parseCompletedEventUrls, parseEventFightUrls, parseFightDetails, parseFightMeta, parseFighterPhysique, parseFighterBirthDate, imperialToCm } from './parse-ufcstats';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FIXTURES_DIR = path.join(__dirname, '__fixtures__');
@@ -181,4 +181,13 @@ test('imperialToCm handles feet+inches, bare inches and junk', () => {
   assert.equal(imperialToCm('5\' 11"'), 180);
   assert.equal(imperialToCm('84.5"'), 215);
   assert.equal(imperialToCm('--'), null);
+});
+
+test('parseFighterBirthDate reads the abbreviated-month DOB off the fighter-details bio box', () => {
+  assert.equal(parseFighterBirthDate(loadFixture('ufcstats-fighter-details.html')), '1996-12-13');
+});
+
+test('parseFighterBirthDate returns null for a DOB UFCStats prints as --', () => {
+  const $ = cheerio.load('<div class="b-list__info-box_style_small-width"><ul><li><i>DOB:</i> --</li></ul></div>');
+  assert.equal(parseFighterBirthDate($), null);
 });
