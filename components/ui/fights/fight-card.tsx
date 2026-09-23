@@ -3,6 +3,7 @@ import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { Fighter, FightWithFighters } from '@/data/lib/definitions';
 import { formatEventTime } from '@/data/lib/event-utils';
+import TitleFightBadge from '@/components/ui/fights/title-fight-badge';
 
 type FightStatus = 'upcoming' | 'live' | 'finished';
 
@@ -55,6 +56,14 @@ export default function FightCard({ fight, event, live, eventName }: FightCardPr
           <p className="-mt-3 text-center font-display text-lg uppercase tracking-wide text-ink-primary">
             {eventName}
           </p>
+        )}
+        {(fight.weight_class || fight.is_title_fight) && (
+          <div className="-mt-2 flex flex-wrap items-center justify-center gap-2">
+            {fight.weight_class && (
+              <span className="font-display text-sm uppercase tracking-wide text-ink-primary">{fight.weight_class}</span>
+            )}
+            {fight.is_title_fight && <TitleFightBadge />}
+          </div>
         )}
         <FightCardHeader status={status} event={event} liveRound={live?.round} />
       </div>
