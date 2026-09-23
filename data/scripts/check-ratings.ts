@@ -6,13 +6,14 @@
 // per-division tops exactly as compute-fighter-ratings.ts would store them --
 // WITHOUT writing anything. Read-only against Neon (fights + current
 // champions). Run with `npm run check:ratings` (`--refresh` to re-fetch the
-// fights, `--params '{"rdPerMonth":30}'` to try other constants).
+// fights, `--params '{"rdPerMonth":30}'` to try other constants, `--top 15`
+// for longer per-division lists).
 import { neon } from '@neondatabase/serverless';
 import { DEFAULT_GLICKO_PARAMS, conservativeRating, type GlickoParams } from '../lib/rating/glicko-rating';
 import { simulateCareerRatings, ratingAsOf } from '../lib/rating/simulate-career';
 import { collectCareerRatingDiffs } from '../lib/rating/glicko-tuning';
 import { evaluateLogRatios, fitScale } from '../lib/rating/point-flow-tuning';
-import { isEligibleInDivision, divisionDisplayScores, poundForPoundScores } from '../lib/rating/display-scores';
+import { homeDivision, isEligibleInDivision, divisionDisplayScores, poundForPoundScores, capChallengersBelowChampion } from '../lib/rating/display-scores';
 import {
   winsOverTopTen,
   titleFightWins,
@@ -34,6 +35,11 @@ const EXPERT_EXPECTATIONS: { description: string; holds: (p4pMen: string[]) => b
   { description: 'Islam Makhachev dans le top 3 P4P hommes', holds: (p4p) => p4p.slice(0, 3).includes('Islam Makhachev') },
   { description: 'Islam Makhachev n°1 P4P hommes', holds: (p4p) => p4p[0] === 'Islam Makhachev' },
 ];
+
+function parseTopCount(): number {
+  const index = process.argv.indexOf('--top');
+  return index === -1 ? 5 : Number(process.argv[index + 1]);
+}
 
 function parseParams(): GlickoParams {
   const index = process.argv.indexOf('--params');
@@ -57,8 +63,12 @@ async function main() {
 
   loadEnvLocal();
   const sql = neon(process.env.DATABASE_URL!);
-  const championRows = (await sql`SELECT weight_class, fighter_id FROM rankings WHERE organization_id = 1 AND rank = 0 AND fighter_id IS NOT NULL`) as { weight_class: string; fighter_id: number }[];
-  const championIdByDivision = new Map(championRows.map((r) => [r.weight_class, r.fighter_id]));
+  const rankingRows = (await sql`
+    SELECT weight_class, rank, fighter_id FROM rankings
+    WHERE organization_id = 1 AND fighter_id IS NOT NULL AND weight_class NOT ILIKE '%pound-for-pound%'
+  `) as { weight_class: string; rank: number; fighter_id: number }[];
+  const championIdByDivision = new Map(rankingRows.filter((r) => r.rank === 0).map((r) => [r.weight_class, r.fighter_id]));
+  const officialDivisionByFighter = new Map(rankingRows.map((r) => [r.fighter_id, r.weight_class]));
 
   // Metric 1: held-out log-loss.
   const dates = fights.map((f) => f.eventDate);
@@ -84,12 +94,12 @@ async function main() {
       const row: Row = {
         fighterId,
         division,
-        conservative: conservativeRating(now.rating, now.rd),
+        conservative: conservativeRating(now.rating, now.rd, params),
         rating: now.rating,
         rd: now.rd,
         isChampion,
         ufcFights: state.ufcFights,
-        eligible: isEligibleInDivision({ lastFightDateInDivision: lastDate, isChampion, isLatestDivision: state.lastDivision === division }, todayIso),
+        eligible: isEligibleInDivision({ lastFightDateInDivision: lastDate, isChampion, isHomeDivision: homeDivision(state, officialDivisionByFighter.get(fighterId), todayIso) === division }, todayIso),
       };
       const list = rowsByDivision.get(division) ?? [];
       list.push(row);
@@ -109,18 +119,26 @@ async function main() {
       for (const r of rows) if (!best.has(r.fighterId) || r.isChampion) best.set(r.fighterId, r);
     }
     const list = Array.from(best.values()).sort((a, b) => b.conservative - a.conservative);
-    return { list, scores: poundForPoundScores(list.map((r) => ({ fighterId: r.fighterId, conservative: r.conservative, eligible: true }))) };
+    const raw = poundForPoundScores(list.map((r) => ({ fighterId: r.fighterId, conservative: r.conservative, eligible: true })));
+    const divisions = Array.from(rankedDivisions.entries())
+      .filter(([division]) => division.startsWith("Women's") === women)
+      .map(([division, rows]) => ({ championId: championIdByDivision.get(division), eligibleIds: rows.map((r) => r.fighterId) }));
+    const scores = capChallengersBelowChampion(raw, divisions);
+    // `list` stays in rating order for the sanity checks; `shown` is the displayed order.
+    const shown = list.slice().sort((a, b) => scores.get(b.fighterId)! - scores.get(a.fighterId)!);
+    return { list, shown, scores };
   };
 
   for (const [title, women] of [['hommes', false], ['femmes', true]] as const) {
-    const { list, scores } = p4pFor(women);
+    const { shown, scores } = p4pFor(women);
     console.log(`\n=== Top 10 P4P ${title} ===`);
-    list.slice(0, 10).forEach((r, i) =>
+    shown.slice(0, 10).forEach((r, i) =>
       console.log(`  ${String(i + 1).padStart(2)}. ${label(r.fighterId).padEnd(24)} ${r.division.padEnd(20)} ${scores.get(r.fighterId)!.toFixed(1).padStart(5)}  (R ${r.rating.toFixed(0)} ± ${r.rd.toFixed(0)}, ${r.ufcFights} combats UFC)${r.isChampion ? '  CHAMPION' : ''}`),
     );
   }
 
-  console.log('\n=== Top 5 par catégorie (règle du champion appliquée) ===');
+  const topCount = parseTopCount();
+  console.log(`\n=== Top ${topCount} par catégorie (règle du champion appliquée) ===`);
   const groups = sortWeightClassGroups(Array.from(rowsByDivision.keys()).map((weightClass) => ({ weightClass })));
   for (const { weightClass } of groups) {
     const all = rowsByDivision.get(weightClass)!;
@@ -129,7 +147,7 @@ async function main() {
     if (shown.length === 0) continue;
     const championRank = rankedDivisions.get(weightClass)!.findIndex((r) => r.isChampion);
     console.log(`  ${weightClass}${championRank > 0 ? `  (champion ${championRank + 1}e sur la note seule)` : ''}`);
-    shown.slice(0, 5).forEach((r, i) => console.log(`    ${i + 1}. ${label(r.fighterId).padEnd(24)} ${scores.get(r.fighterId)!.toFixed(1).padStart(5)}  (${r.ufcFights} combats UFC)${r.isChampion ? '  CHAMPION' : ''}`));
+    shown.slice(0, topCount).forEach((r, i) => console.log(`    ${i + 1}. ${label(r.fighterId).padEnd(24)} ${scores.get(r.fighterId)!.toFixed(1).padStart(5)}  (${r.ufcFights} combats UFC)${r.isChampion ? '  CHAMPION' : ''}`));
   }
 
   // Metric 2: sanity checks (on the rating order, BEFORE the champion display rule).
