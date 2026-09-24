@@ -1,7 +1,8 @@
 name: News sync
 
 # Polls the RSS/Atom sources in data/news/sources.config.ts and ingests new
-# articles into news_articles, every 20 minutes. Runs via GitHub Actions
+# articles into news_articles, every 2 hours (kept sparse to stay inside the
+# free GitHub Actions minutes of a private repo). Runs via GitHub Actions
 # rather than Vercel Cron for the same reason the other scheduled jobs in
 # this repo do (see daily-sync.yml / event-day-sync.yml): Vercel Cron's
 # frequency is limited on non-Pro plans, GitHub Actions isn't.
@@ -12,7 +13,7 @@ name: News sync
 # above lets anyone re-enable/re-run it manually from the Actions tab).
 on:
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '0 */2 * * *'
   workflow_dispatch: {}
 
 concurrency:

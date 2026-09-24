@@ -1,6 +1,9 @@
 name: Event-day live sync
 
-# Tighter polling for the days an event is actually happening. Runs every 15 minutes, but
+# Tighter polling for the days an event is actually happening. Runs every 30 minutes, Friday to
+# Sunday only (almost every card falls on those days; a Saturday card running past 00:00 UTC is
+# covered by Sunday's runs) -- kept that sparse to stay inside the free GitHub Actions minutes
+# of a private repo. Beyond that,
 # check-live-orgs.ts gates everything: if no org has an event dated today (or, until noon UTC,
 # yesterday -- an American card runs past 00:00 UTC, see shared/live-dates.ts) it exits immediately
 # (a single cheap DB query, no Sherdog traffic at all). On a live day it only rescrapes the
@@ -12,7 +15,7 @@ name: Event-day live sync
 # instead of waiting on a manual backfill:fighter-history run.
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * 5,6,0'
   workflow_dispatch: {}
 
 permissions:
