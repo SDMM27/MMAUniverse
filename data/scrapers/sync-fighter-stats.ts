@@ -157,29 +157,51 @@ async function resolveFighterIds(records: UfcStatsFightRecord[]): Promise<Map<st
   return resolved;
 }
 
+// Rows per multi-row statement. Each statement is one HTTP round trip to Neon; going row by row
+// (~75k round trips for the full UFCStats history) made the daily run take ~1.5 hours of Actions minutes.
+const BATCH_SIZE = 500;
+
+function chunk<T>(items: T[], size: number): T[][] {
+  const out: T[][] = [];
+  for (let i = 0; i < items.length; i += size) out.push(items.slice(i, i + size));
+  return out;
+}
+
+type MatchedRecord = { fighterId: number; record: UfcStatsFightRecord };
+
 async function main() {
   await ensureSchema();
 
   const records = loadRecords();
   const fighterIdByName = await resolveFighterIds(records);
-  let fightersUpdated = 0;
-  let statsRows = 0;
-  let roundRows = 0;
   let unmatched = 0;
 
+  // Keyed on each table's unique constraint: a single INSERT ... ON CONFLICT DO UPDATE can't touch
+  // the same row twice, so duplicates are collapsed here (last one wins, as with row-by-row upserts).
+  const ufcstatsUrlByFighterId = new Map<number, string>();
+  const matchedByKey = new Map<string, MatchedRecord>();
   for (const record of records) {
     const fighterId = fighterIdByName.get(record.fighter_name);
     if (!fighterId) {
       unmatched++;
       continue; // fighter isn't synced into the UFC org yet — the regular sync scripts own creating that row
     }
+    ufcstatsUrlByFighterId.set(fighterId, record.fighter_ufcstats_url);
+    matchedByKey.set(`${fighterId}|${record.ufcstats_fight_url}`, { fighterId, record });
+  }
 
-    await sql`UPDATE fighters SET ufcstats_url = ${record.fighter_ufcstats_url} WHERE id = ${fighterId} AND ufcstats_url IS DISTINCT FROM ${record.fighter_ufcstats_url}`;
-    fightersUpdated++;
+  for (const batch of chunk(Array.from(ufcstatsUrlByFighterId), BATCH_SIZE)) {
+    await sql`
+      UPDATE fighters f SET ufcstats_url = u.ufcstats_url
+      FROM UNNEST(${batch.map(([id]) => id)}::int[], ${batch.map(([, url]) => url)}::text[]) AS u(id, ufcstats_url)
+      WHERE f.id = u.id AND f.ufcstats_url IS DISTINCT FROM u.ufcstats_url
+    `;
+  }
 
-    const t = record.totals;
-    const s = record.strikes;
-    const [statsRow] = (await sql`
+  const statsIdByKey = new Map<string, number>();
+  for (const batch of chunk(Array.from(matchedByKey.values()), BATCH_SIZE)) {
+    const col = <T>(pick: (m: MatchedRecord) => T): T[] => batch.map(pick);
+    const inserted = (await sql`
       INSERT INTO fighter_fight_stats
         (fighter_id, opponent_name, event_name, event_date, ufcstats_fight_url, result,
          weight_class, is_title_fight, method, finish_round, finish_time, scheduled_rounds,
@@ -188,14 +210,42 @@ async function main() {
          sig_strikes_head_landed, sig_strikes_head_attempted, sig_strikes_body_landed, sig_strikes_body_attempted,
          sig_strikes_leg_landed, sig_strikes_leg_attempted, sig_strikes_distance_landed, sig_strikes_distance_attempted,
          sig_strikes_clinch_landed, sig_strikes_clinch_attempted, sig_strikes_ground_landed, sig_strikes_ground_attempted)
-      VALUES
-        (${fighterId}, ${record.opponent_name}, ${record.event_name}, ${record.event_date || null}, ${record.ufcstats_fight_url}, ${record.result},
-         ${record.weight_class || null}, ${record.is_title_fight ?? null}, ${record.method || null}, ${record.round || null}, ${record.time || null}, ${record.scheduled_rounds || null},
-         ${t.knockdowns}, ${t.sigStrikes.landed}, ${t.sigStrikes.attempted}, ${t.totalStrikes.landed}, ${t.totalStrikes.attempted},
-         ${t.takedowns.landed}, ${t.takedowns.attempted}, ${t.submissionAttempts}, ${t.reversals}, ${t.controlTimeSeconds},
-         ${s.head.landed}, ${s.head.attempted}, ${s.body.landed}, ${s.body.attempted},
-         ${s.leg.landed}, ${s.leg.attempted}, ${s.distance.landed}, ${s.distance.attempted},
-         ${s.clinch.landed}, ${s.clinch.attempted}, ${s.ground.landed}, ${s.ground.attempted})
+      SELECT * FROM UNNEST(
+        ${col((m) => m.fighterId)}::int[],
+        ${col((m) => m.record.opponent_name)}::varchar[],
+        ${col((m) => m.record.event_name)}::varchar[],
+        ${col((m) => m.record.event_date || null)}::varchar[],
+        ${col((m) => m.record.ufcstats_fight_url)}::varchar[],
+        ${col((m) => m.record.result)}::varchar[],
+        ${col((m) => m.record.weight_class || null)}::varchar[],
+        ${col((m) => m.record.is_title_fight ?? null)}::boolean[],
+        ${col((m) => m.record.method || null)}::varchar[],
+        ${col((m) => m.record.round || null)}::int[],
+        ${col((m) => m.record.time || null)}::varchar[],
+        ${col((m) => m.record.scheduled_rounds || null)}::int[],
+        ${col((m) => m.record.totals.knockdowns)}::int[],
+        ${col((m) => m.record.totals.sigStrikes.landed)}::int[],
+        ${col((m) => m.record.totals.sigStrikes.attempted)}::int[],
+        ${col((m) => m.record.totals.totalStrikes.landed)}::int[],
+        ${col((m) => m.record.totals.totalStrikes.attempted)}::int[],
+        ${col((m) => m.record.totals.takedowns.landed)}::int[],
+        ${col((m) => m.record.totals.takedowns.attempted)}::int[],
+        ${col((m) => m.record.totals.submissionAttempts)}::int[],
+        ${col((m) => m.record.totals.reversals)}::int[],
+        ${col((m) => m.record.totals.controlTimeSeconds)}::int[],
+        ${col((m) => m.record.strikes.head.landed)}::int[],
+        ${col((m) => m.record.strikes.head.attempted)}::int[],
+        ${col((m) => m.record.strikes.body.landed)}::int[],
+        ${col((m) => m.record.strikes.body.attempted)}::int[],
+        ${col((m) => m.record.strikes.leg.landed)}::int[],
+        ${col((m) => m.record.strikes.leg.attempted)}::int[],
+        ${col((m) => m.record.strikes.distance.landed)}::int[],
+        ${col((m) => m.record.strikes.distance.attempted)}::int[],
+        ${col((m) => m.record.strikes.clinch.landed)}::int[],
+        ${col((m) => m.record.strikes.clinch.attempted)}::int[],
+        ${col((m) => m.record.strikes.ground.landed)}::int[],
+        ${col((m) => m.record.strikes.ground.attempted)}::int[]
+      )
       ON CONFLICT (fighter_id, ufcstats_fight_url) DO UPDATE SET
         opponent_name = EXCLUDED.opponent_name,
         event_name = EXCLUDED.event_name,
@@ -229,37 +279,52 @@ async function main() {
         sig_strikes_clinch_attempted = EXCLUDED.sig_strikes_clinch_attempted,
         sig_strikes_ground_landed = EXCLUDED.sig_strikes_ground_landed,
         sig_strikes_ground_attempted = EXCLUDED.sig_strikes_ground_attempted
-      RETURNING id
-    `) as { id: number }[];
-    statsRows++;
-
-    for (const r of record.rounds ?? []) {
-      await sql`
-        INSERT INTO fighter_fight_round_stats
-          (fighter_fight_stats_id, round, knockdowns, sig_strikes_landed, sig_strikes_attempted,
-           total_strikes_landed, total_strikes_attempted, takedowns_landed, takedowns_attempted,
-           submission_attempts, reversals, control_time_seconds)
-        VALUES
-          (${statsRow.id}, ${r.round}, ${r.knockdowns}, ${r.sigStrikes.landed}, ${r.sigStrikes.attempted},
-           ${r.totalStrikes.landed}, ${r.totalStrikes.attempted}, ${r.takedowns.landed}, ${r.takedowns.attempted},
-           ${r.submissionAttempts}, ${r.reversals}, ${r.controlTimeSeconds})
-        ON CONFLICT (fighter_fight_stats_id, round) DO UPDATE SET
-          knockdowns = EXCLUDED.knockdowns,
-          sig_strikes_landed = EXCLUDED.sig_strikes_landed,
-          sig_strikes_attempted = EXCLUDED.sig_strikes_attempted,
-          total_strikes_landed = EXCLUDED.total_strikes_landed,
-          total_strikes_attempted = EXCLUDED.total_strikes_attempted,
-          takedowns_landed = EXCLUDED.takedowns_landed,
-          takedowns_attempted = EXCLUDED.takedowns_attempted,
-          submission_attempts = EXCLUDED.submission_attempts,
-          reversals = EXCLUDED.reversals,
-          control_time_seconds = EXCLUDED.control_time_seconds
-      `;
-      roundRows++;
-    }
+      RETURNING id, fighter_id, ufcstats_fight_url
+    `) as { id: number; fighter_id: number; ufcstats_fight_url: string }[];
+    for (const row of inserted) statsIdByKey.set(`${row.fighter_id}|${row.ufcstats_fight_url}`, row.id);
   }
 
-  console.log(`Done. ${fightersUpdated} fighter row(s) updated with a ufcstats_url, ${statsRows} stats row(s) upserted, ${roundRows} round-stat row(s) upserted, ${unmatched} record(s) skipped (fighter not found in UFC org).`);
+  const roundsByKey = new Map<string, { statsId: number; round: UfcStatsFightRecord['rounds'][number] }>();
+  for (const [key, { record }] of Array.from(matchedByKey)) {
+    const statsId = statsIdByKey.get(key)!;
+    for (const round of record.rounds ?? []) roundsByKey.set(`${statsId}|${round.round}`, { statsId, round });
+  }
+
+  for (const batch of chunk(Array.from(roundsByKey.values()), BATCH_SIZE)) {
+    await sql`
+      INSERT INTO fighter_fight_round_stats
+        (fighter_fight_stats_id, round, knockdowns, sig_strikes_landed, sig_strikes_attempted,
+         total_strikes_landed, total_strikes_attempted, takedowns_landed, takedowns_attempted,
+         submission_attempts, reversals, control_time_seconds)
+      SELECT * FROM UNNEST(
+        ${batch.map((b) => b.statsId)}::int[],
+        ${batch.map((b) => b.round.round)}::int[],
+        ${batch.map((b) => b.round.knockdowns)}::int[],
+        ${batch.map((b) => b.round.sigStrikes.landed)}::int[],
+        ${batch.map((b) => b.round.sigStrikes.attempted)}::int[],
+        ${batch.map((b) => b.round.totalStrikes.landed)}::int[],
+        ${batch.map((b) => b.round.totalStrikes.attempted)}::int[],
+        ${batch.map((b) => b.round.takedowns.landed)}::int[],
+        ${batch.map((b) => b.round.takedowns.attempted)}::int[],
+        ${batch.map((b) => b.round.submissionAttempts)}::int[],
+        ${batch.map((b) => b.round.reversals)}::int[],
+        ${batch.map((b) => b.round.controlTimeSeconds)}::int[]
+      )
+      ON CONFLICT (fighter_fight_stats_id, round) DO UPDATE SET
+        knockdowns = EXCLUDED.knockdowns,
+        sig_strikes_landed = EXCLUDED.sig_strikes_landed,
+        sig_strikes_attempted = EXCLUDED.sig_strikes_attempted,
+        total_strikes_landed = EXCLUDED.total_strikes_landed,
+        total_strikes_attempted = EXCLUDED.total_strikes_attempted,
+        takedowns_landed = EXCLUDED.takedowns_landed,
+        takedowns_attempted = EXCLUDED.takedowns_attempted,
+        submission_attempts = EXCLUDED.submission_attempts,
+        reversals = EXCLUDED.reversals,
+        control_time_seconds = EXCLUDED.control_time_seconds
+    `;
+  }
+
+  console.log(`Done. ${ufcstatsUrlByFighterId.size} fighter row(s) checked for a ufcstats_url, ${matchedByKey.size} stats row(s) upserted, ${roundsByKey.size} round-stat row(s) upserted, ${unmatched} record(s) skipped (fighter not found in UFC org).`);
 }
 
 main().catch((error) => {
