@@ -8,11 +8,10 @@
 // (same natural key seed-additional-orgs.ts's findFighterId uses) rather than creating new
 // ones, and upserts fighter_fight_history by its own natural key so nothing duplicates.
 //
-// Run with no args (as daily-sync.yml does) to sync every fighter in every org — that's one
-// row-by-row DB round trip per fight per fighter, tens of thousands of them for a roster the
-// size of the UFC's, fine for a once-a-day job with no time pressure. The event-day workflow
-// runs every 15 minutes and can't afford that, so it instead passes `<orgKey> --live` (or an
-// explicit `--date=YYYY-MM-DD[,YYYY-MM-DD]`) — see sync-live-fighter-history.ts, which refreshes
+// Run with no args (as daily-sync.yml does) to sync every fighter in every org — ~200k history
+// rows, pushed as multi-row UNNEST statements of BATCH_SIZE rows each (a few hundred round trips,
+// not one per row). The event-day workflow doesn't need all of that, so it instead passes
+// `<orgKey> --live` (or an explicit `--date=YYYY-MM-DD[,YYYY-MM-DD]`) — see sync-live-fighter-history.ts, which refreshes
 // the same fighters' JSON right before this runs — to scope the push down to just the handful of
 // fighters who fought that day in that org. `--live` = today plus, overnight, yesterday (see
 // shared/live-dates.ts: an American card runs past 00:00 UTC).
@@ -79,12 +78,38 @@ function loadDataset(orgKey: string): ScrapedOrgData | null {
   return JSON.parse(fs.readFileSync(file, 'utf-8'));
 }
 
-async function findFighterId(name: string, organizationId: number): Promise<number | null> {
-  const res = (await sql`
-    SELECT id FROM fighters WHERE name = ${name} AND organization_id = ${organizationId}
-  `) as { id: number }[];
-  return res[0]?.id ?? null;
+// Rows per multi-row statement. Each statement is one HTTP round trip to Neon; going row by row
+// (~230k round trips for the full roster) made the daily run take ~3 hours of Actions minutes.
+const BATCH_SIZE = 1000;
+
+function chunk<T>(items: T[], size: number): T[][] {
+  const out: T[][] = [];
+  for (let i = 0; i < items.length; i += size) out.push(items.slice(i, i + size));
+  return out;
 }
+
+async function fighterIdsByName(organizationId: number): Promise<Map<string, number>> {
+  const rows = (await sql`
+    SELECT id, name FROM fighters WHERE organization_id = ${organizationId} ORDER BY id
+  `) as { id: number; name: string }[];
+  const ids = new Map<string, number>();
+  for (const row of rows) if (!ids.has(row.name)) ids.set(row.name, row.id);
+  return ids;
+}
+
+type HistoryRow = {
+  fighterId: number;
+  opponentName: string;
+  opponentSherdogUrl: string | null;
+  eventName: string;
+  eventSherdogUrl: string | null;
+  eventDate: string | null;
+  result: string;
+  method: string | null;
+  referee: string | null;
+  round: number | null;
+  time: string | null;
+};
 
 async function main() {
   await ensureSchema();
@@ -119,36 +144,76 @@ async function main() {
       }
     }
 
+    const idsByName = await fighterIdsByName(config.organizationId);
+    const urlUpdates = new Map<number, string>();
+    // Keyed on the table's unique constraint: a single INSERT ... ON CONFLICT DO UPDATE can't touch
+    // the same row twice, so duplicates are collapsed here (last one wins, as with row-by-row upserts).
+    const historyByKey = new Map<string, HistoryRow>();
+
     for (const fighter of dataset.fighters) {
       if (namesToSync && !namesToSync.has(fighter.name)) continue;
       if (!fighter.sherdog_url) continue; // not yet backfilled for this fighter
 
-      const fighterId = await findFighterId(fighter.name, config.organizationId);
+      const fighterId = idsByName.get(fighter.name);
       if (!fighterId) continue; // fighter isn't synced into this org yet — the regular sync scripts own creating that row
 
-      await sql`UPDATE fighters SET sherdog_url = ${fighter.sherdog_url} WHERE id = ${fighterId}`;
-      fightersUpdated++;
+      urlUpdates.set(fighterId, fighter.sherdog_url);
 
       for (const entry of fighter.fight_history ?? []) {
-        await sql`
-          INSERT INTO fighter_fight_history
-            (fighter_id, opponent_name, opponent_sherdog_url, event_name, event_sherdog_url, event_date, result, method, referee, round, time)
-          VALUES
-            (${fighterId}, ${entry.opponent_name}, ${entry.opponent_sherdog_url || null}, ${entry.event_name}, ${entry.event_sherdog_url || null},
-             ${entry.date || null}, ${entry.result}, ${entry.method || null}, ${entry.referee || null}, ${entry.round || null}, ${entry.time || null})
-          ON CONFLICT (fighter_id, event_name, opponent_name) DO UPDATE SET
-            opponent_sherdog_url = EXCLUDED.opponent_sherdog_url,
-            event_sherdog_url = EXCLUDED.event_sherdog_url,
-            event_date = EXCLUDED.event_date,
-            result = EXCLUDED.result,
-            method = EXCLUDED.method,
-            referee = EXCLUDED.referee,
-            round = EXCLUDED.round,
-            time = EXCLUDED.time
-        `;
-        historyRows++;
+        historyByKey.set(JSON.stringify([fighterId, entry.event_name, entry.opponent_name]), {
+          fighterId,
+          opponentName: entry.opponent_name,
+          opponentSherdogUrl: entry.opponent_sherdog_url || null,
+          eventName: entry.event_name,
+          eventSherdogUrl: entry.event_sherdog_url || null,
+          eventDate: entry.date || null,
+          result: entry.result,
+          method: entry.method || null,
+          referee: entry.referee || null,
+          round: entry.round || null,
+          time: entry.time || null,
+        });
       }
     }
+
+    for (const batch of chunk(Array.from(urlUpdates), BATCH_SIZE)) {
+      await sql`
+        UPDATE fighters f SET sherdog_url = u.sherdog_url
+        FROM UNNEST(${batch.map(([id]) => id)}::int[], ${batch.map(([, url]) => url)}::text[]) AS u(id, sherdog_url)
+        WHERE f.id = u.id
+      `;
+    }
+    fightersUpdated += urlUpdates.size;
+
+    for (const batch of chunk(Array.from(historyByKey.values()), BATCH_SIZE)) {
+      await sql`
+        INSERT INTO fighter_fight_history
+          (fighter_id, opponent_name, opponent_sherdog_url, event_name, event_sherdog_url, event_date, result, method, referee, round, time)
+        SELECT * FROM UNNEST(
+          ${batch.map((r) => r.fighterId)}::int[],
+          ${batch.map((r) => r.opponentName)}::varchar[],
+          ${batch.map((r) => r.opponentSherdogUrl)}::varchar[],
+          ${batch.map((r) => r.eventName)}::varchar[],
+          ${batch.map((r) => r.eventSherdogUrl)}::varchar[],
+          ${batch.map((r) => r.eventDate)}::varchar[],
+          ${batch.map((r) => r.result)}::varchar[],
+          ${batch.map((r) => r.method)}::varchar[],
+          ${batch.map((r) => r.referee)}::varchar[],
+          ${batch.map((r) => r.round)}::int[],
+          ${batch.map((r) => r.time)}::varchar[]
+        )
+        ON CONFLICT (fighter_id, event_name, opponent_name) DO UPDATE SET
+          opponent_sherdog_url = EXCLUDED.opponent_sherdog_url,
+          event_sherdog_url = EXCLUDED.event_sherdog_url,
+          event_date = EXCLUDED.event_date,
+          result = EXCLUDED.result,
+          method = EXCLUDED.method,
+          referee = EXCLUDED.referee,
+          round = EXCLUDED.round,
+          time = EXCLUDED.time
+      `;
+    }
+    historyRows += historyByKey.size;
     console.log(`[${config.orgKey}] processed.`);
   }
 
