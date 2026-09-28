@@ -17,7 +17,7 @@ export default function Page() {
     <main className="flex min-h-screen flex-col gap-8 p-6">
       <div>
         <Link href="/classement-calcule" className="text-xs uppercase tracking-wide text-accent hover:underline">
-          ← Retour au classement
+          ← Retour au FightScore
         </Link>
         <h1 className="mt-2 font-display text-2xl uppercase tracking-wide text-ink-primary">Méthodologie</h1>
         <p className="mt-1 max-w-2xl text-sm text-ink-secondary">
