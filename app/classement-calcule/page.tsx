@@ -32,8 +32,8 @@ export default async function Page() {
     <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-10 px-6 py-8">
       <header className="flex flex-col gap-4 border-b border-base-border pb-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="font-display text-xs uppercase tracking-widest text-accent">FightScore · UFC</p>
-          <h1 className="mt-2 font-display text-4xl uppercase leading-none text-ink-primary md:text-5xl">Classement</h1>
+          <p className="font-display text-xs uppercase tracking-widest text-accent">Classement calculé · UFC</p>
+          <h1 className="mt-2 font-display text-4xl uppercase leading-none text-ink-primary md:text-5xl">FightScore</h1>
           <p className="mt-3 max-w-2xl text-sm text-ink-secondary">
             Un score sur 100 par catégorie, calculé à partir des statistiques réelles de chaque combat — dominance,
             qualité des adversaires battus, activité — pas seulement l&apos;avis d&apos;une organisation.{' '}
