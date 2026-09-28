@@ -3,8 +3,10 @@ name: Weekly FightScore
 # Recomputes FightScore (docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md)
 # once a week instead of daily, so the ranking stays stable between events and
 # moves week to week. Monday 12:00 UTC: UFC cards end around 05:00 UTC Sunday,
-# and the Sunday + Monday 09:00 runs of daily-sync.yml have pulled the results,
-# stats and current champions into Neon by then. The recomputation is a full,
+# and the Sunday + Monday 09:00 runs of daily-sync.yml have pulled the results
+# and current champions into Neon by then. The UFCStats fight-level stats are
+# scraped and synced here, right before the recomputation: FightScore is their
+# only consumer, so there's no point refreshing them more often than it runs. The recomputation is a full,
 # deterministic replay of every fight, so running it weekly changes when new
 # results show up, not what the ratings are. Run it by hand (workflow_dispatch)
 # after a data fix that shouldn't wait for Monday.
@@ -14,7 +16,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: read
+  contents: write # commits data/scraped/ufcstats-fight-stats.json
 
 # Same group as daily-sync.yml: never recompute while a sync is still writing to Neon.
 concurrency:
@@ -32,6 +34,30 @@ jobs:
           node-version: 20
 
       - run: npm ci
+
+      # UFCStats.com sits behind a JS anti-bot challenge -- see
+      # data/scrapers/shared/fetch-playwright.ts's doc comment.
+      - name: Install Playwright Chromium (for the UFCStats scraper)
+        run: npx playwright install --with-deps chromium
+
+      # Incremental by design (data/scrapers/shared/ufcstats-checkpoint.ts): seeds from the
+      # committed data/scraped/ufcstats-fight-stats.json and only fetches fight pages it
+      # doesn't already have -- a week's worth of UFC events, not the full history.
+      - name: Scrape UFC fight-level stats from UFCStats.com
+        run: npx tsx data/scrapers/scrape-ufcstats.ts
+
+      - name: Commit refreshed UFCStats data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/scraped/ufcstats-fight-stats.json
+          git diff --cached --quiet || git commit -m "chore(scrape): weekly UFCStats refresh"
+          git push
+
+      - name: Sync UFC fight-level stats to Neon
+        run: npx tsx data/scrapers/sync-fighter-stats.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: Compute FightScore ratings
         run: npx tsx data/scripts/compute-fighter-ratings.ts
