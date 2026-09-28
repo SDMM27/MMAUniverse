@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
 
-// "Classement" (the calculated FightScore ranking, the site's flagship
+// "FightScore" (the calculated ranking, the site's flagship
 // feature — see docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md)
 // sits right after Accueil, ahead of everything else that used to come
 // first. The pick'em leaderboard's own entry, previously also labeled
@@ -16,7 +16,7 @@ import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
 // family rather than inventing a new name for the calculated ranking.
 const links = [
   { href: '/', label: 'Accueil' },
-  { href: '/classement-calcule', label: 'Classement' },
+  { href: '/classement-calcule', label: 'FightScore' },
   { href: '/actualites', label: 'Actualités' },
   { href: '/events', label: 'Événements' },
   { href: '/fighters', label: 'Fighters' },
