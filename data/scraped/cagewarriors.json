@@ -1706,13 +1706,6 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/8817"
     },
     {
-      "name": "CW 210 - Cage Warriors 210: Dublin",
-      "date": "2026-09-26",
-      "start_time": "2026-09-26T00:00:00+00:00",
-      "event_location": "RDS Arena, Dublin, Ireland",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/893046"
-    },
-    {
       "name": "CWA - Cage Warriors Academy Lowlands 19",
       "date": "2026-10-03",
       "start_time": "2026-10-03T00:00:00+00:00",
@@ -1746,6 +1739,13 @@
       "start_time": "2026-12-05T00:00:00+00:00",
       "event_location": "Vertu Arena, Newcastle, England",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/898869"
+    },
+    {
+      "name": "CW 210 - Cage Warriors 210: Dublin",
+      "date": "2026-09-26",
+      "start_time": "2026-09-26T00:00:00+00:00",
+      "event_location": "RDS Arena, Dublin, Ireland",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/893046"
     }
   ],
   "fighters": [
@@ -1757,6 +1757,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Paddy-McCorry-250593",
       "fight_history": [
+        {
+          "opponent_name": "Gustavo Sousa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gustavo-Sousa-351943",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "Technical Submission (Brabo Choke)",
+          "referee": "Daniel Movahedi",
+          "round": 1,
+          "time": "1:02"
+        },
         {
           "opponent_name": "Dario Bellandi",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dario-Bellandi-234447",
@@ -2041,6 +2053,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Maximus-Lally-392642",
       "fight_history": [
+        {
+          "opponent_name": "Joao Pedro Saldanha",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joao-Pedro-Saldanha-183401",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Declan Larkin",
+          "round": 1,
+          "time": "2:13"
+        },
         {
           "opponent_name": "Alexandre dos Santos Junior",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexandre-dos-Santos-Junior-371619",
@@ -2350,6 +2374,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Keith-Keogh-306285",
       "fight_history": [
         {
+          "opponent_name": "Jhonatan Cordeiro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jhonatan-Cordeiro-242789",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Derek Hickey",
+          "round": 2,
+          "time": "2:01"
+        },
+        {
           "opponent_name": "Gabriel Ramos",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriel-Ramos-326215",
           "event_name": "CW 200 - Cage Warriors 200: Dublin",
@@ -2407,6 +2443,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ger-Harris-256669",
       "fight_history": [
+        {
+          "opponent_name": "Anderson Souza Soares",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anderson-Souza-Soares-273021",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Derek Hickey",
+          "round": 2,
+          "time": "4:22"
+        },
         {
           "opponent_name": "Kayck Alencar",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kayck-Alencar-147229",
@@ -2904,6 +2952,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Conor-McCarthy-392639",
       "fight_history": [
         {
+          "opponent_name": "Dumitru Girlean",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dumitru-Girlean-245193",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Daniel Movahedi",
+          "round": 2,
+          "time": "2:10"
+        },
+        {
           "opponent_name": "George Staines",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/George-Staines-307577",
           "event_name": "CW 207 - Cage Warriors 207: Manchester",
@@ -3104,6 +3164,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Solomon-Simon-333641",
       "fight_history": [
         {
+          "opponent_name": "Kenny Mokhonoana",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kenny-Mokhonoana-211877",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Declan Larkin",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Erick Maia",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erick-Maia-384811",
           "event_name": "CW 206 - Cage Warriors 206: Unplugged",
@@ -3221,6 +3293,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kenny-Mokhonoana-211877",
       "fight_history": [
+        {
+          "opponent_name": "Solomon Simon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Solomon-Simon-333641",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Declan Larkin",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Grant Ogborne",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Grant-Ogborne-302595",
@@ -3352,6 +3436,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Damien-McKenna-390576",
       "fight_history": [
         {
+          "opponent_name": "Miguel Haro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Miguel-Haro-80691",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Daniel Movahedi",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Pedro Silva",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Silva-398067",
           "event_name": "CW 200 - Cage Warriors 200: Dublin",
@@ -3398,6 +3494,18 @@
           "referee": "",
           "round": 3,
           "time": "0:38"
+        },
+        {
+          "opponent_name": "Jamie McAleese",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jamie-McAleese-171183",
+          "event_name": "Chaos FC 24 - Chaos Fighting Championships 24",
+          "event_sherdog_url": "https://www.sherdog.com/events/Chaos-FC-24-Chaos-Fighting-Championships-24-105219",
+          "date": "2024-11-23",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "0:22"
         }
       ]
     },
@@ -3409,6 +3517,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Miguel-Haro-80691",
       "fight_history": [
+        {
+          "opponent_name": "Damien McKenna",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Damien-McKenna-390576",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daniel Movahedi",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Martin Corney",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Martin-Corney-378673",
@@ -3708,6 +3828,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Corey-McLaughlin-382769",
       "fight_history": [
         {
+          "opponent_name": "Jordan Walters",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jordan-Walters-302605",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Derek Hickey",
+          "round": 2,
+          "time": "1:46"
+        },
+        {
           "opponent_name": "Ciaran Maskey",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ciaran-Maskey-403594",
           "event_name": "GFC 3 - GladiatEire Fighting Championships 3",
@@ -3754,6 +3886,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Jordan-Walters-302605",
       "fight_history": [
         {
+          "opponent_name": "Corey McLaughlin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Corey-McLaughlin-382769",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Derek Hickey",
+          "round": 2,
+          "time": "1:46"
+        },
+        {
           "opponent_name": "Konstantinos Skordoulis",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Konstantinos-Skordoulis-215707",
           "event_name": "MFC 18 - Meltdown Fighting Championships 18",
@@ -3787,6 +3931,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Lewis-Byrne-315159",
       "fight_history": [
+        {
+          "opponent_name": "Oliver Tero",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oliver-Tero-391010",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Daniel Movahedi",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Ben Ellis",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ben-Ellis-247597",
@@ -3857,6 +4013,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Oliver-Tero-391010",
       "fight_history": [
+        {
+          "opponent_name": "Lewis Byrne",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lewis-Byrne-315159",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daniel Movahedi",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Alexis Tsarmantidis",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexis-Tsarmantidis-321037",
@@ -4104,6 +4272,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Senan-Coakley-414341",
       "fight_history": [
         {
+          "opponent_name": "Louis Bricusse",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Louis-Bricusse-398028",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "TKO (Punches and Knee)",
+          "referee": "Derek Hickey",
+          "round": 1,
+          "time": "3:05"
+        },
+        {
           "opponent_name": "Lewis Urquhart",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lewis-Urquhart-461528",
           "event_name": "CW 205 - Cage Warriors 205: Glasgow",
@@ -4138,6 +4318,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Louis-Bricusse-398028",
       "fight_history": [
         {
+          "opponent_name": "Senan Coakley",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Senan-Coakley-414341",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "TKO (Punches and Knee)",
+          "referee": "Derek Hickey",
+          "round": 1,
+          "time": "3:05"
+        },
+        {
           "opponent_name": "Guilherme Cisneiros",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Guilherme-Cisneiros-483194",
           "event_name": "FSC 33 - FightStar Championship 33",
@@ -4159,6 +4351,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ronan-Deegan-394185",
       "fight_history": [
+        {
+          "opponent_name": "Billy Sutherland",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Billy-Sutherland-379455",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Declan Larkin",
+          "round": 3,
+          "time": "3:26"
+        },
         {
           "opponent_name": "Lucas Rodrigues",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lucas-Rodrigues-132685",
@@ -4217,6 +4421,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Billy-Sutherland-379455",
       "fight_history": [
+        {
+          "opponent_name": "Ronan Deegan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ronan-Deegan-394185",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Declan Larkin",
+          "round": 3,
+          "time": "3:26"
+        },
         {
           "opponent_name": "Jean Bernard Kamali",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jean-Bernard-Kamali-331331",
@@ -19709,6 +19925,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Cristiano-Oliveira-398096",
       "fight_history": [
+        {
+          "opponent_name": "Alex Keogh",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Keogh-339393",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Declan Larkin",
+          "round": 1,
+          "time": "0:39"
+        },
         {
           "opponent_name": "Yusuf Nazokatov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yusuf-Nazokatov-150541",
@@ -35971,6 +36199,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alex-Keogh-339393",
       "fight_history": [
+        {
+          "opponent_name": "Cristiano Oliveira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cristiano-Oliveira-398096",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Declan Larkin",
+          "round": 1,
+          "time": "0:39"
+        },
         {
           "opponent_name": "Taylor Sullivan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taylor-Sullivan-447035",
@@ -52450,6 +52690,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Gustavo-Sousa-351943",
       "fight_history": [
         {
+          "opponent_name": "Paddy McCorry",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paddy-McCorry-250593",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Technical Submission (Brabo Choke)",
+          "referee": "Daniel Movahedi",
+          "round": 1,
+          "time": "1:02"
+        },
+        {
           "opponent_name": "Everton Freitas",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Everton-Freitas-265817",
           "event_name": "SFT 64 - Ocampos vs. Rafael",
@@ -52567,6 +52819,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Joao-Pedro-Saldanha-183401",
       "fight_history": [
+        {
+          "opponent_name": "Maximus Lally",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maximus-Lally-392642",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Declan Larkin",
+          "round": 1,
+          "time": "2:13"
+        },
         {
           "opponent_name": "Robson Pontes da Cruz",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Robson-Pontes-da-Cruz-275493",
@@ -52878,6 +53142,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Dumitru-Girlean-245193",
       "fight_history": [
         {
+          "opponent_name": "Conor McCarthy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Conor-McCarthy-392639",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Daniel Movahedi",
+          "round": 2,
+          "time": "2:10"
+        },
+        {
           "opponent_name": "Pedro Magalhaes",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Magalhaes-417215",
           "event_name": "FederKombat - Halloween Fight Night",
@@ -53032,6 +53308,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Anderson-Souza-Soares-273021",
       "fight_history": [
         {
+          "opponent_name": "Ger Harris",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ger-Harris-256669",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Derek Hickey",
+          "round": 2,
+          "time": "4:22"
+        },
+        {
           "opponent_name": "Erick Washington",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erick-Washington-363705",
           "event_name": "Liga Monstro Combate - LMC 2",
@@ -53090,6 +53378,18 @@
           "referee": "Claudio Feitosa",
           "round": 1,
           "time": "4:36"
+        },
+        {
+          "opponent_name": "Wallace Lopes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Wallace-Lopes-232363",
+          "event_name": "BRTL 4 - Bryan vs. Cangaty",
+          "event_sherdog_url": "https://www.sherdog.com/events/BRTL-4-Bryan-vs-Cangaty-107901",
+          "date": "2025-04-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Emir",
+          "round": 3,
+          "time": "5:00"
         },
         {
           "opponent_name": "Luiz Eduardo      Carneiro",
@@ -53305,6 +53605,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jhonatan-Cordeiro-242789",
       "fight_history": [
+        {
+          "opponent_name": "Keith Keogh",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Keith-Keogh-306285",
+          "event_name": "CW 210 - Cage Warriors 210: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-210-Cage-Warriors-210-Dublin-113634",
+          "date": "2026-09-26",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Derek Hickey",
+          "round": 2,
+          "time": "2:01"
+        },
         {
           "opponent_name": "Aristides Vinicius Dias",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aristides-Vinicius-Dias-342935",
@@ -93215,175 +93527,6 @@
       "weight_class": ""
     },
     {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Paddy McCorry",
-      "fighter2_name": "Gustavo Sousa",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Maximus Lally",
-      "fighter2_name": "Joao Pedro Saldanha",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Ger Harris",
-      "fighter2_name": "Anderson Souza Soares",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "132lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Conor McCarthy",
-      "fighter2_name": "Dumitru Girlean",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Keith Keogh",
-      "fighter2_name": "Jhonatan Cordeiro",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "150lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Solomon Simon",
-      "fighter2_name": "Kenny Mokhonoana",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Gary Rooney",
-      "fighter2_name": "Tom Creasey",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Lewis Byrne",
-      "fighter2_name": "Oliver Tero",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Ronan Deegan",
-      "fighter2_name": "Billy Sutherland",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Senan Coakley",
-      "fighter2_name": "Louis Bricusse",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Damien McKenna",
-      "fighter2_name": "Miguel Haro",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Corey McLaughlin",
-      "fighter2_name": "Jordan Walters",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 210 - Cage Warriors 210: Dublin",
-      "fighter1_name": "Alex Keogh",
-      "fighter2_name": "Cristiano Oliveira",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "150lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
       "fighter1_name": "Dario Bellandi",
       "fighter2_name": "Renato Valente Alves",
@@ -93770,6 +93913,162 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Gustavo Sousa",
+      "fighter2_name": "Paddy McCorry",
+      "fight_finished": true,
+      "winner_name": "Gustavo Sousa",
+      "method": "Technical Submission (Brabo Choke)",
+      "round": 1,
+      "time": "1:02",
+      "weight_class": "Middleweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Maximus Lally",
+      "fighter2_name": "Joao Pedro Saldanha",
+      "fight_finished": true,
+      "winner_name": "Maximus Lally",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:13",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Anderson Souza Soares",
+      "fighter2_name": "Ger Harris",
+      "fight_finished": true,
+      "winner_name": "Anderson Souza Soares",
+      "method": "Submission (Triangle Choke)",
+      "round": 2,
+      "time": "4:22",
+      "weight_class": "132lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Conor McCarthy",
+      "fighter2_name": "Dumitru Girlean",
+      "fight_finished": true,
+      "winner_name": "Conor McCarthy",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "2:10",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Keith Keogh",
+      "fighter2_name": "Jhonatan Cordeiro",
+      "fight_finished": true,
+      "winner_name": "Keith Keogh",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 2,
+      "time": "2:01",
+      "weight_class": "150lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Kenny Mokhonoana",
+      "fighter2_name": "Solomon Simon",
+      "fight_finished": true,
+      "winner_name": "Kenny Mokhonoana",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Oliver Tero",
+      "fighter2_name": "Lewis Byrne",
+      "fight_finished": true,
+      "winner_name": "Oliver Tero",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Ronan Deegan",
+      "fighter2_name": "Billy Sutherland",
+      "fight_finished": true,
+      "winner_name": "Ronan Deegan",
+      "method": "Submission (Arm-Triangle Choke)",
+      "round": 3,
+      "time": "3:26",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Senan Coakley",
+      "fighter2_name": "Louis Bricusse",
+      "fight_finished": true,
+      "winner_name": "Senan Coakley",
+      "method": "TKO (Punches and Knee)",
+      "round": 1,
+      "time": "3:05",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Miguel Haro",
+      "fighter2_name": "Damien McKenna",
+      "fight_finished": true,
+      "winner_name": "Miguel Haro",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Jordan Walters",
+      "fighter2_name": "Corey McLaughlin",
+      "fight_finished": true,
+      "winner_name": "Jordan Walters",
+      "method": "Submission (Brabo Choke)",
+      "round": 2,
+      "time": "1:46",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 210 - Cage Warriors 210: Dublin",
+      "fighter1_name": "Cristiano Oliveira",
+      "fighter2_name": "Alex Keogh",
+      "fight_finished": true,
+      "winner_name": "Cristiano Oliveira",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "0:39",
+      "weight_class": "150lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     }

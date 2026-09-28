@@ -352,17 +352,10 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/891642"
     },
     {
-      "name": "HXMMA 47 - Hexagone MMA 47",
-      "date": "2026-09-25",
-      "start_time": "2026-09-25T00:00:00+00:00",
-      "event_location": "Zenith Toulouse Metropole, Toulouse, France",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/890097"
-    },
-    {
       "name": "HXMMA 48 - Hexagone MMA 48",
       "date": "2026-10-24",
       "start_time": "2026-10-24T00:00:00+00:00",
-      "event_location": "Zenith Paris - La Villette, Paris, France",
+      "event_location": "Zenith Paris, Paris, France",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/891276"
     },
     {
@@ -371,6 +364,13 @@
       "start_time": "2026-11-27T00:00:00+00:00",
       "event_location": "Glaz Arena, Cesson-Sevigne, France",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895508"
+    },
+    {
+      "name": "HXMMA 47 - Hexagone MMA 47",
+      "date": "2026-09-25",
+      "start_time": "2026-09-25T00:00:00+00:00",
+      "event_location": "Zenith Toulouse, Toulouse, France",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/890097"
     }
   ],
   "fighters": [
@@ -1821,6 +1821,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Nicolae-Bivol-397607",
       "fight_history": [
         {
+          "opponent_name": "David Sipra",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Sipra-332915",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "TKO (Elbow and Punches)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "1:40"
+        },
+        {
           "opponent_name": "Theo Ulrich",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Theo-Ulrich-397608",
           "event_name": "HXMMA 44 - Hexagone MMA 44",
@@ -1950,6 +1962,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/David-Sipra-332915",
       "fight_history": [
+        {
+          "opponent_name": "Nicolae Bivol",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolae-Bivol-397607",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "TKO (Elbow and Punches)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "1:40"
+        },
         {
           "opponent_name": "Theo Ulrich",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Theo-Ulrich-397608",
@@ -2127,6 +2151,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Mahamadou-Soukouna-419767",
       "fight_history": [
         {
+          "opponent_name": "Elie Caille",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elie-Caille-398905",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Ludovic Dandine",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Ronaldo Oliveira Silva",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ronaldo-Oliveira-Silva-85858",
           "event_name": "HXMMA 38 - Hexagone MMA 38",
@@ -2208,6 +2244,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Elie-Caille-398905",
       "fight_history": [
+        {
+          "opponent_name": "Mahamadou Soukouna",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahamadou-Soukouna-419767",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Ludovic Dandine",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Faudel Bentayeb",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Faudel-Bentayeb-394152",
@@ -2339,6 +2387,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Nessim-Khettou-396430",
       "fight_history": [
         {
+          "opponent_name": "Mohammed Amine Moufrij",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mohammed-Amine-Moufrij-452961",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Loic Pora",
+          "round": 3,
+          "time": "1:08"
+        },
+        {
           "opponent_name": "Mazri Ammar",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mazri-Ammar-407518",
           "event_name": "HXMMA 45 - Hexagone MMA 45",
@@ -2419,6 +2479,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Axel-Alfandari-328169",
       "fight_history": [
         {
+          "opponent_name": "Tomas Galko",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tomas-Galko-437386",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Luc Hernandez",
+          "round": 2,
+          "time": "3:46"
+        },
+        {
           "opponent_name": "Bollo Samake",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bollo-Samake-418783",
           "event_name": "Striker MMA - Striker 12",
@@ -2465,6 +2537,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Tomas-Galko-437386",
       "fight_history": [
         {
+          "opponent_name": "Axel Alfandari",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Axel-Alfandari-328169",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Luc Hernandez",
+          "round": 2,
+          "time": "3:46"
+        },
+        {
           "opponent_name": "Zan Bozenk",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zan-Bozenk-435826",
           "event_name": "Brave CF 102 - Brave Combat Federation 102 / WFC 29",
@@ -2498,6 +2582,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Morgane-Dehaye-307669",
       "fight_history": [
+        {
+          "opponent_name": "Alison Canot",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alison-Canot-485936",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "TKO (Body Kick and Punches)",
+          "referee": "Luc Hernandez",
+          "round": 1,
+          "time": "0:58"
+        },
         {
           "opponent_name": "Kelley Hamming",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kelley-Hamming-386929",
@@ -2568,6 +2664,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alison-Canot-485936",
       "fight_history": [
+        {
+          "opponent_name": "Morgane Dehaye",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Morgane-Dehaye-307669",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "TKO (Body Kick and Punches)",
+          "referee": "Luc Hernandez",
+          "round": 1,
+          "time": "0:58"
+        },
         {
           "opponent_name": "Ludmila Scurco",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ludmila-Scurco-444464",
@@ -18303,6 +18411,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Boubacar-Oumarou-Diakite-464990",
       "fight_history": [
         {
+          "opponent_name": "Yassir Fadili",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yassir-Fadili-461156",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Ludovic Dandine",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
           "opponent_name": "Theo Murris",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Theo-Murris-420357",
           "event_name": "Jungle Strike Championship - JSC 4",
@@ -18642,6 +18762,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Hicham-Outaleb-442418",
       "fight_history": [
+        {
+          "opponent_name": "Mani Grimaudo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mani-Grimaudo-457971",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Ludovic Dandine",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Nolan Rais-Chaabane",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nolan-RaisChaabane-460915",
@@ -23242,6 +23374,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Marco-Hernandez-485520",
       "fight_history": [
+        {
+          "opponent_name": "Wilsan Said Omar Abdi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Wilsan-Said-Omar-Abdi-417433",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Luc Hernandez",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Rafioullah Mohammadi",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafioullah-Mohammadi-489442",
@@ -35171,316 +35315,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/UgoAntton-Vidal-433684",
       "fight_history": [
         {
-          "opponent_name": "Aline Gaye",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aline-Gaye-450588",
-          "event_name": "HXMMA 25 - Hexagone MMA 25",
-          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-25-Hexagone-MMA-25-105042",
-          "date": "2025-03-29",
+          "opponent_name": "Morgan Thong",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Morgan-Thong-417429",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
           "result": "win",
-          "method": "Disqualification (Illegal Knee)",
-          "referee": "",
-          "round": 3,
-          "time": "0:26"
-        },
-        {
-          "opponent_name": "Keoni Lembert",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Keoni-Lembert-440548",
-          "event_name": "HXMMA 23 - Hexagone MMA 23",
-          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-23-Hexagone-MMA-23-105040",
-          "date": "2025-01-10",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "Mohamed Khamallah",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Alex Cruz",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Cruz-436838",
-          "event_name": "IMMAF - 2024 World Championships: Day 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2024-World-Championships-Day-2-105388",
-          "date": "2024-11-06",
-          "result": "win",
-          "method": "Disqualification (Illegal Knee)",
-          "referee": "",
-          "round": 2,
-          "time": "1:15"
-        },
-        {
-          "opponent_name": "Matteo Sudaros",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matteo-Sudaros-460855",
-          "event_name": "FMMAF - 2024 French MMA Championship: Day 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-2024-French-MMA-Championship-Day-1-102973",
-          "date": "2024-06-08",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Tristan Moreau",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tristan-Moreau-388652",
-          "event_name": "FMMAF - 2024 French MMA Championship: Day 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-2024-French-MMA-Championship-Day-1-102973",
-          "date": "2024-06-08",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Elias Erber",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elias-Erber-361371",
-          "event_name": "IMMAF - 2024 European Championships: Day 7",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2024-European-Championships-Day-7-103617",
-          "date": "2024-04-06",
-          "result": "loss",
-          "method": "TKO",
-          "referee": "",
-          "round": 2,
-          "time": "2:53"
-        },
-        {
-          "opponent_name": "Paul Denis Navero",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paul-Denis-Navero-408149",
-          "event_name": "IMMAF - 2024 European Championships: Day 6",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2024-European-Championships-Day-6-103616",
-          "date": "2024-04-05",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
-          "round": 2,
-          "time": "0:36"
-        },
-        {
-          "opponent_name": "Min-Soo Song",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/MinSoo-Song-399653",
-          "event_name": "IMMAF - 2024 European Championships: Day 5",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2024-European-Championships-Day-5-105376",
-          "date": "2024-04-04",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Pavel Vasilev",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pavel-Vasilev-463025",
-          "event_name": "IMMAF - 2024 European Championships: Day 4",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2024-European-Championships-Day-4-103615",
-          "date": "2024-04-03",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 2,
-          "time": "1:43"
-        },
-        {
-          "opponent_name": "Kenji Aliamane",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kenji-Aliamane-449685",
-          "event_name": "FMMAF - MMA League 11: Clermont - Day 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-11-Clermont-Day-1-101992",
-          "date": "2024-03-01",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Vladyslav Hryshyn",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vladyslav-Hryshyn-462621",
-          "event_name": "IMMAF - 2023 World Championships: Day 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2023-World-Championships-Day-2-100249",
-          "date": "2023-11-21",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Ruad Shamilov",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ruad-Shamilov-420917",
-          "event_name": "IMMAF - 2023 World Championships: Day 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2023-World-Championships-Day-1-100248",
-          "date": "2023-11-20",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Paul Denis Navero",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paul-Denis-Navero-408149",
-          "event_name": "FMMAF - 2023 French MMA Championship: Day 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-2023-French-MMA-Championship-Day-2-99887",
-          "date": "2023-07-09",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Idrissa Soumare",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Idrissa-Soumare-435500",
-          "event_name": "FMMAF - MMA League 6: Clermont - Day 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-6-Clermont-Day-2-99883",
-          "date": "2023-05-28",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
+          "method": "TKO (Punches)",
+          "referee": "Ludovic Dandine",
           "round": 1,
-          "time": "1:23"
-        },
-        {
-          "opponent_name": "Abuev Ramzan",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abuev-Ramzan-461276",
-          "event_name": "FMMAF - MMA League 6: Clermont - Day 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-6-Clermont-Day-2-99883",
-          "date": "2023-05-28",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Paul Denis Navero",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paul-Denis-Navero-408149",
-          "event_name": "FMMAF - MMA League 6: Clermont - Day 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-6-Clermont-Day-1-99882",
-          "date": "2023-05-27",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "0:55"
-        },
-        {
-          "opponent_name": "Paul Denis Navero",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paul-Denis-Navero-408149",
-          "event_name": "FMMAF - MMA League 4: Hem - Day 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-4-Hem-Day-2-99875",
-          "date": "2023-03-19",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Quentin Murati",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Quentin-Murati-433685",
-          "event_name": "FMMAF - MMA League 3: Bastia",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-3-Bastia-99521",
-          "date": "2023-03-04",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "2:26"
-        },
-        {
-          "opponent_name": "Esteban Gid",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Esteban-Gid-363683",
-          "event_name": "FMMAF - MMA League 3: Bastia",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-3-Bastia-99521",
-          "date": "2023-03-04",
-          "result": "loss",
-          "method": "Submission (Triangle Choke)",
-          "referee": "",
-          "round": 2,
-          "time": "1:15"
-        },
-        {
-          "opponent_name": "Charles Grossin",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Charles-Grossin-409135",
-          "event_name": "FMMAF - MMA League 2: Tarbes - Day 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-2-Tarbes-Day-2-105250",
-          "date": "2023-02-04",
-          "result": "loss",
-          "method": "TKO",
-          "referee": "",
-          "round": 3,
-          "time": "1:48"
-        },
-        {
-          "opponent_name": "Evan Aurand",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evan-Aurand-423230",
-          "event_name": "FMMAF - MMA League 2: Tarbes - Day 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-2-Tarbes-Day-1-105251",
-          "date": "2023-02-03",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Mohamed Ali Hassine",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mohamed-Ali-Hassine-451560",
-          "event_name": "FMMAF - MMA League 2: Tarbes - Day 1",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-2-Tarbes-Day-1-105251",
-          "date": "2023-02-03",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "1:53"
-        },
-        {
-          "opponent_name": "Oihan Arnanz",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oihan-Arnanz-437572",
-          "event_name": "Kuraia Fight Club - Invictus XX",
-          "event_sherdog_url": "https://www.sherdog.com/events/Kuraia-Fight-Club-Invictus-XX-105145",
-          "date": "2022-12-17",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 2,
-          "time": "1:27"
-        },
-        {
-          "opponent_name": "Clement Garcia",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Clement-Garcia-460513",
-          "event_name": "Kuraia Fight Club - Invictus XX",
-          "event_sherdog_url": "https://www.sherdog.com/events/Kuraia-Fight-Club-Invictus-XX-105145",
-          "date": "2022-12-17",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "0:43"
-        },
-        {
-          "opponent_name": "Florian Ravit",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Florian-Ravit-460503",
-          "event_name": "Kuraia Fight Club - Invictus XX",
-          "event_sherdog_url": "https://www.sherdog.com/events/Kuraia-Fight-Club-Invictus-XX-105145",
-          "date": "2022-12-17",
-          "result": "win",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "0:37"
-        },
-        {
-          "opponent_name": "Pedro Munoz",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Munoz-460487",
-          "event_name": "Kuraia Fight Club - Invictus XX",
-          "event_sherdog_url": "https://www.sherdog.com/events/Kuraia-Fight-Club-Invictus-XX-105145",
-          "date": "2022-12-17",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "2:50"
+          "time": "4:22"
         }
       ]
     },
@@ -68071,6 +67915,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Morgan-Thong-417429",
       "fight_history": [
         {
+          "opponent_name": "Ugo-Antton Vidal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/UgoAntton-Vidal-433684",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Ludovic Dandine",
+          "round": 1,
+          "time": "4:22"
+        },
+        {
           "opponent_name": "Robin Chantegrel",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Robin-Chantegrel-397054",
           "event_name": "Duel Fighting 6 - Albertville",
@@ -68669,6 +68525,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Azevedo-Junior-393747",
       "fight_history": [
         {
+          "opponent_name": "Quentin Arola",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Quentin-Arola-269795",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "1:55"
+        },
+        {
           "opponent_name": "Faz Ali",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Faz-Ali-224799",
           "event_name": "FSC 36 - FightStar Championship 36",
@@ -68763,6 +68631,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Mohammed-Amine-Moufrij-452961",
       "fight_history": [
         {
+          "opponent_name": "Nessim Khettou",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nessim-Khettou-396430",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Loic Pora",
+          "round": 3,
+          "time": "1:08"
+        },
+        {
           "opponent_name": "Thomas Kerroumi",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Thomas-Kerroumi-461215",
           "event_name": "KARMMA - Fight Night 4",
@@ -68796,6 +68676,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mani-Grimaudo-457971",
       "fight_history": [
+        {
+          "opponent_name": "Hicham Outaleb",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hicham-Outaleb-442418",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Ludovic Dandine",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Valerio Tambascia",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valerio-Tambascia-422329",
@@ -68962,6 +68854,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Wilsan-Said-Omar-Abdi-417433",
       "fight_history": [
+        {
+          "opponent_name": "Marco Hernandez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marco-Hernandez-485520",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Luc Hernandez",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Aboubakr Biro Barry",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aboubakr-Biro-Barry-467049",
@@ -69415,6 +69319,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Dairou-Mobalbaye-461791",
       "fight_history": [
         {
+          "opponent_name": "Jonatas Paulo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jonatas-Paulo-472809",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Luc Hernandez",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
           "opponent_name": "Mahmadi Fofana",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahmadi-Fofana-498823",
           "event_name": "FMMAF - MMA League Elite: France vs Belgium",
@@ -69485,6 +69401,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Jonatas-Paulo-472809",
       "fight_history": [
         {
+          "opponent_name": "Dairou Mobalbaye",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dairou-Mobalbaye-461791",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Luc Hernandez",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
           "opponent_name": "Maxime Fau",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maxime-Fau-477807",
           "event_name": "FMMAF - MMA League Elite: France vs Belgium",
@@ -69507,6 +69435,302 @@
           "referee": "",
           "round": 2,
           "time": "1:21"
+        }
+      ]
+    },
+    {
+      "name": "Quentin Arola",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1716214215IMG-4620.jpg",
+      "weight_class": "Welterweight",
+      "record": "7-7-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Quentin-Arola-269795",
+      "fight_history": [
+        {
+          "opponent_name": "Azevedo Junior",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Azevedo-Junior-393747",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "1:55"
+        },
+        {
+          "opponent_name": "Bruno Lauret",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bruno-Lauret-422131",
+          "event_name": "GFTC 005 - International",
+          "event_sherdog_url": "https://www.sherdog.com/events/GFTC-005-International-113886",
+          "date": "2026-06-20",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Jimmy Mahe",
+          "round": 1,
+          "time": "1:46"
+        },
+        {
+          "opponent_name": "Ludwing Salazar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ludwing-Salazar-22455",
+          "event_name": "GFA - Gladiator Fighting Arena 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/GFA-Gladiator-Fighting-Arena-16-107897",
+          "date": "2025-04-05",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Luc Gouna",
+          "round": 1,
+          "time": "0:59"
+        },
+        {
+          "opponent_name": "Yassin Chtatou",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yassin-Chtatou-387397",
+          "event_name": "Jungle Strike Championship - JSC: Amateur Tour",
+          "event_sherdog_url": "https://www.sherdog.com/events/Jungle-Strike-Championship-JSC-Amateur-Tour-102470",
+          "date": "2024-05-18",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "Mourad Benseghir",
+          "round": 1,
+          "time": "4:59"
+        },
+        {
+          "opponent_name": "Expedito Valin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Expedito-Valin-419766",
+          "event_name": "GFTC 001 - International",
+          "event_sherdog_url": "https://www.sherdog.com/events/GFTC-001-International-102766",
+          "date": "2024-04-06",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Jene-Rene Bonmalais",
+          "round": 1,
+          "time": "1:03"
+        },
+        {
+          "opponent_name": "Kevin Judes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kevin-Judes-210697",
+          "event_name": "Jungle Strike Championship - JSC x MMAGP",
+          "event_sherdog_url": "https://www.sherdog.com/events/Jungle-Strike-Championship-JSC-x-MMAGP-100854",
+          "date": "2024-01-27",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Quentin Domergue",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Quentin-Domergue-235499",
+          "event_name": "Dynamite MMA 1 - DaCadena vs. Driai",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dynamite-MMA-1-DaCadena-vs-Driai-98181",
+          "date": "2023-06-24",
+          "result": "draw",
+          "method": "Decision (Majority)",
+          "referee": "Laurent Colombeau",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Quentin Domergue",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Quentin-Domergue-235499",
+          "event_name": "MMAGP - Mixed Martial Arts Grand Prix: The Last of Kings",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMAGP-Mixed-Martial-Arts-Grand-Prix-The-Last-of-Kings-93188",
+          "date": "2022-06-04",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "Patricio Carlos",
+          "round": 2,
+          "time": "0:44"
+        },
+        {
+          "opponent_name": "Frederik Dupras",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Frederik-Dupras-210287",
+          "event_name": "SMMA - Samourai MMA 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/SMMA-Samourai-MMA-2-92602",
+          "date": "2022-05-06",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Erick Philippeaux",
+          "round": 1,
+          "time": "0:48"
+        },
+        {
+          "opponent_name": "Adel Asloum",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adel-Asloum-344757",
+          "event_name": "AFC 1 - Alpha Fight Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFC-1-Alpha-Fight-Championship-92621",
+          "date": "2022-03-05",
+          "result": "win",
+          "method": "Submission",
+          "referee": "Patricio Carlos",
+          "round": 1,
+          "time": "4:30"
+        },
+        {
+          "opponent_name": "Callum Mullen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Callum-Mullen-200047",
+          "event_name": "RFL - Risk Fight League 5: Gods of War",
+          "event_sherdog_url": "https://www.sherdog.com/events/RFL-Risk-Fight-League-5-Gods-of-War-80031",
+          "date": "2019-09-21",
+          "result": "loss",
+          "method": "TKO (Elbows)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Rafael Hudson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafael-Hudson-242919",
+          "event_name": "PFC 6 - Porto Fight Club 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/PFC-6-Porto-Fight-Club-6-83263",
+          "date": "2019-08-03",
+          "result": "loss",
+          "method": "KO (Head Kick)",
+          "referee": "Basilio Alves",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Yann Martelli",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yann-Martelli-135061",
+          "event_name": "Sports & Arts Martiaux Promotion - Kombat Challenge 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sports-Arts-Martiaux-Promotion-Kombat-Challenge-3-76539",
+          "date": "2019-05-18",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Laurent Colombeau",
+          "round": 1,
+          "time": "1:16"
+        },
+        {
+          "opponent_name": "Yann Martelli",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yann-Martelli-135061",
+          "event_name": "Sports & Arts Martiaux Promotion - Kombat Challenge 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sports-Arts-Martiaux-Promotion-Kombat-Challenge-2-73769",
+          "date": "2018-11-10",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Laurent Colombeau",
+          "round": 1,
+          "time": "1:59"
+        },
+        {
+          "opponent_name": "Helder Fernandes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Helder-Fernandes-210705",
+          "event_name": "GFA - Gladiator Fighting Arena 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/GFA-Gladiator-Fighting-Arena-9-63407",
+          "date": "2017-11-25",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Laurent Colombeau",
+          "round": 2,
+          "time": "4:45"
+        }
+      ]
+    },
+    {
+      "name": "Yassir Fadili",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Yassir-Fadili-461156",
+      "fight_history": [
+        {
+          "opponent_name": "Boubacar Oumarou Diakite",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Boubacar-Oumarou-Diakite-464990",
+          "event_name": "HXMMA 47 - Hexagone MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-47-Hexagone-MMA-47-113523",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Ludovic Dandine",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Jean Ntounta",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jean-Ntounta-465725",
+          "event_name": "AEC 15 - Arena Elite Championship 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEC-15-Arena-Elite-Championship-15-109784",
+          "date": "2025-10-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Mathias Corona",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mathias-Corona-426187",
+          "event_name": "AEC 11 - Arena Elite Championship 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEC-11-Arena-Elite-Championship-11-105729",
+          "date": "2025-01-18",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Mohamed Khamallah",
+          "round": 2,
+          "time": "1:00"
+        },
+        {
+          "opponent_name": "Moudjahid Brahami",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Moudjahid-Brahami-464968",
+          "event_name": "FMMAF - MMA League 16: Grigny - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-16-Grigny-Day-2-105217",
+          "date": "2024-11-10",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:45"
+        },
+        {
+          "opponent_name": "Errol Claure",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Errol-Claure-464983",
+          "event_name": "FMMAF - MMA League 16: Grigny - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-16-Grigny-Day-2-105217",
+          "date": "2024-11-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Allan Landouzy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Allan-Landouzy-408988",
+          "event_name": "FMMAF - MMA League 11: Clermont - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-11-Clermont-Day-2-101993",
+          "date": "2024-03-02",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "",
+          "round": 3,
+          "time": "1:57"
+        },
+        {
+          "opponent_name": "Ramzan Bagaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ramzan-Bagaev-461139",
+          "event_name": "FMMAF - MMA League 11: Clermont - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-11-Clermont-Day-2-101993",
+          "date": "2024-03-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Alex Esteves",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Esteves-461155",
+          "event_name": "FMMAF - MMA League 11: Clermont - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-11-Clermont-Day-1-101992",
+          "date": "2024-03-01",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "0:25"
         }
       ]
     }
@@ -75337,149 +75561,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Damien Lapilus",
-      "fighter2_name": "Nicolae Bivol",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "David Sipra",
-      "fighter2_name": "Azevedo Junior",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Mahamadou Soukouna",
-      "fighter2_name": "Elie Caille",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Axel Alfandari",
-      "fighter2_name": "Tomas Galko",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Nessim Khettou",
-      "fighter2_name": "Mohammed Amine Moufrij",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Ugo-Antton Vidal",
-      "fighter2_name": "Morgan Thong",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Morgane Dehaye",
-      "fighter2_name": "Alison Canot",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "123lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Mani Grimaudo",
-      "fighter2_name": "Hicham Outaleb",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Wilsan Said Omar Abdi",
-      "fighter2_name": "Marco Hernandez",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Boubacar Oumarou Diakite",
-      "fighter2_name": "Yassir Perrier",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 47 - Hexagone MMA 47",
-      "fighter1_name": "Dairou Mobalbaye",
-      "fighter2_name": "Jonatas Paulo",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "165lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "HXMMA 48 - Hexagone MMA 48",
       "fighter1_name": "Samba Sima",
       "fighter2_name": "Leopold Goi",
@@ -75569,6 +75650,149 @@
       "weight_class": "Lightweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Nicolae Bivol",
+      "fighter2_name": "David Sipra",
+      "fight_finished": true,
+      "winner_name": "Nicolae Bivol",
+      "method": "TKO (Elbow and Punches)",
+      "round": 1,
+      "time": "1:40",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Elie Caille",
+      "fighter2_name": "Mahamadou Soukouna",
+      "fight_finished": true,
+      "winner_name": "Elie Caille",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Tomas Galko",
+      "fighter2_name": "Axel Alfandari",
+      "fight_finished": true,
+      "winner_name": "Tomas Galko",
+      "method": "Submission (Triangle Choke)",
+      "round": 2,
+      "time": "3:46",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Nessim Khettou",
+      "fighter2_name": "Mohammed Amine Moufrij",
+      "fight_finished": true,
+      "winner_name": "Nessim Khettou",
+      "method": "TKO (Punches)",
+      "round": 3,
+      "time": "1:08",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Ugo-Antton Vidal",
+      "fighter2_name": "Morgan Thong",
+      "fight_finished": true,
+      "winner_name": "Ugo-Antton Vidal",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "4:22",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Morgane Dehaye",
+      "fighter2_name": "Alison Canot",
+      "fight_finished": true,
+      "winner_name": "Morgane Dehaye",
+      "method": "TKO (Body Kick and Punches)",
+      "round": 1,
+      "time": "0:58",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Quentin Arola",
+      "fighter2_name": "Azevedo Junior",
+      "fight_finished": true,
+      "winner_name": "Quentin Arola",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "1:55",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Mani Grimaudo",
+      "fighter2_name": "Hicham Outaleb",
+      "fight_finished": true,
+      "winner_name": "Mani Grimaudo",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "3:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Wilsan Said Omar Abdi",
+      "fighter2_name": "Marco Hernandez",
+      "fight_finished": true,
+      "winner_name": "Wilsan Said Omar Abdi",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "3:00",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Boubacar Oumarou Diakite",
+      "fighter2_name": "Yassir Fadili",
+      "fight_finished": true,
+      "winner_name": "Boubacar Oumarou Diakite",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "3:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 47 - Hexagone MMA 47",
+      "fighter1_name": "Jonatas Paulo",
+      "fighter2_name": "Dairou Mobalbaye",
+      "fight_finished": true,
+      "winner_name": "Jonatas Paulo",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "3:00",
+      "weight_class": "165lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }

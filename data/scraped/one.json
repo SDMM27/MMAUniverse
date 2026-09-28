@@ -30,34 +30,6 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/898055"
     },
     {
-      "name": "One Championship - One Friday Fights 172",
-      "date": "2026-09-25",
-      "start_time": "2026-09-25T00:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898717"
-    },
-    {
-      "name": "One Championship - One on Prime Video 48",
-      "date": "2026-10-02",
-      "start_time": "2026-10-02T00:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895598"
-    },
-    {
-      "name": "One Championship - ONE Samurai 4",
-      "date": "2026-10-17",
-      "start_time": "2026-10-17T00:00:00+00:00",
-      "event_location": "Ariake Arena, Koto, Tokyo, Japan",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896012"
-    },
-    {
-      "name": "One Championship - ONE Samurai 5",
-      "date": "2026-11-18",
-      "start_time": "2026-11-18T00:00:00+00:00",
-      "event_location": "Ebara Wave Arena Ota, Ota, Tokyo, Japan",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896715"
-    },
-    {
       "name": "One Championship - One on Prime Video 47",
       "date": "2026-09-04",
       "start_time": "2026-09-04T00:00:00+00:00",
@@ -70,6 +42,76 @@
       "start_time": "2026-09-04T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896616"
+    },
+    {
+      "name": "One Championship - One Friday Fights 173",
+      "date": "2026-10-02",
+      "start_time": "2026-10-02T07:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/899623"
+    },
+    {
+      "name": "One Championship - One on Prime Video 48",
+      "date": "2026-10-02",
+      "start_time": "2026-10-02T18:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895598"
+    },
+    {
+      "name": "One Championship - One Friday Fights 174",
+      "date": "2026-10-09",
+      "start_time": "2026-10-09T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - One Friday Fights 175",
+      "date": "2026-10-16",
+      "start_time": "2026-10-16T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - ONE Samurai 4",
+      "date": "2026-10-17",
+      "start_time": "2026-10-17T00:00:00+00:00",
+      "event_location": "Ariake Arena, Koto, Tokyo, Japan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896012"
+    },
+    {
+      "name": "One Championship - One Friday Fights 176",
+      "date": "2026-10-30",
+      "start_time": "2026-10-30T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - One Friday Fights 177",
+      "date": "2026-11-06",
+      "start_time": "2026-11-06T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/899795"
+    },
+    {
+      "name": "One Championship - One on Prime Video 49",
+      "date": "2026-11-06",
+      "start_time": "2026-11-06T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - ONE Samurai 5",
+      "date": "2026-11-18",
+      "start_time": "2026-11-18T00:00:00+00:00",
+      "event_location": "Ebara Wave Arena Ota, Ota, Tokyo, Japan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896715"
+    },
+    {
+      "name": "One Championship - One Friday Fights 172",
+      "date": "2026-09-25",
+      "start_time": "2026-09-25T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898717"
     }
   ],
   "fighters": [
@@ -3463,6 +3505,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Sarmad-Jahanara-300521",
       "fight_history": [
         {
+          "opponent_name": "Basir Saraliev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Basir-Saraliev-285087",
+          "event_name": "One Championship - One Friday Fights 172",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-172-113334",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Ryo Goto",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryo-Goto-421177",
           "event_name": "One Championship - One Friday Fights 159",
@@ -3556,6 +3610,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Basir-Saraliev-285087",
       "fight_history": [
+        {
+          "opponent_name": "Sarmad Jahanara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sarmad-Jahanara-300521",
+          "event_name": "One Championship - One Friday Fights 172",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-172-113334",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Shakhban Alkhasov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shakhban-Alkhasov-335179",
@@ -3711,6 +3777,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Leevi-Heino-408757",
       "fight_history": [
         {
+          "opponent_name": "Khurshed Gafurov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khurshed-Gafurov-467505",
+          "event_name": "One Championship - One Friday Fights 172",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-172-113334",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Rasberg Gwanzura",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rasberg-Gwanzura-376272",
           "event_name": "RMMA Vol. 1 - Rahina MMA",
@@ -3805,6 +3883,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Khurshed-Gafurov-467505",
       "fight_history": [
         {
+          "opponent_name": "Leevi Heino",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leevi-Heino-408757",
+          "event_name": "One Championship - One Friday Fights 172",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-172-113334",
+          "date": "2026-09-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Yawei Ren",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yawei-Ren-408617",
           "event_name": "WLF - W.A.R.S. 94",
@@ -3877,6 +3967,690 @@
           "time": "3:10"
         }
       ]
+    },
+    {
+      "name": "Imran Satiev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1749137513Imran_Satiev-1200x1165-1-600x583.png",
+      "weight_class": "Bantamweight",
+      "record": "5-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Imran-Satiev-315083",
+      "fight_history": [
+        {
+          "opponent_name": "Chayan Oorzhak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chayan-Oorzhak-342175",
+          "event_name": "One Championship - One Friday Fights 135",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-135-110420",
+          "date": "2025-11-28",
+          "result": "loss",
+          "method": "TKO (Elbow and Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "3:45"
+        },
+        {
+          "opponent_name": "Dzhokhar Eskiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dzhokhar-Eskiev-263157",
+          "event_name": "One Championship - One Friday Fights 111",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-111-108196",
+          "date": "2025-06-06",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Iskandar Nabotov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Iskandar-Nabotov-395640",
+          "event_name": "LFC 2 - Leki Fighting Championship 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFC-2-Leki-Fighting-Championship-2-95743",
+          "date": "2022-12-13",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:57"
+        },
+        {
+          "opponent_name": "Yuldashev Jaloliddin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuldashev-Jaloliddin-357229",
+          "event_name": "LFC 1 - Leki Fighting Championship 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFC-1-Leki-Fighting-Championship-1-95196",
+          "date": "2022-09-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Rustam Machidov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rustam-Machidov-373636",
+          "event_name": "EFC / AMC - Abdulmanap Nurmagomedov In Memory Tournament",
+          "event_sherdog_url": "https://www.sherdog.com/events/EFC-AMC-Abdulmanap-Nurmagomedov-In-Memory-Tournament-90521",
+          "date": "2021-09-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Alexander Sidorin",
+          "round": 3,
+          "time": "3:23"
+        },
+        {
+          "opponent_name": "Oleg Levin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oleg-Levin-274985",
+          "event_name": "AMC Fight Nights Global - Winter Cup",
+          "event_sherdog_url": "https://www.sherdog.com/events/AMC-Fight-Nights-Global-Winter-Cup-88214",
+          "date": "2020-12-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Alexander Sidorin",
+          "round": 5,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Babar Ali",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1709306643Babar-Ali-Hero-1200x1165-1-600x583.jpg",
+      "weight_class": "Bantamweight",
+      "record": "10-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Babar-Ali-321159",
+      "fight_history": [
+        {
+          "opponent_name": "Serkhan Valili",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Serkhan-Valili-306409",
+          "event_name": "Pakistan Combat Night - Road to Brave 100",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pakistan-Combat-Night-Road-to-Brave-100-109105",
+          "date": "2025-08-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "2:55"
+        },
+        {
+          "opponent_name": "Mohammed Farhad",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mohammed-Farhad-145787",
+          "event_name": "Brave CF 92 - Brave Combat Federation 92",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-92-Brave-Combat-Federation-92-105546",
+          "date": "2024-12-15",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ahmed Khalil",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ahmed-Khalil-214843",
+          "event_name": "Super Fights 3 - Babar vs. Ahmed",
+          "event_sherdog_url": "https://www.sherdog.com/events/Super-Fights-3-Babar-vs-Ahmed-105060",
+          "date": "2024-10-06",
+          "result": "win",
+          "method": "KO (Body Kick)",
+          "referee": "Ovais Shan",
+          "round": 1,
+          "time": "1:01"
+        },
+        {
+          "opponent_name": "Chayan Oorzhak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chayan-Oorzhak-342175",
+          "event_name": "One Championship - One Friday Fights 53",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-53-101734",
+          "date": "2024-02-23",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Kemp Cheng",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Fritz Biagtan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fritz-Biagtan-185979",
+          "event_name": "One Championship - One Friday Fights 44",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-44-100572",
+          "date": "2023-12-08",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Justin Brown",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hussain Jan Turi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hussain-Jan-Turi-231303",
+          "event_name": "Super Fights 1 - Babar vs. Hussain",
+          "event_sherdog_url": "https://www.sherdog.com/events/Super-Fights-1-Babar-vs-Hussain-100095",
+          "date": "2023-10-22",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Ovais Shah",
+          "round": 4,
+          "time": "02:20"
+        },
+        {
+          "opponent_name": "Iman Mohebi Gandali",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Iman-Mohebi-Gandali-293377",
+          "event_name": "International Fighting Tournament - IFT 2: Rizwan vs. Moradi",
+          "event_sherdog_url": "https://www.sherdog.com/events/International-Fighting-Tournament-IFT-2-Rizwan-vs-Moradi-100099",
+          "date": "2023-08-19",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Zaman Khan",
+          "round": 2,
+          "time": "2:12"
+        },
+        {
+          "opponent_name": "Shamriz Ahmadi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shamriz-Ahmadi-383930",
+          "event_name": "International Fighting Tournament - IFT 1: Ali vs. Habibi",
+          "event_sherdog_url": "https://www.sherdog.com/events/International-Fighting-Tournament-IFT-1-Ali-vs-Habibi-97138",
+          "date": "2023-03-05",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "Aqib Awan",
+          "round": 2,
+          "time": "3:18"
+        },
+        {
+          "opponent_name": "Rafiq Afridi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafiq-Afridi-351739",
+          "event_name": "LFC 6 - Lion's Fighting Championship 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFC-6-Lions-Fighting-Championship-6-96075",
+          "date": "2022-12-18",
+          "result": "win",
+          "method": "KO",
+          "referee": "Nasir Khan",
+          "round": 1,
+          "time": "4:59"
+        },
+        {
+          "opponent_name": "Ahamd Shabir Sadiqi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ahamd-Shabir-Sadiqi-370406",
+          "event_name": "Flogger Series - FS 8: Jett Grande vs. Nasratullah",
+          "event_sherdog_url": "https://www.sherdog.com/events/Flogger-Series-FS-8-Jett-Grande-vs-Nasratullah-94509",
+          "date": "2022-08-14",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Zaman Khan",
+          "round": 1,
+          "time": "1:27"
+        },
+        {
+          "opponent_name": "Amir Rehman Noor",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amir-Rehman-Noor-305773",
+          "event_name": "LFS 1 - Legacy Fight Series",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFS-1-Legacy-Fight-Series-92981",
+          "date": "2022-03-27",
+          "result": "loss",
+          "method": "Submission (Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:45"
+        },
+        {
+          "opponent_name": "Saif Khan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Saif-Khan-368157",
+          "event_name": "Flogger Series - FS 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/Flogger-Series-FS-7-92413",
+          "date": "2022-02-13",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Zaman Zaman",
+          "round": 2,
+          "time": "1:40"
+        },
+        {
+          "opponent_name": "Jamal Naseer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jamal-Naseer-400517",
+          "event_name": "LFC 5 - Lion's Fighting Championship 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFC-5-Lions-Fighting-Championship-5-92072",
+          "date": "2022-02-06",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Salman Salman",
+          "round": 1,
+          "time": "2:49"
+        }
+      ]
+    },
+    {
+      "name": "Youssef Ramadan",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "3-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Youssef-Ramadan-446100",
+      "fight_history": [
+        {
+          "opponent_name": "Andy Setia Negara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andy-Setia-Negara-325759",
+          "event_name": "Soma Fight Series - SFS 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/Soma-Fight-Series-SFS-15-112177",
+          "date": "2025-11-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "0:44"
+        },
+        {
+          "opponent_name": "Eyad Blax",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eyad-Blax-458088",
+          "event_name": "Qadya MMA 5 - Samir vs. Carlos",
+          "event_sherdog_url": "https://www.sherdog.com/events/Qadya-MMA-5-Samir-vs-Carlos-104623",
+          "date": "2024-08-23",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Ahmed Khalil",
+          "round": 1,
+          "time": "3:55"
+        },
+        {
+          "opponent_name": "Houari Hadef",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Houari-Hadef-446101",
+          "event_name": "Evolution Championship - Fight Night 90",
+          "event_sherdog_url": "https://www.sherdog.com/events/Evolution-Championship-Fight-Night-90-102176",
+          "date": "2024-02-08",
+          "result": "win",
+          "method": "TKO (Spinning Back Kick and Punches)",
+          "referee": "Mohamed Abdel Hamid",
+          "round": 1,
+          "time": "1:03"
+        }
+      ]
+    },
+    {
+      "name": "Jong Jun Park",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20260509052115_Jong_Jun_Park.JPG",
+      "weight_class": "Featherweight",
+      "record": "4-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Jong-Jun-Park-395427",
+      "fight_history": [
+        {
+          "opponent_name": "Junpei Nagatome",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Junpei-Nagatome-405691",
+          "event_name": "One Championship - One Friday Fights 153",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-153-112345",
+          "date": "2026-05-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "3:03"
+        },
+        {
+          "opponent_name": "Shota Kakihara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shota-Kakihara-416436",
+          "event_name": "Bloom FC 5 - Bloom Fighting Championship 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bloom-FC-5-Bloom-Fighting-Championship-5-110001",
+          "date": "2025-11-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Akitaka Uto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Akitaka-Uto-402358",
+          "event_name": "Shooto - Professional Shooto 2025 Vol. 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Professional-Shooto-2025-Vol-5-107867",
+          "date": "2025-05-25",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Yuta Nabekubo",
+          "round": 1,
+          "time": "2:41"
+        },
+        {
+          "opponent_name": "Hwan Hyun Lee",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hwan-Hyun-Lee-417281",
+          "event_name": "Black Combat - Champions League 24-25 Season: 10th Week",
+          "event_sherdog_url": "https://www.sherdog.com/events/Black-Combat-Champions-League-2425-Season-10th-Week-107689",
+          "date": "2025-03-15",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Il Kwon Moon",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Chi Woo Park",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chi-Woo-Park-392993",
+          "event_name": "Black Combat - Champions League 24-25 Season: 5th Week",
+          "event_sherdog_url": "https://www.sherdog.com/events/Black-Combat-Champions-League-2425-Season-5th-Week-103377",
+          "date": "2024-06-15",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Seong Min Kim",
+          "round": 1,
+          "time": "1:12"
+        }
+      ]
+    },
+    {
+      "name": "Christian Lee",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1762567292Christian_Lee-hero-1200x1165-3-600x583.jpg",
+      "weight_class": "Welterweight",
+      "record": "18-4-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Christian-Lee-212247",
+      "fight_history": [
+        {
+          "opponent_name": "Alibeg Rasulov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alibeg-Rasulov-221629",
+          "event_name": "One Championship - One 173",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-173-108500",
+          "date": "2025-11-16",
+          "result": "win",
+          "method": "TKO (Knees)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "2:32"
+        },
+        {
+          "opponent_name": "Alibeg Rasulov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alibeg-Rasulov-221629",
+          "event_name": "One Championship - One on Prime Video 26",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-26-101165",
+          "date": "2024-12-06",
+          "result": "nc",
+          "method": "No Contest (Accidental Eye Poke)",
+          "referee": "Herb Dean",
+          "round": 2,
+          "time": "4:55"
+        },
+        {
+          "opponent_name": "Kiamrian Abbasov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kiamrian-Abbasov-171491",
+          "event_name": "One Championship - One on Prime Video 4: Abbasov vs. Lee",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-4-Abbasov-vs-Lee-94095",
+          "date": "2022-11-18",
+          "result": "win",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Herb Dean",
+          "round": 4,
+          "time": "4:20"
+        },
+        {
+          "opponent_name": "Rae Yoon Ok",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rae-Yoon-Ok-135881",
+          "event_name": "One Championship - One 160",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-160-92912",
+          "date": "2022-08-26",
+          "result": "win",
+          "method": "TKO (Knees)",
+          "referee": "Justin Brown",
+          "round": 2,
+          "time": "1:00"
+        },
+        {
+          "opponent_name": "Rae Yoon Ok",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rae-Yoon-Ok-135881",
+          "event_name": "One Championship - Revolution",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Revolution-89974",
+          "date": "2021-09-24",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Justin Brown",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Timofey Nastyukhin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Timofey-Nastyukhin-99259",
+          "event_name": "One Championship - One on TNT 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-TNT-2-88592",
+          "date": "2021-04-07",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "1:13"
+        },
+        {
+          "opponent_name": "Iuri Lapicus",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Iuri-Lapicus-183533",
+          "event_name": "One Championship - Inside the Matrix",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Inside-the-Matrix-86163",
+          "date": "2020-10-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "2:19"
+        },
+        {
+          "opponent_name": "Saygid Guseyn Arslanaliev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Saygid-Guseyn-Arslanaliev-158933",
+          "event_name": "One Championship - Century - Part 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Century-Part-1-70711",
+          "date": "2019-10-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Shinya Aoki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shinya-Aoki-10774",
+          "event_name": "One Championship - Enter the Dragon",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Enter-the-Dragon-70729",
+          "date": "2019-05-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "0:51"
+        },
+        {
+          "opponent_name": "Edward Kelly",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edward-Kelly-130299",
+          "event_name": "One Championship - Eternal Glory",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Eternal-Glory-70705",
+          "date": "2019-01-19",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Kemp Cheng",
+          "round": 1,
+          "time": "2:53"
+        },
+        {
+          "opponent_name": "Kazuki Tokudome",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kazuki-Tokudome-26192",
+          "event_name": "One Championship - Heart of the Lion",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Heart-of-the-Lion-67323",
+          "date": "2018-11-09",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Kemp Cheng",
+          "round": 1,
+          "time": "3:07"
+        },
+        {
+          "opponent_name": "Edward Kelly",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edward-Kelly-130299",
+          "event_name": "One Championship - Beyond the Horizon",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Beyond-the-Horizon-67315",
+          "date": "2018-09-08",
+          "result": "loss",
+          "method": "DQ (Illegal Suplex)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "2:19"
+        },
+        {
+          "opponent_name": "Martin Nguyen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Martin-Nguyen-96155",
+          "event_name": "One Championship - Unstoppable Dreams",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Unstoppable-Dreams-67301",
+          "date": "2018-05-18",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Yuji Shimada",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kazunori Yokota",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kazunori-Yokota-11335",
+          "event_name": "One Championship - Visions of Victory",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Visions-of-Victory-65611",
+          "date": "2018-03-09",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "4:34"
+        },
+        {
+          "opponent_name": "Kotetsu Boku",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kotetsu-Boku-1527",
+          "event_name": "One Championship - Warriors of the World",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Warriors-of-the-World-56781",
+          "date": "2017-12-09",
+          "result": "win",
+          "method": "KO (Slam)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "3:24"
+        },
+        {
+          "opponent_name": "Keanu Subba",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Keanu-Subba-78618",
+          "event_name": "One Championship - Quest for Greatness",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Quest-for-Greatness-56777",
+          "date": "2017-08-18",
+          "result": "win",
+          "method": "Submission (Triangle Armbar)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "1:11"
+        },
+        {
+          "opponent_name": "Jianping Wan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jianping-Wan-203409",
+          "event_name": "One Championship - Kings of Destiny",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Kings-of-Destiny-56783",
+          "date": "2017-04-21",
+          "result": "win",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "4:15"
+        },
+        {
+          "opponent_name": "Martin Nguyen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Martin-Nguyen-96155",
+          "event_name": "One Championship 45 - Heroes of the World",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-45-Heroes-of-the-World-53723",
+          "date": "2016-08-13",
+          "result": "loss",
+          "method": "Technical Submission (Guillotine Choke)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "4:30"
+        },
+        {
+          "opponent_name": "Rocky Batolbatol",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rocky-Batolbatol-86117",
+          "event_name": "One Championship 43 - Kingdom of Champions",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-43-Kingdom-of-Champions-49623",
+          "date": "2016-05-27",
+          "result": "win",
+          "method": "TKO (Submission to Punches)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "2:14"
+        },
+        {
+          "opponent_name": "Cary Bullos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cary-Bullos-40883",
+          "event_name": "One Championship 42 - Ascent to Power",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-42-Ascent-to-Power-49619",
+          "date": "2016-05-06",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "2:07"
+        },
+        {
+          "opponent_name": "Anthony Engelen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anthony-Engelen-126115",
+          "event_name": "One Championship 40 - Union of Warriors",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-40-Union-of-Warriors-49613",
+          "date": "2016-03-18",
+          "result": "win",
+          "method": "TKO (Punches and Elbows)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "4:14"
+        },
+        {
+          "opponent_name": "Mahmoud Deab Mohamed",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahmoud-Deab-Mohamed-127015",
+          "event_name": "One Championship 38 - Clash of Heroes",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-38-Clash-of-Heroes-49609",
+          "date": "2016-01-29",
+          "result": "win",
+          "method": "Submission (Kimura)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "2:20"
+        },
+        {
+          "opponent_name": "David Meak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Meak-108787",
+          "event_name": "One Championship 36 - Spirit of Champions",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-36-Spirit-of-Champions-46887",
+          "date": "2015-12-11",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "0:29"
+        }
+      ]
+    },
+    {
+      "name": "Tye Ruotolo",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230825061126_Untitled1.PNG",
+      "weight_class": "Welterweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Tye-Ruotolo-425139",
+      "fight_history": [
+        {
+          "opponent_name": "Shozo Isojima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shozo-Isojima-432975",
+          "event_name": "One Championship - One 173",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-173-108500",
+          "date": "2025-11-16",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "2:26"
+        },
+        {
+          "opponent_name": "Adrian Lee",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adrian-Lee-448037",
+          "event_name": "One Championship - One on Prime Video 35",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-35-104923",
+          "date": "2025-09-05",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "4:14"
+        }
+      ]
     }
   ],
   "fights": [
@@ -3946,97 +4720,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "One Championship - One Friday Fights 172",
-      "fighter1_name": "Sarmad Jahanara",
-      "fighter2_name": "Basir Saraliev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One Friday Fights 172",
-      "fighter1_name": "Leevi Heino",
-      "fighter2_name": "Khurshed Gafurov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 48",
-      "fighter1_name": "Shamil Erdogan",
-      "fighter2_name": "Paul Elliott",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 48",
-      "fighter1_name": "Seung Chul Lee",
-      "fighter2_name": "Karen Ghazaryan",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 48",
-      "fighter1_name": "Joshua Perreira",
-      "fighter2_name": "Antonio Cesar",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - ONE Samurai 4",
-      "fighter1_name": "Jihin Radzuan",
-      "fighter2_name": "Itsuki Hirata",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Strawweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - ONE Samurai 5",
-      "fighter1_name": "Joshua Pacio",
-      "fighter2_name": "Keito Yamakita",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
       "event_name": "One Championship - One on Prime Video 47",
       "fighter1_name": "Fabio Henrique Dourado",
       "fighter2_name": "Ryohei Kurosawa",
@@ -4086,6 +4769,136 @@
       "time": "5:00",
       "weight_class": "Flyweight",
       "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 173",
+      "fighter1_name": "Imran Satiev",
+      "fighter2_name": "Babar Ali",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 173",
+      "fighter1_name": "Youssef Ramadan",
+      "fighter2_name": "Jong Jun Park",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 48",
+      "fighter1_name": "Shamil Erdogan",
+      "fighter2_name": "Paul Elliott",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 48",
+      "fighter1_name": "Joshua Perreira",
+      "fighter2_name": "Antonio Cesar",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 48",
+      "fighter1_name": "Seung Chul Lee",
+      "fighter2_name": "Karen Ghazaryan",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - ONE Samurai 4",
+      "fighter1_name": "Jihin Radzuan",
+      "fighter2_name": "Itsuki Hirata",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 177",
+      "fighter1_name": "Christian Lee",
+      "fighter2_name": "Tye Ruotolo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "One Championship - ONE Samurai 5",
+      "fighter1_name": "Joshua Pacio",
+      "fighter2_name": "Keito Yamakita",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 172",
+      "fighter1_name": "Basir Saraliev",
+      "fighter2_name": "Sarmad Jahanara",
+      "fight_finished": true,
+      "winner_name": "Basir Saraliev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 172",
+      "fighter1_name": "Khurshed Gafurov",
+      "fighter2_name": "Leevi Heino",
+      "fight_finished": true,
+      "winner_name": "Khurshed Gafurov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
       "is_title_fight": false
     }
   ]
