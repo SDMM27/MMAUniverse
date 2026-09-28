@@ -29,20 +29,17 @@ jobs:
 
       # UFCStats.com sits behind a JS anti-bot challenge that a plain HTTP
       # client never gets past -- see data/scrapers/shared/fetch-playwright.ts's
-      # doc comment. Only the UFCStats scrape below needs this; every other
-      # scraper in this workflow is axios+cheerio and doesn't.
-      - name: Install Playwright Chromium (for the UFCStats scraper)
+      # doc comment. Only the physique step's UFCStats source needs this (new UFC
+      # fighters' reach); every other scraper in this workflow is axios+cheerio.
+      - name: Install Playwright Chromium (for UFCStats fighter pages)
         run: npx playwright install --with-deps chromium
 
       - name: Rescrape upcoming events (all orgs)
         run: npx tsx data/scrapers/rescrape-upcoming.ts
 
-      # Incremental by design (data/scrapers/shared/ufcstats-checkpoint.ts) --
-      # only fetches events not already in data/scraped/.cache/ufcstats-progress.json,
-      # so a normal day (0-2 new UFC events) is a handful of requests, not the
-      # multi-hour full-history crawl a from-scratch run would be.
-      - name: Scrape UFC fight-level stats from UFCStats.com
-        run: npx tsx data/scrapers/scrape-ufcstats.ts
+      # UFCStats fight-level stats (scrape + push to Neon) moved to weekly-fightscore.yml:
+      # FightScore is their only consumer and it runs once a week, so scraping them daily
+      # was ~20 minutes a day for data nothing read until Monday.
 
       # Self-healing counterpart to the event-day polling: re-fetches the Sherdog page of any
       # fighter whose history is still missing a finished fight from the last 30 days (e.g. the
@@ -78,18 +75,13 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-      - name: Sync UFC fight-level stats to Neon
-        run: npx tsx data/scrapers/sync-fighter-stats.ts
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-
-      # After the two steps above, so fighters that just got a sherdog_url / ufcstats_url are
-      # covered. Each page is only ever fetched once (physique_*_checked_at), so on a normal day
+      # After the history sync, so fighters that just got a sherdog_url are covered (a new UFC
+      # fighter's ufcstats_url comes from weekly-fightscore.yml, picked up by the next daily run). Each page is only ever fetched once (physique_*_checked_at), so on a normal day
       # this is a few requests for newly added fighters.
       - name: Sync fighter height, reach and birth date
         run: npx tsx data/scrapers/sync-fighter-physique.ts
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-      # FightScore is no longer recomputed here: it runs once a week, on Monday,
-      # from .github/workflows/weekly-fightscore.yml (after the weekend's events).
+      # FightScore (and the UFCStats data it needs) is no longer recomputed here: it runs
+      # once a week, on Monday, from .github/workflows/weekly-fightscore.yml.

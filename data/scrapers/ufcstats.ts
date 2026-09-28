@@ -78,7 +78,7 @@ export async function scrapeUfcStats(cacheDir: string, maxNewEvents?: number, ex
   const $list = await fetchAndLoadPW(EVENTS_LIST_URL);
   const events = parseCompletedEvents($list);
 
-  // data/scraped/.cache/ is gitignored, so on CI (daily-sync.yml) the checkpoint is always
+  // data/scraped/.cache/ is gitignored, so on CI (weekly-fightscore.yml) the checkpoint is always
   // empty and only the records come back, seeded from the committed output file above. Without
   // this, every daily run re-opened all ~800 event pages through the headless browser just to
   // find the one new event — about 5 hours. An event already present in the records was fully
