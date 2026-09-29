@@ -17,6 +17,7 @@ import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
 const links = [
   { href: '/', label: 'Accueil' },
   { href: '/classement-calcule', label: 'FightScore' },
+  { href: '/simulateur', label: 'Simulateur' },
   { href: '/actualites', label: 'Actualités' },
   { href: '/events', label: 'Événements' },
   { href: '/fighters', label: 'Fighters' },

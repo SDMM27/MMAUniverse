@@ -272,3 +272,17 @@ export type NewsArticle = {
   published_at: string;
   fetched_at: string;
 };
+
+// One row per rated fighter for the fight simulator (fetchSimulatorFighters):
+// the Glicko rating and deviation as real numbers, ready for predictFight.
+export type SimulatorFighter = {
+  fighter_id: number;
+  fighter_name: string;
+  fighter_image_url: string | null;
+  fighter_nationality: string | null;
+  weight_class: string;
+  rating: number;
+  rd: number;
+  is_champion: boolean;
+  current_streak: number;
+};
