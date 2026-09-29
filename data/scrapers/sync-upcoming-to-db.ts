@@ -1,7 +1,8 @@
 // data/scrapers/sync-upcoming-to-db.ts
 //
 // Targeted DB sync: upserts only the not-yet-happened events (date >= today) from each org's
-// data/scraped/{orgKey}.json into Neon, by name/date rather than blind INSERT.
+// data/scraped/{orgKey}.json into Neon, by name/date rather than blind INSERT -- plus the
+// results of recently-past events still unfinished in the DB (see syncRecentPastResults).
 // Unlike app/seed/route.ts (which has no UNIQUE constraint to lean on and would duplicate
 // every row on a second run), this is safe to re-run: existing events/fighters are matched
 // by name and UPDATEd in place, and each event's fights are reconciled by fighter pair
@@ -12,6 +13,7 @@ import { neon } from '@neondatabase/serverless';
 import type { ScrapedOrgData } from './shared/types';
 import { planFightSync, type FreshFight } from './shared/fight-sync';
 import { ORG_CONFIGS } from './orgs.config';
+import { isRecentPastDate } from './shared/live-dates';
 
 // tsx doesn't auto-load .env.local the way Next.js does; parse it by hand.
 function loadEnvLocal() {
@@ -101,11 +103,114 @@ async function upsertFighter(
   return inserted[0].id;
 }
 
+type ScrapedEventRow = ScrapedOrgData['events'][number];
+
+// Upserts the event and reconciles its fights (by fighter pair) against what the DB has.
+async function syncEvent(dataset: ScrapedOrgData, event: ScrapedEventRow) {
+  const eventId = await upsertEvent(event, dataset.organization_id);
+  const eventFights = dataset.fights.filter((f) => f.event_name === event.name);
+
+  const freshFights: FreshFight[] = [];
+  for (const fight of eventFights) {
+    const fighter1 = dataset.fighters.find((f) => f.name === fight.fighter1_name);
+    const fighter2 = dataset.fighters.find((f) => f.name === fight.fighter2_name);
+    if (!fighter1 || !fighter2) {
+      console.warn(`  skipping fight "${fight.fighter1_name} vs ${fight.fighter2_name}" — fighter data missing`);
+      continue;
+    }
+    const fighter1Id = await upsertFighter(fighter1, dataset.organization_id);
+    const fighter2Id = await upsertFighter(fighter2, dataset.organization_id);
+    const winnerId = fight.winner_name
+      ? await upsertFighter(
+          dataset.fighters.find((f) => f.name === fight.winner_name) ?? { name: fight.winner_name, image_url: '', weight_class: '', record: '', ranking: 0 },
+          dataset.organization_id,
+        )
+      : null;
+
+    freshFights.push({
+      fighter1_id: fighter1Id,
+      fighter2_id: fighter2Id,
+      fight_finished: fight.fight_finished,
+      winner_id: winnerId,
+      method: fight.method,
+      round: fight.round,
+      time: fight.time,
+      weight_class: fight.weight_class,
+      is_main_event: fight.is_main_event ?? false,
+      is_title_fight: fight.is_title_fight ?? false,
+    });
+  }
+
+  const existingRows = (await sql`
+    SELECT id, fighter1_id, fighter2_id FROM fights WHERE event_id = ${eventId}
+  `) as { id: number; fighter1_id: number; fighter2_id: number }[];
+  const plan = planFightSync(existingRows, freshFights);
+
+  for (const { id, fight } of plan.toUpdate) {
+    await sql`
+      UPDATE fights SET fighter1_id = ${fight.fighter1_id}, fighter2_id = ${fight.fighter2_id},
+        fight_finished = ${fight.fight_finished}, winner_id = ${fight.winner_id},
+        method = ${fight.method}, round = ${fight.round}, time = ${fight.time}, weight_class = ${fight.weight_class},
+        is_main_event = ${fight.is_main_event}, is_title_fight = ${fight.is_title_fight}
+      WHERE id = ${id}
+    `;
+  }
+  for (const fight of plan.toInsert) {
+    await sql`
+      INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class, is_main_event, is_title_fight)
+      VALUES (${eventId}, ${fight.fighter1_id}, ${fight.fighter2_id}, ${fight.fight_finished}, ${fight.winner_id}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class}, ${fight.is_main_event}, ${fight.is_title_fight})
+    `;
+  }
+  // A fight genuinely pulled from the card (not just unchanged) is deleted here.
+  // picks.fight_id is ON DELETE CASCADE (a later task) so any picks on it are removed
+  // along with it — consistent with the spec's "traité comme si ce combat n'avait
+  // jamais existé" rule for withdrawn fights.
+  for (const id of plan.toDeleteIds) {
+    await sql`DELETE FROM fights WHERE id = ${id}`;
+  }
+
+  console.log(
+    `  synced "${event.name}" -> ${plan.toUpdate.length} updated, ${plan.toInsert.length} new, ${plan.toDeleteIds.length} removed`,
+  );
+}
+
+// Recently-past events whose DB row still has a fight not marked finished. The "date >= today"
+// sync below stops touching an event the moment its date is past, so the results that
+// rescrape-upcoming.ts catches up on afterwards (the main card of an American event runs past
+// 00:00 UTC; Sherdog can take a while to post results) used to land in the JSON but never in
+// Neon: the event page stayed without results and the winner's page still listed the fight
+// as their next one (UFC Fight Night 289, Rosas Jr. vs. Barcelos).
+async function syncRecentPastResults(dataset: ScrapedOrgData, today: string) {
+  const pendingRows = (await sql`
+    SELECT DISTINCT e.id, e.name, e.date::text AS date
+    FROM events e JOIN fights f ON f.event_id = e.id
+    WHERE e.organization_id = ${dataset.organization_id} AND e.date < ${today} AND f.fight_finished = false
+  `) as { id: number; name: string; date: string }[];
+
+  for (const row of pendingRows) {
+    if (!isRecentPastDate(row.date)) continue;
+    // By name first; else by date, since Sherdog may have renamed the event since the last sync.
+    const sameDate = dataset.events.filter((e) => e.date === row.date);
+    const event = dataset.events.find((e) => e.name === row.name) ?? (sameDate.length === 1 ? sameDate[0] : undefined);
+    if (!event) continue;
+    // Nothing new to push until the JSON itself has results for this card.
+    if (!dataset.fights.some((f) => f.event_name === event.name && f.fight_finished)) continue;
+
+    if (event.name !== row.name) {
+      console.log(`  renaming past event "${row.name}" -> "${event.name}"`);
+      await sql`UPDATE events SET name = ${event.name} WHERE id = ${row.id}`;
+    }
+    await syncEvent(dataset, event);
+  }
+}
+
 async function main() {
   const today = new Date().toISOString().slice(0, 10);
-  console.log(`Syncing events with date >= ${today}...`);
+  console.log(`Syncing events with date >= ${today}, plus results of recently-past events...`);
 
   for (const dataset of datasets) {
+    await syncRecentPastResults(dataset, today);
+
     const futureEvents = dataset.events.filter((e) => e.date >= today);
     if (futureEvents.length === 0) continue;
 
@@ -127,71 +232,7 @@ async function main() {
     }
 
     for (const event of futureEvents) {
-      const eventId = await upsertEvent(event, dataset.organization_id);
-      const eventFights = dataset.fights.filter((f) => f.event_name === event.name);
-
-      const freshFights: FreshFight[] = [];
-      for (const fight of eventFights) {
-        const fighter1 = dataset.fighters.find((f) => f.name === fight.fighter1_name);
-        const fighter2 = dataset.fighters.find((f) => f.name === fight.fighter2_name);
-        if (!fighter1 || !fighter2) {
-          console.warn(`  skipping fight "${fight.fighter1_name} vs ${fight.fighter2_name}" — fighter data missing`);
-          continue;
-        }
-        const fighter1Id = await upsertFighter(fighter1, dataset.organization_id);
-        const fighter2Id = await upsertFighter(fighter2, dataset.organization_id);
-        const winnerId = fight.winner_name
-          ? await upsertFighter(
-              dataset.fighters.find((f) => f.name === fight.winner_name) ?? { name: fight.winner_name, image_url: '', weight_class: '', record: '', ranking: 0 },
-              dataset.organization_id,
-            )
-          : null;
-
-        freshFights.push({
-          fighter1_id: fighter1Id,
-          fighter2_id: fighter2Id,
-          fight_finished: fight.fight_finished,
-          winner_id: winnerId,
-          method: fight.method,
-          round: fight.round,
-          time: fight.time,
-          weight_class: fight.weight_class,
-          is_main_event: fight.is_main_event ?? false,
-          is_title_fight: fight.is_title_fight ?? false,
-        });
-      }
-
-      const existingRows = (await sql`
-        SELECT id, fighter1_id, fighter2_id FROM fights WHERE event_id = ${eventId}
-      `) as { id: number; fighter1_id: number; fighter2_id: number }[];
-      const plan = planFightSync(existingRows, freshFights);
-
-      for (const { id, fight } of plan.toUpdate) {
-        await sql`
-          UPDATE fights SET fighter1_id = ${fight.fighter1_id}, fighter2_id = ${fight.fighter2_id},
-            fight_finished = ${fight.fight_finished}, winner_id = ${fight.winner_id},
-            method = ${fight.method}, round = ${fight.round}, time = ${fight.time}, weight_class = ${fight.weight_class},
-            is_main_event = ${fight.is_main_event}, is_title_fight = ${fight.is_title_fight}
-          WHERE id = ${id}
-        `;
-      }
-      for (const fight of plan.toInsert) {
-        await sql`
-          INSERT INTO fights (event_id, fighter1_id, fighter2_id, fight_finished, winner_id, method, round, time, weight_class, is_main_event, is_title_fight)
-          VALUES (${eventId}, ${fight.fighter1_id}, ${fight.fighter2_id}, ${fight.fight_finished}, ${fight.winner_id}, ${fight.method}, ${fight.round}, ${fight.time}, ${fight.weight_class}, ${fight.is_main_event}, ${fight.is_title_fight})
-        `;
-      }
-      // A fight genuinely pulled from the card (not just unchanged) is deleted here.
-      // picks.fight_id is ON DELETE CASCADE (a later task) so any picks on it are removed
-      // along with it — consistent with the spec's "traité comme si ce combat n'avait
-      // jamais existé" rule for withdrawn fights.
-      for (const id of plan.toDeleteIds) {
-        await sql`DELETE FROM fights WHERE id = ${id}`;
-      }
-
-      console.log(
-        `  synced "${event.name}" -> ${plan.toUpdate.length} updated, ${plan.toInsert.length} new, ${plan.toDeleteIds.length} removed`,
-      );
+      await syncEvent(dataset, event);
     }
   }
 
