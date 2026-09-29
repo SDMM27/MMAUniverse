@@ -12,6 +12,7 @@ import {
     FighterRatingWithFighter,
     FightScoreSummary,
     QualityWin,
+    SimulatorFighter,
   } from './definitions';
 import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization, selectHeadlineFightPerEvent } from './event-utils';
 
@@ -751,6 +752,51 @@ export async function fetchTopPoundForPound(limit: number) {
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch pound-for-pound rankings.');
+  }
+}
+
+// Every currently ranking-eligible fighter, once each (their champion row if
+// they hold a belt, else their highest division score), with the Glicko
+// rating and deviation the fight simulator (/simulateur) predicts from. The
+// simulator works client-side from this list so picking a fighter is instant.
+// NUMERIC columns come back as strings -- coerced to numbers here.
+export async function fetchSimulatorFighters() {
+  try {
+    const data = await sql<{
+      fighter_id: number;
+      fighter_name: string;
+      fighter_image_url: string | null;
+      fighter_nationality: string | null;
+      weight_class: string;
+      points: string;
+      rating_deviation: string | null;
+      is_champion: boolean;
+      current_streak: number;
+    }>`
+      SELECT DISTINCT ON (fr.fighter_id)
+        fr.fighter_id, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality,
+        fr.weight_class, fr.points, fr.rating_deviation, fr.is_champion, fr.current_streak
+      FROM fighter_ratings fr
+      JOIN fighters f ON f.id = fr.fighter_id
+      WHERE fr.is_ranking_eligible = true AND fr.rating_deviation IS NOT NULL
+      ORDER BY fr.fighter_id, fr.is_champion DESC, fr.display_score DESC
+    `;
+    return data.rows
+      .map((row): SimulatorFighter => ({
+        fighter_id: row.fighter_id,
+        fighter_name: row.fighter_name,
+        fighter_image_url: row.fighter_image_url,
+        fighter_nationality: row.fighter_nationality,
+        weight_class: row.weight_class,
+        rating: Number(row.points),
+        rd: Number(row.rating_deviation),
+        is_champion: row.is_champion,
+        current_streak: row.current_streak,
+      }))
+      .sort((a, b) => b.rating - a.rating);
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch simulator fighters.');
   }
 }
 
