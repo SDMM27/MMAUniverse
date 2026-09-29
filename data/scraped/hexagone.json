@@ -352,6 +352,13 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/891642"
     },
     {
+      "name": "HXMMA 47 - Hexagone MMA 47",
+      "date": "2026-09-25",
+      "start_time": "2026-09-25T00:00:00+00:00",
+      "event_location": "Zenith Toulouse, Toulouse, France",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/890097"
+    },
+    {
       "name": "HXMMA 48 - Hexagone MMA 48",
       "date": "2026-10-24",
       "start_time": "2026-10-24T00:00:00+00:00",
@@ -364,13 +371,6 @@
       "start_time": "2026-11-27T00:00:00+00:00",
       "event_location": "Glaz Arena, Cesson-Sevigne, France",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895508"
-    },
-    {
-      "name": "HXMMA 47 - Hexagone MMA 47",
-      "date": "2026-09-25",
-      "start_time": "2026-09-25T00:00:00+00:00",
-      "event_location": "Zenith Toulouse, Toulouse, France",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/890097"
     }
   ],
   "fighters": [
@@ -75561,97 +75561,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "HXMMA 48 - Hexagone MMA 48",
-      "fighter1_name": "Samba Sima",
-      "fighter2_name": "Leopold Goi",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
-      "event_name": "HXMMA 48 - Hexagone MMA 48",
-      "fighter1_name": "Turpal Younousov",
-      "fighter2_name": "Mikail Bayram",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 48 - Hexagone MMA 48",
-      "fighter1_name": "Pierre Manzo",
-      "fighter2_name": "Alex Hue",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 48 - Hexagone MMA 48",
-      "fighter1_name": "Arnaud Prigent",
-      "fighter2_name": "Ibrahim Diallo",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 48 - Hexagone MMA 48",
-      "fighter1_name": "Rayan Balbali",
-      "fighter2_name": "Youssouf Ouattara",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 48 - Hexagone MMA 48",
-      "fighter1_name": "Axel Jean-Alphonse",
-      "fighter2_name": "Saber Cherifi",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "HXMMA 49 - Hexagone MMA 49",
-      "fighter1_name": "Theo Ulrich",
-      "fighter2_name": "Davy Gallon",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
       "event_name": "HXMMA 47 - Hexagone MMA 47",
       "fighter1_name": "Nicolae Bivol",
       "fighter2_name": "David Sipra",
@@ -75793,6 +75702,97 @@
       "weight_class": "165lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 48 - Hexagone MMA 48",
+      "fighter1_name": "Samba Sima",
+      "fighter2_name": "Leopold Goi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "HXMMA 48 - Hexagone MMA 48",
+      "fighter1_name": "Turpal Younousov",
+      "fighter2_name": "Mikail Bayram",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 48 - Hexagone MMA 48",
+      "fighter1_name": "Pierre Manzo",
+      "fighter2_name": "Alex Hue",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 48 - Hexagone MMA 48",
+      "fighter1_name": "Arnaud Prigent",
+      "fighter2_name": "Ibrahim Diallo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 48 - Hexagone MMA 48",
+      "fighter1_name": "Rayan Balbali",
+      "fighter2_name": "Youssouf Ouattara",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 48 - Hexagone MMA 48",
+      "fighter1_name": "Axel Jean-Alphonse",
+      "fighter2_name": "Saber Cherifi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 49 - Hexagone MMA 49",
+      "fighter1_name": "Theo Ulrich",
+      "fighter2_name": "Davy Gallon",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }

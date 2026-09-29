@@ -151321,6 +151321,403 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Takumi Hamada",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240401042953_Takumi_Hamada.JPG",
+      "weight_class": "Flyweight",
+      "record": "7-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Takumi-Hamada-405752",
+      "fight_history": [
+        {
+          "opponent_name": "Joseph Camacho",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joseph-Camacho-242155",
+          "event_name": "Pancrase - 362",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-362-112135",
+          "date": "2026-05-31",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Ryogaku Wada",
+          "round": 2,
+          "time": "1:05"
+        },
+        {
+          "opponent_name": "Tomoki Otsuka",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tomoki-Otsuka-316383",
+          "event_name": "Pancrase - 358",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-358-109453",
+          "date": "2025-11-09",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Motohiro Tsuruwa",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Tomoki Otsuka",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tomoki-Otsuka-316383",
+          "event_name": "Pancrase - 355",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-355-108432",
+          "date": "2025-07-27",
+          "result": "nc",
+          "method": "No Contest (Accidental Clash of Heads)",
+          "referee": "Motohiro Tsuruwa",
+          "round": 3,
+          "time": "0:31"
+        },
+        {
+          "opponent_name": "Rafael Montouro Ribeiro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafael-Montouro-Ribeiro-232577",
+          "event_name": "Pancrase - 346: 30th Anniversary Tournament 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-346-30th-Anniversary-Tournament-5-102904",
+          "date": "2024-07-21",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Motohiro Tsuruwa",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Seiya Yamazaki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seiya-Yamazaki-407203",
+          "event_name": "Pancrase - 341: 30th Anniversary Tournament 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-341-30th-Anniversary-Tournament-3-101521",
+          "date": "2024-03-31",
+          "result": "win",
+          "method": "TKO (Body Kick and Punches)",
+          "referee": "Kosuke Umeda",
+          "round": 3,
+          "time": "2:25"
+        },
+        {
+          "opponent_name": "Tomoki Otsuka",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tomoki-Otsuka-316383",
+          "event_name": "Pancrase - 339",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-339-97078",
+          "date": "2023-11-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Motohiro Tsuruwa",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Makoto Ito",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Makoto-Ito-405751",
+          "event_name": "Pancrase - 28th Neo-Blood Tournament Finals",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-28th-NeoBlood-Tournament-Finals-94089",
+          "date": "2022-10-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Motohiro Tsuruwa",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Naruto Date",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Naruto-Date-393284",
+          "event_name": "Pancrase - 28th Neo-Blood Tournament 1st Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-28th-NeoBlood-Tournament-1st-Round-93123",
+          "date": "2022-05-22",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Tomomi Takarada",
+          "round": 1,
+          "time": "3:39"
+        }
+      ]
+    },
+    {
+      "name": "Shunya Inoue",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20260929031805_Shunya_Inoue.JPG",
+      "weight_class": "Featherweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Shunya-Inoue-507951",
+      "fight_history": []
+    },
+    {
+      "name": "Saw Thwee Waw Thaunt",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250921053819_Saw_Thwee_Waw_Thaunt.JPG",
+      "weight_class": "Featherweight",
+      "record": "1-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Saw-Thwee-Waw-Thaunt-482398",
+      "fight_history": [
+        {
+          "opponent_name": "Hibiki Nakao",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hibiki-Nakao-462973",
+          "event_name": "Deep - Fight Challenge 2026 2nd Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Fight-Challenge-2026-2nd-Round-113284",
+          "date": "2026-07-24",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Ryosuke Uchida",
+          "round": 1,
+          "time": "4:55"
+        },
+        {
+          "opponent_name": "Ren Fujii",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ren-Fujii-435044",
+          "event_name": "Deep - Tokyo Impact 2026 2nd Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2026-2nd-Round-111853",
+          "date": "2026-04-19",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Ryosuke Uchida",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Naohiro Matsumoto",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240205113258_Naohiro_Matsumoto.JPG",
+      "weight_class": "Featherweight",
+      "record": "8-7-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Naohiro-Matsumoto-240357",
+      "fight_history": [
+        {
+          "opponent_name": "Daigo Daigo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daigo-Daigo-390914",
+          "event_name": "WCF - Wardog Cage Fight 52: 1st Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/WCF-Wardog-Cage-Fight-52-1st-Round-105209",
+          "date": "2025-04-27",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "4:34"
+        },
+        {
+          "opponent_name": "Kengo Ishikawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kengo-Ishikawa-148689",
+          "event_name": "Fighting Nexus - Nexus Mania 2024",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Nexus-Mania-2024-105619",
+          "date": "2024-12-22",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "0:39"
+        },
+        {
+          "opponent_name": "Tatsuya Komaki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tatsuya-Komaki-391819",
+          "event_name": "Fighting Nexus - Vol. 36",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-36-101718",
+          "date": "2024-08-25",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Akira Yamazaki",
+          "round": 1,
+          "time": "0:42"
+        },
+        {
+          "opponent_name": "Ryosuke Takasugi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryosuke-Takasugi-298307",
+          "event_name": "Fighting Nexus - Ready To Go in Nagano 2024",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Ready-To-Go-in-Nagano-2024-101538",
+          "date": "2024-03-10",
+          "result": "win",
+          "method": "Decision (Majority)",
+          "referee": "Kosuke Umeda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Naoki Sakaue",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Naoki-Sakaue-374614",
+          "event_name": "Fighting Nexus - Vol. 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-33-99775",
+          "date": "2023-12-10",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Yoshifumi Oyabu",
+          "round": 2,
+          "time": "3:17"
+        },
+        {
+          "opponent_name": "Kazuki Hagiwara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kazuki-Hagiwara-189571",
+          "event_name": "Grachan - Grachan 61",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Grachan-61-97365",
+          "date": "2023-05-14",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Junichi Ota",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ayumu Sasaki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ayumu-Sasaki-395568",
+          "event_name": "Grachan - Grachan 58",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Grachan-58-95491",
+          "date": "2022-12-04",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "3:14"
+        },
+        {
+          "opponent_name": "Shinnosuke Nakajima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shinnosuke-Nakajima-225953",
+          "event_name": "Grachan - Grachan 54",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Grachan-54-93109",
+          "date": "2022-05-15",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Junichi Ota",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yoshiro Shimoda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yoshiro-Shimoda-262703",
+          "event_name": "Grachan - Grachan 52",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Grachan-52-91238",
+          "date": "2021-12-19",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Junichi Ota",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hiromu Ueni",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hiromu-Ueni-214321",
+          "event_name": "Grachan - Grachan 50",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Grachan-50-90181",
+          "date": "2021-09-04",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "3:20"
+        },
+        {
+          "opponent_name": "Masatoshi Okuno",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Masatoshi-Okuno-201343",
+          "event_name": "Grachan / Gladiator - Grachan 42 / Gladiator 011",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Gladiator-Grachan-42-Gladiator-011-88853",
+          "date": "2019-12-21",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "1:46"
+        },
+        {
+          "opponent_name": "Takumi Arai",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Takumi-Arai-321797",
+          "event_name": "Grachan / Blue Dog Gym - Grachan 40 / BFC Vol.3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Blue-Dog-Gym-Grachan-40-BFC-Vol3-67029",
+          "date": "2019-06-02",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Yoshinori Umeki",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kenzo Hirokawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kenzo-Hirokawa-242119",
+          "event_name": "Grachan / Gladiator - Grachan 37 / Gladiator 008",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Gladiator-Grachan-37-Gladiator-008-63377",
+          "date": "2018-12-02",
+          "result": "loss",
+          "method": "Decision (Majority)",
+          "referee": "Kentaro Senda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kisugi Endo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kisugi-Endo-220805",
+          "event_name": "Grachan - Grachan 35.5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Grachan-355-68565",
+          "date": "2018-07-16",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Kenji Kosuge",
+          "round": 2,
+          "time": "1:20"
+        },
+        {
+          "opponent_name": "Kosuke Mikami",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kosuke-Mikami-239261",
+          "event_name": "Grachan / One More Chance - Grachan 35 / 1MC Vol. 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-One-More-Chance-Grachan-35-1MC-Vol-6-58835",
+          "date": "2018-05-27",
+          "result": "draw",
+          "method": "Draw (Majority)",
+          "referee": "Kentaro Senda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yutaka Imamura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yutaka-Imamura-193683",
+          "event_name": "Grachan - Grachan 32",
+          "event_sherdog_url": "https://www.sherdog.com/events/Grachan-Grachan-32-56979",
+          "date": "2017-12-10",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Kentaro Senda",
+          "round": 1,
+          "time": "4:09"
+        }
+      ]
+    },
+    {
+      "name": "Masachika Takahashi",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250720030706_Masachika_Takahashi.JPG",
+      "weight_class": "Featherweight",
+      "record": "3-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Masachika-Takahashi-475546",
+      "fight_history": [
+        {
+          "opponent_name": "Taisei Suzuki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taisei-Suzuki-422565",
+          "event_name": "Deep - 132 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-132-Impact-112825",
+          "date": "2026-07-05",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Masato Fukuda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Allen Sugino",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Allen-Sugino-475550",
+          "event_name": "Deep - 129 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-129-Impact-110079",
+          "date": "2025-12-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Masato Fukuda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yo Sasaki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yo-Sasaki-453868",
+          "event_name": "Deep - 127 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-127-Impact-108859",
+          "date": "2025-09-15",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Akira Shibata",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -160980,6 +161377,45 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Takumi Hamada",
+      "fighter2_name": "Sho Sekihara",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Shunya Inoue",
+      "fighter2_name": "Saw Thwee Waw Thaunt",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Naohiro Matsumoto",
+      "fighter2_name": "Masachika Takahashi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },

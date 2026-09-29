@@ -44,6 +44,13 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896616"
     },
     {
+      "name": "One Championship - One Friday Fights 172",
+      "date": "2026-09-25",
+      "start_time": "2026-09-25T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898717"
+    },
+    {
       "name": "One Championship - One Friday Fights 173",
       "date": "2026-10-02",
       "start_time": "2026-10-02T07:00:00+00:00",
@@ -105,13 +112,6 @@
       "start_time": "2026-11-18T00:00:00+00:00",
       "event_location": "Ebara Wave Arena Ota, Ota, Tokyo, Japan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896715"
-    },
-    {
-      "name": "One Championship - One Friday Fights 172",
-      "date": "2026-09-25",
-      "start_time": "2026-09-25T00:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/898717"
     }
   ],
   "fighters": [
@@ -4772,6 +4772,32 @@
       "is_title_fight": false
     },
     {
+      "event_name": "One Championship - One Friday Fights 172",
+      "fighter1_name": "Basir Saraliev",
+      "fighter2_name": "Sarmad Jahanara",
+      "fight_finished": true,
+      "winner_name": "Basir Saraliev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 172",
+      "fighter1_name": "Khurshed Gafurov",
+      "fighter2_name": "Leevi Heino",
+      "fight_finished": true,
+      "winner_name": "Khurshed Gafurov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "One Championship - One Friday Fights 173",
       "fighter1_name": "Imran Satiev",
       "fighter2_name": "Babar Ali",
@@ -4874,32 +4900,6 @@
       "weight_class": "Flyweight",
       "is_main_event": true,
       "is_title_fight": true
-    },
-    {
-      "event_name": "One Championship - One Friday Fights 172",
-      "fighter1_name": "Basir Saraliev",
-      "fighter2_name": "Sarmad Jahanara",
-      "fight_finished": true,
-      "winner_name": "Basir Saraliev",
-      "method": "Decision (Unanimous)",
-      "round": 3,
-      "time": "5:00",
-      "weight_class": "Welterweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One Friday Fights 172",
-      "fighter1_name": "Khurshed Gafurov",
-      "fighter2_name": "Leevi Heino",
-      "fight_finished": true,
-      "winner_name": "Khurshed Gafurov",
-      "method": "Decision (Unanimous)",
-      "round": 3,
-      "time": "5:00",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
     }
   ]
 }
