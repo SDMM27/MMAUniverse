@@ -92,10 +92,14 @@ export default function Page() {
 
       <Section title="3. Le profil de style">
         <p>
-          Chaque combattant est classé dans un profil de style (frappeur de distance, wrestler/contrôleur, pressure
-          fighter, finisseur soumission) déterminé automatiquement à partir de ses statistiques — d&apos;où il frappe,
-          combien il tente de takedowns, combien de temps il passe en contrôle. C&apos;est calculé par un algorithme
-          de classification (clustering), pas assigné à la main.
+          Chaque combattant qui compte au moins 3 combats UFC reçoit un profil de style : lutteur / contrôleur,
+          spécialiste soumission, frappeur de distance, puncheur (KO), clincheur / pression ou polyvalent. Il est
+          déterminé automatiquement à partir de ses statistiques UFC (takedowns, temps de contrôle, frappes au sol,
+          tentatives de soumission, frappes à distance, knockdowns, frappes au clinch), en donnant plus de poids à
+          ses combats récents, et comparé aux combattants actifs de sa catégorie. Un style n&apos;est attribué que si
+          le trait ressort nettement et atteint un niveau élevé dans l&apos;absolu : quelques tentatives de soumission
+          chez un poids lourd ne suffisent pas à en faire un spécialiste. Sinon, le combattant est polyvalent.
+          Rien n&apos;est assigné à la main.
         </p>
       </Section>
 

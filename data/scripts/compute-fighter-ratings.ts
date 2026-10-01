@@ -7,7 +7,7 @@
 // rating across every division (simulateCareerRatings -- FightScore v2, see
 // docs/superpowers/specs/2026-09-22-fightscore-glicko-design.md), turns it
 // into per-division and pound-for-pound 0-100 scores (display-scores.ts),
-// clusters each division's fighters into style archetypes (k-means), and
+// labels each fighter's style archetype (style-archetype.ts), and
 // upserts fighter_ratings + fighter_rating_history. The v1 per-division point
 // flow (simulateDivisionRatings) still runs, only to feed the win predictor
 // (trained on its points) and the per-division streak / former-champion /
@@ -30,7 +30,7 @@ import { simulateDivisionRatings, type DivisionFightInput, type DivisionNoResult
 import { simulateCareerRatings, ratingAsOf, type CareerFightInput, type CareerNoResultInput } from '../lib/rating/simulate-career';
 import { conservativeRating, DEFAULT_GLICKO_PARAMS } from '../lib/rating/glicko-rating';
 import { homeDivision, isEligibleInDivision, divisionDisplayScores, poundForPoundScores, capChallengersBelowChampion } from '../lib/rating/display-scores';
-import { normalizeFeatures, kMeans, labelCluster, type StyleFeatures } from '../lib/rating/style-clustering';
+import { classifyStyles, decayedTotals, type StyleSample } from '../lib/rating/style-archetype';
 import { predictProbability } from '../lib/rating/logistic-regression';
 import { loadWinPredictor } from '../lib/rating/win-predictor-model';
 import { poundForPoundList, weekStartIso } from '../lib/rating/weekly-trend';
@@ -178,6 +178,10 @@ type StatsRow = {
   sig_strikes_distance_attempted: number;
   sig_strikes_clinch_attempted: number;
   sig_strikes_ground_attempted: number;
+  sig_strikes_head_landed: number;
+  sig_strikes_distance_landed: number;
+  sig_strikes_clinch_landed: number;
+  sig_strikes_ground_landed: number;
   takedowns_landed: number;
   takedowns_attempted: number;
   submission_attempts: number;
@@ -238,6 +242,7 @@ async function main() {
            ffs.sig_strikes_landed, ffs.control_time_seconds,
            ffs.sig_strikes_head_attempted, ffs.sig_strikes_body_attempted, ffs.sig_strikes_leg_attempted,
            ffs.sig_strikes_distance_attempted, ffs.sig_strikes_clinch_attempted, ffs.sig_strikes_ground_attempted,
+           ffs.sig_strikes_head_landed, ffs.sig_strikes_distance_landed, ffs.sig_strikes_clinch_landed, ffs.sig_strikes_ground_landed,
            ffs.takedowns_landed, ffs.takedowns_attempted, ffs.submission_attempts
     FROM fighter_fight_stats ffs
     JOIN fighters f ON f.id = ffs.fighter_id
@@ -374,6 +379,38 @@ async function main() {
     capChallengersBelowChampion(scores, divisions).forEach((score, id) => p4pScoreByFighter.set(id, score));
   }
 
+  // Style: from the fighter's whole UFC career (every division, no contests
+  // included -- style is how they fight, not whether they won), recent fights
+  // weighted more. Labelled per division below, against that division's pool.
+  const styleRowsByFighter = new Map<number, StatsRow[]>();
+  for (const row of statsRows) {
+    if (!row.event_date) continue;
+    const list = styleRowsByFighter.get(row.fighter_id) ?? [];
+    list.push(row);
+    styleRowsByFighter.set(row.fighter_id, list);
+  }
+  const styleTotalsByFighter = new Map<number, { totals: StyleSample; fights: number }>();
+  for (const [fighterId, rows] of Array.from(styleRowsByFighter.entries())) {
+    const samples: StyleSample[] = rows
+      .sort((a, b) => (a.event_date! < b.event_date! ? -1 : a.event_date! > b.event_date! ? 1 : 0))
+      .map((row) => ({
+        seconds: minutesFought(row.finish_round, row.finish_time) * 60,
+        takedownsLanded: row.takedowns_landed,
+        controlSeconds: row.control_time_seconds ?? 0,
+        groundLanded: row.sig_strikes_ground_landed,
+        submissionAttempts: row.submission_attempts,
+        distanceLanded: row.sig_strikes_distance_landed,
+        headLanded: row.sig_strikes_head_landed,
+        clinchLanded: row.sig_strikes_clinch_landed,
+        knockdowns: row.knockdowns,
+        sigLanded: row.sig_strikes_landed,
+      }));
+    styleTotalsByFighter.set(fighterId, { totals: decayedTotals(samples), fights: samples.length });
+  }
+  // Styles are measured against the division's recently active fighters, not
+  // its 2000s fighters (striking volume has nearly doubled since 2005).
+  const styleReferenceSince = `${Number(todayIso.slice(0, 4)) - 5}${todayIso.slice(4)}`;
+
   let totalFightersRated = 0;
   let totalHistoryRows = 0;
   let totalEstimatedFallbacks = 0;
@@ -391,63 +428,14 @@ async function main() {
     const eligibleIds = eligibleIdsByDivision.get(division)!;
     const displayScores = displayScoreByDivision.get(division)!;
 
-    // Style features: aggregated across every fight (win or loss) this
-    // fighter had in this division -- style is about how they fight, not
-    // whether they won. Built from the same `pairs` list (both corners of
-    // every fight), not just `sorted`'s winner side.
-    const statsIdByFighter = new Map<number, StatsRow[]>();
-    for (const p of divisionPairs) {
-      for (const row of [p.winner, p.loser]) {
-        const list = statsIdByFighter.get(row.fighter_id) ?? [];
-        list.push(row);
-        statsIdByFighter.set(row.fighter_id, list);
-      }
-    }
     const fighterIds = Array.from(fighterStates.keys());
-    const featuresByFighter = new Map<number, StyleFeatures>();
-    for (const fighterId of fighterIds) {
-      const rows = statsIdByFighter.get(fighterId) ?? [];
-      let totalMinutes = 0;
-      const sums = {
-        head: 0, body: 0, leg: 0, distance: 0, clinch: 0, ground: 0,
-        tdLanded: 0, tdAttempted: 0, control: 0, subAttempts: 0,
-      };
-      for (const row of rows) {
-        const minutes = minutesFought(row.finish_round, row.finish_time);
-        totalMinutes += minutes;
-        sums.head += row.sig_strikes_head_attempted;
-        sums.body += row.sig_strikes_body_attempted;
-        sums.leg += row.sig_strikes_leg_attempted;
-        sums.distance += row.sig_strikes_distance_attempted;
-        sums.clinch += row.sig_strikes_clinch_attempted;
-        sums.ground += row.sig_strikes_ground_attempted;
-        sums.tdLanded += row.takedowns_landed;
-        sums.tdAttempted += row.takedowns_attempted;
-        sums.control += row.control_time_seconds ?? 0;
-        sums.subAttempts += row.submission_attempts;
-      }
-      const per15 = (n: number) => (totalMinutes > 0 ? (n / totalMinutes) * 15 : 0);
-      featuresByFighter.set(fighterId, {
-        sigStrikesHeadRate: per15(sums.head),
-        sigStrikesBodyRate: per15(sums.body),
-        sigStrikesLegRate: per15(sums.leg),
-        sigStrikesDistanceRate: per15(sums.distance),
-        sigStrikesClinchRate: per15(sums.clinch),
-        sigStrikesGroundRate: per15(sums.ground),
-        takedownRate: per15(sums.tdAttempted),
-        takedownAccuracy: sums.tdAttempted > 0 ? sums.tdLanded / sums.tdAttempted : 0,
-        controlTimeRate: per15(sums.control / 60),
-        submissionAttemptRate: per15(sums.subAttempts),
-      });
-    }
-    const archetypeByFighter = new Map<number, string>();
-    if (fighterIds.length >= 4) {
-      const featureList = fighterIds.map((id) => featuresByFighter.get(id)!);
-      const normalized = normalizeFeatures(featureList);
-      const { assignments, centroids } = kMeans(normalized, 4);
-      const labels = centroids.map((c) => labelCluster(c));
-      fighterIds.forEach((id, i) => archetypeByFighter.set(id, labels[assignments[i]]));
-    }
+    const archetypeByFighter = classifyStyles(
+      fighterIds.map((fighterId) => ({
+        fighterId,
+        ...(styleTotalsByFighter.get(fighterId) ?? { totals: decayedTotals([]), fights: 0 }),
+        isReference: (fighterStates.get(fighterId)!.lastFightDate ?? '') >= styleReferenceSince,
+      })),
+    );
 
     // Win predictor: each fighter's CURRENT state (last-5-fights style, recent
     // performance, activity as of today) vs a synthetic division-average

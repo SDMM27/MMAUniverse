@@ -1,9 +1,9 @@
 // data/lib/rating/logistic-regression.ts
 //
 // Hand-rolled binary logistic regression (batch gradient descent + L2) --
-// same "no heavy ML dependency needed, dataset is small enough" rationale as
-// style-clustering.ts's k-means. This is the trained-model half of FightScore
-// v2 (see docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md,
+// no heavy ML dependency needed, the dataset is small enough. This is the
+// trained-model half of FightScore v2 (see
+// docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md,
 // "Roadmap v2"): predicts P(fighter A beats fighter B) from a feature-
 // differential vector (points, streak, style-stat rates, ...), to check
 // whether it adds predictive lift on top of the point-flow engine's own
