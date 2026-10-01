@@ -69733,6 +69733,100 @@
           "time": "0:25"
         }
       ]
+    },
+    {
+      "name": "Lindsey Payne",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1734839403payne.jpg",
+      "weight_class": "Strawweight",
+      "record": "4-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Lindsey-Payne-420699",
+      "fight_history": [
+        {
+          "opponent_name": "Sineadh Ni Nuallain",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sineadh-Ni-Nuallain-309537",
+          "event_name": "Golden Ticket Fight Promotions - GTFP Fight Night 30",
+          "event_sherdog_url": "https://www.sherdog.com/events/Golden-Ticket-Fight-Promotions-GTFP-Fight-Night-30-111498",
+          "date": "2026-05-09",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Harvey Harra",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Levi Steedman",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Levi-Steedman-287863",
+          "event_name": "CW 201 - Cage Warriors 201: Unplugged",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-201-Cage-Warriors-201-Unplugged-111029",
+          "date": "2026-03-13",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "Paul Crossley",
+          "round": 2,
+          "time": "2:57"
+        },
+        {
+          "opponent_name": "Delphine Benouaich",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Delphine-Benouaich-413666",
+          "event_name": "Ares 36 - Jbalia vs. Sabirov",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ares-36-Jbalia-vs-Sabirov-109959",
+          "date": "2025-12-13",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Naoufel Louati",
+          "round": 1,
+          "time": "3:10"
+        },
+        {
+          "opponent_name": "Fabiola Pidroni",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fabiola-Pidroni-328099",
+          "event_name": "Ares 29 - Younousov vs. Alcino",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ares-29-Younousov-vs-Alcino-106089",
+          "date": "2025-02-14",
+          "result": "loss",
+          "method": "TKO (Slam)",
+          "referee": "Loic Pora",
+          "round": 3,
+          "time": "4:32"
+        },
+        {
+          "opponent_name": "Franziska Chwalicz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Franziska-Chwalicz-365629",
+          "event_name": "AFC - Almighty Fighting Championship 39",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFC-Almighty-Fighting-Championship-39-105456",
+          "date": "2024-12-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Melissa Hurtado",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Melissa-Hurtado-443319",
+          "event_name": "Ares 25 - Sola vs. Gagloev",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ares-25-Sola-vs-Gagloev-103835",
+          "date": "2024-09-26",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Mourad Benseghir",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Federica di Filippo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Federica-di-Filippo-417506",
+          "event_name": "BMF MMA 8 - Bad Mofo MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/BMF-MMA-8-Bad-Mofo-MMA-99655",
+          "date": "2024-03-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -75793,6 +75887,19 @@
       "weight_class": "Lightweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "HXMMA 49 - Hexagone MMA 49",
+      "fighter1_name": "Oceane Samson",
+      "fighter2_name": "Lindsey Payne",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }

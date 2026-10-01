@@ -4220,6 +4220,40 @@
           "time": "1:01"
         }
       ]
+    },
+    {
+      "name": "Weronika Cislo",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1750865301weronikacislo.jpg",
+      "weight_class": "Flyweight",
+      "record": "1-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Weronika-Cislo-386352",
+      "fight_history": [
+        {
+          "opponent_name": "Isabel Calvo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Isabel-Calvo-407342",
+          "event_name": "WOW 25 - Madrid",
+          "event_sherdog_url": "https://www.sherdog.com/events/WOW-25-Madrid-109823",
+          "date": "2025-12-13",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Jesus Arjona",
+          "round": 1,
+          "time": "2:36"
+        },
+        {
+          "opponent_name": "Millie Eriksson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Millie-Eriksson-296089",
+          "event_name": "FCR 25 - Fight Club Rush 25",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCR-25-Fight-Club-Rush-25-108579",
+          "date": "2025-09-13",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Anders Ohlsson",
+          "round": 2,
+          "time": "4:24"
+        }
+      ]
     }
   ],
   "fights": [
@@ -9446,6 +9480,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 44 - Younousov vs. Nam",
+      "fighter1_name": "Melissa Hurtado",
+      "fighter2_name": "Weronika Cislo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
       "is_main_event": false,
       "is_title_fight": false
     },

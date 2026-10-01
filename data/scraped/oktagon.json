@@ -6867,6 +6867,196 @@
           "time": "2:05"
         }
       ]
+    },
+    {
+      "name": "Christian Mach",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1710637986Christian_Mach.png",
+      "weight_class": "Welterweight",
+      "record": "10-5-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Christian-Mach-315969",
+      "fight_history": [
+        {
+          "opponent_name": "Mantvydas Perednis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mantvydas-Perednis-487058",
+          "event_name": "Brave CF 99 - Brave Combat Federation 99",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-99-Brave-Combat-Federation-99-109698",
+          "date": "2025-10-18",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Tomi Punch",
+          "round": 1,
+          "time": "2:56"
+        },
+        {
+          "opponent_name": "Enrique Marin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Enrique-Marin-27077",
+          "event_name": "Brave CF 95 - Brave Combat Federation 95",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-95-Brave-Combat-Federation-95-107308",
+          "date": "2025-05-30",
+          "result": "win",
+          "method": "KO (Head Kick and Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "0:36"
+        },
+        {
+          "opponent_name": "Pavel Vladev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pavel-Vladev-230909",
+          "event_name": "Brave CF 86 - Brave Combat Federation 86",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-86-Brave-Combat-Federation-86-103710",
+          "date": "2024-08-24",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Rosen Rusev",
+          "round": 2,
+          "time": "4:50"
+        },
+        {
+          "opponent_name": "David Forster",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Forster-416188",
+          "event_name": "Brave CF 81 / WFC 26 - Brave Combat Federation 81 / World Freefight Challenge 26",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-81-WFC-26-Brave-Combat-Federation-81-World-Freefight-Challenge-26-101169",
+          "date": "2024-04-20",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Aleksandar Zoric",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Italo Julio Lima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Italo-Julio-Lima-275701",
+          "event_name": "National Fighting Championship - NFC 17",
+          "event_sherdog_url": "https://www.sherdog.com/events/National-Fighting-Championship-NFC-17-96827",
+          "date": "2024-02-03",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Jan Vobornik",
+          "round": 1,
+          "time": "2:43"
+        },
+        {
+          "opponent_name": "Gokhan Aksu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gokhan-Aksu-133593",
+          "event_name": "Brave CF 68 - Brave Combat Federation 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-68-Brave-Combat-Federation-68-95632",
+          "date": "2022-12-17",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:05"
+        },
+        {
+          "opponent_name": "Bogdan Grad",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bogdan-Grad-156707",
+          "event_name": "CFS 11 - Cage Fight Series 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFS-11-Cage-Fight-Series-11-94542",
+          "date": "2022-09-09",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Nebil Sebai",
+          "round": 2,
+          "time": "4:07"
+        },
+        {
+          "opponent_name": "Pantelei Taran",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pantelei-Taran-184947",
+          "event_name": "NFC 7 - National Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/NFC-7-National-Fighting-Championship-90908",
+          "date": "2021-12-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Gerd Richter",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Anastasios Chatzigeorgiadis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anastasios-Chatzigeorgiadis-387262",
+          "event_name": "NFC 6 - National Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/NFC-6-National-Fighting-Championship-90773",
+          "date": "2021-10-30",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Jan Vobornik",
+          "round": 2,
+          "time": "4:29"
+        },
+        {
+          "opponent_name": "Kirill Surikow",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kirill-Surikow-290831",
+          "event_name": "NFC 5 - National Fighting Championship Series Quarterfinals",
+          "event_sherdog_url": "https://www.sherdog.com/events/NFC-5-National-Fighting-Championship-Series-Quarterfinals-90008",
+          "date": "2021-09-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Gerd Richter",
+          "round": 3,
+          "time": "2:04"
+        },
+        {
+          "opponent_name": "Max Heine",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Max-Heine-270733",
+          "event_name": "NFT Gym - National Fighting Championship: Series Preseason 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/NFT-Gym-National-Fighting-Championship-Series-Preseason-2-89737",
+          "date": "2021-07-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "0:37"
+        },
+        {
+          "opponent_name": "Mohamed Issa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mohamed-Issa-269951",
+          "event_name": "NFT Gym - National Fighting Championship: Series Preseason 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/NFT-Gym-National-Fighting-Championship-Series-Preseason-1-89309",
+          "date": "2021-05-22",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Lowa Mstoyan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lowa-Mstoyan-320239",
+          "event_name": "EMC 4 - Elite MMA Championship 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/EMC-4-Elite-MMA-Championship-4-84765",
+          "date": "2020-02-29",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "",
+          "round": 3,
+          "time": "1:45"
+        },
+        {
+          "opponent_name": "Ismail Akillic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ismail-Akillic-81298",
+          "event_name": "WLMMA - We Love MMA 47",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLMMA-We-Love-MMA-47-74909",
+          "date": "2019-03-23",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Gerd Richter",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Said Eyni",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Said-Eyni-301677",
+          "event_name": "WLMMA - We Love MMA 46",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLMMA-We-Love-MMA-46-74285",
+          "date": "2019-02-23",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Ceyhan Gockel",
+          "round": 1,
+          "time": "1:10"
+        }
+      ]
     }
   ],
   "fights": [
@@ -21107,19 +21297,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
-      "fighter1_name": "Viktor Cervinsky",
-      "fighter2_name": "Daniel Hromek",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
       "fighter1_name": "Vaclav Stepan",
       "fighter2_name": "Sami Zarabi",
       "fight_finished": false,
@@ -21128,6 +21305,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "fighter1_name": "Viktor Cervinsky",
+      "fighter2_name": "Daniel Hromek",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -21265,6 +21455,19 @@
       "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
       "fighter1_name": "Kevin Hangs",
       "fighter2_name": "Burak Kizilirmak",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "fighter1_name": "Endrit Brajshori",
+      "fighter2_name": "Christian Mach",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -21427,6 +21630,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
+      "fighter1_name": "Patrik Sebek",
+      "fighter2_name": "Adrian Hamerski",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
