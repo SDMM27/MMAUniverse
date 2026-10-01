@@ -59,7 +59,7 @@ function toFightStatsSide(row: StatsRow, rounds: RoundRow[]): FightStatsSide {
 }
 
 // mulberry32 -- deterministic so the A/B example-construction coin flip is
-// reproducible across runs (same rationale as style-clustering.ts's seed).
+// reproducible across runs.
 function mulberry32(seed: number): () => number {
   let state = seed >>> 0;
   return () => {
