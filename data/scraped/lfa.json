@@ -409949,6 +409949,50 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Joziah Fry",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1784777223Joziah_Fry.jpg",
+      "weight_class": "Bantamweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Joziah-Fry-478035",
+      "fight_history": [
+        {
+          "opponent_name": "Landen Fischer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Landen-Fischer-384891",
+          "event_name": "Cage Titans FC - Cage Titans 78",
+          "event_sherdog_url": "https://www.sherdog.com/events/Cage-Titans-FC-Cage-Titans-78-114248",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Kevin MacDonald",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Isaiah Veloso",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Heavyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Isaiah-Veloso-501353",
+      "fight_history": [
+        {
+          "opponent_name": "Joshua Doughty",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joshua-Doughty-501354",
+          "event_name": "Victory Cage Fighting Championships - VCFC 39: Rage in the Cage",
+          "event_sherdog_url": "https://www.sherdog.com/events/Victory-Cage-Fighting-Championships-VCFC-39-Rage-in-the-Cage-112894",
+          "date": "2026-05-16",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Jon Marconi",
+          "round": 1,
+          "time": "0:42"
+        }
+      ]
     }
   ],
   "fights": [
@@ -439108,32 +439152,6 @@
     },
     {
       "event_name": "LFA 243 - Maximov vs. Santos",
-      "fighter1_name": "Edmund Kwan",
-      "fighter2_name": "Unknown Fighter",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 243 - Maximov vs. Santos",
-      "fighter1_name": "Ciaran Saunders",
-      "fighter2_name": "Latrell White",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 243 - Maximov vs. Santos",
       "fighter1_name": "Kyle Clark",
       "fighter2_name": "Ali Gazamatov",
       "fight_finished": false,
@@ -439220,19 +439238,6 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Macksom Lee",
-      "fighter2_name": "Sebastian Ruiz",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -439337,6 +439342,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Joziah Fry",
+      "fighter2_name": "Yve Nelson",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -439472,8 +439490,8 @@
     },
     {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Isaiah Parks",
-      "fighter2_name": "Christian Getsey",
+      "fighter1_name": "Isaiah Veloso",
+      "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

@@ -161306,7 +161306,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "160lbCatchweight",
       "is_main_event": true,
       "is_title_fight": false
     },
@@ -161346,19 +161346,6 @@
       "round": 0,
       "time": "",
       "weight_class": "108lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Rizin FF - Landmark Vol. 16",
-      "fighter1_name": "Mac Papalii",
-      "fighter2_name": "Yukinori Akazawa",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
