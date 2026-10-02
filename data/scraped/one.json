@@ -3977,6 +3977,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Imran-Satiev-315083",
       "fight_history": [
         {
+          "opponent_name": "Babar Ali",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Babar-Ali-321159",
+          "event_name": "One Championship - One Friday Fights 173",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-173-114692",
+          "date": "2026-10-02",
+          "result": "win",
+          "method": "Submission (Ninja Choke)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "3:06"
+        },
+        {
           "opponent_name": "Chayan Oorzhak",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chayan-Oorzhak-342175",
           "event_name": "One Championship - One Friday Fights 135",
@@ -4058,6 +4070,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Babar-Ali-321159",
       "fight_history": [
+        {
+          "opponent_name": "Imran Satiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Imran-Satiev-315083",
+          "event_name": "One Championship - One Friday Fights 173",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-173-114692",
+          "date": "2026-10-02",
+          "result": "loss",
+          "method": "Submission (Ninja Choke)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "3:06"
+        },
         {
           "opponent_name": "Serkhan Valili",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Serkhan-Valili-306409",
@@ -4225,6 +4249,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Youssef-Ramadan-446100",
       "fight_history": [
         {
+          "opponent_name": "Jong Jun Park",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jong-Jun-Park-395427",
+          "event_name": "One Championship - One Friday Fights 173",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-173-114692",
+          "date": "2026-10-02",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "1:28"
+        },
+        {
           "opponent_name": "Andy Setia Negara",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andy-Setia-Negara-325759",
           "event_name": "Soma Fight Series - SFS 15",
@@ -4270,6 +4306,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jong-Jun-Park-395427",
       "fight_history": [
+        {
+          "opponent_name": "Youssef Ramadan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Youssef-Ramadan-446100",
+          "event_name": "One Championship - One Friday Fights 173",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-173-114692",
+          "date": "2026-10-02",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "1:28"
+        },
         {
           "opponent_name": "Junpei Nagatome",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Junpei-Nagatome-405691",
