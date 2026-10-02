@@ -39,6 +39,9 @@
     "tune:glicko": "tsx data/scripts/tune-glicko.ts",
     "check:ratings": "tsx data/scripts/check-ratings.ts"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@clerk/nextjs": "^6.39.6",
     "@neondatabase/serverless": "^1.1.0",
