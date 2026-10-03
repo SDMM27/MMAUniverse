@@ -51,20 +51,6 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/898717"
     },
     {
-      "name": "One Championship - One Friday Fights 173",
-      "date": "2026-10-02",
-      "start_time": "2026-10-02T00:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/899623"
-    },
-    {
-      "name": "One Championship - One on Prime Video 48",
-      "date": "2026-10-02",
-      "start_time": "2026-10-02T18:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895598"
-    },
-    {
       "name": "One Championship - One Friday Fights 174",
       "date": "2026-10-09",
       "start_time": "2026-10-09T00:00:00+00:00",
@@ -112,6 +98,20 @@
       "start_time": "2026-11-18T00:00:00+00:00",
       "event_location": "Ebara Wave Arena Ota, Ota, Tokyo, Japan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896715"
+    },
+    {
+      "name": "One Championship - One on Prime Video 48",
+      "date": "2026-10-02",
+      "start_time": "2026-10-02T18:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895598"
+    },
+    {
+      "name": "One Championship - One Friday Fights 173",
+      "date": "2026-10-02",
+      "start_time": "2026-10-02T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/899623"
     }
   ],
   "fighters": [
@@ -5226,58 +5226,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "One Championship - One Friday Fights 173",
-      "fighter1_name": "Imran Satiev",
-      "fighter2_name": "Babar Ali",
-      "fight_finished": true,
-      "winner_name": "Imran Satiev",
-      "method": "Submission (Ninja Choke)",
-      "round": 1,
-      "time": "3:06",
-      "weight_class": "Bantamweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One Friday Fights 173",
-      "fighter1_name": "Jong Jun Park",
-      "fighter2_name": "Youssef Ramadan",
-      "fight_finished": true,
-      "winner_name": "Jong Jun Park",
-      "method": "TKO (Punches)",
-      "round": 2,
-      "time": "1:28",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 48",
-      "fighter1_name": "Shamil Erdogan",
-      "fighter2_name": "Paul Elliott",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 48",
-      "fighter1_name": "Joshua Perreira",
-      "fighter2_name": "Antonio Cesar",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "One Championship - ONE Samurai 4",
       "fighter1_name": "Jihin Radzuan",
       "fighter2_name": "Itsuki Hirata",
@@ -5328,6 +5276,58 @@
       "weight_class": "Flyweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 48",
+      "fighter1_name": "Shamil Erdogan",
+      "fighter2_name": "Paul Elliott",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 48",
+      "fighter1_name": "Joshua Perreira",
+      "fighter2_name": "Antonio Cesar",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 173",
+      "fighter1_name": "Imran Satiev",
+      "fighter2_name": "Babar Ali",
+      "fight_finished": true,
+      "winner_name": "Imran Satiev",
+      "method": "Submission (Ninja Choke)",
+      "round": 1,
+      "time": "3:06",
+      "weight_class": "Bantamweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 173",
+      "fighter1_name": "Jong Jun Park",
+      "fighter2_name": "Youssef Ramadan",
+      "fight_finished": true,
+      "winner_name": "Jong Jun Park",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "1:28",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }
