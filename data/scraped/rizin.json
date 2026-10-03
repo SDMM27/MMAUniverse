@@ -26879,6 +26879,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ryota-Oki-255433",
       "fight_history": [
         {
+          "opponent_name": "Daisuke Okumiya",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daisuke-Okumiya-22130",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "TKO (Punches and Soccer Kicks)",
+          "referee": "Takashi Hashimoto",
+          "round": 1,
+          "time": "4:47"
+        },
+        {
           "opponent_name": "Ginji Arai",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ginji-Arai-437276",
           "event_name": "Rizin FF - Landmark Vol. 13",
@@ -52217,6 +52229,18 @@
         {
           "opponent_name": "Seigo Yamamoto",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seigo-Yamamoto-192997",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "Submission (Kneebar)",
+          "referee": "Minoru Toyonaga",
+          "round": 1,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Seigo Yamamoto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seigo-Yamamoto-192997",
           "event_name": "Rizin FF - Landmark Vol. 10",
           "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-10-104801",
           "date": "2024-11-17",
@@ -52668,6 +52692,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Seigo-Yamamoto-192997",
       "fight_history": [
+        {
+          "opponent_name": "Alan Yamaniha",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alan-Yamaniha-64179",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "Submission (Kneebar)",
+          "referee": "Minoru Toyonaga",
+          "round": 1,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Sung Bin Kim",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sung-Bin-Kim-395571",
@@ -99504,6 +99540,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kohei-Sugiyama-192859",
       "fight_history": [
+        {
+          "opponent_name": "Kaito Oda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kaito-Oda-411079",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Naoya Uematsu",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Yuta Hashimoto",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuta-Hashimoto-128767",
@@ -150245,6 +150293,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Kaito-Oda-411079",
       "fight_history": [
         {
+          "opponent_name": "Kohei Sugiyama",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kohei-Sugiyama-192859",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Naoya Uematsu",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Niushiyue Ji",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Niushiyue-Ji-257563",
           "event_name": "UFC - Road to UFC Season 5: Macau Quarterfinals 2",
@@ -150454,6 +150514,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Daisuke-Okumiya-22130",
       "fight_history": [
+        {
+          "opponent_name": "Ryota Oki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryota-Oki-255433",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "TKO (Punches and Soccer Kicks)",
+          "referee": "Takashi Hashimoto",
+          "round": 1,
+          "time": "4:47"
+        },
         {
           "opponent_name": "Nikolas Catalon",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nikolas-Catalon-476079",
@@ -161305,7 +161377,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "160lbCatchweight",
       "is_main_event": true,
       "is_title_fight": false
@@ -161318,7 +161390,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161331,7 +161403,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161344,7 +161416,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "108lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161357,7 +161429,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161370,7 +161442,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161383,7 +161455,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161392,11 +161464,11 @@
       "event_name": "Rizin FF - Landmark Vol. 16",
       "fighter1_name": "Alan Yamaniha",
       "fighter2_name": "Seigo Yamamoto",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Alan Yamaniha",
+      "method": "Submission (Kneebar)",
+      "round": 1,
+      "time": "3:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161405,11 +161477,11 @@
       "event_name": "Rizin FF - Landmark Vol. 16",
       "fighter1_name": "Kohei Sugiyama",
       "fighter2_name": "Kaito Oda",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Kohei Sugiyama",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161418,11 +161490,11 @@
       "event_name": "Rizin FF - Landmark Vol. 16",
       "fighter1_name": "Ryota Oki",
       "fighter2_name": "Daisuke Okumiya",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Ryota Oki",
+      "method": "TKO (Punches and Soccer Kicks)",
+      "round": 1,
+      "time": "4:47",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false

@@ -109,7 +109,7 @@
     {
       "name": "One Championship - One Friday Fights 173",
       "date": "2026-10-02",
-      "start_time": "2026-10-02T00:00:00+00:00",
+      "start_time": "2026-10-02T05:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/899623"
     }
@@ -1806,6 +1806,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Joshua-Perreira-377144",
       "fight_history": [
         {
+          "opponent_name": "Antonio Cesar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Antonio-Cesar-395469",
+          "event_name": "One Championship - One on Prime Video 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-48-114233",
+          "date": "2026-10-02",
+          "result": "loss",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Gilbert Nakatani",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gilbert-Nakatani-167891",
           "event_name": "One Championship - One on Prime Video 42",
@@ -1899,6 +1911,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Antonio-Cesar-395469",
       "fight_history": [
+        {
+          "opponent_name": "Joshua Perreira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joshua-Perreira-377144",
+          "event_name": "One Championship - One on Prime Video 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-48-114233",
+          "date": "2026-10-02",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Lito Adiwang",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lito-Adiwang-93871",
@@ -5281,25 +5305,25 @@
       "event_name": "One Championship - One on Prime Video 48",
       "fighter1_name": "Shamil Erdogan",
       "fighter2_name": "Paul Elliott",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Shamil Erdogan",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 2,
+      "time": "2:28",
       "weight_class": "Heavyweight",
       "is_main_event": true,
       "is_title_fight": false
     },
     {
       "event_name": "One Championship - One on Prime Video 48",
-      "fighter1_name": "Joshua Perreira",
-      "fighter2_name": "Antonio Cesar",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
+      "fighter1_name": "Antonio Cesar",
+      "fighter2_name": "Joshua Perreira",
+      "fight_finished": true,
+      "winner_name": "Antonio Cesar",
+      "method": "TKO (Doctor Stoppage)",
+      "round": 1,
+      "time": "5:00",
+      "weight_class": "139lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
