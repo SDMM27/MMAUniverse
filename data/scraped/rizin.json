@@ -4645,6 +4645,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Yoshinori-Horie-227513",
       "fight_history": [
         {
+          "opponent_name": "Sho Patrick Usami",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sho-Patrick-Usami-386853",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "TKO (Elbow and Punches)",
+          "referee": "Ryosuke Uchida",
+          "round": 2,
+          "time": "3:37"
+        },
+        {
           "opponent_name": "Patricky Freire",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Patricky-Freire-38544",
           "event_name": "Rizin FF - Landmark Vol. 13",
@@ -4907,6 +4919,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Sho-Patrick-Usami-386853",
       "fight_history": [
         {
+          "opponent_name": "Yoshinori Horie",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yoshinori-Horie-227513",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "TKO (Elbow and Punches)",
+          "referee": "Ryosuke Uchida",
+          "round": 2,
+          "time": "3:37"
+        },
+        {
           "opponent_name": "Tatsuya Saika",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tatsuya-Saika-258823",
           "event_name": "Rizin FF - Rizin 53",
@@ -5084,6 +5108,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Viktor-Kolesnik-146745",
       "fight_history": [
+        {
+          "opponent_name": "Koyomi Matsushima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Koyomi-Matsushima-188675",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "TKO (Elbows and Soccer Kick)",
+          "referee": "Takashi Hashimoto",
+          "round": 2,
+          "time": "0:20"
+        },
         {
           "opponent_name": "Koji Takeda",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Koji-Takeda-243733",
@@ -5503,6 +5539,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Koyomi-Matsushima-188675",
       "fight_history": [
         {
+          "opponent_name": "Viktor Kolesnik",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Viktor-Kolesnik-146745",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "TKO (Elbows and Soccer Kick)",
+          "referee": "Takashi Hashimoto",
+          "round": 2,
+          "time": "0:20"
+        },
+        {
           "opponent_name": "Ryan Cafaro",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Cafaro-76058",
           "event_name": "Rizin FF - Rizin 53",
@@ -5789,6 +5837,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ryusei-Ashizawa-437896",
       "fight_history": [
         {
+          "opponent_name": "Seiya Inoue",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seiya-Inoue-495309",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Tatsuro Nagase",
+          "round": 1,
+          "time": "4:56"
+        },
+        {
           "opponent_name": "Ryoma Shishimoto",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryoma-Shishimoto-272953",
           "event_name": "Rizin FF - Shiwasu no Cho Tsuwamono Matsuri",
@@ -5871,6 +5931,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Seiya-Inoue-495309",
       "fight_history": [
         {
+          "opponent_name": "Ryusei Ashizawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryusei-Ashizawa-437896",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Tatsuro Nagase",
+          "round": 1,
+          "time": "4:56"
+        },
+        {
           "opponent_name": "Koki Akada",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Koki-Akada-461153",
           "event_name": "Rizin FF - Landmark Vol. 14",
@@ -5904,6 +5976,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Keito-Oyama-375397",
       "fight_history": [
+        {
+          "opponent_name": "Noeru Narita",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Noeru-Narita-382139",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Ryosuke Uchida",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Katie Perez",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Katie-Perez-290949",
@@ -6130,6 +6214,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Noeru-Narita-382139",
       "fight_history": [
+        {
+          "opponent_name": "Keito Oyama",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Keito-Oyama-375397",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Ryosuke Uchida",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Bo Mi Lee",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bo-Mi-Lee-456040",
@@ -15939,6 +16035,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Kyohei-Takagi-456178",
       "fight_history": [
         {
+          "opponent_name": "Masatoshi Ueda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Masatoshi-Ueda-127345",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "TKO (Knees and Punches)",
+          "referee": "Takashi Hashimoto",
+          "round": 1,
+          "time": "3:26"
+        },
+        {
           "opponent_name": "Jae Hun Lee",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jae-Hun-Lee-400310",
           "event_name": "Rizin FF - Landmark Vol. 15",
@@ -22396,6 +22504,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ryan-Cafaro-76058",
       "fight_history": [
+        {
+          "opponent_name": "Hyuma Yasui",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hyuma-Yasui-430430",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Akira Shibata",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Koyomi Matsushima",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Koyomi-Matsushima-188675",
@@ -31801,6 +31921,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Hyuma-Yasui-430430",
       "fight_history": [
         {
+          "opponent_name": "Ryan Cafaro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Cafaro-76058",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Akira Shibata",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Toshiki Mori",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Toshiki-Mori-404691",
           "event_name": "Deep - Tokyo Impact 2026 2nd Round",
@@ -38282,6 +38414,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Hidetaka-Arato-342657",
       "fight_history": [
+        {
+          "opponent_name": "Ken Hasegawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ken-Hasegawa-76908",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Tatsuro Nagase",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Ryo Sakai",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryo-Sakai-88759",
@@ -61702,6 +61846,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Masatoshi-Ueda-127345",
       "fight_history": [
+        {
+          "opponent_name": "Kyohei Takagi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyohei-Takagi-456178",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "TKO (Knees and Punches)",
+          "referee": "Takashi Hashimoto",
+          "round": 1,
+          "time": "3:26"
+        },
         {
           "opponent_name": "Daichi Mizuta",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daichi-Mizuta-394265",
@@ -146549,6 +146705,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ken-Hasegawa-76908",
       "fight_history": [
         {
+          "opponent_name": "Hidetaka Arato",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hidetaka-Arato-342657",
+          "event_name": "Rizin FF - Landmark Vol. 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-16-113793",
+          "date": "2026-10-03",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Tatsuro Nagase",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Black Tiger",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Black-Tiger-464756",
           "event_name": "Deep - Tokyo Impact 2026 3rd Round",
@@ -161373,11 +161541,11 @@
       "event_name": "Rizin FF - Landmark Vol. 16",
       "fighter1_name": "Yoshinori Horie",
       "fighter2_name": "Sho Patrick Usami",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Yoshinori Horie",
+      "method": "TKO (Elbow and Punches)",
+      "round": 2,
+      "time": "3:37",
       "weight_class": "160lbCatchweight",
       "is_main_event": true,
       "is_title_fight": false
@@ -161386,24 +161554,24 @@
       "event_name": "Rizin FF - Landmark Vol. 16",
       "fighter1_name": "Viktor Kolesnik",
       "fighter2_name": "Koyomi Matsushima",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Viktor Kolesnik",
+      "method": "TKO (Elbows and Soccer Kick)",
+      "round": 2,
+      "time": "0:20",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
-      "fighter1_name": "Ryan Cafaro",
-      "fighter2_name": "Hyuma Yasui",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Hyuma Yasui",
+      "fighter2_name": "Ryan Cafaro",
+      "fight_finished": true,
+      "winner_name": "Hyuma Yasui",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161412,11 +161580,11 @@
       "event_name": "Rizin FF - Landmark Vol. 16",
       "fighter1_name": "Keito Oyama",
       "fighter2_name": "Noeru Narita",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Keito Oyama",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "108lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161425,24 +161593,24 @@
       "event_name": "Rizin FF - Landmark Vol. 16",
       "fighter1_name": "Kyohei Takagi",
       "fighter2_name": "Masatoshi Ueda",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Kyohei Takagi",
+      "method": "TKO (Knees and Punches)",
+      "round": 1,
+      "time": "3:26",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Landmark Vol. 16",
-      "fighter1_name": "Ryusei Ashizawa",
-      "fighter2_name": "Seiya Inoue",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Seiya Inoue",
+      "fighter2_name": "Ryusei Ashizawa",
+      "fight_finished": true,
+      "winner_name": "Seiya Inoue",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "4:56",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161451,11 +161619,11 @@
       "event_name": "Rizin FF - Landmark Vol. 16",
       "fighter1_name": "Hidetaka Arato",
       "fighter2_name": "Ken Hasegawa",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Hidetaka Arato",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -161511,6 +161679,19 @@
       "weight_class": "Flyweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Naoki Inoue",
+      "fighter2_name": "Yrysbek Tilenov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "Rizin FF - Rizin 55",
