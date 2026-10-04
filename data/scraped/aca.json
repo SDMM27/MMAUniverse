@@ -21411,6 +21411,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/AbdulRahman-Dzhanaev-181539",
       "fight_history": [
         {
+          "opponent_name": "Mikhail Dolgov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mikhail-Dolgov-246783",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Edil Esengulov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edil-Esengulov-292037",
           "event_name": "ACA 205 - Magomedov vs. Gasanov",
@@ -31615,6 +31627,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Magomed-Sulumov-205859",
       "fight_history": [
         {
+          "opponent_name": "Sheymon Moraes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sheymon-Moraes-93951",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Alexander Matmuratov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Matmuratov-154471",
           "event_name": "ACA 204 - Shlemenko vs. Dipchikov",
@@ -32734,6 +32758,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mark-Hulme-154225",
       "fight_history": [
+        {
+          "opponent_name": "Murad Abdulaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Murad-Abdulaev-98227",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Artem Frolov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Artem-Frolov-164023",
@@ -43840,6 +43876,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Shamil-Boraev-430087",
       "fight_history": [
         {
+          "opponent_name": "Timur Valiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Timur-Valiev-70605",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Submission (Kneebar)",
+          "referee": "Dmitry Valuevich",
+          "round": 2,
+          "time": "1:47"
+        },
+        {
           "opponent_name": "Shergazy Kenjebaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shergazy-Kenjebaev-255145",
           "event_name": "ACA 203 - Gaforov vs. Akopyan",
@@ -46064,6 +46112,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Uzair-Abdurakov-272013",
       "fight_history": [
         {
+          "opponent_name": "Herbert Batista",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Herbert-Batista-150687",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Eduard Vartanyan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eduard-Vartanyan-89087",
           "event_name": "ACA 202 - Johnson vs. Kornilov",
@@ -46361,6 +46421,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Daniil-Matsola-460328",
       "fight_history": [
+        {
+          "opponent_name": "Kirill Grishenko",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kirill-Grishenko-377619",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Khadis Ibragimov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khadis-Ibragimov-265067",
@@ -50592,6 +50664,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Kirill-Grishenko-377619",
       "fight_history": [
         {
+          "opponent_name": "Daniil Matsola",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daniil-Matsola-460328",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Klidson Abreu",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Klidson-Abreu-111535",
           "event_name": "ACA 201 - Silva vs. Podlesniy",
@@ -53553,6 +53637,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mikhail-Dolgov-246783",
       "fight_history": [
+        {
+          "opponent_name": "Abdul-Rahman Dzhanaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/AbdulRahman-Dzhanaev-181539",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Ewerton Polaquini",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ewerton-Polaquini-288809",
@@ -64388,6 +64484,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Murad-Abdulaev-98227",
       "fight_history": [
         {
+          "opponent_name": "Mark Hulme",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mark-Hulme-154225",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Edil Esengulov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edil-Esengulov-292037",
           "event_name": "ACA 199 - Frolov vs. Emeev",
@@ -65673,6 +65781,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Herbert-Batista-150687",
       "fight_history": [
+        {
+          "opponent_name": "Uzair Abdurakov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Uzair-Abdurakov-272013",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Oganes Voskanyan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oganes-Voskanyan-354209",
@@ -69723,7 +69843,7 @@
           "date": "2026-10-04",
           "result": "win",
           "method": "KO (Punches)",
-          "referee": "Iliya Kushnerik",
+          "referee": "Ilia Kushernik",
           "round": 1,
           "time": "1:42"
         },
@@ -74050,6 +74170,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Kurban-Gadzhiev-82785",
       "fight_history": [
         {
+          "opponent_name": "Umalat Israpilov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Umalat-Israpilov-288095",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Renat Ondar",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Renat-Ondar-221837",
           "event_name": "ACA 196 - Silva vs. Borisov",
@@ -74533,7 +74665,7 @@
           "date": "2026-10-04",
           "result": "loss",
           "method": "KO (Punches)",
-          "referee": "Iliya Kushnerik",
+          "referee": "Ilia Kushernik",
           "round": 1,
           "time": "1:42"
         },
@@ -82707,6 +82839,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Umalat-Israpilov-288095",
       "fight_history": [
+        {
+          "opponent_name": "Kurban Gadzhiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kurban-Gadzhiev-82785",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Kholmurod Nurmatov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kholmurod-Nurmatov-223469",
@@ -94595,6 +94739,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Timur-Valiev-70605",
       "fight_history": [
+        {
+          "opponent_name": "Shamil Boraev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shamil-Boraev-430087",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Submission (Kneebar)",
+          "referee": "Dmitry Valuevich",
+          "round": 2,
+          "time": "1:47"
+        },
         {
           "opponent_name": "David Dzhibilov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Dzhibilov-406764",
@@ -163744,6 +163900,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Yunus-Evloev-14787",
       "fight_history": [
+        {
+          "opponent_name": "Francisco Figueiredo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Francisco-Figueiredo-69484",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "TKO (Elbows)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "0:58"
+        },
         {
           "opponent_name": "Ruan Miqueias",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ruan-Miqueias-338967",
@@ -379342,6 +379510,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Sheymon-Moraes-93951",
       "fight_history": [
         {
+          "opponent_name": "Magomed Sulumov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Magomed-Sulumov-205859",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Andre Harrison",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andre-Harrison-87106",
           "event_name": "Victory Fighting League - Clash of the Champions",
@@ -379639,6 +379819,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Francisco-Figueiredo-69484",
       "fight_history": [
+        {
+          "opponent_name": "Yunus Evloev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yunus-Evloev-14787",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "0:58"
+        },
         {
           "opponent_name": "Dzhamaludin Aliev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dzhamaludin-Aliev-315387",
@@ -380504,6 +380696,52 @@
           "referee": "Ilia Kushernik",
           "round": 3,
           "time": "0:00"
+        }
+      ]
+    },
+    {
+      "name": "Georgiy Komarov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1772386039Georgy_Komarov.jpeg",
+      "weight_class": "Lightweight",
+      "record": "3-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Georgiy-Komarov-493697",
+      "fight_history": [
+        {
+          "opponent_name": "Nahid Ganjaliyev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nahid-Ganjaliyev-396484",
+          "event_name": "MMA Series 94 - Barroso vs. Andryushko",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-94-Barroso-vs-Andryushko-112798",
+          "date": "2026-05-30",
+          "result": "win",
+          "method": "KO (Punch to the Body)",
+          "referee": "",
+          "round": 2,
+          "time": "2:31"
+        },
+        {
+          "opponent_name": "Anatoliy Zhilkin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anatoliy-Zhilkin-496241",
+          "event_name": "DFL 2 - Druzhina Fighting League",
+          "event_sherdog_url": "https://www.sherdog.com/events/DFL-2-Druzhina-Fighting-League-112332",
+          "date": "2026-02-15",
+          "result": "win",
+          "method": "Submission",
+          "referee": "Denis Zimoveyskiy",
+          "round": 1,
+          "time": "1:30"
+        },
+        {
+          "opponent_name": "Sino Dzhalalov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sino-Dzhalalov-493698",
+          "event_name": "FFP 14 - Fight Family Promotion 14",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFP-14-Fight-Family-Promotion-14-111459",
+          "date": "2025-12-28",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "David Mikropulo",
+          "round": 1,
+          "time": "0:28"
         }
       ]
     }
@@ -427450,11 +427688,11 @@
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
       "fighter1_name": "Abdul-Rahman Dzhanaev",
       "fighter2_name": "Mikhail Dolgov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Abdul-Rahman Dzhanaev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -427463,11 +427701,11 @@
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
       "fighter1_name": "Kirill Grishenko",
       "fighter2_name": "Daniil Matsola",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Kirill Grishenko",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -427476,24 +427714,24 @@
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
       "fighter1_name": "Magomed Sulumov",
       "fighter2_name": "Sheymon Moraes",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Magomed Sulumov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
-      "fighter1_name": "Uzair Abdurakov",
-      "fighter2_name": "Herbert Batista",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Herbert Batista",
+      "fighter2_name": "Uzair Abdurakov",
+      "fight_finished": true,
+      "winner_name": "Herbert Batista",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -427502,50 +427740,50 @@
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
       "fighter1_name": "Timur Valiev",
       "fighter2_name": "Shamil Boraev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Timur Valiev",
+      "method": "Submission (Kneebar)",
+      "round": 2,
+      "time": "1:47",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
-      "fighter1_name": "Yunus Evloev",
-      "fighter2_name": "Francisco Figueiredo",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Francisco Figueiredo",
+      "fighter2_name": "Yunus Evloev",
+      "fight_finished": true,
+      "winner_name": "Francisco Figueiredo",
+      "method": "TKO (Elbows)",
+      "round": 3,
+      "time": "0:58",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
-      "fighter1_name": "Murad Abdulaev",
-      "fighter2_name": "Mark Hulme",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Mark Hulme",
+      "fighter2_name": "Murad Abdulaev",
+      "fight_finished": true,
+      "winner_name": "Mark Hulme",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
-      "fighter1_name": "Kurban Gadzhiev",
-      "fighter2_name": "Umalat Israpilov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Umalat Israpilov",
+      "fighter2_name": "Kurban Gadzhiev",
+      "fight_finished": true,
+      "winner_name": "Umalat Israpilov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -427742,6 +427980,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 69 - ACA Young Eagles 69",
+      "fighter1_name": "Gasan Musakaev",
+      "fighter2_name": "Abubakar Debziev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA YE 69 - ACA Young Eagles 69",
+      "fighter1_name": "Georgiy Komarov",
+      "fighter2_name": "Amirkhan Zakriev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
