@@ -69758,7 +69758,7 @@
           "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-23-ACA-Young-Eagles-Grand-Prix-Finals-91472",
           "date": "2021-12-25",
           "result": "win",
-          "method": "Submission (Kneebar)",
+          "method": "Submission (Hamstring Stretch)",
           "referee": "Gerikhan Shibilov",
           "round": 2,
           "time": "4:36"
@@ -427217,8 +427217,8 @@
     },
     {
       "event_name": "ACA 208 - Shaikhaev vs. Tumenov",
-      "fighter1_name": "Abdul-Rakhman Dudaev",
-      "fighter2_name": "Vicente Vargas",
+      "fighter1_name": "Kurban Taygibov",
+      "fighter2_name": "Dzhambulat Selimkhanov",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -427230,8 +427230,8 @@
     },
     {
       "event_name": "ACA 208 - Shaikhaev vs. Tumenov",
-      "fighter1_name": "Kurban Taygibov",
-      "fighter2_name": "Dzhambulat Selimkhanov",
+      "fighter1_name": "Abdul-Rakhman Dudaev",
+      "fighter2_name": "Vicente Vargas",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -427263,7 +427263,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight",
+      "weight_class": "140lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
