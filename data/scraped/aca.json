@@ -34295,6 +34295,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Vicente-Vargas-182031",
       "fight_history": [
         {
+          "opponent_name": "Abdul-Rakhman Dudaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/AbdulRakhman-Dudaev-161789",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Nashkho Galaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nashkho-Galaev-166271",
           "event_name": "ACA 204 - Shlemenko vs. Dipchikov",
@@ -40545,6 +40557,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Dzhambulat-Selimkhanov-250071",
       "fight_history": [
+        {
+          "opponent_name": "Kurban Taygibov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kurban-Taygibov-152563",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Alimardan Abdykarov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alimardan-Abdykarov-212837",
@@ -50246,6 +50270,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Alexander-Podlesniy-192355",
       "fight_history": [
         {
+          "opponent_name": "Rustam Kerimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rustam-Kerimov-127209",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Josiel Silva",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Josiel-Silva-150679",
           "event_name": "ACA 201 - Silva vs. Podlesniy",
@@ -51079,6 +51115,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Rustam-Kerimov-127209",
       "fight_history": [
+        {
+          "opponent_name": "Alexander Podlesniy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Podlesniy-192355",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "David Dzhibilov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Dzhibilov-406764",
@@ -52031,6 +52079,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Sergey-Starodub-394567",
       "fight_history": [
+        {
+          "opponent_name": "Adlan Ibragimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adlan-Ibragimov-282085",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "0:21"
+        },
         {
           "opponent_name": "Evgeny Erokhin",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evgeny-Erokhin-54479",
@@ -60273,6 +60333,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kurban-Taygibov-152563",
       "fight_history": [
+        {
+          "opponent_name": "Dzhambulat Selimkhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dzhambulat-Selimkhanov-250071",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Said Khatiev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Said-Khatiev-271455",
@@ -71820,6 +71892,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Adlan-Ibragimov-282085",
       "fight_history": [
         {
+          "opponent_name": "Sergey Starodub",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sergey-Starodub-394567",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "0:21"
+        },
+        {
           "opponent_name": "Muslim Magomedov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muslim-Magomedov-247371",
           "event_name": "ACA 197 - Ibragimov vs. Magomedov",
@@ -81013,6 +81097,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/AbdulRakhman-Dudaev-161789",
       "fight_history": [
+        {
+          "opponent_name": "Vicente Vargas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vicente-Vargas-182031",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Pavel Vitruk",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pavel-Vitruk-83382",
@@ -96756,6 +96852,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/AbdulAziz-Abdulvakhabov-85495",
       "fight_history": [
+        {
+          "opponent_name": "Gleison Tibau",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gleison-Tibau-5993",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Ali Bagov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ali-Bagov-72360",
@@ -377727,6 +377835,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Gleison-Tibau-5993",
       "fight_history": [
         {
+          "opponent_name": "Abdul-Aziz Abdulvakhabov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/AbdulAziz-Abdulvakhabov-85495",
+          "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-208-Abdulvakhabov-vs-Tibau-114200",
+          "date": "2026-10-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Matias Juarez",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matias-Juarez-132397",
           "event_name": "WNC 3 - Warriors Night Championship 3",
@@ -427623,37 +427743,37 @@
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
       "fighter1_name": "Abdul-Aziz Abdulvakhabov",
       "fighter2_name": "Gleison Tibau",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Abdul-Aziz Abdulvakhabov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Welterweight",
       "is_main_event": true,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
-      "fighter1_name": "Kurban Taygibov",
-      "fighter2_name": "Dzhambulat Selimkhanov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Abdul-Rakhman Dudaev",
+      "fighter2_name": "Vicente Vargas",
+      "fight_finished": true,
+      "winner_name": "Abdul-Rakhman Dudaev",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
-      "fighter1_name": "Abdul-Rakhman Dudaev",
-      "fighter2_name": "Vicente Vargas",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Dzhambulat Selimkhanov",
+      "fighter2_name": "Kurban Taygibov",
+      "fight_finished": true,
+      "winner_name": "Dzhambulat Selimkhanov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -427662,24 +427782,24 @@
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
       "fighter1_name": "Adlan Ibragimov",
       "fighter2_name": "Sergey Starodub",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Adlan Ibragimov",
+      "method": "KO (Punch)",
+      "round": 3,
+      "time": "0:21",
       "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 208 - Abdulvakhabov vs. Tibau",
-      "fighter1_name": "Rustam Kerimov",
-      "fighter2_name": "Alexander Podlesniy",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Alexander Podlesniy",
+      "fighter2_name": "Rustam Kerimov",
+      "fight_finished": true,
+      "winner_name": "Alexander Podlesniy",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "140lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
