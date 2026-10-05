@@ -4254,6 +4254,184 @@
           "time": "4:24"
         }
       ]
+    },
+    {
+      "name": "Adionai Maciel",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1761742029adonaimaciel.jpg",
+      "weight_class": "Flyweight",
+      "record": "12-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Adionai-Maciel-308105",
+      "fight_history": [
+        {
+          "opponent_name": "Mauricio Almeida",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mauricio-Almeida-193325",
+          "event_name": "CFN - Coari Fight Night 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFN-Coari-Fight-Night-1-110851",
+          "date": "2025-12-09",
+          "result": "win",
+          "method": "Technical Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ronaldo Moreira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ronaldo-Moreira-307303",
+          "event_name": "CFN - Coari Fight Night 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFN-Coari-Fight-Night-1-110851",
+          "date": "2025-12-09",
+          "result": "win",
+          "method": "KO",
+          "referee": "",
+          "round": 1,
+          "time": "0:13"
+        },
+        {
+          "opponent_name": "Roberth Batte",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Roberth-Batte-411143",
+          "event_name": "CSYSL - Coari Champions 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/CSYSL-Coari-Champions-7-109038",
+          "date": "2025-07-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Vinicius Augusto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vinicius-Augusto-395471",
+          "event_name": "CNT - Coari New Talent 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/CNT-Coari-New-Talent-3-107593",
+          "date": "2025-04-26",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 3,
+          "time": "2:08"
+        },
+        {
+          "opponent_name": "Wellington Candido",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Wellington-Candido-263197",
+          "event_name": "FMS - Fight Music Show: Fight Night 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMS-Fight-Music-Show-Fight-Night-4-106778",
+          "date": "2025-02-02",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Fernando Bonatto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fernando-Bonatto-401119",
+          "event_name": "Metanoia Fight Combat - Premium",
+          "event_sherdog_url": "https://www.sherdog.com/events/Metanoia-Fight-Combat-Premium-104229",
+          "date": "2024-09-07",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Nailson Da Cunha Gassa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nailson-Da-Cunha-Gassa-336745",
+          "event_name": "LF - Lions Fight 13",
+          "event_sherdog_url": "https://www.sherdog.com/events/LF-Lions-Fight-13-99088",
+          "date": "2023-08-26",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "3:13"
+        },
+        {
+          "opponent_name": "Joseph Vieira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joseph-Vieira-258325",
+          "event_name": "Jungle Fight 99 - Rio de Janeiro",
+          "event_sherdog_url": "https://www.sherdog.com/events/Jungle-Fight-99-Rio-de-Janeiro-83111",
+          "date": "2019-11-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Julian Fabrin Soares",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Max Silva da Fonseca",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Max-Silva-da-Fonseca-252381",
+          "event_name": "SFC - Suar Fight Championship 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFC-Suar-Fight-Championship-5-74327",
+          "date": "2019-10-05",
+          "result": "win",
+          "method": "TKO (Corner Stoppage)",
+          "referee": "Carlos Belem",
+          "round": 4,
+          "time": "2:43"
+        },
+        {
+          "opponent_name": "Renan Alejandro Litaiff Gama",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Renan-Alejandro-Litaiff-Gama-292641",
+          "event_name": "SFC - Solimoes Fight Combat",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFC-Solimoes-Fight-Combat-86764",
+          "date": "2019-08-31",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "Claudio oliveira",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Enoque Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Enoque-Silva-371959",
+          "event_name": "Dantas Fight - 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dantas-Fight-10-86790",
+          "date": "2019-06-01",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Alexandre Lek Lek",
+          "round": 3,
+          "time": "2:58"
+        },
+        {
+          "opponent_name": "Rogerio Lopes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rogerio-Lopes-294255",
+          "event_name": "RR - Rei dos Rios 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/RR-Rei-dos-Rios-4-97654",
+          "date": "2017-07-01",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "1:39"
+        },
+        {
+          "opponent_name": "Emanuel Nery de Oliveira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emanuel-Nery-de-Oliveira-231757",
+          "event_name": "SFC - Suar Fight Championship 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFC-Suar-Fight-Championship-1-72427",
+          "date": "2017-03-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Unknown Fighter",
+          "opponent_sherdog_url": "",
+          "event_name": "RR - Rei dos Rios 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/RR-Rei-dos-Rios-3-97653",
+          "date": "2016-11-29",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 3,
+          "time": "3:33"
+        }
+      ]
     }
   ],
   "fights": [
@@ -9497,6 +9675,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "Ares 44 - Younousov vs. Nam",
+      "fighter1_name": "Amir Aliev",
+      "fighter2_name": "Adionai Maciel",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "Ares 45 - Zebo vs. Baki 2",
       "fighter1_name": "Jordan Zebo",
       "fighter2_name": "Baissangour Chamsoudinov",
@@ -9508,6 +9699,19 @@
       "weight_class": "Welterweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "fighter1_name": "Ghassen Jbalia",
+      "fighter2_name": "Modibo Diakite",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }

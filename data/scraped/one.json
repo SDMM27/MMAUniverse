@@ -69,7 +69,7 @@
       "date": "2026-10-09",
       "start_time": "2026-10-09T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/900650"
     },
     {
       "name": "One Championship - One Friday Fights 175",
@@ -5103,6 +5103,322 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Denis Andreev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1698169876Denis_Andreev-hero-1200x1165-1.jpg",
+      "weight_class": "Featherweight",
+      "record": "3-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Denis-Andreev-294323",
+      "fight_history": [
+        {
+          "opponent_name": "Adilet Kalenderov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adilet-Kalenderov-414859",
+          "event_name": "One Championship - One Friday Fights 123",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-123-109351",
+          "date": "2025-09-05",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "4:33"
+        },
+        {
+          "opponent_name": "Islam Rakhmatov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Islam-Rakhmatov-397700",
+          "event_name": "MFP 248 - Modern Fighting Pankration 248",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFP-248-Modern-Fighting-Pankration-248-103829",
+          "date": "2024-07-19",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Valentin Gruzdev",
+          "round": 2,
+          "time": "4:50"
+        },
+        {
+          "opponent_name": "Carlo Bumina-ang",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlo-Buminaang-431098",
+          "event_name": "One Championship - One Friday Fights 37",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-37-99760",
+          "date": "2023-10-20",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yashar Mamedov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yashar-Mamedov-436166",
+          "event_name": "Eagle FC 53 - Yaskovets vs. Abdurakov",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eagle-FC-53-Yaskovets-vs-Abdurakov-98696",
+          "date": "2023-08-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Ilia Kushernik",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Waldimir Britez",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1769778508Waldimir_Britez-hero-1200x1165-1-600x582.png",
+      "weight_class": "Featherweight",
+      "record": "5-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Waldimir-Britez-430188",
+      "fight_history": [
+        {
+          "opponent_name": "Rasul Rahimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rasul-Rahimov-373255",
+          "event_name": "One Championship - One Friday Fights 150",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-150-112342",
+          "date": "2026-04-10",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kazat Alymbek uulu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kazat-Alymbek-uulu-442180",
+          "event_name": "One Championship - One Friday Fights 140",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-140-111188",
+          "date": "2026-01-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "1:08"
+        },
+        {
+          "opponent_name": "Erik Camilo Fernandez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erik-Camilo-Fernandez-462022",
+          "event_name": "Bodyth Rogger Promotions - South American Fighting Championship 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bodyth-Rogger-Promotions-South-American-Fighting-Championship-2-100871",
+          "date": "2024-09-21",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:43"
+        },
+        {
+          "opponent_name": "Flavio Bernardes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Flavio-Bernardes-413051",
+          "event_name": "GCF 64 - Gladiator Combat Fight 64",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCF-64-Gladiator-Combat-Fight-64-100270",
+          "date": "2023-11-05",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Kevin Martins",
+          "round": 1,
+          "time": "1:18"
+        },
+        {
+          "opponent_name": "Maykon  Alexandre",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maykon-Alexandre-424148",
+          "event_name": "GCF 63 - Gladiator Combat Fight 63",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCF-63-Gladiator-Combat-Fight-63-99092",
+          "date": "2023-08-26",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Rogerio Gauderio",
+          "round": 1,
+          "time": "1:46"
+        },
+        {
+          "opponent_name": "Elton Yamaguti",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elton-Yamaguti-418842",
+          "event_name": "MMA Sanda Combat - MSC 13",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Sanda-Combat-MSC-13-98369",
+          "date": "2023-06-10",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Alexandre Caldas",
+          "round": 2,
+          "time": "2:33"
+        }
+      ]
+    },
+    {
+      "name": "Philemon Britus Jeb",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1785504358Philemon_Bitrus_Jeb-Hero-1200x1165-1-600x583.png",
+      "weight_class": "Lightweight",
+      "record": "6-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Philemon-Britus-Jeb-449252",
+      "fight_history": [
+        {
+          "opponent_name": "Kevin Perdomo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kevin-Perdomo-392529",
+          "event_name": "One Championship - One Friday Fights 164",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-164-113342",
+          "date": "2026-07-31",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Abdoul Kader Dao",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdoul-Kader-Dao-298385",
+          "event_name": "Eric Favre Nation MMA - Chapter 3: Mozou vs. Mandour",
+          "event_sherdog_url": "https://www.sherdog.com/events/Eric-Favre-Nation-MMA-Chapter-3-Mozou-vs-Mandour-107749",
+          "date": "2025-05-17",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "3:51"
+        },
+        {
+          "opponent_name": "Mathieu Aboya",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mathieu-Aboya-474699",
+          "event_name": "African Knockout - AKO 8: Road to the Finals",
+          "event_sherdog_url": "https://www.sherdog.com/events/African-Knockout-AKO-8-Road-to-the-Finals-107411",
+          "date": "2025-04-04",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "",
+          "round": 1,
+          "time": "2:45"
+        },
+        {
+          "opponent_name": "Daniel Iwuoha",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daniel-Iwuoha-404180",
+          "event_name": "AFC World Series - AFC World Series 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFC-World-Series-AFC-World-Series-1-109223",
+          "date": "2024-10-26",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "4:25"
+        },
+        {
+          "opponent_name": "Emmanuel Bulus",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emmanuel-Bulus-454524",
+          "event_name": "Sika Fighting Club - SFC 003",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sika-Fighting-Club-SFC-003-103961",
+          "date": "2024-06-29",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "4:04"
+        },
+        {
+          "opponent_name": "Osoba Pelajah",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Osoba-Pelajah-449243",
+          "event_name": "Spirit of the Warrior - Battle of Paikokun Mountain",
+          "event_sherdog_url": "https://www.sherdog.com/events/Spirit-of-the-Warrior-Battle-of-Paikokun-Mountain-102849",
+          "date": "2024-03-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Daniel Iwuoha",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daniel-Iwuoha-404180",
+          "event_name": "OFU Entertainment - OFU Fight Night 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFU-Entertainment-OFU-Fight-Night-3-104318",
+          "date": "2023-11-04",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Goodluck Opara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Goodluck-Opara-351987",
+          "event_name": "OFU Entertainment - OFU Fight Night 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFU-Entertainment-OFU-Fight-Night-2-104317",
+          "date": "2023-04-16",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "2:12"
+        }
+      ]
+    },
+    {
+      "name": "Bat-Ireedui Ganbaatar",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "4-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/BatIreedui-Ganbaatar-417756",
+      "fight_history": [
+        {
+          "opponent_name": "Baatar-Zorig Tsolmonbaatar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/BaatarZorig-Tsolmonbaatar-417973",
+          "event_name": "Mongol FC 3 - Mongol Fighting Championship 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Mongol-FC-3-Mongol-Fighting-Championship-3-114184",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ivan Balangskii",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Balangskii-455240",
+          "event_name": "Falcons Fighting Series - FFS 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Falcons-Fighting-Series-FFS-2-102586",
+          "date": "2024-05-15",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Jun Yin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jun-Yin-382540",
+          "event_name": "Jiaowang Fengyun - Yuankai Wine Cup",
+          "event_sherdog_url": "https://www.sherdog.com/events/Jiaowang-Fengyun-Yuankai-Wine-Cup-104127",
+          "date": "2024-02-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Deliya Bi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Deliya-Bi-255807",
+          "event_name": "Fight King - International Gold Belt Championship: Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fight-King-International-Gold-Belt-Championship-Day-1-98597",
+          "date": "2023-07-22",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Gele Qing",
+          "round": 2,
+          "time": "4:32"
+        },
+        {
+          "opponent_name": "Lkhagvadorj Tumur-Ochir",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lkhagvadorj-TumurOchir-417757",
+          "event_name": "Undefeated MMA - Fire and Blood",
+          "event_sherdog_url": "https://www.sherdog.com/events/Undefeated-MMA-Fire-and-Blood-95824",
+          "date": "2022-08-25",
+          "result": "win",
+          "method": "Technical Decision (Unanimous)",
+          "referee": "",
+          "round": 0,
+          "time": "N/A"
+        }
+      ]
     }
   ],
   "fights": [
@@ -5298,6 +5614,32 @@
       "round": 2,
       "time": "1:28",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 174",
+      "fighter1_name": "Denis Andreev",
+      "fighter2_name": "Waldimir Britez",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 174",
+      "fighter1_name": "Philemon Britus Jeb",
+      "fighter2_name": "Bat-Ireedui Ganbaatar",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
