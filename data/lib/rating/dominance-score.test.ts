@@ -156,3 +156,29 @@ test('falls back to method alone when round-by-round data is unavailable', () =>
   assert.deepEqual(subResult, { score: 0.9, estimated: true });
   assert.deepEqual(decisionResult, { score: 0.4, estimated: true });
 });
+
+function decisionFight(method: string, extra: Partial<FightStatsSide> = {}) {
+  const rounds = (landed: number) => [1, 2, 3].map((round) => ({ round, sigStrikesLanded: landed, controlTimeSeconds: 0, knockdowns: 0 }));
+  const winner = side({ method, sigStrikesLandedTotal: 60, rounds: rounds(20), ...extra });
+  const loser = side({ sigStrikesLandedTotal: 30, rounds: rounds(10) });
+  return computeDominanceScore(winner, loser).score;
+}
+
+test('a split decision scores 0.10 below, and a majority decision 0.05 below, the same performance won unanimously', () => {
+  const unanimous = decisionFight('Decision - Unanimous');
+  assert.ok(Math.abs(unanimous - decisionFight('Decision - Split') - 0.1) < 1e-9);
+  assert.ok(Math.abs(unanimous - decisionFight('Decision - Majority') - 0.05) < 1e-9);
+});
+
+test('the decision-type penalty also applies to the method-only fallback', () => {
+  const fallback = (method: string) => computeDominanceScore(side({ method }), side({})).score;
+  assert.ok(Math.abs(fallback('Decision - Split') - 0.3) < 1e-9);
+  assert.ok(Math.abs(fallback('Decision - Majority') - 0.35) < 1e-9);
+});
+
+test('a Performance of the Night adds 0.10 and a Fight of the Night 0.05 to the winner, never past 1', () => {
+  const base = decisionFight('Decision - Unanimous');
+  assert.ok(Math.abs(decisionFight('Decision - Unanimous', { bonusPerformanceOfTheNight: true }) - base - 0.1) < 1e-9);
+  assert.ok(Math.abs(decisionFight('Decision - Unanimous', { bonusFightOfTheNight: true }) - base - 0.05) < 1e-9);
+  assert.equal(decisionFight('KO/TKO', { bonusPerformanceOfTheNight: true, bonusFightOfTheNight: true }), 1);
+});

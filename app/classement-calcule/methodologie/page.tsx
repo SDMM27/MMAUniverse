@@ -39,6 +39,15 @@ export default function Page() {
           comme très dominante, presque au niveau d&apos;un finish : le nombre de rounds gagnés pèse autant que la
           méthode dans le calcul.
         </p>
+        <p>
+          Deux éléments viennent ensuite ajuster ce score. Le verdict des juges : une décision partagée retire 0,10 à la
+          dominance de la victoire, une décision majoritaire 0,05 — une victoire que les officiels ont eux-mêmes jugée
+          serrée compte moins qu&apos;une décision unanime, quelle que soit notre estimation des rounds. Et les bonus de
+          l&apos;UFC : une Performance de la Nuit (ou, dans l&apos;ancien format, un KO ou une soumission de la Nuit) ajoute 0,10 au
+          vainqueur, un Combat de la Nuit 0,05. Ces valeurs sont des choix éditoriaux modestes, pas des réglages
+          appris sur les données, et ne remplacent jamais une victoire : elles déplacent au plus quelques points de
+          note.
+        </p>
         <p className="rounded-lg border border-base-border bg-base-card p-3 text-xs">
           <strong className="text-ink-primary">Important :</strong> « qui a gagné chaque round » est une{' '}
           <strong className="text-ink-primary">estimation</strong> calculée à partir des statistiques brutes (frappes,
@@ -161,9 +170,8 @@ export default function Page() {
 
       <Section title="Ce qui n'est pas encore pris en compte">
         <p>
-          Les organisations autres que l&apos;UFC (pas encore assez de données détaillées disponibles), les bonus
-          Performance/Fight of the Night, les pénalités de poids manqué, et la distinction entre décision unanime,
-          partagée ou majoritaire.
+          Les organisations autres que l&apos;UFC (pas encore assez de données détaillées disponibles) et les
+          pénalités de poids manqué (aucune source de données fiable et complète aujourd&apos;hui).
         </p>
       </Section>
     </main>

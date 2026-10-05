@@ -10,6 +10,7 @@ import type { NeonQueryFunction } from '@neondatabase/serverless';
 import { normalizeWeightClass } from '../lib/rating/normalize-weight-class';
 import { simulateDivisionRatings, type DivisionFightInput } from '../lib/rating/simulate-division';
 import type { FightStatsSide, RoundStatsSide } from '../lib/rating/dominance-score';
+import { loadUfcStatsBonuses } from '../scrapers/shared/ufcstats-bonuses';
 import { buildMatchupFeatures, replayDivision, styleSampleFromRow, type ReplayFight } from '../lib/rating/win-predictor-features';
 
 type StatsRow = {
@@ -48,9 +49,15 @@ function toRoundSide(rows: RoundRow[]): RoundStatsSide[] {
     .map((r) => ({ round: r.round, sigStrikesLanded: r.sig_strikes_landed, controlTimeSeconds: r.control_time_seconds, knockdowns: r.knockdowns }));
 }
 
-function toFightStatsSide(row: StatsRow, rounds: RoundRow[]): FightStatsSide {
+// `legacyDominance` rebuilds the dominance the model was first trained on (every decision unanimous,
+// no UFC bonuses) -- only for comparing the two in compare-win-predictor.ts.
+function toFightStatsSide(row: StatsRow, rounds: RoundRow[], bonuses: ReturnType<typeof loadUfcStatsBonuses>['fights'], legacyDominance: boolean): FightStatsSide {
+  const method = row.method ?? '';
+  const bonus = legacyDominance ? undefined : bonuses[row.ufcstats_fight_url];
   return {
-    method: row.method ?? '',
+    method: legacyDominance && method.toLowerCase().startsWith('decision') ? 'Decision - Unanimous' : method,
+    bonusFightOfTheNight: bonus?.fightOfTheNight ?? false,
+    bonusPerformanceOfTheNight: bonus?.performanceOfTheNight ?? false,
     finishRound: row.finish_round,
     sigStrikesLandedTotal: row.sig_strikes_landed,
     controlTimeSecondsTotal: row.control_time_seconds,
@@ -71,7 +78,7 @@ function mulberry32(seed: number): () => number {
 }
 
 /** Loads every UFC fight from Neon and returns the training examples sorted oldest-first, plus the division count. */
-export async function loadWinPredictorExamples(sql: NeonQueryFunction<false, false>): Promise<{ examples: Example[]; divisionCount: number }> {
+export async function loadWinPredictorExamples(sql: NeonQueryFunction<false, false>, legacyDominance = false): Promise<{ examples: Example[]; divisionCount: number }> {
   console.log('Loading fighter_fight_stats + fighter_fight_round_stats from Neon...');
   const statsRows = (await sql`
     SELECT ffs.id, ffs.fighter_id, ffs.event_date, ffs.ufcstats_fight_url, ffs.result, ffs.weight_class,
@@ -120,6 +127,7 @@ export async function loadWinPredictorExamples(sql: NeonQueryFunction<false, fal
     byDivision.set(division, list);
   }
 
+  const bonuses = loadUfcStatsBonuses().fights;
   const rand = mulberry32(7);
   const examples: Example[] = [];
 
@@ -135,8 +143,8 @@ export async function loadWinPredictorExamples(sql: NeonQueryFunction<false, fal
       isFiveRounds: p.winner.scheduled_rounds === 5,
       winnerId: p.winner.fighter_id,
       loserId: p.loser.fighter_id,
-      winnerSide: toFightStatsSide(p.winner, roundsByStatsId.get(p.winner.id) ?? []),
-      loserSide: toFightStatsSide(p.loser, roundsByStatsId.get(p.loser.id) ?? []),
+      winnerSide: toFightStatsSide(p.winner, roundsByStatsId.get(p.winner.id) ?? [], bonuses, legacyDominance),
+      loserSide: toFightStatsSide(p.loser, roundsByStatsId.get(p.loser.id) ?? [], bonuses, legacyDominance),
     }));
 
     const { history } = simulateDivisionRatings(fights);
