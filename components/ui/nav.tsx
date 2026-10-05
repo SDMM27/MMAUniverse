@@ -18,6 +18,7 @@ const links = [
   { href: '/', label: 'Accueil' },
   { href: '/classement-calcule', label: 'FightScore' },
   { href: '/simulateur', label: 'Simulateur' },
+  { href: '/analyses', label: 'Analyses' },
   { href: '/actualites', label: 'Actualités' },
   { href: '/events', label: 'Événements' },
   { href: '/fighters', label: 'Fighters' },
