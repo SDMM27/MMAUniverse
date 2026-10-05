@@ -26,6 +26,9 @@ export type FightStatsSide = {
   sigStrikesLandedTotal: number;
   controlTimeSecondsTotal: number | null;
   rounds: RoundStatsSide[]; // one entry per round actually fought, in order
+  // UFC bonuses the fight earned (fight-level: read off the winner's side).
+  bonusFightOfTheNight?: boolean;
+  bonusPerformanceOfTheNight?: boolean; // Performance, and the legacy KO / Submission of the Night
 };
 
 export type DominanceResult = { score: number; estimated: boolean };
@@ -35,16 +38,44 @@ const WEIGHT_ROUNDS_WON_SHARE = 0.35;
 const WEIGHT_STRIKE_DIFFERENTIAL = 0.2;
 const WEIGHT_CONTROL_DIFFERENTIAL = 0.15;
 
+// Judges' verdict on a decision (UFCStats: "Decision - Split" etc.): a split or
+// majority decision is a win the officials themselves saw as close, whatever
+// our stat-based round estimate says. Subtracted from the dominance of the win.
+const DECISION_PENALTY_SPLIT = 0.1;
+const DECISION_PENALTY_MAJORITY = 0.05;
+
+// UFC's own bonuses, as a judgment of quality that raw stats can't capture: a
+// Performance of the Night is a win the UFC singled out as outstanding, a
+// Fight of the Night one that was won against a game opponent in a great fight.
+const BONUS_PERFORMANCE = 0.1;
+const BONUS_FIGHT = 0.05;
+
 // A round tie within this relative margin splits 0.5/0.5 rather than being
 // awarded outright -- two fighters producing near-identical output in a
 // round shouldn't have one of them "win" it on a rounding accident.
 const ROUND_TIE_MARGIN = 0.05;
+
+function clamp01(value: number): number {
+  return Math.min(1, Math.max(0, value));
+}
 
 function computeBonusFinish(method: string): number {
   const category = normalizeMethodCategory(method);
   if (category === 'ko_tko') return 1.0;
   if (category === 'submission') return 0.9;
   return 0; // decision, and 'other' (DQ / unrecognized) -- no finish credit
+}
+
+function computeDecisionPenalty(method: string): number {
+  const normalized = method.trim().toLowerCase();
+  if (!normalized.startsWith('decision')) return 0;
+  if (normalized.includes('split')) return DECISION_PENALTY_SPLIT;
+  if (normalized.includes('majority')) return DECISION_PENALTY_MAJORITY;
+  return 0; // unanimous, or an unspecified decision
+}
+
+function computeBonusCredit(winner: FightStatsSide): number {
+  return (winner.bonusPerformanceOfTheNight ? BONUS_PERFORMANCE : 0) + (winner.bonusFightOfTheNight ? BONUS_FIGHT : 0);
 }
 
 function computeRoundScore(round: RoundStatsSide): number {
@@ -73,7 +104,8 @@ function shareOf(winnerValue: number, loserValue: number): number {
  * combat not yet covered by the UFCStats round-by-round backfill, or a
  * matching anomaly) -- falls back to method alone: bonus_finish for a
  * finish, a flat 0.4 for a decision (the pre-round-by-round behavior),
- * since there's nothing else to go on.
+ * since there's nothing else to go on. Both paths then apply the decision-type
+ * penalty (split / majority) and the UFC bonus credit (Performance / Fight of the Night).
  */
 export function computeDominanceScore(winner: FightStatsSide, loser: FightStatsSide): DominanceResult {
   const bonusFinish = computeBonusFinish(winner.method);
@@ -81,7 +113,8 @@ export function computeDominanceScore(winner: FightStatsSide, loser: FightStatsS
 
   if (roundsFought === 0) {
     const category = normalizeMethodCategory(winner.method);
-    return { score: category === 'decision' ? 0.4 : bonusFinish, estimated: true };
+    const base = category === 'decision' ? 0.4 : bonusFinish;
+    return { score: clamp01(base - computeDecisionPenalty(winner.method) + computeBonusCredit(winner)), estimated: true };
   }
 
   let roundsWonByWinner = 0;
@@ -102,5 +135,5 @@ export function computeDominanceScore(winner: FightStatsSide, loser: FightStatsS
     strikeDifferential * WEIGHT_STRIKE_DIFFERENTIAL +
     controlDifferential * WEIGHT_CONTROL_DIFFERENTIAL;
 
-  return { score: Math.min(1, Math.max(0, score)), estimated: false };
+  return { score: clamp01(score - computeDecisionPenalty(winner.method) + computeBonusCredit(winner)), estimated: false };
 }

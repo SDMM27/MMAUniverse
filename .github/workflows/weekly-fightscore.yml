@@ -46,11 +46,16 @@ jobs:
       - name: Scrape UFC fight-level stats from UFCStats.com
         run: npx tsx data/scrapers/scrape-ufcstats.ts
 
+      # Fight / Performance of the Night icons: first run walks every event page, later runs only
+      # the unseen events plus the last 60 days (bonuses are announced after the card).
+      - name: Scrape UFC bonuses from UFCStats.com
+        run: npx tsx data/scrapers/scrape-ufcstats-bonuses.ts
+
       - name: Commit refreshed UFCStats data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/scraped/ufcstats-fight-stats.json
+          git add data/scraped/ufcstats-fight-stats.json data/scraped/ufcstats-bonuses.json
           git diff --cached --quiet || git commit -m "chore(scrape): weekly UFCStats refresh"
           git push
 

@@ -139,6 +139,34 @@ export function parseEventFightUrls($: CheerioAPI): string[] {
   return Array.from(urls);
 }
 
+export interface UfcStatsFightBonuses {
+  fightOfTheNight: boolean;
+  performanceOfTheNight: boolean; // Performance, and the legacy KO / Submission of the Night
+}
+
+/**
+ * The UFC bonuses each fight of an event page earned, keyed by fight-details
+ * URL. UFCStats marks them with an icon in the fight's row (fight.png = Fight
+ * of the Night, perf.png = Performance, and sub.png / ko.png = the old
+ * Submission / KO of the Night); belt.png (title fight) is not a bonus. Only
+ * fights that earned one are in the map.
+ */
+export function parseEventBonuses($: CheerioAPI): Map<string, UfcStatsFightBonuses> {
+  const bonuses = new Map<string, UfcStatsFightBonuses>();
+  $('tr.b-fight-details__table-row[data-link]').each((_, row) => {
+    const url = $(row).attr('data-link');
+    if (!url) return;
+    const icons = $(row)
+      .find('img')
+      .map((__, img) => ($(img).attr('src') ?? '').split('/').pop())
+      .get();
+    const fightOfTheNight = icons.includes('fight.png');
+    const performanceOfTheNight = icons.some((icon) => icon === 'perf.png' || icon === 'sub.png' || icon === 'ko.png');
+    if (fightOfTheNight || performanceOfTheNight) bonuses.set(url, { fightOfTheNight, performanceOfTheNight });
+  });
+  return bonuses;
+}
+
 function parseLandedAttempted(text: string): UfcStatsLandedAttempted {
   const match = text.match(/(\d+)\s+of\s+(\d+)/);
   return match ? { landed: Number(match[1]), attempted: Number(match[2]) } : { landed: 0, attempted: 0 };

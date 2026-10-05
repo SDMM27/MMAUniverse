@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as cheerio from 'cheerio';
-import { parseEventMeta, parseCompletedEvents, parseCompletedEventUrls, parseEventFightUrls, parseFightDetails, parseFightMeta, parseFighterPhysique, parseFighterBirthDate, imperialToCm } from './parse-ufcstats';
+import { parseEventMeta, parseCompletedEvents, parseCompletedEventUrls, parseEventFightUrls, parseEventBonuses, parseFightDetails, parseFightMeta, parseFighterPhysique, parseFighterBirthDate, imperialToCm } from './parse-ufcstats';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FIXTURES_DIR = path.join(__dirname, '__fixtures__');
@@ -190,4 +190,13 @@ test('parseFighterBirthDate reads the abbreviated-month DOB off the fighter-deta
 test('parseFighterBirthDate returns null for a DOB UFCStats prints as --', () => {
   const $ = cheerio.load('<div class="b-list__info-box_style_small-width"><ul><li><i>DOB:</i> --</li></ul></div>');
   assert.equal(parseFighterBirthDate($), null);
+});
+
+test('parseEventBonuses reads the bonus icons of each fight row, ignoring the legend and the title-belt icon', () => {
+  const $ = loadFixture('ufcstats-event-details.html');
+  const bonuses = parseEventBonuses($);
+
+  assert.equal(bonuses.size, 1);
+  assert.deepEqual(Array.from(bonuses.values())[0], { fightOfTheNight: false, performanceOfTheNight: true });
+  assert.ok(Array.from(bonuses.keys())[0].startsWith('http://ufcstats.com/fight-details/'));
 });

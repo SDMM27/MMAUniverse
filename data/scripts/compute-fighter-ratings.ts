@@ -169,6 +169,8 @@ type StatsRow = {
   finish_round: number | null;
   finish_time: string | null;
   scheduled_rounds: number | null;
+  bonus_fotn: boolean;
+  bonus_potn: boolean;
   sig_strikes_landed: number;
   control_time_seconds: number | null;
   knockdowns: number;
@@ -209,6 +211,8 @@ function toFightStatsSide(row: StatsRow, rounds: RoundRow[]): FightStatsSide {
     sigStrikesLandedTotal: row.sig_strikes_landed,
     controlTimeSecondsTotal: row.control_time_seconds,
     rounds: toRoundSide(rounds),
+    bonusFightOfTheNight: row.bonus_fotn,
+    bonusPerformanceOfTheNight: row.bonus_potn,
   };
 }
 
@@ -238,7 +242,7 @@ async function main() {
   const statsRows = (await sql`
     SELECT ffs.id, ffs.fighter_id, f.name AS fighter_name, ffs.opponent_name, ffs.event_date,
            ffs.ufcstats_fight_url, ffs.result, ffs.weight_class, ffs.is_title_fight, ffs.method,
-           ffs.finish_round, ffs.finish_time, ffs.scheduled_rounds, ffs.knockdowns,
+           ffs.finish_round, ffs.finish_time, ffs.scheduled_rounds, ffs.bonus_fotn, ffs.bonus_potn, ffs.knockdowns,
            ffs.sig_strikes_landed, ffs.control_time_seconds,
            ffs.sig_strikes_head_attempted, ffs.sig_strikes_body_attempted, ffs.sig_strikes_leg_attempted,
            ffs.sig_strikes_distance_attempted, ffs.sig_strikes_clinch_attempted, ffs.sig_strikes_ground_attempted,

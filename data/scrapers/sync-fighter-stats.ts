@@ -13,6 +13,7 @@ import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import type { UfcStatsFightRecord } from './shared/ufcstats-types';
 import { matchFighterByName } from './ranking-name-match';
+import { loadUfcStatsBonuses } from './shared/ufcstats-bonuses';
 
 const UFC_ORGANIZATION_ID = 1;
 
@@ -93,6 +94,9 @@ async function ensureSchema() {
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS finish_round INT;`;
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS finish_time VARCHAR(10);`;
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS scheduled_rounds INT;`;
+  // Added 2026-09-29: UFC Fight / Performance of the Night, see scrape-ufcstats-bonuses.ts.
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS bonus_fotn BOOLEAN NOT NULL DEFAULT false;`;
+  await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS bonus_potn BOOLEAN NOT NULL DEFAULT false;`;
   await sql`
     CREATE TABLE IF NOT EXISTS fighter_fight_round_stats (
       id SERIAL PRIMARY KEY,
@@ -324,7 +328,21 @@ async function main() {
     `;
   }
 
-  console.log(`Done. ${ufcstatsUrlByFighterId.size} fighter row(s) checked for a ufcstats_url, ${matchedByKey.size} stats row(s) upserted, ${roundsByKey.size} round-stat row(s) upserted, ${unmatched} record(s) skipped (fighter not found in UFC org).`);
+  // Bonuses are fight-level (both fighters' rows carry them; the rating reads the winner's), so
+  // they're matched to rows by fight URL. The file only lists fights that earned one, so a fight
+  // whose bonus disappeared is reset by first clearing every walked fight's flags.
+  const bonuses = loadUfcStatsBonuses().fights;
+  const bonusUrls = Object.keys(bonuses);
+  await sql`UPDATE fighter_fight_stats SET bonus_fotn = false, bonus_potn = false WHERE bonus_fotn OR bonus_potn`;
+  for (const batch of chunk(bonusUrls, BATCH_SIZE)) {
+    await sql`
+      UPDATE fighter_fight_stats f SET bonus_fotn = u.fotn, bonus_potn = u.potn
+      FROM UNNEST(${batch}::text[], ${batch.map((url) => bonuses[url].fightOfTheNight)}::boolean[], ${batch.map((url) => bonuses[url].performanceOfTheNight)}::boolean[]) AS u(url, fotn, potn)
+      WHERE f.ufcstats_fight_url = u.url
+    `;
+  }
+
+  console.log(`Done. ${bonusUrls.length} fight(s) with a bonus applied, ${ufcstatsUrlByFighterId.size} fighter row(s) checked for a ufcstats_url, ${matchedByKey.size} stats row(s) upserted, ${roundsByKey.size} round-stat row(s) upserted, ${unmatched} record(s) skipped (fighter not found in UFC org).`);
 }
 
 main().catch((error) => {
