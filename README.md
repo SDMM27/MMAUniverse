@@ -181,7 +181,7 @@ Chaque fonctionnalité importante a d'abord fait l'objet d'une spec et d'un plan
 
 ## Lancer le projet
 
-Prérequis : Node 20 et une base Postgres (Neon).
+Prérequis : Node 24 et une base Postgres (Neon).
 
 ```bash
 npm install
