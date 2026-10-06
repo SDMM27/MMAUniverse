@@ -69827,6 +69827,64 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Bilal Labid",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "3-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Bilal-Labid-432494",
+      "fight_history": [
+        {
+          "opponent_name": "Georges Ngoma",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Georges-Ngoma-414199",
+          "event_name": "Kongs Fighting Championship - Kongs FC Contender",
+          "event_sherdog_url": "https://www.sherdog.com/events/Kongs-Fighting-Championship-Kongs-FC-Contender-108866",
+          "date": "2025-07-05",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Naoufel Louati",
+          "round": 2,
+          "time": "1:22"
+        },
+        {
+          "opponent_name": "Carlos Saborio",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlos-Saborio-421869",
+          "event_name": "Kongs Fighting Championship - Kongs FC 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Kongs-Fighting-Championship-Kongs-FC-2-101909",
+          "date": "2024-03-30",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Mohamed Khamallah",
+          "round": 1,
+          "time": "4:39"
+        },
+        {
+          "opponent_name": "Yassin Nasri",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yassin-Nasri-274921",
+          "event_name": "Kongs Fighting Championship - Kongs FC 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Kongs-Fighting-Championship-Kongs-FC-1-98258",
+          "date": "2023-07-01",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamed Khamallah",
+          "round": 1,
+          "time": "4:25"
+        },
+        {
+          "opponent_name": "Julien Sault",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Julien-Sault-321887",
+          "event_name": "KOC 15 - Knock Out Championship 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/KOC-15-Knock-Out-Championship-15-99174",
+          "date": "2022-10-08",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -75851,6 +75909,19 @@
     },
     {
       "event_name": "HXMMA 48 - Hexagone MMA 48",
+      "fighter1_name": "Paul Denis Navero",
+      "fighter2_name": "Bilal Labid",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 48 - Hexagone MMA 48",
       "fighter1_name": "Rayan Balbali",
       "fighter2_name": "Youssouf Ouattara",
       "fight_finished": false,
@@ -75890,6 +75961,19 @@
     },
     {
       "event_name": "HXMMA 49 - Hexagone MMA 49",
+      "fighter1_name": "Anthony Morel",
+      "fighter2_name": "Tamerlan Albiekov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "HXMMA 49 - Hexagone MMA 49",
       "fighter1_name": "Oceane Samson",
       "fighter2_name": "Lindsey Payne",
       "fight_finished": false,
@@ -75898,6 +75982,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 49 - Hexagone MMA 49",
+      "fighter1_name": "Olivier Fleurmon",
+      "fighter2_name": "Mathieu Szymborski",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     }

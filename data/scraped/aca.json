@@ -1709,6 +1709,13 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896767"
     },
     {
+      "name": "ACA 209 - Frolov vs. Odilov",
+      "date": "2026-10-31",
+      "start_time": "2026-10-31T00:00:00+00:00",
+      "event_location": "Dushanbe, Tajikistan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896159"
+    },
+    {
       "name": "ACA YE 69 - ACA Young Eagles 69",
       "date": "2026-10-08",
       "start_time": "2026-10-08T00:00:00+00:00",
@@ -1717,8 +1724,8 @@
     },
     {
       "name": "ACA 209 - Frolov vs. Odilov",
-      "date": "2026-10-31",
-      "start_time": "2026-10-31T00:00:00+00:00",
+      "date": "2026-10-30",
+      "start_time": "2026-10-30T00:00:00+00:00",
       "event_location": "Dushanbe, Tajikistan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896159"
     },
@@ -428013,6 +428020,58 @@
       "is_title_fight": false
     },
     {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Faridun Odilov",
+      "fighter2_name": "Artem Frolov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Loik Radzhabov",
+      "fighter2_name": "Nikolay Aleksakhin",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Alexey Makhno",
+      "fighter2_name": "Kuat Khamitov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Viskhan Kadirov",
+      "fighter2_name": "Bekhruz Zugurov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "ACA YE 69 - ACA Young Eagles 69",
       "fighter1_name": "Aslan Shogenov",
       "fighter2_name": "Turpal-Ali Edilov",
@@ -428178,6 +428237,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Emomakhdi Orzuzoda",
+      "fighter2_name": "Kholmurod Nurmatov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
