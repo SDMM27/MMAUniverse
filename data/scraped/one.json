@@ -5419,6 +5419,276 @@
           "time": "N/A"
         }
       ]
+    },
+    {
+      "name": "Shozo Isojima",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1759415237Shozo_Isojima-1200x1165-1-600x583.png",
+      "weight_class": "Welterweight",
+      "record": "7-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Shozo-Isojima-432975",
+      "fight_history": [
+        {
+          "opponent_name": "Eduard Folayang",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eduard-Folayang-40882",
+          "event_name": "One Championship - One Friday Fights 161",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-161-113003",
+          "date": "2026-07-10",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "4:29"
+        },
+        {
+          "opponent_name": "Adrian Lee",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adrian-Lee-448037",
+          "event_name": "One Championship - One on Prime Video 40",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-40-110938",
+          "date": "2026-02-13",
+          "result": "loss",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "2:56"
+        },
+        {
+          "opponent_name": "Tye Ruotolo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tye-Ruotolo-425139",
+          "event_name": "One Championship - One 173",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-173-108500",
+          "date": "2025-11-16",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "2:26"
+        },
+        {
+          "opponent_name": "Nicolas Vigna",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolas-Vigna-235251",
+          "event_name": "One Championship - One on Prime Video 36",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-36-104924",
+          "date": "2025-10-03",
+          "result": "win",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "4:19"
+        },
+        {
+          "opponent_name": "Kenta Hiraki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kenta-Hiraki-400698",
+          "event_name": "Gladiator - Gladiator 028 in Osaka",
+          "event_sherdog_url": "https://www.sherdog.com/events/Gladiator-Gladiator-028-in-Osaka-104520",
+          "date": "2024-10-06",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Keiji Sugimura",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Tatsuya Tomozane",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tatsuya-Tomozane-85901",
+          "event_name": "Gladiator - Gladiator 027 in Osaka",
+          "event_sherdog_url": "https://www.sherdog.com/events/Gladiator-Gladiator-027-in-Osaka-102618",
+          "date": "2024-07-07",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Shinji Shimamura",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Gensuke Toichi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gensuke-Toichi-448314",
+          "event_name": "Gladiator - Gladiator 026 in Osaka",
+          "event_sherdog_url": "https://www.sherdog.com/events/Gladiator-Gladiator-026-in-Osaka-102265",
+          "date": "2024-05-05",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Keiji Sugimura",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Keishi Yagi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Keishi-Yagi-256493",
+          "event_name": "Gladiator - Gladiator 025 in Osaka",
+          "event_sherdog_url": "https://www.sherdog.com/events/Gladiator-Gladiator-025-in-Osaka-101522",
+          "date": "2024-03-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Shinji Shimamura",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Shou Akioka",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shou-Akioka-382822",
+          "event_name": "Gladiator - Gladiator 023 in Osaka",
+          "event_sherdog_url": "https://www.sherdog.com/events/Gladiator-Gladiator-023-in-Osaka-98843",
+          "date": "2023-09-30",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Keiji Sugimura",
+          "round": 1,
+          "time": "4:12"
+        }
+      ]
+    },
+    {
+      "name": "Kouta Abe",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1775822747Kota_Abe-Hero-1200x1165-1-600x583.png",
+      "weight_class": "Welterweight",
+      "record": "6-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Kouta-Abe-380887",
+      "fight_history": [
+        {
+          "opponent_name": "Hero Marco Manguray",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hero-Marco-Manguray-413250",
+          "event_name": "One Championship - One Friday Fights 150",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-150-112342",
+          "date": "2026-04-10",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "1:47"
+        },
+        {
+          "opponent_name": "Sione Veikoso",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sione-Veikoso-351955",
+          "event_name": "Tribe Tokyo Fight - TTF Challenge 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/Tribe-Tokyo-Fight-TTF-Challenge-11-108923",
+          "date": "2025-09-14",
+          "result": "win",
+          "method": "TKO (Head Kick and Punches)",
+          "referee": "Kosuke Umeda",
+          "round": 3,
+          "time": "0:46"
+        },
+        {
+          "opponent_name": "Kohei Kadono",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kohei-Kadono-417612",
+          "event_name": "Deep - Osaka Impact 2024 5th Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Osaka-Impact-2024-5th-Round-105630",
+          "date": "2024-12-22",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Minoru Toyonaga",
+          "round": 2,
+          "time": "3:51"
+        },
+        {
+          "opponent_name": "Chang Woo Ma",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chang-Woo-Ma-430772",
+          "event_name": "AFC 34 / Heat 55 - Angel's Fighting Championship 34 / Heat 55",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFC-34-Heat-55-Angels-Fighting-Championship-34-Heat-55-104391",
+          "date": "2024-10-26",
+          "result": "win",
+          "method": "Technical Submission (Rear-Naked Choke)",
+          "referee": "Yoshinori Umeki",
+          "round": 1,
+          "time": "2:43"
+        },
+        {
+          "opponent_name": "Tsubasa Morii",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tsubasa-Morii-397917",
+          "event_name": "Gladiator - Gladiator 023 in Osaka",
+          "event_sherdog_url": "https://www.sherdog.com/events/Gladiator-Gladiator-023-in-Osaka-98843",
+          "date": "2023-09-30",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Shinji Shimamura",
+          "round": 2,
+          "time": "2:46"
+        },
+        {
+          "opponent_name": "Kengo Hashimoto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kengo-Hashimoto-422162",
+          "event_name": "Gladiator - Gladiator 021 in Osaka",
+          "event_sherdog_url": "https://www.sherdog.com/events/Gladiator-Gladiator-021-in-Osaka-96709",
+          "date": "2023-03-26",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Shinji Shimamura",
+          "round": 1,
+          "time": "0:13"
+        },
+        {
+          "opponent_name": "Toya Mochizuki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Toya-Mochizuki-220803",
+          "event_name": "Fighting Nexus - Sublime Guys Fight in Kawagoe 2022",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Sublime-Guys-Fight-in-Kawagoe-2022-94662",
+          "date": "2022-10-02",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Akira Yamazaki",
+          "round": 1,
+          "time": "2:10"
+        }
+      ]
+    },
+    {
+      "name": "Yu Takeuchi",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240919103813_Yu_Takeuchi.JPG",
+      "weight_class": "Flyweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Yu-Takeuchi-457822",
+      "fight_history": [
+        {
+          "opponent_name": "Junya Murata",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Junya-Murata-229091",
+          "event_name": "Fighting Nexus - Vol. 39",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-39-107507",
+          "date": "2025-05-11",
+          "result": "win",
+          "method": "KO (Slam)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "1:50"
+        },
+        {
+          "opponent_name": "Masamune Shimada",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Masamune-Shimada-92085",
+          "event_name": "Fighting Nexus - Vol. 38",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-38-106725",
+          "date": "2025-03-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Hidenobu Koike",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ikuya Akabane",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ikuya-Akabane-229059",
+          "event_name": "Fighting Nexus - Nexus Mania 2024",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Nexus-Mania-2024-105619",
+          "date": "2024-12-22",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Yuto Kaneko",
+          "round": 1,
+          "time": "2:56"
+        },
+        {
+          "opponent_name": "Taiki Higuma",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taiki-Higuma-424072",
+          "event_name": "Fighting Nexus - Bayside Battle in Yokosuka 2024",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Bayside-Battle-in-Yokosuka-2024-104133",
+          "date": "2024-10-20",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Kosuke Umeda",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -5654,6 +5924,32 @@
       "time": "",
       "weight_class": "Strawweight",
       "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - ONE Samurai 4",
+      "fighter1_name": "Shozo Isojima",
+      "fighter2_name": "Kouta Abe",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - ONE Samurai 4",
+      "fighter1_name": "Yu Takeuchi",
+      "fighter2_name": "Ryoto Nishiyama",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
       "is_title_fight": false
     },
     {

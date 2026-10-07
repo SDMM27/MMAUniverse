@@ -4432,6 +4432,40 @@
           "time": "3:33"
         }
       ]
+    },
+    {
+      "name": "Jafar Yousifi",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Jafar-Yousifi-449849",
+      "fight_history": [
+        {
+          "opponent_name": "Bajad Damarkani",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bajad-Damarkani-423722",
+          "event_name": "FFH 3 - Fight For Hope",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFH-3-Fight-For-Hope-113759",
+          "date": "2026-08-22",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Brandon Contreras",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brandon-Contreras-439841",
+          "event_name": "Allstars Fight Night - AFN 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/Allstars-Fight-Night-AFN-10-106047",
+          "date": "2025-06-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Rebin Saber",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -9684,6 +9718,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 44 - Younousov vs. Nam",
+      "fighter1_name": "Benoit Prigent",
+      "fighter2_name": "Jafar Yousifi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },

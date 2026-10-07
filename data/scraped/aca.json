@@ -1709,13 +1709,6 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896767"
     },
     {
-      "name": "ACA 209 - Frolov vs. Odilov",
-      "date": "2026-10-31",
-      "start_time": "2026-10-31T00:00:00+00:00",
-      "event_location": "Dushanbe, Tajikistan",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896159"
-    },
-    {
       "name": "ACA YE 69 - ACA Young Eagles 69",
       "date": "2026-10-08",
       "start_time": "2026-10-08T00:00:00+00:00",
@@ -380871,6 +380864,64 @@
           "time": "0:28"
         }
       ]
+    },
+    {
+      "name": "Mustafa Ashurzoda",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Mustafa-Ashurzoda-411792",
+      "fight_history": [
+        {
+          "opponent_name": "Salimzhan Abylaikhan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salimzhan-Abylaikhan-471290",
+          "event_name": "Alash Pride 111 - Alash Pride FC",
+          "event_sherdog_url": "https://www.sherdog.com/events/Alash-Pride-111-Alash-Pride-FC-109398",
+          "date": "2025-08-29",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Almanbek Tagaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Almanbek-Tagaev-456970",
+          "event_name": "Fight Nights - RDD Series 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fight-Nights-RDD-Series-2-105965",
+          "date": "2024-11-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "David Mikropulo",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Zhamshidbek Marufzhonov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zhamshidbek-Marufzhonov-413528",
+          "event_name": "Colosseum MMA - Battle of Champions 31",
+          "event_sherdog_url": "https://www.sherdog.com/events/Colosseum-MMA-Battle-of-Champions-31-94902",
+          "date": "2022-08-28",
+          "result": "win",
+          "method": "TKO (Arm Injury)",
+          "referee": "Martun Mezhlumyan",
+          "round": 1,
+          "time": "0:30"
+        },
+        {
+          "opponent_name": "Amriddin Nasriddinov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amriddin-Nasriddinov-381308",
+          "event_name": "Colosseum MMA - Battle of Champions 30",
+          "event_sherdog_url": "https://www.sherdog.com/events/Colosseum-MMA-Battle-of-Champions-30-94502",
+          "date": "2022-07-31",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "0:56"
+        }
+      ]
     }
   ],
   "fights": [
@@ -428020,58 +428071,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "ACA 209 - Frolov vs. Odilov",
-      "fighter1_name": "Faridun Odilov",
-      "fighter2_name": "Artem Frolov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "ACA 209 - Frolov vs. Odilov",
-      "fighter1_name": "Loik Radzhabov",
-      "fighter2_name": "Nikolay Aleksakhin",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "ACA 209 - Frolov vs. Odilov",
-      "fighter1_name": "Alexey Makhno",
-      "fighter2_name": "Kuat Khamitov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "ACA 209 - Frolov vs. Odilov",
-      "fighter1_name": "Viskhan Kadirov",
-      "fighter2_name": "Bekhruz Zugurov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "ACA YE 69 - ACA Young Eagles 69",
       "fighter1_name": "Aslan Shogenov",
       "fighter2_name": "Turpal-Ali Edilov",
@@ -428250,6 +428249,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Mustafa Ashurzoda",
+      "fighter2_name": "Akhmed Khamzaev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
