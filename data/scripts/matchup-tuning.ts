@@ -10,6 +10,7 @@ import { neon } from '@neondatabase/serverless';
 import { loadData, loadEnvLocal, toCareerInputs } from './tuning-data';
 import type { CareerFightInput, CareerHistoryEntry, CareerNoResultInput } from '../lib/rating/simulate-career';
 import { predictFight } from '../lib/rating/simulate-fight';
+import type { GlickoRating } from '../lib/rating/glicko-rating';
 import {
   MATCHUP_SHAPE,
   MATCHUP_TERMS,
@@ -45,7 +46,7 @@ export type StatRow = {
 
 // One decided fight, everything but the rating: that depends on the Glicko params replayed.
 export type MatchupContext = { fightUrl: string; date: string; idA: number; idB: number; a: MatchupProfile; b: MatchupProfile; aWon: boolean };
-export type Sample = { date: string; ratingWinA: number; a: MatchupProfile; b: MatchupProfile; aWon: boolean };
+export type Sample = { date: string; ratingWinA: number; ratingA: GlickoRating; ratingB: GlickoRating; a: MatchupProfile; b: MatchupProfile; aWon: boolean };
 
 const yearsBetween = (fromIso: string, toIso: string) => (Date.parse(toIso) - Date.parse(fromIso)) / (365.25 * 86400e3);
 const monthsBetween = (fromIso: string, toIso: string) => (Date.parse(toIso) - Date.parse(fromIso)) / (30.44 * 86400e3);
@@ -126,7 +127,7 @@ export function attachRatings(contexts: MatchupContext[], history: CareerHistory
     const e = byUrl.get(c.fightUrl);
     if (!e) return [];
     const [ra, rb] = c.aWon ? [e.winnerBefore, e.loserBefore] : [e.loserBefore, e.winnerBefore];
-    return [{ date: c.date, ratingWinA: predictFight(ra, rb).winA, a: c.a, b: c.b, aWon: c.aWon }];
+    return [{ date: c.date, ratingWinA: predictFight(ra, rb).winA, ratingA: ra, ratingB: rb, a: c.a, b: c.b, aWon: c.aWon }];
   });
 }
 
