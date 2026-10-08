@@ -1,0 +1,160 @@
+{
+  "tunedAt": "2026-10-08T14:45:53.465Z",
+  "testFromDate": "2023-06-03",
+  "heldOut": {
+    "picked": {
+      "k": 96,
+      "scale": 1.2,
+      "unknown": "base"
+    },
+    "today": {
+      "simulator": {
+        "logLoss": 0.6318586206016675,
+        "accuracy": 0.6352729454109178
+      },
+      "debuts": {
+        "logLoss": 0.6512020922189221,
+        "accuracy": 0.584375
+      },
+      "glickoAlone": {
+        "logLoss": 0.671120756755147,
+        "accuracy": 0.5911817636472706
+      },
+      "count": 1667,
+      "debutCount": 320,
+      "ratingWeight": 0.5384500057812188
+    },
+    "withPrior": {
+      "simulator": {
+        "logLoss": 0.6264211699347607,
+        "accuracy": 0.6502699460107978
+      },
+      "debuts": {
+        "logLoss": 0.6320621973787751,
+        "accuracy": 0.646875
+      },
+      "glickoAlone": {
+        "logLoss": 0.6581159215003597,
+        "accuracy": 0.5950809838032394
+      },
+      "count": 1667,
+      "debutCount": 320,
+      "ratingWeight": 0.6538094283723751
+    }
+  },
+  "windows": [
+    {
+      "from": "2017-01-01",
+      "to": "2019-01-01",
+      "setting": {
+        "k": 96,
+        "scale": 1.2,
+        "unknown": "base"
+      },
+      "count": 887,
+      "debutCount": 206,
+      "today": {
+        "logLoss": 0.6491599933262084,
+        "accuracy": 0.6200676437429538
+      },
+      "withPrior": {
+        "logLoss": 0.6449519867934747,
+        "accuracy": 0.6099210822998873
+      },
+      "debutsToday": {
+        "logLoss": 0.647438021473488,
+        "accuracy": 0.6213592233009708
+      },
+      "debutsWithPrior": {
+        "logLoss": 0.6269154705131309,
+        "accuracy": 0.6601941747572816
+      }
+    },
+    {
+      "from": "2019-01-01",
+      "to": "2021-01-01",
+      "setting": {
+        "k": 96,
+        "scale": 1.2,
+        "unknown": "base"
+      },
+      "count": 915,
+      "debutCount": 224,
+      "today": {
+        "logLoss": 0.6678002385117247,
+        "accuracy": 0.5912568306010929
+      },
+      "withPrior": {
+        "logLoss": 0.6574212339949858,
+        "accuracy": 0.6010928961748634
+      },
+      "debutsToday": {
+        "logLoss": 0.6839687218991113,
+        "accuracy": 0.5535714285714286
+      },
+      "debutsWithPrior": {
+        "logLoss": 0.6663841461205574,
+        "accuracy": 0.5758928571428571
+      }
+    },
+    {
+      "from": "2021-01-01",
+      "to": "2023-06-01",
+      "setting": {
+        "k": 96,
+        "scale": 1.2,
+        "unknown": "base"
+      },
+      "count": 1144,
+      "debutCount": 214,
+      "today": {
+        "logLoss": 0.6536904387102308,
+        "accuracy": 0.618006993006993
+      },
+      "withPrior": {
+        "logLoss": 0.6471121351697484,
+        "accuracy": 0.611013986013986
+      },
+      "debutsToday": {
+        "logLoss": 0.6778551766076769,
+        "accuracy": 0.6121495327102804
+      },
+      "debutsWithPrior": {
+        "logLoss": 0.656247050017804,
+        "accuracy": 0.602803738317757
+      }
+    },
+    {
+      "from": "2023-06-01",
+      "to": "9999-12-31",
+      "setting": {
+        "k": 96,
+        "scale": 1.2,
+        "unknown": "base"
+      },
+      "count": 1667,
+      "debutCount": 320,
+      "today": {
+        "logLoss": 0.6318586206016675,
+        "accuracy": 0.6352729454109178
+      },
+      "withPrior": {
+        "logLoss": 0.6264211699347607,
+        "accuracy": 0.6502699460107978
+      },
+      "debutsToday": {
+        "logLoss": 0.6512020922189221,
+        "accuracy": 0.584375
+      },
+      "debutsWithPrior": {
+        "logLoss": 0.6320621973787751,
+        "accuracy": 0.646875
+      }
+    }
+  ],
+  "shipped": {
+    "k": 96,
+    "scale": 1.2,
+    "unknown": "base"
+  }
+}
