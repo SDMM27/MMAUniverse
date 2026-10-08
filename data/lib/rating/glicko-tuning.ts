@@ -20,10 +20,11 @@ export function collectCareerRatingDiffs(
   noResults: CareerNoResultInput[],
   params: GlickoParams,
   testFromDate: string,
+  initialRatingOf?: (fighterId: number, debutDateIso: string) => number,
 ): CareerDiffSplit {
   const split: CareerDiffSplit = { train: [], test: [], testMovers: [] };
   const divisionsSeen = new Map<number, Set<string>>();
-  const { history } = simulateCareerRatings(fights, noResults, params);
+  const { history } = simulateCareerRatings(fights, noResults, params, initialRatingOf);
   for (const entry of history) {
     const x = entry.winnerBefore.rating - entry.loserBefore.rating;
     const mover = [entry.winnerId, entry.loserId].some((id) => Array.from(divisionsSeen.get(id) ?? []).some((d) => d !== entry.division));

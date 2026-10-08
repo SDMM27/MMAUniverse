@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { collectExternalBouts, prospectInitialRating, simulateProspectElo, PROSPECT_ELO_BASE, type ExternalHistoryRow } from './prospect-rating';
+import { collectExternalBouts, prospectInitialRating, prospectInitialRatings, simulateProspectElo, PROSPECT_ELO_BASE, type ExternalHistoryRow } from './prospect-rating';
 
 const row = (owner: string, opponent: string, date: string, result: string, eventName = 'LFA 100'): ExternalHistoryRow => ({ owner, opponent, eventName, date, result });
 
@@ -39,4 +39,13 @@ test('simulateProspectElo is point in time and rewards beating strong opponents'
 test('prospectInitialRating leaves a fighter without known bouts at initialRating', () => {
   assert.equal(prospectInitialRating({ rating: PROSPECT_ELO_BASE, bouts: 0 }, 0.8, 1500), 1500);
   assert.equal(prospectInitialRating({ rating: 1600, bouts: 5 }, 0.5, 1500), 1550);
+});
+
+test('prospectInitialRatings starts a debutant from their Sherdog record, others at initialRating', () => {
+  const rows = [row('pro', 'x', '2019-01-01', 'win'), row('pro', 'y', '2019-06-01', 'win')];
+  const initialRatingOf = prospectInitialRatings(rows, new Map([[1, 'pro'], [2, 'nobody']]), 1500, { k: 32, scale: 1 });
+  assert.ok(initialRatingOf(1, '2020-01-01') > 1500);
+  assert.equal(initialRatingOf(1, '2018-01-01'), 1500); // before any of their bouts
+  assert.equal(initialRatingOf(2, '2020-01-01'), 1500);
+  assert.equal(initialRatingOf(3, '2020-01-01'), 1500); // no Sherdog URL
 });
