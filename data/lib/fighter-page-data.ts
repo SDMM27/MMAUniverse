@@ -1,5 +1,6 @@
 import { cache } from 'react';
-import { fetchFighterById, fetchFighterRatingsByFighterId, resolveFighterIds } from '@/data/lib/data';
+import { fetchFighterById, fetchFighterRatingsByFighterId } from '@/data/lib/data';
+import { legacyRedirectSlug } from '@/data/lib/fighter-redirect';
 import { fetchFighterBySlug } from '@/data/lib/fighter-slug-data';
 import { isNumericSlug, slugify } from '@/data/lib/slug';
 
@@ -42,14 +43,8 @@ export const resolveFighterRoute = cache(async (segment: string): Promise<Fighte
     if (raw.length > MAX_ID_DIGITS) return { kind: 'notFound' }; // would overflow the INT id column
     const fighter = await fetchFighterById(raw);
     if (!fighter) return { kind: 'notFound' };
-    const slug = slugify(fighter.name);
-    if (slug && !isNumericSlug(slug)) {
-      const target = await fetchFighterBySlug(slug);
-      if (target) {
-        const sameFighter = target.id === fighter.id || (await resolveFighterIds(String(fighter.id))).includes(target.id);
-        if (sameFighter) return { kind: 'redirect', to: `/fighters/${slug}` };
-      }
-    }
+    const slug = await legacyRedirectSlug(fighter);
+    if (slug) return { kind: 'redirect', to: `/fighters/${slug}` };
     return { kind: 'found', fighter, canonicalPath: `/fighters/${fighter.id}` };
   }
 
