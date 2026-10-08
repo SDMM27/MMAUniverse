@@ -3,6 +3,7 @@ import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { FighterRatingWithFighter, FightScoreSummary } from '@/data/lib/definitions';
 import { formatScore, formatUpdatedAt, StreakBadge } from './fightscore-parts';
+import { fighterHref } from '@/data/lib/slug';
 
 // The homepage's opening section: FightScore is the site's flagship feature
 // (see docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md),
@@ -65,7 +66,7 @@ export default function FightScoreHero({ leader, summary }: { leader: FighterRat
 
         {leader && (
           <Link
-            href={`/fighters/${leader.fighter_id}`}
+            href={fighterHref({ id: leader.fighter_id, name: leader.fighter_name })}
             className="group relative mx-auto block aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-base-border transition-colors hover:border-accent"
           >
             <CoverImage

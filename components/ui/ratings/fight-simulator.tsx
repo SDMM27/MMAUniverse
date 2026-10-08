@@ -9,6 +9,7 @@ import { SimulatorFighter } from '@/data/lib/definitions';
 import type { MainEventPrefill } from '@/data/lib/simulator-data';
 import { buildSimulatorPath } from '@/data/lib/simulator-params';
 import { predictFight } from '@/data/lib/rating/simulate-fight';
+import { fighterHref } from '@/data/lib/slug';
 import { FINISH_METHODS, contextMix, predictOutcomes, type FinishMethod } from '@/data/lib/rating/fight-outcome';
 import { FIGHT_OUTCOME_MODEL } from '@/data/lib/rating/fight-outcome-model';
 import { adjustForAge, type AgeAdjustedPrediction } from '@/data/lib/rating/age-adjustment';
@@ -51,7 +52,7 @@ function FighterPicker({
         <CoverImage src={selected.fighter_image_url} alt={selected.fighter_name} className="h-16 w-16 shrink-0 rounded-full" sizes="64px" objectPosition="top" />
         <div className="min-w-0 flex-1">
           <p className="font-display text-xs uppercase tracking-widest text-ink-secondary">{label}</p>
-          <Link href={`/fighters/${selected.fighter_id}`} className="flex items-center gap-2 truncate text-lg text-ink-primary hover:text-accent">
+          <Link href={fighterHref({ id: selected.fighter_id, name: selected.fighter_name })} className="flex items-center gap-2 truncate text-lg text-ink-primary hover:text-accent">
             <CountryFlag code={selected.fighter_nationality} className="shrink-0 text-sm" />
             <span className="truncate">{selected.fighter_name}</span>
           </Link>
