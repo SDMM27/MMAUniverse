@@ -21,7 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_GLICKO_PARAMS } from '../lib/rating/glicko-rating';
 import { simulateCareerRatings } from '../lib/rating/simulate-career';
-import { collectExternalBouts, prospectInitialRating, simulateProspectElo, type ProspectElo } from '../lib/rating/prospect-rating';
+import { collectExternalBouts, prospectStartingRatings, simulateProspectElo, type ProspectParams } from '../lib/rating/prospect-rating';
 import { MATCHUP_MODEL } from '../lib/rating/matchup-model-tuned';
 import { WINDOWS, attachRatings, fit, line, loadExternalHistory, loadMatchupData, metrics, testFromDateOf, withModel, type Metrics, type Sample } from './matchup-tuning';
 
@@ -29,7 +29,8 @@ const OUTPUT_FILE = path.resolve('data/ml-models/prospect-params.json');
 const K_VALUES = [32, 48, 64, 96];
 const SCALES = [0, 0.4, 0.8, 1, 1.2, 1.4, 1.6, 2];
 
-type Setting = { k: number; scale: number };
+type Setting = ProspectParams;
+const UNKNOWN: ProspectParams['unknown'][] = ['base', 'average'];
 
 async function main() {
   const data = await loadMatchupData();
@@ -45,21 +46,16 @@ async function main() {
   console.log(`${bouts.length} non-UFC bouts from ${rows.length} Sherdog history rows. Pre-UFC bouts known for ${known} of ${debuts.size} UFC debutants (${((known / debuts.size) * 100).toFixed(0)}%).`);
 
   const cache = new Map<string, Sample[]>();
-  const samplesFor = ({ k, scale }: Setting): Sample[] => {
-    const key = scale === 0 ? 'none' : `${k}|${scale}`;
+  const samplesFor = ({ k, scale, unknown }: Setting): Sample[] => {
+    const key = scale === 0 ? 'none' : `${k}|${scale}|${unknown}`;
     if (!cache.has(key)) {
-      const lookup = lookups.get(k)!;
-      const initialRatingOf = (id: number, date: string) => {
-        const url = sherdogUrlOf.get(id);
-        const elo: ProspectElo | null = url ? lookup(url, date) : null;
-        return elo ? prospectInitialRating(elo, scale, DEFAULT_GLICKO_PARAMS.initialRating) : DEFAULT_GLICKO_PARAMS.initialRating;
-      };
+      const initialRatingOf = prospectStartingRatings(lookups.get(k)!, sherdogUrlOf, DEFAULT_GLICKO_PARAMS.initialRating, scale, unknown);
       cache.set(key, attachRatings(data.contexts, simulateCareerRatings(data.fights, data.noResults, DEFAULT_GLICKO_PARAMS, initialRatingOf).history));
     }
     return cache.get(key)!;
   };
-  const settings: Setting[] = K_VALUES.flatMap((k) => SCALES.filter((s) => s > 0).map((scale) => ({ k, scale })));
-  const baseline: Setting = { k: K_VALUES[0], scale: 0 };
+  const settings: Setting[] = UNKNOWN.flatMap((unknown) => K_VALUES.flatMap((k) => SCALES.filter((s) => s > 0).map((scale) => ({ k, scale, unknown }))));
+  const baseline: Setting = { k: K_VALUES[0], scale: 0, unknown: 'base' };
 
   /** The setting with the lowest training log-loss (layer refit on the same fights) among fights before `before`. */
   const pick = (before: string): Setting => {
@@ -87,15 +83,18 @@ async function main() {
 
   const testFromDate = testFromDateOf(data.contexts);
   console.log(`\nTraining log-loss per setting (fights before ${testFromDate}):`);
-  for (const k of K_VALUES) {
-    const values = SCALES.map((scale) => {
-      const train = samplesFor({ k, scale }).filter((s) => s.date < testFromDate);
-      return `${scale}: ${metrics(train, withModel(fit(train, veteranAge))).logLoss.toFixed(4)}`;
-    });
-    console.log(`  K ${String(k).padEnd(3)} ${values.join('  ')}`);
+  for (const unknown of UNKNOWN) {
+    console.log(`  unknown debutants at ${unknown}:`);
+    for (const k of K_VALUES) {
+      const values = SCALES.map((scale) => {
+        const train = samplesFor({ k, scale, unknown }).filter((s) => s.date < testFromDate);
+        return `${scale}: ${metrics(train, withModel(fit(train, veteranAge))).logLoss.toFixed(4)}`;
+      });
+      console.log(`    K ${String(k).padEnd(3)} ${values.join('  ')}`);
+    }
   }
   const picked = pick(testFromDate);
-  console.log(`\nPicked on training fights: K ${picked.k}, scale ${picked.scale}.`);
+  console.log(`\nPicked on training fights: K ${picked.k}, scale ${picked.scale}, unknown debutants at ${picked.unknown}.`);
 
   const before = judge(baseline, testFromDate, '9999-12-31');
   const after = judge(picked, testFromDate, '9999-12-31');
@@ -115,7 +114,7 @@ async function main() {
     const a = judge(baseline, from, to);
     const b = judge(setting, from, to);
     console.log(
-      `  ${from} -> ${(to.slice(0, 4) === '9999' ? 'today' : to).padEnd(10)} (${a.count}, ${a.debutCount} debut)  K ${setting.k}, scale ${String(setting.scale).padEnd(4)} ` +
+      `  ${from} -> ${(to.slice(0, 4) === '9999' ? 'today' : to).padEnd(10)} (${a.count}, ${a.debutCount} debut)  K ${setting.k}, scale ${String(setting.scale).padEnd(4)} ${setting.unknown.padEnd(7)} ` +
         `${a.simulator.logLoss.toFixed(4)} -> ${b.simulator.logLoss.toFixed(4)}   debut ${a.debuts.logLoss.toFixed(4)} -> ${b.debuts.logLoss.toFixed(4)}`,
     );
     return { from, to, setting, count: a.count, debutCount: a.debutCount, today: a.simulator, withPrior: b.simulator, debutsToday: a.debuts, debutsWithPrior: b.debuts };
@@ -125,7 +124,7 @@ async function main() {
   console.log(`  fight-weighted gain: ${gain >= 0 ? '+' : ''}${gain.toFixed(4)} (positive = the prior helps); better in ${windows.filter((w) => w.withPrior.logLoss < w.today.logLoss).length} of 4 windows`);
 
   const shipped = pick('9999-12-31');
-  console.log(`\nPicked on every fight: K ${shipped.k}, scale ${shipped.scale}.`);
+  console.log(`\nPicked on every fight: K ${shipped.k}, scale ${shipped.scale}, unknown debutants at ${shipped.unknown}.`);
   fs.writeFileSync(
     OUTPUT_FILE,
     JSON.stringify({ tunedAt: new Date().toISOString(), testFromDate, heldOut: { picked, today: before, withPrior: after }, windows, shipped }, null, 2) + '\n',

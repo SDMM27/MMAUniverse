@@ -8,7 +8,8 @@
 // champions). Run with `npm run check:ratings` (`--refresh` to re-fetch the
 // fights, `--params '{"rdPerMonth":30}'` to try other constants, `--top 15`
 // for longer per-division lists, `--prospect` to start debutants from their
-// pre-UFC record, see data/lib/rating/prospect-rating.ts).
+// pre-UFC record, see data/lib/rating/prospect-rating.ts; `--prospect-unknown
+// average` to try the other start for debutants without a known record).
 import { neon } from '@neondatabase/serverless';
 import { DEFAULT_GLICKO_PARAMS, conservativeRating, type GlickoParams } from '../lib/rating/glicko-rating';
 import { simulateCareerRatings, ratingAsOf } from '../lib/rating/simulate-career';
@@ -28,7 +29,7 @@ import {
 import { sortWeightClassGroups } from '../lib/rating/order-division';
 import { loadData, loadEnvLocal, toCareerInputs } from './tuning-data';
 import { loadExternalHistory } from './matchup-tuning';
-import { PROSPECT_PARAMS, prospectInitialRatings } from '../lib/rating/prospect-rating';
+import { PROSPECT_PARAMS, prospectInitialRatings, type ProspectParams } from '../lib/rating/prospect-rating';
 
 const TEST_SHARE = 0.2;
 const POINT_FLOW_REFERENCE_LOG_LOSS = 0.6767;
@@ -75,8 +76,10 @@ async function main() {
   let initialRatingOf: ((fighterId: number, debutDateIso: string) => number) | undefined;
   if (process.argv.includes('--prospect')) {
     const { rows, sherdogUrlOf } = await loadExternalHistory();
-    initialRatingOf = prospectInitialRatings(rows, sherdogUrlOf, params.initialRating);
-    console.log(`Niveau de départ des débutants d'après leur palmarès hors UFC : ${JSON.stringify(PROSPECT_PARAMS)}`);
+    const unknownIndex = process.argv.indexOf('--prospect-unknown');
+    const prospect = { ...PROSPECT_PARAMS, ...(unknownIndex === -1 ? {} : { unknown: process.argv[unknownIndex + 1] as ProspectParams['unknown'] }) };
+    initialRatingOf = prospectInitialRatings(rows, sherdogUrlOf, params.initialRating, prospect);
+    console.log(`Niveau de départ des débutants d'après leur palmarès hors UFC : ${JSON.stringify(prospect)}`);
   }
 
   // Metric 1: held-out log-loss.

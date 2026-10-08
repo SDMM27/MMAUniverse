@@ -43,9 +43,18 @@ test('prospectInitialRating leaves a fighter without known bouts at initialRatin
 
 test('prospectInitialRatings starts a debutant from their Sherdog record, others at initialRating', () => {
   const rows = [row('pro', 'x', '2019-01-01', 'win'), row('pro', 'y', '2019-06-01', 'win')];
-  const initialRatingOf = prospectInitialRatings(rows, new Map([[1, 'pro'], [2, 'nobody']]), 1500, { k: 32, scale: 1 });
+  const initialRatingOf = prospectInitialRatings(rows, new Map([[1, 'pro'], [2, 'nobody'], [4, 'pro']]), 1500, { k: 32, scale: 1, unknown: 'base' });
   assert.ok(initialRatingOf(1, '2020-01-01') > 1500);
-  assert.equal(initialRatingOf(1, '2018-01-01'), 1500); // before any of their bouts
+  assert.equal(initialRatingOf(4, '2018-01-01'), 1500); // same record, debut before any of its bouts
   assert.equal(initialRatingOf(2, '2020-01-01'), 1500);
   assert.equal(initialRatingOf(3, '2020-01-01'), 1500); // no Sherdog URL
+});
+
+test("unknown 'average' starts unknown debutants at the known debutants' running average, memoized", () => {
+  const rows = [row('pro', 'x', '2019-01-01', 'win'), row('pro', 'y', '2019-06-01', 'win')];
+  const initialRatingOf = prospectInitialRatings(rows, new Map([[1, 'pro']]), 1500, { k: 32, scale: 1, unknown: 'average' });
+  assert.equal(initialRatingOf(9, '2018-01-01'), 1500); // no known debutant yet
+  const pro = initialRatingOf(1, '2020-01-01');
+  assert.equal(initialRatingOf(2, '2020-02-01'), pro); // the average of one
+  assert.equal(initialRatingOf(9, '2030-01-01'), 1500); // asked again: same answer
 });
