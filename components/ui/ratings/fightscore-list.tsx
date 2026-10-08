@@ -7,6 +7,7 @@ import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { groupFighterRatingsByWeightClass, orderDivisionWithChampionPinned, sortWeightClassGroups } from '@/data/lib/rating/order-division';
 import { FighterRatingWithFighter } from '@/data/lib/definitions';
 import { FighterRankRow, formatScore, ScoreBar, StreakBadge, TrendBadge, weightClassSlug } from './fightscore-parts';
+import { fighterHref } from '@/data/lib/slug';
 
 // One division at a time behind a row of division tabs, rather than all
 // twelve stacked (~180 rows): the selected division lives in the URL hash
@@ -25,7 +26,7 @@ const OUTRANKED_NOTE =
 function ChampionCard({ champion, outranked }: { champion: FighterRatingWithFighter; outranked: boolean }) {
   return (
     <Link
-      href={`/fighters/${champion.fighter_id}`}
+      href={fighterHref({ id: champion.fighter_id, name: champion.fighter_name })}
       className="group flex items-center gap-4 border-b border-base-border bg-gradient-to-r from-accent/15 to-transparent p-4"
     >
       <CoverImage

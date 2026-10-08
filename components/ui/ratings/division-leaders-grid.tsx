@@ -4,6 +4,7 @@ import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { FighterRatingWithFighter } from '@/data/lib/definitions';
 import { groupFighterRatingsByWeightClass, sortWeightClassGroups } from '@/data/lib/rating/order-division';
 import { formatScore, weightClassSlug } from './fightscore-parts';
+import { fighterHref } from '@/data/lib/slug';
 
 // Homepage overview: one card per division, headed by its FightScore #1
 // (plain score order -- the champion-pinning convention belongs to the full
@@ -32,7 +33,7 @@ export default function DivisionLeadersGrid({ ratings, shownPerDivision = 3 }: {
               <span aria-hidden="true">→</span>
             </Link>
 
-            <Link href={`/fighters/${leader.fighter_id}`} className="group flex gap-3 px-4 py-3">
+            <Link href={fighterHref({ id: leader.fighter_id, name: leader.fighter_name })} className="group flex gap-3 px-4 py-3">
               <CoverImage
                 src={leader.fighter_image_url}
                 alt={leader.fighter_name}
@@ -58,7 +59,7 @@ export default function DivisionLeadersGrid({ ratings, shownPerDivision = 3 }: {
               {rest.map((fighter, i) => (
                 <li key={fighter.id} className="flex items-center gap-2 border-t border-base-border py-1.5 text-sm">
                   <span className="w-4 font-display text-xs text-ink-secondary">{i + 2}</span>
-                  <Link href={`/fighters/${fighter.fighter_id}`} className="flex-1 truncate text-ink-primary hover:text-accent">
+                  <Link href={fighterHref({ id: fighter.fighter_id, name: fighter.fighter_name })} className="flex-1 truncate text-ink-primary hover:text-accent">
                     {fighter.fighter_name}
                   </Link>
                   <span className="font-display text-xs text-ink-secondary">{formatScore(fighter.display_score)}</span>
@@ -69,7 +70,7 @@ export default function DivisionLeadersGrid({ ratings, shownPerDivision = 3 }: {
             {champion && !leader.is_champion && (
               <p className="border-t border-base-border bg-white/[0.02] px-4 py-2 text-xs text-ink-secondary">
                 Ceinture :{' '}
-                <Link href={`/fighters/${champion.fighter_id}`} className="text-ink-primary hover:text-accent">
+                <Link href={fighterHref({ id: champion.fighter_id, name: champion.fighter_name })} className="text-ink-primary hover:text-accent">
                   {champion.fighter_name}
                 </Link>{' '}
                 ({formatScore(champion.display_score)})

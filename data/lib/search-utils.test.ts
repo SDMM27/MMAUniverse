@@ -38,7 +38,7 @@ test('flattenResults keeps fighters, events, organizations order', () => {
   });
   assert.deepEqual(
     items.map((i) => i.href),
-    ['/fighters/1', '/events/2', '/organizations/3'],
+    ['/fighters/a', '/events/2', '/organizations/3'],
   );
 });
 

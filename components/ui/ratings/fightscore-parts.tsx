@@ -7,6 +7,7 @@ import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { FighterRatingWithFighter } from '@/data/lib/definitions';
 import { rankTrend } from '@/data/lib/rating/weekly-trend';
+import { fighterHref } from '@/data/lib/slug';
 
 // display_score is NUMERIC -> string at runtime (see FighterRating's type comment).
 export function formatScore(score: FighterRatingWithFighter['display_score']) {
@@ -99,7 +100,7 @@ export function FighterRankRow({
 }) {
   return (
     <Link
-      href={`/fighters/${fighter.fighter_id}`}
+      href={fighterHref({ id: fighter.fighter_id, name: fighter.fighter_name })}
       className={`group flex items-center gap-3 border-b border-base-border px-3 py-2.5 transition-colors last:border-b-0 hover:bg-white/[0.03] ${
         highlight ? 'bg-accent/[0.06]' : ''
       }`}

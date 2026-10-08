@@ -1,4 +1,5 @@
 // Pure helpers for the global search (menu). No DB / React here so they stay unit-testable.
+import { fighterHref as slugFighterHref } from '@/data/lib/slug';
 
 export const SEARCH_MIN_LENGTH = 2;
 export const SEARCH_MAX_LENGTH = 80;
@@ -58,10 +59,9 @@ export function prefixPattern(query: string): string {
   return `${escapeLikePattern(query)}%`;
 }
 
-// Single place building the links of the search results (fighter links are meant to move to
-// readable slugs later: only this function has to change).
-export function fighterHref(fighter: Pick<SearchFighter, 'id'>): string {
-  return `/fighters/${fighter.id}`;
+// Single place building the links of the search results (fighters use readable slugs).
+export function fighterHref(fighter: Pick<SearchFighter, 'id' | 'name'>): string {
+  return slugFighterHref(fighter);
 }
 
 export function eventHref(event: Pick<SearchEvent, 'id'>): string {

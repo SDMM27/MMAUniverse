@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { groupRankingsByWeightClass } from '@/data/lib/ranking-utils';
 import { RankingWithFighter } from '@/data/lib/definitions';
+import { fighterHref } from '@/data/lib/slug';
 
 // Reuses the ranking-pill convention already established (until now, dead --
 // fighters.ranking was always 0) on the fighter detail page.
@@ -12,7 +13,7 @@ function RankingRow({ ranking }: { ranking: RankingWithFighter }) {
       </span>
       <span className="text-sm text-ink-primary">
         {ranking.fighter_id ? (
-          <Link href={`/fighters/${ranking.fighter_id}`} className="hover:text-accent">
+          <Link href={fighterHref({ id: ranking.fighter_id, name: ranking.fighter_name })} className="hover:text-accent">
             {ranking.fighter_name}
           </Link>
         ) : (
