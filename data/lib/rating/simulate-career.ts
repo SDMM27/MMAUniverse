@@ -63,15 +63,18 @@ export function simulateCareerRatings(
   fights: CareerFightInput[],
   noResults: CareerNoResultInput[] = [],
   params: GlickoParams = DEFAULT_GLICKO_PARAMS,
+  // A debutant's starting rating, from what they did before the UFC (see
+  // prospect-rating.ts); params.initialRating for everyone when absent.
+  initialRatingOf?: (fighterId: number, debutDateIso: string) => number,
 ): CareerSimulationResult {
   const states = new Map<number, CareerFighterState>();
   const history: CareerHistoryEntry[] = [];
   let nextNoResult = 0;
 
-  const getState = (fighterId: number): CareerFighterState => {
+  const getState = (fighterId: number, dateIso: string): CareerFighterState => {
     let state = states.get(fighterId);
     if (!state) {
-      state = { rating: params.initialRating, rd: params.initialRd, lastFightDate: null, lastDivision: null, ufcFights: 0, lastFightDateByDivision: new Map() };
+      state = { rating: initialRatingOf?.(fighterId, dateIso) ?? params.initialRating, rd: params.initialRd, lastFightDate: null, lastDivision: null, ufcFights: 0, lastFightDateByDivision: new Map() };
       states.set(fighterId, state);
     }
     return state;
@@ -105,8 +108,8 @@ export function simulateCareerRatings(
 
   for (const fight of fights) {
     applyNoResultsBefore(fight.eventDate);
-    const winner = getState(fight.winnerId);
-    const loser = getState(fight.loserId);
+    const winner = getState(fight.winnerId, fight.eventDate);
+    const loser = getState(fight.loserId, fight.eventDate);
     const winnerChangedDivision = prepare(winner, fight.division, fight.eventDate);
     const loserChangedDivision = prepare(loser, fight.division, fight.eventDate);
     const winnerBefore = { rating: winner.rating, rd: winner.rd };
