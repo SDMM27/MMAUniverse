@@ -2,11 +2,12 @@ import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { FighterWithOrganization } from '@/data/lib/definitions';
+import { fighterHref } from '@/data/lib/slug';
 
 export default function FighterCard({ fighter }: { fighter: FighterWithOrganization }) {
   return (
     <Link
-      href={`/fighters/${fighter.id}`}
+      href={fighterHref(fighter)}
       className="flex flex-col overflow-hidden rounded-lg border border-base-border bg-base-card transition-colors hover:border-accent"
     >
       <CoverImage

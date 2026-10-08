@@ -24,8 +24,9 @@ Le projet comprend un site Next.js, une app mobile Expo, un pipeline de scraping
 | Page | Contenu |
 | --- | --- |
 | `/classement-calcule` | **FightScore** : classement calculé par catégorie et pound-for-pound, avec tendance hebdomadaire (▲ ▼ New) et page [méthodologie](app/classement-calcule/methodologie/page.tsx) |
-| `/simulateur` | Simulateur de combat : probabilité de victoire entre deux combattants à partir de leurs notes et de leur incertitude |
-| `/fighters/[slug]` | Fiche combattant : palmarès complet (y compris hors des organisations suivies), taille, allonge, âge, nationalité, FightScore, profil de style, probabilité de victoire |
+| `/simulateur` | Simulateur de combat : probabilité de victoire entre deux combattants à partir de leurs notes et de leur incertitude ; URL partageable, main event pré-rempli, face-à-face |
+| `/fighters/[slug]` | Fiche combattant : palmarès complet (y compris hors des organisations suivies), taille, allonge, âge, nationalité, courbe FightScore, statistiques UFCStats, profil de style, probabilité de victoire ; URL lisibles (`/fighters/islam-makhachev`), anciennes URL numériques redirigées en 308 |
+| Menu | Recherche globale (combattants, événements) accessible depuis le menu |
 | `/events` | Événements à venir et passés, cartes complètes, horaires de diffusion UFC |
 | `/rankings` | Classements officiels UFC |
 | `/actualites` | Actualités MMA agrégées par flux RSS (FR et EN) |
@@ -206,6 +207,7 @@ Commandes utiles :
 | Commande | Rôle |
 | --- | --- |
 | `npm test` | Lance tous les tests unitaires |
+| `npm run seed:db` | Crée le schéma de base et l'alimente depuis `data/scraped/` (base vide uniquement) |
 | `npm run scrape:ufc` (ou `scrape:all`) | Scrape une organisation (ou toutes) depuis Sherdog |
 | `npm run scrape:ufcstats` | Scrape les stats round par round depuis UFCStats (nécessite `npx playwright install chromium`) |
 | `npm run sync:fighter-stats` | Pousse les stats UFCStats dans Neon |

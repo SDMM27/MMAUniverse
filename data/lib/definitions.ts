@@ -242,7 +242,7 @@ export type MethodCategory = 'ko_tko' | 'submission' | 'decision';
 // id is BIGSERIAL: the Neon driver (no type parser override, see data/lib/db.ts)
 // returns int8 columns as JS strings, not numbers -- unlike the INT-typed ids
 // elsewhere in this file (see the same note on fight_id/predicted_winner_id
-// below, and app/seed/route.ts's picks table DDL for the full explanation).
+// below, and data/scripts/seed-db.ts's picks table DDL for the full explanation).
 export type PickemUser = {
   id: string;
   external_auth_id: string;
@@ -290,6 +290,11 @@ export type SimulatorFighter = {
   rd: number;
   is_champion: boolean;
   current_streak: number;
+  // Tale of the tape (null = unknown).
+  height_cm: number | null;
+  reach_cm: number | null;
+  record: string | null;
+  age: number | null; // in years, today; null without a known birth date
   matchup_profile: MatchupProfile; // age, reach, layoff and UFC career sums, for the matchup layer
   outcome_profile: OutcomeProfile; // how their past fights ended, for the method/round model
 };

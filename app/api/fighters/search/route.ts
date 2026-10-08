@@ -1,7 +1,7 @@
 // app/api/fighters/search/route.ts
 import { fetchFighters } from '@/data/lib/data';
 
-// Same reasoning as app/seed/route.ts: without this, @neondatabase/serverless's
+// Without this (see data/lib/db.ts), @neondatabase/serverless's
 // underlying fetch() calls can get swept into Next's Data Cache.
 export const dynamic = 'force-dynamic';
 

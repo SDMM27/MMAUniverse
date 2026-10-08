@@ -4,8 +4,12 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
+import TaleOfTheTape from '@/components/ui/ratings/tale-of-the-tape';
 import { SimulatorFighter } from '@/data/lib/definitions';
+import type { MainEventPrefill } from '@/data/lib/simulator-data';
+import { buildSimulatorPath } from '@/data/lib/simulator-params';
 import { predictFight } from '@/data/lib/rating/simulate-fight';
+import { fighterHref } from '@/data/lib/slug';
 import { FINISH_METHODS, contextMix, predictOutcomes, type FinishMethod } from '@/data/lib/rating/fight-outcome';
 import { FIGHT_OUTCOME_MODEL } from '@/data/lib/rating/fight-outcome-model';
 import { predictMatchup, profileRates, type MatchupFactor, type MatchupPrediction } from '@/data/lib/rating/matchup-model';
@@ -48,7 +52,7 @@ function FighterPicker({
         <CoverImage src={selected.fighter_image_url} alt={selected.fighter_name} className="h-16 w-16 shrink-0 rounded-full" sizes="64px" objectPosition="top" />
         <div className="min-w-0 flex-1">
           <p className="font-display text-xs uppercase tracking-widest text-ink-secondary">{label}</p>
-          <Link href={`/fighters/${selected.fighter_id}`} className="flex items-center gap-2 truncate text-lg text-ink-primary hover:text-accent">
+          <Link href={fighterHref({ id: selected.fighter_id, name: selected.fighter_name })} className="flex items-center gap-2 truncate text-lg text-ink-primary hover:text-accent">
             <CountryFlag code={selected.fighter_nationality} className="shrink-0 text-sm" />
             <span className="truncate">{selected.fighter_name}</span>
           </Link>
@@ -238,11 +242,11 @@ function factorDetail(factor: MatchupFactor, favored: SimulatorFighter, other: S
       return `${favored.fighter_name} a ${years} an${years > 1 ? 's' : ''} de moins (${Math.floor(f.age!)} contre ${Math.floor(o.age!)} ans)`;
     }
     case 'strikes':
-      return `${favored.fighter_name} touche plus qu'il n'encaisse : ${signed(rf.strikeDiffPerMin)} frappe nette par minute à l'UFC, contre ${signed(ro.strikeDiffPerMin)}`;
+      return `${favored.fighter_name} a le meilleur bilan de frappes : ${signed(rf.strikeDiffPerMin)} frappe nette par minute à l'UFC, contre ${signed(ro.strikeDiffPerMin)}`;
     case 'control':
       return `${favored.fighter_name} contrôle davantage : ${Math.round(rf.controlShare * 100)} % du temps de contrôle dans ses combats, contre ${Math.round(ro.controlShare * 100)} %`;
     case 'knockdowns':
-      return `${other.fighter_name} a été envoyé au tapis ${o.knockdownsAbsorbed} fois à l'UFC, ${favored.fighter_name} ${f.knockdownsAbsorbed} fois`;
+      return `${other.fighter_name} a été envoyé au tapis ${o.knockdownsAbsorbed} fois en ${Math.round(o.ufcMinutes)} min à l'UFC, ${favored.fighter_name} ${f.knockdownsAbsorbed} fois en ${Math.round(f.ufcMinutes)} min`;
     case 'layoff':
       return `${other.fighter_name} n'a pas combattu depuis ${Math.round(o.monthsSinceLastFight!)} mois`;
     case 'reach':
@@ -284,14 +288,58 @@ function FactorsNote({ a, b, prediction }: { a: SimulatorFighter; b: SimulatorFi
           })}
         </ul>
       )}
-      {unknown.length > 0 && <p className="mt-2 text-xs text-ink-secondary">Inconnu : {unknown.join(', ')}. Ce facteur n&apos;est pas pris en compte.</p>}
+      {unknown.length > 0 && (
+        <p className="mt-2 text-xs text-ink-secondary">
+          Inconnu : {unknown.join(', ')}. {unknown.length > 1 ? 'Ces facteurs ne sont pas pris' : "Ce facteur n'est pas pris"} en compte.
+        </p>
+      )}
     </div>
   );
 }
 
-export default function FightSimulator({ fighters }: { fighters: SimulatorFighter[] }) {
-  const [a, setA] = useState<SimulatorFighter | null>(null);
-  const [b, setB] = useState<SimulatorFighter | null>(null);
+export default function FightSimulator({
+  fighters,
+  initialA = null,
+  initialB = null,
+  prefill = null,
+}: {
+  fighters: SimulatorFighter[];
+  initialA?: number | null;
+  initialB?: number | null;
+  prefill?: MainEventPrefill | null;
+}) {
+  const byId = (id: number | null) => (id == null ? null : (fighters.find((f) => f.fighter_id === id) ?? null));
+  const [a, setA] = useState<SimulatorFighter | null>(() => byId(initialA));
+  const [b, setB] = useState<SimulatorFighter | null>(() => byId(initialB));
+  const [copied, setCopied] = useState(false);
+
+  // Event handlers (not an effect) own the URL sync, so there is no loop to
+  // worry about; replaceState keeps the history clean and the scroll in place.
+  const select = (corner: 'a' | 'b', fighter: SimulatorFighter | null) => {
+    const next = { a: corner === 'a' ? fighter : a, b: corner === 'b' ? fighter : b };
+    setA(next.a);
+    setB(next.b);
+    setCopied(false);
+    try {
+      window.history.replaceState(null, '', buildSimulatorPath({ a: next.a?.fighter_id ?? null, b: next.b?.fighter_id ?? null }));
+    } catch {
+      // URL sync is best-effort.
+    }
+  };
+
+  const copyLink = async () => {
+    if (!a || !b) return;
+    try {
+      await navigator.clipboard.writeText(window.location.origin + buildSimulatorPath({ a: a.fighter_id, b: b.fighter_id }));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  // The label only makes sense while the corners are still the prefilled ones.
+  const showPrefill = prefill && a?.fighter_id === prefill.a && b?.fighter_id === prefill.b;
 
   // Men and women's ratings are computed on separate pools that never fight
   // each other, so a mixed matchup would compare numbers that mean nothing
@@ -309,10 +357,21 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
 
   return (
     <div className="flex flex-col gap-6">
+      {prefill && showPrefill && (
+        <p className="text-xs text-ink-secondary">
+          Main event de{' '}
+          <Link href={`/events/${prefill.eventId}`} className="text-accent hover:underline">
+            {prefill.eventName}
+          </Link>
+          {prefill.eventDate && ` · ${prefill.eventDate}`}
+        </p>
+      )}
       <div className="grid gap-4 md:grid-cols-2">
-        <FighterPicker label="Coin rouge" options={optionsFor(b)} selected={a} onSelect={setA} />
-        <FighterPicker label="Coin bleu" options={optionsFor(a)} selected={b} onSelect={setB} />
+        <FighterPicker label="Coin rouge" options={optionsFor(b)} selected={a} onSelect={(f) => select('a', f)} />
+        <FighterPicker label="Coin bleu" options={optionsFor(a)} selected={b} onSelect={(f) => select('b', f)} />
       </div>
+
+      {a && b && <TaleOfTheTape a={a} b={b} />}
 
       {a && b && rating && prediction ? (
         <div className="rounded-xl border border-base-border bg-base-card p-5">
@@ -355,6 +414,11 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
             ))}
           </div>
           <OutcomeBreakdown a={a} b={b} winA={prediction.winA} rounds={rounds} />
+          <div className="mt-4 flex justify-end">
+            <button type="button" onClick={copyLink} className="text-xs uppercase tracking-wide text-accent hover:underline">
+              {copied ? 'Lien copié' : 'Copier le lien'}
+            </button>
+          </div>
         </div>
       ) : (
         <p className="rounded-xl border border-dashed border-base-border p-6 text-center text-sm text-ink-secondary">

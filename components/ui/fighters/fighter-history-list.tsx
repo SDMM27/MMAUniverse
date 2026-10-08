@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FightHistoryEntry } from '@/data/lib/definitions';
 import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
+import { fighterHref } from '@/data/lib/slug';
 
 // Only completed fights reach this component — the caller (app/fighters/[slug]/page.tsx)
 // filters out 'upcoming' entries and spotlights the soonest one in the page header instead,
@@ -48,7 +49,7 @@ export default function FighterHistoryList({ fights }: { fights: FightHistoryEnt
               </td>
               <td className="p-3 align-top text-ink-primary">
                 {fight.opponent_id ? (
-                  <Link href={`/fighters/${fight.opponent_id}`} className="text-accent hover:underline">
+                  <Link href={fighterHref({ id: fight.opponent_id, name: fight.opponent_name })} className="text-accent hover:underline">
                     {fight.opponent_name ?? 'Adversaire inconnu'}
                   </Link>
                 ) : fight.opponent_sherdog_url ? (
