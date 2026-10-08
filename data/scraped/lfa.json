@@ -1488,6 +1488,13 @@
       "start_time": "2026-10-30T00:00:00+00:00",
       "event_location": "Seneca Niagara Resort and Casino, Niagara Falls, New York, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896910"
+    },
+    {
+      "name": "LFA 247 - Breno vs Torres",
+      "date": "2026-11-20",
+      "start_time": "2026-11-20T00:00:00+00:00",
+      "event_location": "Arizona Financial Theatre, Phoenix, Arizona, United States",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/901095"
     }
   ],
   "fighters": [
@@ -9672,7 +9679,7 @@
       "name": "Lucas Silva",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1769042588Lucas_Silva.jpg",
       "weight_class": "Welterweight",
-      "record": "5-0-0",
+      "record": "5-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Lucas-Silva-428243",
       "fight_history": [
@@ -9754,7 +9761,7 @@
       "name": "Lucas Silva",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/144536892417_lucas_hodak.jpg",
       "weight_class": "Middleweight",
-      "record": "5-5-0",
+      "record": "5-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Lucas-Silva-428243",
       "fight_history": [
@@ -409993,6 +410000,442 @@
           "time": "0:42"
         }
       ]
+    },
+    {
+      "name": "Eduardo Torres",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1733699294IMG_3185.jpeg",
+      "weight_class": "Bantamweight",
+      "record": "19-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Eduardo-Torres-190429",
+      "fight_history": [
+        {
+          "opponent_name": "Isfak Seyid",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Isfak-Seyid-395280",
+          "event_name": "Core FC 2 - Dincer vs. Tifiev",
+          "event_sherdog_url": "https://www.sherdog.com/events/Core-FC-2-Dincer-vs-Tifiev-109964",
+          "date": "2025-12-11",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Michael Wachter",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ortca Gudaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ortca-Gudaev-250705",
+          "event_name": "Core FC 1 - Figueiredo vs. Aliev",
+          "event_sherdog_url": "https://www.sherdog.com/events/Core-FC-1-Figueiredo-vs-Aliev-107723",
+          "date": "2025-04-26",
+          "result": "loss",
+          "method": "TKO (Spinning Backfist and Elbows)",
+          "referee": "Marc Goddard",
+          "round": 2,
+          "time": "0:58"
+        },
+        {
+          "opponent_name": "Nicolas Mandiola",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolas-Mandiola-366337",
+          "event_name": "OFL 12 - Open Fight LATAM 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFL-12-Open-Fight-LATAM-12-106890",
+          "date": "2025-03-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Orlando Olea",
+          "round": 4,
+          "time": "4:24"
+        },
+        {
+          "opponent_name": "Nicolas Sandoval",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolas-Sandoval-310663",
+          "event_name": "OFL 11 - Open Fight LATAM 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFL-11-Open-Fight-LATAM-11-105127",
+          "date": "2024-12-08",
+          "result": "win",
+          "method": "TKO (Knee to the Body and Punches)",
+          "referee": "Joans Lorca",
+          "round": 1,
+          "time": "0:45"
+        },
+        {
+          "opponent_name": "Victor Hugo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Victor-Hugo-123631",
+          "event_name": "Dana White's Contender Series - Contender Series 2023: Week 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2023-Week-9-97775",
+          "date": "2023-10-03",
+          "result": "loss",
+          "method": "Submission (Kneebar)",
+          "referee": "Eric McMahon",
+          "round": 2,
+          "time": "2:16"
+        },
+        {
+          "opponent_name": "Guilherme Miranda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Guilherme-Miranda-226467",
+          "event_name": "ROK 6 - Ragnarok 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/ROK-6-Ragnarok-6-97829",
+          "date": "2023-06-10",
+          "result": "win",
+          "method": "TKO (Knee to the Body and Punches)",
+          "referee": "Luis Cortez",
+          "round": 1,
+          "time": "1:23"
+        },
+        {
+          "opponent_name": "Paulo Robson Fernandes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paulo-Robson-Fernandes-199111",
+          "event_name": "OFC 4 - Open Fight Chile 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFC-4-Open-Fight-Chile-4-97901",
+          "date": "2023-05-27",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Edward Olea",
+          "round": 1,
+          "time": "1:20"
+        },
+        {
+          "opponent_name": "Alex Cunuhay",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Cunuhay-276421",
+          "event_name": "FFC 55 - Navarrete vs. Lanskoi",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFC-55-Navarrete-vs-Lanskoi-94935",
+          "date": "2022-11-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Cote Arbaiza",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Gonzalo Araoz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gonzalo-Araoz-225809",
+          "event_name": "Torneo Octagono - Octagono 24",
+          "event_sherdog_url": "https://www.sherdog.com/events/Torneo-Octagono-Octagono-24-94261",
+          "date": "2022-08-20",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Joans Lorca",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Hernan Muniz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hernan-Muniz-382370",
+          "event_name": "Productora LFN 5 - Ferreira vs. Gomez",
+          "event_sherdog_url": "https://www.sherdog.com/events/Productora-LFN-5-Ferreira-vs-Gomez-93044",
+          "date": "2022-04-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Orlando Olea",
+          "round": 2,
+          "time": "4:52"
+        },
+        {
+          "opponent_name": "Nohelin Hernandez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nohelin-Hernandez-110415",
+          "event_name": "Combate Global - Cordero vs. Bandejas",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Cordero-vs-Bandejas-90321",
+          "date": "2021-09-03",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Tommy Santana",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Gaston Manzur",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gaston-Manzur-104405",
+          "event_name": "Productora LFN - Live Fight Night",
+          "event_sherdog_url": "https://www.sherdog.com/events/Productora-LFN-Live-Fight-Night-87889",
+          "date": "2020-11-21",
+          "result": "win",
+          "method": "TKO (Strikes)",
+          "referee": "Dennys Quijada",
+          "round": 4,
+          "time": "3:50"
+        },
+        {
+          "opponent_name": "Rodrigo Vera",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rodrigo-Vera-191425",
+          "event_name": "Combate Americas 38 - Peru",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Americas-38-Peru-75519",
+          "date": "2019-05-31",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Blake Grice",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kevin Amador",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kevin-Amador-15550",
+          "event_name": "Combate Americas - Mexico vs. The World",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Americas-Mexico-vs-The-World-67789",
+          "date": "2018-05-18",
+          "result": "win",
+          "method": "TKO (Submission to Punches)",
+          "referee": "Raul Porrata",
+          "round": 3,
+          "time": "1:26"
+        },
+        {
+          "opponent_name": "Tomas Vasquez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tomas-Vasquez-86366",
+          "event_name": "MFC 14 - Navarrete vs. Arevalo",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFC-14-Navarrete-vs-Arevalo-62459",
+          "date": "2017-07-22",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Orlando Olea",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Gregory Campos Veloso",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gregory-Campos-Veloso-171971",
+          "event_name": "Guerra Campal 3 - Bahamondes vs. Carolino",
+          "event_sherdog_url": "https://www.sherdog.com/events/Guerra-Campal-3-Bahamondes-vs-Carolino-54897",
+          "date": "2016-11-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Luis Gustavo de Oliveira Silva Machado",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luis-Gustavo-de-Oliveira-Silva-Machado-201059",
+          "event_name": "MF - Max Fight 18",
+          "event_sherdog_url": "https://www.sherdog.com/events/MF-Max-Fight-18-52481",
+          "date": "2016-05-21",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Leonardo Chebar",
+          "round": 2,
+          "time": "3:30"
+        },
+        {
+          "opponent_name": "Pablo Burgos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pablo-Burgos-216395",
+          "event_name": "Guerra Campal 1 - La Jaula",
+          "event_sherdog_url": "https://www.sherdog.com/events/Guerra-Campal-1-La-Jaula-50185",
+          "date": "2015-11-07",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Cristian Herrera",
+          "round": 3,
+          "time": "4:32"
+        },
+        {
+          "opponent_name": "Rodrigo Poloni",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rodrigo-Poloni-210549",
+          "event_name": "CFA - Chilean Fighter Andino 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFA-Chilean-Fighter-Andino-7-48583",
+          "date": "2015-10-03",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Daniel Villegas",
+          "round": 1,
+          "time": "2:37"
+        },
+        {
+          "opponent_name": "Nicolas Came",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolas-Came-208519",
+          "event_name": "Colosseum - MMA and Kickboxing",
+          "event_sherdog_url": "https://www.sherdog.com/events/Colosseum-MMA-and-Kickboxing-48269",
+          "date": "2015-09-12",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Fernando Costantino",
+          "round": 1,
+          "time": "2:03"
+        },
+        {
+          "opponent_name": "Reinaldo Jesus Mora",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Reinaldo-Jesus-Mora-190431",
+          "event_name": "CFA - Chilean Fighter Andino 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFA-Chilean-Fighter-Andino-6-44145",
+          "date": "2015-02-07",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Victor Zuniga",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Reinaldo Jesus Mora",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Reinaldo-Jesus-Mora-190431",
+          "event_name": "TO - Torneo Octagono",
+          "event_sherdog_url": "https://www.sherdog.com/events/TO-Torneo-Octagono-47115",
+          "date": "2015-01-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Nelson Nunez",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Agapito Orozco",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1743966776agapitoorozco.jpg",
+      "weight_class": "Bantamweight",
+      "record": "6-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Agapito-Orozco-455108",
+      "fight_history": [
+        {
+          "opponent_name": "Luis Cabrera",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luis-Cabrera-378945",
+          "event_name": "Aeternum 2 - Tzekelkan vs. Villarreal",
+          "event_sherdog_url": "https://www.sherdog.com/events/Aeternum-2-Tzekelkan-vs-Villarreal-114143",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marco Antonio Diaz Rogel",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ulises Ceniceros",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ulises-Ceniceros-394404",
+          "event_name": "FLC 2 - Fight League Champions 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FLC-2-Fight-League-Champions-2-111215",
+          "date": "2026-03-06",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Daniela Modad",
+          "round": 2,
+          "time": "3:39"
+        },
+        {
+          "opponent_name": "Daniel Herrera",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daniel-Herrera-442312",
+          "event_name": "FLC 1 - Fight League Champions 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FLC-1-Fight-League-Champions-1-110713",
+          "date": "2025-10-31",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Daniela Modad",
+          "round": 1,
+          "time": "1:30"
+        },
+        {
+          "opponent_name": "Jose Martin Santos Arce",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jose-Martin-Santos-Arce-466495",
+          "event_name": "GFM 15 - Glory Fight Mexico 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/GFM-15-Glory-Fight-Mexico-15-109016",
+          "date": "2025-07-27",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Enrique Diarte",
+          "round": 1,
+          "time": "2:28"
+        },
+        {
+          "opponent_name": "Alex Sanchez Moreno",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Sanchez-Moreno-455947",
+          "event_name": "UWC Mexico 56 - Leyva vs. Chavez",
+          "event_sherdog_url": "https://www.sherdog.com/events/UWC-Mexico-56-Leyva-vs-Chavez-103159",
+          "date": "2025-04-06",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Luis Cobian",
+          "round": 3,
+          "time": "3:38"
+        },
+        {
+          "opponent_name": "Rolando Flores",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rolando-Flores-292563",
+          "event_name": "BDM - Batalla de Maestros",
+          "event_sherdog_url": "https://www.sherdog.com/events/BDM-Batalla-de-Maestros-104097",
+          "date": "2024-08-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Abasi Young",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Abasi-Young-224715",
+      "fight_history": [
+        {
+          "opponent_name": "Raykelis Llanes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Raykelis-Llanes-501659",
+          "event_name": "FCFF - Rumble at the Roseland 133: Mayhem",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCFF-Rumble-at-the-Roseland-133-Mayhem-112817",
+          "date": "2026-05-30",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 2,
+          "time": "1:58"
+        },
+        {
+          "opponent_name": "Thomas Patrick",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Thomas-Patrick-162785",
+          "event_name": "FCFF - Rumble at the Roseland 90",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCFF-Rumble-at-the-Roseland-90-91504",
+          "date": "2017-01-28",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 5,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Adan Suarez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adan-Suarez-90899",
+          "event_name": "FCFF - Rumble at the Roseland 87",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCFF-Rumble-at-the-Roseland-87-52509",
+          "date": "2016-05-14",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Steve Newport",
+          "round": 2,
+          "time": "1:54"
+        },
+        {
+          "opponent_name": "Roy Cooper",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Roy-Cooper-141019",
+          "event_name": "SEC - Star Elite Cage Fighting",
+          "event_sherdog_url": "https://www.sherdog.com/events/SEC-Star-Elite-Cage-Fighting-49315",
+          "date": "2015-03-20",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Willie Coleman",
+          "round": 3,
+          "time": "3:00"
+        }
+      ]
+    },
+    {
+      "name": "Sergio Mamone Jr.",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1786913711Kamuela_Mamone.jpg",
+      "weight_class": "Lightweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sergio-Mamone-Jr-245287",
+      "fight_history": [
+        {
+          "opponent_name": "Gabriel Muscat",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriel-Muscat-395497",
+          "event_name": "Fierce FC 51 - Fierce Fighting Championship 51",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fierce-FC-51-Fierce-Fighting-Championship-51-113893",
+          "date": "2026-08-15",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dave Seljestad",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -439498,6 +439941,71 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Marcos Breno",
+      "fighter2_name": "Eduardo Torres",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Chance Ikei",
+      "fighter2_name": "Agapito Orozco",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Francisco Hernandez",
+      "fighter2_name": "Ray Hayes",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Delton Kaufmann",
+      "fighter2_name": "Abasi Young",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Paul Marghitas",
+      "fighter2_name": "Sergio Mamone Jr.",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     }
