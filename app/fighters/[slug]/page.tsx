@@ -9,6 +9,7 @@ import {
 } from '@/data/lib/data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
 import { formatPhysique } from '@/data/lib/fighter-physique';
+import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
 import { ageFromBirthDate } from '@/data/lib/fighter-age';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
@@ -82,7 +83,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     Prochain combat vs {nextFight.opponent_name ?? 'Adversaire inconnu'}
                   </p>
                   <p className="text-xs text-ink-secondary">
-                    {nextFight.event_name} · {nextFight.event_date}
+                    {displayEventName(nextFight.event_name)} · {formatEventDate(nextFight.event_date, { weekday: true })}
                   </p>
                 </div>
                 <span className="font-display text-xs uppercase tracking-wide text-accent">À venir</span>

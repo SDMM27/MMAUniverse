@@ -6,6 +6,43 @@ const EVENT_TIME_FORMATTER = new Intl.DateTimeFormat('fr-FR', {
   timeZone: 'Europe/Paris',
 });
 
+const EVENT_DATE_FORMATTER = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+const EVENT_DAY_FORMATTER = new Intl.DateTimeFormat('fr-FR', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+/**
+ * A scraped 'YYYY-MM-DD' date in French -- "10 oct. 2026", or "sam. 10 oct. 2026"
+ * with `weekday`. Read in UTC so the calendar day never shifts. Anything that
+ * isn't a plain ISO date is returned untouched.
+ */
+export function formatEventDate(date: string | null | undefined, { weekday = false } = {}): string {
+  if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return date ?? '';
+  return (weekday ? EVENT_DAY_FORMATTER : EVENT_DATE_FORMATTER).format(new Date(`${date}T00:00:00Z`));
+}
+
+/**
+ * An event name without Sherdog's redundant "<promotion> - " prefix:
+ * "Professional Fighters League - PFL Tampa: Cyborg vs. Vieira" -> "PFL Tampa: Cyborg vs. Vieira",
+ * "CW 209 - Cage Warriors 209: Newcastle" -> "Cage Warriors 209: Newcastle".
+ *
+ * The prefix only goes when the rest names the event on its own: either the
+ * prefix is a bare promotion name (no number) and the rest isn't just a
+ * matchup ("Bellator Champions Series London - McCourt vs. Collins" stays), or
+ * the rest repeats the prefix's number. "UFC 331 - Van vs. Pantoja 2" stays.
+ */
+export function displayEventName(name: string): string {
+  const clean = name.replace(/\s+/g, ' ').trim();
+  const separator = clean.indexOf(' - ');
+  if (separator === -1) return clean;
+  const prefix = clean.slice(0, separator);
+  const rest = clean.slice(separator + 3);
+  const prefixNumber = prefix.match(/\d+/)?.[0];
+  if (!prefixNumber) {
+    const titleBeforeMatchup = rest.indexOf(':') !== -1 && rest.indexOf(':') < rest.indexOf(' vs. ');
+    return !rest.includes(' vs. ') || titleBeforeMatchup ? rest : clean;
+  }
+  return new RegExp(`\\b${prefixNumber}\\b`).test(rest) ? rest : clean;
+}
+
 /**
  * Formats an event's `start_time` (full ISO 8601 datetime, see
  * normalizeStartTime) as a French clock time in Europe/Paris — e.g. "20h00".

@@ -8,7 +8,7 @@ import {
   fetchNewsArticles,
   fetchTopPoundForPound,
 } from '@/data/lib/data';
-import { computeNextEventForHome, groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
+import { computeNextEventForHome, displayEventName, groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightResultRow from '@/components/ui/fights/fight-result-row';
 import EventCard from '@/components/ui/events/event-card';
@@ -101,8 +101,8 @@ export default async function Page() {
 
         {heroFight && heroEvent && (
           <section>
-            <SectionHeader title="Evenement de la semaine" href={`/events/${heroEvent.id}`} linkLabel="Voir l'événement" />
-            <FightCard fight={heroFight} event={heroEvent} eventName={heroEvent.name} />
+            <SectionHeader title="Événement de la semaine" href={`/events/${heroEvent.id}`} linkLabel="Voir l'événement" />
+            <FightCard fight={heroFight} event={heroEvent} eventName={displayEventName(heroEvent.name)} />
           </section>
         )}
 

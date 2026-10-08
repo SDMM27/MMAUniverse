@@ -110,6 +110,8 @@ async function main() {
         const $fighter = await fetchAndLoad(fighter.sherdog_url);
         const details = parseFighterDetails($fighter);
         fighter.fight_history = toScrapedFightHistory(details.fightHistory);
+        // Same page, same fetch: without this the header record stays at its pre-fight value.
+        fighter.record = `${details.wins}-${details.losses}-${details.draws}`;
         refreshed++;
       } catch (error) {
         console.warn(`  failed to refresh ${fighter.name} (${fighter.sherdog_url}): ${(error as Error).message}`);

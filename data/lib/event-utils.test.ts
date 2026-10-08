@@ -1,7 +1,7 @@
 // data/lib/event-utils.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { computeNextEventForHome, groupUpcomingByWeek, prioritizeOrganization, selectHeadlineFightPerEvent, splitEventsByStatus } from './event-utils';
+import { computeNextEventForHome, groupUpcomingByWeek, prioritizeOrganization, selectHeadlineFightPerEvent, splitEventsByStatus, formatEventDate, displayEventName } from './event-utils';
 import type { Event } from './definitions';
 
 // Dates far enough in the past/future to stay stable regardless of when the
@@ -272,4 +272,32 @@ test('selectHeadlineFightPerEvent returns an empty array for empty input', () =>
   const result = selectHeadlineFightPerEvent([]);
 
   assert.deepEqual(result, []);
+});
+
+test('formatEventDate writes an ISO date in French, without shifting the day', () => {
+  assert.equal(formatEventDate('2026-10-10'), '10 oct. 2026');
+  assert.equal(formatEventDate('2026-10-10', { weekday: true }), 'sam. 10 oct. 2026');
+  assert.equal(formatEventDate('2026-01-01'), '1 janv. 2026');
+});
+
+test('formatEventDate leaves anything that is not an ISO date alone', () => {
+  assert.equal(formatEventDate('TBA'), 'TBA');
+  assert.equal(formatEventDate(null), '');
+});
+
+test('displayEventName drops a promotion prefix the rest of the name already covers', () => {
+  assert.equal(displayEventName('Professional Fighters League - PFL Tampa: Cyborg vs. Vieira'), 'PFL Tampa: Cyborg vs. Vieira');
+  assert.equal(displayEventName('One Championship - One Friday Fights 168'), 'One Friday Fights 168');
+  assert.equal(displayEventName('Rizin FF - Rizin 54'), 'Rizin 54');
+  assert.equal(displayEventName('CW 209 - Cage Warriors 209: Newcastle'), 'Cage Warriors 209: Newcastle');
+  assert.equal(displayEventName('HXMMA 45 - Hexagone MMA 45'), 'Hexagone MMA 45');
+  assert.equal(displayEventName('CW 158	 - Cage Warriors 158: Rome'), 'Cage Warriors 158: Rome');
+});
+
+test('displayEventName keeps names whose prefix carries information', () => {
+  assert.equal(displayEventName('UFC 331 - Van vs. Pantoja 2'), 'UFC 331 - Van vs. Pantoja 2');
+  assert.equal(displayEventName('UFC Fight Night 290 - Allen vs. Duncan'), 'UFC Fight Night 290 - Allen vs. Duncan');
+  assert.equal(displayEventName('ACB 90 - Moscow'), 'ACB 90 - Moscow');
+  assert.equal(displayEventName('Bellator Champions Series London - McCourt vs. Collins'), 'Bellator Champions Series London - McCourt vs. Collins');
+  assert.equal(displayEventName('UFC 37.5 - As Real As It Gets'), 'UFC 37.5 - As Real As It Gets');
 });

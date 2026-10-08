@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { Event } from '@/data/lib/definitions';
-import { formatEventTime } from '@/data/lib/event-utils';
+import { displayEventName, formatEventDate, formatEventTime } from '@/data/lib/event-utils';
 
 export default function EventCard({
   event,
@@ -22,9 +22,9 @@ export default function EventCard({
             {event.organization_abbreviation}
           </span>
         )}
-        <p className="font-display text-sm uppercase tracking-wide text-ink-primary">{event.name}</p>
+        <p className="font-display text-sm uppercase tracking-wide text-ink-primary">{displayEventName(event.name)}</p>
         <p className="text-xs text-ink-secondary">
-          {event.date}
+          {formatEventDate(event.date, { weekday: true })}
           {eventTime && ` · ${eventTime}`} · {event.event_location}
         </p>
       </div>

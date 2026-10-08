@@ -121,10 +121,14 @@ export function FighterRankRow({
           <CountryFlag code={fighter.fighter_nationality} className="shrink-0 text-xs" />
           <span className="truncate">{fighter.fighter_name}</span>
         </p>
-        {subtitle && <p className="truncate text-xs text-ink-secondary">{subtitle}</p>}
+        {/* The streak sits under the name rather than in its own column: on a phone that column
+            left the name a handful of characters ("Manel Ka..."). */}
+        <p className="flex items-center gap-2 text-xs text-ink-secondary">
+          {subtitle && <span className="truncate">{subtitle}</span>}
+          <StreakBadge streak={fighter.current_streak} />
+        </p>
       </div>
       {rank !== undefined && <TrendBadge fighter={fighter} rank={rank} />}
-      <StreakBadge streak={fighter.current_streak} />
       <div className="w-16 shrink-0 text-right sm:w-24">
         <span className="font-display text-base text-ink-primary">{formatScore(fighter.display_score)}</span>
         <ScoreBar score={fighter.display_score} className="mt-1" />

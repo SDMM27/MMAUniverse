@@ -216,6 +216,34 @@ function toFightStatsSide(row: StatsRow, rounds: RoundRow[]): FightStatsSide {
   };
 }
 
+// The streak badge fans read is a career streak, not the per-division one the
+// v1 simulation produces: Islam Makhachev showed "2 V" (his welterweight wins
+// only) after a lightweight run of 15. Recount it from the fighter's full pro
+// record (fighter_fight_history, Sherdog, every promotion -- the same list the
+// fighter page shows): no contests are skipped, a draw ends the streak.
+// Fighters with no history keep the simulation's value.
+async function applyCareerStreaks() {
+  await sql`
+    WITH h AS (
+      SELECT fighter_id, result,
+        ROW_NUMBER() OVER (PARTITION BY fighter_id ORDER BY event_date DESC, id DESC) AS rn
+      FROM fighter_fight_history
+      WHERE result IN ('win', 'loss', 'draw')
+        AND fighter_id IN (SELECT fighter_id FROM fighter_ratings)
+    ),
+    latest AS (SELECT fighter_id, result FROM h WHERE rn = 1),
+    streaks AS (
+      SELECT l.fighter_id,
+        CASE l.result WHEN 'win' THEN 1 WHEN 'loss' THEN -1 ELSE 0 END
+          * (COALESCE(MIN(h.rn) FILTER (WHERE h.result <> l.result), MAX(h.rn) + 1) - 1) AS streak
+      FROM latest l JOIN h ON h.fighter_id = l.fighter_id
+      GROUP BY l.fighter_id, l.result
+    )
+    UPDATE fighter_ratings fr SET current_streak = streaks.streak
+    FROM streaks WHERE fr.fighter_id = streaks.fighter_id
+  `;
+}
+
 async function main() {
   const todayIso = new Date().toISOString().slice(0, 10);
   // Fail loudly before touching the DB if the trained model is missing/stale.
@@ -227,6 +255,12 @@ async function main() {
   if (process.argv.includes('--snapshot-only')) {
     await writeWeeklySnapshot(weekStartIso(todayIso));
     console.log(`Weekly snapshot written for the week of ${weekStartIso(todayIso)} (no recompute).`);
+    return;
+  }
+  // `--streaks-only`: just recount the career streaks (applyCareerStreaks).
+  if (process.argv.includes('--streaks-only')) {
+    await applyCareerStreaks();
+    console.log('Career streaks updated (no recompute).');
     return;
   }
 
@@ -549,6 +583,9 @@ async function main() {
     `Done. ${totalFightersRated} fighter_ratings row(s) upserted, ${totalHistoryRows} fighter_rating_history row(s) inserted, ` +
       `${totalEstimatedFallbacks} used the dominance-estimated fallback, ${skippedUnmatchedDivision} fights skipped (unmatched weight class).`,
   );
+
+  await applyCareerStreaks();
+  console.log('Career streaks updated.');
 
   const weekStart = weekStartIso(todayIso);
   await writeWeeklySnapshot(weekStart);

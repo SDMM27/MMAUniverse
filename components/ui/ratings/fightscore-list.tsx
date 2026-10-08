@@ -37,9 +37,9 @@ function ChampionCard({ champion, outranked }: { champion: FighterRatingWithFigh
       />
       <div className="min-w-0 flex-1">
         <span className="rounded bg-accent px-2 py-0.5 font-display text-[11px] uppercase tracking-widest text-white">Champion</span>
-        <p className="mt-2 flex items-center gap-2 truncate font-display text-xl uppercase text-ink-primary group-hover:text-accent">
+        <p className="mt-2 flex items-center gap-2 font-display text-lg uppercase leading-tight text-ink-primary group-hover:text-accent sm:text-xl">
           <CountryFlag code={champion.fighter_nationality} className="shrink-0 text-sm" />
-          <span className="truncate">{champion.fighter_name}</span>
+          <span className="min-w-0 break-words">{champion.fighter_name}</span>
           {outranked && (
             <sup className="text-accent" title={OUTRANKED_NOTE}>
               *

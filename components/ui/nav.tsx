@@ -37,6 +37,27 @@ function isActive(pathname: string, href: string) {
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
+// Account links live in the avatar's menu on wide screens: as two more nav
+// entries they pushed the bar past the window (it needed ~1,530px signed in).
+function AccountButton() {
+  return (
+    <UserButton afterSignOutUrl="/">
+      <UserButton.MenuItems>
+        <UserButton.Link label="Mes pronostics" href="/mes-pronostics" labelIcon={<MenuIcon d="M9 12l2 2 4-4M5 4h14v16H5z" />} />
+        <UserButton.Link label="Mon profil" href="/profil" labelIcon={<MenuIcon d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0" />} />
+      </UserButton.MenuItems>
+    </UserButton>
+  );
+}
+
+function MenuIcon({ d }: { d: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d={d} />
+    </svg>
+  );
+}
+
 function NavLink({ href, label, active }: { href: string; label: string; active: boolean }) {
   return (
     <Link
@@ -63,28 +84,18 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <nav className="border-b border-base-border bg-base-bg px-6 py-3 sm:px-10 lg:px-16">
+    <nav className="border-b border-base-border bg-base-bg px-6 py-3 sm:px-10 2xl:px-16">
       <div className="flex items-center justify-between gap-4">
         <Link href="/" className="shrink-0">
           <MMAUniverseLogo />
         </Link>
 
-        <ul className="hidden items-center gap-6 lg:flex">
+        <ul className="hidden items-center gap-4 xl:flex 2xl:gap-6">
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} />
             </li>
           ))}
-          <li>
-            <SignedIn>
-              <NavLink href="/mes-pronostics" label="Mes pronostics" active={isActive(pathname, '/mes-pronostics')} />
-            </SignedIn>
-          </li>
-          <li>
-            <SignedIn>
-              <NavLink href="/profil" label="Mon profil" active={isActive(pathname, '/profil')} />
-            </SignedIn>
-          </li>
           <li className="flex items-center">
             <SignedOut>
               <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
@@ -92,16 +103,17 @@ export default function Nav() {
               </Link>
             </SignedOut>
             <SignedIn>
-              <UserButton afterSignOutUrl="/" />
+              <AccountButton />
             </SignedIn>
           </li>
         </ul>
 
-        {/* Below lg, links collapse into the toggled menu; the account avatar
-            stays visible next to the toggle rather than hiding inside it. */}
-        <div className="flex items-center gap-3 lg:hidden">
+        {/* Below xl, links collapse into the toggled menu (the full bar needs
+            ~1,200px); the account avatar stays visible next to the toggle
+            rather than hiding inside it. */}
+        <div className="flex items-center gap-3 xl:hidden">
           <SignedIn>
-            <UserButton afterSignOutUrl="/" />
+            <AccountButton />
           </SignedIn>
           <button
             type="button"
@@ -125,29 +137,28 @@ export default function Nav() {
       </div>
 
       {open && (
-        <ul id="mobile-nav-menu" className="mt-4 flex flex-col gap-4 border-t border-base-border pt-4 lg:hidden">
+        <ul id="mobile-nav-menu" className="mt-4 flex flex-col gap-4 border-t border-base-border pt-4 xl:hidden">
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} />
             </li>
           ))}
-          <li>
-            <SignedIn>
+          {/* Inside the auth guards, so the hidden ones don't leave empty gaps. */}
+          <SignedIn>
+            <li>
               <NavLink href="/mes-pronostics" label="Mes pronostics" active={isActive(pathname, '/mes-pronostics')} />
-            </SignedIn>
-          </li>
-          <li>
-            <SignedIn>
+            </li>
+            <li>
               <NavLink href="/profil" label="Mon profil" active={isActive(pathname, '/profil')} />
-            </SignedIn>
-          </li>
-          <li>
-            <SignedOut>
+            </li>
+          </SignedIn>
+          <SignedOut>
+            <li>
               <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
                 Connexion
               </Link>
-            </SignedOut>
-          </li>
+            </li>
+          </SignedOut>
         </ul>
       )}
     </nav>

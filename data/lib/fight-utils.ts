@@ -24,3 +24,17 @@ export function splitMainEvent<T extends { is_main_event: boolean }>(
 export function getScheduledRounds(fight: { is_main_event: boolean; is_title_fight: boolean }): number {
   return fight.is_main_event || fight.is_title_fight ? 5 : 3;
 }
+
+const UNGENDERED_DIVISIONS = ['Atomweight', 'Strawweight', 'Flyweight', 'Bantamweight', 'Featherweight', 'Lightweight', 'Welterweight'];
+
+/**
+ * The weight class to show for a bout: Sherdog's "Flyweight" becomes
+ * "Women's Flyweight" when the fighter (or one of the two fighters) is known
+ * to be a woman (fighters.is_women, see data/scrapers/sync-fighter-gender.ts).
+ * Anything already labelled, or not a plain division name (catchweights), is
+ * left alone.
+ */
+export function displayWeightClass(weightClass: string | null, isWomen: boolean | null | undefined): string | null {
+  if (!weightClass || !isWomen) return weightClass;
+  return UNGENDERED_DIVISIONS.includes(weightClass) ? `Women's ${weightClass}` : weightClass;
+}

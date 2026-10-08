@@ -1,7 +1,7 @@
 // data/lib/fight-utils.test.ts
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { splitMainEvent, getScheduledRounds } from './fight-utils';
+import { splitMainEvent, getScheduledRounds, displayWeightClass } from './fight-utils';
 
 type FightStub = { id: number; is_main_event: boolean };
 
@@ -59,4 +59,14 @@ test('getScheduledRounds returns 5 for the main event and 3 for every other figh
 
 test('getScheduledRounds returns 5 for a title fight even when it is not the main event (a title co-main)', () => {
   assert.equal(getScheduledRounds({ is_main_event: false, is_title_fight: true }), 5);
+});
+
+test('displayWeightClass prefixes the shared division names for women only', () => {
+  assert.equal(displayWeightClass('Flyweight', true), "Women's Flyweight");
+  assert.equal(displayWeightClass('Flyweight', false), 'Flyweight');
+  assert.equal(displayWeightClass('Flyweight', null), 'Flyweight');
+  assert.equal(displayWeightClass("Women's Flyweight", true), "Women's Flyweight");
+  assert.equal(displayWeightClass('Lightweight', true), "Women's Lightweight"); // PFL
+  assert.equal(displayWeightClass('125lb Catchweight', true), '125lb Catchweight');
+  assert.equal(displayWeightClass(null, true), null);
 });

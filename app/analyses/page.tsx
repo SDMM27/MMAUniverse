@@ -176,7 +176,8 @@ export default async function Page({ searchParams }: { searchParams: { org?: str
   const solidDivisions = divisionRows.filter((row) => row.ko + row.sub + row.dec >= MIN_BUCKET_FIGHTS);
   const topDivision = solidDivisions[0];
   const bottomDivision = solidDivisions[solidDivisions.length - 1];
-  const genderNote = 'Hommes et femmes confondus : Sherdog ne sépare pas les catégories féminines.';
+  const genderNote =
+    "Sherdog ne sépare pas les catégories féminines : on les reconstitue à partir des adversaires de chaque combattante, et les quelques combattantes qu'on ne peut pas situer restent comptées avec les hommes.";
 
   const roundOne = org.rounds[0]?.share ?? 0;
   const championshipRounds = (org.rounds[3]?.share ?? 0) + (org.rounds[4]?.share ?? 0);

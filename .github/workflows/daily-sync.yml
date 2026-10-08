@@ -75,6 +75,13 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+      # Spreads known genders along the histories just synced, so a women's bout Sherdog labels
+      # "Flyweight" shows as "Women's Flyweight". A few queries, recomputed from scratch.
+      - name: Infer fighter gender
+        run: npx tsx data/scrapers/sync-fighter-gender.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
       # After the history sync, so fighters that just got a sherdog_url are covered (a new UFC
       # fighter's ufcstats_url comes from weekly-fightscore.yml, picked up by the next daily run). Each page is only ever fetched once (physique_*_checked_at), so on a normal day
       # this is a few requests for newly added fighters.
