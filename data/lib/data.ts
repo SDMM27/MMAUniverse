@@ -370,7 +370,7 @@ export async function fetchFighterById(id: string) {
 // (backfilled by data/scrapers/sync-fighter-history.ts) — it's a more
 // reliable match than image_url, which can legitimately change between two
 // independent scrapes if Sherdog swaps a fighter's photo.
-async function resolveFighterIds(fighterId: string): Promise<number[]> {
+export async function resolveFighterIds(fighterId: string): Promise<number[]> {
   const siblings = await sql<{ id: number }>`
     SELECT sibling.id
     FROM fighters self

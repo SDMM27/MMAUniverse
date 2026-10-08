@@ -8,6 +8,8 @@ import {
   fetchQualityWinsByFighterId,
 } from '@/data/lib/data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
+import { computeCareerStats } from '@/data/lib/career-stats';
+import { fetchFighterRatingHistory, fetchFighterUfcFightStats } from '@/data/lib/fighter-profile-data';
 import { formatPhysique } from '@/data/lib/fighter-physique';
 import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
 import { ageFromBirthDate } from '@/data/lib/fighter-age';
@@ -16,6 +18,8 @@ import { CountryFlag } from '@/components/ui/shared/country-flag';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
 import FighterRecordCard from '@/components/ui/fighters/fighter-record-card';
 import FighterScoreCard from '@/components/ui/ratings/fighter-score-card';
+import FighterRatingHistory from '@/components/ui/ratings/fighter-rating-history';
+import FighterCareerStats from '@/components/ui/fighters/fighter-career-stats';
 import EmptyState from '@/components/ui/shared/empty-state';
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -30,7 +34,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const ratings = await fetchFighterRatingsByFighterId(params.slug);
   // Quality wins only make sense for a fighter we actually rated -- skip the
   // extra query for one who isn't (not yet matched, or all draws/no-contests).
-  const qualityWins = ratings.length > 0 ? await fetchQualityWinsByFighterId(params.slug) : [];
+  const [qualityWins, ratingHistory, ufcFightStats] = await Promise.all([
+    ratings.length > 0 ? fetchQualityWinsByFighterId(params.slug) : Promise.resolve([]),
+    fetchFighterRatingHistory(params.slug),
+    fetchFighterUfcFightStats(params.slug),
+  ]);
+  const careerStats = computeCareerStats(ufcFightStats);
   // Prefer a weight-class ranking over Pound-for-Pound for the header pill --
   // P4P is a bonus distinction, the weight-class rank is the primary one.
   const primaryRanking = rankings.find((r) => !r.weight_class.includes('Pound-for-Pound')) ?? rankings[0];
@@ -96,6 +105,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </div>
         <FighterScoreCard ratings={ratings} qualityWins={qualityWins} />
       </div>
+      <FighterRatingHistory history={ratingHistory} />
+      <FighterCareerStats stats={careerStats} />
       <div>
         <h2 className="mb-3 font-display text-sm uppercase tracking-wide text-ink-secondary">Historique</h2>
         {pastFights.length === 0 ? (
