@@ -48,7 +48,13 @@ export type ProspectElo = { rating: number; bouts: number };
 // Picked by `npm run tune:prospect` (data/ml-models/prospect-params.json,
 // 2026-10-08): +0.0065 held-out simulator log-loss, better in all four
 // windows, and the Glicko alone 0.6711 -> 0.6581 on the 2023-06+ holdout.
-export const PROSPECT_PARAMS = { k: 96, scale: 1.2 };
+export const PROSPECT_PARAMS: ProspectParams = { k: 96, scale: 1.2, unknown: 'base' };
+
+// Who has no pre-UFC bout we know of (no Sherdog URL, or none before the
+// debut): 'base' starts them at initialRating; 'average' at the average
+// starting point of the debutants we do know, so they aren't left below
+// the whole debut class.
+export type ProspectParams = { k: number; scale: number; unknown: 'base' | 'average' };
 export const PROSPECT_ELO_BASE = 1500;
 export const DEFAULT_PROSPECT_K = 32;
 
@@ -98,18 +104,43 @@ export function prospectInitialRating(elo: ProspectElo, scale: number, initialRa
 }
 
 /**
- * The initialRatingOf simulateCareerRatings takes: each fighter id's Sherdog
- * URL looked up in the pre-UFC Elo, just before their debut.
+ * The initialRatingOf simulateCareerRatings takes, for one Elo lookup.
+ * 'average' is point in time: the running average of the known debutants
+ * met so far, in the order the simulation asks (oldest debut first). Answers
+ * are memoized per fighter, so replaying the same careers twice (check-ratings
+ * does) gives the same starting ratings.
  */
+export function prospectStartingRatings(
+  lookup: (key: string, beforeDate: string) => ProspectElo,
+  sherdogUrlOf: Map<number, string>,
+  initialRating: number,
+  scale: number,
+  unknown: ProspectParams['unknown'],
+): (fighterId: number, debutDateIso: string) => number {
+  const memo = new Map<number, number>();
+  let knownSum = 0;
+  let knownCount = 0;
+  return (fighterId, debutDateIso) => {
+    if (memo.has(fighterId)) return memo.get(fighterId)!;
+    const url = sherdogUrlOf.get(fighterId);
+    const elo = url ? lookup(url, debutDateIso) : null;
+    let start: number;
+    if (elo && elo.bouts > 0) {
+      start = prospectInitialRating(elo, scale, initialRating);
+      knownSum += start;
+      knownCount += 1;
+    } else start = unknown === 'average' && knownCount > 0 ? knownSum / knownCount : initialRating;
+    memo.set(fighterId, start);
+    return start;
+  };
+}
+
+/** The same, from the Sherdog history rows, with the shipped (or given) params. */
 export function prospectInitialRatings(
   rows: ExternalHistoryRow[],
   sherdogUrlOf: Map<number, string>,
   initialRating: number,
-  params: { k: number; scale: number } = PROSPECT_PARAMS,
+  params: ProspectParams = PROSPECT_PARAMS,
 ): (fighterId: number, debutDateIso: string) => number {
-  const lookup = simulateProspectElo(collectExternalBouts(rows), params.k);
-  return (fighterId, debutDateIso) => {
-    const url = sherdogUrlOf.get(fighterId);
-    return url ? prospectInitialRating(lookup(url, debutDateIso), params.scale, initialRating) : initialRating;
-  };
+  return prospectStartingRatings(simulateProspectElo(collectExternalBouts(rows), params.k), sherdogUrlOf, initialRating, params.scale, params.unknown);
 }
