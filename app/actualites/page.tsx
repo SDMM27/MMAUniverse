@@ -3,10 +3,16 @@ import NewsCard from '@/components/ui/news/news-card';
 import NewsOrgFilter from '@/components/ui/news/news-org-filter';
 import NewsPagination from '@/components/ui/news/news-pagination';
 import EmptyState from '@/components/ui/shared/empty-state';
+import type { Metadata } from 'next';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Actualités MMA',
+  description: 'Les dernières actualités du MMA, filtrables par organisation.',
+};
 
 const PAGE_SIZE = 20;
 

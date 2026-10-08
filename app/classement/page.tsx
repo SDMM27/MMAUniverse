@@ -1,10 +1,16 @@
 // app/classement/page.tsx
 import { fetchAllTimeLeaderboard } from '@/data/lib/picks-data';
 import EmptyState from '@/components/ui/shared/empty-state';
+import type { Metadata } from 'next';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Classement des pronostiqueurs',
+  description: 'Le classement général des pronostiqueurs MMA Universe : points cumulés sur tous les événements.',
+};
 
 export default async function Page() {
   const leaderboard = await fetchAllTimeLeaderboard();

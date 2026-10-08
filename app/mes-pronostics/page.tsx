@@ -2,11 +2,18 @@
 import Link from 'next/link';
 import { getOrCreateCurrentUser, fetchUserPickHistory } from '@/data/lib/picks-data';
 import EmptyState from '@/components/ui/shared/empty-state';
+import type { Metadata } from 'next';
 
 // Queries the DB (and Clerk, for the current user) on every request instead
 // of at build time — Vercel's build step doesn't reliably have DATABASE_URL /
 // Clerk keys available yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Mes pronostics',
+  description: 'Votre historique de pronostics et vos points.',
+  robots: { index: false, follow: false },
+};
 
 export default async function Page() {
   const userId = await getOrCreateCurrentUser();

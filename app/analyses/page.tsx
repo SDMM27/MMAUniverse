@@ -16,7 +16,7 @@ import { formatInteger, formatNumber, formatPercent } from '@/components/ui/anal
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Analyses · MMA Universe',
+  title: 'Analyses',
   description: 'Les tendances du MMA et ce qui fait gagner un combat, organisation par organisation.',
 };
 
