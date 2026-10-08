@@ -1,7 +1,7 @@
 // data/scrapers/sync-ufc-rankings.ts
 //
 // Scrapes UFC.com's own official "Meta UFC Rankings" page into the generic
-// `rankings` table (see app/seed/route.ts's seedRankings). Other organizations
+// `rankings` table (see data/scripts/seed-db.ts's seedRankings). Other organizations
 // have no equivalent official source yet -- schema and UI already support any
 // organization_id, this scraper only ever writes organization_id = 1 (UFC).
 //
@@ -154,7 +154,7 @@ async function main() {
   // run rather than checking existence first -- ALTER TABLE ADD CONSTRAINT
   // has no IF NOT EXISTS in Postgres, and this table is tiny, so the
   // redundant work on a no-op run costs nothing. A fresh table
-  // (app/seed/route.ts's seedRankings) is created with the fixed constraint
+  // (data/scripts/seed-db.ts's seedRankings) is created with the fixed constraint
   // directly and never hits the DROP.
   await sql`ALTER TABLE rankings DROP CONSTRAINT IF EXISTS rankings_organization_id_weight_class_rank_key`;
   await sql`ALTER TABLE rankings DROP CONSTRAINT IF EXISTS rankings_organization_id_weight_class_rank_fighter_name_key`;

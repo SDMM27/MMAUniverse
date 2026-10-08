@@ -1,13 +1,12 @@
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import {
-  fetchFighterById,
-  fetchFighterFightHistory,
-  fetchFighterRankings,
-  fetchFighterRatingsByFighterId,
-  fetchQualityWinsByFighterId,
-} from '@/data/lib/data';
+import type { Metadata } from 'next';
+import { notFound, permanentRedirect } from 'next/navigation';
+import { fetchFighterFightHistory, fetchFighterRankings, fetchQualityWinsByFighterId } from '@/data/lib/data';
+import { getFighterRatings, resolveFighterRoute } from '@/data/lib/fighter-page-data';
+import { fighterMetadataDescription } from '@/data/lib/seo-utils';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
+import { computeCareerStats } from '@/data/lib/career-stats';
+import { fetchFighterRatingHistory, fetchFighterUfcFightStats } from '@/data/lib/fighter-profile-data';
 import { formatPhysique } from '@/data/lib/fighter-physique';
 import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
 import { ageFromBirthDate } from '@/data/lib/fighter-age';
@@ -16,21 +15,53 @@ import { CountryFlag } from '@/components/ui/shared/country-flag';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
 import FighterRecordCard from '@/components/ui/fighters/fighter-record-card';
 import FighterScoreCard from '@/components/ui/ratings/fighter-score-card';
+import FighterRatingHistory from '@/components/ui/ratings/fighter-rating-history';
+import FighterCareerStats from '@/components/ui/fighters/fighter-career-stats';
 import EmptyState from '@/components/ui/shared/empty-state';
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const route = await resolveFighterRoute(params.slug);
+  if (route.kind === 'notFound') return { title: 'Combattant introuvable', robots: { index: false } };
+  if (route.kind === 'redirect') return { robots: { index: false } };
+
+  const { fighter, canonicalPath } = route;
+  const ratings = await getFighterRatings(String(fighter.id));
+  const description = fighterMetadataDescription(fighter, ratings[0]);
+  const title = `${fighter.name} · ${fighter.weight_class} ${fighter.organization_abbreviation}`;
+  return {
+    title,
+    description,
+    alternates: { canonical: canonicalPath },
+    openGraph: {
+      title,
+      description,
+      type: 'profile',
+      url: canonicalPath,
+      // Without an explicit `images`, the route's opengraph-image.tsx is used.
+    },
+    twitter: { card: 'summary_large_image', title, description },
+  };
+}
+
 export default async function Page({ params }: { params: { slug: string } }) {
-  const fighter = await fetchFighterById(params.slug);
+  const route = await resolveFighterRoute(params.slug);
+  if (route.kind === 'notFound') notFound();
+  if (route.kind === 'redirect') permanentRedirect(route.to);
+  const { fighter } = route;
+  // Every query below takes the resolved numeric id, never the URL segment (a slug).
+  const fighterId = String(fighter.id);
 
-  if (!fighter) {
-    notFound();
-  }
-
-  const fights = await fetchFighterFightHistory(params.slug);
-  const rankings = await fetchFighterRankings(params.slug);
-  const ratings = await fetchFighterRatingsByFighterId(params.slug);
+  const fights = await fetchFighterFightHistory(fighterId);
+  const rankings = await fetchFighterRankings(fighterId);
+  const ratings = await getFighterRatings(fighterId);
   // Quality wins only make sense for a fighter we actually rated -- skip the
   // extra query for one who isn't (not yet matched, or all draws/no-contests).
-  const qualityWins = ratings.length > 0 ? await fetchQualityWinsByFighterId(params.slug) : [];
+  const [qualityWins, ratingHistory, ufcFightStats] = await Promise.all([
+    ratings.length > 0 ? fetchQualityWinsByFighterId(fighterId) : Promise.resolve([]),
+    fetchFighterRatingHistory(fighterId),
+    fetchFighterUfcFightStats(fighterId),
+  ]);
+  const careerStats = computeCareerStats(ufcFightStats);
   // Prefer a weight-class ranking over Pound-for-Pound for the header pill --
   // P4P is a bonus distinction, the weight-class rank is the primary one.
   const primaryRanking = rankings.find((r) => !r.weight_class.includes('Pound-for-Pound')) ?? rankings[0];
@@ -96,6 +127,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </div>
         <FighterScoreCard ratings={ratings} qualityWins={qualityWins} />
       </div>
+      <FighterRatingHistory history={ratingHistory} />
+      <FighterCareerStats stats={careerStats} />
       <div>
         <h2 className="mb-3 font-display text-sm uppercase tracking-wide text-ink-secondary">Historique</h2>
         {pastFights.length === 0 ? (

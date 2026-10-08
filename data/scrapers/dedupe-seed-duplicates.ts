@@ -1,6 +1,6 @@
 // data/scrapers/dedupe-seed-duplicates.ts
 //
-// One-time cleanup for duplicate rows created by re-running app/seed/route.ts
+// One-time cleanup for duplicate rows created by re-running data/scripts/seed-db.ts
 // before it was fixed to be idempotent (see the comments in seedEvents /
 // seedFighters / getFighterIdByName there). Symptom: duplicate events in
 // listings, and the same fight card rendered twice on an event page.
@@ -35,7 +35,7 @@
 //      Postgres groups NULLs together in PARTITION BY/GROUP BY (unlike `=`
 //      in a WHERE clause). This is the seedFights counterpart to step 2:
 //      before its DELETE was fixed to use IS NOT DISTINCT FROM (see
-//      app/seed/route.ts), every /seed re-run added one more copy of every
+//      data/scripts/seed-db.ts), every /seed re-run added one more copy of every
 //      fight whose fighter name never resolves — 6 pre-fix runs turned ~30
 //      unresolvable fights into 180 rows. Keeps the lowest id per group.
 //

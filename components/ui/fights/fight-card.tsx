@@ -4,6 +4,7 @@ import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { Fighter, FightWithFighters } from '@/data/lib/definitions';
 import { formatEventDate, formatEventTime } from '@/data/lib/event-utils';
 import TitleFightBadge from '@/components/ui/fights/title-fight-badge';
+import { fighterHref } from '@/data/lib/slug';
 
 type FightStatus = 'upcoming' | 'live' | 'finished';
 
@@ -147,7 +148,7 @@ function FighterColumn({
     // column — without it, a long name refuses to shrink below its own
     // content width and pushes the card wider than its container.
     <Link
-      href={`/fighters/${fighter.id}`}
+      href={fighterHref(fighter)}
       className="relative z-[2] flex min-w-0 flex-1 flex-col items-center gap-2 text-center transition-colors hover:text-accent"
     >
       <CoverImage

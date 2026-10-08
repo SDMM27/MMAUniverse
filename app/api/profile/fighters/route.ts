@@ -3,7 +3,7 @@ import { sql } from '@/data/lib/db';
 import { getOrCreateCurrentUser } from '@/data/lib/picks-data';
 import { addPreferredFighter, removePreferredFighter } from '@/data/lib/profile-data';
 
-// Same reasoning as app/seed/route.ts: without this, @neondatabase/serverless's
+// Without this (see data/lib/db.ts), @neondatabase/serverless's
 // underlying fetch() calls can get swept into Next's Data Cache.
 export const dynamic = 'force-dynamic';
 

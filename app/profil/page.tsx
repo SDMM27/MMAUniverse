@@ -8,11 +8,18 @@ import {
 } from '@/data/lib/profile-data';
 import FighterPreferencePicker from '@/components/ui/profile/fighter-preference-picker';
 import NationalityPreferencePicker from '@/components/ui/profile/nationality-preference-picker';
+import type { Metadata } from 'next';
 
 // Queries the DB (and Clerk, for the current user) on every request instead
 // of at build time — Vercel's build step doesn't reliably have DATABASE_URL /
 // Clerk keys available yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Mon profil',
+  description: 'Vos préférences : combattants favoris et nationalités suivies.',
+  robots: { index: false, follow: false },
+};
 
 export default async function Page() {
   const userId = await getOrCreateCurrentUser();

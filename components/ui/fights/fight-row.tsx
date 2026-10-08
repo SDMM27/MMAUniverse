@@ -3,6 +3,7 @@ import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { Fighter, FightWithFighters } from '@/data/lib/definitions';
 import TitleFightBadge from '@/components/ui/fights/title-fight-badge';
+import { fighterHref } from '@/data/lib/slug';
 
 type FightOutcome = 'win' | 'loss' | 'draw';
 
@@ -66,7 +67,7 @@ function FighterSide({
     // wider than its container. Setting it only on the innermost div isn't
     // enough; this Link is itself the flex item FightRow needs to shrink.
     <Link
-      href={`/fighters/${fighter.id}`}
+      href={fighterHref(fighter)}
       className={`flex min-w-0 flex-1 items-center gap-3 rounded-md transition-colors hover:text-accent ${align === 'right' ? 'flex-row-reverse text-right' : ''}`}
     >
       <CoverImage

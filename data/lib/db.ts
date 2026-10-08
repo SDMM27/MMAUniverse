@@ -10,7 +10,7 @@ function getClient() {
   if (!client) {
     // `fetchOptions: { cache: 'no-store' }` forces every underlying fetch()
     // this driver makes to opt out of Next.js's Data Cache. Route-level
-    // `export const dynamic = 'force-dynamic'` (see app/seed/route.ts) only
+    // `export const dynamic = 'force-dynamic'` (set on the API routes) only
     // opts a route out of static rendering — it does not, by itself, stop
     // Next from serving a cached response for an individual fetch() call
     // nested inside that route. Confirmed via diagnostic logging: repeated

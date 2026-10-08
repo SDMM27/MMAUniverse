@@ -1,5 +1,8 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { fetchOrganizationById, fetchEventsByOrg, fetchFightersByOrg, fetchRankingsByOrg } from '@/data/lib/data';
+import { getOrganization } from '@/data/lib/page-data';
+import { organizationMetadataDescription } from '@/data/lib/seo-utils';
+import { fetchEventsByOrg, fetchFightersByOrg, fetchRankingsByOrg } from '@/data/lib/data';
 import { CoverImage } from '@/components/ui/shared/media';
 import OrganizationHubTabs from '@/components/ui/organizations/organization-hub-tabs';
 
@@ -7,8 +10,24 @@ import OrganizationHubTabs from '@/components/ui/organizations/organization-hub-
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const organization = await getOrganization(params.slug);
+  if (!organization) return { title: 'Organisation introuvable', robots: { index: false } };
+
+  const title = `${organization.name} (${organization.abbreviation})`;
+  const description = organizationMetadataDescription(organization);
+  const canonical = `/organizations/${organization.id}`;
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: { title, description, url: canonical },
+    twitter: { card: 'summary_large_image', title, description },
+  };
+}
+
 export default async function Page({ params }: { params: { slug: string } }) {
-  const organization = await fetchOrganizationById(params.slug);
+  const organization = await getOrganization(params.slug);
 
   if (!organization) {
     notFound();
