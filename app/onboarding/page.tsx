@@ -9,11 +9,18 @@ import {
 } from '@/data/lib/profile-data';
 import FighterPreferencePicker from '@/components/ui/profile/fighter-preference-picker';
 import NationalityPreferencePicker from '@/components/ui/profile/nationality-preference-picker';
+import type { Metadata } from 'next';
 
 // Queries the DB (and Clerk, for the current user) on every request instead
 // of at build time — Vercel's build step doesn't reliably have DATABASE_URL /
 // Clerk keys available yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Bienvenue',
+  description: 'Choisissez vos combattants et nationalités favoris pour personnaliser MMA Universe.',
+  robots: { index: false, follow: false },
+};
 
 export default async function Page() {
   const userId = await getOrCreateCurrentUser();

@@ -3,10 +3,16 @@ import FightersGrid from '@/components/ui/fighters/fighters-grid';
 import FightersSearchBar from '@/components/ui/fighters/fighters-search-bar';
 import FightersPagination from '@/components/ui/fighters/fighters-pagination';
 import EmptyState from '@/components/ui/shared/empty-state';
+import type { Metadata } from 'next';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Combattants MMA',
+  description: 'Recherchez parmi les combattants MMA de toutes les organisations : bilan, catégorie de poids, nationalité et fiche détaillée.',
+};
 
 const PAGE_SIZE = 24;
 

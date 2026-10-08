@@ -18,10 +18,17 @@ import FightScoreHero from '@/components/ui/ratings/fightscore-hero';
 import PoundForPoundList from '@/components/ui/ratings/pound-for-pound-list';
 import DivisionLeadersGrid from '@/components/ui/ratings/division-leaders-grid';
 import { FighterRatingWithFighter } from '@/data/lib/definitions';
+import type { Metadata } from 'next';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: { absolute: 'MMA Universe : événements, classements et FightScore' },
+  description: "Les prochains événements MMA, les derniers résultats, le classement FightScore et les actualités de l'UFC, du PFL, du Bellator et de bien d'autres organisations.",
+  alternates: { canonical: '/' },
+};
 
 const RECENT_RESULTS_COUNT = 4;
 const HOME_NEWS_COUNT = 4;
