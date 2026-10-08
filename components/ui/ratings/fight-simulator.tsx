@@ -4,7 +4,10 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
+import TaleOfTheTape from '@/components/ui/ratings/tale-of-the-tape';
 import { SimulatorFighter } from '@/data/lib/definitions';
+import type { MainEventPrefill } from '@/data/lib/simulator-data';
+import { buildSimulatorPath } from '@/data/lib/simulator-params';
 import { predictFight } from '@/data/lib/rating/simulate-fight';
 import { FINISH_METHODS, contextMix, predictOutcomes, type FinishMethod } from '@/data/lib/rating/fight-outcome';
 import { FIGHT_OUTCOME_MODEL } from '@/data/lib/rating/fight-outcome-model';
@@ -237,9 +240,49 @@ function AgeNote({ a, b, prediction }: { a: SimulatorFighter; b: SimulatorFighte
   );
 }
 
-export default function FightSimulator({ fighters }: { fighters: SimulatorFighter[] }) {
-  const [a, setA] = useState<SimulatorFighter | null>(null);
-  const [b, setB] = useState<SimulatorFighter | null>(null);
+export default function FightSimulator({
+  fighters,
+  initialA = null,
+  initialB = null,
+  prefill = null,
+}: {
+  fighters: SimulatorFighter[];
+  initialA?: number | null;
+  initialB?: number | null;
+  prefill?: MainEventPrefill | null;
+}) {
+  const byId = (id: number | null) => (id == null ? null : (fighters.find((f) => f.fighter_id === id) ?? null));
+  const [a, setA] = useState<SimulatorFighter | null>(() => byId(initialA));
+  const [b, setB] = useState<SimulatorFighter | null>(() => byId(initialB));
+  const [copied, setCopied] = useState(false);
+
+  // Event handlers (not an effect) own the URL sync, so there is no loop to
+  // worry about; replaceState keeps the history clean and the scroll in place.
+  const select = (corner: 'a' | 'b', fighter: SimulatorFighter | null) => {
+    const next = { a: corner === 'a' ? fighter : a, b: corner === 'b' ? fighter : b };
+    setA(next.a);
+    setB(next.b);
+    setCopied(false);
+    try {
+      window.history.replaceState(null, '', buildSimulatorPath({ a: next.a?.fighter_id ?? null, b: next.b?.fighter_id ?? null }));
+    } catch {
+      // URL sync is best-effort.
+    }
+  };
+
+  const copyLink = async () => {
+    if (!a || !b) return;
+    try {
+      await navigator.clipboard.writeText(window.location.origin + buildSimulatorPath({ a: a.fighter_id, b: b.fighter_id }));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  // The label only makes sense while the corners are still the prefilled ones.
+  const showPrefill = prefill && a?.fighter_id === prefill.a && b?.fighter_id === prefill.b;
 
   // Men and women's ratings are computed on separate pools that never fight
   // each other, so a mixed matchup would compare numbers that mean nothing
@@ -257,10 +300,21 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
 
   return (
     <div className="flex flex-col gap-6">
+      {prefill && showPrefill && (
+        <p className="text-xs text-ink-secondary">
+          Main event de{' '}
+          <Link href={`/events/${prefill.eventId}`} className="text-accent hover:underline">
+            {prefill.eventName}
+          </Link>
+          {prefill.eventDate && ` · ${prefill.eventDate}`}
+        </p>
+      )}
       <div className="grid gap-4 md:grid-cols-2">
-        <FighterPicker label="Coin rouge" options={optionsFor(b)} selected={a} onSelect={setA} />
-        <FighterPicker label="Coin bleu" options={optionsFor(a)} selected={b} onSelect={setB} />
+        <FighterPicker label="Coin rouge" options={optionsFor(b)} selected={a} onSelect={(f) => select('a', f)} />
+        <FighterPicker label="Coin bleu" options={optionsFor(a)} selected={b} onSelect={(f) => select('b', f)} />
       </div>
+
+      {a && b && <TaleOfTheTape a={a} b={b} />}
 
       {a && b && rating && prediction ? (
         <div className="rounded-xl border border-base-border bg-base-card p-5">
@@ -303,6 +357,11 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
             ))}
           </div>
           <OutcomeBreakdown a={a} b={b} winA={prediction.winA} rounds={rounds} />
+          <div className="mt-4 flex justify-end">
+            <button type="button" onClick={copyLink} className="text-xs uppercase tracking-wide text-accent hover:underline">
+              {copied ? 'Lien copié' : 'Copier le lien'}
+            </button>
+          </div>
         </div>
       ) : (
         <p className="rounded-xl border border-dashed border-base-border p-6 text-center text-sm text-ink-secondary">
