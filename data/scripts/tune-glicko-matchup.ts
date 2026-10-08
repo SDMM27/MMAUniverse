@@ -21,6 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_GLICKO_PARAMS, type GlickoParams } from '../lib/rating/glicko-rating';
 import { simulateCareerRatings } from '../lib/rating/simulate-career';
+import { loadProspectPrior } from './prospect-data';
 import { patternSearch, type ParamSearchSpace } from '../lib/rating/point-flow-tuning';
 import { MATCHUP_MODEL } from '../lib/rating/matchup-model-tuned';
 import { attachRatings, fit, line, loadMatchupData, metrics, testFromDateOf, windowMetrics, withModel, type MatchupContext } from './matchup-tuning';
@@ -40,10 +41,10 @@ const SEARCH_SPACE: ParamSearchSpace<GlickoParams> = {
 };
 const { winScoreFloor: _floor, ...RANKING_SAFE_SPACE } = SEARCH_SPACE;
 
-type Data = { fights: CareerFightInput[]; noResults: CareerNoResultInput[]; contexts: MatchupContext[] };
+type Data = { fights: CareerFightInput[]; noResults: CareerNoResultInput[]; contexts: MatchupContext[]; initialRatingOf: (fighterId: number, debutDateIso: string) => number };
 
 function evaluate(data: Data, params: GlickoParams, testFromDate: string, veteranAge: number) {
-  const samples = attachRatings(data.contexts, simulateCareerRatings(data.fights, data.noResults, params).history);
+  const samples = attachRatings(data.contexts, simulateCareerRatings(data.fights, data.noResults, params, data.initialRatingOf).history);
   const train = samples.filter((s) => s.date < testFromDate);
   const test = samples.filter((s) => s.date >= testFromDate);
   const model = fit(train, veteranAge);
@@ -84,7 +85,8 @@ function search(data: Data, space: ParamSearchSpace<GlickoParams>, label: string
 }
 
 async function main() {
-  const data = await loadMatchupData();
+  // Debutants start from their pre-UFC record, as the shipped ratings do (data/lib/rating/prospect-rating.ts).
+  const data = { ...(await loadMatchupData()), initialRatingOf: await loadProspectPrior() };
   const { veteranAge } = MATCHUP_MODEL;
   const testFromDate = testFromDateOf(data.contexts);
   console.log(`${data.contexts.length} decided UFC fights. Tuning on fights before ${testFromDate}, testing from it. veteranAge ${veteranAge} (shipped layer).`);

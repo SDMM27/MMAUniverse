@@ -7,9 +7,10 @@
 // WITHOUT writing anything. Read-only against Neon (fights + current
 // champions). Run with `npm run check:ratings` (`--refresh` to re-fetch the
 // fights, `--params '{"rdPerMonth":30}'` to try other constants, `--top 15`
-// for longer per-division lists, `--prospect` to start debutants from their
-// pre-UFC record, see data/lib/rating/prospect-rating.ts; `--prospect-unknown
-// average` to try the other start for debutants without a known record).
+// for longer per-division lists, `--no-prospect` to start every debutant at
+// 1500 instead of from their pre-UFC record, see data/lib/rating/
+// prospect-rating.ts; `--prospect-unknown average` to try the other start
+// for debutants without a known record).
 import { neon } from '@neondatabase/serverless';
 import { DEFAULT_GLICKO_PARAMS, conservativeRating, type GlickoParams } from '../lib/rating/glicko-rating';
 import { simulateCareerRatings, ratingAsOf } from '../lib/rating/simulate-career';
@@ -28,8 +29,8 @@ import {
 } from '../lib/rating/sanity-checks';
 import { sortWeightClassGroups } from '../lib/rating/order-division';
 import { loadData, loadEnvLocal, toCareerInputs } from './tuning-data';
-import { loadExternalHistory } from './matchup-tuning';
-import { PROSPECT_PARAMS, prospectInitialRatings, type ProspectParams } from '../lib/rating/prospect-rating';
+import { loadProspectPrior } from './prospect-data';
+import { PROSPECT_PARAMS, type ProspectParams } from '../lib/rating/prospect-rating';
 
 const TEST_SHARE = 0.2;
 const POINT_FLOW_REFERENCE_LOG_LOSS = 0.6767;
@@ -74,11 +75,11 @@ async function main() {
   const championIdByDivision = new Map(rankingRows.filter((r) => r.rank === 0).map((r) => [r.weight_class, r.fighter_id]));
   const officialDivisionByFighter = new Map(rankingRows.map((r) => [r.fighter_id, r.weight_class]));
   let initialRatingOf: ((fighterId: number, debutDateIso: string) => number) | undefined;
-  if (process.argv.includes('--prospect')) {
-    const { rows, sherdogUrlOf } = await loadExternalHistory();
+  if (process.argv.includes('--no-prospect')) console.log('Niveau de départ des débutants : 1500 pour tous (--no-prospect)');
+  else {
     const unknownIndex = process.argv.indexOf('--prospect-unknown');
     const prospect = { ...PROSPECT_PARAMS, ...(unknownIndex === -1 ? {} : { unknown: process.argv[unknownIndex + 1] as ProspectParams['unknown'] }) };
-    initialRatingOf = prospectInitialRatings(rows, sherdogUrlOf, params.initialRating, prospect);
+    initialRatingOf = await loadProspectPrior(prospect, params.initialRating);
     console.log(`Niveau de départ des débutants d'après leur palmarès hors UFC : ${JSON.stringify(prospect)}`);
   }
 

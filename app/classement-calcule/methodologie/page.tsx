@@ -77,6 +77,14 @@ export default function Page() {
           qu&apos;un combattant ne puisse pas rester classé devant quelqu&apos;un qui vient de le battre.
         </p>
         <p>
+          Un nouveau venu ne part pas de zéro : sa note de départ dépend de son parcours avant l&apos;UFC. On note tous
+          les combats hors UFC connus de Sherdog, toutes organisations confondues, comme on note ceux de l&apos;UFC :
+          battre des adversaires qui ont eux-mêmes battu du monde compte beaucoup, enchaîner les victoires contre des
+          débutants presque rien. Un ancien champion du Bellator ou du PFL démarre donc plus haut qu&apos;un
+          combattant sorti d&apos;un circuit régional avec le même palmarès. Sans parcours connu, il démarre au niveau
+          de base.
+        </p>
+        <p>
           Chaque note est accompagnée d&apos;une marge d&apos;incertitude. Elle est grande pour un nouveau venu, se
           resserre à chaque combat, et s&apos;élargit à nouveau avec l&apos;inactivité ou un changement de catégorie.
           Le classement utilise une note prudente, la note moins deux fois cette marge : ce que l&apos;on peut affirmer

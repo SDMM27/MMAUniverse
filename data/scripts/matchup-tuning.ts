@@ -11,7 +11,6 @@ import { loadData, loadEnvLocal, toCareerInputs } from './tuning-data';
 import type { CareerFightInput, CareerHistoryEntry, CareerNoResultInput } from '../lib/rating/simulate-career';
 import { predictFight } from '../lib/rating/simulate-fight';
 import type { GlickoRating } from '../lib/rating/glicko-rating';
-import type { ExternalHistoryRow } from '../lib/rating/prospect-rating';
 import {
   MATCHUP_SHAPE,
   MATCHUP_TERMS,
@@ -128,26 +127,6 @@ export async function loadMatchupData(): Promise<{ fights: CareerFightInput[]; n
   const birth = new Map(fighters.filter((f) => f.birth_date).map((f) => [f.id, f.birth_date!]));
   const reach = new Map(fighters.filter((f) => f.reach_cm).map((f) => [f.id, Number(f.reach_cm)]));
   return { fights, noResults, contexts: buildMatchupContexts(fights, stats, birth, reach) };
-}
-
-/**
- * Every Sherdog history row (fighter_fight_history), keyed by Sherdog URL, and
- * each fighter id's Sherdog URL -- for the pre-UFC prior (prospect-rating.ts).
- */
-export async function loadExternalHistory(): Promise<{ rows: ExternalHistoryRow[]; sherdogUrlOf: Map<number, string> }> {
-  loadEnvLocal();
-  const sql = neon(process.env.DATABASE_URL!);
-  console.log('Loading fighter_fight_history + fighters.sherdog_url from Neon...');
-  const history = (await sql`
-    SELECT f.sherdog_url AS owner, h.opponent_sherdog_url AS opponent, h.event_name, h.event_date, h.result
-    FROM fighter_fight_history h JOIN fighters f ON f.id = h.fighter_id
-    WHERE f.sherdog_url IS NOT NULL
-  `) as { owner: string; opponent: string | null; event_name: string; event_date: string | null; result: string }[];
-  const fighters = (await sql`SELECT id, sherdog_url FROM fighters WHERE sherdog_url IS NOT NULL`) as { id: number; sherdog_url: string }[];
-  return {
-    rows: history.map((h) => ({ owner: h.owner, opponent: h.opponent, eventName: h.event_name, date: h.event_date, result: h.result })),
-    sherdogUrlOf: new Map(fighters.map((f) => [f.id, f.sherdog_url])),
-  };
 }
 
 /** Each context with the pre-fight odds of one career simulation, as the simulator computes them (predictFight). */

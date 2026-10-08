@@ -14,6 +14,8 @@
 // layer by ~0.005, what's left to gain is in the data, not the model.
 // Writes nothing; read-only against Neon.
 import { simulateCareerRatings } from '../lib/rating/simulate-career';
+import { DEFAULT_GLICKO_PARAMS } from '../lib/rating/glicko-rating';
+import { loadProspectPrior } from './prospect-data';
 import { MATCHUP_TERMS, matchupFeatures, profileRates, MATCHUP_SHAPE, type MatchupProfile } from '../lib/rating/matchup-model';
 import { MATCHUP_MODEL } from '../lib/rating/matchup-model-tuned';
 import { DEFAULT_GBM_PARAMS, fitGbm, predictGbm, type GbmParams } from '../lib/rating/gradient-boosting';
@@ -84,7 +86,7 @@ const fmt = (m: Metrics) => `${m.logLoss.toFixed(4)} (${(m.accuracy * 100).toFix
 
 async function main() {
   const { fights, noResults, contexts } = await loadMatchupData();
-  const samples = attachRatings(contexts, simulateCareerRatings(fights, noResults).history);
+  const samples = attachRatings(contexts, simulateCareerRatings(fights, noResults, DEFAULT_GLICKO_PARAMS, await loadProspectPrior()).history);
   console.log(`${samples.length} decided UFC fights. Log-loss (accuracy), trained before each window and tested inside it.\n`);
   console.log(`  ${'window'.padEnd(32)} ${'linear layer'.padEnd(17)} ${'GBM same inputs'.padEnd(17)} GBM raw`);
 

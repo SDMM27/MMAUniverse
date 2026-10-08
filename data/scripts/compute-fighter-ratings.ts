@@ -29,6 +29,7 @@ import { normalizeWeightClass } from '../lib/rating/normalize-weight-class';
 import { simulateDivisionRatings, type DivisionFightInput, type DivisionNoResultInput } from '../lib/rating/simulate-division';
 import { simulateCareerRatings, ratingAsOf, type CareerFightInput, type CareerNoResultInput } from '../lib/rating/simulate-career';
 import { conservativeRating, DEFAULT_GLICKO_PARAMS } from '../lib/rating/glicko-rating';
+import { loadProspectPrior } from './prospect-data';
 import { homeDivision, isEligibleInDivision, divisionDisplayScores, poundForPoundScores, capChallengersBelowChampion } from '../lib/rating/display-scores';
 import { classifyStyles, decayedTotals, type StyleSample } from '../lib/rating/style-archetype';
 import { predictProbability } from '../lib/rating/logistic-regression';
@@ -369,7 +370,8 @@ async function main() {
   const careerNoResults: CareerNoResultInput[] = Array.from(noResultsByDivision.entries())
     .flatMap(([division, list]) => list.map((n) => ({ ...n, division })))
     .sort(byDate);
-  const career = simulateCareerRatings(careerFights, careerNoResults);
+  // Debutants start from their pre-UFC record (data/lib/rating/prospect-rating.ts).
+  const career = simulateCareerRatings(careerFights, careerNoResults, DEFAULT_GLICKO_PARAMS, await loadProspectPrior());
   const ratingToday = new Map(Array.from(career.fighterStates.entries()).map(([id, state]) => [id, ratingAsOf(state, todayIso)]));
   const conservativeToday = (id: number) => conservativeRating(ratingToday.get(id)!.rating, ratingToday.get(id)!.rd, DEFAULT_GLICKO_PARAMS);
 
