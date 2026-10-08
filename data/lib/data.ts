@@ -16,6 +16,8 @@ import {
   } from './definitions';
 import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization, selectHeadlineFightPerEvent } from './event-utils';
 import { displayWeightClass } from './fight-utils';
+import { combineProfiles, emptyProfile, type FinishMethod, type OutcomeProfile } from './rating/fight-outcome';
+import { FIGHT_OUTCOME_MODEL } from './rating/fight-outcome-model';
 
 export async function fetchOrganizations() {
     try {
@@ -820,8 +822,10 @@ export async function fetchSimulatorFighters() {
       WHERE fr.is_ranking_eligible = true AND fr.rating_deviation IS NOT NULL
       ORDER BY fr.fighter_id, fr.is_champion DESC, fr.display_score DESC
     `;
+    const profiles = await fetchOutcomeProfiles();
     return data.rows
       .map((row): SimulatorFighter => ({
+        outcome_profile: profiles.get(row.fighter_id) ?? emptyProfile(),
         fighter_id: row.fighter_id,
         fighter_name: row.fighter_name,
         fighter_image_url: row.fighter_image_url,
@@ -837,6 +841,48 @@ export async function fetchSimulatorFighters() {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch simulator fighters.');
   }
+}
+
+// How every rated fighter's past fights ended, for the simulator's method and
+// round model: UFC fights from UFCStats, other organizations from Sherdog
+// (whose UFC entries are skipped, UFCStats already has them), counted at the
+// tuned externalWeight. Grouped in SQL so only a few rows per fighter come back;
+// the method classes mirror classifyMethod.
+async function fetchOutcomeProfiles(): Promise<Map<number, OutcomeProfile>> {
+  const data = await sql<{ fighter_id: number; src: 'ufc' | 'ext'; won: boolean; method: FinishMethod; n: string; round_n: string; round_sum: string | null }>`
+    WITH rated AS (SELECT DISTINCT fighter_id FROM fighter_ratings WHERE is_ranking_eligible = true),
+    fights AS (
+      SELECT s.fighter_id, 'ufc' AS src, s.result, s.method, s.finish_round AS round
+      FROM fighter_fight_stats s JOIN rated r ON r.fighter_id = s.fighter_id
+      UNION ALL
+      SELECT h.fighter_id, 'ext', h.result, h.method, h.round
+      FROM fighter_fight_history h JOIN rated r ON r.fighter_id = h.fighter_id
+      WHERE h.event_name !~* '^UFC'
+    ),
+    classified AS (
+      SELECT fighter_id, src, result = 'win' AS won, round,
+        CASE WHEN method ~* '^(Technical )?Decision' THEN 'dec'
+             WHEN method ~* '^(Technical )?Submission' THEN 'sub'
+             WHEN method ~* '^T?KO' OR method ~* 'Doctor' THEN 'ko' END AS method
+      FROM fights WHERE result IN ('win', 'loss')
+    )
+    SELECT fighter_id, src, won, method, COUNT(*) AS n,
+      COUNT(round) FILTER (WHERE method <> 'dec' AND round > 0) AS round_n,
+      SUM(round) FILTER (WHERE method <> 'dec' AND round > 0) AS round_sum
+    FROM classified WHERE method IS NOT NULL
+    GROUP BY fighter_id, src, won, method
+  `;
+  const raw = new Map<number, { ufc: OutcomeProfile; ext: OutcomeProfile }>();
+  for (const row of data.rows) {
+    if (!raw.has(row.fighter_id)) raw.set(row.fighter_id, { ufc: emptyProfile(), ext: emptyProfile() });
+    const profile = raw.get(row.fighter_id)![row.src];
+    (row.won ? profile.wins : profile.losses)[row.method] += Number(row.n);
+    const finishes = row.won ? profile.finishWins : profile.finishLosses;
+    finishes.count += Number(row.round_n);
+    finishes.roundSum += Number(row.round_sum ?? 0);
+  }
+  const { externalWeight } = FIGHT_OUTCOME_MODEL.params;
+  return new Map(Array.from(raw).map(([id, { ufc, ext }]) => [id, combineProfiles(ufc, ext, externalWeight)]));
 }
 
 // Surfaces the "adversaire bien classé" signal explicitly on the fighter/

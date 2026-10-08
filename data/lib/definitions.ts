@@ -1,3 +1,5 @@
+import type { OutcomeProfile } from './rating/fight-outcome';
+
 export type Organization = {
     id: number;
     name: string;
@@ -287,4 +289,5 @@ export type SimulatorFighter = {
   rd: number;
   is_champion: boolean;
   current_streak: number;
+  outcome_profile: OutcomeProfile; // how their past fights ended, for the method/round model
 };

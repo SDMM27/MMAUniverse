@@ -19,8 +19,9 @@ export default async function Page() {
         <h1 className="mt-2 font-display text-4xl uppercase leading-none text-ink-primary md:text-5xl">Simulateur de combat</h1>
         <p className="mt-3 max-w-2xl text-sm text-ink-secondary">
           Choisis deux combattants : la simulation compare leur niveau FightScore (et l&apos;incertitude sur ce niveau) pour
-          estimer les chances de victoire de chacun. C&apos;est une estimation statistique, pas une prédiction du style de
-          combat ni de la forme du jour.{' '}
+          estimer les chances de victoire de chacun, puis la méthode et le round à partir de la façon dont leurs combats passés
+          se sont terminés (KO, soumission, décision) et de la moyenne de leur catégorie. C&apos;est une estimation
+          statistique, pas une prédiction de la forme du jour.{' '}
           <Link href="/classement-calcule/methodologie" className="text-accent hover:underline">
             Comment ça marche
           </Link>

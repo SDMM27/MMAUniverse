@@ -39,6 +39,7 @@
     "train:win-predictor": "tsx data/scripts/train-win-predictor.ts",
     "tune:ratings": "tsx data/scripts/tune-point-flow.ts",
     "tune:glicko": "tsx data/scripts/tune-glicko.ts",
+    "tune:outcome": "tsx data/scripts/tune-fight-outcome.ts",
     "check:ratings": "tsx data/scripts/check-ratings.ts"
   },
   "engines": {
