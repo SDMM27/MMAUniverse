@@ -813,10 +813,12 @@ export async function fetchSimulatorFighters() {
       rating_deviation: string | null;
       is_champion: boolean;
       current_streak: number;
+      age: string | null;
     }>`
       SELECT DISTINCT ON (fr.fighter_id)
         fr.fighter_id, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality,
-        fr.weight_class, fr.points, fr.rating_deviation, fr.is_champion, fr.current_streak
+        fr.weight_class, fr.points, fr.rating_deviation, fr.is_champion, fr.current_streak,
+        (CURRENT_DATE - f.birth_date) / 365.25 AS age
       FROM fighter_ratings fr
       JOIN fighters f ON f.id = fr.fighter_id
       WHERE fr.is_ranking_eligible = true AND fr.rating_deviation IS NOT NULL
@@ -835,6 +837,7 @@ export async function fetchSimulatorFighters() {
         rd: Number(row.rating_deviation),
         is_champion: row.is_champion,
         current_streak: row.current_streak,
+        age: row.age == null ? null : Number(row.age),
       }))
       .sort((a, b) => b.rating - a.rating);
   } catch (error) {

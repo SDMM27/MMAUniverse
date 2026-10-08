@@ -40,6 +40,7 @@
     "tune:ratings": "tsx data/scripts/tune-point-flow.ts",
     "tune:glicko": "tsx data/scripts/tune-glicko.ts",
     "tune:outcome": "tsx data/scripts/tune-fight-outcome.ts",
+    "tune:age": "tsx data/scripts/tune-age-adjustment.ts",
     "check:ratings": "tsx data/scripts/check-ratings.ts"
   },
   "engines": {
