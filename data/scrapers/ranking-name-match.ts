@@ -1,7 +1,7 @@
 // data/scrapers/ranking-name-match.ts
 //
 // No fuzzy-matching utility exists elsewhere in this codebase -- resolveFighterIds
-// in data/lib/data.ts and getFighterIdByName in app/seed/route.ts both do exact
+// in data/lib/data.ts and getFighterIdByName in data/scripts/seed-db.ts both do exact
 // `name =` comparisons against Sherdog-sourced names. UFC.com's and UFCStats'
 // names often differ from Sherdog's (our fighters.name): accents/punctuation
 // ("Benoît" / "Waldo Cortes-Acosta"), "St." vs "Saint", Jr./III suffixes,

@@ -1,19 +1,28 @@
-import { sql } from '@/data/lib/db';
-import { organizations } from '@/data/lib/placeholder-data';
-import type { ScrapedOrgData } from '@/data/scrapers/shared/types';
-import ufcData from '@/data/scraped/ufc.json';
-import pflData from '@/data/scraped/pfl.json';
-import bellatorData from '@/data/scraped/bellator.json';
-import oneData from '@/data/scraped/one.json';
+// data/scripts/seed-db.ts
+//
+// Creates the core schema (organizations, events, fights, fighters, rankings,
+// pick'em and profile-preference tables) and seeds it from the UFC/PFL/
+// Bellator/ONE datasets in data/scraped/. Formerly the public `/seed` route
+// handler, which anyone could call in production and which bundled ~65 MB of
+// JSON into a serverless function; now a local CLI only.
+//
+// Usage: npm run seed:db   (reads DATABASE_URL from .env.local)
 
-const orgDatasets = [ufcData, pflData, bellatorData, oneData] as ScrapedOrgData[];
+import fs from 'node:fs';
+import path from 'node:path';
+import dotenv from 'dotenv';
 
-// Route Handlers cache underlying fetch() calls by default in Next.js 14's App
-// Router. @neondatabase/serverless issues its queries as POST fetch() calls
-// under the hood, so without this they get swept into Next's Data Cache like
-// any other fetch — a query replayed from cache silently returns stale data
-// instead of hitting the database again.
-export const dynamic = 'force-dynamic';
+dotenv.config({ path: path.resolve('.env.local') });
+
+import { sql } from '../lib/db';
+import { organizations } from '../lib/placeholder-data';
+import type { ScrapedOrgData } from '../scrapers/shared/types';
+
+const SCRAPED_DIR = path.resolve('data/scraped');
+
+const orgDatasets = ['ufc', 'pfl', 'bellator', 'one'].map(
+  (key) => JSON.parse(fs.readFileSync(path.join(SCRAPED_DIR, `${key}.json`), 'utf-8')) as ScrapedOrgData,
+);
 
 async function seedOrganizations() {
 
@@ -322,19 +331,18 @@ async function seedProfilePreferencesSchema() {
   `;
 }
 
-export async function GET() {
-  try {
-    await seedOrganizations(); // Cette fonction doit être exécutée en premier
-    await seedEvents();        // Dépend de `organizations`
-    await seedFighters();      // Peut dépendre de `organizations`
-    await seedFights();        // Dépend de `events` et `fighters`
-    await seedRankings();      // Dépend de `organizations` et `fighters` (fighter_id FK)
-    await seedPickemSchema();  // Dépend de `fighters` (predicted_winner_id FK)
-    await seedProfilePreferencesSchema(); // Dépend de `users` et `fighters`
-
-    return Response.json({ message: 'Database seeded successfully' });
-  } catch (error) {
-    console.error(error);  // Pour un meilleur débogage
-    return Response.json({ error }, { status: 500 });
-  }
+async function main() {
+  await seedOrganizations(); // Cette fonction doit être exécutée en premier
+  await seedEvents();        // Dépend de `organizations`
+  await seedFighters();      // Peut dépendre de `organizations`
+  await seedFights();        // Dépend de `events` et `fighters`
+  await seedRankings();      // Dépend de `organizations` et `fighters` (fighter_id FK)
+  await seedPickemSchema();  // Dépend de `fighters` (predicted_winner_id FK)
+  await seedProfilePreferencesSchema(); // Dépend de `users` et `fighters`
+  console.log('Database seeded successfully');
 }
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
