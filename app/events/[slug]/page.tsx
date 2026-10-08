@@ -1,5 +1,8 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { fetchEventById, fetchEventsByOrg, fetchFightsByEvent } from '@/data/lib/data';
+import { fetchEventsByOrg } from '@/data/lib/data';
+import { getEvent, getEventFights } from '@/data/lib/page-data';
+import { eventMetadataDescription } from '@/data/lib/seo-utils';
 import { displayEventName, formatEventDate, formatEventTime } from '@/data/lib/event-utils';
 import { splitMainEvent } from '@/data/lib/fight-utils';
 import { isEventLocked } from '@/data/lib/pick-lock';
@@ -11,15 +14,38 @@ import FightRow from '@/components/ui/fights/fight-row';
 import FightPickSection from '@/components/ui/picks/fight-pick-section';
 import EmptyState from '@/components/ui/shared/empty-state';
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const event = await getEvent(params.slug);
+  if (!event) return { title: 'Événement introuvable', robots: { index: false } };
+
+  const fights = await getEventFights(params.slug);
+  const title = `${displayEventName(event.name)} · ${event.organization_abbreviation}`;
+  const description = eventMetadataDescription(event, splitMainEvent(fights).mainEvent);
+  const canonical = `/events/${event.id}`;
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      // The event poster when there is one, else the site-wide share image.
+      ...(event.event_poster?.startsWith('http') ? { images: [{ url: event.event_poster, alt: displayEventName(event.name) }] } : {}),
+    },
+    twitter: { card: 'summary_large_image', title, description },
+  };
+}
+
 export default async function Page({ params }: { params: { slug: string } }) {
-  const event = await fetchEventById(params.slug);
+  const event = await getEvent(params.slug);
 
   if (!event) {
     notFound();
   }
 
   const [fights, orgEvents] = await Promise.all([
-    fetchFightsByEvent(params.slug),
+    getEventFights(params.slug),
     fetchEventsByOrg(String(event.organization_id)),
   ]);
   const { mainEvent, rest } = splitMainEvent(fights);
