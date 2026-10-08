@@ -15,6 +15,7 @@ import { collectCareerRatingDiffs } from '../lib/rating/glicko-tuning';
 import { collectWinnerLogRatios, evaluateLogRatios, fitScale, patternSearch, type ParamSearchSpace } from '../lib/rating/point-flow-tuning';
 import { DEFAULT_POINT_FLOW_PARAMS } from '../lib/rating/point-flow';
 import { loadData, toCareerInputs } from './tuning-data';
+import { loadProspectPrior } from './prospect-data';
 
 const OUTPUT_FILE = path.resolve('data/ml-models/glicko-params.json');
 const TEST_SHARE = 0.2;
@@ -33,6 +34,8 @@ const pct = (v: number) => `${(v * 100).toFixed(1)}%`;
 
 async function main() {
   const data = await loadData();
+  // Debutants start from their pre-UFC record, as the shipped ratings do (data/lib/rating/prospect-rating.ts).
+  const initialRatingOf = await loadProspectPrior();
   const { fights, noResults } = toCareerInputs(data);
   const dates = fights.map((f) => f.eventDate);
   const testFromDate = dates[Math.floor(dates.length * (1 - TEST_SHARE))];
@@ -43,7 +46,7 @@ async function main() {
   const pointFlowTest = evaluateLogRatios(pointFlow.test, pointFlowScale);
 
   const evaluate = (params: GlickoParams) => {
-    const split = collectCareerRatingDiffs(fights, noResults, params, testFromDate);
+    const split = collectCareerRatingDiffs(fights, noResults, params, testFromDate, initialRatingOf);
     const scale = fitScale(split.train);
     return { scale, train: evaluateLogRatios(split.train, scale), test: evaluateLogRatios(split.test, scale), movers: evaluateLogRatios(split.testMovers, scale) };
   };

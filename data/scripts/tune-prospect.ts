@@ -23,7 +23,8 @@ import { DEFAULT_GLICKO_PARAMS } from '../lib/rating/glicko-rating';
 import { simulateCareerRatings } from '../lib/rating/simulate-career';
 import { collectExternalBouts, prospectStartingRatings, simulateProspectElo, type ProspectParams } from '../lib/rating/prospect-rating';
 import { MATCHUP_MODEL } from '../lib/rating/matchup-model-tuned';
-import { WINDOWS, attachRatings, fit, line, loadExternalHistory, loadMatchupData, metrics, testFromDateOf, withModel, type Metrics, type Sample } from './matchup-tuning';
+import { WINDOWS, attachRatings, fit, line, loadMatchupData, metrics, testFromDateOf, withModel, type Metrics, type Sample } from './matchup-tuning';
+import { loadExternalHistory } from './prospect-data';
 
 const OUTPUT_FILE = path.resolve('data/ml-models/prospect-params.json');
 const K_VALUES = [32, 48, 64, 96];

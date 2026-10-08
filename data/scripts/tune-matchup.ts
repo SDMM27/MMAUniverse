@@ -18,6 +18,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { simulateCareerRatings } from '../lib/rating/simulate-career';
+import { DEFAULT_GLICKO_PARAMS } from '../lib/rating/glicko-rating';
+import { loadProspectPrior } from './prospect-data';
 import type { MatchupModel, MatchupTerm } from '../lib/rating/matchup-model';
 import { attachRatings, fit, line, loadMatchupData, metrics, testFromDateOf, windowMetrics, withModel, type Sample } from './matchup-tuning';
 
@@ -27,7 +29,7 @@ const AGE_TERMS: MatchupTerm[] = ['rating', 'age', 'veteran'];
 
 async function loadSamples(): Promise<Sample[]> {
   const { fights, noResults, contexts } = await loadMatchupData();
-  return attachRatings(contexts, simulateCareerRatings(fights, noResults).history);
+  return attachRatings(contexts, simulateCareerRatings(fights, noResults, DEFAULT_GLICKO_PARAMS, await loadProspectPrior()).history);
 }
 
 async function main() {
