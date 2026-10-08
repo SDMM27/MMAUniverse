@@ -4,15 +4,30 @@
     {
       "name": "mma-universe-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000,
       "autoPort": true
     },
     {
       "name": "mobile-web",
       "runtimeExecutable": "cmd",
-      "runtimeArgs": ["/c", "cd mobile && npx expo start --web"],
+      "runtimeArgs": [
+        "/c",
+        "cd mobile && npx expo start --web"
+      ],
       "port": 8081
+    },
+    {
+      "name": "simulator-matchup",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": [
+        "/c",
+        "cd /d C:\\Users\\Administrateur\\Documents\\mma-universe-old\\.claude\\worktrees\\simulator-matchup && npx next dev -p 3008"
+      ],
+      "port": 3008
     }
   ]
 }
