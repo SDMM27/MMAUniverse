@@ -1,4 +1,5 @@
 import { sql } from '@/data/lib/db';
+import { resolveFighterIds } from '@/data/lib/fighter-redirect';
 import {
     Organization,
     Event,
@@ -370,17 +371,7 @@ export async function fetchFighterById(id: string) {
 // (backfilled by data/scrapers/sync-fighter-history.ts) — it's a more
 // reliable match than image_url, which can legitimately change between two
 // independent scrapes if Sherdog swaps a fighter's photo.
-export async function resolveFighterIds(fighterId: string): Promise<number[]> {
-  const siblings = await sql<{ id: number }>`
-    SELECT sibling.id
-    FROM fighters self
-    JOIN fighters sibling ON sibling.name = self.name
-      AND (sibling.image_url = self.image_url OR (self.sherdog_url IS NOT NULL AND sibling.sherdog_url = self.sherdog_url))
-    WHERE self.id = ${fighterId}
-  `;
-  const ids = siblings.rows.map((row) => row.id);
-  return ids.length > 0 ? ids : [Number(fighterId)];
-}
+export { resolveFighterIds };
 
 // A fighter's page combines two independent sources:
 //  - upcoming (not-yet-fought) bouts, still read from our own `fights`/`events`
