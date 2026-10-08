@@ -3,7 +3,7 @@
 // Targeted DB sync: upserts only the not-yet-happened events (date >= today) from each org's
 // data/scraped/{orgKey}.json into Neon, by name/date rather than blind INSERT -- plus the
 // results of recently-past events still unfinished in the DB (see syncRecentPastResults).
-// Unlike app/seed/route.ts (which has no UNIQUE constraint to lean on and would duplicate
+// Unlike data/scripts/seed-db.ts (which has no UNIQUE constraint to lean on and would duplicate
 // every row on a second run), this is safe to re-run: existing events/fighters are matched
 // by name and UPDATEd in place, and each event's fights are reconciled by fighter pair
 // (see shared/fight-sync.ts) so unchanged fights keep their `id` across syncs.

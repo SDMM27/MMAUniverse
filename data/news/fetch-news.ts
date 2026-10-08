@@ -17,7 +17,7 @@ async function ensureNewsTable() {
   // org_id REFERENCES organizations(id) requires the organizations table to
   // already exist — already true on the current production DB, but on a
   // brand-new/unseeded database (e.g. a fresh preview-branch DB) this will
-  // fail until /seed has been hit once to seed organizations first.
+  // fail until `npm run seed:db` has been run once to seed organizations first.
   await sql`
     CREATE TABLE IF NOT EXISTS news_articles (
       id SERIAL PRIMARY KEY,
@@ -105,7 +105,7 @@ async function ingestSource(source: NewsSourceConfig, recentTitles: RecentTitle[
 
 /**
  * Ingests every configured source, one at a time (not Promise.all — see the
- * sequential-insert comment in app/seed/route.ts's seedOrganizations for why
+ * sequential-insert comment in data/scripts/seed-db.ts's seedOrganizations for why
  * concurrent inserts against Neon's HTTP driver are unreliable here too).
  */
 export async function ingestAllSources(sources: NewsSourceConfig[] = NEWS_SOURCES): Promise<IngestSourceResult[]> {
