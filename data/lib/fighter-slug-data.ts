@@ -1,6 +1,8 @@
 import { sql } from '@/data/lib/db';
 import { fetchFighterById } from '@/data/lib/data';
-import { isNumericSlug, SLUG_TRANSLATE_FROM, SLUG_TRANSLATE_TO } from '@/data/lib/slug';
+import { fetchFighterIdBySlug } from '@/data/lib/fighter-redirect';
+
+export { fetchFighterIdBySlug };
 
 // Fighter URLs are readable slugs ("/fighters/islam-makhachev") but there is no
 // slug column (and no migration): the slug is recomputed from `fighters.name`
@@ -27,44 +29,6 @@ import { isNumericSlug, SLUG_TRANSLATE_FROM, SLUG_TRANSLATE_TO } from '@/data/li
 export async function fetchFighterBySlug(slug: string) {
   const id = await fetchFighterIdBySlug(slug);
   return id === null ? null : fetchFighterById(String(id));
-}
-
-export async function fetchFighterIdBySlug(slug: string): Promise<number | null> {
-  // Not a valid slug (also protects the LIKE pattern: only [a-z0-9-] gets through).
-  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug) || isNumericSlug(slug)) return null;
-  const pattern = `%${slug.split('-').join('%')}%`;
-  try {
-    const data = await sql<{ id: number }>`
-      WITH candidates AS MATERIALIZED (
-        SELECT f.id, f.organization_id, lower(translate(f.name, ${SLUG_TRANSLATE_FROM}::text, ${SLUG_TRANSLATE_TO}::text)) AS folded
-        FROM fighters f
-        WHERE lower(translate(f.name, ${SLUG_TRANSLATE_FROM}::text, ${SLUG_TRANSLATE_TO}::text)) LIKE ${pattern}
-      ),
-      matched AS (
-        SELECT c.id, c.organization_id
-        FROM candidates c
-        WHERE btrim(regexp_replace(c.folded, '[^a-z0-9]+', '-', 'g'), '-') = ${slug}
-      )
-      SELECT m.id
-      FROM matched m
-      JOIN organizations o ON o.id = m.organization_id
-      ORDER BY
-        EXISTS (SELECT 1 FROM fighter_ratings fr WHERE fr.fighter_id = m.id) DESC,
-        (o.abbreviation = 'UFC') DESC,
-        (
-          SELECT MAX(e.date)
-          FROM fights fi
-          JOIN events e ON e.id = fi.event_id
-          WHERE fi.fighter1_id = m.id OR fi.fighter2_id = m.id
-        ) DESC NULLS LAST,
-        m.id ASC
-      LIMIT 1
-    `;
-    return data.rows[0]?.id ?? null;
-  } catch (error) {
-    console.error('Database Error:', error);
-    throw new Error('Failed to fetch fighter by slug.');
-  }
 }
 
 const SITEMAP_FIGHTER_LIMIT = 45000;
