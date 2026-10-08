@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
+import GlobalSearch, { SearchButton } from '@/components/ui/search/global-search';
 
 // "FightScore" (the calculated ranking, the site's flagship
 // feature — see docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md)
@@ -75,6 +76,7 @@ function NavLink({ href, label, active }: { href: string; label: string; active:
 export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   // Close the mobile menu once the route actually changes, rather than on
   // each link's onClick — a click that doesn't end up navigating (e.g. the
@@ -97,6 +99,9 @@ export default function Nav() {
             </li>
           ))}
           <li className="flex items-center">
+            <SearchButton onClick={() => setSearchOpen(true)} />
+          </li>
+          <li className="flex items-center">
             <SignedOut>
               <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
                 Connexion
@@ -115,6 +120,7 @@ export default function Nav() {
           <SignedIn>
             <AccountButton />
           </SignedIn>
+          <SearchButton onClick={() => setSearchOpen(true)} />
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
@@ -161,6 +167,7 @@ export default function Nav() {
           </SignedOut>
         </ul>
       )}
+      <GlobalSearch open={searchOpen} onOpenChange={setSearchOpen} />
     </nav>
   );
 }
