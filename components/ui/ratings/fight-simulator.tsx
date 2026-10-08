@@ -8,6 +8,8 @@ import { SimulatorFighter } from '@/data/lib/definitions';
 import { predictFight } from '@/data/lib/rating/simulate-fight';
 import { FINISH_METHODS, contextMix, predictOutcomes, type FinishMethod } from '@/data/lib/rating/fight-outcome';
 import { FIGHT_OUTCOME_MODEL } from '@/data/lib/rating/fight-outcome-model';
+import { adjustForAge, type AgeAdjustedPrediction } from '@/data/lib/rating/age-adjustment';
+import { AGE_ADJUSTMENT_MODEL } from '@/data/lib/rating/age-adjustment-model';
 
 const isWomen = (fighter: SimulatorFighter) => fighter.weight_class.startsWith("Women's");
 
@@ -52,6 +54,7 @@ function FighterPicker({
           </Link>
           <p className="truncate text-xs text-ink-secondary">
             {selected.weight_class}
+            {selected.age != null && ` · ${Math.floor(selected.age)} ans`}
             {selected.is_champion && ' · Champion'}
           </p>
         </div>
@@ -211,6 +214,29 @@ function OutcomeBreakdown({ a, b, winA, rounds }: { a: SimulatorFighter; b: Simu
   );
 }
 
+// What age changed in the odds (see data/lib/rating/age-adjustment.ts): the
+// younger fighter always gains, more so once the older one is past 31.
+function AgeNote({ a, b, prediction }: { a: SimulatorFighter; b: SimulatorFighter; prediction: AgeAdjustedPrediction }) {
+  if (!prediction.ageKnown) {
+    const missing = [a, b].filter((f) => f.age == null).map((f) => f.fighter_name).join(' et ');
+    return <p className="mt-1 text-xs text-ink-secondary">Âge inconnu pour {missing} : l&apos;estimation ne tient pas compte de l&apos;âge.</p>;
+  }
+  const younger = a.age! <= b.age! ? a : b;
+  const older = younger === a ? b : a;
+  const years = Math.floor(older.age!) - Math.floor(younger.age!);
+  const shift = Math.abs(prediction.winA - prediction.withoutAge);
+  if (years < 1 || shift < 0.01) {
+    return <p className="mt-1 text-xs text-ink-secondary">Âge : quasiment le même ({Math.floor(a.age!)} et {Math.floor(b.age!)} ans), sans effet sur l&apos;estimation.</p>;
+  }
+  return (
+    <p className="mt-1 text-xs text-ink-secondary">
+      Âge : {younger.fighter_name} a {years} an{years > 1 ? 's' : ''} de moins ({Math.floor(younger.age!)} contre {Math.floor(older.age!)} ans), ce
+      qui lui ajoute {Math.round(shift * 100) || '<1'} point{Math.round(shift * 100) > 1 ? 's' : ''} de pourcentage. À FightScore égal, le plus
+      jeune gagne plus souvent, surtout face à un combattant de plus de {AGE_ADJUSTMENT_MODEL.veteranAge} ans.
+    </p>
+  );
+}
+
 export default function FightSimulator({ fighters }: { fighters: SimulatorFighter[] }) {
   const [a, setA] = useState<SimulatorFighter | null>(null);
   const [b, setB] = useState<SimulatorFighter | null>(null);
@@ -221,7 +247,8 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
   const optionsFor = (other: SimulatorFighter | null) =>
     fighters.filter((f) => (!other || isWomen(f) === isWomen(other)) && f.fighter_id !== other?.fighter_id);
 
-  const prediction = a && b ? predictFight({ rating: a.rating, rd: a.rd }, { rating: b.rating, rd: b.rd }) : null;
+  const rating = a && b ? predictFight({ rating: a.rating, rd: a.rd }, { rating: b.rating, rd: b.rd }) : null;
+  const prediction = a && b && rating ? adjustForAge(rating.winA, a.age, b.age, AGE_ADJUSTMENT_MODEL) : null;
   const pctA = prediction ? Math.round(prediction.winA * 100) : 0;
   const pctB = prediction ? 100 - pctA : 0;
   // Title fights are five rounds: default to that when a champion is in the matchup.
@@ -235,7 +262,7 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
         <FighterPicker label="Coin bleu" options={optionsFor(a)} selected={b} onSelect={setB} />
       </div>
 
-      {a && b && prediction ? (
+      {a && b && rating && prediction ? (
         <div className="rounded-xl border border-base-border bg-base-card p-5">
           <div className="flex items-end justify-between gap-4">
             <div className="min-w-0">
@@ -251,7 +278,8 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
             <div className="bg-accent" style={{ width: `${pctA}%` }} />
             <div className="bg-ink-secondary/60" style={{ width: `${pctB}%` }} />
           </div>
-          <p className="mt-4 text-sm text-ink-secondary">{CONFIDENCE_LABEL[prediction.confidence]}</p>
+          <p className="mt-4 text-sm text-ink-secondary">{CONFIDENCE_LABEL[rating.confidence]}</p>
+          <AgeNote a={a} b={b} prediction={prediction} />
           {a.weight_class !== b.weight_class && (
             <p className="mt-1 text-xs text-ink-secondary">
               Combattants de catégories différentes ({a.weight_class} / {b.weight_class}) : le FightScore est un seul niveau par

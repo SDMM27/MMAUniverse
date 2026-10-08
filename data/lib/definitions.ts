@@ -289,5 +289,6 @@ export type SimulatorFighter = {
   rd: number;
   is_champion: boolean;
   current_streak: number;
+  age: number | null; // in years, today; null without a known birth date (the age layer then stays off)
   outcome_profile: OutcomeProfile; // how their past fights ended, for the method/round model
 };
