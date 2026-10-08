@@ -44,6 +44,11 @@ export function collectExternalBouts(rows: ExternalHistoryRow[]): ExternalBout[]
 }
 
 export type ProspectElo = { rating: number; bouts: number };
+
+// Picked by `npm run tune:prospect` (data/ml-models/prospect-params.json,
+// 2026-10-08): +0.0065 held-out simulator log-loss, better in all four
+// windows, and the Glicko alone 0.6711 -> 0.6581 on the 2023-06+ holdout.
+export const PROSPECT_PARAMS = { k: 96, scale: 1.2 };
 export const PROSPECT_ELO_BASE = 1500;
 export const DEFAULT_PROSPECT_K = 32;
 
@@ -90,4 +95,21 @@ export function simulateProspectElo(bouts: ExternalBout[], k = DEFAULT_PROSPECT_
 /** A debutant's starting Glicko rating from their pre-UFC Elo. */
 export function prospectInitialRating(elo: ProspectElo, scale: number, initialRating: number): number {
   return initialRating + scale * (elo.rating - PROSPECT_ELO_BASE);
+}
+
+/**
+ * The initialRatingOf simulateCareerRatings takes: each fighter id's Sherdog
+ * URL looked up in the pre-UFC Elo, just before their debut.
+ */
+export function prospectInitialRatings(
+  rows: ExternalHistoryRow[],
+  sherdogUrlOf: Map<number, string>,
+  initialRating: number,
+  params: { k: number; scale: number } = PROSPECT_PARAMS,
+): (fighterId: number, debutDateIso: string) => number {
+  const lookup = simulateProspectElo(collectExternalBouts(rows), params.k);
+  return (fighterId, debutDateIso) => {
+    const url = sherdogUrlOf.get(fighterId);
+    return url ? prospectInitialRating(lookup(url, debutDateIso), params.scale, initialRating) : initialRating;
+  };
 }

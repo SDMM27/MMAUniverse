@@ -7,7 +7,8 @@
 // WITHOUT writing anything. Read-only against Neon (fights + current
 // champions). Run with `npm run check:ratings` (`--refresh` to re-fetch the
 // fights, `--params '{"rdPerMonth":30}'` to try other constants, `--top 15`
-// for longer per-division lists).
+// for longer per-division lists, `--prospect` to start debutants from their
+// pre-UFC record, see data/lib/rating/prospect-rating.ts).
 import { neon } from '@neondatabase/serverless';
 import { DEFAULT_GLICKO_PARAMS, conservativeRating, type GlickoParams } from '../lib/rating/glicko-rating';
 import { simulateCareerRatings, ratingAsOf } from '../lib/rating/simulate-career';
@@ -26,6 +27,8 @@ import {
 } from '../lib/rating/sanity-checks';
 import { sortWeightClassGroups } from '../lib/rating/order-division';
 import { loadData, loadEnvLocal, toCareerInputs } from './tuning-data';
+import { loadExternalHistory } from './matchup-tuning';
+import { PROSPECT_PARAMS, prospectInitialRatings } from '../lib/rating/prospect-rating';
 
 const TEST_SHARE = 0.2;
 const POINT_FLOW_REFERENCE_LOG_LOSS = 0.6767;
@@ -69,18 +72,24 @@ async function main() {
   `) as { weight_class: string; rank: number; fighter_id: number }[];
   const championIdByDivision = new Map(rankingRows.filter((r) => r.rank === 0).map((r) => [r.weight_class, r.fighter_id]));
   const officialDivisionByFighter = new Map(rankingRows.map((r) => [r.fighter_id, r.weight_class]));
+  let initialRatingOf: ((fighterId: number, debutDateIso: string) => number) | undefined;
+  if (process.argv.includes('--prospect')) {
+    const { rows, sherdogUrlOf } = await loadExternalHistory();
+    initialRatingOf = prospectInitialRatings(rows, sherdogUrlOf, params.initialRating);
+    console.log(`Niveau de départ des débutants d'après leur palmarès hors UFC : ${JSON.stringify(PROSPECT_PARAMS)}`);
+  }
 
   // Metric 1: held-out log-loss.
   const dates = fights.map((f) => f.eventDate);
   const testFromDate = dates[Math.floor(dates.length * (1 - TEST_SHARE))];
-  const split = collectCareerRatingDiffs(fights, noResults, params, testFromDate);
+  const split = collectCareerRatingDiffs(fights, noResults, params, testFromDate, initialRatingOf);
   const scale = fitScale(split.train);
   const test = evaluateLogRatios(split.test, scale);
   console.log(`Paramètres : ${JSON.stringify(params)}`);
   console.log(`Log-loss holdout (${test.count} combats depuis ${testFromDate}) : ${test.logLoss.toFixed(4)} (référence flux de points ${POINT_FLOW_REFERENCE_LOG_LOSS}), précision ${(test.accuracy * 100).toFixed(1)} %`);
 
   // The ranking, as compute-fighter-ratings.ts stores it.
-  const { fighterStates, history } = simulateCareerRatings(fights, noResults, params);
+  const { fighterStates, history } = simulateCareerRatings(fights, noResults, params, initialRatingOf);
   const ufcFightsInDivision = new Map<string, number>();
   for (const e of history) for (const id of [e.winnerId, e.loserId]) ufcFightsInDivision.set(`${id}|${e.division}`, (ufcFightsInDivision.get(`${id}|${e.division}`) ?? 0) + 1);
 
