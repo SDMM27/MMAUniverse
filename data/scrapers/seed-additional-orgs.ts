@@ -3,7 +3,7 @@
 // Seeds one or more `data/scraped/<key>.json` datasets into the DB for
 // organizations that are NOT among the original 3 (UFC=1/PFL=2/Bellator=3).
 //
-// Deliberately separate from `app/seed/route.ts`: that route's
+// Deliberately separate from `data/scripts/seed-db.ts`: that script's
 // seedEvents/seedFighters/seedFights loop unconditionally INSERTs every row
 // in its dataset list with no natural-key uniqueness check (only `id`, which
 // is never supplied, so `ON CONFLICT (id) DO NOTHING` never fires). Re-running
@@ -120,10 +120,10 @@ async function main() {
   }
 
   // Refuse to touch the original 3 through this script — they go through
-  // app/seed/route.ts only.
+  // data/scripts/seed-db.ts only.
   const forbidden = keys.filter((k) => ['ufc', 'pfl', 'bellator'].includes(k));
   if (forbidden.length > 0) {
-    console.error(`Refusing to seed ${forbidden.join(', ')} via this script — use app/seed/route.ts.`);
+    console.error(`Refusing to seed ${forbidden.join(', ')} via this script — use data/scripts/seed-db.ts.`);
     process.exit(1);
   }
 

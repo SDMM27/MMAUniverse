@@ -5,7 +5,7 @@ import { getOrCreateCurrentUser, upsertPick } from '@/data/lib/picks-data';
 import { getScheduledRounds } from '@/data/lib/fight-utils';
 import type { MethodCategory } from '@/data/lib/definitions';
 
-// Same reasoning as app/seed/route.ts: without this, @neondatabase/serverless's
+// Without this (see data/lib/db.ts), @neondatabase/serverless's
 // underlying fetch() calls can get swept into Next's Data Cache.
 export const dynamic = 'force-dynamic';
 

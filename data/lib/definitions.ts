@@ -241,7 +241,7 @@ export type MethodCategory = 'ko_tko' | 'submission' | 'decision';
 // id is BIGSERIAL: the Neon driver (no type parser override, see data/lib/db.ts)
 // returns int8 columns as JS strings, not numbers -- unlike the INT-typed ids
 // elsewhere in this file (see the same note on fight_id/predicted_winner_id
-// below, and app/seed/route.ts's picks table DDL for the full explanation).
+// below, and data/scripts/seed-db.ts's picks table DDL for the full explanation).
 export type PickemUser = {
   id: string;
   external_auth_id: string;

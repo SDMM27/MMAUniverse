@@ -206,6 +206,7 @@ Commandes utiles :
 | Commande | Rôle |
 | --- | --- |
 | `npm test` | Lance tous les tests unitaires |
+| `npm run seed:db` | Crée le schéma de base et l'alimente depuis `data/scraped/` (base vide uniquement) |
 | `npm run scrape:ufc` (ou `scrape:all`) | Scrape une organisation (ou toutes) depuis Sherdog |
 | `npm run scrape:ufcstats` | Scrape les stats round par round depuis UFCStats (nécessite `npx playwright install chromium`) |
 | `npm run sync:fighter-stats` | Pousse les stats UFCStats dans Neon |
