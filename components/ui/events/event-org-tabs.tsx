@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Event } from '@/data/lib/definitions';
+import { displayEventName } from '@/data/lib/event-utils';
 
 // How many neighboring events to show on each side of the current one.
 const WINDOW_RADIUS = 2;
@@ -48,7 +49,7 @@ export default function EventOrgTabs({ events, currentEventId }: { events: Event
               active ? 'text-accent' : 'text-ink-secondary hover:text-accent'
             }`}
           >
-            {event.name}
+            {displayEventName(event.name)}
           </Link>
         );
       })}

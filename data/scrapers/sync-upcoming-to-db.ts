@@ -10,7 +10,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
-import type { ScrapedOrgData } from './shared/types';
+import type { ScrapedFighter, ScrapedOrgData } from './shared/types';
+import { currentRecord } from './shared/fighter-record';
 import { planFightSync, type FreshFight } from './shared/fight-sync';
 import { ORG_CONFIGS } from './orgs.config';
 import { isRecentPastDate } from './shared/live-dates';
@@ -82,22 +83,23 @@ async function upsertEvent(
 }
 
 async function upsertFighter(
-  fighter: { name: string; image_url: string; weight_class: string; record: string; ranking: number },
+  fighter: { name: string; image_url: string; weight_class: string; record: string; ranking: number; fight_history?: ScrapedFighter['fight_history'] },
   organizationId: number,
 ) {
+  const record = currentRecord(fighter);
   const existing = await sql`SELECT id FROM fighters WHERE name = ${fighter.name} ORDER BY id ASC`;
   if (existing.length > 0) {
     const id = existing[0].id;
     await sql`
       UPDATE fighters SET image_url = ${fighter.image_url}, weight_class = ${fighter.weight_class},
-        record = ${fighter.record}, ranking = ${fighter.ranking}
+        record = ${record}, ranking = ${fighter.ranking}
       WHERE id = ${id}
     `;
     return id;
   }
   const inserted = await sql`
     INSERT INTO fighters (name, image_url, weight_class, organization_id, record, ranking)
-    VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${organizationId}, ${fighter.record}, ${fighter.ranking})
+    VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${organizationId}, ${record}, ${fighter.ranking})
     RETURNING id
   `;
   return inserted[0].id;

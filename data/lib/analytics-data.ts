@@ -108,7 +108,9 @@ async function loadAnalytics(): Promise<AnalyticsData> {
     // fought in, tracked or not), strictly before the fight's date.
     const [resultRows, statsRows] = await Promise.all([
       sql<ResultFightRow>`
-        SELECT o.abbreviation AS organization, e.date, f.weight_class, f.method, f.round, f.time,
+        SELECT o.abbreviation AS organization, e.date,
+               CASE WHEN a.is_women OR b.is_women THEN 'Women''s ' || f.weight_class ELSE f.weight_class END AS weight_class,
+               f.method, f.round, f.time,
                f.winner_id, f.fighter1_id, f.fighter2_id,
                a.height_cm AS height1, b.height_cm AS height2,
                CASE WHEN a.birth_date IS NOT NULL THEN ROUND(((e.date::date - a.birth_date) / 365.25)::numeric, 2) END AS age1,
@@ -193,4 +195,4 @@ async function loadAnalytics(): Promise<AnalyticsData> {
 
 // Bump the key whenever AnalyticsData's shape changes, or a deploy keeps
 // serving the previous shape from the cache for up to `revalidate`.
-export const fetchAnalytics = unstable_cache(loadAnalytics, ['analytics-v4'], { revalidate: 6 * 60 * 60 });
+export const fetchAnalytics = unstable_cache(loadAnalytics, ['analytics-v5'], { revalidate: 6 * 60 * 60 });

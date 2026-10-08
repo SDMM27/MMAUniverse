@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { Fighter, FightWithFighters } from '@/data/lib/definitions';
-import { formatEventTime } from '@/data/lib/event-utils';
+import { formatEventDate, formatEventTime } from '@/data/lib/event-utils';
 import TitleFightBadge from '@/components/ui/fights/title-fight-badge';
 
 type FightStatus = 'upcoming' | 'live' | 'finished';
@@ -124,7 +124,7 @@ function FightCardHeader({
     <div className="flex items-center justify-between">
       <span className="font-display text-xs uppercase tracking-wide text-accent">{event.organization_abbreviation}</span>
       <span className="text-xs text-ink-secondary">
-        {event.date}
+        {formatEventDate(event.date, { weekday: true })}
         {eventTime && ` · ${eventTime}`}
       </span>
     </div>

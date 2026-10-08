@@ -48,6 +48,8 @@ export type Fighter = {
     reach_cm: number | null;
     // The DB driver returns a DATE column as a Date; read it via ageFromBirthDate (data/lib/fighter-age.ts).
     birth_date: Date | null;
+    // Inferred from the fight graph (data/scrapers/sync-fighter-gender.ts); null = unknown.
+    is_women: boolean | null;
   };
 
 export type Ranking = {

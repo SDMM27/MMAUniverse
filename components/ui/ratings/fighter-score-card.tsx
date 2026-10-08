@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FighterRatingWithFighter, QualityWin } from '@/data/lib/definitions';
+import { displayEventName } from '@/data/lib/event-utils';
 
 type RatingWithRank = FighterRatingWithFighter & { division_rank: string };
 
@@ -45,7 +46,7 @@ export default function FighterScoreCard({ ratings, qualityWins }: { ratings: Ra
             {qualityWins.map((win) => (
               <li key={win.id} className="text-sm text-ink-primary">
                 Battu <span className="font-semibold">{win.opponent_name}</span>
-                <span className="text-ink-secondary"> · {win.event_name}</span>
+                <span className="text-ink-secondary"> · {displayEventName(win.event_name)}</span>
               </li>
             ))}
           </ul>

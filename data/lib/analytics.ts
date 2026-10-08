@@ -281,8 +281,10 @@ export function sumCells(cells: TrendCell[], keep: (cell: TrendCell) => boolean 
 // ---------------------------------------------------------------------------
 
 // Sherdog's weight classes don't tell men's and women's divisions apart
-// ("Bantamweight" covers both), so results are grouped by weight only.
-export const RESULT_DIVISIONS = [
+// ("Bantamweight" covers both); analytics-data.ts relabels a bout "Women's ..."
+// when a corner is known to be a woman (fighters.is_women, inferred from the
+// fight graph). Women nobody could place stay in the plain division.
+const MEN_DIVISIONS = [
   'Atomweight',
   'Strawweight',
   'Flyweight',
@@ -293,6 +295,11 @@ export const RESULT_DIVISIONS = [
   'Middleweight',
   'Light Heavyweight',
   'Heavyweight',
+] as const;
+
+export const RESULT_DIVISIONS = [
+  ...MEN_DIVISIONS,
+  ...MEN_DIVISIONS.slice(0, 7).map((division) => `Women's ${division}`),
 ] as const;
 
 const RESULT_DIVISION_LOOKUP = new Set<string>(RESULT_DIVISIONS);

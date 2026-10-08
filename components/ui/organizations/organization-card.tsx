@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { Event, Organization } from '@/data/lib/definitions';
+import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
 
 export type OrganizationWithActivity = Organization & {
   nextEvent?: Event & { isUpcoming: boolean };
@@ -30,8 +31,8 @@ export default function OrganizationCard({ organization }: { organization: Organ
             <span className="font-display text-[11px] uppercase tracking-wide text-accent">
               {nextEvent.isUpcoming ? 'Prochain' : 'Dernier'}
             </span>
-            <p className="line-clamp-1 text-xs text-ink-primary">{nextEvent.name}</p>
-            <p className="text-[11px] text-ink-secondary">{nextEvent.date}</p>
+            <p className="line-clamp-1 text-xs text-ink-primary">{displayEventName(nextEvent.name)}</p>
+            <p className="text-[11px] text-ink-secondary">{formatEventDate(nextEvent.date)}</p>
           </>
         ) : (
           <p className="text-[11px] text-ink-secondary">Aucun événement</p>

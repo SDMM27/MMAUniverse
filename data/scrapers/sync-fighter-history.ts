@@ -21,6 +21,7 @@ import { neon } from '@neondatabase/serverless';
 import { ORG_CONFIGS } from './orgs.config';
 import { liveEventDates } from './shared/live-dates';
 import type { ScrapedOrgData } from './shared/types';
+import { currentRecord } from './shared/fighter-record';
 
 // tsx doesn't auto-load .env.local the way Next.js does; parse it by hand.
 // (duplicated from sync-upcoming-to-db.ts rather than shared, matching that
@@ -145,7 +146,7 @@ async function main() {
     }
 
     const idsByName = await fighterIdsByName(config.organizationId);
-    const urlUpdates = new Map<number, string>();
+    const urlUpdates = new Map<number, { url: string; record: string }>();
     // Keyed on the table's unique constraint: a single INSERT ... ON CONFLICT DO UPDATE can't touch
     // the same row twice, so duplicates are collapsed here (last one wins, as with row-by-row upserts).
     const historyByKey = new Map<string, HistoryRow>();
@@ -157,7 +158,7 @@ async function main() {
       const fighterId = idsByName.get(fighter.name);
       if (!fighterId) continue; // fighter isn't synced into this org yet — the regular sync scripts own creating that row
 
-      urlUpdates.set(fighterId, fighter.sherdog_url);
+      urlUpdates.set(fighterId, { url: fighter.sherdog_url, record: currentRecord(fighter) });
 
       for (const entry of fighter.fight_history ?? []) {
         historyByKey.set(JSON.stringify([fighterId, entry.event_name, entry.opponent_name]), {
@@ -178,8 +179,12 @@ async function main() {
 
     for (const batch of chunk(Array.from(urlUpdates), BATCH_SIZE)) {
       await sql`
-        UPDATE fighters f SET sherdog_url = u.sherdog_url
-        FROM UNNEST(${batch.map(([id]) => id)}::int[], ${batch.map(([, url]) => url)}::text[]) AS u(id, sherdog_url)
+        UPDATE fighters f SET sherdog_url = u.sherdog_url, record = u.record
+        FROM UNNEST(
+          ${batch.map(([id]) => id)}::int[],
+          ${batch.map(([, u]) => u.url)}::text[],
+          ${batch.map(([, u]) => u.record)}::text[]
+        ) AS u(id, sherdog_url, record)
         WHERE f.id = u.id
       `;
     }
@@ -217,7 +222,7 @@ async function main() {
     console.log(`[${config.orgKey}] processed.`);
   }
 
-  console.log(`Done. ${fightersUpdated} fighter row(s) updated with a sherdog_url, ${historyRows} history row(s) upserted.`);
+  console.log(`Done. ${fightersUpdated} fighter row(s) updated with a sherdog_url + record, ${historyRows} history row(s) upserted.`);
 }
 
 main().catch((error) => {

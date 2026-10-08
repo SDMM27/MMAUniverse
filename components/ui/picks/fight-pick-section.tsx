@@ -17,6 +17,8 @@ export default function FightPickSection({
   pick: StoredPick | null;
 }) {
   if (!signedIn) {
+    // Once picks are locked there's nothing left to sign in for.
+    if (locked) return null;
     return (
       <p className="rounded-lg border border-base-border bg-base-card p-4 text-center text-xs text-ink-secondary">
         <Link href="/sign-in" className="text-accent hover:underline">

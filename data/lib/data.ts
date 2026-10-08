@@ -15,6 +15,7 @@ import {
     SimulatorFighter,
   } from './definitions';
 import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization, selectHeadlineFightPerEvent } from './event-utils';
+import { displayWeightClass } from './fight-utils';
 
 export async function fetchOrganizations() {
     try {
@@ -116,6 +117,7 @@ export async function fetchFightsByEvent(eventId: string) {
       f1_organization_id: number | null;
       f1_record: string | null;
       f1_ranking: number | null;
+      f1_is_women: boolean | null;
       f1_nationality: string | null;
       f2_id: number | null;
       f2_name: string | null;
@@ -124,12 +126,13 @@ export async function fetchFightsByEvent(eventId: string) {
       f2_organization_id: number | null;
       f2_record: string | null;
       f2_ranking: number | null;
+      f2_is_women: boolean | null;
       f2_nationality: string | null;
     }>`
       SELECT
         f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class, f.is_main_event, f.is_title_fight,
-        f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking, f1.nationality AS f1_nationality,
-        f2.id AS f2_id, f2.name AS f2_name, f2.image_url AS f2_image_url, f2.weight_class AS f2_weight_class, f2.organization_id AS f2_organization_id, f2.record AS f2_record, f2.ranking AS f2_ranking, f2.nationality AS f2_nationality
+        f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking, f1.is_women AS f1_is_women, f1.nationality AS f1_nationality,
+        f2.id AS f2_id, f2.name AS f2_name, f2.image_url AS f2_image_url, f2.weight_class AS f2_weight_class, f2.organization_id AS f2_organization_id, f2.record AS f2_record, f2.ranking AS f2_ranking, f2.is_women AS f2_is_women, f2.nationality AS f2_nationality
       FROM fights f
       LEFT JOIN fighters f1 ON f.fighter1_id = f1.id
       LEFT JOIN fighters f2 ON f.fighter2_id = f2.id
@@ -147,7 +150,7 @@ export async function fetchFightsByEvent(eventId: string) {
       method: row.method,
       round: row.round,
       time: row.time,
-      weight_class: row.weight_class,
+      weight_class: displayWeightClass(row.weight_class, row.f1_is_women || row.f2_is_women),
       is_main_event: row.is_main_event,
       is_title_fight: row.is_title_fight,
       fighter1: row.f1_id
@@ -155,7 +158,7 @@ export async function fetchFightsByEvent(eventId: string) {
             id: row.f1_id,
             name: row.f1_name,
             image_url: row.f1_image_url,
-            weight_class: row.f1_weight_class,
+            weight_class: displayWeightClass(row.f1_weight_class, row.f1_is_women),
             organization_id: row.f1_organization_id,
             record: row.f1_record,
             ranking: row.f1_ranking,
@@ -167,7 +170,7 @@ export async function fetchFightsByEvent(eventId: string) {
             id: row.f2_id,
             name: row.f2_name,
             image_url: row.f2_image_url,
-            weight_class: row.f2_weight_class,
+            weight_class: displayWeightClass(row.f2_weight_class, row.f2_is_women),
             organization_id: row.f2_organization_id,
             record: row.f2_record,
             ranking: row.f2_ranking,
@@ -185,6 +188,11 @@ export async function fetchFightsByEvent(eventId: string) {
 // paginated, searchable fetchFighters() below (which backs the global
 // /fighters page and can't afford an unbounded SELECT at that table's
 // scale). Mirrors fetchEventsByOrg's shape.
+// "Flyweight" -> "Women's Flyweight" for a fighter known to be a woman (see displayWeightClass).
+function withDisplayWeightClass<T extends Fighter>(fighter: T): T {
+  return { ...fighter, weight_class: displayWeightClass(fighter.weight_class, fighter.is_women) ?? fighter.weight_class };
+}
+
 export async function fetchFightersByOrg(organizationId: string) {
   try {
     const data = await sql<Fighter & { organization_abbreviation: string }>`
@@ -194,7 +202,7 @@ export async function fetchFightersByOrg(organizationId: string) {
       WHERE f.organization_id = ${organizationId}
       ORDER BY f.name ASC
     `;
-    return data.rows;
+    return data.rows.map(withDisplayWeightClass);
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch organization roster.');
@@ -262,7 +270,7 @@ export async function fetchAllFighters() {
       JOIN organizations o ON f.organization_id = o.id
       ORDER BY f.name ASC
     `;
-    return data.rows;
+    return data.rows.map(withDisplayWeightClass);
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch fighters.');
@@ -288,18 +296,47 @@ export async function fetchFighters({
     const offset = (page - 1) * pageSize;
     const likeTerm = `%${query}%`;
 
+    // One card per real person: the scraper keeps a fighters row per organization (A.J. McKee
+    // has a Bellator and a PFL row), so rows sharing a Sherdog URL (or, without one, a name)
+    // collapse into the row of the organization they fought for most recently. With no
+    // search, FightScore-ranked fighters come first (best score first), then everyone else
+    // by most recent fight -- instead of an alphabetical list opening on "A.J. Agazarm".
+    const today = new Date().toISOString().slice(0, 10);
     const data = await sql<Fighter & { organization_abbreviation: string; total_count: string }>`
-      SELECT f.*, o.abbreviation AS organization_abbreviation, COUNT(*) OVER() AS total_count
-      FROM fighters f
-      JOIN organizations o ON f.organization_id = o.id
-      WHERE (${query} = '' OR f.name ILIKE ${likeTerm})
-        AND (${organizationId}::int IS NULL OR f.organization_id = ${organizationId})
-      ORDER BY f.name ASC
+      WITH last_fight AS (
+        SELECT x.fighter_id, MAX(e.date) AS last_date
+        FROM (SELECT fighter1_id AS fighter_id, event_id FROM fights UNION ALL SELECT fighter2_id, event_id FROM fights) x
+        JOIN events e ON e.id = x.event_id
+        WHERE e.date <= ${today}
+        GROUP BY x.fighter_id
+      ),
+      score AS (
+        -- Division score (champions at 100), P4P to break ties: the two P4P scales (men,
+        -- women) aren't comparable, so ordering by P4P alone front-loaded the women's list.
+        SELECT fighter_id, MAX(display_score) AS score, MAX(p4p_score) AS p4p
+        FROM fighter_ratings WHERE is_ranking_eligible = true GROUP BY fighter_id
+      ),
+      people AS (
+        SELECT DISTINCT ON (COALESCE(f.sherdog_url, LOWER(f.name)))
+          f.*, o.abbreviation AS organization_abbreviation, lf.last_date, sc.score, sc.p4p
+        FROM fighters f
+        JOIN organizations o ON f.organization_id = o.id
+        LEFT JOIN last_fight lf ON lf.fighter_id = f.id
+        LEFT JOIN score sc ON sc.fighter_id = f.id
+        WHERE (${query} = '' OR f.name ILIKE ${likeTerm})
+          AND (${organizationId}::int IS NULL OR f.organization_id = ${organizationId})
+        ORDER BY COALESCE(f.sherdog_url, LOWER(f.name)), lf.last_date DESC NULLS LAST, f.id
+      )
+      SELECT *, COUNT(*) OVER() AS total_count
+      FROM people
+      ORDER BY CASE WHEN ${query} = '' THEN score END DESC NULLS LAST,
+               CASE WHEN ${query} = '' THEN p4p END DESC NULLS LAST,
+               CASE WHEN ${query} = '' THEN last_date END DESC NULLS LAST, name ASC
       LIMIT ${pageSize} OFFSET ${offset}
     `;
 
     const total = data.rows.length > 0 ? Number(data.rows[0].total_count) : 0;
-    return { fighters: data.rows, total };
+    return { fighters: data.rows.map(withDisplayWeightClass), total };
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch fighters.');
@@ -314,7 +351,7 @@ export async function fetchFighterById(id: string) {
       JOIN organizations o ON f.organization_id = o.id
       WHERE f.id = ${id}
     `;
-    return data.rows[0] ?? null;
+    return data.rows[0] ? withDisplayWeightClass(data.rows[0]) : null;
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch fighter.');
@@ -505,6 +542,7 @@ export async function fetchRecentFinishedFights(limit: number) {
       f1_organization_id: number | null;
       f1_record: string | null;
       f1_ranking: number | null;
+      f1_is_women: boolean | null;
       f2_id: number | null;
       f2_name: string | null;
       f2_image_url: string | null;
@@ -512,13 +550,14 @@ export async function fetchRecentFinishedFights(limit: number) {
       f2_organization_id: number | null;
       f2_record: string | null;
       f2_ranking: number | null;
+      f2_is_women: boolean | null;
     }>`
       SELECT
         f.id, f.event_id, f.fighter1_id, f.fighter2_id, f.fight_finished, f.winner_id, f.method, f.round, f.time, f.weight_class, f.is_main_event,
         e.name AS event_name, e.date AS event_date,
         o.abbreviation AS organization_abbreviation,
-        f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking,
-        f2.id AS f2_id, f2.name AS f2_name, f2.image_url AS f2_image_url, f2.weight_class AS f2_weight_class, f2.organization_id AS f2_organization_id, f2.record AS f2_record, f2.ranking AS f2_ranking
+        f1.id AS f1_id, f1.name AS f1_name, f1.image_url AS f1_image_url, f1.weight_class AS f1_weight_class, f1.organization_id AS f1_organization_id, f1.record AS f1_record, f1.ranking AS f1_ranking, f1.is_women AS f1_is_women,
+        f2.id AS f2_id, f2.name AS f2_name, f2.image_url AS f2_image_url, f2.weight_class AS f2_weight_class, f2.organization_id AS f2_organization_id, f2.record AS f2_record, f2.ranking AS f2_ranking, f2.is_women AS f2_is_women
       FROM fights f
       JOIN events e ON f.event_id = e.id
       JOIN organizations o ON e.organization_id = o.id
@@ -539,7 +578,7 @@ export async function fetchRecentFinishedFights(limit: number) {
       method: row.method,
       round: row.round,
       time: row.time,
-      weight_class: row.weight_class,
+      weight_class: displayWeightClass(row.weight_class, row.f1_is_women || row.f2_is_women),
       is_main_event: row.is_main_event,
       event_name: row.event_name,
       event_date: row.event_date,
@@ -549,7 +588,7 @@ export async function fetchRecentFinishedFights(limit: number) {
             id: row.f1_id,
             name: row.f1_name,
             image_url: row.f1_image_url,
-            weight_class: row.f1_weight_class,
+            weight_class: displayWeightClass(row.f1_weight_class, row.f1_is_women),
             organization_id: row.f1_organization_id,
             record: row.f1_record,
             ranking: row.f1_ranking,
@@ -560,7 +599,7 @@ export async function fetchRecentFinishedFights(limit: number) {
             id: row.f2_id,
             name: row.f2_name,
             image_url: row.f2_image_url,
-            weight_class: row.f2_weight_class,
+            weight_class: displayWeightClass(row.f2_weight_class, row.f2_is_women),
             organization_id: row.f2_organization_id,
             record: row.f2_record,
             ranking: row.f2_ranking,

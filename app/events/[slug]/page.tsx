@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { fetchEventById, fetchEventsByOrg, fetchFightsByEvent } from '@/data/lib/data';
-import { formatEventTime } from '@/data/lib/event-utils';
+import { displayEventName, formatEventDate, formatEventTime } from '@/data/lib/event-utils';
 import { splitMainEvent } from '@/data/lib/fight-utils';
 import { isEventLocked } from '@/data/lib/pick-lock';
 import { fetchPicksForEvent, fetchEventLeaderboard, getOrCreateCurrentUser, type StoredPick } from '@/data/lib/picks-data';
@@ -38,9 +38,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <div className="flex items-center gap-4 border-b border-base-border pb-6">
         <CoverImage src={event.event_poster} alt={event.name} className="h-20 w-20 rounded-md" />
         <div>
-          <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{event.name}</h1>
+          <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{displayEventName(event.name)}</h1>
           <p className="text-sm text-ink-secondary">
-            {event.date}
+            {formatEventDate(event.date, { weekday: true })}
             {eventTime && ` · ${eventTime}`} · {event.event_location}
           </p>
           {prelimsTime && (
