@@ -2,6 +2,8 @@
 import Link from 'next/link';
 import { fetchSimulatorFighters } from '@/data/lib/data';
 import FightSimulator from '@/components/ui/ratings/fight-simulator';
+import { fetchNextMainEventPrefill } from '@/data/lib/simulator-data';
+import { parseSimulatorParams } from '@/data/lib/simulator-params';
 import EmptyState from '@/components/ui/shared/empty-state';
 
 // Queries the DB on every request instead of at build time (see data/lib/db.ts).
@@ -9,8 +11,13 @@ export const dynamic = 'force-dynamic';
 
 export const metadata = { title: 'Simulateur de combat · FightScore' };
 
-export default async function Page() {
+export default async function Page({ searchParams }: { searchParams: { a?: string | string[]; b?: string | string[] } }) {
   const fighters = await fetchSimulatorFighters();
+  const selection = parseSimulatorParams(searchParams ?? {}, fighters);
+  // The next main event only prefills a bare /simulateur: explicit params
+  // (even partly invalid ones) are the visitor's own choice.
+  const hasParams = searchParams?.a !== undefined || searchParams?.b !== undefined;
+  const prefill = !hasParams && fighters.length > 0 ? await fetchNextMainEventPrefill(fighters) : null;
 
   return (
     <main className="mx-auto flex min-h-screen max-w-4xl flex-col gap-8 px-6 py-8">
@@ -32,7 +39,12 @@ export default async function Page() {
       {fighters.length === 0 ? (
         <EmptyState title="Simulateur indisponible" description="Le FightScore n'a pas encore été calculé." />
       ) : (
-        <FightSimulator fighters={fighters} />
+        <FightSimulator
+          fighters={fighters}
+          initialA={prefill ? prefill.a : selection.a}
+          initialB={prefill ? prefill.b : selection.b}
+          prefill={prefill}
+        />
       )}
     </main>
   );
