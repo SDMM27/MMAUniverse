@@ -43,6 +43,7 @@
     "tune:outcome": "tsx data/scripts/tune-fight-outcome.ts",
     "tune:matchup": "tsx data/scripts/tune-matchup.ts",
     "tune:glicko-matchup": "tsx data/scripts/tune-glicko-matchup.ts",
+    "bench:gbm": "tsx data/scripts/bench-gbm.ts",
     "check:ratings": "tsx data/scripts/check-ratings.ts"
   },
   "engines": {
