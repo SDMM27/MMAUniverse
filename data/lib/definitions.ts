@@ -1,4 +1,5 @@
 import type { OutcomeProfile } from './rating/fight-outcome';
+import type { MatchupProfile } from './rating/matchup-model';
 
 export type Organization = {
     id: number;
@@ -289,6 +290,6 @@ export type SimulatorFighter = {
   rd: number;
   is_champion: boolean;
   current_streak: number;
-  age: number | null; // in years, today; null without a known birth date (the age layer then stays off)
+  matchup_profile: MatchupProfile; // age, reach, layoff and UFC career sums, for the matchup layer
   outcome_profile: OutcomeProfile; // how their past fights ended, for the method/round model
 };

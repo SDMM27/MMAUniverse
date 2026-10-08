@@ -8,8 +8,8 @@ import { SimulatorFighter } from '@/data/lib/definitions';
 import { predictFight } from '@/data/lib/rating/simulate-fight';
 import { FINISH_METHODS, contextMix, predictOutcomes, type FinishMethod } from '@/data/lib/rating/fight-outcome';
 import { FIGHT_OUTCOME_MODEL } from '@/data/lib/rating/fight-outcome-model';
-import { adjustForAge, type AgeAdjustedPrediction } from '@/data/lib/rating/age-adjustment';
-import { AGE_ADJUSTMENT_MODEL } from '@/data/lib/rating/age-adjustment-model';
+import { predictMatchup, profileRates, type MatchupFactor, type MatchupPrediction } from '@/data/lib/rating/matchup-model';
+import { MATCHUP_MODEL } from '@/data/lib/rating/matchup-model-tuned';
 
 const isWomen = (fighter: SimulatorFighter) => fighter.weight_class.startsWith("Women's");
 
@@ -54,7 +54,7 @@ function FighterPicker({
           </Link>
           <p className="truncate text-xs text-ink-secondary">
             {selected.weight_class}
-            {selected.age != null && ` · ${Math.floor(selected.age)} ans`}
+            {selected.matchup_profile.age != null && ` · ${Math.floor(selected.matchup_profile.age)} ans`}
             {selected.is_champion && ' · Champion'}
           </p>
         </div>
@@ -214,26 +214,78 @@ function OutcomeBreakdown({ a, b, winA, rounds }: { a: SimulatorFighter; b: Simu
   );
 }
 
-// What age changed in the odds (see data/lib/rating/age-adjustment.ts): the
-// younger fighter always gains, more so once the older one is past 31.
-function AgeNote({ a, b, prediction }: { a: SimulatorFighter; b: SimulatorFighter; prediction: AgeAdjustedPrediction }) {
-  if (!prediction.ageKnown) {
-    const missing = [a, b].filter((f) => f.age == null).map((f) => f.fighter_name).join(' et ');
-    return <p className="mt-1 text-xs text-ink-secondary">Âge inconnu pour {missing} : l&apos;estimation ne tient pas compte de l&apos;âge.</p>;
+// What moved the odds away from the FightScore alone, one line per factor
+// that weighs at least a point (see data/lib/rating/matchup-model.ts).
+const FACTOR_LABEL: Record<MatchupFactor, string> = {
+  age: 'Âge',
+  strikes: 'Frappes',
+  control: 'Contrôle',
+  knockdowns: 'Knockdowns subis',
+  layoff: 'Inactivité',
+  reach: 'Allonge',
+};
+
+const signed = (x: number) => `${x >= 0 ? '+' : '−'}${Math.abs(x).toFixed(1).replace('.', ',')}`;
+
+function factorDetail(factor: MatchupFactor, favored: SimulatorFighter, other: SimulatorFighter): string {
+  const f = favored.matchup_profile;
+  const o = other.matchup_profile;
+  const rf = profileRates(f, MATCHUP_MODEL.priorMinutes);
+  const ro = profileRates(o, MATCHUP_MODEL.priorMinutes);
+  switch (factor) {
+    case 'age': {
+      const years = Math.floor(o.age!) - Math.floor(f.age!);
+      return `${favored.fighter_name} a ${years} an${years > 1 ? 's' : ''} de moins (${Math.floor(f.age!)} contre ${Math.floor(o.age!)} ans)`;
+    }
+    case 'strikes':
+      return `${favored.fighter_name} touche plus qu'il n'encaisse : ${signed(rf.strikeDiffPerMin)} frappe nette par minute à l'UFC, contre ${signed(ro.strikeDiffPerMin)}`;
+    case 'control':
+      return `${favored.fighter_name} contrôle davantage : ${Math.round(rf.controlShare * 100)} % du temps de contrôle dans ses combats, contre ${Math.round(ro.controlShare * 100)} %`;
+    case 'knockdowns':
+      return `${other.fighter_name} a été envoyé au tapis ${o.knockdownsAbsorbed} fois à l'UFC, ${favored.fighter_name} ${f.knockdownsAbsorbed} fois`;
+    case 'layoff':
+      return `${other.fighter_name} n'a pas combattu depuis ${Math.round(o.monthsSinceLastFight!)} mois`;
+    case 'reach':
+      return `${favored.fighter_name} a ${Math.round(f.reachCm! - o.reachCm!)} cm d'allonge en plus`;
   }
-  const younger = a.age! <= b.age! ? a : b;
-  const older = younger === a ? b : a;
-  const years = Math.floor(older.age!) - Math.floor(younger.age!);
-  const shift = Math.abs(prediction.winA - prediction.withoutAge);
-  if (years < 1 || shift < 0.01) {
-    return <p className="mt-1 text-xs text-ink-secondary">Âge : quasiment le même ({Math.floor(a.age!)} et {Math.floor(b.age!)} ans), sans effet sur l&apos;estimation.</p>;
-  }
+}
+
+function FactorsNote({ a, b, prediction }: { a: SimulatorFighter; b: SimulatorFighter; prediction: MatchupPrediction }) {
+  const factors = (Object.entries(prediction.shifts) as [MatchupFactor, number][])
+    .filter(([, shift]) => Math.abs(shift) >= 0.01)
+    .sort((x, y) => Math.abs(y[1]) - Math.abs(x[1]));
+  const unknown = [
+    ...[a, b].filter((f) => f.matchup_profile.age == null).map((f) => `l'âge de ${f.fighter_name}`),
+    ...[a, b].filter((f) => f.matchup_profile.reachCm == null).map((f) => `l'allonge de ${f.fighter_name}`),
+  ];
+  const baseA = Math.round(prediction.ratingOnly * 100);
+
   return (
-    <p className="mt-1 text-xs text-ink-secondary">
-      Âge : {younger.fighter_name} a {years} an{years > 1 ? 's' : ''} de moins ({Math.floor(younger.age!)} contre {Math.floor(older.age!)} ans), ce
-      qui lui ajoute {Math.round(shift * 100) || '<1'} point{Math.round(shift * 100) > 1 ? 's' : ''} de pourcentage. À FightScore égal, le plus
-      jeune gagne plus souvent, surtout face à un combattant de plus de {AGE_ADJUSTMENT_MODEL.veteranAge} ans.
-    </p>
+    <div className="mt-4">
+      <p className="font-display text-xs uppercase tracking-widest text-ink-secondary">Ce qui fait pencher la balance</p>
+      <p className="mt-1 text-xs text-ink-secondary">
+        Sur le FightScore seul : {a.fighter_name} {baseA} %, {b.fighter_name} {100 - baseA} %.
+      </p>
+      {factors.length === 0 ? (
+        <p className="mt-2 text-sm text-ink-secondary">Aucun autre facteur ne pèse vraiment : l&apos;estimation repose sur le FightScore.</p>
+      ) : (
+        <ul className="mt-2 flex flex-col gap-1.5">
+          {factors.map(([factor, shift]) => {
+            const favored = shift > 0 ? a : b;
+            return (
+              <li key={factor} className="flex items-baseline gap-3 text-sm">
+                <span className="w-32 shrink-0 text-ink-secondary">{FACTOR_LABEL[factor]}</span>
+                <span className="min-w-0 flex-1 text-ink-primary">{factorDetail(factor, favored, favored === a ? b : a)}</span>
+                <span className="shrink-0 tabular-nums text-accent">
+                  +{Math.round(Math.abs(shift) * 100)} pt{Math.round(Math.abs(shift) * 100) > 1 ? 's' : ''}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+      {unknown.length > 0 && <p className="mt-2 text-xs text-ink-secondary">Inconnu : {unknown.join(', ')}. Ce facteur n&apos;est pas pris en compte.</p>}
+    </div>
   );
 }
 
@@ -248,7 +300,7 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
     fighters.filter((f) => (!other || isWomen(f) === isWomen(other)) && f.fighter_id !== other?.fighter_id);
 
   const rating = a && b ? predictFight({ rating: a.rating, rd: a.rd }, { rating: b.rating, rd: b.rd }) : null;
-  const prediction = a && b && rating ? adjustForAge(rating.winA, a.age, b.age, AGE_ADJUSTMENT_MODEL) : null;
+  const prediction = a && b && rating ? predictMatchup(rating.winA, a.matchup_profile, b.matchup_profile, MATCHUP_MODEL) : null;
   const pctA = prediction ? Math.round(prediction.winA * 100) : 0;
   const pctB = prediction ? 100 - pctA : 0;
   // Title fights are five rounds: default to that when a champion is in the matchup.
@@ -279,7 +331,7 @@ export default function FightSimulator({ fighters }: { fighters: SimulatorFighte
             <div className="bg-ink-secondary/60" style={{ width: `${pctB}%` }} />
           </div>
           <p className="mt-4 text-sm text-ink-secondary">{CONFIDENCE_LABEL[rating.confidence]}</p>
-          <AgeNote a={a} b={b} prediction={prediction} />
+          <FactorsNote a={a} b={b} prediction={prediction} />
           {a.weight_class !== b.weight_class && (
             <p className="mt-1 text-xs text-ink-secondary">
               Combattants de catégories différentes ({a.weight_class} / {b.weight_class}) : le FightScore est un seul niveau par

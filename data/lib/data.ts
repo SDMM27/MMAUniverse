@@ -18,6 +18,7 @@ import { PRIORITY_ORGANIZATION_ABBREVIATION, prioritizeOrganization, selectHeadl
 import { displayWeightClass } from './fight-utils';
 import { combineProfiles, emptyProfile, type FinishMethod, type OutcomeProfile } from './rating/fight-outcome';
 import { FIGHT_OUTCOME_MODEL } from './rating/fight-outcome-model';
+import { emptyMatchupProfile, type MatchupProfile } from './rating/matchup-model';
 
 export async function fetchOrganizations() {
     try {
@@ -814,20 +815,26 @@ export async function fetchSimulatorFighters() {
       is_champion: boolean;
       current_streak: number;
       age: string | null;
+      reach_cm: number | null;
     }>`
       SELECT DISTINCT ON (fr.fighter_id)
         fr.fighter_id, f.name AS fighter_name, f.image_url AS fighter_image_url, f.nationality AS fighter_nationality,
         fr.weight_class, fr.points, fr.rating_deviation, fr.is_champion, fr.current_streak,
-        (CURRENT_DATE - f.birth_date) / 365.25 AS age
+        (CURRENT_DATE - f.birth_date) / 365.25 AS age, f.reach_cm
       FROM fighter_ratings fr
       JOIN fighters f ON f.id = fr.fighter_id
       WHERE fr.is_ranking_eligible = true AND fr.rating_deviation IS NOT NULL
       ORDER BY fr.fighter_id, fr.is_champion DESC, fr.display_score DESC
     `;
-    const profiles = await fetchOutcomeProfiles();
+    const [profiles, careers] = await Promise.all([fetchOutcomeProfiles(), fetchMatchupCareers()]);
     return data.rows
       .map((row): SimulatorFighter => ({
         outcome_profile: profiles.get(row.fighter_id) ?? emptyProfile(),
+        matchup_profile: {
+          ...(careers.get(row.fighter_id) ?? emptyMatchupProfile()),
+          age: row.age == null ? null : Number(row.age),
+          reachCm: row.reach_cm == null ? null : Number(row.reach_cm),
+        },
         fighter_id: row.fighter_id,
         fighter_name: row.fighter_name,
         fighter_image_url: row.fighter_image_url,
@@ -837,13 +844,61 @@ export async function fetchSimulatorFighters() {
         rd: Number(row.rating_deviation),
         is_champion: row.is_champion,
         current_streak: row.current_streak,
-        age: row.age == null ? null : Number(row.age),
       }))
       .sort((a, b) => b.rating - a.rating);
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch simulator fighters.');
   }
+}
+
+// Every rated fighter's UFC career sums for the simulator's matchup layer
+// (data/lib/rating/matchup-model.ts): the same columns, and the same fight
+// length as fightMinutes(), that `npm run tune:matchup` replays fight by
+// fight. No contests and draws count, as in the replay.
+async function fetchMatchupCareers(): Promise<Map<number, MatchupProfile>> {
+  const data = await sql<{
+    fighter_id: number;
+    minutes: string;
+    landed: string;
+    absorbed: string;
+    control: string;
+    controlled: string;
+    knockdowns_absorbed: string;
+    months_since_last_fight: string;
+  }>`
+    WITH rated AS (SELECT DISTINCT fighter_id FROM fighter_ratings WHERE is_ranking_eligible = true),
+    fights AS (
+      SELECT s.fighter_id, s.event_date, s.sig_strikes_landed, s.control_time_seconds,
+        o.sig_strikes_landed AS opp_landed, o.control_time_seconds AS opp_control, o.knockdowns AS opp_knockdowns,
+        GREATEST(0.5, (COALESCE(s.finish_round, 3) - 1) * 5
+          + COALESCE(NULLIF(split_part(s.finish_time, ':', 1), '')::numeric, 5)
+          + COALESCE(NULLIF(split_part(s.finish_time, ':', 2), '')::numeric, 0) / 60) AS minutes
+      FROM fighter_fight_stats s
+      JOIN rated r ON r.fighter_id = s.fighter_id
+      JOIN fighter_fight_stats o ON o.ufcstats_fight_url = s.ufcstats_fight_url AND o.fighter_id <> s.fighter_id
+      WHERE s.event_date IS NOT NULL
+    )
+    SELECT fighter_id, SUM(minutes) AS minutes, SUM(sig_strikes_landed) AS landed, SUM(opp_landed) AS absorbed,
+      COALESCE(SUM(control_time_seconds), 0) AS control, COALESCE(SUM(opp_control), 0) AS controlled,
+      SUM(opp_knockdowns) AS knockdowns_absorbed, (CURRENT_DATE - MAX(event_date)::date) / 30.44 AS months_since_last_fight
+    FROM fights GROUP BY fighter_id
+  `;
+  return new Map(
+    data.rows.map((row) => [
+      row.fighter_id,
+      {
+        ...emptyMatchupProfile(),
+        monthsSinceLastFight: Number(row.months_since_last_fight),
+        ufcMinutes: Number(row.minutes),
+        sigStrikesLanded: Number(row.landed),
+        sigStrikesAbsorbed: Number(row.absorbed),
+        controlSeconds: Number(row.control),
+        controlledSeconds: Number(row.controlled),
+        knockdownsAbsorbed: Number(row.knockdowns_absorbed),
+      },
+    ]),
+  );
 }
 
 // How every rated fighter's past fights ended, for the simulator's method and
