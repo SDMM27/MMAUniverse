@@ -5248,10 +5248,22 @@
       "name": "Philemon Britus Jeb",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1785504358Philemon_Bitrus_Jeb-Hero-1200x1165-1-600x583.png",
       "weight_class": "Lightweight",
-      "record": "6-2-0",
+      "record": "7-2-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Philemon-Britus-Jeb-449252",
       "fight_history": [
+        {
+          "opponent_name": "Bat-Ireedui Ganbaatar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/BatIreedui-Ganbaatar-417756",
+          "event_name": "One Championship - One Friday Fights 174",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-174-114700",
+          "date": "2026-10-09",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Kevin Perdomo",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kevin-Perdomo-392529",
@@ -5354,10 +5366,22 @@
       "name": "Bat-Ireedui Ganbaatar",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Lightweight",
-      "record": "4-1-0",
+      "record": "5-2-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/BatIreedui-Ganbaatar-417756",
       "fight_history": [
+        {
+          "opponent_name": "Philemon Britus Jeb",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Philemon-Britus-Jeb-449252",
+          "event_name": "One Championship - One Friday Fights 174",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-174-114700",
+          "date": "2026-10-09",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Baatar-Zorig Tsolmonbaatar",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/BaatarZorig-Tsolmonbaatar-417973",
@@ -5395,6 +5419,18 @@
           "time": "5:00"
         },
         {
+          "opponent_name": "Terbat Bat-Erdene",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Terbat-BatErdene-466326",
+          "event_name": "Falcons Fighting Series - FFS 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Falcons-Fighting-Series-FFS-1-102585",
+          "date": "2023-10-27",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "0:00"
+        },
+        {
           "opponent_name": "Deliya Bi",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Deliya-Bi-255807",
           "event_name": "Fight King - International Gold Belt Championship: Day 1",
@@ -5413,10 +5449,10 @@
           "event_sherdog_url": "https://www.sherdog.com/events/Undefeated-MMA-Fire-and-Blood-95824",
           "date": "2022-08-25",
           "result": "win",
-          "method": "Technical Decision (Unanimous)",
+          "method": "TKO (Retirement)",
           "referee": "",
-          "round": 0,
-          "time": "N/A"
+          "round": 1,
+          "time": "5:00"
         }
       ]
     },
