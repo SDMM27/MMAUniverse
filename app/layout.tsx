@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { inter, oswald } from "@/components/ui/fonts";
 import Nav from "@/components/ui/nav";
 import { getSiteUrl } from "@/data/lib/site-url";
+import { OPEN_GRAPH_BASE, SITE_NAME } from "@/data/lib/seo-utils";
 import "./globals.css";
 import "flag-icons/css/flag-icons.min.css";
 
@@ -12,17 +13,17 @@ const SITE_DESCRIPTION =
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
-  title: { default: "MMA Universe", template: "%s · MMA Universe" },
+  title: { default: SITE_NAME, template: `%s · ${SITE_NAME}` },
   description: SITE_DESCRIPTION,
-  applicationName: "MMA Universe",
-  openGraph: {
-    siteName: "MMA Universe",
-    title: "MMA Universe",
-    description: SITE_DESCRIPTION,
-    locale: "fr_FR",
-    type: "website",
-  },
+  applicationName: SITE_NAME,
+  // No title/description here: Next fills them in from each page's own, where a
+  // fixed value would give every page the same share title.
+  openGraph: { ...OPEN_GRAPH_BASE, type: "website" },
   twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  formatDetection: { telephone: false },
+  // Search Console ownership check, set in the deployment's environment.
+  ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
 };
 
 export const viewport: Viewport = {

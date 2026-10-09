@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { eventMetadataDescription, fighterMetadataDescription, organizationMetadataDescription, truncateDescription } from './seo-utils';
+import { eventMetadataDescription, fighterMetadataDescription, listingCanonical, organizationMetadataDescription, staticPageMetadata, truncateDescription } from './seo-utils';
 
 describe('truncateDescription', () => {
   it('leaves short text alone and cuts long text with an ellipsis', () => {
@@ -45,5 +45,28 @@ describe('eventMetadataDescription', () => {
 describe('organizationMetadataDescription', () => {
   it('mentions name and abbreviation', () => {
     assert.match(organizationMetadataDescription({ name: 'Ultimate Fighting Championship', abbreviation: 'UFC' }), /\(UFC\)/);
+  });
+});
+
+describe('listingCanonical', () => {
+  it('keeps the organisation filter and a page past the first', () => {
+    assert.equal(listingCanonical('/fighters', {}), '/fighters');
+    assert.equal(listingCanonical('/fighters', { org: 'all', page: '1' }), '/fighters');
+    assert.equal(listingCanonical('/fighters', { org: '3', page: '2' }), '/fighters?org=3&page=2');
+  });
+
+  it('drops junk values', () => {
+    assert.equal(listingCanonical('/actualites', { org: 'abc', page: '-4' }), '/actualites');
+    assert.equal(listingCanonical('/actualites', { page: '2.5' }), '/actualites');
+  });
+});
+
+describe('staticPageMetadata', () => {
+  it('sets the canonical and a share block carrying the default image', () => {
+    const metadata = staticPageMetadata({ title: 'Événements MMA', description: 'd', path: '/events' });
+    assert.equal(metadata.alternates.canonical, '/events');
+    assert.equal(metadata.openGraph.url, '/events');
+    assert.equal(metadata.openGraph.siteName, 'MMA Universe');
+    assert.equal(metadata.openGraph.images[0].url, '/opengraph-image.png');
   });
 });

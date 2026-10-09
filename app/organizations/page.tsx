@@ -3,15 +3,17 @@ import { computeNextEventByOrg } from '@/data/lib/event-utils';
 import OrganizationsList from '@/components/ui/organizations/organizations-list';
 import EmptyState from '@/components/ui/shared/empty-state';
 import type { Metadata } from 'next';
+import { staticPageMetadata } from '@/data/lib/seo-utils';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = staticPageMetadata({
   title: 'Organisations MMA',
   description: 'Les organisations de MMA suivies sur MMA Universe : prochains événements, classements officiels et rosters.',
-};
+  path: '/organizations',
+});
 
 export default async function Page() {
   const [organizations, events] = await Promise.all([fetchOrganizations(), fetchAllEvents()]);

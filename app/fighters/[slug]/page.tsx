@@ -3,7 +3,9 @@ import type { Metadata } from 'next';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { fetchFighterFightHistory, fetchFighterRankings, fetchQualityWinsByFighterId } from '@/data/lib/data';
 import { getFighterRatings, resolveFighterRoute } from '@/data/lib/fighter-page-data';
-import { fighterMetadataDescription } from '@/data/lib/seo-utils';
+import { OPEN_GRAPH_BASE, fighterMetadataDescription } from '@/data/lib/seo-utils';
+import { getSiteUrl } from '@/data/lib/site-url';
+import { breadcrumbJsonLd, fighterProfileJsonLd } from '@/data/lib/structured-data';
 import { computeFighterStats } from '@/data/lib/fighter-stats';
 import { computeCareerStats } from '@/data/lib/career-stats';
 import { fetchFighterRatingHistory, fetchFighterUfcFightStats } from '@/data/lib/fighter-profile-data';
@@ -18,6 +20,7 @@ import FighterScoreCard from '@/components/ui/ratings/fighter-score-card';
 import FighterRatingHistory from '@/components/ui/ratings/fighter-rating-history';
 import FighterCareerStats from '@/components/ui/fighters/fighter-career-stats';
 import EmptyState from '@/components/ui/shared/empty-state';
+import JsonLd from '@/components/ui/shared/json-ld';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const route = await resolveFighterRoute(params.slug);
@@ -33,6 +36,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     description,
     alternates: { canonical: canonicalPath },
     openGraph: {
+      ...OPEN_GRAPH_BASE,
       title,
       description,
       type: 'profile',
@@ -47,7 +51,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const route = await resolveFighterRoute(params.slug);
   if (route.kind === 'notFound') notFound();
   if (route.kind === 'redirect') permanentRedirect(route.to);
-  const { fighter } = route;
+  const { fighter, canonicalPath } = route;
   // Every query below takes the resolved numeric id, never the URL segment (a slug).
   const fighterId = String(fighter.id);
 
@@ -72,9 +76,19 @@ export default async function Page({ params }: { params: { slug: string } }) {
   // Historique table below (that's completed fights only) so it isn't shown twice.
   const nextFight = fights.find((fight) => fight.result === 'upcoming');
   const pastFights = fights.filter((fight) => fight.result !== 'upcoming');
+  const siteUrl = getSiteUrl();
 
   return (
     <main className="flex min-h-screen flex-col gap-6 p-6">
+      <JsonLd
+        data={[
+          fighterProfileJsonLd(siteUrl, fighter, canonicalPath, fighterMetadataDescription(fighter, ratings[0])),
+          breadcrumbJsonLd(siteUrl, [
+            ['Combattants', '/fighters'],
+            [fighter.name, canonicalPath],
+          ]),
+        ]}
+      />
       <div className="rounded-lg bg-base-card p-4">
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
           <CoverImage

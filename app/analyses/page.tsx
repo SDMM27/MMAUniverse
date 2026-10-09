@@ -1,5 +1,6 @@
 // app/analyses/page.tsx
 import type { Metadata } from 'next';
+import { staticPageMetadata } from '@/data/lib/seo-utils';
 import Link from 'next/link';
 import { ALL_ORGS, DEFAULT_ORG, fetchAnalytics, orgLabel } from '@/data/lib/analytics-data';
 import { sumCells, trendMetricValue, type FactorBucket, type TrendCell, type TrendTotals, type WinFactor } from '@/data/lib/analytics';
@@ -15,10 +16,11 @@ import { formatInteger, formatNumber, formatPercent } from '@/components/ui/anal
 // rather than at build time -- see data/lib/db.ts.
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = staticPageMetadata({
   title: 'Analyses',
   description: 'Les tendances du MMA et ce qui fait gagner un combat, organisation par organisation.',
-};
+  path: '/analyses',
+});
 
 // A bucket needs this many fights before the page draws a conclusion from it,
 // and a factor this many in total before its chart is shown at all.

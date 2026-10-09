@@ -17,16 +17,22 @@ import NewsSection from '@/components/ui/news/news-section';
 import FightScoreHero from '@/components/ui/ratings/fightscore-hero';
 import PoundForPoundList from '@/components/ui/ratings/pound-for-pound-list';
 import DivisionLeadersGrid from '@/components/ui/ratings/division-leaders-grid';
+import JsonLd from '@/components/ui/shared/json-ld';
 import { FighterRatingWithFighter } from '@/data/lib/definitions';
+import { getSiteUrl } from '@/data/lib/site-url';
+import { websiteJsonLd } from '@/data/lib/structured-data';
 import type { Metadata } from 'next';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
+const HOME_DESCRIPTION =
+  "Les prochains événements MMA, les derniers résultats, le classement FightScore et les actualités de l'UFC, du PFL, du Bellator et de bien d'autres organisations.";
+
 export const metadata: Metadata = {
   title: { absolute: 'MMA Universe : événements, classements et FightScore' },
-  description: "Les prochains événements MMA, les derniers résultats, le classement FightScore et les actualités de l'UFC, du PFL, du Bellator et de bien d'autres organisations.",
+  description: HOME_DESCRIPTION,
   alternates: { canonical: '/' },
 };
 
@@ -84,6 +90,7 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col">
+      <JsonLd data={websiteJsonLd(getSiteUrl(), HOME_DESCRIPTION)} />
       <FightScoreHero leader={p4pLeader} summary={summary} />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-10">

@@ -1,13 +1,15 @@
 // app/classement-calcule/methodologie/page.tsx
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { staticPageMetadata } from '@/data/lib/seo-utils';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = staticPageMetadata({
   title: 'Méthodologie du FightScore',
   description: 'Comment le FightScore est calculé : dominance, qualité des adversaires battus, activité et ajustements par catégorie.',
-};
+  path: '/classement-calcule/methodologie',
+});
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (

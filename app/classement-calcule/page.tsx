@@ -6,15 +6,17 @@ import PoundForPoundList from '@/components/ui/ratings/pound-for-pound-list';
 import { formatUpdatedAt } from '@/components/ui/ratings/fightscore-parts';
 import EmptyState from '@/components/ui/shared/empty-state';
 import type { Metadata } from 'next';
+import { staticPageMetadata } from '@/data/lib/seo-utils';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = staticPageMetadata({
   title: "FightScore : classement calculé de l'UFC",
   description: "Le classement FightScore de l'UFC : un score sur 100 par catégorie, calculé à partir des statistiques réelles de chaque combat.",
-};
+  path: '/classement-calcule',
+});
 
 const P4P_COUNT = 10;
 
