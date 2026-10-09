@@ -4466,6 +4466,86 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Mohadi Nazirov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Mohadi-Nazirov-470888",
+      "fight_history": [
+        {
+          "opponent_name": "Edhem Hrustic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edhem-Hrustic-459579",
+          "event_name": "WSFC 9 - Seek and Destroy",
+          "event_sherdog_url": "https://www.sherdog.com/events/WSFC-9-Seek-and-Destroy-114646",
+          "date": "2026-09-12",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Patrick Drees",
+          "round": 1,
+          "time": "1:04"
+        }
+      ]
+    },
+    {
+      "name": "Ibrahima Abdoul-Razak Dosso",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "2-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ibrahima-AbdoulRazak-Dosso-465189",
+      "fight_history": [
+        {
+          "opponent_name": "Magomed Umalov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Magomed-Umalov-475696",
+          "event_name": "HXMMA 44 - Hexagone MMA 44",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-44-Hexagone-MMA-44-111655",
+          "date": "2026-05-29",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Adrien Caillol",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Aaron Adebayo Ogouniyi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aaron-Adebayo-Ogouniyi-406304",
+          "event_name": "Pitbull Fighting Championship - Lome Fight Night 14",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pitbull-Fighting-Championship-Lome-Fight-Night-14-110925",
+          "date": "2025-12-13",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Emilios Dassi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emilios-Dassi-423115",
+          "event_name": "Pitbull Fighting Championship - PFC Abidjan",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pitbull-Fighting-Championship-PFC-Abidjan-105671",
+          "date": "2024-11-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Franck Lataste",
+          "round": 2,
+          "time": "3:10"
+        },
+        {
+          "opponent_name": "Desmond Awa Tamungang",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Desmond-Awa-Tamungang-406081",
+          "event_name": "Francis Ngannou Foundation - The Dream MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Francis-Ngannou-Foundation-The-Dream-MMA-108513",
+          "date": "2023-11-23",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -9731,6 +9811,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 44 - Younousov vs. Nam",
+      "fighter1_name": "Mohadi Nazirov",
+      "fighter2_name": "Ibrahima Abdoul-Razak Dosso",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     },
