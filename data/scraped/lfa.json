@@ -408287,20 +408287,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Helton-Jose-418570",
-      "fight_history": [
-        {
-          "opponent_name": "Chris Anderson",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chris-Anderson-418571",
-          "event_name": "Gladiator Challenge - Season's Beatings",
-          "event_sherdog_url": "https://www.sherdog.com/events/Gladiator-Challenge-Seasons-Beatings-95869",
-          "date": "2022-12-17",
-          "result": "win",
-          "method": "TKO (Punches)",
-          "referee": "Franklin Aguirre",
-          "round": 1,
-          "time": "1:22"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Eric Beck",
@@ -409448,92 +409435,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mark-Lozano-292203",
-      "fight_history": [
-        {
-          "opponent_name": "Jose Garcia",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jose-Garcia-481600",
-          "event_name": "Northwest Fight Promotions - Clinch Fight Club 15",
-          "event_sherdog_url": "https://www.sherdog.com/events/Northwest-Fight-Promotions-Clinch-Fight-Club-15-112114",
-          "date": "2026-04-18",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Joseph Perez",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joseph-Perez-421196",
-          "event_name": "SSC 12 - MMA 1: MTAAC Contender",
-          "event_sherdog_url": "https://www.sherdog.com/events/SSC-12-MMA-1-MTAAC-Contender-103924",
-          "date": "2024-09-07",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "Gustav Gibson",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Barry Hedgebeth",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Barry-Hedgebeth-393279",
-          "event_name": "Rise of the Prospects - Cage Series 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/Rise-of-the-Prospects-Cage-Series-2-93806",
-          "date": "2022-07-09",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Sebastian Mordecai",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sebastian-Mordecai-391121",
-          "event_name": "RUF MMA 42 - Road to One: Summer Showdown",
-          "event_sherdog_url": "https://www.sherdog.com/events/RUF-MMA-42-Road-to-One-Summer-Showdown-89834",
-          "date": "2021-07-31",
-          "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Alphonso Pitolo",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alphonso-Pitolo-299773",
-          "event_name": "RUF MMA 40 - Ft Road to ONE",
-          "event_sherdog_url": "https://www.sherdog.com/events/RUF-MMA-40-Ft-Road-to-ONE-85619",
-          "date": "2021-04-25",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Gregory Lopez",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gregory-Lopez-292201",
-          "event_name": "VFL - Brazos Throwdown 5",
-          "event_sherdog_url": "https://www.sherdog.com/events/VFL-Brazos-Throwdown-5-71403",
-          "date": "2018-10-13",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Nathaniel Porter",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nathaniel-Porter-292215",
-          "event_name": "TCMMA - Texas Clash Bash 11",
-          "event_sherdog_url": "https://www.sherdog.com/events/TCMMA-Texas-Clash-Bash-11-69331",
-          "date": "2018-07-14",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "Frank Collazo",
-          "round": 3,
-          "time": "3:00"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Willy LaMacchia",
@@ -409542,80 +409444,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Willy-LaMacchia-403975",
-      "fight_history": [
-        {
-          "opponent_name": "Marcos Bautista",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcos-Bautista-442946",
-          "event_name": "Dragon House MMA - Zhong Luo Cage Fighting Series 17",
-          "event_sherdog_url": "https://www.sherdog.com/events/Dragon-House-MMA-Zhong-Luo-Cage-Fighting-Series-17-113964",
-          "date": "2026-08-15",
-          "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Fredy Andres Acevedo Pineres",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fredy-Andres-Acevedo-Pineres-391179",
-          "event_name": "Liberty Fight League - The Revolution",
-          "event_sherdog_url": "https://www.sherdog.com/events/Liberty-Fight-League-The-Revolution-112262",
-          "date": "2026-06-06",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "2:00"
-        },
-        {
-          "opponent_name": "Tathya Gautam",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tathya-Gautam-474159",
-          "event_name": "Dragon House MMA - Zhong Luo Cage Fighting Series 16",
-          "event_sherdog_url": "https://www.sherdog.com/events/Dragon-House-MMA-Zhong-Luo-Cage-Fighting-Series-16-111891",
-          "date": "2026-03-21",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "2:00"
-        },
-        {
-          "opponent_name": "David Ventura",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Ventura-475842",
-          "event_name": "Dragon House MMA - Zhong Luo Cage Fighting Series 15",
-          "event_sherdog_url": "https://www.sherdog.com/events/Dragon-House-MMA-Zhong-Luo-Cage-Fighting-Series-15-109344",
-          "date": "2025-11-08",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
-          "round": 3,
-          "time": "1:17"
-        },
-        {
-          "opponent_name": "Heyaw Meteke",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Heyaw-Meteke-474149",
-          "event_name": "NMFC 2 - New Money Fight Club 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/NMFC-2-New-Money-Fight-Club-2-109281",
-          "date": "2025-08-23",
-          "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "2:00"
-        },
-        {
-          "opponent_name": "Trevor van Vilet",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Trevor-van-Vilet-403976",
-          "event_name": "Bear River FC 13 - Bear River Fighting Championship 13",
-          "event_sherdog_url": "https://www.sherdog.com/events/Bear-River-FC-13-Bear-River-Fighting-Championship-13-89976",
-          "date": "2022-03-19",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "2:00"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Chris Chapa",
@@ -409624,92 +409453,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Chris-Chapa-446818",
-      "fight_history": [
-        {
-          "opponent_name": "Brandon Arevalo",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brandon-Arevalo-447951",
-          "event_name": "Urijah Faber's A1 Combat - Prospect Series 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/Urijah-Fabers-A1-Combat-Prospect-Series-2-112770",
-          "date": "2026-05-23",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Michael Ramirez",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michael-Ramirez-418759",
-          "event_name": "559 Fights 113 - 559 Fights",
-          "event_sherdog_url": "https://www.sherdog.com/events/559-Fights-113-559-Fights-107148",
-          "date": "2025-04-19",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Tyler Saelee",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tyler-Saelee-411434",
-          "event_name": "559 Fights 111 - 559 Fights",
-          "event_sherdog_url": "https://www.sherdog.com/events/559-Fights-111-559-Fights-101796",
-          "date": "2025-01-24",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Pablo Solis",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pablo-Solis-412377",
-          "event_name": "559 Fights 109 - 559 Fights",
-          "event_sherdog_url": "https://www.sherdog.com/events/559-Fights-109-559-Fights-101794",
-          "date": "2024-10-25",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "2:00"
-        },
-        {
-          "opponent_name": "Israel Aldama",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Israel-Aldama-455795",
-          "event_name": "559 Fights 106 - 559 Fights",
-          "event_sherdog_url": "https://www.sherdog.com/events/559-Fights-106-559-Fights-101791",
-          "date": "2024-07-12",
-          "result": "loss",
-          "method": "TKO",
-          "referee": "",
-          "round": 1,
-          "time": "1:46"
-        },
-        {
-          "opponent_name": "Fabian Maldonado",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fabian-Maldonado-425103",
-          "event_name": "559 Fights 105 - 559 Fights",
-          "event_sherdog_url": "https://www.sherdog.com/events/559-Fights-105-559-Fights-100242",
-          "date": "2024-04-20",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "2:00"
-        },
-        {
-          "opponent_name": "Gregory Puentes",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gregory-Puentes-446819",
-          "event_name": "559 Fights 104 - 559 Fights",
-          "event_sherdog_url": "https://www.sherdog.com/events/559-Fights-104-559-Fights-100241",
-          "date": "2024-03-01",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
-          "round": 1,
-          "time": "0:57"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Guram Mestvirishvili",
