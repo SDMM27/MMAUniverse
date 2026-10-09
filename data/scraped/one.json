@@ -69,7 +69,7 @@
       "date": "2026-10-09",
       "start_time": "2026-10-09T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/900650"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/900649"
     },
     {
       "name": "One Championship - One Friday Fights 175",
@@ -5877,6 +5877,242 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Victoria Souza",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1726085914vicki.jpg",
+      "weight_class": "Flyweight",
+      "record": "10-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Victoria-Souza-355463",
+      "fight_history": [
+        {
+          "opponent_name": "Ayaka Miura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ayaka-Miura-164697",
+          "event_name": "One Championship - One on Prime Video 45",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-45-113005",
+          "date": "2026-07-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Anastasia Nikolakakos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anastasia-Nikolakakos-226721",
+          "event_name": "One Championship - One on Prime Video 41",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-41-111197",
+          "date": "2026-03-13",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "4:59"
+        },
+        {
+          "opponent_name": "Alyse Anderson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alyse-Anderson-212303",
+          "event_name": "One Championship - One 168: Denver",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-168-Denver-101163",
+          "date": "2024-09-06",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Itsuki Hirata",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Itsuki-Hirata-311639",
+          "event_name": "One Championship - One 167: Tawanchai vs. Nattawut 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-167-Tawanchai-vs-Nattawut-2-100886",
+          "date": "2024-06-07",
+          "result": "win",
+          "method": "Technical Submission (Guillotine Choke)",
+          "referee": "Herb Dean",
+          "round": 1,
+          "time": "1:31"
+        },
+        {
+          "opponent_name": "Noelle Grandjean",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Noelle-Grandjean-394952",
+          "event_name": "One Championship - One on Prime Video 20: Todd vs. Phetjeeja",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-20-Todd-vs-Phetjeeja-99971",
+          "date": "2024-03-08",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Linda Darrow",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Linda-Darrow-282849",
+          "event_name": "One Championship - One on Prime Video 7: Lineker vs. Andrade 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-7-Lineker-vs-Andrade-2-95477",
+          "date": "2023-02-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Paula Vieira da Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paula-Vieira-da-Silva-184231",
+          "event_name": "GCF 61 - Gladiator Combat Fight 61",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCF-61-Gladiator-Combat-Fight-61-94383",
+          "date": "2022-09-03",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Elton Souza",
+          "round": 1,
+          "time": "1:22"
+        },
+        {
+          "opponent_name": "Victoria Lee",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Victoria-Lee-339305",
+          "event_name": "One Championship - Revolution",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-Revolution-89974",
+          "date": "2021-09-24",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Justin Brown",
+          "round": 2,
+          "time": "3:58"
+        },
+        {
+          "opponent_name": "Adry Raiol",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adry-Raiol-382244",
+          "event_name": "GCF 55 - Gladiator Combat Fight 55",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCF-55-Gladiator-Combat-Fight-55-88930",
+          "date": "2021-05-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Celso Jr",
+          "round": 1,
+          "time": "4:27"
+        },
+        {
+          "opponent_name": "Valeska Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valeska-Silva-381021",
+          "event_name": "GCF 54 - Gladiator Combat Fight 54",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCF-54-Gladiator-Combat-Fight-54-88603",
+          "date": "2021-02-06",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Rogerio Gauderio",
+          "round": 1,
+          "time": "1:20"
+        },
+        {
+          "opponent_name": "Adriely Bastos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adriely-Bastos-376587",
+          "event_name": "GCF 53 - Gladiator Combat Fight 53",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCF-53-Gladiator-Combat-Fight-53-87576",
+          "date": "2020-10-24",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Cristiano Padilha",
+          "round": 1,
+          "time": "1:04"
+        },
+        {
+          "opponent_name": "Gabriela Santos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriela-Santos-301727",
+          "event_name": "GCF - Gladiator Combat Fight: Live Fights",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCF-Gladiator-Combat-Fight-Live-Fights-87049",
+          "date": "2020-07-22",
+          "result": "win",
+          "method": "Unanimous Decision",
+          "referee": "Charyana Gamballe Correia",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Maria Julia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maria-Julia-367693",
+          "event_name": "GCF 51 - Gladiator Combat Fight 51",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCF-51-Gladiator-Combat-Fight-51-85653",
+          "date": "2020-03-14",
+          "result": "win",
+          "method": "Submission (armbar)",
+          "referee": "Marcio Alexandre Jr.",
+          "round": 1,
+          "time": "4:51"
+        }
+      ]
+    },
+    {
+      "name": "Magdalena Czaban",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20241106032119_Magdalena_Czaban.JPG",
+      "weight_class": "Strawweight",
+      "record": "5-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Magdalena-Czaban-288895",
+      "fight_history": [
+        {
+          "opponent_name": "Natalie Salcedo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Natalie-Salcedo-312271",
+          "event_name": "One Championship - One on Prime Video 46",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-46-113344",
+          "date": "2026-08-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Dede Dina Mariyana",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dede-Dina-Mariyana-430317",
+          "event_name": "Bali MMA - Canggu Fight Night 38",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bali-MMA-Canggu-Fight-Night-38-112241",
+          "date": "2026-04-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "4:04"
+        },
+        {
+          "opponent_name": "Selene Murga",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Selene-Murga-446697",
+          "event_name": "N.O.W.I. - Game Changer MMA 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/NOWI-Game-Changer-MMA-4-110061",
+          "date": "2025-10-11",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Szymon Deregowski",
+          "round": 1,
+          "time": "2:24"
+        },
+        {
+          "opponent_name": "Hope Holmes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hope-Holmes-365975",
+          "event_name": "Invicta FC 58 - Ducote vs. Ostroverkhova",
+          "event_sherdog_url": "https://www.sherdog.com/events/Invicta-FC-58-Ducote-vs-Ostroverkhova-103272",
+          "date": "2024-11-06",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Nick Berens",
+          "round": 2,
+          "time": "2:42"
+        },
+        {
+          "opponent_name": "Camila Curutchet",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Camila-Curutchet-425379",
+          "event_name": "CAVEMMA 4 - Blood Circle",
+          "event_sherdog_url": "https://www.sherdog.com/events/CAVEMMA-4-Blood-Circle-101452",
+          "date": "2024-03-01",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Paulina Swider",
+          "round": 1,
+          "time": "2:41"
+        }
+      ]
     }
   ],
   "fights": [
@@ -6077,19 +6313,6 @@
     },
     {
       "event_name": "One Championship - One Friday Fights 174",
-      "fighter1_name": "Denis Andreev",
-      "fighter2_name": "Waldimir Britez",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One Friday Fights 174",
       "fighter1_name": "Philemon Britus Jeb",
       "fighter2_name": "Bat-Ireedui Ganbaatar",
       "fight_finished": false,
@@ -6098,7 +6321,7 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false,
+      "is_main_event": true,
       "is_title_fight": false
     },
     {
@@ -6176,6 +6399,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 49",
+      "fighter1_name": "Victoria Souza",
+      "fighter2_name": "Magdalena Czaban",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
       "is_main_event": false,
       "is_title_fight": false
     },
