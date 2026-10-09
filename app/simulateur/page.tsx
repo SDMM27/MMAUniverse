@@ -1,5 +1,6 @@
 // app/simulateur/page.tsx
 import type { Metadata } from 'next';
+import { staticPageMetadata } from '@/data/lib/seo-utils';
 import Link from 'next/link';
 import { fetchSimulatorFighters } from '@/data/lib/data';
 import FightSimulator from '@/components/ui/ratings/fight-simulator';
@@ -10,10 +11,11 @@ import EmptyState from '@/components/ui/shared/empty-state';
 // Queries the DB on every request instead of at build time (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = staticPageMetadata({
   title: 'Simulateur de combat',
   description: "Simulez un combat entre deux combattants : probabilité de victoire et méthodes les plus probables d'après le FightScore.",
-};
+  path: '/simulateur',
+});
 
 export default async function Page({ searchParams }: { searchParams: { a?: string | string[]; b?: string | string[] } }) {
   const fighters = await fetchSimulatorFighters();

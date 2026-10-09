@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getOrganization } from '@/data/lib/page-data';
-import { organizationMetadataDescription } from '@/data/lib/seo-utils';
+import { DEFAULT_OG_IMAGE, OPEN_GRAPH_BASE, organizationMetadataDescription } from '@/data/lib/seo-utils';
+import { getSiteUrl } from '@/data/lib/site-url';
+import { breadcrumbJsonLd, sportsOrganizationJsonLd } from '@/data/lib/structured-data';
 import { fetchEventsByOrg, fetchFightersByOrg, fetchRankingsByOrg } from '@/data/lib/data';
 import { CoverImage } from '@/components/ui/shared/media';
 import OrganizationHubTabs from '@/components/ui/organizations/organization-hub-tabs';
+import JsonLd from '@/components/ui/shared/json-ld';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
@@ -21,7 +24,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title,
     description,
     alternates: { canonical },
-    openGraph: { title, description, url: canonical },
+    openGraph: { ...OPEN_GRAPH_BASE, type: 'website', title, description, url: canonical, images: [DEFAULT_OG_IMAGE] },
     twitter: { card: 'summary_large_image', title, description },
   };
 }
@@ -41,9 +44,19 @@ export default async function Page({ params }: { params: { slug: string } }) {
     fetchFightersByOrg(params.slug),
     fetchRankingsByOrg(params.slug),
   ]);
+  const siteUrl = getSiteUrl();
 
   return (
     <main className="flex min-h-screen flex-col gap-6 p-6">
+      <JsonLd
+        data={[
+          sportsOrganizationJsonLd(siteUrl, organization, organizationMetadataDescription(organization)),
+          breadcrumbJsonLd(siteUrl, [
+            ['Organisations', '/organizations'],
+            [organization.name, `/organizations/${organization.id}`],
+          ]),
+        ]}
+      />
       <div className="flex items-center gap-4 border-b border-base-border pb-6">
         <CoverImage src={organization.logo_link} alt={organization.name} className="h-16 w-16 rounded-full" />
         <div>

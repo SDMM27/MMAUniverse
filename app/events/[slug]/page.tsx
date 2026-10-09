@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { fetchEventsByOrg } from '@/data/lib/data';
 import { getEvent, getEventFights } from '@/data/lib/page-data';
-import { eventMetadataDescription } from '@/data/lib/seo-utils';
+import { DEFAULT_OG_IMAGE, OPEN_GRAPH_BASE, eventMetadataDescription } from '@/data/lib/seo-utils';
+import { getSiteUrl } from '@/data/lib/site-url';
+import { breadcrumbJsonLd, sportsEventJsonLd } from '@/data/lib/structured-data';
 import { displayEventName, formatEventDate, formatEventTime } from '@/data/lib/event-utils';
 import { splitMainEvent } from '@/data/lib/fight-utils';
 import { isEventLocked } from '@/data/lib/pick-lock';
@@ -13,6 +15,7 @@ import FightCard from '@/components/ui/fights/fight-card';
 import FightRow from '@/components/ui/fights/fight-row';
 import FightPickSection from '@/components/ui/picks/fight-pick-section';
 import EmptyState from '@/components/ui/shared/empty-state';
+import JsonLd from '@/components/ui/shared/json-ld';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const event = await getEvent(params.slug);
@@ -27,11 +30,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     description,
     alternates: { canonical },
     openGraph: {
+      ...OPEN_GRAPH_BASE,
+      type: 'website',
       title,
       description,
       url: canonical,
       // The event poster when there is one, else the site-wide share image.
-      ...(event.event_poster?.startsWith('http') ? { images: [{ url: event.event_poster, alt: displayEventName(event.name) }] } : {}),
+      images: event.event_poster?.startsWith('http') ? [{ url: event.event_poster, alt: displayEventName(event.name) }] : [DEFAULT_OG_IMAGE],
     },
     twitter: { card: 'summary_large_image', title, description },
   };
@@ -57,9 +62,19 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const userPicks: Map<number, StoredPick> = userId ? await fetchPicksForEvent(userId, params.slug) : new Map();
 
   const leaderboard = locked ? await fetchEventLeaderboard(params.slug) : [];
+  const siteUrl = getSiteUrl();
 
   return (
     <main className="flex min-h-screen flex-col gap-6 p-6">
+      <JsonLd
+        data={[
+          sportsEventJsonLd(siteUrl, event, fights, eventMetadataDescription(event, mainEvent)),
+          breadcrumbJsonLd(siteUrl, [
+            ['Événements', '/events'],
+            [displayEventName(event.name), `/events/${event.id}`],
+          ]),
+        ]}
+      />
       <EventOrgTabs events={orgEvents} currentEventId={event.id} />
       <div className="flex items-center gap-4 border-b border-base-border pb-6">
         <CoverImage src={event.event_poster} alt={event.name} className="h-20 w-20 rounded-md" />

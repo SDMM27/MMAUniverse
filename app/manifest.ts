@@ -4,7 +4,8 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'MMA Universe',
     short_name: 'MMA Universe',
-    description: 'Organisations, events, fights et combattants MMA',
+    description: 'Tout le MMA au même endroit : événements, résultats, classements, FightScore et fiches de combattants.',
+    lang: 'fr',
     start_url: '/',
     display: 'standalone',
     background_color: '#0a0a0a',

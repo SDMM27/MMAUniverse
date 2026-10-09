@@ -4,15 +4,19 @@ import NewsOrgFilter from '@/components/ui/news/news-org-filter';
 import NewsPagination from '@/components/ui/news/news-pagination';
 import EmptyState from '@/components/ui/shared/empty-state';
 import type { Metadata } from 'next';
+import { listingCanonical, staticPageMetadata } from '@/data/lib/seo-utils';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
-  title: 'Actualités MMA',
-  description: 'Les dernières actualités du MMA, filtrables par organisation.',
-};
+export function generateMetadata({ searchParams }: { searchParams: { org?: string; page?: string } }): Metadata {
+  return staticPageMetadata({
+    title: 'Actualités MMA',
+    description: "Les dernières actualités du MMA (UFC, PFL, Bellator, ONE et plus), filtrables par organisation.",
+    path: listingCanonical('/actualites', searchParams),
+  });
+}
 
 const PAGE_SIZE = 20;
 

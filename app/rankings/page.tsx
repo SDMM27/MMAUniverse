@@ -2,15 +2,17 @@ import { fetchRankedOrganizations, fetchRankingsByOrg } from '@/data/lib/data';
 import RankingsList from '@/components/ui/rankings/rankings-list';
 import EmptyState from '@/components/ui/shared/empty-state';
 import type { Metadata } from 'next';
+import { staticPageMetadata } from '@/data/lib/seo-utils';
 
 // Queries the DB on every request instead of at build time — Vercel's build
 // step doesn't reliably have DATABASE_URL / DB access yet (see data/lib/db.ts).
 export const dynamic = 'force-dynamic';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = staticPageMetadata({
   title: 'Classements officiels',
   description: 'Les classements officiels des organisations MMA, catégorie de poids par catégorie de poids, champions compris.',
-};
+  path: '/rankings',
+});
 
 export default async function Page() {
   const organizations = await fetchRankedOrganizations();

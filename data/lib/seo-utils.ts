@@ -47,3 +47,38 @@ export function organizationMetadataDescription(organization: { name: string; ab
     : organization.name;
   return `${label} : prochains événements, résultats, classements officiels et combattants du roster.`;
 }
+
+export const SITE_NAME = 'MMA Universe';
+
+// app/opengraph-image.png, served at this path. A page that sets its own `openGraph`
+// replaces the root one entirely (Next merges metadata key by key), so it must
+// carry this image back in itself or its shares go out without a picture.
+export const DEFAULT_OG_IMAGE = { url: '/opengraph-image.png', width: 1200, height: 630, alt: SITE_NAME };
+
+export const OPEN_GRAPH_BASE = { siteName: SITE_NAME, locale: 'fr_FR' } as const;
+
+/**
+ * Metadata for a public listing page: canonical URL plus an Open Graph block of
+ * its own (title and description are filled in by Next from the page's).
+ */
+export function staticPageMetadata({ title, description, path }: { title: string; description: string; path: string }) {
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: { ...OPEN_GRAPH_BASE, type: 'website' as const, url: path, images: [DEFAULT_OG_IMAGE] },
+  };
+}
+
+/**
+ * Canonical path of a filterable, paginated listing (/fighters, /actualites):
+ * keeps the organisation filter and a page past the first, drops everything else.
+ */
+export function listingCanonical(path: string, params: { org?: string; page?: string }): string {
+  const query = new URLSearchParams();
+  if (params.org && params.org !== 'all' && /^\d+$/.test(params.org)) query.set('org', params.org);
+  const page = Number(params.page);
+  if (Number.isInteger(page) && page > 1) query.set('page', String(page));
+  const search = query.toString();
+  return search ? `${path}?${search}` : path;
+}
