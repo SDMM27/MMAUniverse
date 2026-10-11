@@ -37977,10 +37977,22 @@
       "name": "Christian Leroy Duncan",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1616157858161507255_4086664408020362_8311949316348907989_o.jpg",
       "weight_class": "Middleweight",
-      "record": "15-2-0",
+      "record": "15-3-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Christian-Leroy-Duncan-209939",
       "fight_history": [
+        {
+          "opponent_name": "Brendan Allen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brendan-Allen-201703",
+          "event_name": "UFC Fight Night 290 - Allen vs. Duncan",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-Fight-Night-290-Allen-vs-Duncan-113919",
+          "date": "2026-10-10",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Marc Goddard",
+          "round": 5,
+          "time": "2:46"
+        },
         {
           "opponent_name": "Jared Cannonier",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jared-Cannonier-78628",
@@ -50805,10 +50817,22 @@
       "name": "Matheus Camilo",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1620344366Matheus_Camilo.jpg",
       "weight_class": "Lightweight",
-      "record": "11-3-0",
+      "record": "11-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Matheus-Camilo-319531",
       "fight_history": [
+        {
+          "opponent_name": "Jai Herbert",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jai-Herbert-168551",
+          "event_name": "UFC Fight Night 290 - Allen vs. Duncan",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-Fight-Night-290-Allen-vs-Duncan-113919",
+          "date": "2026-10-10",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Nazim Sadykhov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nazim-Sadykhov-264031",
@@ -66263,10 +66287,22 @@
       "name": "Brendan Allen",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220401031417_Brendan_Allen_ff.JPG",
       "weight_class": "Middleweight",
-      "record": "27-7-0",
+      "record": "28-7-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Brendan-Allen-201703",
       "fight_history": [
+        {
+          "opponent_name": "Christian Leroy Duncan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Christian-Leroy-Duncan-209939",
+          "event_name": "UFC Fight Night 290 - Allen vs. Duncan",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-Fight-Night-290-Allen-vs-Duncan-113919",
+          "date": "2026-10-10",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Marc Goddard",
+          "round": 5,
+          "time": "2:46"
+        },
         {
           "opponent_name": "Edmen Shahbazyan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edmen-Shahbazyan-247691",
@@ -109625,7 +109661,7 @@
       "name": "Jai Herbert",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230714051401_Jai_Herbert_ff.JPG",
       "weight_class": "Lightweight",
-      "record": "14-6-0",
+      "record": "15-6-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jai-Herbert-168551",
       "fight_history": [
@@ -745979,11 +746015,11 @@
       "event_name": "UFC Fight Night 290 - Allen vs. Duncan",
       "fighter1_name": "Brendan Allen",
       "fighter2_name": "Christian Leroy Duncan",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Brendan Allen",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 5,
+      "time": "2:46",
       "weight_class": "Middleweight",
       "is_main_event": true,
       "is_title_fight": false
