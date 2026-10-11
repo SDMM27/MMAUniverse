@@ -381518,6 +381518,172 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Bakhtovar Yunusov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240607073833_Bakhtovar_Yunusov.JPG",
+      "weight_class": "Bantamweight",
+      "record": "11-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Bakhtovar-Yunusov-378649",
+      "fight_history": [
+        {
+          "opponent_name": "Qinghe Zhang",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Qinghe-Zhang-382525",
+          "event_name": "WLF - W.A.R.S. 95",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLF-WARS-95-113303",
+          "date": "2026-06-27",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Junti Jing",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mehemmedali Osmanli",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mehemmedali-Osmanli-390629",
+          "event_name": "UAE Warriors 65 - Silva vs. Oliveira",
+          "event_sherdog_url": "https://www.sherdog.com/events/UAE-Warriors-65-Silva-vs-Oliveira-110135",
+          "date": "2025-11-15",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Sam Amidi",
+          "round": 2,
+          "time": "1:57"
+        },
+        {
+          "opponent_name": "Ryskulbek Ibraimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryskulbek-Ibraimov-166373",
+          "event_name": "MCFC 3 - Med City Fighting Championships 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/MCFC-3-Med-City-Fighting-Championships-3-97549",
+          "date": "2025-05-31",
+          "result": "draw",
+          "method": "Draw (Majority)",
+          "referee": "Chris Klavetter",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Bobur Rahmonov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bobur-Rahmonov-310517",
+          "event_name": "MMA Series 65 - Yusunov vs. Kulack",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-65-Yusunov-vs-Kulack-97160",
+          "date": "2023-04-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Azouz Anwar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Azouz-Anwar-265557",
+          "event_name": "MMA Series 60 - Khatiev vs. Wanderley",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-60-Khatiev-vs-Wanderley-95762",
+          "date": "2022-12-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "3:26"
+        },
+        {
+          "opponent_name": "Magomed Kadiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Magomed-Kadiev-236673",
+          "event_name": "MMA Series 55 - Grand Arena",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-55-Grand-Arena-94369",
+          "date": "2022-09-02",
+          "result": "win",
+          "method": "Submission (Shoulder Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "4:29"
+        },
+        {
+          "opponent_name": "Sadyk Ryskeldi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sadyk-Ryskeldi-241415",
+          "event_name": "MMA Series 50 - Grand Arena",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-50-Grand-Arena-92396",
+          "date": "2022-04-15",
+          "result": "win",
+          "method": "Submission",
+          "referee": "",
+          "round": 2,
+          "time": "1:45"
+        },
+        {
+          "opponent_name": "Bakdoolot Isakov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bakdoolot-Isakov-381307",
+          "event_name": "MMA Series 42 - Strong Spirit",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-42-Strong-Spirit-90851",
+          "date": "2021-10-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Artem Lukyanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Artem-Lukyanov-380027",
+          "event_name": "Brave CF 51 - Brave Combat Federation 51",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-51-Brave-Combat-Federation-51-89118",
+          "date": "2021-06-04",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Declan Larkin",
+          "round": 2,
+          "time": "3:08"
+        },
+        {
+          "opponent_name": "Ertabyldy Kimanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ertabyldy-Kimanov-369470",
+          "event_name": "MMA Series 28 - Time of New Heroes 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-28-Time-of-New-Heroes-15-88846",
+          "date": "2021-03-20",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 3,
+          "time": "2:30"
+        },
+        {
+          "opponent_name": "Shakhpur Salaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shakhpur-Salaev-217883",
+          "event_name": "MMA Series 14 - Fighting Championship Pankration",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-14-Fighting-Championship-Pankration-87543",
+          "date": "2020-09-19",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Vladislav Scheblykin",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Shakhboz Sharifov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shakhboz-Sharifov-295301",
+          "event_name": "MMA Series 14 - Fighting Championship Pankration",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-14-Fighting-Championship-Pankration-87543",
+          "date": "2020-09-19",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Vladislav Scheblykin",
+          "round": 1,
+          "time": "1:29"
+        },
+        {
+          "opponent_name": "Asilbek Salikhov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Asilbek-Salikhov-369410",
+          "event_name": "MMA Series 9 - Time of New Heroes 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Series-9-Time-of-New-Heroes-7-86964",
+          "date": "2020-07-11",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "3:38"
+        }
+      ]
     }
   ],
   "fights": [
@@ -428962,6 +429128,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Bakhtovar Yunusov",
+      "fighter2_name": "Saidyokub Kakhramonov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
