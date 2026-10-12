@@ -51,6 +51,13 @@ const THUMB_WIDTH = 800;
 // written; far fewer back means a truncated/failed answer, not lost photos.
 const MIN_WIKIDATA_ROWS = 800;
 
+// Hand-picked fixes to Wikidata's choice, by Sherdog fighter ID: another
+// Commons file, or null for no photo. For pictures that are free but wrong
+// for a fighter card (a politician in the frame, a group shot...).
+const PHOTO_OVERRIDES: Record<string, string | null> = {
+  '186873': 'PetrYan (cropped).jpg', // Petr Yan: Wikidata's photo is with Putin at the Kremlin
+};
+
 const ALLOWED_LICENSE = /^(cc0|public domain|pd\b|pd-|cc by(-sa)? \d(\.\d)?)/i;
 
 export type CommonsPhoto = {
@@ -117,6 +124,10 @@ async function fetchWikidataFiles(): Promise<Map<string, string>> {
     const id = row.sherdog.value.match(/(\d+)\s*$/)?.[1];
     const file = decodeURIComponent(row.img.value.split('/Special:FilePath/')[1] ?? '');
     if (id && file && !files.has(id)) files.set(id, file);
+  }
+  for (const [id, file] of Object.entries(PHOTO_OVERRIDES)) {
+    if (file) files.set(id, file);
+    else files.delete(id);
   }
   return files;
 }
