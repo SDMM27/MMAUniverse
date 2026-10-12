@@ -162,8 +162,11 @@ async function fetchCommonsPhotos(files: string[]): Promise<Map<string, CommonsP
 }
 
 async function main() {
+  // Commons thumbnail URLs (long, percent-encoded file names) overflow the
+  // original VARCHAR(255).
   await sql`
     ALTER TABLE fighters
+      ALTER COLUMN image_url TYPE TEXT,
       ADD COLUMN IF NOT EXISTS photo_author TEXT,
       ADD COLUMN IF NOT EXISTS photo_author_url TEXT,
       ADD COLUMN IF NOT EXISTS photo_license TEXT,

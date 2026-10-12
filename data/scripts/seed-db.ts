@@ -188,7 +188,7 @@ async function seedFighters() {
     CREATE TABLE IF NOT EXISTS fighters (
       id SERIAL PRIMARY KEY,
       name VARCHAR(255) NOT NULL,
-      image_url VARCHAR(255),
+      image_url TEXT,
       weight_class VARCHAR(50),
       organization_id INT REFERENCES organizations(id),
       record VARCHAR(50),
