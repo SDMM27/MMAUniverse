@@ -21,7 +21,11 @@ export type EventWithOrganization = Event & {
 export type Fighter = {
   id: number;
   name: string;
-  image_url: string;
+  // Free-licensed photo only (null = placeholder); the credit fields are only
+  // sent by the fighter-detail endpoint.
+  image_url: string | null;
+  photo_author?: string | null;
+  photo_license?: string | null;
   weight_class: string;
   organization_id: number;
   record: string;

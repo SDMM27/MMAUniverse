@@ -76,8 +76,8 @@ async function seedDataset(data: ScrapedOrgData) {
     const existing = await findFighterId(fighter.name, orgId);
     if (existing) continue;
     await sql`
-      INSERT INTO fighters (name, image_url, weight_class, organization_id, record, ranking)
-      VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${orgId}, ${fighter.record}, ${fighter.ranking});
+      INSERT INTO fighters (name, weight_class, organization_id, record, ranking)
+      VALUES (${fighter.name}, ${fighter.weight_class}, ${orgId}, ${fighter.record}, ${fighter.ranking});
     `;
     insertedFighters++;
   }

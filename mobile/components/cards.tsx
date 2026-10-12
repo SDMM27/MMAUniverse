@@ -1,6 +1,7 @@
 import { View, Text, Image, Pressable } from 'react-native';
 import type { EventWithOrganization, Fighter, FighterWithOrganization, FightWithFighters, Organization } from '../lib/types';
 import { CountryFlag } from './country-flag';
+import { FighterPhoto } from './fighter-photo';
 
 export function OrganizationCard({ organization, onPress }: { organization: Organization; onPress: () => void }) {
   return (
@@ -44,7 +45,7 @@ export function FighterCard({ fighter, onPress }: { fighter: FighterWithOrganiza
       accessibilityLabel={`${fighter.name}, ${fighter.record}`}
       className="flex-row items-center gap-3 rounded-lg border border-base-border bg-base-card p-3"
     >
-      <Image source={{ uri: fighter.image_url }} accessible={false} className="h-12 w-12 rounded-full" />
+      <FighterPhoto uri={fighter.image_url} name={fighter.name} className="h-12 w-12 rounded-full" />
       <View className="flex-1">
         <View className="flex-row items-center gap-1.5">
           <CountryFlag code={fighter.nationality} height={12} />
@@ -202,7 +203,7 @@ function FightCardFighterColumn({
 
   return (
     <View className="flex-1 items-center gap-1">
-      <Image source={{ uri: fighter.image_url }} accessible={false} className="h-12 w-12 rounded-full" />
+      <FighterPhoto uri={fighter.image_url} name={fighter.name} className="h-12 w-12 rounded-full" />
       <CountryFlag code={fighter.nationality} height={14} />
       <Text className="font-display text-sm uppercase tracking-wide text-ink-primary">{fighter.name}</Text>
       {status === 'finished' ? (
