@@ -3,8 +3,8 @@
 // say about who runs the site and who processes data on its behalf.
 
 // Public contact address for legal notices, takedown requests and RGPD
-// requests. Set NEXT_PUBLIC_CONTACT_EMAIL in the Vercel project settings.
-export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || null;
+// requests (NEXT_PUBLIC_CONTACT_EMAIL overrides it if ever needed).
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || 'mmauniverseapp@gmail.com';
 
 export const LEGAL_LAST_UPDATED = '12 octobre 2026';
 
