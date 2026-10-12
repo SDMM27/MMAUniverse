@@ -43,7 +43,7 @@ const loadCredits = unstable_cache(
       return [];
     }
   },
-  ['photo-credits-v1'],
+  ['photo-credits-v2'],
   { revalidate: 86400 },
 );
 
