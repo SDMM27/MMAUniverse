@@ -24,7 +24,6 @@ export function LegalSection({ title, children }: { title: string; children: Rea
 }
 
 export function ContactLine() {
-  if (!CONTACT_EMAIL) return <>via l’adresse de contact indiquée dans les mentions légales</>;
   return (
     <>
       par e-mail à{' '}
