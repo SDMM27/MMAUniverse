@@ -1899746,5 +1899746,5129 @@
         "controlTimeSeconds": 2
       }
     ]
+  },
+  {
+    "fighter_name": "Brendan Allen",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/2f181c0467965b98",
+    "opponent_name": "Christian Leroy Duncan",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/a93f94c923c3a9cb",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/7db1a3dac7e343e7",
+    "result": "win",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "Submission",
+    "round": 5,
+    "time": "2:46",
+    "scheduled_rounds": 5,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 51,
+        "attempted": 107
+      },
+      "totalStrikes": {
+        "landed": 91,
+        "attempted": 150
+      },
+      "takedowns": {
+        "landed": 4,
+        "attempted": 11
+      },
+      "submissionAttempts": 2,
+      "reversals": 1,
+      "controlTimeSeconds": 519
+    },
+    "strikes": {
+      "head": {
+        "landed": 34,
+        "attempted": 85
+      },
+      "body": {
+        "landed": 12,
+        "attempted": 16
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "distance": {
+        "landed": 32,
+        "attempted": 83
+      },
+      "clinch": {
+        "landed": 12,
+        "attempted": 16
+      },
+      "ground": {
+        "landed": 7,
+        "attempted": 8
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 15,
+          "attempted": 22
+        },
+        "totalStrikes": {
+          "landed": 16,
+          "attempted": 25
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 4
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 91
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 10,
+          "attempted": 24
+        },
+        "totalStrikes": {
+          "landed": 33,
+          "attempted": 47
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 169
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 6
+        },
+        "totalStrikes": {
+          "landed": 22,
+          "attempted": 23
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 3
+        },
+        "submissionAttempts": 0,
+        "reversals": 1,
+        "controlTimeSeconds": 177
+      },
+      {
+        "round": 4,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 17,
+          "attempted": 43
+        },
+        "totalStrikes": {
+          "landed": 17,
+          "attempted": 43
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 5,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 3,
+          "attempted": 12
+        },
+        "totalStrikes": {
+          "landed": 3,
+          "attempted": 12
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 82
+      }
+    ]
+  },
+  {
+    "fighter_name": "Christian Leroy Duncan",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/a93f94c923c3a9cb",
+    "opponent_name": "Brendan Allen",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/2f181c0467965b98",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/7db1a3dac7e343e7",
+    "result": "loss",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "Submission",
+    "round": 5,
+    "time": "2:46",
+    "scheduled_rounds": 5,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 106,
+        "attempted": 189
+      },
+      "totalStrikes": {
+        "landed": 126,
+        "attempted": 212
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 1,
+      "controlTimeSeconds": 231
+    },
+    "strikes": {
+      "head": {
+        "landed": 65,
+        "attempted": 137
+      },
+      "body": {
+        "landed": 20,
+        "attempted": 24
+      },
+      "leg": {
+        "landed": 21,
+        "attempted": 28
+      },
+      "distance": {
+        "landed": 87,
+        "attempted": 165
+      },
+      "clinch": {
+        "landed": 10,
+        "attempted": 15
+      },
+      "ground": {
+        "landed": 9,
+        "attempted": 9
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 24,
+          "attempted": 39
+        },
+        "totalStrikes": {
+          "landed": 37,
+          "attempted": 53
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 114
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 14,
+          "attempted": 27
+        },
+        "totalStrikes": {
+          "landed": 14,
+          "attempted": 27
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 6
+        },
+        "totalStrikes": {
+          "landed": 13,
+          "attempted": 15
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 1,
+        "controlTimeSeconds": 117
+      },
+      {
+        "round": 4,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 46,
+          "attempted": 89
+        },
+        "totalStrikes": {
+          "landed": 46,
+          "attempted": 89
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 5,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 16,
+          "attempted": 28
+        },
+        "totalStrikes": {
+          "landed": 16,
+          "attempted": 28
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Matheus Camilo",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/72f890c5d421e705",
+    "opponent_name": "Jai Herbert",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/4c88a1db5a46c6a4",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/295339c08c80a3cf",
+    "result": "loss",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 43,
+        "attempted": 86
+      },
+      "totalStrikes": {
+        "landed": 51,
+        "attempted": 94
+      },
+      "takedowns": {
+        "landed": 2,
+        "attempted": 4
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 161
+    },
+    "strikes": {
+      "head": {
+        "landed": 26,
+        "attempted": 61
+      },
+      "body": {
+        "landed": 6,
+        "attempted": 10
+      },
+      "leg": {
+        "landed": 11,
+        "attempted": 15
+      },
+      "distance": {
+        "landed": 36,
+        "attempted": 77
+      },
+      "clinch": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "ground": {
+        "landed": 4,
+        "attempted": 6
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 13,
+          "attempted": 33
+        },
+        "totalStrikes": {
+          "landed": 14,
+          "attempted": 34
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 62
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 14
+        },
+        "totalStrikes": {
+          "landed": 7,
+          "attempted": 15
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 63
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 24,
+          "attempted": 39
+        },
+        "totalStrikes": {
+          "landed": 30,
+          "attempted": 45
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 36
+      }
+    ]
+  },
+  {
+    "fighter_name": "Jai Herbert",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/4c88a1db5a46c6a4",
+    "opponent_name": "Matheus Camilo",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/72f890c5d421e705",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/295339c08c80a3cf",
+    "result": "win",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 54,
+        "attempted": 157
+      },
+      "totalStrikes": {
+        "landed": 80,
+        "attempted": 194
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 1,
+      "controlTimeSeconds": 175
+    },
+    "strikes": {
+      "head": {
+        "landed": 25,
+        "attempted": 116
+      },
+      "body": {
+        "landed": 19,
+        "attempted": 28
+      },
+      "leg": {
+        "landed": 10,
+        "attempted": 13
+      },
+      "distance": {
+        "landed": 43,
+        "attempted": 138
+      },
+      "clinch": {
+        "landed": 8,
+        "attempted": 8
+      },
+      "ground": {
+        "landed": 3,
+        "attempted": 11
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 9,
+          "attempted": 42
+        },
+        "totalStrikes": {
+          "landed": 9,
+          "attempted": 42
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 8,
+          "attempted": 37
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 65
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 1,
+        "controlTimeSeconds": 128
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 37,
+          "attempted": 78
+        },
+        "totalStrikes": {
+          "landed": 42,
+          "attempted": 87
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 47
+      }
+    ]
+  },
+  {
+    "fighter_name": "Loopy Godinez",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/8e5d953bdb9ae5e7",
+    "opponent_name": "Ketlen Souza",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/8bd4200561c77a62",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/4f0f783503d5b5c4",
+    "result": "win",
+    "weight_class": "Women's Strawweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 67,
+        "attempted": 146
+      },
+      "totalStrikes": {
+        "landed": 128,
+        "attempted": 212
+      },
+      "takedowns": {
+        "landed": 2,
+        "attempted": 13
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 219
+    },
+    "strikes": {
+      "head": {
+        "landed": 54,
+        "attempted": 131
+      },
+      "body": {
+        "landed": 10,
+        "attempted": 11
+      },
+      "leg": {
+        "landed": 3,
+        "attempted": 4
+      },
+      "distance": {
+        "landed": 56,
+        "attempted": 127
+      },
+      "clinch": {
+        "landed": 10,
+        "attempted": 17
+      },
+      "ground": {
+        "landed": 1,
+        "attempted": 2
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 29,
+          "attempted": 66
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 66
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 6
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 5
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 27,
+          "attempted": 59
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 61
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 5
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 20
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 11,
+          "attempted": 21
+        },
+        "totalStrikes": {
+          "landed": 70,
+          "attempted": 85
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 194
+      }
+    ]
+  },
+  {
+    "fighter_name": "Ketlen Souza",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/8bd4200561c77a62",
+    "opponent_name": "Loopy Godinez",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/8e5d953bdb9ae5e7",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/4f0f783503d5b5c4",
+    "result": "loss",
+    "weight_class": "Women's Strawweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 63,
+        "attempted": 153
+      },
+      "totalStrikes": {
+        "landed": 70,
+        "attempted": 160
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 29
+    },
+    "strikes": {
+      "head": {
+        "landed": 45,
+        "attempted": 132
+      },
+      "body": {
+        "landed": 10,
+        "attempted": 12
+      },
+      "leg": {
+        "landed": 8,
+        "attempted": 9
+      },
+      "distance": {
+        "landed": 57,
+        "attempted": 146
+      },
+      "clinch": {
+        "landed": 6,
+        "attempted": 7
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 24,
+          "attempted": 64
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 69
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 27,
+          "attempted": 59
+        },
+        "totalStrikes": {
+          "landed": 28,
+          "attempted": 60
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 29
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 12,
+          "attempted": 30
+        },
+        "totalStrikes": {
+          "landed": 13,
+          "attempted": 31
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Andre Fili",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/8fd808923cffff82",
+    "opponent_name": "Kai Kamaka III",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/eee0ef3e2b14816b",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e8710a6236db464e",
+    "result": "win",
+    "weight_class": "Featherweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "0:22",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 50,
+        "attempted": 108
+      },
+      "totalStrikes": {
+        "landed": 50,
+        "attempted": 108
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 2
+    },
+    "strikes": {
+      "head": {
+        "landed": 42,
+        "attempted": 99
+      },
+      "body": {
+        "landed": 4,
+        "attempted": 5
+      },
+      "leg": {
+        "landed": 4,
+        "attempted": 4
+      },
+      "distance": {
+        "landed": 47,
+        "attempted": 103
+      },
+      "clinch": {
+        "landed": 3,
+        "attempted": 5
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 43,
+          "attempted": 91
+        },
+        "totalStrikes": {
+          "landed": 43,
+          "attempted": 91
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 2,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 7,
+          "attempted": 17
+        },
+        "totalStrikes": {
+          "landed": 7,
+          "attempted": 17
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 2
+      }
+    ]
+  },
+  {
+    "fighter_name": "Kai Kamaka III",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/eee0ef3e2b14816b",
+    "opponent_name": "Andre Fili",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/8fd808923cffff82",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e8710a6236db464e",
+    "result": "loss",
+    "weight_class": "Featherweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "0:22",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 33,
+        "attempted": 74
+      },
+      "totalStrikes": {
+        "landed": 34,
+        "attempted": 75
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 8
+    },
+    "strikes": {
+      "head": {
+        "landed": 19,
+        "attempted": 57
+      },
+      "body": {
+        "landed": 9,
+        "attempted": 11
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "distance": {
+        "landed": 33,
+        "attempted": 74
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 29,
+          "attempted": 63
+        },
+        "totalStrikes": {
+          "landed": 30,
+          "attempted": 64
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 8
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 4,
+          "attempted": 11
+        },
+        "totalStrikes": {
+          "landed": 4,
+          "attempted": 11
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Malcolm Wellmaker",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/2e45d08b3f2f02c8",
+    "opponent_name": "Otari Tanzilovi",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/b9124c308671e303",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/c56bbc28d155f846",
+    "result": "loss",
+    "weight_class": "Bantamweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "2:39",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 17,
+        "attempted": 58
+      },
+      "totalStrikes": {
+        "landed": 45,
+        "attempted": 89
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 33
+    },
+    "strikes": {
+      "head": {
+        "landed": 4,
+        "attempted": 37
+      },
+      "body": {
+        "landed": 13,
+        "attempted": 21
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 15,
+        "attempted": 56
+      },
+      "clinch": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 9,
+          "attempted": 30
+        },
+        "totalStrikes": {
+          "landed": 35,
+          "attempted": 59
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 27
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 8,
+          "attempted": 28
+        },
+        "totalStrikes": {
+          "landed": 10,
+          "attempted": 30
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 6
+      }
+    ]
+  },
+  {
+    "fighter_name": "Otari Tanzilovi",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/b9124c308671e303",
+    "opponent_name": "Malcolm Wellmaker",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/2e45d08b3f2f02c8",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/c56bbc28d155f846",
+    "result": "win",
+    "weight_class": "Bantamweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "2:39",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 38,
+        "attempted": 67
+      },
+      "totalStrikes": {
+        "landed": 44,
+        "attempted": 73
+      },
+      "takedowns": {
+        "landed": 2,
+        "attempted": 4
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 51
+    },
+    "strikes": {
+      "head": {
+        "landed": 26,
+        "attempted": 54
+      },
+      "body": {
+        "landed": 6,
+        "attempted": 7
+      },
+      "leg": {
+        "landed": 6,
+        "attempted": 6
+      },
+      "distance": {
+        "landed": 32,
+        "attempted": 59
+      },
+      "clinch": {
+        "landed": 4,
+        "attempted": 6
+      },
+      "ground": {
+        "landed": 2,
+        "attempted": 2
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 24,
+          "attempted": 41
+        },
+        "totalStrikes": {
+          "landed": 27,
+          "attempted": 44
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 3
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 34
+      },
+      {
+        "round": 2,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 14,
+          "attempted": 26
+        },
+        "totalStrikes": {
+          "landed": 17,
+          "attempted": 29
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 17
+      }
+    ]
+  },
+  {
+    "fighter_name": "Julius Walker",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/6add18754930182b",
+    "opponent_name": "Gerald Meerschaert",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/6ac9bc2953c47345",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/eda03e3ddf74d1cd",
+    "result": "win",
+    "weight_class": "Light Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "3:35",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 38,
+        "attempted": 50
+      },
+      "totalStrikes": {
+        "landed": 83,
+        "attempted": 100
+      },
+      "takedowns": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "submissionAttempts": 1,
+      "reversals": 0,
+      "controlTimeSeconds": 405
+    },
+    "strikes": {
+      "head": {
+        "landed": 37,
+        "attempted": 49
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 5,
+        "attempted": 12
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "ground": {
+        "landed": 33,
+        "attempted": 37
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 27,
+          "attempted": 37
+        },
+        "totalStrikes": {
+          "landed": 56,
+          "attempted": 68
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 212
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 11,
+          "attempted": 13
+        },
+        "totalStrikes": {
+          "landed": 27,
+          "attempted": 32
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 193
+      }
+    ]
+  },
+  {
+    "fighter_name": "Gerald Meerschaert",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/6ac9bc2953c47345",
+    "opponent_name": "Julius Walker",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/6add18754930182b",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/eda03e3ddf74d1cd",
+    "result": "loss",
+    "weight_class": "Light Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "3:35",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 9,
+        "attempted": 14
+      },
+      "totalStrikes": {
+        "landed": 26,
+        "attempted": 34
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 3
+    },
+    "strikes": {
+      "head": {
+        "landed": 5,
+        "attempted": 10
+      },
+      "body": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "leg": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "distance": {
+        "landed": 7,
+        "attempted": 12
+      },
+      "clinch": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 7,
+          "attempted": 12
+        },
+        "totalStrikes": {
+          "landed": 12,
+          "attempted": 17
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 2,
+          "attempted": 2
+        },
+        "totalStrikes": {
+          "landed": 14,
+          "attempted": 17
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 3
+      }
+    ]
+  },
+  {
+    "fighter_name": "Francisco Prado",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/3920d0cc288f9b0d",
+    "opponent_name": "Ismael Bonfim",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/eb393afdbe3293d5",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/254ace2091125fc6",
+    "result": "win",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "4:23",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 25,
+        "attempted": 51
+      },
+      "totalStrikes": {
+        "landed": 34,
+        "attempted": 61
+      },
+      "takedowns": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 136
+    },
+    "strikes": {
+      "head": {
+        "landed": 19,
+        "attempted": 42
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 3
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "distance": {
+        "landed": 8,
+        "attempted": 26
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 17,
+        "attempted": 25
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 25,
+          "attempted": 51
+        },
+        "totalStrikes": {
+          "landed": 34,
+          "attempted": 61
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 136
+      }
+    ]
+  },
+  {
+    "fighter_name": "Ismael Bonfim",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/eb393afdbe3293d5",
+    "opponent_name": "Francisco Prado",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/3920d0cc288f9b0d",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/254ace2091125fc6",
+    "result": "loss",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "4:23",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 13,
+        "attempted": 26
+      },
+      "totalStrikes": {
+        "landed": 13,
+        "attempted": 26
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 7,
+        "attempted": 20
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 5
+      },
+      "distance": {
+        "landed": 13,
+        "attempted": 26
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 13,
+          "attempted": 26
+        },
+        "totalStrikes": {
+          "landed": 13,
+          "attempted": 26
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Niko Price",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/d8da10db80131bec",
+    "opponent_name": "Leon Shahbazyan",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/9eed2bcc9e0b92af",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e5496bb07c76d010",
+    "result": "win",
+    "weight_class": "Welterweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "1:58",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 41,
+        "attempted": 59
+      },
+      "totalStrikes": {
+        "landed": 58,
+        "attempted": 78
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 105
+    },
+    "strikes": {
+      "head": {
+        "landed": 39,
+        "attempted": 57
+      },
+      "body": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 4,
+        "attempted": 6
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 37,
+        "attempted": 53
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 41,
+          "attempted": 59
+        },
+        "totalStrikes": {
+          "landed": 58,
+          "attempted": 78
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 105
+      }
+    ]
+  },
+  {
+    "fighter_name": "Leon Shahbazyan",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/9eed2bcc9e0b92af",
+    "opponent_name": "Niko Price",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/d8da10db80131bec",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e5496bb07c76d010",
+    "result": "loss",
+    "weight_class": "Welterweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "1:58",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "totalStrikes": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "totalStrikes": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Felipe Franco",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/e564146b9cf6dbef",
+    "opponent_name": "Brendson Ribeiro",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/49edd0d90f60fb7d",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/ab17995c72396061",
+    "result": "loss",
+    "weight_class": "Light Heavyweight",
+    "is_title_fight": false,
+    "method": "Submission",
+    "round": 1,
+    "time": "1:49",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 1,
+        "attempted": 5
+      },
+      "totalStrikes": {
+        "landed": 1,
+        "attempted": 5
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 3
+    },
+    "strikes": {
+      "head": {
+        "landed": 1,
+        "attempted": 5
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 1,
+        "attempted": 5
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 1,
+          "attempted": 5
+        },
+        "totalStrikes": {
+          "landed": 1,
+          "attempted": 5
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 3
+      }
+    ]
+  },
+  {
+    "fighter_name": "Brendson Ribeiro",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/49edd0d90f60fb7d",
+    "opponent_name": "Felipe Franco",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/e564146b9cf6dbef",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/ab17995c72396061",
+    "result": "win",
+    "weight_class": "Light Heavyweight",
+    "is_title_fight": false,
+    "method": "Submission",
+    "round": 1,
+    "time": "1:49",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 6,
+        "attempted": 11
+      },
+      "totalStrikes": {
+        "landed": 6,
+        "attempted": 11
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 1,
+      "reversals": 1,
+      "controlTimeSeconds": 12
+    },
+    "strikes": {
+      "head": {
+        "landed": 3,
+        "attempted": 8
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 6,
+        "attempted": 11
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 11
+        },
+        "totalStrikes": {
+          "landed": 6,
+          "attempted": 11
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 1,
+        "reversals": 1,
+        "controlTimeSeconds": 12
+      }
+    ]
+  },
+  {
+    "fighter_name": "Allen Frye Jr.",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/73a78713bd899f4c",
+    "opponent_name": "RJ Harris",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/e03187ec8b5b6abc",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e997bc8caf59cf03",
+    "result": "win",
+    "weight_class": "Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "2:59",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 40,
+        "attempted": 55
+      },
+      "totalStrikes": {
+        "landed": 40,
+        "attempted": 57
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 5
+    },
+    "strikes": {
+      "head": {
+        "landed": 27,
+        "attempted": 39
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 3
+      },
+      "leg": {
+        "landed": 12,
+        "attempted": 13
+      },
+      "distance": {
+        "landed": 35,
+        "attempted": 50
+      },
+      "clinch": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "ground": {
+        "landed": 4,
+        "attempted": 4
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 40,
+          "attempted": 55
+        },
+        "totalStrikes": {
+          "landed": 40,
+          "attempted": 57
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 5
+      }
+    ]
+  },
+  {
+    "fighter_name": "RJ Harris",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/e03187ec8b5b6abc",
+    "opponent_name": "Allen Frye Jr.",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/73a78713bd899f4c",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e997bc8caf59cf03",
+    "result": "loss",
+    "weight_class": "Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "2:59",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 20,
+        "attempted": 56
+      },
+      "totalStrikes": {
+        "landed": 20,
+        "attempted": 56
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 1
+    },
+    "strikes": {
+      "head": {
+        "landed": 9,
+        "attempted": 43
+      },
+      "body": {
+        "landed": 2,
+        "attempted": 4
+      },
+      "leg": {
+        "landed": 9,
+        "attempted": 9
+      },
+      "distance": {
+        "landed": 19,
+        "attempted": 54
+      },
+      "clinch": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 56
+        },
+        "totalStrikes": {
+          "landed": 20,
+          "attempted": 56
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 1
+      }
+    ]
+  },
+  {
+    "fighter_name": "Alice Pereira",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/81d2c551886bd5a1",
+    "opponent_name": "Daria Zhelezniakova",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/07047eb7d17fb0a2",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/335b3ce2b5c0a3cd",
+    "result": "win",
+    "weight_class": "Women's Bantamweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 20,
+        "attempted": 32
+      },
+      "totalStrikes": {
+        "landed": 33,
+        "attempted": 48
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 245
+    },
+    "strikes": {
+      "head": {
+        "landed": 18,
+        "attempted": 29
+      },
+      "body": {
+        "landed": 2,
+        "attempted": 3
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 5,
+        "attempted": 14
+      },
+      "clinch": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "ground": {
+        "landed": 14,
+        "attempted": 17
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 32
+        },
+        "totalStrikes": {
+          "landed": 33,
+          "attempted": 48
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 245
+      }
+    ]
+  },
+  {
+    "fighter_name": "Daria Zhelezniakova",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/07047eb7d17fb0a2",
+    "opponent_name": "Alice Pereira",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/81d2c551886bd5a1",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/335b3ce2b5c0a3cd",
+    "result": "loss",
+    "weight_class": "Women's Bantamweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 6,
+        "attempted": 10
+      },
+      "totalStrikes": {
+        "landed": 7,
+        "attempted": 11
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 6,
+        "attempted": 9
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 6,
+        "attempted": 10
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 10
+        },
+        "totalStrikes": {
+          "landed": 7,
+          "attempted": 11
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Ernesta Kareckaite",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/e4faa79383c9f214",
+    "opponent_name": "Melissa Gatto",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/a4a80dd7336ffd59",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e556bdf83f767d4b",
+    "result": "draw",
+    "weight_class": "Women's Flyweight",
+    "is_title_fight": false,
+    "method": "Decision - Majority",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 48,
+        "attempted": 121
+      },
+      "totalStrikes": {
+        "landed": 104,
+        "attempted": 180
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 250
+    },
+    "strikes": {
+      "head": {
+        "landed": 34,
+        "attempted": 106
+      },
+      "body": {
+        "landed": 11,
+        "attempted": 12
+      },
+      "leg": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "distance": {
+        "landed": 42,
+        "attempted": 115
+      },
+      "clinch": {
+        "landed": 6,
+        "attempted": 6
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 7,
+          "attempted": 16
+        },
+        "totalStrikes": {
+          "landed": 31,
+          "attempted": 42
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 186
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 30,
+          "attempted": 84
+        },
+        "totalStrikes": {
+          "landed": 62,
+          "attempted": 117
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 64
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 11,
+          "attempted": 21
+        },
+        "totalStrikes": {
+          "landed": 11,
+          "attempted": 21
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Melissa Gatto",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/a4a80dd7336ffd59",
+    "opponent_name": "Ernesta Kareckaite",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/e4faa79383c9f214",
+    "event_name": "UFC Fight Night: Allen vs. Duncan",
+    "event_date": "2026-10-10",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e556bdf83f767d4b",
+    "result": "draw",
+    "weight_class": "Women's Flyweight",
+    "is_title_fight": false,
+    "method": "Decision - Majority",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 41,
+        "attempted": 79
+      },
+      "totalStrikes": {
+        "landed": 74,
+        "attempted": 115
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 11
+      },
+      "submissionAttempts": 2,
+      "reversals": 0,
+      "controlTimeSeconds": 355
+    },
+    "strikes": {
+      "head": {
+        "landed": 16,
+        "attempted": 46
+      },
+      "body": {
+        "landed": 20,
+        "attempted": 27
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "distance": {
+        "landed": 28,
+        "attempted": 62
+      },
+      "clinch": {
+        "landed": 13,
+        "attempted": 17
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 10,
+          "attempted": 17
+        },
+        "totalStrikes": {
+          "landed": 17,
+          "attempted": 24
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 4
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 55
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 27,
+          "attempted": 52
+        },
+        "totalStrikes": {
+          "landed": 35,
+          "attempted": 60
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 5
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 36
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 4,
+          "attempted": 10
+        },
+        "totalStrikes": {
+          "landed": 22,
+          "attempted": 31
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 264
+      }
+    ]
+  },
+  {
+    "fighter_name": "Natalia Silva",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/262d32ebda89efc4",
+    "opponent_name": "Wang Cong",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/2997e7fe3c9d3d4a",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/3f804eec9183e597",
+    "result": "win",
+    "weight_class": "Women's Flyweight",
+    "is_title_fight": true,
+    "method": "Decision - Unanimous",
+    "round": 5,
+    "time": "5:00",
+    "scheduled_rounds": 5,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 109,
+        "attempted": 216
+      },
+      "totalStrikes": {
+        "landed": 133,
+        "attempted": 240
+      },
+      "takedowns": {
+        "landed": 3,
+        "attempted": 5
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 252
+    },
+    "strikes": {
+      "head": {
+        "landed": 64,
+        "attempted": 155
+      },
+      "body": {
+        "landed": 28,
+        "attempted": 39
+      },
+      "leg": {
+        "landed": 17,
+        "attempted": 22
+      },
+      "distance": {
+        "landed": 93,
+        "attempted": 195
+      },
+      "clinch": {
+        "landed": 14,
+        "attempted": 16
+      },
+      "ground": {
+        "landed": 2,
+        "attempted": 5
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 16,
+          "attempted": 40
+        },
+        "totalStrikes": {
+          "landed": 20,
+          "attempted": 44
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 88
+      },
+      {
+        "round": 2,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 13,
+          "attempted": 29
+        },
+        "totalStrikes": {
+          "landed": 25,
+          "attempted": 41
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 131
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 23,
+          "attempted": 49
+        },
+        "totalStrikes": {
+          "landed": 23,
+          "attempted": 49
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 1
+      },
+      {
+        "round": 4,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 24,
+          "attempted": 46
+        },
+        "totalStrikes": {
+          "landed": 30,
+          "attempted": 52
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 32
+      },
+      {
+        "round": 5,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 33,
+          "attempted": 52
+        },
+        "totalStrikes": {
+          "landed": 35,
+          "attempted": 54
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Wang Cong",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/2997e7fe3c9d3d4a",
+    "opponent_name": "Natalia Silva",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/262d32ebda89efc4",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/3f804eec9183e597",
+    "result": "loss",
+    "weight_class": "Women's Flyweight",
+    "is_title_fight": true,
+    "method": "Decision - Unanimous",
+    "round": 5,
+    "time": "5:00",
+    "scheduled_rounds": 5,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 98,
+        "attempted": 206
+      },
+      "totalStrikes": {
+        "landed": 147,
+        "attempted": 259
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 159
+    },
+    "strikes": {
+      "head": {
+        "landed": 45,
+        "attempted": 119
+      },
+      "body": {
+        "landed": 19,
+        "attempted": 31
+      },
+      "leg": {
+        "landed": 34,
+        "attempted": 56
+      },
+      "distance": {
+        "landed": 87,
+        "attempted": 195
+      },
+      "clinch": {
+        "landed": 10,
+        "attempted": 10
+      },
+      "ground": {
+        "landed": 1,
+        "attempted": 1
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 9,
+          "attempted": 22
+        },
+        "totalStrikes": {
+          "landed": 18,
+          "attempted": 34
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 12,
+          "attempted": 30
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 47
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 18,
+          "attempted": 39
+        },
+        "totalStrikes": {
+          "landed": 18,
+          "attempted": 39
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 4,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 26,
+          "attempted": 48
+        },
+        "totalStrikes": {
+          "landed": 33,
+          "attempted": 55
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 57
+      },
+      {
+        "round": 5,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 33,
+          "attempted": 67
+        },
+        "totalStrikes": {
+          "landed": 49,
+          "attempted": 84
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 102
+      }
+    ]
+  },
+  {
+    "fighter_name": "Deiveson Figueiredo",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/aa72b0f831d0bfe5",
+    "opponent_name": "Payton Talbott",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/6e743a33d56bdaa4",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/514366f770553cc9",
+    "result": "loss",
+    "weight_class": "Bantamweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "2:09",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "totalStrikes": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 22
+    },
+    "strikes": {
+      "head": {
+        "landed": 3,
+        "attempted": 4
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "leg": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "distance": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 5,
+          "attempted": 6
+        },
+        "totalStrikes": {
+          "landed": 5,
+          "attempted": 6
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 22
+      }
+    ]
+  },
+  {
+    "fighter_name": "Payton Talbott",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/6e743a33d56bdaa4",
+    "opponent_name": "Deiveson Figueiredo",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/aa72b0f831d0bfe5",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/514366f770553cc9",
+    "result": "win",
+    "weight_class": "Bantamweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "2:09",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 2,
+      "sigStrikes": {
+        "landed": 25,
+        "attempted": 44
+      },
+      "totalStrikes": {
+        "landed": 27,
+        "attempted": 46
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 12
+    },
+    "strikes": {
+      "head": {
+        "landed": 18,
+        "attempted": 37
+      },
+      "body": {
+        "landed": 5,
+        "attempted": 5
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 17,
+        "attempted": 33
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 8,
+        "attempted": 11
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 2,
+        "sigStrikes": {
+          "landed": 25,
+          "attempted": 44
+        },
+        "totalStrikes": {
+          "landed": 27,
+          "attempted": 46
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 12
+      }
+    ]
+  },
+  {
+    "fighter_name": "King Green",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/887961364be5ceb3",
+    "opponent_name": "Esteban Ribovics",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/323d4ca260dfa0ba",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/c93d7f60674df307",
+    "result": "loss",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "4:08",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 27,
+        "attempted": 49
+      },
+      "totalStrikes": {
+        "landed": 29,
+        "attempted": 51
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 4
+    },
+    "strikes": {
+      "head": {
+        "landed": 11,
+        "attempted": 23
+      },
+      "body": {
+        "landed": 11,
+        "attempted": 18
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 8
+      },
+      "distance": {
+        "landed": 24,
+        "attempted": 46
+      },
+      "clinch": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 27,
+          "attempted": 49
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 51
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 4
+      }
+    ]
+  },
+  {
+    "fighter_name": "Esteban Ribovics",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/323d4ca260dfa0ba",
+    "opponent_name": "King Green",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/887961364be5ceb3",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/c93d7f60674df307",
+    "result": "win",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "4:08",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 3,
+      "sigStrikes": {
+        "landed": 35,
+        "attempted": 71
+      },
+      "totalStrikes": {
+        "landed": 41,
+        "attempted": 79
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 31
+    },
+    "strikes": {
+      "head": {
+        "landed": 25,
+        "attempted": 56
+      },
+      "body": {
+        "landed": 4,
+        "attempted": 6
+      },
+      "leg": {
+        "landed": 6,
+        "attempted": 9
+      },
+      "distance": {
+        "landed": 28,
+        "attempted": 56
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 2
+      },
+      "ground": {
+        "landed": 7,
+        "attempted": 13
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 3,
+        "sigStrikes": {
+          "landed": 35,
+          "attempted": 71
+        },
+        "totalStrikes": {
+          "landed": 41,
+          "attempted": 79
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 31
+      }
+    ]
+  },
+  {
+    "fighter_name": "Roberto Soldic",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/5a229cbd9cdd28ca",
+    "opponent_name": "Khaos Williams",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/2558ae2e5671e318",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/a7c8722ad85eee5f",
+    "result": "win",
+    "weight_class": "Welterweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 94,
+        "attempted": 162
+      },
+      "totalStrikes": {
+        "landed": 138,
+        "attempted": 213
+      },
+      "takedowns": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 272
+    },
+    "strikes": {
+      "head": {
+        "landed": 68,
+        "attempted": 130
+      },
+      "body": {
+        "landed": 20,
+        "attempted": 25
+      },
+      "leg": {
+        "landed": 6,
+        "attempted": 7
+      },
+      "distance": {
+        "landed": 78,
+        "attempted": 139
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 16,
+        "attempted": 23
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 15,
+          "attempted": 32
+        },
+        "totalStrikes": {
+          "landed": 33,
+          "attempted": 54
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 72
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 43,
+          "attempted": 74
+        },
+        "totalStrikes": {
+          "landed": 57,
+          "attempted": 90
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 98
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 36,
+          "attempted": 56
+        },
+        "totalStrikes": {
+          "landed": 48,
+          "attempted": 69
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 102
+      }
+    ]
+  },
+  {
+    "fighter_name": "Khaos Williams",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/2558ae2e5671e318",
+    "opponent_name": "Roberto Soldic",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/5a229cbd9cdd28ca",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/a7c8722ad85eee5f",
+    "result": "loss",
+    "weight_class": "Welterweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 27,
+        "attempted": 106
+      },
+      "totalStrikes": {
+        "landed": 27,
+        "attempted": 106
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 3
+    },
+    "strikes": {
+      "head": {
+        "landed": 12,
+        "attempted": 83
+      },
+      "body": {
+        "landed": 6,
+        "attempted": 14
+      },
+      "leg": {
+        "landed": 9,
+        "attempted": 9
+      },
+      "distance": {
+        "landed": 27,
+        "attempted": 104
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 2
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 16,
+          "attempted": 41
+        },
+        "totalStrikes": {
+          "landed": 16,
+          "attempted": 41
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 3
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 37
+        },
+        "totalStrikes": {
+          "landed": 6,
+          "attempted": 37
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 5,
+          "attempted": 28
+        },
+        "totalStrikes": {
+          "landed": 5,
+          "attempted": 28
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Ateba Gautier",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/2f815ed5f8278ba6",
+    "opponent_name": "Roman Kopylov",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/9d83f6da776ff7d6",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/ec45db01699c4b05",
+    "result": "loss",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "3:12",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 7,
+        "attempted": 30
+      },
+      "totalStrikes": {
+        "landed": 7,
+        "attempted": 30
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 3,
+        "attempted": 21
+      },
+      "body": {
+        "landed": 4,
+        "attempted": 9
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 7,
+        "attempted": 30
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 7,
+          "attempted": 30
+        },
+        "totalStrikes": {
+          "landed": 7,
+          "attempted": 30
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Roman Kopylov",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/9d83f6da776ff7d6",
+    "opponent_name": "Ateba Gautier",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/2f815ed5f8278ba6",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/ec45db01699c4b05",
+    "result": "win",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "3:12",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 19,
+        "attempted": 23
+      },
+      "totalStrikes": {
+        "landed": 19,
+        "attempted": 23
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 5
+    },
+    "strikes": {
+      "head": {
+        "landed": 16,
+        "attempted": 20
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 12,
+        "attempted": 15
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 7,
+        "attempted": 8
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 19,
+          "attempted": 23
+        },
+        "totalStrikes": {
+          "landed": 19,
+          "attempted": 23
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 5
+      }
+    ]
+  },
+  {
+    "fighter_name": "Imanol Rodriguez",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/6e8349a0a0476d60",
+    "opponent_name": "Alden Coria",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/5e9ca8dd7d783a75",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/54bbe6d1eb248128",
+    "result": "win",
+    "weight_class": "Flyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "3:11",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 20,
+        "attempted": 46
+      },
+      "totalStrikes": {
+        "landed": 20,
+        "attempted": 46
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 6
+    },
+    "strikes": {
+      "head": {
+        "landed": 12,
+        "attempted": 35
+      },
+      "body": {
+        "landed": 8,
+        "attempted": 10
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "distance": {
+        "landed": 18,
+        "attempted": 41
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 2,
+        "attempted": 5
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 46
+        },
+        "totalStrikes": {
+          "landed": 20,
+          "attempted": 46
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 6
+      }
+    ]
+  },
+  {
+    "fighter_name": "Alden Coria",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/5e9ca8dd7d783a75",
+    "opponent_name": "Imanol Rodriguez",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/6e8349a0a0476d60",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/54bbe6d1eb248128",
+    "result": "loss",
+    "weight_class": "Flyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "3:11",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 4,
+        "attempted": 17
+      },
+      "totalStrikes": {
+        "landed": 4,
+        "attempted": 17
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 3,
+        "attempted": 15
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 4,
+        "attempted": 17
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 4,
+          "attempted": 17
+        },
+        "totalStrikes": {
+          "landed": 4,
+          "attempted": 17
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Damian Pinas",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/fdd22e895a70e4a8",
+    "opponent_name": "Andrey Pulyaev",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/22e07d3da1aa3475",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/31b85cd63fb291ed",
+    "result": "win",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "1:15",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 5,
+        "attempted": 7
+      },
+      "totalStrikes": {
+        "landed": 5,
+        "attempted": 7
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 3
+    },
+    "strikes": {
+      "head": {
+        "landed": 3,
+        "attempted": 4
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 5,
+        "attempted": 7
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 5,
+          "attempted": 7
+        },
+        "totalStrikes": {
+          "landed": 5,
+          "attempted": 7
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 3
+      }
+    ]
+  },
+  {
+    "fighter_name": "Andrey Pulyaev",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/22e07d3da1aa3475",
+    "opponent_name": "Damian Pinas",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/fdd22e895a70e4a8",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/31b85cd63fb291ed",
+    "result": "loss",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "1:15",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 4,
+        "attempted": 11
+      },
+      "totalStrikes": {
+        "landed": 4,
+        "attempted": 11
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 1,
+        "attempted": 7
+      },
+      "body": {
+        "landed": 2,
+        "attempted": 3
+      },
+      "leg": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "distance": {
+        "landed": 4,
+        "attempted": 11
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 4,
+          "attempted": 11
+        },
+        "totalStrikes": {
+          "landed": 4,
+          "attempted": 11
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Marcus McGhee",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/c0ac37a4a1133da9",
+    "opponent_name": "Anthony Romero",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/4419acb81e6f0ea4",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/041f9b7dd3542fa6",
+    "result": "win",
+    "weight_class": "Featherweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "4:58",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 2,
+      "sigStrikes": {
+        "landed": 34,
+        "attempted": 75
+      },
+      "totalStrikes": {
+        "landed": 35,
+        "attempted": 76
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 61
+    },
+    "strikes": {
+      "head": {
+        "landed": 24,
+        "attempted": 63
+      },
+      "body": {
+        "landed": 6,
+        "attempted": 8
+      },
+      "leg": {
+        "landed": 4,
+        "attempted": 4
+      },
+      "distance": {
+        "landed": 14,
+        "attempted": 43
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 20,
+        "attempted": 32
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 2,
+        "sigStrikes": {
+          "landed": 34,
+          "attempted": 75
+        },
+        "totalStrikes": {
+          "landed": 35,
+          "attempted": 76
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 61
+      }
+    ]
+  },
+  {
+    "fighter_name": "Anthony Romero",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/4419acb81e6f0ea4",
+    "opponent_name": "Marcus McGhee",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/c0ac37a4a1133da9",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/041f9b7dd3542fa6",
+    "result": "loss",
+    "weight_class": "Featherweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "4:58",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 13,
+        "attempted": 37
+      },
+      "totalStrikes": {
+        "landed": 13,
+        "attempted": 37
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 4
+    },
+    "strikes": {
+      "head": {
+        "landed": 8,
+        "attempted": 31
+      },
+      "body": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 3
+      },
+      "distance": {
+        "landed": 13,
+        "attempted": 35
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 2
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 13,
+          "attempted": 37
+        },
+        "totalStrikes": {
+          "landed": 13,
+          "attempted": 37
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 4
+      }
+    ]
+  },
+  {
+    "fighter_name": "Anthony Wint",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/b34976c022b24568",
+    "opponent_name": "Lucas Armand",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/20e04625a5395a06",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/bd673bf80b95d350",
+    "result": "win",
+    "weight_class": "Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "0:23",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 12,
+        "attempted": 18
+      },
+      "totalStrikes": {
+        "landed": 12,
+        "attempted": 18
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 5
+    },
+    "strikes": {
+      "head": {
+        "landed": 9,
+        "attempted": 14
+      },
+      "body": {
+        "landed": 3,
+        "attempted": 4
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 11,
+        "attempted": 17
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 1,
+        "attempted": 1
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 12,
+          "attempted": 18
+        },
+        "totalStrikes": {
+          "landed": 12,
+          "attempted": 18
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 5
+      }
+    ]
+  },
+  {
+    "fighter_name": "Lucas Armand",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/20e04625a5395a06",
+    "opponent_name": "Anthony Wint",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/b34976c022b24568",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/bd673bf80b95d350",
+    "result": "loss",
+    "weight_class": "Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "0:23",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 1,
+        "attempted": 5
+      },
+      "totalStrikes": {
+        "landed": 1,
+        "attempted": 5
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 1,
+        "attempted": 5
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 1,
+        "attempted": 5
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 1,
+          "attempted": 5
+        },
+        "totalStrikes": {
+          "landed": 1,
+          "attempted": 5
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Johnny Walker",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/c21f26bbde777573",
+    "opponent_name": "Mick Parkin",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/0d5cc0170c1a7e71",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e92092a37dc1cfc8",
+    "result": "win",
+    "weight_class": "Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "3:35",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 23,
+        "attempted": 32
+      },
+      "totalStrikes": {
+        "landed": 23,
+        "attempted": 32
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 27
+    },
+    "strikes": {
+      "head": {
+        "landed": 6,
+        "attempted": 14
+      },
+      "body": {
+        "landed": 4,
+        "attempted": 4
+      },
+      "leg": {
+        "landed": 13,
+        "attempted": 14
+      },
+      "distance": {
+        "landed": 19,
+        "attempted": 28
+      },
+      "clinch": {
+        "landed": 4,
+        "attempted": 4
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 23,
+          "attempted": 32
+        },
+        "totalStrikes": {
+          "landed": 23,
+          "attempted": 32
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 27
+      }
+    ]
+  },
+  {
+    "fighter_name": "Mick Parkin",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/0d5cc0170c1a7e71",
+    "opponent_name": "Johnny Walker",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/c21f26bbde777573",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e92092a37dc1cfc8",
+    "result": "loss",
+    "weight_class": "Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "3:35",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 11,
+        "attempted": 16
+      },
+      "totalStrikes": {
+        "landed": 14,
+        "attempted": 19
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 31
+    },
+    "strikes": {
+      "head": {
+        "landed": 2,
+        "attempted": 6
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 9,
+        "attempted": 10
+      },
+      "distance": {
+        "landed": 11,
+        "attempted": 16
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 11,
+          "attempted": 16
+        },
+        "totalStrikes": {
+          "landed": 14,
+          "attempted": 19
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 31
+      }
+    ]
+  },
+  {
+    "fighter_name": "Jacobe Smith",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/85497ffd934ecf7e",
+    "opponent_name": "Bruce Whitehead",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/6c39d016053601ee",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/bc35fb29afba68b9",
+    "result": "win",
+    "weight_class": "Welterweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "1:32",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 11,
+        "attempted": 17
+      },
+      "totalStrikes": {
+        "landed": 19,
+        "attempted": 27
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 29
+    },
+    "strikes": {
+      "head": {
+        "landed": 6,
+        "attempted": 12
+      },
+      "body": {
+        "landed": 5,
+        "attempted": 5
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 6,
+        "attempted": 12
+      },
+      "clinch": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "ground": {
+        "landed": 4,
+        "attempted": 4
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 11,
+          "attempted": 17
+        },
+        "totalStrikes": {
+          "landed": 19,
+          "attempted": 27
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 29
+      }
+    ]
+  },
+  {
+    "fighter_name": "Bruce Whitehead",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/6c39d016053601ee",
+    "opponent_name": "Jacobe Smith",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/85497ffd934ecf7e",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/bc35fb29afba68b9",
+    "result": "loss",
+    "weight_class": "Welterweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "1:32",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 4,
+        "attempted": 13
+      },
+      "totalStrikes": {
+        "landed": 15,
+        "attempted": 24
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 3
+    },
+    "strikes": {
+      "head": {
+        "landed": 3,
+        "attempted": 11
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 3,
+        "attempted": 10
+      },
+      "clinch": {
+        "landed": 1,
+        "attempted": 3
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 4,
+          "attempted": 13
+        },
+        "totalStrikes": {
+          "landed": 15,
+          "attempted": 24
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 3
+      }
+    ]
+  },
+  {
+    "fighter_name": "Rafael Dos Anjos",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/6a2f7c151031653d",
+    "opponent_name": "Alexander Hernandez",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/262a7d06203657e6",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/d0d2339f56681707",
+    "result": "loss",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "3:12",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 26,
+        "attempted": 59
+      },
+      "totalStrikes": {
+        "landed": 32,
+        "attempted": 65
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 20,
+        "attempted": 49
+      },
+      "body": {
+        "landed": 6,
+        "attempted": 10
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 25,
+        "attempted": 58
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 1,
+        "attempted": 1
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 25,
+          "attempted": 50
+        },
+        "totalStrikes": {
+          "landed": 25,
+          "attempted": 50
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 1,
+          "attempted": 9
+        },
+        "totalStrikes": {
+          "landed": 7,
+          "attempted": 15
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Alexander Hernandez",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/262a7d06203657e6",
+    "opponent_name": "Rafael Dos Anjos",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/6a2f7c151031653d",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/d0d2339f56681707",
+    "result": "win",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "3:12",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 2,
+      "sigStrikes": {
+        "landed": 36,
+        "attempted": 86
+      },
+      "totalStrikes": {
+        "landed": 47,
+        "attempted": 97
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 164
+    },
+    "strikes": {
+      "head": {
+        "landed": 27,
+        "attempted": 76
+      },
+      "body": {
+        "landed": 7,
+        "attempted": 8
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 25,
+        "attempted": 63
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "ground": {
+        "landed": 11,
+        "attempted": 22
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 22,
+          "attempted": 52
+        },
+        "totalStrikes": {
+          "landed": 22,
+          "attempted": 52
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 2,
+        "knockdowns": 2,
+        "sigStrikes": {
+          "landed": 14,
+          "attempted": 34
+        },
+        "totalStrikes": {
+          "landed": 25,
+          "attempted": 45
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 164
+      }
+    ]
+  },
+  {
+    "fighter_name": "Marvin Vettori",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/7acbb0972e75281a",
+    "opponent_name": "Ismail Naurdiev",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/6a96ad1bc34fb113",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/bf93e735845cb960",
+    "result": "loss",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 76,
+        "attempted": 201
+      },
+      "totalStrikes": {
+        "landed": 77,
+        "attempted": 202
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 13
+    },
+    "strikes": {
+      "head": {
+        "landed": 62,
+        "attempted": 182
+      },
+      "body": {
+        "landed": 7,
+        "attempted": 9
+      },
+      "leg": {
+        "landed": 7,
+        "attempted": 10
+      },
+      "distance": {
+        "landed": 76,
+        "attempted": 201
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 18,
+          "attempted": 64
+        },
+        "totalStrikes": {
+          "landed": 19,
+          "attempted": 65
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 13
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 29,
+          "attempted": 69
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 69
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 29,
+          "attempted": 68
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 68
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Ismail Naurdiev",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/6a96ad1bc34fb113",
+    "opponent_name": "Marvin Vettori",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/7acbb0972e75281a",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/bf93e735845cb960",
+    "result": "win",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 74,
+        "attempted": 190
+      },
+      "totalStrikes": {
+        "landed": 74,
+        "attempted": 190
+      },
+      "takedowns": {
+        "landed": 3,
+        "attempted": 7
+      },
+      "submissionAttempts": 1,
+      "reversals": 0,
+      "controlTimeSeconds": 70
+    },
+    "strikes": {
+      "head": {
+        "landed": 37,
+        "attempted": 141
+      },
+      "body": {
+        "landed": 9,
+        "attempted": 16
+      },
+      "leg": {
+        "landed": 28,
+        "attempted": 33
+      },
+      "distance": {
+        "landed": 72,
+        "attempted": 187
+      },
+      "clinch": {
+        "landed": 2,
+        "attempted": 3
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 28,
+          "attempted": 59
+        },
+        "totalStrikes": {
+          "landed": 28,
+          "attempted": 59
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 2
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 66
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 26,
+          "attempted": 65
+        },
+        "totalStrikes": {
+          "landed": 26,
+          "attempted": 65
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 2
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 66
+        },
+        "totalStrikes": {
+          "landed": 20,
+          "attempted": 66
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 4
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 2
+      }
+    ]
+  },
+  {
+    "fighter_name": "Court McGee",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/523fa774700d7d3f",
+    "opponent_name": "Eric Nolan",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/64b12fe31be7560c",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e87db876810cbc3c",
+    "result": "loss",
+    "weight_class": "Welterweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 3,
+    "time": "3:26",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 98,
+        "attempted": 273
+      },
+      "totalStrikes": {
+        "landed": 127,
+        "attempted": 304
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 7
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 102
+    },
+    "strikes": {
+      "head": {
+        "landed": 64,
+        "attempted": 227
+      },
+      "body": {
+        "landed": 18,
+        "attempted": 30
+      },
+      "leg": {
+        "landed": 16,
+        "attempted": 16
+      },
+      "distance": {
+        "landed": 88,
+        "attempted": 258
+      },
+      "clinch": {
+        "landed": 10,
+        "attempted": 15
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 22,
+          "attempted": 76
+        },
+        "totalStrikes": {
+          "landed": 42,
+          "attempted": 96
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 3
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 71
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 52,
+          "attempted": 120
+        },
+        "totalStrikes": {
+          "landed": 56,
+          "attempted": 126
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 3
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 14
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 24,
+          "attempted": 77
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 82
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 17
+      }
+    ]
+  },
+  {
+    "fighter_name": "Eric Nolan",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/64b12fe31be7560c",
+    "opponent_name": "Court McGee",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/523fa774700d7d3f",
+    "event_name": "UFC 332: Silva vs. Wang",
+    "event_date": "2026-10-03",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e87db876810cbc3c",
+    "result": "win",
+    "weight_class": "Welterweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 3,
+    "time": "3:26",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 121,
+        "attempted": 246
+      },
+      "totalStrikes": {
+        "landed": 125,
+        "attempted": 250
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 21
+    },
+    "strikes": {
+      "head": {
+        "landed": 105,
+        "attempted": 222
+      },
+      "body": {
+        "landed": 15,
+        "attempted": 23
+      },
+      "leg": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "distance": {
+        "landed": 100,
+        "attempted": 222
+      },
+      "clinch": {
+        "landed": 21,
+        "attempted": 24
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 23,
+          "attempted": 59
+        },
+        "totalStrikes": {
+          "landed": 27,
+          "attempted": 63
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 2
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 46,
+          "attempted": 102
+        },
+        "totalStrikes": {
+          "landed": 46,
+          "attempted": 102
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 3,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 52,
+          "attempted": 85
+        },
+        "totalStrikes": {
+          "landed": 52,
+          "attempted": 85
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 19
+      }
+    ]
   }
 ]
