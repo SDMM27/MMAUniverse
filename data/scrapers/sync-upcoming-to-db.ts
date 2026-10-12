@@ -87,19 +87,21 @@ async function upsertFighter(
   organizationId: number,
 ) {
   const record = currentRecord(fighter);
+  // fighter.image_url (Sherdog's photo) is deliberately never stored: it's
+  // copyrighted. image_url only holds free photos, see sync-fighter-photos.ts.
   const existing = await sql`SELECT id FROM fighters WHERE name = ${fighter.name} ORDER BY id ASC`;
   if (existing.length > 0) {
     const id = existing[0].id;
     await sql`
-      UPDATE fighters SET image_url = ${fighter.image_url}, weight_class = ${fighter.weight_class},
+      UPDATE fighters SET weight_class = ${fighter.weight_class},
         record = ${record}, ranking = ${fighter.ranking}
       WHERE id = ${id}
     `;
     return id;
   }
   const inserted = await sql`
-    INSERT INTO fighters (name, image_url, weight_class, organization_id, record, ranking)
-    VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${organizationId}, ${record}, ${fighter.ranking})
+    INSERT INTO fighters (name, weight_class, organization_id, record, ranking)
+    VALUES (${fighter.name}, ${fighter.weight_class}, ${organizationId}, ${record}, ${fighter.ranking})
     RETURNING id
   `;
   return inserted[0].id;

@@ -21,6 +21,7 @@ type CardData = {
   record: string | null;
   score: string | null;
   photo: string | null;
+  photoCredit: string | null;
 };
 
 // satori only decodes PNG/JPEG/GIF; remote photos are fetched here (short timeout)
@@ -28,7 +29,11 @@ type CardData = {
 async function loadPhoto(url: string | null | undefined): Promise<string | null> {
   if (!url || !/^https:\/\//.test(url)) return null;
   try {
-    const response = await fetch(url, { signal: AbortSignal.timeout(2500) });
+    // Wikimedia rejects requests without an identifying User-Agent.
+    const response = await fetch(url, {
+      signal: AbortSignal.timeout(2500),
+      headers: { 'User-Agent': 'MMAUniverse/1.0 (mmauniverseapp@gmail.com)' },
+    });
     const type = response.headers.get('content-type')?.split(';')[0] ?? '';
     if (!response.ok || !/^image\/(jpeg|png|gif)$/.test(type)) return null;
     const bytes = await response.arrayBuffer();
@@ -55,6 +60,8 @@ async function loadCardData(segment: string): Promise<CardData | null> {
       record: fighter.record || null,
       score,
       photo,
+      // The CC BY / BY-SA license requires the credit wherever the photo goes.
+      photoCredit: photo && fighter.photo_license ? `Photo : ${fighter.photo_author ?? 'auteur inconnu'} · ${fighter.photo_license}` : null,
     };
   } catch {
     return null;
@@ -128,12 +135,30 @@ export default async function Image({ params }: { params: { slug: string } }) {
               height: '100%',
               borderRadius: 24,
               overflow: 'hidden',
+              position: 'relative',
               background: CARD,
               border: '2px solid #262626',
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={data.photo} alt="" width={392} height={518} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+            {data.photoCredit && (
+              <div
+                style={{
+                  display: 'flex',
+                  position: 'absolute',
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  padding: '6px 10px',
+                  background: 'rgba(0,0,0,0.65)',
+                  color: INK_SECONDARY,
+                  fontSize: 14,
+                }}
+              >
+                {data.photoCredit.length > 60 ? `${data.photoCredit.slice(0, 57)}…` : data.photoCredit}
+              </div>
+            )}
           </div>
         )}
       </div>

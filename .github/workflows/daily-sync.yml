@@ -90,5 +90,13 @@ jobs:
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+      # Free-licensed photos (Wikimedia Commons, via each fighter's Sherdog ID on Wikidata) and
+      # their credits. After the history sync for the same reason as above. Two API calls'
+      # worth of work; aborts without touching the table if Wikidata answers short.
+      - name: Sync free fighter photos from Wikimedia Commons
+        run: npx tsx data/scrapers/sync-fighter-photos.ts
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
       # FightScore (and the UFCStats data it needs) is no longer recomputed here: it runs
       # once a week, on Monday, from .github/workflows/weekly-fightscore.yml.

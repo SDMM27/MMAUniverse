@@ -51,6 +51,11 @@ export default function FighterDetailScreen() {
               {physique && <Text className="mt-0.5 text-xs text-ink-secondary">{physique}</Text>}
             </View>
           </View>
+          {fighter.image_url && fighter.photo_license && (
+            <Text className="text-[10px] text-ink-secondary">
+              Photo : {fighter.photo_author ?? 'auteur inconnu'} · {fighter.photo_license} (Wikimedia Commons)
+            </Text>
+          )}
           <FighterRecordCard stats={stats} />
           <Text className="font-display text-lg uppercase text-ink-primary">Historique</Text>
         </View>

@@ -58,7 +58,12 @@ export default function Page() {
 
       <LegalSection title="Propriété intellectuelle et retrait de contenu">
         <p>
-          Les photos de combattants et les visuels d’articles appartiennent à leurs auteurs et ayants droit. Si vous
+          Les photos de combattants proviennent de Wikimedia Commons, sous licence libre ; leurs auteurs et licences
+          sont indiqués sur la page{' '}
+          <Link href="/credits-photos" className="text-accent underline-offset-2 hover:underline">
+            crédits photos
+          </Link>
+          . Les visuels d’articles appartiennent à leurs éditeurs. Si vous
           êtes titulaire de droits sur un contenu affiché ici et souhaitez son retrait ou la correction d’une
           information, écrivez <ContactLine /> en précisant la page concernée : la demande sera traitée dans les plus
           brefs délais.

@@ -25,6 +25,7 @@ const STATIC_PATHS = [
   '/simulateur',
   '/mentions-legales',
   '/confidentialite',
+  '/credits-photos',
 ];
 
 // Events are stored with a 'YYYY-MM-DD' date; a past one is a fair "last modified".

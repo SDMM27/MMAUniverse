@@ -213,15 +213,15 @@ async function seedFighters() {
       `;
       if (existing.rows[0]) {
         const result = await sql`
-          UPDATE fighters SET image_url = ${fighter.image_url}, weight_class = ${fighter.weight_class}, record = ${fighter.record}, ranking = ${fighter.ranking}
+          UPDATE fighters SET weight_class = ${fighter.weight_class}, record = ${fighter.record}, ranking = ${fighter.ranking}
           WHERE id = ${existing.rows[0].id};
         `;
         insertedFighters.push(result);
         continue;
       }
       const result = await sql`
-        INSERT INTO fighters (name, image_url, weight_class, organization_id, record, ranking)
-        VALUES (${fighter.name}, ${fighter.image_url}, ${fighter.weight_class}, ${dataset.organization_id}, ${fighter.record}, ${fighter.ranking});
+        INSERT INTO fighters (name, weight_class, organization_id, record, ranking)
+        VALUES (${fighter.name}, ${fighter.weight_class}, ${dataset.organization_id}, ${fighter.record}, ${fighter.ranking});
       `;
       insertedFighters.push(result);
     }

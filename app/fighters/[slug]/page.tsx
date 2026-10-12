@@ -13,6 +13,7 @@ import { formatPhysique } from '@/data/lib/fighter-physique';
 import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
 import { ageFromBirthDate } from '@/data/lib/fighter-age';
 import { CoverImage } from '@/components/ui/shared/media';
+import { PhotoCredit } from '@/components/ui/shared/photo-credit';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import FighterHistoryList from '@/components/ui/fighters/fighter-history-list';
 import FighterRecordCard from '@/components/ui/fighters/fighter-record-card';
@@ -91,13 +92,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
       />
       <div className="rounded-lg bg-base-card p-4">
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
-          <CoverImage
-            src={fighter.image_url}
-            alt={fighter.name}
-            sizes="(max-width: 640px) 60vw, 280px"
-            className="aspect-[3/4] w-40 shrink-0 rounded-lg border-2 border-base-bg sm:w-56"
-            objectPosition="top"
-          />
+          <figure className="flex w-40 shrink-0 flex-col gap-1 sm:w-56">
+            <CoverImage
+              src={fighter.image_url}
+              alt={fighter.name}
+              sizes="(max-width: 640px) 60vw, 280px"
+              className="aspect-[3/4] w-full rounded-lg border-2 border-base-bg"
+              objectPosition="top"
+            />
+            {fighter.image_url && fighter.photo_license && <PhotoCredit fighter={fighter} />}
+          </figure>
           <div className="flex flex-1 flex-col gap-4 sm:justify-between">
             <div>
               <p className="font-display text-xs uppercase tracking-wide text-accent">

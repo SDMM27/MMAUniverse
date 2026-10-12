@@ -41,7 +41,14 @@ export type Fight = {
 export type Fighter = {
     id: number;
     name: string;
-    image_url: string;
+    // Free-licensed photo only (data/scrapers/sync-fighter-photos.ts), with the
+    // credit its license requires; null = silhouette.
+    image_url: string | null;
+    photo_author: string | null;
+    photo_author_url: string | null;
+    photo_license: string | null;
+    photo_license_url: string | null;
+    photo_source_url: string | null;
     weight_class: string;
     organization_id: number;
     record: string;
