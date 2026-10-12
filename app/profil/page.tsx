@@ -8,6 +8,7 @@ import {
 } from '@/data/lib/profile-data';
 import FighterPreferencePicker from '@/components/ui/profile/fighter-preference-picker';
 import NationalityPreferencePicker from '@/components/ui/profile/nationality-preference-picker';
+import DeleteAccount from '@/components/ui/profile/delete-account';
 import type { Metadata } from 'next';
 
 // Queries the DB (and Clerk, for the current user) on every request instead
@@ -49,6 +50,7 @@ export default async function Page() {
 
       <FighterPreferencePicker preferredFighters={preferredFighters} />
       <NationalityPreferencePicker availableCodes={availableNationalities} preferredCodes={preferredNationalities} />
+      <DeleteAccount />
     </main>
   );
 }

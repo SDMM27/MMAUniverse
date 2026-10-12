@@ -3,6 +3,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/next";
 import { inter, oswald } from "@/components/ui/fonts";
 import Nav from "@/components/ui/nav";
+import Footer from "@/components/ui/footer";
 import { getSiteUrl } from "@/data/lib/site-url";
 import { OPEN_GRAPH_BASE, SITE_NAME } from "@/data/lib/seo-utils";
 import "./globals.css";
@@ -41,6 +42,7 @@ export default function RootLayout({
         <body className={`${inter.className} ${oswald.variable} bg-base-bg text-ink-primary`}>
           <Nav />
           {children}
+          <Footer />
           <Analytics />
         </body>
       </html>
