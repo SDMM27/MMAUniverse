@@ -76,7 +76,7 @@
       "date": "2026-10-16",
       "start_time": "2026-10-16T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/901398"
     },
     {
       "name": "One Championship - ONE Samurai 4",
@@ -107,11 +107,25 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/900345"
     },
     {
+      "name": "One Championship - One Friday Fights 178",
+      "date": "2026-11-13",
+      "start_time": "2026-11-13T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
       "name": "One Championship - ONE Samurai 5",
       "date": "2026-11-18",
       "start_time": "2026-11-18T00:00:00+00:00",
       "event_location": "Ebara Wave Arena Ota, Ota, Tokyo, Japan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896715"
+    },
+    {
+      "name": "One Championship - One Friday Fights 179",
+      "date": "2026-11-20",
+      "start_time": "2026-11-20T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/901591"
     }
   ],
   "fighters": [
@@ -6149,6 +6163,341 @@
           "time": "2:41"
         }
       ]
+    },
+    {
+      "name": "Javier Cabrera",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "3-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Javier-Cabrera-397369",
+      "fight_history": [
+        {
+          "opponent_name": "Sutrisno Sutrisno",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sutrisno-Sutrisno-279113",
+          "event_name": "Bali MMA - Canggu Fight Night 37",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bali-MMA-Canggu-Fight-Night-37-110706",
+          "date": "2025-12-14",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Jim Perdios",
+          "round": 1,
+          "time": "2:41"
+        },
+        {
+          "opponent_name": "Rafael Amaro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafael-Amaro-422990",
+          "event_name": "Emporio Promotions - Ready Fight 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Emporio-Promotions-Ready-Fight-5-108701",
+          "date": "2025-07-11",
+          "result": "win",
+          "method": "Submission (Ninja Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "4:29"
+        },
+        {
+          "opponent_name": "Jingga Merdeka",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jingga-Merdeka-468528",
+          "event_name": "Bali MMA - Canggu Fight Night 34",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bali-MMA-Canggu-Fight-Night-34-107694",
+          "date": "2025-04-06",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:38"
+        }
+      ]
+    },
+    {
+      "name": "Sanjaya Hutagaol",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240811061057_Sanjaya_Hutagaol.JPG",
+      "weight_class": "Flyweight",
+      "record": "5-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sanjaya-Hutagaol-419109",
+      "fight_history": [
+        {
+          "opponent_name": "Muhammad Daffa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muhammad-Daffa-444524",
+          "event_name": "One Pride MMA Fight Night 88 - Battle For Glory",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Pride-MMA-Fight-Night-88-Battle-For-Glory-109041",
+          "date": "2025-11-02",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "4:54"
+        },
+        {
+          "opponent_name": "Adi Rominto Manurung",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adi-Rominto-Manurung-323367",
+          "event_name": "One Pride MMA Fight Night 86 - Suwardi vs. Aditya 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Pride-MMA-Fight-Night-86-Suwardi-vs-Aditya-2-107503",
+          "date": "2025-05-03",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:25"
+        },
+        {
+          "opponent_name": "Rivaldo Pradana",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rivaldo-Pradana-435295",
+          "event_name": "One Pride MMA Fight Night 84 - Gugun vs. Yacub 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Pride-MMA-Fight-Night-84-Gugun-vs-Yacub-2-105487",
+          "date": "2024-11-02",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "4:00"
+        },
+        {
+          "opponent_name": "Dwight Osborn Bole",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dwight-Osborn-Bole-454852",
+          "event_name": "One Pride MMA Fight Night 80 - Lipin vs. Sutikno",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Pride-MMA-Fight-Night-80-Lipin-vs-Sutikno-103527",
+          "date": "2024-07-13",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "2:23"
+        },
+        {
+          "opponent_name": "Budi Setiawan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Budi-Setiawan-353171",
+          "event_name": "One Pride MMA Fight Night 68 - Lalu vs. Rustam",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Pride-MMA-Fight-Night-68-Lalu-vs-Rustam-97781",
+          "date": "2023-05-13",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "0:34"
+        },
+        {
+          "opponent_name": "Rizki Rahmadia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rizki-Rahmadia-419110",
+          "event_name": "One Pride MMA Fight Night 65 - Pride of Throne",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Pride-MMA-Fight-Night-65-Pride-of-Throne-95659",
+          "date": "2022-12-03",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:21"
+        }
+      ]
+    },
+    {
+      "name": "Ashok Bagade",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ashok-Bagade-446258",
+      "fight_history": [
+        {
+          "opponent_name": "Rohit Raina",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rohit-Raina-501624",
+          "event_name": "Warriors Dream Series - WDS 17",
+          "event_sherdog_url": "https://www.sherdog.com/events/Warriors-Dream-Series-WDS-17-112958",
+          "date": "2026-06-06",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Prachiti Nagpurkar",
+          "round": 2,
+          "time": "1:27"
+        },
+        {
+          "opponent_name": "Andrey Chelbaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andrey-Chelbaev-282967",
+          "event_name": "Warriors Dream Series - WDS 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/Warriors-Dream-Series-WDS-16-111937",
+          "date": "2026-03-28",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Deepak Patil",
+          "round": 2,
+          "time": "4:54"
+        },
+        {
+          "opponent_name": "Karan Singh Jadhav",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Karan-Singh-Jadhav-444674",
+          "event_name": "Warriors Dream Series - WDS 14",
+          "event_sherdog_url": "https://www.sherdog.com/events/Warriors-Dream-Series-WDS-14-109941",
+          "date": "2025-11-09",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Deepak Patil",
+          "round": 1,
+          "time": "2:37"
+        },
+        {
+          "opponent_name": "Karandeep Singh",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Karandeep-Singh-422185",
+          "event_name": "Warriors Dream Series - WDS 13",
+          "event_sherdog_url": "https://www.sherdog.com/events/Warriors-Dream-Series-WDS-13-108108",
+          "date": "2025-07-27",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Palaash Mankodi",
+          "round": 1,
+          "time": "0:54"
+        }
+      ]
+    },
+    {
+      "name": "Yuto Shioya",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240423072616_Yuto_Shioya.JPG",
+      "weight_class": "Bantamweight",
+      "record": "6-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Yuto-Shioya-430267",
+      "fight_history": [
+        {
+          "opponent_name": "Kentaro Okumura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kentaro-Okumura-443327",
+          "event_name": "Fighting Nexus - Nexus Mania 2026",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Nexus-Mania-2026-112066",
+          "date": "2026-04-25",
+          "result": "win",
+          "method": "TKO (Corner Stoppage)",
+          "referee": "Yoshinori Umeki",
+          "round": 1,
+          "time": "3:38"
+        },
+        {
+          "opponent_name": "Tetsuya Fusano",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tetsuya-Fusano-30047",
+          "event_name": "Fighting Nexus - Vol. 41",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-41-110023",
+          "date": "2025-11-22",
+          "result": "win",
+          "method": "TKO (Punches and Elbows)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "3:30"
+        },
+        {
+          "opponent_name": "Hideya Narumi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hideya-Narumi-443947",
+          "event_name": "P4P FC 37 - Pound For Pound FC 37",
+          "event_sherdog_url": "https://www.sherdog.com/events/P4P-FC-37-Pound-For-Pound-FC-37-109004",
+          "date": "2025-07-13",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "2:16"
+        },
+        {
+          "opponent_name": "Kiyoto Nakasato",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kiyoto-Nakasato-419319",
+          "event_name": "Fighting Nexus - Revolution 2025 in Sapporo",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Revolution-2025-in-Sapporo-108113",
+          "date": "2025-05-18",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Kosuke Umeda",
+          "round": 1,
+          "time": "1:23"
+        },
+        {
+          "opponent_name": "Ryo Hirayama",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryo-Hirayama-435045",
+          "event_name": "Fighting Nexus - Nexus Mania 2024",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Nexus-Mania-2024-105619",
+          "date": "2024-12-22",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "2:13"
+        },
+        {
+          "opponent_name": "Rintaro Shimoda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rintaro-Shimoda-434921",
+          "event_name": "Fighting Nexus - Bayside Battle in Yokosuka 2024",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Bayside-Battle-in-Yokosuka-2024-104133",
+          "date": "2024-10-20",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Yoshinori Umeki",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jotaro Jotaro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jotaro-Jotaro-448318",
+          "event_name": "Fighting Nexus - Vol. 35",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-35-101716",
+          "date": "2024-05-12",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Akira Yamazaki",
+          "round": 1,
+          "time": "4:43"
+        },
+        {
+          "opponent_name": "Atsuya Kanbe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Atsuya-Kanbe-424069",
+          "event_name": "Fighting Nexus - Vol. 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-33-99775",
+          "date": "2023-12-10",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Hidenobu Koike",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Allycia Hellen Rodrigues",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1679398892Allycia_Hellen_Rodrigues-hero-1200x1165-champion-768x746.jpg",
+      "weight_class": "Strawweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Allycia-Hellen-Rodrigues-422633",
+      "fight_history": []
+    },
+    {
+      "name": "Charlotte Padie",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Charlotte-Padie-496685",
+      "fight_history": [
+        {
+          "opponent_name": "Saliha Louchi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Saliha-Louchi-461500",
+          "event_name": "Wavrin Fight Club - Cage Fight Night 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Wavrin-Fight-Club-Cage-Fight-Night-3-112697",
+          "date": "2026-04-11",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Louceny Camara",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Lou Cropsal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lou-Cropsal-477782",
+          "event_name": "FCA 2 - Fight Cage Arena",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCA-2-Fight-Cage-Arena-112427",
+          "date": "2026-02-28",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -6361,6 +6710,32 @@
       "is_title_fight": false
     },
     {
+      "event_name": "One Championship - One Friday Fights 175",
+      "fighter1_name": "Javier Cabrera",
+      "fighter2_name": "Sanjaya Hutagaol",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 175",
+      "fighter1_name": "Ashok Bagade",
+      "fighter2_name": "Yuto Shioya",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "One Championship - ONE Samurai 4",
       "fighter1_name": "Jihin Radzuan",
       "fighter2_name": "Itsuki Hirata",
@@ -6463,6 +6838,19 @@
       "weight_class": "Flyweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 179",
+      "fighter1_name": "Allycia Hellen Rodrigues",
+      "fighter2_name": "Charlotte Padie",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
+      "is_main_event": true,
+      "is_title_fight": false
     }
   ]
 }

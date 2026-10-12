@@ -56056,6 +56056,86 @@
           "time": "4:52"
         }
       ]
+    },
+    {
+      "name": "Bobby Chikavhu",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "3-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Bobby-Chikavhu-413863",
+      "fight_history": [
+        {
+          "opponent_name": "Samuel Draper",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Samuel-Draper-348369",
+          "event_name": "SnA 39 - Shock n Awe 39",
+          "event_sherdog_url": "https://www.sherdog.com/events/SnA-39-Shock-n-Awe-39-109903",
+          "date": "2025-10-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Jamie Alderson",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Gary Rooney",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gary-Rooney-327077",
+          "event_name": "SnA 38 - Shock n Awe 38",
+          "event_sherdog_url": "https://www.sherdog.com/events/SnA-38-Shock-n-Awe-38-106393",
+          "date": "2025-03-15",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Andy Nichols",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mohammad Jano",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mohammad-Jano-399752",
+          "event_name": "FSC 30 - FightStar Championship 30",
+          "event_sherdog_url": "https://www.sherdog.com/events/FSC-30-FightStar-Championship-30-102353",
+          "date": "2024-08-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Habib Samadi",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Habib-Samadi-469358",
+      "fight_history": [
+        {
+          "opponent_name": "Christian Young",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Christian-Young-333161",
+          "event_name": "BCMMA - Cage Warriors Academy South East 42",
+          "event_sherdog_url": "https://www.sherdog.com/events/BCMMA-Cage-Warriors-Academy-South-East-42-113734",
+          "date": "2026-08-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Ronan Tomnay",
+          "round": 1,
+          "time": "4:17"
+        },
+        {
+          "opponent_name": "Sabir Hassan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sabir-Hassan-280495",
+          "event_name": "FSC 35 - FightStar Championship 35",
+          "event_sherdog_url": "https://www.sherdog.com/events/FSC-35-FightStar-Championship-35-110148",
+          "date": "2025-12-20",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Daniel Movahedi",
+          "round": 1,
+          "time": "3:19"
+        }
+      ]
     }
   ],
   "fights": [
@@ -95774,7 +95854,7 @@
     },
     {
       "event_name": "CW 211 - Cage Warriors 211: Rome",
-      "fighter1_name": "Pietro Mochetti",
+      "fighter1_name": "Enrico Di Gangi",
       "fighter2_name": "Tommy Brunning",
       "fight_finished": false,
       "winner_name": null,
@@ -95938,6 +96018,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 213 - Cage Warriors 213: London",
+      "fighter1_name": "Bobby Chikavhu",
+      "fighter2_name": "Habib Samadi",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     },

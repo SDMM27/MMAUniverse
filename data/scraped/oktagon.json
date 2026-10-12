@@ -7283,6 +7283,86 @@
           "time": "4:12"
         }
       ]
+    },
+    {
+      "name": "Patrik Pikes",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1791803792cs.1791464867772.png",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Patrik-Pikes-473051",
+      "fight_history": [
+        {
+          "opponent_name": "Theo Kolehmainen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Theo-Kolehmainen-436882",
+          "event_name": "IMMAF - 2025 European Championships: Day 5, Cage 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2025-European-Championships-Day-5-Cage-1-106985",
+          "date": "2025-02-20",
+          "result": "loss",
+          "method": "Submission (Anaconda Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "0:41"
+        }
+      ]
+    },
+    {
+      "name": "Rakhim Iliskhanov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1791803850cs.1791465573410.png",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Rakhim-Iliskhanov-481212",
+      "fight_history": [
+        {
+          "opponent_name": "Borna Drazenovic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Borna-Drazenovic-502167",
+          "event_name": "XCC 5 - Fight City",
+          "event_sherdog_url": "https://www.sherdog.com/events/XCC-5-Fight-City-113406",
+          "date": "2026-06-06",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Bogdan Grad",
+          "round": 1,
+          "time": "1:48"
+        },
+        {
+          "opponent_name": "Georg Zeitlhofer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Georg-Zeitlhofer-500257",
+          "event_name": "2Brave 6 - 2Brave Fighting Series",
+          "event_sherdog_url": "https://www.sherdog.com/events/2Brave-6-2Brave-Fighting-Series-112936",
+          "date": "2026-04-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Nebil Sebai",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Gauthier Hafid-Vessereau",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gauthier-HafidVessereau-465707",
+          "event_name": "XCC 3 - Xtreme Combat Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/XCC-3-Xtreme-Combat-Championship-110322",
+          "date": "2025-11-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "2:34"
+        },
+        {
+          "opponent_name": "Marcel Stoff",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcel-Stoff-448345",
+          "event_name": "Austrian MMA Federation - AUTMMAF Fight Series 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/Austrian-MMA-Federation-AUTMMAF-Fight-Series-11-108726",
+          "date": "2025-07-06",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Nikolaus Kulmer",
+          "round": 1,
+          "time": "2:02"
+        }
+      ]
     }
   ],
   "fights": [
@@ -21471,6 +21551,19 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "fighter1_name": "Matus Juracek",
+      "fighter2_name": "Jozef Wittner",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
       "fighter1_name": "David Dvorak",
       "fighter2_name": "Aaron Aby",
       "fight_finished": false,
@@ -21497,14 +21590,14 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
-      "fighter1_name": "Matus Juracek",
-      "fighter2_name": "Jozef Wittner",
+      "fighter1_name": "Vaclav Stepan",
+      "fighter2_name": "Sami Zarabi",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -21524,13 +21617,13 @@
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
       "fighter1_name": "Husein Kadimagomaev",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Marco Elpidio",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "159lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -21549,14 +21642,14 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
-      "fighter1_name": "Vaclav Stepan",
-      "fighter2_name": "Sami Zarabi",
+      "fighter1_name": "Patrik Pikes",
+      "fighter2_name": "Rakhim Iliskhanov",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -21641,7 +21734,7 @@
     {
       "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
       "fighter1_name": "Michael Deiga Scheck",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Lukas Chotenovsky",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
