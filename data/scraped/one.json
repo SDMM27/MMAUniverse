@@ -126,6 +126,13 @@
       "start_time": "2026-11-20T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/901591"
+    },
+    {
+      "name": "One Championship - ONE Samurai 6",
+      "date": "2026-12-02",
+      "start_time": "2026-12-02T00:00:00+00:00",
+      "event_location": "Yokohama Buntai, Yokohama, Kanagawa, Japan",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/901713"
     }
   ],
   "fighters": [
@@ -6498,6 +6505,278 @@
           "time": "3:00"
         }
       ]
+    },
+    {
+      "name": "Chihiro Sawada",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20231203080045_Chihiro_Sawada.JPG",
+      "weight_class": "Strawweight",
+      "record": "12-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Chihiro-Sawada-383765",
+      "fight_history": [
+        {
+          "opponent_name": "Ayaka Miura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ayaka-Miura-164697",
+          "event_name": "One Championship - ONE Samurai 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-ONE-Samurai-1-111740",
+          "date": "2026-04-29",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "4:33"
+        },
+        {
+          "opponent_name": "Natalie Salcedo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Natalie-Salcedo-312271",
+          "event_name": "One Championship - One on Prime Video 39",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-39-110762",
+          "date": "2026-01-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Itsuki Hirata",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Itsuki-Hirata-311639",
+          "event_name": "One Championship - One 173",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-173-108500",
+          "date": "2025-11-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Macarena Aragon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Macarena-Aragon-430959",
+          "event_name": "One Championship - One on Prime Video 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-33-104920",
+          "date": "2025-07-11",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "3:52"
+        },
+        {
+          "opponent_name": "Bo Meng",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bo-Meng-216987",
+          "event_name": "One Championship - One on Prime Video 27",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-27-104913",
+          "date": "2025-01-10",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Noelle Grandjean",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Noelle-Grandjean-394952",
+          "event_name": "One Championship - One on Prime Video 22: Sundell vs. Diachkova",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-22-Sundell-vs-Diachkova-100885",
+          "date": "2024-05-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jihin Radzuan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jihin-Radzuan-200255",
+          "event_name": "One Championship - One on Prime Video 20: Todd vs. Phetjeeja",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-20-Todd-vs-Phetjeeja-99971",
+          "date": "2024-03-08",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Miku Nakamura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Miku-Nakamura-306699",
+          "event_name": "Shooto - Colors 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Colors-2-98837",
+          "date": "2023-12-02",
+          "result": "win",
+          "method": "Technical Submission (Armbar)",
+          "referee": "Masato Kataoka",
+          "round": 1,
+          "time": "4:57"
+        },
+        {
+          "opponent_name": "Ana Palacios",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ana-Palacios-273563",
+          "event_name": "Combate Global - Mexico vs. Japan",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Mexico-vs-Japan-97640",
+          "date": "2023-05-13",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Josh Rutgers",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Sanaz Fayazmanesh",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sanaz-Fayazmanesh-421009",
+          "event_name": "One Championship - One Friday Fights 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-5-96631",
+          "date": "2023-02-17",
+          "result": "win",
+          "method": "Submission (Keylock)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "0:53"
+        },
+        {
+          "opponent_name": "Yuki Ono",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuki-Ono-371627",
+          "event_name": "Shooto - Professional Shooto 2022 Vol. 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Professional-Shooto-2022-Vol-7-91371",
+          "date": "2022-11-27",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Masato Fukuda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hisae Watanabe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hisae-Watanabe-6984",
+          "event_name": "Shooto - Professional Shooto 2022 Vol. 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Professional-Shooto-2022-Vol-3-91368",
+          "date": "2022-05-22",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Masato Fukuda",
+          "round": 2,
+          "time": "0:59"
+        },
+        {
+          "opponent_name": "Miku Nakamura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Miku-Nakamura-306699",
+          "event_name": "Shooto - Professional Shooto 2021 Vol. 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Professional-Shooto-2021-Vol-7-90677",
+          "date": "2021-11-06",
+          "result": "win",
+          "method": "Decision (Majority)",
+          "referee": "Masato Fukuda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yuki Ono",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuki-Ono-371627",
+          "event_name": "Shooto - Professional Shooto 2021 Vol. 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Professional-Shooto-2021-Vol-3-89092",
+          "date": "2021-05-16",
+          "result": "draw",
+          "method": "Draw (Unanimous)",
+          "referee": "Masato Kataoka",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Anastasia Nikolakakos",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1773398818Anastasia_Nikolakakos-hero-1200x1165-1-600x582.png",
+      "weight_class": "Strawweight",
+      "record": "7-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Anastasia-Nikolakakos-226721",
+      "fight_history": [
+        {
+          "opponent_name": "Jihin Radzuan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jihin-Radzuan-200255",
+          "event_name": "One Championship - One on Prime Video 45",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-45-113005",
+          "date": "2026-07-17",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Victoria Souza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Victoria-Souza-355463",
+          "event_name": "One Championship - One on Prime Video 41",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-41-111197",
+          "date": "2026-03-13",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "4:59"
+        },
+        {
+          "opponent_name": "Ana Palacios",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ana-Palacios-273563",
+          "event_name": "Combate Global - Puas vs. Piedrahita",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Puas-vs-Piedrahita-99931",
+          "date": "2023-12-02",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Chris Mignocchi",
+          "round": 3,
+          "time": "3:20"
+        },
+        {
+          "opponent_name": "Elisandra Ferreira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elisandra-Ferreira-265745",
+          "event_name": "PAWFC - Pallas Athena Women's Fighting Championship 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/PAWFC-Pallas-Athena-Womens-Fighting-Championship-2-94303",
+          "date": "2022-08-27",
+          "result": "win",
+          "method": "Technical Decision (Unanimous)",
+          "referee": "Luke Boutin",
+          "round": 4,
+          "time": "3:42"
+        },
+        {
+          "opponent_name": "Ashley Medina",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ashley-Medina-179099",
+          "event_name": "Invicta FC 33 - Frey vs. Grusander 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Invicta-FC-33-Frey-vs-Grusander-2-71833",
+          "date": "2018-12-15",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mike England",
+          "round": 2,
+          "time": "3:26"
+        },
+        {
+          "opponent_name": "Francis Hernandez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Francis-Hernandez-224641",
+          "event_name": "BTC 2 - Valhalla",
+          "event_sherdog_url": "https://www.sherdog.com/events/BTC-2-Valhalla-63053",
+          "date": "2017-09-09",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Coralie Dixon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Coralie-Dixon-174073",
+          "event_name": "BTC 1 - Genesis",
+          "event_sherdog_url": "https://www.sherdog.com/events/BTC-1-Genesis-61301",
+          "date": "2017-05-27",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "4:05"
+        }
+      ]
     }
   ],
   "fights": [
@@ -6851,6 +7130,19 @@
       "weight_class": "Strawweight",
       "is_main_event": true,
       "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - ONE Samurai 6",
+      "fighter1_name": "Chihiro Sawada",
+      "fighter2_name": "Anastasia Nikolakakos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }
