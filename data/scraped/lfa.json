@@ -410424,6 +410424,172 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Lucas Ganin",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1787776573Lucas_Ganin.jpg",
+      "weight_class": "Featherweight",
+      "record": "9-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Lucas-Ganin-250817",
+      "fight_history": [
+        {
+          "opponent_name": "Jair Perez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jair-Perez-249871",
+          "event_name": "MMA Mexico 9 / MFL 6 - MMA Mexico vs. MFL: Gonzalez vs. Meza",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Mexico-9-MFL-6-MMA-Mexico-vs-MFL-Gonzalez-vs-Meza-113936",
+          "date": "2026-09-25",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Erick Castillo",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ilyas Eziev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ilyas-Eziev-397214",
+          "event_name": "One Championship - One Friday Fights 138",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-138-111186",
+          "date": "2026-01-16",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ayumu Yamamoto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ayumu-Yamamoto-380466",
+          "event_name": "One Championship - One Friday Fights 127",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-127-109844",
+          "date": "2025-10-03",
+          "result": "win",
+          "method": "Submission (Heel Hook)",
+          "referee": "Olivier Coste",
+          "round": 1,
+          "time": "2:03"
+        },
+        {
+          "opponent_name": "Harlysson Nunes Souza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Harlysson-Nunes-Souza-298509",
+          "event_name": "One Championship - One Friday Fights 103",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-103-107478",
+          "date": "2025-04-04",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Herb Dean",
+          "round": 1,
+          "time": "0:30"
+        },
+        {
+          "opponent_name": "Laureano Soria",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Laureano-Soria-427282",
+          "event_name": "CAM 28 - Circuito Argentino de MMA 28",
+          "event_sherdog_url": "https://www.sherdog.com/events/CAM-28-Circuito-Argentino-de-MMA-28-104217",
+          "date": "2024-09-21",
+          "result": "win",
+          "method": "Submission (Heel Hook)",
+          "referee": "Luis Garavaglia",
+          "round": 3,
+          "time": "2:14"
+        },
+        {
+          "opponent_name": "Anibal Pedrozo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anibal-Pedrozo-284153",
+          "event_name": "CAM 19 - Circuito Argentino de MMA 19",
+          "event_sherdog_url": "https://www.sherdog.com/events/CAM-19-Circuito-Argentino-de-MMA-19-97757",
+          "date": "2023-05-20",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Luis Garavaglia",
+          "round": 1,
+          "time": "1:21"
+        },
+        {
+          "opponent_name": "Nahuel Figueroa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nahuel-Figueroa-253451",
+          "event_name": "CAM 16 - Circuito Argentino de MMA 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/CAM-16-Circuito-Argentino-de-MMA-16-95723",
+          "date": "2022-12-10",
+          "result": "nc",
+          "method": "No Contest",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Manuel Exposito",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Manuel-Exposito-357473",
+          "event_name": "CAM 13 - Circuito Argentino de MMA 13",
+          "event_sherdog_url": "https://www.sherdog.com/events/CAM-13-Circuito-Argentino-de-MMA-13-95057",
+          "date": "2022-09-17",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Diego Lopez",
+          "round": 1,
+          "time": "2:38"
+        },
+        {
+          "opponent_name": "Cristian Gomez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cristian-Gomez-210457",
+          "event_name": "CAM 8 - Circuito Argentino de MMA 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/CAM-8-Circuito-Argentino-de-MMA-8-92705",
+          "date": "2022-04-02",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Edgardo Coronel",
+          "round": 1,
+          "time": "4:55"
+        },
+        {
+          "opponent_name": "Omar Fernandez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Omar-Fernandez-190441",
+          "event_name": "CAM 3 - Circuito Argentino de MMA 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/CAM-3-Circuito-Argentino-de-MMA-3-89798",
+          "date": "2021-07-10",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "",
+          "round": 1,
+          "time": "0:12"
+        },
+        {
+          "opponent_name": "Alberto Blas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alberto-Blas-268583",
+          "event_name": "Titan FC 50 - Manfio vs. Outlaw",
+          "event_sherdog_url": "https://www.sherdog.com/events/Titan-FC-50-Manfio-vs-Outlaw-67431",
+          "date": "2018-06-29",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Michael Cardoso",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Sergio Orozco",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sergio-Orozco-149465",
+          "event_name": "Arena Tour 9 - Sordi vs. Santos",
+          "event_sherdog_url": "https://www.sherdog.com/events/Arena-Tour-9-Sordi-vs-Santos-60885",
+          "date": "2017-06-09",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Fernando Raffaele",
+          "round": 2,
+          "time": "1:34"
+        },
+        {
+          "opponent_name": "Gaston Sosa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gaston-Sosa-250819",
+          "event_name": "Cage League Championship - VIP Card",
+          "event_sherdog_url": "https://www.sherdog.com/events/Cage-League-Championship-VIP-Card-59423",
+          "date": "2017-01-23",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Claudio Palumbo",
+          "round": 1,
+          "time": "N/A"
+        }
+      ]
     }
   ],
   "fights": [
@@ -439869,19 +440035,6 @@
     },
     {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Haseeb Khetab",
-      "fighter2_name": "Matias Valdes",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
       "fighter1_name": "Naomie Young",
       "fighter2_name": "Aline David",
       "fight_finished": false,
@@ -439962,6 +440115,19 @@
       "event_name": "LFA 247 - Breno vs Torres",
       "fighter1_name": "Francisco Hernandez",
       "fighter2_name": "Ray Hayes",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Lucas Ganin",
+      "fighter2_name": "Abbas Abasov",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
