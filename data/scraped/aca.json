@@ -381684,6 +381684,76 @@
           "time": "3:38"
         }
       ]
+    },
+    {
+      "name": "Bektur Zhenishbek Uulu",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1792007074Bektur_Zhenishbek_Uulu.jpg",
+      "weight_class": "Flyweight",
+      "record": "5-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Bektur-Zhenishbek-Uulu-339657",
+      "fight_history": [
+        {
+          "opponent_name": "Vitaliy Kositsyn",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vitaliy-Kositsyn-260007",
+          "event_name": "MFP 255 - Modern Fighting Pankration 255",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFP-255-Modern-Fighting-Pankration-255-108349",
+          "date": "2025-05-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Nikita Meintser",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Anton Samburskiy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anton-Samburskiy-473398",
+          "event_name": "SFL 22: Winter Series - Finals",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFL-22-Winter-Series-Finals-107068",
+          "date": "2025-02-23",
+          "result": "win",
+          "method": "TKO (Corner Stoppage)",
+          "referee": "Vladimir Elestratov",
+          "round": 1,
+          "time": "2:08"
+        },
+        {
+          "opponent_name": "Avazbek Kholmirzaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Avazbek-Kholmirzaev-417058",
+          "event_name": "One Championship - One Friday Fights 80",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-80-104299",
+          "date": "2024-09-20",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Rahmonqul Radjabov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rahmonqul-Radjabov-427825",
+          "event_name": "SK 3 - Shumkar Pride 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/SK-3-Shumkar-Pride-3-101088",
+          "date": "2024-01-21",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Sadyk Ashirov",
+          "round": 2,
+          "time": "1:32"
+        },
+        {
+          "opponent_name": "Muhammad Anvarov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muhammad-Anvarov-441467",
+          "event_name": "Global MMA - Global MMA 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Global-MMA-Global-MMA-2-100761",
+          "date": "2023-12-15",
+          "result": "win",
+          "method": "Submission (Choke)",
+          "referee": "Sadyk Ashirov",
+          "round": 3,
+          "time": "0:48"
+        }
+      ]
     }
   ],
   "fights": [
@@ -429158,6 +429228,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "ACA 209 - Frolov vs. Odilov",
+      "fighter1_name": "Oyatullo Muminov",
+      "fighter2_name": "Bektur Zhenishbek Uulu",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "ACA 210 - Myrzabekov vs. Tumenov",
       "fighter1_name": "Zhakshylyk Myrzabekov",
       "fighter2_name": "Albert Tumenov",
@@ -429180,6 +429263,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 210 - Myrzabekov vs. Tumenov",
+      "fighter1_name": "Edil Esengulov",
+      "fighter2_name": "Ruslan Shamilov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     }

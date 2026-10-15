@@ -644871,6 +644871,64 @@
           "time": "2:13"
         }
       ]
+    },
+    {
+      "name": "Quentin Pasley",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1750109672quentinpasley.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Quentin-Pasley-400375",
+      "fight_history": [
+        {
+          "opponent_name": "Arlind Berisha",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arlind-Berisha-348399",
+          "event_name": "Dana White's Contender Series - Contender Series 2026: Week 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2026-Week-5-112631",
+          "date": "2026-09-08",
+          "result": "win",
+          "method": "KO (Elbows)",
+          "referee": "Mike Beltran",
+          "round": 1,
+          "time": "4:41"
+        },
+        {
+          "opponent_name": "Jerell Nettles",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jerell-Nettles-410429",
+          "event_name": "CES MMA 81 - Carvalho vs. Bohn",
+          "event_sherdog_url": "https://www.sherdog.com/events/CES-MMA-81-Carvalho-vs-Bohn-108898",
+          "date": "2025-08-09",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "2:55"
+        },
+        {
+          "opponent_name": "Reylan Gracie",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Reylan-Gracie-472849",
+          "event_name": "LFA 204 - Cunha vs. Freeman",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-204-Cunha-vs-Freeman-106763",
+          "date": "2025-03-22",
+          "result": "win",
+          "method": "TKO (Flying Knee and Punches)",
+          "referee": "Dan Miragliotta",
+          "round": 1,
+          "time": "1:31"
+        },
+        {
+          "opponent_name": "Turner Williams",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Turner-Williams-303079",
+          "event_name": "CES MMA 75 - Fight For A Cause",
+          "event_sherdog_url": "https://www.sherdog.com/events/CES-MMA-75-Fight-For-A-Cause-99241",
+          "date": "2023-10-20",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "Bryan Miner",
+          "round": 1,
+          "time": "0:59"
+        }
+      ]
     }
   ],
   "fights": [
@@ -746065,14 +746123,14 @@
     },
     {
       "event_name": "UFC Fight Night 294 - Prochazka vs. Stirling",
-      "fighter1_name": "Manoel Sousa",
-      "fighter2_name": "Unknown Fighter",
+      "fighter1_name": "Jacqueline Cavalcanti",
+      "fighter2_name": "Michelle Montague",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -746164,6 +746222,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC 335 - Oliveira vs. Lopes",
+      "fighter1_name": "Maycee Barber",
+      "fighter2_name": "Carli Judice",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC 335 - Oliveira vs. Lopes",
+      "fighter1_name": "Quentin Pasley",
+      "fighter2_name": "Junior Tafa",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     }
