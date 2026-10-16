@@ -4960,6 +4960,13 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896865"
     },
     {
+      "name": "UFC Fight Night 295 - Riyadh",
+      "date": "2026-11-28",
+      "start_time": "2026-11-28T00:00:00+00:00",
+      "event_location": "Riyadh, Saudi Arabia",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/900964"
+    },
+    {
       "name": "UFC Fight Night 291 - Buckley vs. Malott",
       "date": "2026-10-17",
       "start_time": "2026-10-17T00:00:00+00:00",
@@ -5002,9 +5009,9 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/899976"
     },
     {
-      "name": "UFC Fight Night 295 - Riyadh",
-      "date": "2026-11-28",
-      "start_time": "2026-11-28T00:00:00+00:00",
+      "name": "UFC Fight Night 296 - Riyadh",
+      "date": "2026-12-05",
+      "start_time": "2026-12-05T00:00:00+00:00",
       "event_location": "Riyadh, Saudi Arabia",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/900964"
     },
@@ -745121,6 +745128,45 @@
       "is_title_fight": false
     },
     {
+      "event_name": "UFC Fight Night 295 - Riyadh",
+      "fighter1_name": "Hecher Sosa",
+      "fighter2_name": "Abdul Hussein",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 295 - Riyadh",
+      "fighter1_name": "Jafel Filho",
+      "fighter2_name": "Bruno Silva",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 295 - Riyadh",
+      "fighter1_name": "Matthieu Letho Duclos",
+      "fighter2_name": "Modestino Rodrigues",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "UFC Fight Night 291 - Buckley vs. Malott",
       "fighter1_name": "Joaquin Buckley",
       "fighter2_name": "Mike Malott",
@@ -746135,7 +746181,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 295 - Riyadh",
+      "event_name": "UFC Fight Night 296 - Riyadh",
       "fighter1_name": "Hecher Sosa",
       "fighter2_name": "Abdul Hussein",
       "fight_finished": false,
@@ -746148,7 +746194,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 295 - Riyadh",
+      "event_name": "UFC Fight Night 296 - Riyadh",
       "fighter1_name": "Jafel Filho",
       "fighter2_name": "Bruno Silva",
       "fight_finished": false,
@@ -746161,7 +746207,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 295 - Riyadh",
+      "event_name": "UFC Fight Night 296 - Riyadh",
       "fighter1_name": "Matthieu Letho Duclos",
       "fighter2_name": "Modestino Rodrigues",
       "fight_finished": false,
