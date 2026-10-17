@@ -132990,10 +132990,22 @@
       "name": "Su Young You",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230918113547_Soo_Young_Yoo.JPG",
       "weight_class": "Bantamweight",
-      "record": "16-4-0",
+      "record": "17-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Su-Young-You-179453",
       "fight_history": [
+        {
+          "opponent_name": "Cody Chovancek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cody-Chovancek-288663",
+          "event_name": "UFC Fight Night 291 - Buckley vs. Malott",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-Fight-Night-291-Buckley-vs-Malott-113800",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "Submission (Kimura)",
+          "referee": "Jason Herzog",
+          "round": 3,
+          "time": "4:19"
+        },
         {
           "opponent_name": "Elijah Smith",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elijah-Smith-385324",
