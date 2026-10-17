@@ -7293,6 +7293,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Patrik-Pikes-473051",
       "fight_history": [
         {
+          "opponent_name": "Rakhim Iliskhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rakhim-Iliskhanov-481212",
+          "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
+          "event_sherdog_url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-95-Skvor-vs-Narkun-114019",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Josef Louc",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
           "opponent_name": "Theo Kolehmainen",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Theo-Kolehmainen-436882",
           "event_name": "IMMAF - 2025 European Championships: Day 5, Cage 1",
@@ -7314,6 +7326,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Rakhim-Iliskhanov-481212",
       "fight_history": [
+        {
+          "opponent_name": "Patrik Pikes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Patrik-Pikes-473051",
+          "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
+          "event_sherdog_url": "https://www.sherdog.com/events/Oktagon-MMA-Oktagon-95-Skvor-vs-Narkun-114019",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Josef Louc",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Borna Drazenovic",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Borna-Drazenovic-502167",
@@ -7361,6 +7385,88 @@
           "referee": "Nikolaus Kulmer",
           "round": 1,
           "time": "2:02"
+        }
+      ]
+    },
+    {
+      "name": "Aria Azarnoosh",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "3-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Aria-Azarnoosh-418816",
+      "fight_history": [
+        {
+          "opponent_name": "Jonas Troest",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jonas-Troest-171635",
+          "event_name": "Dominance FC 5.0 - Dominance Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dominance-FC-50-Dominance-Fighting-Championship-111081",
+          "date": "2026-01-10",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "4:58"
+        },
+        {
+          "opponent_name": "Syrene Senobio",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Syrene-Senobio-421214",
+          "event_name": "WLMMA - We Love MMA 82",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLMMA-We-Love-MMA-82-108055",
+          "date": "2025-10-18",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "",
+          "round": 1,
+          "time": "0:26"
+        },
+        {
+          "opponent_name": "Tobias Eylitz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tobias-Eylitz-337375",
+          "event_name": "WLMMA - We Love MMA 78",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLMMA-We-Love-MMA-78-105458",
+          "date": "2025-04-12",
+          "result": "loss",
+          "method": "Decision (Majority)",
+          "referee": "",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Andrei Strainu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andrei-Strainu-366535",
+          "event_name": "GMC 33 - German MMA Championship 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-33-German-MMA-Championship-33-96091",
+          "date": "2023-03-18",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mervan Gencer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mervan-Gencer-343633",
+          "event_name": "GMC 31 - German MMA Championship 31",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-31-German-MMA-Championship-31-95333",
+          "date": "2022-12-03",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Lukasz Bosacki",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Mihajlo Rajic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mihajlo-Rajic-337381",
+          "event_name": "PFE 1 - Prize Fighting Events 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/PFE-1-Prize-Fighting-Events-1-97213",
+          "date": "2022-09-10",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
         }
       ]
     }
@@ -21578,7 +21684,7 @@
     {
       "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Vaclav Stepan",
-      "fighter2_name": "Sami Zarabi",
+      "fighter2_name": "Aria Azarnoosh",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -21603,19 +21709,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
-      "fighter1_name": "Husein Kadimagomaev",
-      "fighter2_name": "Marco Elpidio",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "159lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Viktor Cervinsky",
       "fighter2_name": "Daniel Hromek",
       "fight_finished": false,
@@ -21624,6 +21717,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
+      "fighter1_name": "Husein Kadimagomaev",
+      "fighter2_name": "Marco Elpidio",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "159lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
