@@ -5013,7 +5013,7 @@
       "date": "2026-12-05",
       "start_time": "2026-12-05T00:00:00+00:00",
       "event_location": "Riyadh, Saudi Arabia",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/900964"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/901955"
     },
     {
       "name": "UFC 335 - Oliveira vs. Lopes",
@@ -283521,20 +283521,20 @@
         {
           "opponent_name": "James Dunn",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/James-Dunn-205699",
-          "event_name": "CN - Combat Night: Orlando",
-          "event_sherdog_url": "https://www.sherdog.com/events/CN-Combat-Night-Orlando-93930",
+          "event_name": "Combat Night - Orlando",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combat-Night-Orlando-93930",
           "date": "2022-07-16",
           "result": "win",
           "method": "Submission (Rear-Naked Choke)",
-          "referee": "",
+          "referee": "Josh Rutgers",
           "round": 1,
           "time": "4:05"
         },
         {
           "opponent_name": "Marcelo Willian",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcelo-Willian-160287",
-          "event_name": "CN - Combat Night: Pro - Jacksonville",
-          "event_sherdog_url": "https://www.sherdog.com/events/CN-Combat-Night-Pro-Jacksonville-90852",
+          "event_name": "Combat Night - Jacksonville",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combat-Night-Jacksonville-90852",
           "date": "2021-11-06",
           "result": "win",
           "method": "Submission (Rear-Naked Choke)",
@@ -283545,8 +283545,8 @@
         {
           "opponent_name": "Anthony Retic",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anthony-Retic-59105",
-          "event_name": "CN - Combat Night: Pro 20",
-          "event_sherdog_url": "https://www.sherdog.com/events/CN-Combat-Night-Pro-20-88835",
+          "event_name": "Combat Night - Orlando",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combat-Night-Orlando-88835",
           "date": "2021-03-13",
           "result": "win",
           "method": "Submission (Kimura)",
@@ -283555,10 +283555,10 @@
           "time": "1:34"
         },
         {
-          "opponent_name": "Ginseng Poit Du'Jour",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ginseng-Poit-DuJour-172427",
-          "event_name": "CN - Combat Night: Pro 18",
-          "event_sherdog_url": "https://www.sherdog.com/events/CN-Combat-Night-Pro-18-86055",
+          "opponent_name": "Ginseng Du Jour",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ginseng-Du-Jour-172427",
+          "event_name": "Combat Night - Duval",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combat-Night-Duval-86055",
           "date": "2020-03-21",
           "result": "win",
           "method": "Submission (Rear-Naked Choke)",
@@ -283569,8 +283569,8 @@
         {
           "opponent_name": "Jonathan Ortiz",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jonathan-Ortiz-334413",
-          "event_name": "CN - Combat Night: Pro 14",
-          "event_sherdog_url": "https://www.sherdog.com/events/CN-Combat-Night-Pro-14-78167",
+          "event_name": "Combat Night - Tally",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combat-Night-Tally-78167",
           "date": "2019-07-20",
           "result": "win",
           "method": "Submission (Triangle Choke)",
@@ -283581,8 +283581,8 @@
         {
           "opponent_name": "Joshua Ciulla",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joshua-Ciulla-238709",
-          "event_name": "CN - Combat Night: Pro 12 - May the 4th Be With You",
-          "event_sherdog_url": "https://www.sherdog.com/events/CN-Combat-Night-Pro-12-May-the-4th-Be-With-You-76187",
+          "event_name": "Combat Night - May the 4th Be With You",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combat-Night-May-the-4th-Be-With-You-76187",
           "date": "2019-05-04",
           "result": "win",
           "method": "Submission (Armbar)",
@@ -746182,6 +746182,19 @@
     },
     {
       "event_name": "UFC Fight Night 296 - Riyadh",
+      "fighter1_name": "Israel Adesanya",
+      "fighter2_name": "Sharabutdin Magomedov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 296 - Riyadh",
       "fighter1_name": "Hecher Sosa",
       "fighter2_name": "Abdul Hussein",
       "fight_finished": false,
@@ -746190,7 +746203,7 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": true,
+      "is_main_event": false,
       "is_title_fight": false
     },
     {
