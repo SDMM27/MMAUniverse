@@ -842,11 +842,11 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/879569"
     },
     {
-      "name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "date": "2026-10-17",
       "start_time": "2026-10-17T00:00:00+00:00",
       "event_location": "Mattoni Arena, Karlovy Vary, Czech Republic",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895083"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/895082"
     },
     {
       "name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
@@ -21524,20 +21524,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
-      "fighter1_name": "Patrik Kincl",
-      "fighter2_name": "Dominik Humburger",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Daniel Skvor",
       "fighter2_name": "Tomasz Narkun",
       "fight_finished": false,
@@ -21546,11 +21533,11 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
-      "is_main_event": false,
+      "is_main_event": true,
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Matus Juracek",
       "fighter2_name": "Jozef Wittner",
       "fight_finished": false,
@@ -21563,7 +21550,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "David Dvorak",
       "fighter2_name": "Aaron Aby",
       "fight_finished": false,
@@ -21576,7 +21563,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Zdenek Polivka",
       "fighter2_name": "Timo Feucht",
       "fight_finished": false,
@@ -21589,7 +21576,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Vaclav Stepan",
       "fighter2_name": "Sami Zarabi",
       "fight_finished": false,
@@ -21602,7 +21589,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Marco Novak",
       "fighter2_name": "Anatolij Baal",
       "fight_finished": false,
@@ -21615,7 +21602,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Husein Kadimagomaev",
       "fighter2_name": "Marco Elpidio",
       "fight_finished": false,
@@ -21628,7 +21615,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Viktor Cervinsky",
       "fighter2_name": "Daniel Hromek",
       "fight_finished": false,
@@ -21641,7 +21628,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 95: Kincl vs. Humburger",
+      "event_name": "Oktagon MMA - Oktagon 95: Skvor vs. Narkun",
       "fighter1_name": "Patrik Pikes",
       "fighter2_name": "Rakhim Iliskhanov",
       "fight_finished": false,
