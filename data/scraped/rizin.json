@@ -152148,6 +152148,49 @@
           "time": "1:39"
         }
       ]
+    },
+    {
+      "name": "Sora Kaneko",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250921055007_Sora_Kaneko.JPG",
+      "weight_class": "Flyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sora-Kaneko-485355",
+      "fight_history": [
+        {
+          "opponent_name": "Kippei Yokoyama",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kippei-Yokoyama-475544",
+          "event_name": "Deep - Fight Challenge 2026 1st Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Fight-Challenge-2026-1st-Round-110865",
+          "date": "2026-01-23",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Hiromichi Nakahara",
+          "round": 2,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Taisho Takei",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taisho-Takei-485354",
+          "event_name": "Deep - 128 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-128-Impact-109631",
+          "date": "2025-11-02",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Takashi Hashimoto",
+          "round": 1,
+          "time": "1:25"
+        }
+      ]
+    },
+    {
+      "name": "Christian Akira Matsuo",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Christian-Akira-Matsuo-509187",
+      "fight_history": []
     }
   ],
   "fights": [
@@ -161861,6 +161904,19 @@
       "weight_class": "Featherweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "Rizin FF - New Year's Eve Event",
+      "fighter1_name": "Sora Kaneko",
+      "fighter2_name": "Christian Akira Matsuo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "143lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }
