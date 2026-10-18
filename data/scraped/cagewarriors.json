@@ -4482,6 +4482,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Dario-Bellandi-234447",
       "fight_history": [
         {
+          "opponent_name": "Aldo Pereira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aldo-Pereira-184869",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Lorenzo Spoto",
+          "round": 2,
+          "time": "0:13"
+        },
+        {
           "opponent_name": "Paddy McCorry",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paddy-McCorry-250593",
           "event_name": "CW 200 - Cage Warriors 200: Dublin",
@@ -5182,6 +5194,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Giuseppe-Mastrogiacomo-401698",
       "fight_history": [
         {
+          "opponent_name": "Alexis Tsarmantidis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexis-Tsarmantidis-321037",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "KO (Knee to the Body)",
+          "referee": "Daniel Movahedi",
+          "round": 1,
+          "time": "3:37"
+        },
+        {
           "opponent_name": "Erick Washington",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erick-Washington-363705",
           "event_name": "CW 204 - Cage Warriors 204: Rome",
@@ -5312,6 +5336,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Alexis-Tsarmantidis-321037",
       "fight_history": [
         {
+          "opponent_name": "Giuseppe Mastrogiacomo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Giuseppe-Mastrogiacomo-401698",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "KO (Knee to the Body)",
+          "referee": "Daniel Movahedi",
+          "round": 1,
+          "time": "3:37"
+        },
+        {
           "opponent_name": "Oliver Tero",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oliver-Tero-391010",
           "event_name": "CW 202 - Cage Warriors 202: Manchester",
@@ -5430,100 +5466,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Federico-Rotoni-444147",
       "fight_history": [
         {
-          "opponent_name": "Abdourakman Iniev",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdourakman-Iniev-423624",
-          "event_name": "FMMAF - MMA League: Junior Auxerre - France vs. Italy",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-Junior-Auxerre-France-vs-Italy-112441",
-          "date": "2026-03-28",
-          "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "Luc Hernandez",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Abdourakman Iniev",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdourakman-Iniev-423624",
-          "event_name": "FMMAF - MMA League Elite: France vs. Italy",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-Elite-France-vs-Italy-112691",
-          "date": "2026-03-28",
-          "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Valerio Tambascia",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valerio-Tambascia-422329",
-          "event_name": "CINTHEC 6 - Chioggia in the Cage 6",
-          "event_sherdog_url": "https://www.sherdog.com/events/CINTHEC-6-Chioggia-in-the-Cage-6-108729",
-          "date": "2025-07-12",
-          "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Luka Musobelliu",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luka-Musobelliu-414332",
-          "event_name": "CINTHEC 5 - Chioggia in the Cage 5",
-          "event_sherdog_url": "https://www.sherdog.com/events/CINTHEC-5-Chioggia-in-the-Cage-5-106051",
-          "date": "2025-02-01",
-          "result": "loss",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Pierluigi De Prospo",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pierluigi-De-Prospo-419936",
-          "event_name": "Kratos Arena 2 - The Knight Edition",
-          "event_sherdog_url": "https://www.sherdog.com/events/Kratos-Arena-2-The-Knight-Edition-105294",
-          "date": "2024-09-22",
+          "opponent_name": "Andrei Gabura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andrei-Gabura-449209",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
           "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "Kevin Moietta",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Matteo Greco",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matteo-Greco-444862",
-          "event_name": "Blaze 2 - Blaze Fight Event",
-          "event_sherdog_url": "https://www.sherdog.com/events/Blaze-2-Blaze-Fight-Event-101456",
-          "date": "2024-03-02",
-          "result": "win",
-          "method": "Submission",
-          "referee": "",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Daniel Movahedi",
           "round": 1,
-          "time": "2:17"
-        },
-        {
-          "opponent_name": "Federico Testalepre",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Federico-Testalepre-438198",
-          "event_name": "Face to Face #4 - Nessuna Via d'Uscita",
-          "event_sherdog_url": "https://www.sherdog.com/events/Face-to-Face-4-Nessuna-Via-dUscita-101320",
-          "date": "2024-01-27",
-          "result": "win",
-          "method": "Submission",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Christian Aniballi",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Christian-Aniballi-440684",
-          "event_name": "FIGMMA - 14th Italian MMA Cup",
-          "event_sherdog_url": "https://www.sherdog.com/events/FIGMMA-14th-Italian-MMA-Cup-104884",
-          "date": "2023-06-03",
-          "result": "loss",
-          "method": "TKO",
-          "referee": "",
-          "round": 2,
-          "time": "1:14"
+          "time": "4:52"
         }
       ]
     },
@@ -6482,6 +6434,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Niko-Ceraglia-314265",
       "fight_history": [
         {
+          "opponent_name": "Valentino Greco",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valentino-Greco-481235",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Daniel Movahedi",
+          "round": 1,
+          "time": "4:26"
+        },
+        {
           "opponent_name": "Christian Soda",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Christian-Soda-419854",
           "event_name": "CW 204 - Cage Warriors 204: Rome",
@@ -6540,6 +6504,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Valentino-Greco-481235",
       "fight_history": [
         {
+          "opponent_name": "Niko Ceraglia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Niko-Ceraglia-314265",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Daniel Movahedi",
+          "round": 1,
+          "time": "4:26"
+        },
+        {
           "opponent_name": "Salvatore Bellotta",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salvatore-Bellotta-332097",
           "event_name": "RFC 9 - Rookie Fighting Championship 9",
@@ -6585,6 +6561,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jonathan-David-Rivera-376178",
       "fight_history": [
+        {
+          "opponent_name": "Angelo Coppola",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Angelo-Coppola-467448",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "draw",
+          "method": "Draw (Split)",
+          "referee": "Declan Larkin",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Dmytro Makarov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dmytro-Makarov-420912",
@@ -6666,6 +6654,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Alessandro-Ortolani-446941",
       "fight_history": [
         {
+          "opponent_name": "Simone Ali",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Simone-Ali-441551",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Declan Larkin",
+          "round": 1,
+          "time": "4:05"
+        },
+        {
           "opponent_name": "Valerio Anza",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valerio-Anza-261979",
           "event_name": "CW 189 - Cage Warriors 189: Rome",
@@ -6724,172 +6724,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Simone-Ali-441551",
       "fight_history": [
         {
-          "opponent_name": "Adam Zilio",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adam-Zilio-425754",
-          "event_name": "FMMAF - MMA League: Junior Auxerre - France vs. Italy",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-Junior-Auxerre-France-vs-Italy-112441",
-          "date": "2026-03-28",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "Luc Hernandez",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Adam Zilio",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adam-Zilio-425754",
-          "event_name": "FMMAF - MMA League Elite: France vs. Italy",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-Elite-France-vs-Italy-112691",
-          "date": "2026-03-28",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Francesco  Marconi",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Francesco-Marconi-425014",
-          "event_name": "CWA - Cage Warriors Academy Italy 21",
-          "event_sherdog_url": "https://www.sherdog.com/events/CWA-Cage-Warriors-Academy-Italy-21-111915",
-          "date": "2026-03-14",
+          "opponent_name": "Alessandro Ortolani",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alessandro-Ortolani-446941",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
           "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Adriano Agalia",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adriano-Agalia-419639",
-          "event_name": "CWA - Cage Warriors Academy Italy 16",
-          "event_sherdog_url": "https://www.sherdog.com/events/CWA-Cage-Warriors-Academy-Italy-16-110341",
-          "date": "2025-10-26",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
+          "method": "TKO (Punches)",
+          "referee": "Declan Larkin",
           "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Carmine Marciano",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carmine-Marciano-417397",
-          "event_name": "CWA - Cage Warriors Academy Italy 15",
-          "event_sherdog_url": "https://www.sherdog.com/events/CWA-Cage-Warriors-Academy-Italy-15-108680",
-          "date": "2025-07-20",
-          "result": "win",
-          "method": "TKO",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Keoni Lembert",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Keoni-Lembert-440548",
-          "event_name": "FMMAF - MMA League Elite: France vs. Italy",
-          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-Elite-France-vs-Italy-112693",
-          "date": "2025-05-10",
-          "result": "win",
-          "method": "Decision (Split)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Matteo Pietrella",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matteo-Pietrella-459018",
-          "event_name": "CWA - Cage Warriors Academy Italy 9",
-          "event_sherdog_url": "https://www.sherdog.com/events/CWA-Cage-Warriors-Academy-Italy-9-107521",
-          "date": "2025-04-05",
-          "result": "win",
-          "method": "Submission",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Manuel  di Carlo",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Manuel-di-Carlo-417969",
-          "event_name": "FederKombat - Italian MMA Championships",
-          "event_sherdog_url": "https://www.sherdog.com/events/FederKombat-Italian-MMA-Championships-105604",
-          "date": "2024-06-02",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Stefano Solinas",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Stefano-Solinas-428415",
-          "event_name": "FederKombat - Italian MMA Championships",
-          "event_sherdog_url": "https://www.sherdog.com/events/FederKombat-Italian-MMA-Championships-105604",
-          "date": "2024-06-02",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 2,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Giuseppe Melluso",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Giuseppe-Melluso-464628",
-          "event_name": "FederKombat - Italian MMA Championships",
-          "event_sherdog_url": "https://www.sherdog.com/events/FederKombat-Italian-MMA-Championships-105604",
-          "date": "2024-06-02",
-          "result": "win",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "",
-          "round": 2,
-          "time": "1:10"
-        },
-        {
-          "opponent_name": "Riccardo Pecarevic",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Riccardo-Pecarevic-448325",
-          "event_name": "Gloria - Tournament 3",
-          "event_sherdog_url": "https://www.sherdog.com/events/Gloria-Tournament-3-101989",
-          "date": "2024-04-20",
-          "result": "loss",
-          "method": "KO",
-          "referee": "",
-          "round": 2,
-          "time": "2:42"
-        },
-        {
-          "opponent_name": "Daniele Del Prete",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Daniele-Del-Prete-448324",
-          "event_name": "Gloria - Tournament 3",
-          "event_sherdog_url": "https://www.sherdog.com/events/Gloria-Tournament-3-101989",
-          "date": "2024-04-20",
-          "result": "win",
-          "method": "TKO (Retirement)",
-          "referee": "",
-          "round": 1,
-          "time": "0:56"
-        },
-        {
-          "opponent_name": "Yousef  Essafi",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yousef-Essafi-441552",
-          "event_name": "Gloria  - Tournament 2",
-          "event_sherdog_url": "https://www.sherdog.com/events/Gloria-Tournament-2-100029",
-          "date": "2023-11-11",
-          "result": "win",
-          "method": "Decision",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Francesco Salinaro",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Francesco-Salinaro-440683",
-          "event_name": "LIMMA - Spartan In The Cage",
-          "event_sherdog_url": "https://www.sherdog.com/events/LIMMA-Spartan-In-The-Cage-97285",
-          "date": "2023-04-29",
-          "result": "win",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "0:00"
+          "time": "4:05"
         }
       ]
     },
@@ -6901,6 +6745,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ruben-Vinci-386548",
       "fight_history": [
+        {
+          "opponent_name": "Jurgen Koci",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jurgen-Koci-405916",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Declan Larkin",
+          "round": 1,
+          "time": "1:48"
+        },
         {
           "opponent_name": "Elez Guri",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elez-Guri-441555",
@@ -6923,6 +6779,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jurgen-Koci-405916",
       "fight_history": [
+        {
+          "opponent_name": "Ruben Vinci",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ruben-Vinci-386548",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Declan Larkin",
+          "round": 1,
+          "time": "1:48"
+        },
         {
           "opponent_name": "Carlo Perseo D'Ambrosio",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlo-Perseo-DAmbrosio-281109",
@@ -7122,6 +6990,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Gabriele-Lionetti-408641",
       "fight_history": [
         {
+          "opponent_name": "Elez Guri",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elez-Guri-441555",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Lorenzo Spoto",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Thoan Nguyen Thanh",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Thoan-Nguyen-Thanh-469280",
           "event_name": "One Championship - One Friday Fights 139",
@@ -7167,6 +7047,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Elez-Guri-441555",
       "fight_history": [
+        {
+          "opponent_name": "Gabriele Lionetti",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriele-Lionetti-408641",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Lorenzo Spoto",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Rafael Amaro",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafael-Amaro-422990",
@@ -25176,6 +25068,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Enrico-Di-Gangi-184627",
       "fight_history": [
         {
+          "opponent_name": "Tommy Brunning",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tommy-Brunning-417515",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Declan Larkin",
+          "round": 2,
+          "time": "2:43"
+        },
+        {
           "opponent_name": "Claudio Iancu",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Claudio-Iancu-220755",
           "event_name": "CW 204 - Cage Warriors 204: Rome",
@@ -25471,6 +25375,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Tommy-Brunning-417515",
       "fight_history": [
+        {
+          "opponent_name": "Enrico Di Gangi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Enrico-Di-Gangi-184627",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Declan Larkin",
+          "round": 2,
+          "time": "2:43"
+        },
         {
           "opponent_name": "Pierluigi De Prospo",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pierluigi-De-Prospo-419936",
@@ -34327,6 +34243,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Aldo-Pereira-184869",
       "fight_history": [
+        {
+          "opponent_name": "Dario Bellandi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dario-Bellandi-234447",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Lorenzo Spoto",
+          "round": 2,
+          "time": "0:13"
+        },
         {
           "opponent_name": "Max Alves",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Max-Alves-88123",
@@ -52494,6 +52422,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Kevin-Caperna-410377",
       "fight_history": [
         {
+          "opponent_name": "Diego Giangirolami",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Diego-Giangirolami-454260",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "TKO (Retirement)",
+          "referee": "Lorenzo Spoto",
+          "round": 1,
+          "time": "2:41"
+        },
+        {
           "opponent_name": "Claudio Iancu",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Claudio-Iancu-220755",
           "event_name": "CW 195 - Cage Warriors 195: Rome",
@@ -52657,6 +52597,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Diego-Giangirolami-454260",
       "fight_history": [
+        {
+          "opponent_name": "Kevin Caperna",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kevin-Caperna-410377",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "Lorenzo Spoto",
+          "round": 1,
+          "time": "2:41"
+        },
         {
           "opponent_name": "Ali Sohaiki",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ali-Sohaiki-334719",
@@ -54068,64 +54020,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Andrei-Gabura-449209",
       "fight_history": [
         {
-          "opponent_name": "Massimiliano Bello",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Massimiliano-Bello-464638",
-          "event_name": "CINTHEC 9 - Chioggia in the Cage 9",
-          "event_sherdog_url": "https://www.sherdog.com/events/CINTHEC-9-Chioggia-in-the-Cage-9-113541",
-          "date": "2026-07-11",
+          "opponent_name": "Federico Rotoni",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Federico-Rotoni-444147",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
           "result": "loss",
-          "method": "TKO",
-          "referee": "",
-          "round": 3,
-          "time": "2:43"
-        },
-        {
-          "opponent_name": "Umberto Bagni",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Umberto-Bagni-494589",
-          "event_name": "CINTHEC 7 - Chioggia in the Cage 7",
-          "event_sherdog_url": "https://www.sherdog.com/events/CINTHEC-7-Chioggia-in-the-Cage-7-111072",
-          "date": "2026-02-07",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Simon Carisi",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Simon-Carisi-456379",
-          "event_name": "CINTHEC 4 - Chioggia in the Cage 4",
-          "event_sherdog_url": "https://www.sherdog.com/events/CINTHEC-4-Chioggia-in-the-Cage-4-103894",
-          "date": "2024-08-24",
-          "result": "win",
-          "method": "Submission (Kimura)",
-          "referee": "",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Daniel Movahedi",
           "round": 1,
-          "time": "0:51"
-        },
-        {
-          "opponent_name": "Jonathan David Rivera",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jonathan-David-Rivera-376178",
-          "event_name": "CWA - Cage Warriors Academy Italy 6",
-          "event_sherdog_url": "https://www.sherdog.com/events/CWA-Cage-Warriors-Academy-Italy-6-100525",
-          "date": "2024-06-22",
-          "result": "loss",
-          "method": "TKO",
-          "referee": "",
-          "round": 3,
-          "time": "0:45"
-        },
-        {
-          "opponent_name": "Yasir Fellahi",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yasir-Fellahi-449210",
-          "event_name": "Power Nation Fighting Championship - PNFC 14: Road to BRAVE",
-          "event_sherdog_url": "https://www.sherdog.com/events/Power-Nation-Fighting-Championship-PNFC-14-Road-to-BRAVE-102026",
-          "date": "2024-05-04",
-          "result": "loss",
-          "method": "TKO",
-          "referee": "Luigi Vertulli",
-          "round": 2,
-          "time": "0:45"
+          "time": "4:52"
         }
       ]
     },
@@ -54137,6 +54041,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Salvatore-Bellotta-332097",
       "fight_history": [
+        {
+          "opponent_name": "Christian Tosco",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Christian-Tosco-401305",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "loss",
+          "method": "TKO (Elbow and Punches)",
+          "referee": "Daniel Movahedi",
+          "round": 3,
+          "time": "2:29"
+        },
         {
           "opponent_name": "Paulo Vitor",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paulo-Vitor-224055",
@@ -54207,6 +54123,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Christian-Tosco-401305",
       "fight_history": [
+        {
+          "opponent_name": "Salvatore Bellotta",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salvatore-Bellotta-332097",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "win",
+          "method": "TKO (Elbow and Punches)",
+          "referee": "Daniel Movahedi",
+          "round": 3,
+          "time": "2:29"
+        },
         {
           "opponent_name": "Leon Armes",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leon-Armes-391465",
@@ -56146,160 +56074,16 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Angelo-Coppola-467448",
       "fight_history": [
         {
-          "opponent_name": "Heitor Montezuma Santos",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Heitor-Montezuma-Santos-502959",
-          "event_name": "Shooto Brazil 138 - Pereira vs. Souza",
-          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Brazil-138-Pereira-vs-Souza-111970",
-          "date": "2026-07-17",
-          "result": "win",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "Fernando Portella",
-          "round": 1,
-          "time": "2:43"
-        },
-        {
-          "opponent_name": "Ayoub Souayah",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ayoub-Souayah-488068",
-          "event_name": "CountDown Tournament 31 - Road to Brazil",
-          "event_sherdog_url": "https://www.sherdog.com/events/CountDown-Tournament-31-Road-to-Brazil-111896",
-          "date": "2026-04-18",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
+          "opponent_name": "Jonathan David Rivera",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jonathan-David-Rivera-376178",
+          "event_name": "CW 211 - Cage Warriors 211: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-211-Cage-Warriors-211-Rome-113635",
+          "date": "2026-10-17",
+          "result": "draw",
+          "method": "Draw (Split)",
+          "referee": "Declan Larkin",
           "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Lorenzo Amadori",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lorenzo-Amadori-418875",
-          "event_name": "CountDown Tournament 31 - Road to Brazil",
-          "event_sherdog_url": "https://www.sherdog.com/events/CountDown-Tournament-31-Road-to-Brazil-111896",
-          "date": "2026-04-18",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 2,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Tommaso Massimiliani",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tommaso-Massimiliani-501824",
-          "event_name": "Storm MMA Fighting Championship - Talent",
-          "event_sherdog_url": "https://www.sherdog.com/events/Storm-MMA-Fighting-Championship-Talent-113373",
-          "date": "2026-03-15",
-          "result": "win",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "",
-          "round": 2,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Riccardo Erario",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Riccardo-Erario-443196",
-          "event_name": "CountDown Tournament 29 - Road to Brazil",
-          "event_sherdog_url": "https://www.sherdog.com/events/CountDown-Tournament-29-Road-to-Brazil-111094",
-          "date": "2026-01-31",
-          "result": "win",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "",
-          "round": 1,
-          "time": "1:57"
-        },
-        {
-          "opponent_name": "Davide Polito",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Davide-Polito-468757",
-          "event_name": "CountDown Tournament 28 - Road to Brazil",
-          "event_sherdog_url": "https://www.sherdog.com/events/CountDown-Tournament-28-Road-to-Brazil-110633",
-          "date": "2025-11-29",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Carlos Freire",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlos-Freire-479717",
-          "event_name": "Shooto Brazil 130 -  Da Silva vs. Monteiro",
-          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Brazil-130-Da-Silva-vs-Monteiro-108372",
-          "date": "2025-06-27",
-          "result": "win",
-          "method": "TKO (Punches)",
-          "referee": "Gilberto Guimaraes",
-          "round": 3,
-          "time": "1:40"
-        },
-        {
-          "opponent_name": "Valery Lanzo",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valery-Lanzo-466243",
-          "event_name": "CountDown Tournament 25 - Road to Brazil",
-          "event_sherdog_url": "https://www.sherdog.com/events/CountDown-Tournament-25-Road-to-Brazil-107784",
-          "date": "2025-04-27",
-          "result": "win",
-          "method": "Submission (Rear-Naked Choke)",
-          "referee": "Cosimo Perrucci",
-          "round": 2,
-          "time": "1:35"
-        },
-        {
-          "opponent_name": "Valerio Vaccaro",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valerio-Vaccaro-449401",
-          "event_name": "Campania Kombat 8 - Campania Kombat",
-          "event_sherdog_url": "https://www.sherdog.com/events/Campania-Kombat-8-Campania-Kombat-107079",
-          "date": "2025-03-28",
-          "result": "loss",
-          "method": "Submission (Triangle Choke)",
-          "referee": "",
-          "round": 2,
-          "time": "2:15"
-        },
-        {
-          "opponent_name": "Davide Longo",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Davide-Longo-199685",
-          "event_name": "CountDown Tournament 24 - Road to Brazil",
-          "event_sherdog_url": "https://www.sherdog.com/events/CountDown-Tournament-24-Road-to-Brazil-107449",
-          "date": "2025-03-23",
-          "result": "win",
-          "method": "Submission",
-          "referee": "",
-          "round": 1,
-          "time": "1:27"
-        },
-        {
-          "opponent_name": "Giovanni Solomita",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Giovanni-Solomita-468760",
-          "event_name": "CountDown Tournament 23 - Road to Brazil",
-          "event_sherdog_url": "https://www.sherdog.com/events/CountDown-Tournament-23-Road-to-Brazil-106664",
-          "date": "2025-02-08",
-          "result": "loss",
-          "method": "Submission (Guillotine Choke)",
-          "referee": "",
-          "round": 3,
-          "time": "2:35"
-        },
-        {
-          "opponent_name": "Giovanni Parmentola",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Giovanni-Parmentola-425128",
-          "event_name": "RFC 5 - Rookie Fighting Championship 5",
-          "event_sherdog_url": "https://www.sherdog.com/events/RFC-5-Rookie-Fighting-Championship-5-102959",
-          "date": "2024-11-10",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Cosimo Prete",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cosimo-Prete-406019",
-          "event_name": "CountDown Tournament 21 - Road to Brazil",
-          "event_sherdog_url": "https://www.sherdog.com/events/CountDown-Tournament-21-Road-to-Brazil-106327",
-          "date": "2024-10-05",
-          "result": "loss",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
+          "time": "5:00"
         }
       ]
     }
