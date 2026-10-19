@@ -791,7 +791,8 @@
   "http://ufcstats.com/event-details/1a49e0670dfaca31": "1994-09-09",
   "http://ufcstats.com/event-details/a6a9ab5a824e8f66": "1994-03-11",
   "http://ufcstats.com/event-details/7f98d9d5a10fa25c": "2026-10-10",
-  "http://ufcstats.com/event-details/ad3fdba28a7540cf": "2026-10-03"
+  "http://ufcstats.com/event-details/ad3fdba28a7540cf": "2026-10-03",
+  "http://ufcstats.com/event-details/55e94a9b525dcf45": "2026-10-17"
  },
  "fights": {
   "http://ufcstats.com/fight-details/0e55d8a3d7a73912": {
@@ -9963,6 +9964,22 @@
    "performanceOfTheNight": true
   },
   "http://ufcstats.com/fight-details/e92092a37dc1cfc8": {
+   "fightOfTheNight": false,
+   "performanceOfTheNight": true
+  },
+  "http://ufcstats.com/fight-details/c20c949ceba035f3": {
+   "fightOfTheNight": false,
+   "performanceOfTheNight": true
+  },
+  "http://ufcstats.com/fight-details/250651ba9f60e12f": {
+   "fightOfTheNight": false,
+   "performanceOfTheNight": true
+  },
+  "http://ufcstats.com/fight-details/49707683a6ebf34c": {
+   "fightOfTheNight": false,
+   "performanceOfTheNight": true
+  },
+  "http://ufcstats.com/fight-details/88247eaef34c209b": {
    "fightOfTheNight": false,
    "performanceOfTheNight": true
   }
