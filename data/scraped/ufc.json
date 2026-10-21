@@ -645248,6 +645248,136 @@
           "time": "0:59"
         }
       ]
+    },
+    {
+      "name": "Alik Lorenz",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1734536259lorenz.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "8-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Alik-Lorenz-347505",
+      "fight_history": [
+        {
+          "opponent_name": "Mahamed Aly",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahamed-Aly-184187",
+          "event_name": "Dana White's Contender Series - Contender Series 2026: Week 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2026-Week-2-112629",
+          "date": "2026-08-18",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Eric McMahon",
+          "round": 1,
+          "time": "2:23"
+        },
+        {
+          "opponent_name": "Gabriel Thimoteo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriel-Thimoteo-114575",
+          "event_name": "LFA 228 - Natividad vs. Garcia",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-228-Natividad-vs-Garcia-111560",
+          "date": "2026-03-13",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Joe Coca",
+          "round": 1,
+          "time": "0:24"
+        },
+        {
+          "opponent_name": "Abdul-Rakhman Yakhyaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/AbdulRakhman-Yakhyaev-395509",
+          "event_name": "Dana White's Contender Series - Contender Series 2025: Week 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2025-Week-3-108030",
+          "date": "2025-08-26",
+          "result": "loss",
+          "method": "TKO (Knee to the Body and Punches)",
+          "referee": "Mark Smith",
+          "round": 1,
+          "time": "0:30"
+        },
+        {
+          "opponent_name": "Ryan Parker",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Parker-253537",
+          "event_name": "LFA 196 - Tanner vs. Urena",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-196-Tanner-vs-Urena-104563",
+          "date": "2024-11-08",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Nick Kaiser",
+          "round": 3,
+          "time": "4:46"
+        },
+        {
+          "opponent_name": "Thomas Powell",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Thomas-Powell-218713",
+          "event_name": "LFA 188 - Sweeney vs. Do Nascimento",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-188-Sweeney-vs-Do-Nascimento-103050",
+          "date": "2024-07-12",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Ryan Brueggeman",
+          "round": 1,
+          "time": "3:55"
+        },
+        {
+          "opponent_name": "Ben Parrish",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ben-Parrish-146621",
+          "event_name": "LFA 180 - Lawrence vs. Ward",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-180-Lawrence-vs-Ward-101699",
+          "date": "2024-03-29",
+          "result": "win",
+          "method": "TKO (Punches and Elbows)",
+          "referee": "George Conley",
+          "round": 1,
+          "time": "4:15"
+        },
+        {
+          "opponent_name": "Kyler Fairchild",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyler-Fairchild-384126",
+          "event_name": "LFA 163 - Johns vs. Garcia",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-163-Johns-vs-Garcia-97800",
+          "date": "2023-07-21",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Jon Schorle",
+          "round": 1,
+          "time": "4:26"
+        },
+        {
+          "opponent_name": "Fernando Alvarado",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fernando-Alvarado-219631",
+          "event_name": "KOTC - Coastline",
+          "event_sherdog_url": "https://www.sherdog.com/events/KOTC-Coastline-95917",
+          "date": "2023-02-11",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "2:34"
+        },
+        {
+          "opponent_name": "Darion Abbey",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Darion-Abbey-255585",
+          "event_name": "Caged Aggression 32 - No Limits: Night 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Caged-Aggression-32-No-Limits-Night-1-90719",
+          "date": "2021-10-15",
+          "result": "loss",
+          "method": "TKO (Punch)",
+          "referee": "",
+          "round": 1,
+          "time": "0:33"
+        },
+        {
+          "opponent_name": "Pierre Walters",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pierre-Walters-275147",
+          "event_name": "Caged Aggression 31 - Chain Reaction: Night 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Caged-Aggression-31-Chain-Reaction-Night-2-89581",
+          "date": "2021-05-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Josh Stewart",
+          "round": 1,
+          "time": "2:40"
+        }
+      ]
     }
   ],
   "fights": [
@@ -745845,7 +745975,7 @@
     {
       "event_name": "UFC Fight Night 292 - Moicano vs. Nolan",
       "fighter1_name": "Randy Brown",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Jacobe Smith",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -745982,6 +746112,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 292 - Moicano vs. Nolan",
+      "fighter1_name": "Zachary Reese",
+      "fighter2_name": "Mickey Gall",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -746493,6 +746636,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "UFC Fight Night 294 - Prochazka vs. Stirling",
+      "fighter1_name": "Diyar Nurgozhay",
+      "fighter2_name": "Alik Lorenz",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "UFC Fight Night 296 - Riyadh",
       "fighter1_name": "Israel Adesanya",
       "fighter2_name": "Sharabutdin Magomedov",
@@ -746503,6 +746659,19 @@
       "time": "",
       "weight_class": "Middleweight",
       "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 296 - Riyadh",
+      "fighter1_name": "Islam Dulatov",
+      "fighter2_name": "Levan Chokheli",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
       "is_title_fight": false
     },
     {
@@ -746619,6 +746788,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC 335 - Oliveira vs. Lopes",
+      "fighter1_name": "Chase Hooper",
+      "fighter2_name": "Chris Padilla",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     }

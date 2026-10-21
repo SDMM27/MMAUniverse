@@ -70401,6 +70401,324 @@
           "time": "3:13"
         }
       ]
+    },
+    {
+      "name": "Antero dos Santos",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1783001366anterodossantos.jpg",
+      "weight_class": "Featherweight",
+      "record": "7-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Antero-dos-Santos-328873",
+      "fight_history": [
+        {
+          "opponent_name": "Denis Palancica",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Denis-Palancica-246663",
+          "event_name": "Ares 42 - Zebo vs. Fialho",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ares-42-Zebo-vs-Fialho-112644",
+          "date": "2026-07-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marc Goddard",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Enzzo Bastos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Enzzo-Bastos-428313",
+          "event_name": "Kingdom Fighting - Kingdom 3: Guillon vs. Smetoch",
+          "event_sherdog_url": "https://www.sherdog.com/events/Kingdom-Fighting-Kingdom-3-Guillon-vs-Smetoch-110417",
+          "date": "2025-11-15",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mourad Benseghir",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Dimitry Solimeis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dimitry-Solimeis-252641",
+          "event_name": "The King of Fighters 10 - KOF 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/The-King-of-Fighters-10-KOF-10-105659",
+          "date": "2024-11-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Christophe Chapuis",
+          "round": 2,
+          "time": "0:56"
+        },
+        {
+          "opponent_name": "Pedro Paulo Carvalho",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Paulo-Carvalho-233889",
+          "event_name": "Kingdom Fighting - Kingdom 2: Ruart vs. Del Guerra",
+          "event_sherdog_url": "https://www.sherdog.com/events/Kingdom-Fighting-Kingdom-2-Ruart-vs-Del-Guerra-101998",
+          "date": "2024-06-08",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Karim Shimi",
+          "round": 1,
+          "time": "1:52"
+        },
+        {
+          "opponent_name": "Irvin Bared",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Irvin-Bared-382725",
+          "event_name": "FPC - Fight Parc Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/FPC-Fight-Parc-Championship-101059",
+          "date": "2024-02-03",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mazri Ammar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mazri-Ammar-407518",
+          "event_name": "Kingdom Fighting - Kingdom 1: Silva vs. El Ouassaidi",
+          "event_sherdog_url": "https://www.sherdog.com/events/Kingdom-Fighting-Kingdom-1-Silva-vs-El-Ouassaidi-97602",
+          "date": "2023-06-10",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Mourad Benseghir",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Chaka Zulu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chaka-Zulu-358957",
+          "event_name": "Angola Fight Club - AFC Awards",
+          "event_sherdog_url": "https://www.sherdog.com/events/Angola-Fight-Club-AFC-Awards-83667",
+          "date": "2019-12-21",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Kalim Mastouri",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Kalim-Mastouri-436502",
+      "fight_history": [
+        {
+          "opponent_name": "Demba Marega",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Demba-Marega-423636",
+          "event_name": "ZFC 5 - Zodiac Fighting Championship 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/ZFC-5-Zodiac-Fighting-Championship-5-113159",
+          "date": "2026-07-11",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Demba Marega",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Demba-Marega-423636",
+          "event_name": "Super League MMA 7 - To the Next Level",
+          "event_sherdog_url": "https://www.sherdog.com/events/Super-League-MMA-7-To-the-Next-Level-108529",
+          "date": "2025-12-13",
+          "result": "draw",
+          "method": "Draw (Majority)",
+          "referee": "Loic Pora",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Lucas Coman",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lucas-Coman-461795",
+          "event_name": "Super League MMA 7 - To the Next Level",
+          "event_sherdog_url": "https://www.sherdog.com/events/Super-League-MMA-7-To-the-Next-Level-108529",
+          "date": "2025-12-13",
+          "result": "win",
+          "method": "Submission (Kneebar)",
+          "referee": "Patricio Carlos",
+          "round": 1,
+          "time": "1:05"
+        },
+        {
+          "opponent_name": "Ivan Panic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Panic-412573",
+          "event_name": "IMMAF - 2025 European Championships: Day 8, Cage 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2025-European-Championships-Day-8-Cage-1-106988",
+          "date": "2025-02-23",
+          "result": "win",
+          "method": "Submission (Achilles Lock)",
+          "referee": "",
+          "round": 3,
+          "time": "1:41"
+        },
+        {
+          "opponent_name": "Mykhailo Syvous",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mykhailo-Syvous-451859",
+          "event_name": "IMMAF - 2025 European Championships: Day 7, Cage 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2025-European-Championships-Day-7-Cage-2-107183",
+          "date": "2025-02-22",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:51"
+        },
+        {
+          "opponent_name": "Mehmed Bayram",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mehmed-Bayram-429443",
+          "event_name": "IMMAF - 2025 European Championships: Day 6, Cage 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/IMMAF-2025-European-Championships-Day-6-Cage-2-107184",
+          "date": "2025-02-21",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 2,
+          "time": "2:42"
+        },
+        {
+          "opponent_name": "Oualy Tandia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oualy-Tandia-419548",
+          "event_name": "FMMAF - 2024 French MMA Championship: Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-2024-French-MMA-Championship-Day-1-102973",
+          "date": "2024-06-08",
+          "result": "loss",
+          "method": "Technical Decision (Unanimous)",
+          "referee": "",
+          "round": 2,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Mike Kancel",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mike-Kancel-460857",
+          "event_name": "FMMAF - 2024 French MMA Championship: Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-2024-French-MMA-Championship-Day-1-102973",
+          "date": "2024-06-08",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:06"
+        },
+        {
+          "opponent_name": "Bastien Brodut",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bastien-Brodut-461227",
+          "event_name": "Warriors Nikaia MMA - WN MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Warriors-Nikaia-MMA-WN-MMA-102599",
+          "date": "2024-05-25",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "1:29"
+        },
+        {
+          "opponent_name": "Samuel Akesse",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Samuel-Akesse-307673",
+          "event_name": "FMMAF - MMA League 13: Toulon - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-13-Toulon-Day-2-101995",
+          "date": "2024-04-28",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:00"
+        },
+        {
+          "opponent_name": "Yazid Boughlima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yazid-Boughlima-461082",
+          "event_name": "FMMAF - MMA League 13: Toulon - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-13-Toulon-Day-1-101994",
+          "date": "2024-04-27",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:43"
+        },
+        {
+          "opponent_name": "Seif Elkouny",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seif-Elkouny-444543",
+          "event_name": "CWA - Cage Warriors Academy Italy 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/CWA-Cage-Warriors-Academy-Italy-4-100523",
+          "date": "2024-02-24",
+          "result": "win",
+          "method": "Submission",
+          "referee": "",
+          "round": 1,
+          "time": "N/A"
+        },
+        {
+          "opponent_name": "Samuel Akesse",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Samuel-Akesse-307673",
+          "event_name": "FMMAF - MMA League 9: Toulon - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-9-Toulon-Day-2-100997",
+          "date": "2024-01-14",
+          "result": "win",
+          "method": "Submission (Kneebar)",
+          "referee": "",
+          "round": 2,
+          "time": "0:42"
+        },
+        {
+          "opponent_name": "Tom Capmarty",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tom-Capmarty-417255",
+          "event_name": "FMMAF - MMA League 9: Toulon - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-9-Toulon-Day-1-100996",
+          "date": "2024-01-13",
+          "result": "win",
+          "method": "Submission (Ankle Lock)",
+          "referee": "",
+          "round": 1,
+          "time": "2:45"
+        },
+        {
+          "opponent_name": "Yazid Boughlima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yazid-Boughlima-461082",
+          "event_name": "FMMAF - MMA League 9: Toulon - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-9-Toulon-Day-1-100996",
+          "date": "2024-01-13",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:07"
+        },
+        {
+          "opponent_name": "Michael Tomboji",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michael-Tomboji-436501",
+          "event_name": "AEF 4 - AEF Championship 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEF-4-AEF-Championship-4-99219",
+          "date": "2023-10-14",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:33"
+        }
+      ]
+    },
+    {
+      "name": "Mathieu Abbe",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1772722357mathieuabbe.jpg",
+      "weight_class": "Middleweight",
+      "record": "0-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Mathieu-Abbe-481066",
+      "fight_history": [
+        {
+          "opponent_name": "Vincent Yerly",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vincent-Yerly-381095",
+          "event_name": "Ares 38 - Zebo vs. Mustafaev",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ares-38-Zebo-vs-Mustafaev-110571",
+          "date": "2026-01-30",
+          "result": "loss",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "1:11"
+        }
+      ]
     }
   ],
   "fights": [
@@ -76570,6 +76888,32 @@
       "event_name": "HXMMA 49 - Hexagone MMA 49",
       "fighter1_name": "Vaclav Zemla",
       "fighter2_name": "Louis Banhiet",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 49 - Hexagone MMA 49",
+      "fighter1_name": "Antero dos Santos",
+      "fighter2_name": "Georges Ngoma",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "HXMMA 49 - Hexagone MMA 49",
+      "fighter1_name": "Kalim Mastouri",
+      "fighter2_name": "Mathieu Abbe",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

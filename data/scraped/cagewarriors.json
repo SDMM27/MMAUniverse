@@ -1731,7 +1731,7 @@
       "date": "2026-11-07",
       "start_time": "2026-11-07T00:00:00+00:00",
       "event_location": "BBC Studioworks Television Centre, London, Greater London, England",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/900969"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/902685"
     },
     {
       "name": "CW 213 - Cage Warriors 213: London",
@@ -1745,7 +1745,7 @@
       "date": "2026-11-27",
       "start_time": "2026-11-27T00:00:00+00:00",
       "event_location": "BEC Arena, Manchester, Greater Manchester, England",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/900371"
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/902689"
     },
     {
       "name": "CW 215 - Cage Warriors 215: Manchester",
@@ -56086,6 +56086,354 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Angel Bellucci",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "2-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Angel-Bellucci-409037",
+      "fight_history": [
+        {
+          "opponent_name": "Gia Podiashvili",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gia-Podiashvili-354137",
+          "event_name": "AFL 38 - Cheste",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFL-38-Cheste-107088",
+          "date": "2025-04-12",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:00"
+        },
+        {
+          "opponent_name": "Albin Navas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Albin-Navas-419956",
+          "event_name": "Reto MMA VZLA 2 - Reto MMA Venezuela 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Reto-MMA-VZLA-2-Reto-MMA-Venezuela-2-105084",
+          "date": "2023-09-30",
+          "result": "loss",
+          "method": "Submission",
+          "referee": "Arturo Barrios",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Delio Lopez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Delio-Lopez-396728",
+          "event_name": "Spartan Fit Zone - Xpartana MMA 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/Spartan-Fit-Zone-Xpartana-MMA-4-94608",
+          "date": "2022-09-24",
+          "result": "draw",
+          "method": "Draw (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Luis Cabrera",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luis-Cabrera-396729",
+          "event_name": "Spartan Fit Zone - Xpartana MMA 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Spartan-Fit-Zone-Xpartana-MMA-3-93145",
+          "date": "2022-05-21",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Luis Espinoza",
+          "round": 2,
+          "time": "2:39"
+        }
+      ]
+    },
+    {
+      "name": "Shahram Hotak",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1741879800shahramhotak.jpg",
+      "weight_class": "Lightweight",
+      "record": "1-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Shahram-Hotak-399756",
+      "fight_history": [
+        {
+          "opponent_name": "Layton Kayne",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Layton-Kayne-356823",
+          "event_name": "KCC 11 - Kingdom Combat Championship 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/KCC-11-Kingdom-Combat-Championship-11-111771",
+          "date": "2026-02-21",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Charlie Balmer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Charlie-Balmer-307561",
+          "event_name": "FCC 42 - Full Contact Contender 42",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCC-42-Full-Contact-Contender-42-107967",
+          "date": "2025-06-07",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Paul Crossley",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ryan Campbell",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Campbell-234223",
+          "event_name": "CW 176 - Cage Warriors 176: Glasgow",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-176-Cage-Warriors-176-Glasgow-103332",
+          "date": "2024-09-07",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Daniel Movahedi",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ahmad Faiz Sharifi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ahmad-Faiz-Sharifi-399755",
+          "event_name": "OFFC - O. Sports Free Fight Championship: Selection Kabul 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFFC-O-Sports-Free-Fight-Championship-Selection-Kabul-1-91976",
+          "date": "2022-01-25",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "Farid Rohani",
+          "round": 1,
+          "time": "2:13"
+        }
+      ]
+    },
+    {
+      "name": "Ben Edwards",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ben-Edwards-435910",
+      "fight_history": [
+        {
+          "opponent_name": "Bruno Henrique Carvalho da Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bruno-Henrique-Carvalho-da-Silva-460234",
+          "event_name": "BCMMA - Cage Warriors Academy South East 42",
+          "event_sherdog_url": "https://www.sherdog.com/events/BCMMA-Cage-Warriors-Academy-South-East-42-113734",
+          "date": "2026-08-08",
+          "result": "win",
+          "method": "Submission (Triangle Armbar)",
+          "referee": "Daniel Movahedi",
+          "round": 1,
+          "time": "2:21"
+        }
+      ]
+    },
+    {
+      "name": "James Wamsley",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "0-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/James-Wamsley-392645",
+      "fight_history": [
+        {
+          "opponent_name": "Senan Coakley",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Senan-Coakley-414341",
+          "event_name": "Cage Conflict 17 - Carnival of Chaos",
+          "event_sherdog_url": "https://www.sherdog.com/events/Cage-Conflict-17-Carnival-of-Chaos-111900",
+          "date": "2026-03-07",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Will Fox",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Will-Fox-428828",
+      "fight_history": [
+        {
+          "opponent_name": "Ubaid Mirza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ubaid-Mirza-437875",
+          "event_name": "BFS 6 - Bloodline Fight Series 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFS-6-Bloodline-Fight-Series-6-106389",
+          "date": "2025-02-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 5,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Aaron Bolton",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aaron-Bolton-345875",
+          "event_name": "EMMAA - Qualifier 2024",
+          "event_sherdog_url": "https://www.sherdog.com/events/EMMAA-Qualifier-2024-103570",
+          "date": "2024-07-14",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Anar Mirzazada",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anar-Mirzazada-445542",
+          "event_name": "Victory Fights - Road to Victory 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/Victory-Fights-Road-to-Victory-4-102107",
+          "date": "2024-03-30",
+          "result": "win",
+          "method": "Decision",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Ibrahim Attia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibrahim-Attia-425779",
+          "event_name": "FSC 28 - FightStar Championship 28",
+          "event_sherdog_url": "https://www.sherdog.com/events/FSC-28-FightStar-Championship-28-100796",
+          "date": "2024-03-02",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Rich Mitchell",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Zohaib Mehmood",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zohaib-Mehmood-393415",
+          "event_name": "FSC 27 - FightStar Championship 27",
+          "event_sherdog_url": "https://www.sherdog.com/events/FSC-27-FightStar-Championship-27-99621",
+          "date": "2023-11-18",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Lloyd Williams",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lloyd-Williams-422072",
+          "event_name": "SnA 35 - Shock n Awe 35",
+          "event_sherdog_url": "https://www.sherdog.com/events/SnA-35-Shock-n-Awe-35-96905",
+          "date": "2023-10-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Derek Hickey",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Jordan Ambe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jordan-Ambe-412976",
+          "event_name": "FSC 25 - FightStar Championship 25",
+          "event_sherdog_url": "https://www.sherdog.com/events/FSC-25-FightStar-Championship-25-98356",
+          "date": "2023-08-05",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:36"
+        },
+        {
+          "opponent_name": "Jordan Davis-Haslar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jordan-DavisHaslar-423760",
+          "event_name": "Victory Fights - Road to Victory 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Victory-Fights-Road-to-Victory-3-96977",
+          "date": "2023-04-15",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Alex Ozga",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Ozga-428829",
+          "event_name": "FSC 23 - FightStar Championship 23",
+          "event_sherdog_url": "https://www.sherdog.com/events/FSC-23-FightStar-Championship-23-94959",
+          "date": "2023-03-11",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "1:24"
+        }
+      ]
+    },
+    {
+      "name": "Steffen Rossevatn",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1783001219steffenrossevatn.jpg",
+      "weight_class": "Welterweight",
+      "record": "4-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Steffen-Rossevatn-417493",
+      "fight_history": [
+        {
+          "opponent_name": "Lionel Kamooze",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lionel-Kamooze-440823",
+          "event_name": "Ares 42 - Zebo vs. Fialho",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ares-42-Zebo-vs-Fialho-112644",
+          "date": "2026-07-03",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Mourad Benseghir",
+          "round": 2,
+          "time": "2:29"
+        },
+        {
+          "opponent_name": "Allan Volosatohin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Allan-Volosatohin-486628",
+          "event_name": "MMA Raju - MMA Raju 19",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Raju-MMA-Raju-19-111502",
+          "date": "2026-04-11",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Ergo Reinvald",
+          "round": 2,
+          "time": "4:25"
+        },
+        {
+          "opponent_name": "Pawel Szkiladz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pawel-Szkiladz-269035",
+          "event_name": "Last Man Standing - Semifinals",
+          "event_sherdog_url": "https://www.sherdog.com/events/Last-Man-Standing-Semifinals-113321",
+          "date": "2026-02-01",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "4:15"
+        },
+        {
+          "opponent_name": "Yannis Sellin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yannis-Sellin-493258",
+          "event_name": "Last Man Standing - Quarter Final",
+          "event_sherdog_url": "https://www.sherdog.com/events/Last-Man-Standing-Quarter-Final-111361",
+          "date": "2025-12-21",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:41"
+        },
+        {
+          "opponent_name": "Abdullah Ali Amer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdullah-Ali-Amer-421644",
+          "event_name": "Dominance FC 4.0 - Dominance Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dominance-FC-40-Dominance-Fighting-Championship-109405",
+          "date": "2025-09-20",
+          "result": "loss",
+          "method": "Decision (Majority)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -95869,6 +96217,19 @@
     },
     {
       "event_name": "CW 212 - Cage Warriors 212: Spanish Showcase",
+      "fighter1_name": "Manuel del Valle",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 212 - Cage Warriors 212: Spanish Showcase",
       "fighter1_name": "Paddy Rutledge",
       "fighter2_name": "Omar Sargent",
       "fight_finished": false,
@@ -95877,7 +96238,20 @@
       "round": 0,
       "time": "",
       "weight_class": "Bantamweight",
-      "is_main_event": true,
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 212 - Cage Warriors 212: Spanish Showcase",
+      "fighter1_name": "Angel Bellucci",
+      "fighter2_name": "Shahram Hotak",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
       "is_title_fight": false
     },
     {
@@ -95905,6 +96279,19 @@
       "weight_class": "Featherweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "CW 213 - Cage Warriors 213: London",
+      "fighter1_name": "Ollie Sarwa",
+      "fighter2_name": "Kadeem Perkins",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "CW 213 - Cage Warriors 213: London",
@@ -95946,15 +96333,41 @@
       "is_title_fight": false
     },
     {
-      "event_name": "CW 214 - Cage Warriors 214: Unplugged",
-      "fighter1_name": "Chasen Blair",
-      "fighter2_name": "Nathan Jones",
+      "event_name": "CW 213 - Cage Warriors 213: London",
+      "fighter1_name": "Ben Edwards",
+      "fighter2_name": "James Wamsley",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 213 - Cage Warriors 213: London",
+      "fighter1_name": "Callum Haughian",
+      "fighter2_name": "Will Fox",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 214 - Cage Warriors 214: Unplugged",
+      "fighter1_name": "Alexander Loof",
+      "fighter2_name": "Oscar Ownsworth",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": true,
       "is_title_fight": false
     },
@@ -95968,6 +96381,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 214 - Cage Warriors 214: Unplugged",
+      "fighter1_name": "Jordan O'Neill",
+      "fighter2_name": "Christopher Bajo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 214 - Cage Warriors 214: Unplugged",
+      "fighter1_name": "Chasen Blair",
+      "fighter2_name": "Nathan Jones",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -96000,13 +96439,13 @@
     {
       "event_name": "CW 215 - Cage Warriors 215: Manchester",
       "fighter1_name": "Shay Ingram",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Steffen Rossevatn",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -96026,7 +96465,7 @@
     {
       "event_name": "CW 215 - Cage Warriors 215: Manchester",
       "fighter1_name": "Nathan Fletcher",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Anderson Souza Soares",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -96066,6 +96505,19 @@
       "event_name": "CW 215 - Cage Warriors 215: Manchester",
       "fighter1_name": "Joe Fields",
       "fighter2_name": "Samir Faiddine",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 215 - Cage Warriors 215: Manchester",
+      "fighter1_name": "Sheldon Ryan",
+      "fighter2_name": "Gary Rooney",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -96168,6 +96620,19 @@
     },
     {
       "event_name": "CW 216 - Cage Warriors 216: Newcastle",
+      "fighter1_name": "Milad Ahady",
+      "fighter2_name": "Alexander O'Sullivan",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 216 - Cage Warriors 216: Newcastle",
       "fighter1_name": "Michael Blair",
       "fighter2_name": "Thomas Paull",
       "fight_finished": false,
@@ -96241,19 +96706,6 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "CW 216 - Cage Warriors 216: Newcastle",
-      "fighter1_name": "Milad Ahady",
-      "fighter2_name": "Unknown Fighter",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },

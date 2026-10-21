@@ -1490,6 +1490,13 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896910"
     },
     {
+      "name": "LFA 246 - Alves vs. Vinuto",
+      "date": "2026-11-13",
+      "start_time": "2026-11-13T00:00:00+00:00",
+      "event_location": "Ginasio do Polvilho, Cajamar, Sao Paulo, Brazil",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/902704"
+    },
+    {
       "name": "LFA 247 - Breno vs Torres",
       "date": "2026-11-20",
       "start_time": "2026-11-20T00:00:00+00:00",
@@ -410590,6 +410597,248 @@
           "time": "N/A"
         }
       ]
+    },
+    {
+      "name": "Marllon Santos",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1769042381Marllon_Santos.jpg",
+      "weight_class": "Heavyweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Marllon-Santos-488405",
+      "fight_history": [
+        {
+          "opponent_name": "Rogerio Alves de Souza Jr.",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rogerio-Alves-de-Souza-Jr-292697",
+          "event_name": "R1 Fighting Series 7 - Santos vs. Alves",
+          "event_sherdog_url": "https://www.sherdog.com/events/R1-Fighting-Series-7-Santos-vs-Alves-113877",
+          "date": "2026-07-29",
+          "result": "win",
+          "method": "KO (Elbow)",
+          "referee": "Fernando Portella",
+          "round": 2,
+          "time": "0:46"
+        },
+        {
+          "opponent_name": "Fabio Lima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fabio-Lima-493455",
+          "event_name": "R1 Fighting Series 6 - Moreira vs. Solano",
+          "event_sherdog_url": "https://www.sherdog.com/events/R1-Fighting-Series-6-Moreira-vs-Solano-111178",
+          "date": "2026-01-21",
+          "result": "win",
+          "method": "KO (Spinning Back Elbow)",
+          "referee": "Joseph Terrell",
+          "round": 3,
+          "time": "4:24"
+        }
+      ]
+    },
+    {
+      "name": "Bruno de Jesus",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1746241828brunosabugo.jpeg",
+      "weight_class": "Light Heavyweight",
+      "record": "3-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Bruno-de-Jesus-320521",
+      "fight_history": [
+        {
+          "opponent_name": "Gabriel Lourenco",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriel-Lourenco-398156",
+          "event_name": "CFP 12 - Curitiba Fight Pro 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFP-12-Curitiba-Fight-Pro-12-110108",
+          "date": "2025-11-15",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Jose Luiz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jose-Luiz-398299",
+          "event_name": "CFP 11 - Curitiba Fight Pro 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFP-11-Curitiba-Fight-Pro-11-109231",
+          "date": "2025-08-30",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:29"
+        },
+        {
+          "opponent_name": "Murilo Santiago Ribeiro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Murilo-Santiago-Ribeiro-242869",
+          "event_name": "Shooto Brazil 129 - Sara vs. Sabrina",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Brazil-129-Sara-vs-Sabrina-107684",
+          "date": "2025-05-02",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Igor Falcao",
+          "round": 2,
+          "time": "0:36"
+        },
+        {
+          "opponent_name": "Djalma Morais",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Djalma-Morais-448775",
+          "event_name": "MCF 2 - Mirmidoes Champions Fight",
+          "event_sherdog_url": "https://www.sherdog.com/events/MCF-2-Mirmidoes-Champions-Fight-107616",
+          "date": "2025-04-05",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 2,
+          "time": "2:40"
+        },
+        {
+          "opponent_name": "Roberto Rodrigues Pires",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Roberto-Rodrigues-Pires-320523",
+          "event_name": "WKC MMA - World Kombat Challenge 58/ Puro Impacto Fight 20",
+          "event_sherdog_url": "https://www.sherdog.com/events/WKC-MMA-World-Kombat-Challenge-58-Puro-Impacto-Fight-20-75129",
+          "date": "2018-10-20",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Genival Ivo",
+          "round": 1,
+          "time": "1:45"
+        }
+      ]
+    },
+    {
+      "name": "Pedro Henrique Costa",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1781742493pedrohenriquecosta.jpg",
+      "weight_class": "Lightweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Pedro-Henrique-Costa-440272",
+      "fight_history": [
+        {
+          "opponent_name": "Alison Mateus Rodrigues",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alison-Mateus-Rodrigues-429656",
+          "event_name": "SFT 62 - Malvada vs. Mascena",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFT-62-Malvada-vs-Mascena-112969",
+          "date": "2026-06-27",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Cassiano Lopreto",
+          "round": 2,
+          "time": "3:30"
+        }
+      ]
+    },
+    {
+      "name": "Pedro Henrique Prado",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "1-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Pedro-Henrique-Prado-489465",
+      "fight_history": [
+        {
+          "opponent_name": "Nirieldo Ferreira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nirieldo-Ferreira-466751",
+          "event_name": "K2MMA Pancada Fight - K2MMA Fight Night 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/K2MMA-Pancada-Fight-K2MMA-Fight-Night-9-113180",
+          "date": "2026-05-30",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Nils Goitom",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nils-Goitom-397613",
+          "event_name": "KCC 11 - Kingdom Combat Championship 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/KCC-11-Kingdom-Combat-Championship-11-111771",
+          "date": "2026-02-21",
+          "result": "loss",
+          "method": "TKO (Punch)",
+          "referee": "",
+          "round": 2,
+          "time": "0:14"
+        }
+      ]
+    },
+    {
+      "name": "Isabella Araujo",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1761650668DSC_3743_-_Copia.JPG",
+      "weight_class": "Strawweight",
+      "record": "4-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Isabella-Araujo-410468",
+      "fight_history": [
+        {
+          "opponent_name": "Bianca Sattelmayer",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bianca-Sattelmayer-147995",
+          "event_name": "Jungle Fight 150 - Fight of the Million: Women's Strawweight Grand Prix Quarterfinals",
+          "event_sherdog_url": "https://www.sherdog.com/events/Jungle-Fight-150-Fight-of-the-Million-Womens-Strawweight-Grand-Prix-Quarterfinals-111661",
+          "date": "2026-05-23",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Flavio Almendra",
+          "round": 1,
+          "time": "4:18"
+        },
+        {
+          "opponent_name": "Julia Pareja",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Julia-Pareja-404778",
+          "event_name": "Shooto Brazil 133 - Pareja vs. Araujo",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Brazil-133-Pareja-vs-Araujo-109288",
+          "date": "2025-10-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Joao Claudio Soares",
+          "round": 1,
+          "time": "4:30"
+        },
+        {
+          "opponent_name": "Ana Claudia Narciso Matos de Oliveira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ana-Claudia-Narciso-Matos-de-Oliveira-475444",
+          "event_name": "Shooto Brazil 129 - Sara vs. Sabrina",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Brazil-129-Sara-vs-Sabrina-107684",
+          "date": "2025-05-02",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Osiris Maia",
+          "round": 2,
+          "time": "1:53"
+        },
+        {
+          "opponent_name": "Graziela Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Graziela-Silva-437542",
+          "event_name": "Shooto Brazil 126 - Almeida vs. Oliveira",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Brazil-126-Almeida-vs-Oliveira-101176",
+          "date": "2024-11-01",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Osiris Maia",
+          "round": 2,
+          "time": "2:00"
+        },
+        {
+          "opponent_name": "Vitoria  da Silva Mariano",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vitoria-da-Silva-Mariano-448512",
+          "event_name": "Shooto Brazil 122 - Fagundes vs. Magon",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Brazil-122-Fagundes-vs-Magon-101172",
+          "date": "2024-05-02",
+          "result": "win",
+          "method": "TKO (Punches and Elbows)",
+          "referee": "Joberto Guimaraes",
+          "round": 2,
+          "time": "2:35"
+        },
+        {
+          "opponent_name": "Adriele Castro",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adriele-Castro-381616",
+          "event_name": "FK MMA - Favela Kombat 38",
+          "event_sherdog_url": "https://www.sherdog.com/events/FK-MMA-Favela-Kombat-38-93855",
+          "date": "2022-07-23",
+          "result": "loss",
+          "method": "TKO",
+          "referee": "Kakau Martins",
+          "round": 3,
+          "time": "2:03"
+        }
+      ]
     }
   ],
   "fights": [
@@ -440082,6 +440331,45 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 246 - Alves vs. Vinuto",
+      "fighter1_name": "Marllon Santos",
+      "fighter2_name": "Bruno de Jesus",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 246 - Alves vs. Vinuto",
+      "fighter1_name": "Pedro Henrique Costa",
+      "fighter2_name": "Pedro Henrique Prado",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 246 - Alves vs. Vinuto",
+      "fighter1_name": "Laryssa Leila",
+      "fighter2_name": "Isabella Araujo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
       "is_main_event": false,
       "is_title_fight": false
     },
