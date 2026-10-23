@@ -407398,8 +407398,8 @@
           "time": "4:43"
         },
         {
-          "opponent_name": "Will Gibson",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Will-Gibson-383301",
+          "opponent_name": "William Gibson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/William-Gibson-383301",
           "event_name": "Caged Aggression 39 - The Triad: Rising Warriors",
           "event_sherdog_url": "https://www.sherdog.com/events/Caged-Aggression-39-The-Triad-Rising-Warriors-106213",
           "date": "2025-03-21",
@@ -407558,56 +407558,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Xavier-Zeruth-479019",
-      "fight_history": [
-        {
-          "opponent_name": "Antonio Viscomi",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Antonio-Viscomi-449125",
-          "event_name": "Full Contact Promotions - Rage in the Cage 33",
-          "event_sherdog_url": "https://www.sherdog.com/events/Full-Contact-Promotions-Rage-in-the-Cage-33-111237",
-          "date": "2026-03-21",
-          "result": "win",
-          "method": "Submission (Armbar)",
-          "referee": "Josh Amato",
-          "round": 1,
-          "time": "2:46"
-        },
-        {
-          "opponent_name": "Kenny Correa",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kenny-Correa-416773",
-          "event_name": "Full Contact Promotions - Rage in the Cage 32",
-          "event_sherdog_url": "https://www.sherdog.com/events/Full-Contact-Promotions-Rage-in-the-Cage-32-110731",
-          "date": "2025-12-13",
-          "result": "loss",
-          "method": "TKO (Punches)",
-          "referee": "Todd Anderson",
-          "round": 2,
-          "time": "2:27"
-        },
-        {
-          "opponent_name": "Martin McCooligan",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Martin-McCooligan-411120",
-          "event_name": "Full Contact Promotions - Rage in the Cage 31",
-          "event_sherdog_url": "https://www.sherdog.com/events/Full-Contact-Promotions-Rage-in-the-Cage-31-109849",
-          "date": "2025-10-11",
-          "result": "win",
-          "method": "TKO (Punches)",
-          "referee": "Todd Anderson",
-          "round": 1,
-          "time": "2:56"
-        },
-        {
-          "opponent_name": "Chandler Moody",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chandler-Moody-444444",
-          "event_name": "Full Contact Promotions - Rage in the Cage 29",
-          "event_sherdog_url": "https://www.sherdog.com/events/Full-Contact-Promotions-Rage-in-the-Cage-29-107973",
-          "date": "2025-05-31",
-          "result": "win",
-          "method": "TKO (Injury)",
-          "referee": "Todd Anderson",
-          "round": 3,
-          "time": "0:32"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Luis Melendez",
