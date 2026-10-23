@@ -8063,6 +8063,196 @@
           "time": "2:19"
         }
       ]
+    },
+    {
+      "name": "Magomed Magomedov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1713028199Ex5kvxnW8Asg9aW.jpeg",
+      "weight_class": "Welterweight",
+      "record": "15-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Magomed-Magomedov-375316",
+      "fight_history": [
+        {
+          "opponent_name": "Magno Silva de Sousa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Magno-Silva-de-Sousa-39373",
+          "event_name": "Octagon Promotion - Octagon 74: Atokhonov vs. Baymen",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-74-Atokhonov-vs-Baymen-108591",
+          "date": "2025-06-21",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Khalil Mamiev",
+          "round": 1,
+          "time": "3:52"
+        },
+        {
+          "opponent_name": "Manoel Moreira dos Santos Jr.",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Manoel-Moreira-dos-Santos-Jr-131503",
+          "event_name": "Octagon Promotion - Octagon 59: Khudoyberdiev vs. Magomedov",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-59-Khudoyberdiev-vs-Magomedov-103066",
+          "date": "2024-06-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Khalil Mamiev",
+          "round": 2,
+          "time": "3:48"
+        },
+        {
+          "opponent_name": "Rafael Sobral",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafael-Sobral-17796",
+          "event_name": "Octagon Promotion - Octagon 50: Totrov vs. Kichigin",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-50-Totrov-vs-Kichigin-99003",
+          "date": "2023-09-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 1,
+          "time": "1:58"
+        },
+        {
+          "opponent_name": "Adil Boranbayev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adil-Boranbayev-124309",
+          "event_name": "Octagon Promotion - Octagon 44: Magomedov vs. Boranbaev",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-44-Magomedov-vs-Boranbaev-97210",
+          "date": "2023-04-29",
+          "result": "win",
+          "method": "TKO (Corner Stoppage)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 3,
+          "time": "4:40"
+        },
+        {
+          "opponent_name": "Sanzhar Azhibaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sanzhar-Azhibaev-231387",
+          "event_name": "Octagon Promotion - Octagon 39: Maksum vs. Nunes",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-39-Maksum-vs-Nunes-96259",
+          "date": "2023-01-21",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 2,
+          "time": "2:16"
+        },
+        {
+          "opponent_name": "Baurzhan Kuanyshbayev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Baurzhan-Kuanyshbayev-186141",
+          "event_name": "Octagon Promotion - Octagon 35 x Brave CF 62",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-35-x-Brave-CF-62-94787",
+          "date": "2022-09-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Reza Ghorbankhani",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Reza-Ghorbankhani-382071",
+          "event_name": "TFC 2 - Thunder Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/TFC-2-Thunder-Fighting-Championship-93682",
+          "date": "2022-05-09",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Oleg Milyakov",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mahir Mamedov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahir-Mamedov-141615",
+          "event_name": "Octagon Promotion - Octagon 28",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-28-91727",
+          "date": "2022-03-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Orkhan Valiyev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Orkhan-Valiyev-315513",
+          "event_name": "Octagon Promotion - Octagon 26",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-26-91333",
+          "date": "2021-12-11",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 1,
+          "time": "2:54"
+        },
+        {
+          "opponent_name": "Mahir Mamedov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahir-Mamedov-141615",
+          "event_name": "UAE Warriors - UAE Warriors 24",
+          "event_sherdog_url": "https://www.sherdog.com/events/UAE-Warriors-UAE-Warriors-24-90771",
+          "date": "2021-10-29",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yann Liasse",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yann-Liasse-227899",
+          "event_name": "Brave CF 50 - Brave Combat Federation 50",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-50-Brave-Combat-Federation-50-88744",
+          "date": "2021-04-01",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Rebin Saber",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Valeriy Skarbovsky",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valeriy-Skarbovsky-248067",
+          "event_name": "BFC 65 - Belarusian Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFC-65-Belarusian-Fighting-Championship-88256",
+          "date": "2020-12-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "2:51"
+        },
+        {
+          "opponent_name": "Evgeniy Vorona",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Evgeniy-Vorona-370451",
+          "event_name": "BFC 64 - Belarusian Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFC-64-Belarusian-Fighting-Championship-87964",
+          "date": "2020-11-12",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:08"
+        },
+        {
+          "opponent_name": "Valery Dashkevich",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Valery-Dashkevich-274339",
+          "event_name": "BFC 63 - Belarusian Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFC-63-Belarusian-Fighting-Championship-87812",
+          "date": "2020-10-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Artem Buloychik",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Artem-Buloychik-375315",
+          "event_name": "BFC 61 - Belarusian Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFC-61-Belarusian-Fighting-Championship-87526",
+          "date": "2020-09-17",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:13"
+        }
+      ]
     }
   ],
   "fights": [
@@ -8355,7 +8545,7 @@
     {
       "event_name": "One Championship - One on Prime Video 49",
       "fighter1_name": "Lucas Gabriel",
-      "fighter2_name": "Alibeg Rasulov",
+      "fighter2_name": "Magomed Magomedov",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

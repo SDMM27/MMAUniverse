@@ -645378,6 +645378,76 @@
           "time": "2:40"
         }
       ]
+    },
+    {
+      "name": "Ronald Humphrey",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1767666310ronaldhumphrey.jpg",
+      "weight_class": "Welterweight",
+      "record": "5-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ronald-Humphrey-400469",
+      "fight_history": [
+        {
+          "opponent_name": "Alexis Miranda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexis-Miranda-288689",
+          "event_name": "Dana White's Contender Series - Contender Series 2026: Week 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2026-Week-3-112628",
+          "date": "2026-08-25",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Gary Copeland",
+          "round": 1,
+          "time": "4:03"
+        },
+        {
+          "opponent_name": "Liam Hamill",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Liam-Hamill-388814",
+          "event_name": "CFFC 151 - Cage Fury Fighting Championships 151: Gonzales vs. Resende",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-151-Cage-Fury-Fighting-Championships-151-Gonzales-vs-Resende-111557",
+          "date": "2026-03-13",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "David Baggett",
+          "round": 1,
+          "time": "1:52"
+        },
+        {
+          "opponent_name": "Dupree Stewart",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dupree-Stewart-390770",
+          "event_name": "LFA 219 - Thomson vs. Islomboev",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-219-Thomson-vs-Islomboev-109605",
+          "date": "2025-10-10",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Luke Wilson",
+          "round": 1,
+          "time": "3:11"
+        },
+        {
+          "opponent_name": "Paul Kimble",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paul-Kimble-289411",
+          "event_name": "AMF - Attitude MMA Fights 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/AMF-Attitude-MMA-Fights-33-106104",
+          "date": "2025-02-15",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Eric McMahon",
+          "round": 2,
+          "time": "2:28"
+        },
+        {
+          "opponent_name": "Ralston Thomas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ralston-Thomas-400715",
+          "event_name": "Carolina Gloves Promotions - Carolina Conflict 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Carolina-Gloves-Promotions-Carolina-Conflict-1-104970",
+          "date": "2024-10-19",
+          "result": "win",
+          "method": "TKO (Strikes)",
+          "referee": "",
+          "round": 1,
+          "time": "1:31"
+        }
+      ]
     }
   ],
   "fights": [
@@ -746801,6 +746871,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC 335 - Oliveira vs. Lopes",
+      "fighter1_name": "Ronald Humphrey",
+      "fighter2_name": "Nikolay Veretennikov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     }

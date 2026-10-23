@@ -321,7 +321,7 @@
       "date": "2027-01-15",
       "start_time": "2027-01-15T00:00:00+00:00",
       "event_location": "Marseille Sports Palace, Marseille, France",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/902771"
     }
   ],
   "fighters": [
@@ -4544,6 +4544,132 @@
           "referee": "",
           "round": 3,
           "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Nimo Djagbo",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Nimo-Djagbo-425229",
+      "fight_history": [
+        {
+          "opponent_name": "Kevin Czernik",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kevin-Czernik-508638",
+          "event_name": "One Punch Night - OPN 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Punch-Night-OPN-2-114362",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "KO (Head Kick)",
+          "referee": "Muslum Arslan",
+          "round": 3,
+          "time": "2:40"
+        }
+      ]
+    },
+    {
+      "name": "Marvin Caperan",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Marvin-Caperan-425239",
+      "fight_history": [
+        {
+          "opponent_name": "Arnaud Muller",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arnaud-Muller-408412",
+          "event_name": "One Punch Night - OPN 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Punch-Night-OPN-2-114362",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "TKO (Body Kick and Punches)",
+          "referee": "Muslum Arslan",
+          "round": 1,
+          "time": "1:29"
+        }
+      ]
+    },
+    {
+      "name": "Kinga Jendrasik",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1715997572Snapinsta.app_426526406_18413276758042747_433798254741448210_n_1080.jpg",
+      "weight_class": "Strawweight",
+      "record": "3-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Kinga-Jendrasik-214669",
+      "fight_history": [
+        {
+          "opponent_name": "Suchika Tariyal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Suchika-Tariyal-246257",
+          "event_name": "Brave CF 104 - Brave Combat Federation 104",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-104-Brave-Combat-Federation-104-110982",
+          "date": "2026-02-14",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Declan Larkin",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Songul Karatorak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Songul-Karatorak-384908",
+          "event_name": "Brave CF 90 - Brave Combat Federation 90",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-90-Brave-Combat-Federation-90-104413",
+          "date": "2024-11-23",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Aaron Wallace",
+          "round": 1,
+          "time": "3:13"
+        },
+        {
+          "opponent_name": "Paulina Wisniewska",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paulina-Wisniewska-320361",
+          "event_name": "Strife Tube 3 - Lopaczyk vs. Barbosa",
+          "event_sherdog_url": "https://www.sherdog.com/events/Strife-Tube-3-Lopaczyk-vs-Barbosa-101066",
+          "date": "2024-02-16",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Tomasz Bronder",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Franziska Chwalicz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Franziska-Chwalicz-365629",
+          "event_name": "EMC 8 - Elite MMA Championship 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/EMC-8-Elite-MMA-Championship-8-91196",
+          "date": "2021-12-04",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "Philipp Neumann",
+          "round": 2,
+          "time": "1:17"
+        },
+        {
+          "opponent_name": "Elena Belaya",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elena-Belaya-224093",
+          "event_name": "Wirtuoz Challenge - Special Edition",
+          "event_sherdog_url": "https://www.sherdog.com/events/Wirtuoz-Challenge-Special-Edition-80101",
+          "date": "2019-09-13",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "1:13"
+        },
+        {
+          "opponent_name": "Ewelina Wozniak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ewelina-Wozniak-211023",
+          "event_name": "LFN 9 - Tic Tac Toe",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFN-9-Tic-Tac-Toe-67445",
+          "date": "2018-05-12",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Piotr Michalak",
+          "round": 3,
+          "time": "2:13"
         }
       ]
     }
@@ -9852,6 +9978,45 @@
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "fighter1_name": "Nimo Djagbo",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "fighter1_name": "Marvin Caperan",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 46 - TBD vs. TBD",
+      "fighter1_name": "Jade Jorand",
+      "fighter2_name": "Kinga Jendrasik",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }

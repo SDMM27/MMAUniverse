@@ -1728,6 +1728,13 @@
       "start_time": "2026-12-05T00:00:00+00:00",
       "event_location": "Bishkek, Kyrgyzstan",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/898337"
+    },
+    {
+      "name": "ACA 211 - Kondratyev vs. Akopyan 2",
+      "date": "2026-12-25",
+      "start_time": "2026-12-25T00:00:00+00:00",
+      "event_location": "St. Petersburg, Russia",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/902772"
     }
   ],
   "fighters": [
@@ -429304,6 +429311,19 @@
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 211 - Kondratyev vs. Akopyan 2",
+      "fighter1_name": "Anatoliy Kondratyev",
+      "fighter2_name": "Aren Akopyan",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }
