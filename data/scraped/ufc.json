@@ -26804,10 +26804,22 @@
       "name": "Noah Gugnon",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1732720496IMG_8493.jpeg",
       "weight_class": "Lightweight",
-      "record": "10-2-0",
+      "record": "10-3-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Noah-Gugnon-236171",
       "fight_history": [
+        {
+          "opponent_name": "Kody Steele",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kody-Steele-392962",
+          "event_name": "UFC 333 - Volkanovski vs. Evloev",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-333-Volkanovski-vs-Evloev-113863",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Sam Amidi",
+          "round": 1,
+          "time": "3:54"
+        },
         {
           "opponent_name": "Milos Janicic",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Milos-Janicic-221619",
@@ -91917,6 +91929,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Nicolle-Caliari-202195",
       "fight_history": [
         {
+          "opponent_name": "Iasmin Lucindo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Iasmin-Lucindo-264861",
+          "event_name": "UFC 333 - Volkanovski vs. Evloev",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-333-Volkanovski-vs-Evloev-113863",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Lukasz Bosacki",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
           "opponent_name": "Shauna Bannon",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shauna-Bannon-315165",
           "event_name": "UFC Fight Night 276 - Allen vs. Costa",
@@ -102740,10 +102764,22 @@
       "name": "Kody Steele",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1723149250Kody_Steele.jpg",
       "weight_class": "Lightweight",
-      "record": "8-1-0",
+      "record": "9-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kody-Steele-392962",
       "fight_history": [
+        {
+          "opponent_name": "Noah Gugnon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Noah-Gugnon-236171",
+          "event_name": "UFC 333 - Volkanovski vs. Evloev",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-333-Volkanovski-vs-Evloev-113863",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Sam Amidi",
+          "round": 1,
+          "time": "3:54"
+        },
         {
           "opponent_name": "Dom Mar Fan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dom-Mar-Fan-305329",
@@ -178322,10 +178358,22 @@
       "name": "Iasmin Lucindo",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230714054003_Iasmin_Lucindo_ff.JPG",
       "weight_class": "Strawweight",
-      "record": "18-6-0",
+      "record": "19-6-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Iasmin-Lucindo-264861",
       "fight_history": [
+        {
+          "opponent_name": "Nicolle Caliari",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolle-Caliari-202195",
+          "event_name": "UFC 333 - Volkanovski vs. Evloev",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-333-Volkanovski-vs-Evloev-113863",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Lukasz Bosacki",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Angela Hill",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Angela-Hill-148517",
@@ -746139,7 +746187,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": true,
       "is_title_fight": true
@@ -746152,7 +746200,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": true
@@ -746165,7 +746213,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746178,7 +746226,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746191,7 +746239,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746204,7 +746252,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746217,7 +746265,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746230,7 +746278,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746243,7 +746291,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746256,7 +746304,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746269,7 +746317,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746282,7 +746330,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746295,7 +746343,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -746304,11 +746352,11 @@
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
       "fighter1_name": "Iasmin Lucindo",
       "fighter2_name": "Nicolle Caliari",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Iasmin Lucindo",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "121lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
