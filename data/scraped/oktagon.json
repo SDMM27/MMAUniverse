@@ -882,6 +882,13 @@
       "start_time": "2026-12-29T00:00:00+00:00",
       "event_location": "O2 Arena, Prague, Czech Republic",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/899386"
+    },
+    {
+      "name": "Oktagon MMA - Oktagon 101",
+      "date": "2027-01-16",
+      "start_time": "2027-01-16T00:00:00+00:00",
+      "event_location": "Hanns-Martin-Schleyer-Halle, Stuttgart, Germany",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/902859"
     }
   ],
   "fighters": [
@@ -22625,6 +22632,19 @@
       "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 101",
+      "fighter1_name": "Alina Dalaslan",
+      "fighter2_name": "Niamh Kinehan",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }
