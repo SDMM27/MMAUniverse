@@ -10185,6 +10185,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ousmane-Camara-443083",
       "fight_history": [
         {
+          "opponent_name": "Shekina Bilolo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shekina-Bilolo-453327",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "TKO (Head Kick and Punches)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "0:58"
+        },
+        {
           "opponent_name": "Karim Adem",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Karim-Adem-461101",
           "event_name": "Tek Fight - MMA",
@@ -23827,6 +23839,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Shekina-Bilolo-453327",
       "fight_history": [
+        {
+          "opponent_name": "Ousmane Camara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ousmane-Camara-443083",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "TKO (Head Kick and Punches)",
+          "referee": "Loic Pora",
+          "round": 1,
+          "time": "0:58"
+        },
         {
           "opponent_name": "Gontrand Colinet",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gontrand-Colinet-439310",
@@ -69755,6 +69779,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Jean-Ntounta-465725",
       "fight_history": [
         {
+          "opponent_name": "Bertfried Mevaa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bertfried-Mevaa-467296",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Patricio Carlos",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
           "opponent_name": "Scott Pozzo",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Scott-Pozzo-460865",
           "event_name": "FMMAF - MMA League 23: Saint-Cyr-sur-Loire - Day 2",
@@ -69896,6 +69932,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Bertfried-Mevaa-467296",
       "fight_history": [
+        {
+          "opponent_name": "Jean Ntounta",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jean-Ntounta-465725",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Patricio Carlos",
+          "round": 3,
+          "time": "3:00"
+        },
         {
           "opponent_name": "Corentin Latreche",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Corentin-Latreche-461093",
@@ -76263,7 +76311,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": true,
       "is_title_fight": true
@@ -76276,7 +76324,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76289,7 +76337,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76302,7 +76350,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76315,7 +76363,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76328,7 +76376,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76341,7 +76389,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76354,7 +76402,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "150lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76367,7 +76415,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76376,11 +76424,11 @@
       "event_name": "HXMMA 48 - Hexagone MMA 48",
       "fighter1_name": "Ousmane Camara",
       "fighter2_name": "Shekina Bilolo",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Ousmane Camara",
+      "method": "TKO (Head Kick and Punches)",
+      "round": 1,
+      "time": "0:58",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76389,11 +76437,11 @@
       "event_name": "HXMMA 48 - Hexagone MMA 48",
       "fighter1_name": "Jean Ntounta",
       "fighter2_name": "Bertfried Mevaa",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Jean Ntounta",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "3:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
