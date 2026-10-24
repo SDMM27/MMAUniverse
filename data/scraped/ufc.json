@@ -5021,6 +5021,13 @@
       "start_time": "2026-12-12T00:00:00+00:00",
       "event_location": "T-Mobile Arena, Las Vegas, Nevada, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/900515"
+    },
+    {
+      "name": "UFC 336 - Prates vs. Morales",
+      "date": "2027-01-30",
+      "start_time": "2027-01-30T00:00:00+00:00",
+      "event_location": "Scotiabank Arena, Toronto, Ontario, Canada.",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/902972"
     }
   ],
   "fighters": [
@@ -11276,10 +11283,22 @@
       "name": "Alexander Volkanovski",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325081549_Alexander_Volkanovski_ff.JPG",
       "weight_class": "Featherweight",
-      "record": "28-4-0",
+      "record": "29-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alexander-Volkanovski-101527",
       "fight_history": [
+        {
+          "opponent_name": "Movsar Evloev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Movsar-Evloev-183539",
+          "event_name": "UFC 333 - Volkanovski vs. Evloev",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-333-Volkanovski-vs-Evloev-113863",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Marc Goddard",
+          "round": 2,
+          "time": "4:54"
+        },
         {
           "opponent_name": "Diego Lopes",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Diego-Lopes-112531",
@@ -11670,10 +11689,22 @@
       "name": "Movsar Evloev",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220401041327_Movsar_Evloev_ff.JPG",
       "weight_class": "Featherweight",
-      "record": "20-0-0",
+      "record": "20-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Movsar-Evloev-183539",
       "fight_history": [
+        {
+          "opponent_name": "Alexander Volkanovski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Volkanovski-101527",
+          "event_name": "UFC 333 - Volkanovski vs. Evloev",
+          "event_sherdog_url": "https://www.sherdog.com/events/UFC-333-Volkanovski-vs-Evloev-113863",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Marc Goddard",
+          "round": 2,
+          "time": "4:54"
+        },
         {
           "opponent_name": "Lerone Murphy",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lerone-Murphy-209721",
@@ -746447,11 +746478,11 @@
       "event_name": "UFC 333 - Volkanovski vs. Evloev",
       "fighter1_name": "Alexander Volkanovski",
       "fighter2_name": "Movsar Evloev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Alexander Volkanovski",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "4:54",
       "weight_class": "Featherweight",
       "is_main_event": true,
       "is_title_fight": true
@@ -747508,6 +747539,32 @@
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "UFC 336 - Prates vs. Morales",
+      "fighter1_name": "Carlos Prates",
+      "fighter2_name": "Michael Morales",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "UFC 336 - Prates vs. Morales",
+      "fighter1_name": "Joshua Van",
+      "fighter2_name": "Manel Kape",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": true
     }
   ]
 }
