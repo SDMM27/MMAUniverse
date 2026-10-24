@@ -1476,13 +1476,6 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/896776"
     },
     {
-      "name": "LFA 244 - Woodley vs. Havener",
-      "date": "2026-10-23",
-      "start_time": "2026-10-23T00:00:00+00:00",
-      "event_location": "Foxwoods Resort Casino, Mashantucket, Connecticut, United States",
-      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896411"
-    },
-    {
       "name": "LFA 245 - Khamzaev vs. Prescendo",
       "date": "2026-10-30",
       "start_time": "2026-10-30T00:00:00+00:00",
@@ -1502,6 +1495,13 @@
       "start_time": "2026-11-20T00:00:00+00:00",
       "event_location": "Arizona Financial Theatre, Phoenix, Arizona, United States",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/901095"
+    },
+    {
+      "name": "LFA 244 - Woodley vs. Havener",
+      "date": "2026-10-23",
+      "start_time": "2026-10-23T00:00:00+00:00",
+      "event_location": "Foxwoods Resort Casino, Mashantucket, Connecticut, United States",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/896411"
     }
   ],
   "fighters": [
@@ -20275,10 +20275,22 @@
       "name": "Yve Nelson",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1786587796Yve_Nelson.jpg",
       "weight_class": "Flyweight",
-      "record": "3-2-0",
+      "record": "3-3-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Yve-Nelson-369932",
       "fight_history": [
+        {
+          "opponent_name": "Joziah Fry",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joziah-Fry-478035",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Bryan Miner",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Jared Braun",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jared-Braun-319813",
@@ -29710,10 +29722,22 @@
       "name": "Elton Dedaj",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1750516299eltondedaj.jpg",
       "weight_class": "Welterweight",
-      "record": "2-1-0",
+      "record": "2-2-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Elton-Dedaj-432080",
       "fight_history": [
+        {
+          "opponent_name": "Luis Melendez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luis-Melendez-393681",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Keith Peterson",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Melvin Jovel",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Melvin-Jovel-419896",
@@ -29882,10 +29906,22 @@
       "name": "Austin Ross",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230324031055_Austin_Ross.JPG",
       "weight_class": "Middleweight",
-      "record": "2-2-0",
+      "record": "3-2-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Austin-Ross-394600",
       "fight_history": [
+        {
+          "opponent_name": "Matheus Moraes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matheus-Moraes-353735",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "win",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Keith Peterson",
+          "round": 1,
+          "time": "3:37"
+        },
         {
           "opponent_name": "Trevor Linderman",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Trevor-Linderman-447683",
@@ -247793,10 +247829,22 @@
       "name": "Peter Keepers",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1599181109Peter_Keepers.png",
       "weight_class": "Welterweight",
-      "record": "4-6-0",
+      "record": "4-7-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Peter-Keepers-277415",
       "fight_history": [
+        {
+          "opponent_name": "Guram Gochashvili",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Guram-Gochashvili-315853",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Keith Peterson",
+          "round": 1,
+          "time": "4:47"
+        },
         {
           "opponent_name": "Slate Passmore",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Slate-Passmore-387656",
@@ -407521,10 +407569,22 @@
       "name": "Austin Halik",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Lightweight",
-      "record": "2-0-0",
+      "record": "3-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Austin-Halik-389771",
       "fight_history": [
+        {
+          "opponent_name": "Xavier Zeruth",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Xavier-Zeruth-479019",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "win",
+          "method": "Submission (Ninja Choke)",
+          "referee": "Bryan Miner",
+          "round": 1,
+          "time": "1:26"
+        },
         {
           "opponent_name": "Asliddin Jumanov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Asliddin-Jumanov-469257",
@@ -407555,19 +407615,44 @@
       "name": "Xavier Zeruth",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Lightweight",
-      "record": "0-0-0",
+      "record": "0-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Xavier-Zeruth-479019",
-      "fight_history": []
+      "fight_history": [
+        {
+          "opponent_name": "Austin Halik",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Austin-Halik-389771",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "loss",
+          "method": "Submission (Ninja Choke)",
+          "referee": "Bryan Miner",
+          "round": 1,
+          "time": "1:26"
+        }
+      ]
     },
     {
       "name": "Luis Melendez",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1773373880Screenshot_2026-03-12_235034.jpg",
       "weight_class": "Middleweight",
-      "record": "1-0-0",
+      "record": "2-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Luis-Melendez-393681",
       "fight_history": [
+        {
+          "opponent_name": "Elton Dedaj",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elton-Dedaj-432080",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Keith Peterson",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Jairo Villasenor",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jairo-Villasenor-382265",
@@ -407586,10 +407671,22 @@
       "name": "Matheus Moraes",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230905020315_1DX_5141.JPG",
       "weight_class": "Heavyweight",
-      "record": "1-0-0",
+      "record": "1-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Matheus-Moraes-353735",
       "fight_history": [
+        {
+          "opponent_name": "Austin Ross",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Austin-Ross-394600",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "loss",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Keith Peterson",
+          "round": 1,
+          "time": "3:37"
+        },
         {
           "opponent_name": "Paea Tukuafu",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paea-Tukuafu-440173",
@@ -409719,10 +409816,22 @@
       "name": "Guram Gochashvili",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1786558266Guram_Gochashvili.jpg",
       "weight_class": "Middleweight",
-      "record": "5-1-0",
+      "record": "6-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Guram-Gochashvili-315853",
       "fight_history": [
+        {
+          "opponent_name": "Peter Keepers",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Peter-Keepers-277415",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Keith Peterson",
+          "round": 1,
+          "time": "4:47"
+        },
         {
           "opponent_name": "Leivon Lewis",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leivon-Lewis-253703",
@@ -409907,10 +410016,22 @@
       "name": "Joziah Fry",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1784777223Joziah_Fry.jpg",
       "weight_class": "Bantamweight",
-      "record": "1-0-0",
+      "record": "2-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Joziah-Fry-478035",
       "fight_history": [
+        {
+          "opponent_name": "Yve Nelson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yve-Nelson-369932",
+          "event_name": "LFA 244 - Woodley vs. Havener",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-244-Woodley-vs-Havener-114308",
+          "date": "2026-10-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Bryan Miner",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Landen Fischer",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Landen-Fischer-384891",
@@ -440693,123 +440814,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Jake Woodley",
-      "fighter2_name": "Zayne Havener",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Devan Worth",
-      "fighter2_name": "Thomas Blackorby",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Jansey Silva",
-      "fighter2_name": "Guram Mestvirishvili",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Hilarie Rose",
-      "fighter2_name": "Bruna Ellen",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Strawweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Maikel Reinoso",
-      "fighter2_name": "Oscar Jurado Sanchez",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Austin Halik",
-      "fighter2_name": "Xavier Zeruth",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Luis Melendez",
-      "fighter2_name": "Elton Dedaj",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Joziah Fry",
-      "fighter2_name": "Yve Nelson",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 244 - Woodley vs. Havener",
-      "fighter1_name": "Austin Ross",
-      "fighter2_name": "Matheus Moraes",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Light Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
       "fighter1_name": "Ansar Khamzaev",
       "fighter2_name": "Juliano Prescendo",
@@ -441144,6 +441148,136 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Jake Woodley",
+      "fighter2_name": "Zayne Havener",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Middleweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Devan Worth",
+      "fighter2_name": "Thomas Blackorby",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Jansey Silva",
+      "fighter2_name": "Guram Mestvirishvili",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Hilarie Rose",
+      "fighter2_name": "Bruna Ellen",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Maikel Reinoso",
+      "fighter2_name": "Oscar Jurado Sanchez",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Guram Gochashvili",
+      "fighter2_name": "Peter Keepers",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Austin Halik",
+      "fighter2_name": "Xavier Zeruth",
+      "fight_finished": true,
+      "winner_name": "Austin Halik",
+      "method": "Submission (Ninja Choke)",
+      "round": 1,
+      "time": "1:26",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Luis Melendez",
+      "fighter2_name": "Elton Dedaj",
+      "fight_finished": true,
+      "winner_name": "Luis Melendez",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Joziah Fry",
+      "fighter2_name": "Yve Nelson",
+      "fight_finished": true,
+      "winner_name": "Joziah Fry",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 244 - Woodley vs. Havener",
+      "fighter1_name": "Austin Ross",
+      "fighter2_name": "Matheus Moraes",
+      "fight_finished": true,
+      "winner_name": "Austin Ross",
+      "method": "TKO (Elbows and Punches)",
+      "round": 1,
+      "time": "3:37",
+      "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     }

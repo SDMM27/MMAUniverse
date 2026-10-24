@@ -95821,8 +95821,8 @@
         {
           "opponent_name": "Jeremiah Denson",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jeremiah-Denson-96219",
-          "event_name": "OFC - Omaha Fight Club 100",
-          "event_sherdog_url": "https://www.sherdog.com/events/OFC-Omaha-Fight-Club-100-39729",
+          "event_name": "OFC 100 - Century",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFC-100-Century-39729",
           "date": "2014-08-29",
           "result": "win",
           "method": "Submission (Rear-Naked Choke)",
@@ -129886,7 +129886,7 @@
       "name": "Losene Keita",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230120051306_Losene_Keita.JPG",
       "weight_class": "Lightweight",
-      "record": "16-2-0",
+      "record": "17-2-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Losene-Keita-287481",
       "fight_history": [
@@ -645448,6 +645448,290 @@
           "time": "1:31"
         }
       ]
+    },
+    {
+      "name": "Ivan Gnizditskiy",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1689557822Ivan_Gnizditskiy.jpeg",
+      "weight_class": "Light Heavyweight",
+      "record": "7-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ivan-Gnizditskiy-291329",
+      "fight_history": [
+        {
+          "opponent_name": "Tursunbek Sodikov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tursunbek-Sodikov-467841",
+          "event_name": "Chingi-Tura - Martial Arts Festival 2026",
+          "event_sherdog_url": "https://www.sherdog.com/events/ChingiTura-Martial-Arts-Festival-2026-112542",
+          "date": "2026-03-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Georgy Tamoev",
+          "round": 1,
+          "time": "1:44"
+        },
+        {
+          "opponent_name": "Khurshidbek Bozarboev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khurshidbek-Bozarboev-424013",
+          "event_name": "One Championship - One Friday Fights 110",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-110-108133",
+          "date": "2025-05-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "3:54"
+        },
+        {
+          "opponent_name": "Kevin Church",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kevin-Church-368253",
+          "event_name": "One Championship - One Friday Fights 99",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-99-107213",
+          "date": "2025-03-07",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Herb Dean",
+          "round": 1,
+          "time": "2:46"
+        },
+        {
+          "opponent_name": "Ce Liu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ce-Liu-426225",
+          "event_name": "Happy Elephant - MMA Champions League",
+          "event_sherdog_url": "https://www.sherdog.com/events/Happy-Elephant-MMA-Champions-League-104645",
+          "date": "2024-10-12",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Ming Liang",
+          "round": 2,
+          "time": "1:55"
+        },
+        {
+          "opponent_name": "Andrey Stolnik",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andrey-Stolnik-412774",
+          "event_name": "RCC 18 - Russian Cagefighting Championship 18",
+          "event_sherdog_url": "https://www.sherdog.com/events/RCC-18-Russian-Cagefighting-Championship-18-101482",
+          "date": "2024-02-24",
+          "result": "win",
+          "method": "Submission (Face Crank)",
+          "referee": "Rustam Abdullaev",
+          "round": 1,
+          "time": "1:45"
+        },
+        {
+          "opponent_name": "Rustam Baganaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rustam-Baganaev-260373",
+          "event_name": "LOB - League of Boxing: Knuckle",
+          "event_sherdog_url": "https://www.sherdog.com/events/LOB-League-of-Boxing-Knuckle-98428",
+          "date": "2023-05-27",
+          "result": "win",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Vitaliy Chaliy",
+          "round": 2,
+          "time": "1:34"
+        },
+        {
+          "opponent_name": "Maxim Navrazhniy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maxim-Navrazhniy-280361",
+          "event_name": "Valuyki Forpost - MMA Tournament",
+          "event_sherdog_url": "https://www.sherdog.com/events/Valuyki-Forpost-MMA-Tournament-69159",
+          "date": "2018-06-10",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "",
+          "round": 1,
+          "time": "3:09"
+        }
+      ]
+    },
+    {
+      "name": "Roque Conceicao Moreira Junior",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1755138057roquejunior.png",
+      "weight_class": "Flyweight",
+      "record": "12-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Roque-Conceicao-Moreira-Junior-239909",
+      "fight_history": [
+        {
+          "opponent_name": "Alexander Chavez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Chavez-427066",
+          "event_name": "Dana White's Contender Series - Contender Series 2026: Week 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2026-Week-9-112635",
+          "date": "2026-10-06",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Herb Dean",
+          "round": 1,
+          "time": "3:37"
+        },
+        {
+          "opponent_name": "Yamato Fujita",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yamato-Fujita-263877",
+          "event_name": "Shooto - Lemino Shooto Vol. 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Lemino-Shooto-Vol-4-111741",
+          "date": "2026-03-30",
+          "result": "win",
+          "method": "KO (Elbow and Punches)",
+          "referee": "Minoru Toyonaga",
+          "round": 1,
+          "time": "4:10"
+        },
+        {
+          "opponent_name": "Imanol Rodriguez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Imanol-Rodriguez-418935",
+          "event_name": "Dana White's Contender Series - Contender Series 2025: Week 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2025-Week-9-108517",
+          "date": "2025-10-07",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Jason Herzog",
+          "round": 1,
+          "time": "2:12"
+        },
+        {
+          "opponent_name": "Marceu Pasin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marceu-Pasin-259007",
+          "event_name": "Copa Montanha Fight - Copa Montanha Fight 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/Copa-Montanha-Fight-Copa-Montanha-Fight-11-107510",
+          "date": "2025-03-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "3:50"
+        },
+        {
+          "opponent_name": "Matias Jara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matias-Jara-351501",
+          "event_name": "Ragnarok 18 - Ragnarok MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Ragnarok-18-Ragnarok-MMA-103966",
+          "date": "2024-09-14",
+          "result": "win",
+          "method": "Technical Submission (Kneebar)",
+          "referee": "Javier Aldao",
+          "round": 2,
+          "time": "4:14"
+        },
+        {
+          "opponent_name": "Lucas Natan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lucas-Natan-393125",
+          "event_name": "DF - Demo Fight 19",
+          "event_sherdog_url": "https://www.sherdog.com/events/DF-Demo-Fight-19-102444",
+          "date": "2024-04-28",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Alexandre Camera",
+          "round": 1,
+          "time": "4:57"
+        },
+        {
+          "opponent_name": "Denis Oliveira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Denis-Oliveira-137389",
+          "event_name": "Jungle Fight 122 - Sao Paulo",
+          "event_sherdog_url": "https://www.sherdog.com/events/Jungle-Fight-122-Sao-Paulo-100480",
+          "date": "2023-11-25",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Douglas Aires",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Alfredo Muaiad",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alfredo-Muaiad-243343",
+          "event_name": "ROK 6 - Ragnarok 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/ROK-6-Ragnarok-6-97829",
+          "date": "2023-06-10",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Luis Cortez",
+          "round": 2,
+          "time": "4:39"
+        },
+        {
+          "opponent_name": "Javier Valdebenito",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Javier-Valdebenito-413146",
+          "event_name": "ROK 5 - Ragnarok 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/ROK-5-Ragnarok-5-96786",
+          "date": "2023-03-18",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Luis Cortez",
+          "round": 2,
+          "time": "2:58"
+        },
+        {
+          "opponent_name": "Diego Souza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Diego-Souza-409651",
+          "event_name": "Dominium Fighter Championship - DFC 11: Red Rooster",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dominium-Fighter-Championship-DFC-11-Red-Rooster-93978",
+          "date": "2022-07-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "William Fernandes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/William-Fernandes-273687",
+          "event_name": "GCP - Golden Cup Pro",
+          "event_sherdog_url": "https://www.sherdog.com/events/GCP-Golden-Cup-Pro-91643",
+          "date": "2021-11-27",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "",
+          "round": 1,
+          "time": "1:10"
+        },
+        {
+          "opponent_name": "Vitor Souza",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vitor-Souza-294371",
+          "event_name": "DFC - Dominium Fighter Championship 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/DFC-Dominium-Fighter-Championship-5-88979",
+          "date": "2021-05-15",
+          "result": "win",
+          "method": "KO",
+          "referee": "",
+          "round": 2,
+          "time": "3:47"
+        },
+        {
+          "opponent_name": "Hugo Paiva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hugo-Paiva-256291",
+          "event_name": "Thunder Fight 23 - The Return",
+          "event_sherdog_url": "https://www.sherdog.com/events/Thunder-Fight-23-The-Return-85737",
+          "date": "2020-10-11",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Anderson Ulysses",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Vander Ferreira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vander-Ferreira-206591",
+          "event_name": "Thunder Fight 20 - Your Time Has Come",
+          "event_sherdog_url": "https://www.sherdog.com/events/Thunder-Fight-20-Your-Time-Has-Come-80531",
+          "date": "2019-11-08",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Alex Ladislau",
+          "round": 1,
+          "time": "2:54"
+        },
+        {
+          "opponent_name": "Leonardo Da Silva Santos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leonardo-Da-Silva-Santos-329543",
+          "event_name": "Qualify Combat 8 - Qualify Combat Striker",
+          "event_sherdog_url": "https://www.sherdog.com/events/Qualify-Combat-8-Qualify-Combat-Striker-77101",
+          "date": "2019-05-25",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Carla Freitas",
+          "round": 2,
+          "time": "0:12"
+        }
+      ]
     }
   ],
   "fights": [
@@ -746025,7 +746309,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Strawweight",
+      "weight_class": "121lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -746784,6 +747068,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "UFC Fight Night 296 - Riyadh",
+      "fighter1_name": "Ivan Gnizditskiy",
+      "fighter2_name": "Uran Satybaldiev",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "UFC 335 - Oliveira vs. Lopes",
       "fighter1_name": "Charles Oliveira",
       "fighter2_name": "Diego Lopes",
@@ -746884,6 +747181,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC 335 - Oliveira vs. Lopes",
+      "fighter1_name": "Roque Conceicao Moreira Junior",
+      "fighter2_name": "Nilson Rojas",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     }
