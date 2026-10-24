@@ -3130,10 +3130,22 @@
       "name": "Pierre Manzo",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1760930994pierremanzo.jpg",
       "weight_class": "Welterweight",
-      "record": "2-0-0",
+      "record": "2-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Pierre-Manzo-485824",
       "fight_history": [
+        {
+          "opponent_name": "Alex Hue",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Hue-450518",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Patricio Carlos",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Nicolas Santos",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolas-Santos-457685",
@@ -3164,10 +3176,22 @@
       "name": "Alex Hue",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Welterweight",
-      "record": "1-1-0",
+      "record": "2-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alex-Hue-450518",
       "fight_history": [
+        {
+          "opponent_name": "Pierre Manzo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pierre-Manzo-485824",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Patricio Carlos",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Olivier Fleurmon",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Olivier-Fleurmon-495793",
@@ -3198,10 +3222,22 @@
       "name": "Arnaud Prigent",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Featherweight",
-      "record": "4-1-0",
+      "record": "5-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Arnaud-Prigent-399672",
       "fight_history": [
+        {
+          "opponent_name": "Ibrahim Diallo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibrahim-Diallo-378097",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:22"
+        },
         {
           "opponent_name": "Alan Cordeiro de Jesus",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alan-Cordeiro-de-Jesus-247033",
@@ -3268,10 +3304,22 @@
       "name": "Ibrahim Diallo",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Featherweight",
-      "record": "4-1-0",
+      "record": "4-2-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ibrahim-Diallo-378097",
       "fight_history": [
+        {
+          "opponent_name": "Arnaud Prigent",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arnaud-Prigent-399672",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:22"
+        },
         {
           "opponent_name": "Pedro Martins",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pedro-Martins-276715",
@@ -3343,6 +3391,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Rayan-Balbali-422645",
       "fight_history": [
         {
+          "opponent_name": "Youssouf Ouattara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Youssouf-Ouattara-419507",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "nc",
+          "method": "No Contest (Punches to Back of Head)",
+          "referee": "",
+          "round": 1,
+          "time": "0:59"
+        },
+        {
           "opponent_name": "Levi Batchelor",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Levi-Batchelor-348081",
           "event_name": "Professional Fighters League - PFL Lyon - Europe 2025 Finals",
@@ -3376,6 +3436,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Youssouf-Ouattara-419507",
       "fight_history": [
+        {
+          "opponent_name": "Rayan Balbali",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rayan-Balbali-422645",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "nc",
+          "method": "No Contest (Punches to Back of Head)",
+          "referee": "",
+          "round": 1,
+          "time": "0:59"
+        },
         {
           "opponent_name": "Anas Azizoun",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anas-Azizoun-353379",
@@ -23614,10 +23686,23 @@
       "name": "Mahamade Demba Samba",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Lightweight",
-      "record": "0-0-0",
+      "record": "1-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mahamade-Demba-Samba-453877",
-      "fight_history": []
+      "fight_history": [
+        {
+          "opponent_name": "Dany Gbeassor",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dany-Gbeassor-459717",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Patricio Carlos",
+          "round": 1,
+          "time": "2:22"
+        }
+      ]
     },
     {
       "name": "Lazaro Maza Blanco",
@@ -67775,10 +67860,22 @@
       "name": "Axel Jean-Alphonse",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Lightweight",
-      "record": "1-0-0",
+      "record": "1-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Axel-JeanAlphonse-417258",
       "fight_history": [
+        {
+          "opponent_name": "Saber Cherifi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Saber-Cherifi-409017",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Michal Bursak",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michal-Bursak-307125",
@@ -67797,10 +67894,23 @@
       "name": "Saber Cherifi",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Welterweight",
-      "record": "0-0-0",
+      "record": "1-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Saber-Cherifi-409017",
-      "fight_history": []
+      "fight_history": [
+        {
+          "opponent_name": "Axel Jean-Alphonse",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Axel-JeanAlphonse-417258",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     },
     {
       "name": "Lorenzo Nyambit",
@@ -69480,10 +69590,22 @@
       "name": "Dany Gbeassor",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Lightweight",
-      "record": "0-1-0",
+      "record": "0-2-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Dany-Gbeassor-459717",
       "fight_history": [
+        {
+          "opponent_name": "Mahamade Demba Samba",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mahamade-Demba-Samba-453877",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Patricio Carlos",
+          "round": 1,
+          "time": "2:22"
+        },
         {
           "opponent_name": "Anzor Shamilev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anzor-Shamilev-439895",
@@ -69506,6 +69628,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Fabian-Glele-464936",
       "fight_history": [
+        {
+          "opponent_name": "Jacques Bonga",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jacques-Bonga-444040",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:00"
+        },
         {
           "opponent_name": "Yoan Morero",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yoan-Morero-447926",
@@ -69672,6 +69806,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jacques-Bonga-444040",
       "fight_history": [
+        {
+          "opponent_name": "Fabian Glele",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fabian-Glele-464936",
+          "event_name": "HXMMA 48 - Hexagone MMA 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-48-Hexagone-MMA-48-113686",
+          "date": "2026-10-24",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:00"
+        },
         {
           "opponent_name": "Yoan Morero",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yoan-Morero-447926",
@@ -76346,24 +76492,24 @@
       "event_name": "HXMMA 48 - Hexagone MMA 48",
       "fighter1_name": "Arnaud Prigent",
       "fighter2_name": "Ibrahim Diallo",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Arnaud Prigent",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "2:22",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "HXMMA 48 - Hexagone MMA 48",
-      "fighter1_name": "Pierre Manzo",
-      "fighter2_name": "Alex Hue",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Alex Hue",
+      "fighter2_name": "Pierre Manzo",
+      "fight_finished": true,
+      "winner_name": "Alex Hue",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76372,24 +76518,24 @@
       "event_name": "HXMMA 48 - Hexagone MMA 48",
       "fighter1_name": "Rayan Balbali",
       "fighter2_name": "Youssouf Ouattara",
-      "fight_finished": false,
+      "fight_finished": true,
       "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "method": "No Contest (Punches to Back of Head)",
+      "round": 1,
+      "time": "0:59",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "HXMMA 48 - Hexagone MMA 48",
-      "fighter1_name": "Axel Jean-Alphonse",
-      "fighter2_name": "Saber Cherifi",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Saber Cherifi",
+      "fighter2_name": "Axel Jean-Alphonse",
+      "fight_finished": true,
+      "winner_name": "Saber Cherifi",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76398,11 +76544,11 @@
       "event_name": "HXMMA 48 - Hexagone MMA 48",
       "fighter1_name": "Mahamade Demba Samba",
       "fighter2_name": "Dany Gbeassor",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Mahamade Demba Samba",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:22",
       "weight_class": "150lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -76411,11 +76557,11 @@
       "event_name": "HXMMA 48 - Hexagone MMA 48",
       "fighter1_name": "Fabian Glele",
       "fighter2_name": "Jacques Bonga",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Fabian Glele",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "2:00",
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
