@@ -90,7 +90,7 @@
       "date": "2026-10-30",
       "start_time": "2026-10-30T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": ""
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/903078"
     },
     {
       "name": "One Championship - One Friday Fights 177",
@@ -8253,6 +8253,110 @@
           "time": "3:13"
         }
       ]
+    },
+    {
+      "name": "Prashanth Guda",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Bantamweight",
+      "record": "3-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Prashanth-Guda-327001",
+      "fight_history": [
+        {
+          "opponent_name": "Uchit Sharma",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Uchit-Sharma-118467",
+          "event_name": "IFL 1 - Indian Fight League: Hyderabad Vs Bangalore",
+          "event_sherdog_url": "https://www.sherdog.com/events/IFL-1-Indian-Fight-League-Hyderabad-Vs-Bangalore-112950",
+          "date": "2026-05-23",
+          "result": "win",
+          "method": "TKO (Submission to Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "4:11"
+        },
+        {
+          "opponent_name": "J.J. Jones",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/JJ-Jones-249465",
+          "event_name": "SFS 23 - Shuriken Fight Series 23",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFS-23-Shuriken-Fight-Series-23-111267",
+          "date": "2026-03-07",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Mark Craig",
+          "round": 2,
+          "time": "2:39"
+        },
+        {
+          "opponent_name": "Aaron Ward",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aaron-Ward-400959",
+          "event_name": "WXC 98 - Summer Heat",
+          "event_sherdog_url": "https://www.sherdog.com/events/WXC-98-Summer-Heat-108532",
+          "date": "2025-08-01",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "James Lee",
+          "round": 2,
+          "time": "3:43"
+        },
+        {
+          "opponent_name": "Ali Al-Jasim",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ali-AlJasim-435915",
+          "event_name": "SFS 17 - Shuriken Fight Series 17",
+          "event_sherdog_url": "https://www.sherdog.com/events/SFS-17-Shuriken-Fight-Series-17-101987",
+          "date": "2024-04-20",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "2:05"
+        }
+      ]
+    },
+    {
+      "name": "Ouga Akita",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Flyweight",
+      "record": "3-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ouga-Akita-480508",
+      "fight_history": [
+        {
+          "opponent_name": "Hirotaka Shimizu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hirotaka-Shimizu-485935",
+          "event_name": "WCF - Wardog Cage Fight 57",
+          "event_sherdog_url": "https://www.sherdog.com/events/WCF-Wardog-Cage-Fight-57-113083",
+          "date": "2026-05-31",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Manabu Kano",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yu Katayanagi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yu-Katayanagi-474696",
+          "event_name": "WCF - Wardog Cage Fight 55",
+          "event_sherdog_url": "https://www.sherdog.com/events/WCF-Wardog-Cage-Fight-55-111240",
+          "date": "2026-02-08",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Manabu Kano",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hideyoshi Okamoto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hideyoshi-Okamoto-267645",
+          "event_name": "WCF - Wardog Cage Fight 54: 2nd Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/WCF-Wardog-Cage-Fight-54-2nd-Round-109861",
+          "date": "2025-10-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -8525,6 +8629,32 @@
       "method": "KO (Punches)",
       "round": 1,
       "time": "0:58",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 176",
+      "fighter1_name": "Ethan Brockett",
+      "fighter2_name": "Pedro Duarte",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 176",
+      "fighter1_name": "Prashanth Guda",
+      "fighter2_name": "Ouga Akita",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
