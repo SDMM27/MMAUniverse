@@ -746775,19 +746775,6 @@
     },
     {
       "event_name": "UFC Fight Night 292 - Moicano vs. Nolan",
-      "fighter1_name": "Andre Petroski",
-      "fighter2_name": "Azamat Bekoev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "UFC Fight Night 292 - Moicano vs. Nolan",
       "fighter1_name": "Nick Klein",
       "fighter2_name": "Joseph Kropschot",
       "fight_finished": false,
@@ -746984,7 +746971,7 @@
     {
       "event_name": "UFC Fight Night 293 - Bonfim vs. Brady",
       "fighter1_name": "Mantas Kondratavicius",
-      "fighter2_name": "Wesley Schultz",
+      "fighter2_name": "Andre Petroski",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
