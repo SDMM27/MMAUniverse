@@ -1907432,5 +1907432,2919 @@
         "controlTimeSeconds": 235
       }
     ]
+  },
+  {
+    "fighter_name": "Alexander Volkanovski",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/e1248941344b3288",
+    "opponent_name": "Movsar Evloev",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/76e2870ffafbe38f",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/ce1388d6c7651d2e",
+    "result": "win",
+    "weight_class": "Featherweight",
+    "is_title_fight": true,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "4:54",
+    "scheduled_rounds": 5,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 56,
+        "attempted": 110
+      },
+      "totalStrikes": {
+        "landed": 61,
+        "attempted": 118
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 104
+    },
+    "strikes": {
+      "head": {
+        "landed": 48,
+        "attempted": 101
+      },
+      "body": {
+        "landed": 3,
+        "attempted": 4
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 5
+      },
+      "distance": {
+        "landed": 42,
+        "attempted": 90
+      },
+      "clinch": {
+        "landed": 3,
+        "attempted": 4
+      },
+      "ground": {
+        "landed": 11,
+        "attempted": 16
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 24,
+          "attempted": 47
+        },
+        "totalStrikes": {
+          "landed": 25,
+          "attempted": 48
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 18
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 32,
+          "attempted": 63
+        },
+        "totalStrikes": {
+          "landed": 36,
+          "attempted": 70
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 86
+      }
+    ]
+  },
+  {
+    "fighter_name": "Movsar Evloev",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/76e2870ffafbe38f",
+    "opponent_name": "Alexander Volkanovski",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/e1248941344b3288",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/ce1388d6c7651d2e",
+    "result": "loss",
+    "weight_class": "Featherweight",
+    "is_title_fight": true,
+    "method": "KO/TKO",
+    "round": 2,
+    "time": "4:54",
+    "scheduled_rounds": 5,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 40,
+        "attempted": 65
+      },
+      "totalStrikes": {
+        "landed": 62,
+        "attempted": 88
+      },
+      "takedowns": {
+        "landed": 3,
+        "attempted": 7
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 50
+    },
+    "strikes": {
+      "head": {
+        "landed": 28,
+        "attempted": 50
+      },
+      "body": {
+        "landed": 8,
+        "attempted": 9
+      },
+      "leg": {
+        "landed": 4,
+        "attempted": 6
+      },
+      "distance": {
+        "landed": 31,
+        "attempted": 55
+      },
+      "clinch": {
+        "landed": 8,
+        "attempted": 9
+      },
+      "ground": {
+        "landed": 1,
+        "attempted": 1
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 34
+        },
+        "totalStrikes": {
+          "landed": 26,
+          "attempted": 40
+        },
+        "takedowns": {
+          "landed": 3,
+          "attempted": 4
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 35
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 31
+        },
+        "totalStrikes": {
+          "landed": 36,
+          "attempted": 48
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 3
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 15
+      }
+    ]
+  },
+  {
+    "fighter_name": "Petr Yan",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/d661ce4da776fc20",
+    "opponent_name": "Merab Dvalishvili",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/c03520b5c88ed6b4",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e262f5e588b149a6",
+    "result": "win",
+    "weight_class": "Bantamweight",
+    "is_title_fight": true,
+    "method": "Decision - Unanimous",
+    "round": 5,
+    "time": "5:00",
+    "scheduled_rounds": 5,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 128,
+        "attempted": 228
+      },
+      "totalStrikes": {
+        "landed": 131,
+        "attempted": 231
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 1,
+      "controlTimeSeconds": 23
+    },
+    "strikes": {
+      "head": {
+        "landed": 95,
+        "attempted": 194
+      },
+      "body": {
+        "landed": 18,
+        "attempted": 19
+      },
+      "leg": {
+        "landed": 15,
+        "attempted": 15
+      },
+      "distance": {
+        "landed": 115,
+        "attempted": 210
+      },
+      "clinch": {
+        "landed": 11,
+        "attempted": 16
+      },
+      "ground": {
+        "landed": 2,
+        "attempted": 2
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 11
+        },
+        "totalStrikes": {
+          "landed": 6,
+          "attempted": 11
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 5
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 17,
+          "attempted": 28
+        },
+        "totalStrikes": {
+          "landed": 19,
+          "attempted": 30
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 1,
+        "controlTimeSeconds": 10
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 24,
+          "attempted": 44
+        },
+        "totalStrikes": {
+          "landed": 24,
+          "attempted": 44
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 4,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 29,
+          "attempted": 57
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 57
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 5,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 52,
+          "attempted": 88
+        },
+        "totalStrikes": {
+          "landed": 53,
+          "attempted": 89
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 8
+      }
+    ]
+  },
+  {
+    "fighter_name": "Merab Dvalishvili",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/c03520b5c88ed6b4",
+    "opponent_name": "Petr Yan",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/d661ce4da776fc20",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/e262f5e588b149a6",
+    "result": "loss",
+    "weight_class": "Bantamweight",
+    "is_title_fight": true,
+    "method": "Decision - Unanimous",
+    "round": 5,
+    "time": "5:00",
+    "scheduled_rounds": 5,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 131,
+        "attempted": 363
+      },
+      "totalStrikes": {
+        "landed": 159,
+        "attempted": 396
+      },
+      "takedowns": {
+        "landed": 5,
+        "attempted": 58
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 114
+    },
+    "strikes": {
+      "head": {
+        "landed": 100,
+        "attempted": 298
+      },
+      "body": {
+        "landed": 8,
+        "attempted": 18
+      },
+      "leg": {
+        "landed": 23,
+        "attempted": 47
+      },
+      "distance": {
+        "landed": 122,
+        "attempted": 350
+      },
+      "clinch": {
+        "landed": 9,
+        "attempted": 13
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 8,
+          "attempted": 40
+        },
+        "totalStrikes": {
+          "landed": 27,
+          "attempted": 63
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 10
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 41
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 23,
+          "attempted": 67
+        },
+        "totalStrikes": {
+          "landed": 28,
+          "attempted": 73
+        },
+        "takedowns": {
+          "landed": 4,
+          "attempted": 9
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 54
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 31,
+          "attempted": 78
+        },
+        "totalStrikes": {
+          "landed": 32,
+          "attempted": 79
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 13
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 17
+      },
+      {
+        "round": 4,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 29,
+          "attempted": 85
+        },
+        "totalStrikes": {
+          "landed": 30,
+          "attempted": 86
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 15
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 5,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 40,
+          "attempted": 93
+        },
+        "totalStrikes": {
+          "landed": 42,
+          "attempted": 95
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 11
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 2
+      }
+    ]
+  },
+  {
+    "fighter_name": "Lone'er Kavanagh",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/bb2c3c3a466224af",
+    "opponent_name": "Ramazan Temirov",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/7d0a1968b38ca439",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/b9004bd72276a190",
+    "result": "win",
+    "weight_class": "Flyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "4:28",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 23,
+        "attempted": 44
+      },
+      "totalStrikes": {
+        "landed": 23,
+        "attempted": 44
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 1
+    },
+    "strikes": {
+      "head": {
+        "landed": 15,
+        "attempted": 33
+      },
+      "body": {
+        "landed": 3,
+        "attempted": 6
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 5
+      },
+      "distance": {
+        "landed": 22,
+        "attempted": 43
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 1,
+        "attempted": 1
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 23,
+          "attempted": 44
+        },
+        "totalStrikes": {
+          "landed": 23,
+          "attempted": 44
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 1
+      }
+    ]
+  },
+  {
+    "fighter_name": "Ramazan Temirov",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/7d0a1968b38ca439",
+    "opponent_name": "Lone'er Kavanagh",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/bb2c3c3a466224af",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/b9004bd72276a190",
+    "result": "loss",
+    "weight_class": "Flyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "4:28",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 18,
+        "attempted": 40
+      },
+      "totalStrikes": {
+        "landed": 18,
+        "attempted": 40
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 15,
+        "attempted": 36
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 18,
+        "attempted": 40
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 18,
+          "attempted": 40
+        },
+        "totalStrikes": {
+          "landed": 18,
+          "attempted": 40
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Alexander Volkov",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/279566840aa55bf2",
+    "opponent_name": "Rizvan Kuniev",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/739fd4fbb5d862f4",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/8788a6dda6e64aff",
+    "result": "win",
+    "weight_class": "Heavyweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 74,
+        "attempted": 150
+      },
+      "totalStrikes": {
+        "landed": 82,
+        "attempted": 158
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 1,
+      "reversals": 0,
+      "controlTimeSeconds": 122
+    },
+    "strikes": {
+      "head": {
+        "landed": 35,
+        "attempted": 99
+      },
+      "body": {
+        "landed": 25,
+        "attempted": 33
+      },
+      "leg": {
+        "landed": 14,
+        "attempted": 18
+      },
+      "distance": {
+        "landed": 66,
+        "attempted": 140
+      },
+      "clinch": {
+        "landed": 8,
+        "attempted": 10
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 21,
+          "attempted": 59
+        },
+        "totalStrikes": {
+          "landed": 26,
+          "attempted": 64
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 26,
+          "attempted": 46
+        },
+        "totalStrikes": {
+          "landed": 27,
+          "attempted": 47
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 30
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 27,
+          "attempted": 45
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 47
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 92
+      }
+    ]
+  },
+  {
+    "fighter_name": "Rizvan Kuniev",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/739fd4fbb5d862f4",
+    "opponent_name": "Alexander Volkov",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/279566840aa55bf2",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/8788a6dda6e64aff",
+    "result": "loss",
+    "weight_class": "Heavyweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 51,
+        "attempted": 87
+      },
+      "totalStrikes": {
+        "landed": 62,
+        "attempted": 98
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 4
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 4
+    },
+    "strikes": {
+      "head": {
+        "landed": 35,
+        "attempted": 66
+      },
+      "body": {
+        "landed": 7,
+        "attempted": 10
+      },
+      "leg": {
+        "landed": 9,
+        "attempted": 11
+      },
+      "distance": {
+        "landed": 49,
+        "attempted": 85
+      },
+      "clinch": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 21,
+          "attempted": 31
+        },
+        "totalStrikes": {
+          "landed": 22,
+          "attempted": 32
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 4
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 16,
+          "attempted": 28
+        },
+        "totalStrikes": {
+          "landed": 21,
+          "attempted": 33
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 3
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 14,
+          "attempted": 28
+        },
+        "totalStrikes": {
+          "landed": 19,
+          "attempted": 33
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Aaron Pico",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/5537efc6e496dd84",
+    "opponent_name": "Losene Keita",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/5b43d68174b6e2ab",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/8271c52b2987e021",
+    "result": "win",
+    "weight_class": "Featherweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "1:14",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 6,
+        "attempted": 10
+      },
+      "totalStrikes": {
+        "landed": 12,
+        "attempted": 16
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 37
+    },
+    "strikes": {
+      "head": {
+        "landed": 6,
+        "attempted": 10
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 1,
+        "attempted": 3
+      },
+      "clinch": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "ground": {
+        "landed": 4,
+        "attempted": 6
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 10
+        },
+        "totalStrikes": {
+          "landed": 12,
+          "attempted": 16
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 37
+      }
+    ]
+  },
+  {
+    "fighter_name": "Losene Keita",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/5b43d68174b6e2ab",
+    "opponent_name": "Aaron Pico",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/5537efc6e496dd84",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/8271c52b2987e021",
+    "result": "loss",
+    "weight_class": "Featherweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "1:14",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 2,
+        "attempted": 4
+      },
+      "totalStrikes": {
+        "landed": 3,
+        "attempted": 5
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 1,
+        "attempted": 3
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 1,
+        "attempted": 3
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 1,
+        "attempted": 1
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 2,
+          "attempted": 4
+        },
+        "totalStrikes": {
+          "landed": 3,
+          "attempted": 5
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Azamat Murzakanov",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/e90a2f22417af68e",
+    "opponent_name": "Dominick Reyes",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/2e19380f34871c6a",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/c6bcc7e9fb90da47",
+    "result": "loss",
+    "weight_class": "Light Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "2:40",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 3,
+        "attempted": 7
+      },
+      "totalStrikes": {
+        "landed": 3,
+        "attempted": 7
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 2,
+        "attempted": 6
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "distance": {
+        "landed": 3,
+        "attempted": 7
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 3,
+          "attempted": 7
+        },
+        "totalStrikes": {
+          "landed": 3,
+          "attempted": 7
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Dominick Reyes",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/2e19380f34871c6a",
+    "opponent_name": "Azamat Murzakanov",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/e90a2f22417af68e",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/c6bcc7e9fb90da47",
+    "result": "win",
+    "weight_class": "Light Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "2:40",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 14,
+        "attempted": 24
+      },
+      "totalStrikes": {
+        "landed": 14,
+        "attempted": 24
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 4
+    },
+    "strikes": {
+      "head": {
+        "landed": 7,
+        "attempted": 14
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "leg": {
+        "landed": 6,
+        "attempted": 8
+      },
+      "distance": {
+        "landed": 9,
+        "attempted": 18
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 5,
+        "attempted": 6
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 14,
+          "attempted": 24
+        },
+        "totalStrikes": {
+          "landed": 14,
+          "attempted": 24
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 4
+      }
+    ]
+  },
+  {
+    "fighter_name": "Nikita Krylov",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/1091d4d957141094",
+    "opponent_name": "Abdul Rakhman Yakhyaev",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/95aff2fd8d09a5f0",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/6193cd89b1cd9a9e",
+    "result": "loss",
+    "weight_class": "Light Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "2:38",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 4,
+        "attempted": 6
+      },
+      "totalStrikes": {
+        "landed": 7,
+        "attempted": 9
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 89
+    },
+    "strikes": {
+      "head": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 4
+      },
+      "distance": {
+        "landed": 3,
+        "attempted": 5
+      },
+      "clinch": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 4,
+          "attempted": 6
+        },
+        "totalStrikes": {
+          "landed": 7,
+          "attempted": 9
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 89
+      }
+    ]
+  },
+  {
+    "fighter_name": "Abdul Rakhman Yakhyaev",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/95aff2fd8d09a5f0",
+    "opponent_name": "Nikita Krylov",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/1091d4d957141094",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/6193cd89b1cd9a9e",
+    "result": "win",
+    "weight_class": "Light Heavyweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "2:38",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 6,
+        "attempted": 9
+      },
+      "totalStrikes": {
+        "landed": 19,
+        "attempted": 24
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "submissionAttempts": 1,
+      "reversals": 0,
+      "controlTimeSeconds": 44
+    },
+    "strikes": {
+      "head": {
+        "landed": 3,
+        "attempted": 6
+      },
+      "body": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 0,
+        "attempted": 2
+      },
+      "clinch": {
+        "landed": 4,
+        "attempted": 4
+      },
+      "ground": {
+        "landed": 2,
+        "attempted": 3
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 6,
+          "attempted": 9
+        },
+        "totalStrikes": {
+          "landed": 19,
+          "attempted": 24
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 44
+      }
+    ]
+  },
+  {
+    "fighter_name": "Abus Magomedov",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/36b8f265bcd1b7a4",
+    "opponent_name": "Cam Rowston",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/8ebc3a8da015d70c",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/69aec85e917d47e6",
+    "result": "win",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "Submission",
+    "round": 1,
+    "time": "1:44",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 11,
+        "attempted": 15
+      },
+      "totalStrikes": {
+        "landed": 11,
+        "attempted": 15
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 1,
+      "reversals": 0,
+      "controlTimeSeconds": 7
+    },
+    "strikes": {
+      "head": {
+        "landed": 5,
+        "attempted": 7
+      },
+      "body": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "distance": {
+        "landed": 11,
+        "attempted": 15
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 11,
+          "attempted": 15
+        },
+        "totalStrikes": {
+          "landed": 11,
+          "attempted": 15
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 7
+      }
+    ]
+  },
+  {
+    "fighter_name": "Cam Rowston",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/8ebc3a8da015d70c",
+    "opponent_name": "Abus Magomedov",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/36b8f265bcd1b7a4",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/69aec85e917d47e6",
+    "result": "loss",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "Submission",
+    "round": 1,
+    "time": "1:44",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 1,
+        "attempted": 11
+      },
+      "totalStrikes": {
+        "landed": 1,
+        "attempted": 11
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 6
+    },
+    "strikes": {
+      "head": {
+        "landed": 0,
+        "attempted": 8
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 2
+      },
+      "leg": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "distance": {
+        "landed": 1,
+        "attempted": 11
+      },
+      "clinch": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 1,
+          "attempted": 11
+        },
+        "totalStrikes": {
+          "landed": 1,
+          "attempted": 11
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 6
+      }
+    ]
+  },
+  {
+    "fighter_name": "Grant Dawson",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/99bd51917728c25d",
+    "opponent_name": "Nurullo Aliev",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/ca28cdf526d6b6e9",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/c70b4b6a8a5a3abb",
+    "result": "win",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 95,
+        "attempted": 188
+      },
+      "totalStrikes": {
+        "landed": 147,
+        "attempted": 242
+      },
+      "takedowns": {
+        "landed": 5,
+        "attempted": 7
+      },
+      "submissionAttempts": 1,
+      "reversals": 0,
+      "controlTimeSeconds": 378
+    },
+    "strikes": {
+      "head": {
+        "landed": 71,
+        "attempted": 157
+      },
+      "body": {
+        "landed": 16,
+        "attempted": 22
+      },
+      "leg": {
+        "landed": 8,
+        "attempted": 9
+      },
+      "distance": {
+        "landed": 72,
+        "attempted": 155
+      },
+      "clinch": {
+        "landed": 7,
+        "attempted": 11
+      },
+      "ground": {
+        "landed": 16,
+        "attempted": 22
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 32,
+          "attempted": 63
+        },
+        "totalStrikes": {
+          "landed": 35,
+          "attempted": 66
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 3
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 41
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 33,
+          "attempted": 74
+        },
+        "totalStrikes": {
+          "landed": 50,
+          "attempted": 93
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 155
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 30,
+          "attempted": 51
+        },
+        "totalStrikes": {
+          "landed": 62,
+          "attempted": 83
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 182
+      }
+    ]
+  },
+  {
+    "fighter_name": "Nurullo Aliev",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/ca28cdf526d6b6e9",
+    "opponent_name": "Grant Dawson",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/99bd51917728c25d",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/c70b4b6a8a5a3abb",
+    "result": "loss",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 65,
+        "attempted": 106
+      },
+      "totalStrikes": {
+        "landed": 96,
+        "attempted": 138
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 2
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 86
+    },
+    "strikes": {
+      "head": {
+        "landed": 50,
+        "attempted": 88
+      },
+      "body": {
+        "landed": 12,
+        "attempted": 15
+      },
+      "leg": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "distance": {
+        "landed": 61,
+        "attempted": 101
+      },
+      "clinch": {
+        "landed": 4,
+        "attempted": 5
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 33,
+          "attempted": 52
+        },
+        "totalStrikes": {
+          "landed": 53,
+          "attempted": 73
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 80
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 18,
+          "attempted": 30
+        },
+        "totalStrikes": {
+          "landed": 26,
+          "attempted": 38
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 3
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 14,
+          "attempted": 24
+        },
+        "totalStrikes": {
+          "landed": 17,
+          "attempted": 27
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 3
+      }
+    ]
+  },
+  {
+    "fighter_name": "Colby Thicknesse",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/ed7d329d7c29428d",
+    "opponent_name": "Asaf Chopurov",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/a24bc9922ee76e9f",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/411ec0a245687c49",
+    "result": "win",
+    "weight_class": "Bantamweight",
+    "is_title_fight": false,
+    "method": "Decision - Split",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 77,
+        "attempted": 135
+      },
+      "totalStrikes": {
+        "landed": 107,
+        "attempted": 171
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 15
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 194
+    },
+    "strikes": {
+      "head": {
+        "landed": 37,
+        "attempted": 88
+      },
+      "body": {
+        "landed": 36,
+        "attempted": 43
+      },
+      "leg": {
+        "landed": 4,
+        "attempted": 4
+      },
+      "distance": {
+        "landed": 27,
+        "attempted": 73
+      },
+      "clinch": {
+        "landed": 50,
+        "attempted": 62
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 31
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 41
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 4
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 65
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 37,
+          "attempted": 62
+        },
+        "totalStrikes": {
+          "landed": 50,
+          "attempted": 78
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 5
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 41
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 42
+        },
+        "totalStrikes": {
+          "landed": 28,
+          "attempted": 52
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 6
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 88
+      }
+    ]
+  },
+  {
+    "fighter_name": "Asaf Chopurov",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/a24bc9922ee76e9f",
+    "opponent_name": "Colby Thicknesse",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/ed7d329d7c29428d",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/411ec0a245687c49",
+    "result": "loss",
+    "weight_class": "Bantamweight",
+    "is_title_fight": false,
+    "method": "Decision - Split",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 54,
+        "attempted": 96
+      },
+      "totalStrikes": {
+        "landed": 71,
+        "attempted": 117
+      },
+      "takedowns": {
+        "landed": 8,
+        "attempted": 12
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 301
+    },
+    "strikes": {
+      "head": {
+        "landed": 33,
+        "attempted": 68
+      },
+      "body": {
+        "landed": 18,
+        "attempted": 25
+      },
+      "leg": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "distance": {
+        "landed": 20,
+        "attempted": 50
+      },
+      "clinch": {
+        "landed": 32,
+        "attempted": 43
+      },
+      "ground": {
+        "landed": 2,
+        "attempted": 3
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 22,
+          "attempted": 33
+        },
+        "totalStrikes": {
+          "landed": 32,
+          "attempted": 45
+        },
+        "takedowns": {
+          "landed": 3,
+          "attempted": 5
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 120
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 20,
+          "attempted": 41
+        },
+        "totalStrikes": {
+          "landed": 24,
+          "attempted": 46
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 76
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 12,
+          "attempted": 22
+        },
+        "totalStrikes": {
+          "landed": 15,
+          "attempted": 26
+        },
+        "takedowns": {
+          "landed": 4,
+          "attempted": 5
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 105
+      }
+    ]
+  },
+  {
+    "fighter_name": "Abubakar Vagaev",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/f7adc1fd115f8fdd",
+    "opponent_name": "Jacob Malkoun",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/d4270315cbcf2569",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/23a6bddecfa23fcd",
+    "result": "win",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 71,
+        "attempted": 139
+      },
+      "totalStrikes": {
+        "landed": 92,
+        "attempted": 162
+      },
+      "takedowns": {
+        "landed": 6,
+        "attempted": 12
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 127
+    },
+    "strikes": {
+      "head": {
+        "landed": 55,
+        "attempted": 113
+      },
+      "body": {
+        "landed": 5,
+        "attempted": 9
+      },
+      "leg": {
+        "landed": 11,
+        "attempted": 17
+      },
+      "distance": {
+        "landed": 66,
+        "attempted": 123
+      },
+      "clinch": {
+        "landed": 3,
+        "attempted": 9
+      },
+      "ground": {
+        "landed": 2,
+        "attempted": 7
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 26,
+          "attempted": 53
+        },
+        "totalStrikes": {
+          "landed": 45,
+          "attempted": 74
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 70
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 26,
+          "attempted": 48
+        },
+        "totalStrikes": {
+          "landed": 27,
+          "attempted": 49
+        },
+        "takedowns": {
+          "landed": 3,
+          "attempted": 5
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 21
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 19,
+          "attempted": 38
+        },
+        "totalStrikes": {
+          "landed": 20,
+          "attempted": 39
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 5
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 36
+      }
+    ]
+  },
+  {
+    "fighter_name": "Jacob Malkoun",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/d4270315cbcf2569",
+    "opponent_name": "Abubakar Vagaev",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/f7adc1fd115f8fdd",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/23a6bddecfa23fcd",
+    "result": "loss",
+    "weight_class": "Middleweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 106,
+        "attempted": 202
+      },
+      "totalStrikes": {
+        "landed": 113,
+        "attempted": 212
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 4
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 12
+    },
+    "strikes": {
+      "head": {
+        "landed": 95,
+        "attempted": 182
+      },
+      "body": {
+        "landed": 11,
+        "attempted": 20
+      },
+      "leg": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "distance": {
+        "landed": 103,
+        "attempted": 199
+      },
+      "clinch": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 30,
+          "attempted": 61
+        },
+        "totalStrikes": {
+          "landed": 36,
+          "attempted": 68
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 3
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 45,
+          "attempted": 85
+        },
+        "totalStrikes": {
+          "landed": 46,
+          "attempted": 87
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 31,
+          "attempted": 56
+        },
+        "totalStrikes": {
+          "landed": 31,
+          "attempted": 57
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 9
+      }
+    ]
+  },
+  {
+    "fighter_name": "Bolaji Oki",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/4bdedbdeedff7d1d",
+    "opponent_name": "Daniel Santos",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/b67d6bacc68d4c92",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/1fa88509d87cc05e",
+    "result": "loss",
+    "weight_class": "Featherweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 69,
+        "attempted": 107
+      },
+      "totalStrikes": {
+        "landed": 70,
+        "attempted": 108
+      },
+      "takedowns": {
+        "landed": 2,
+        "attempted": 3
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 163
+    },
+    "strikes": {
+      "head": {
+        "landed": 45,
+        "attempted": 78
+      },
+      "body": {
+        "landed": 21,
+        "attempted": 26
+      },
+      "leg": {
+        "landed": 3,
+        "attempted": 3
+      },
+      "distance": {
+        "landed": 58,
+        "attempted": 93
+      },
+      "clinch": {
+        "landed": 7,
+        "attempted": 9
+      },
+      "ground": {
+        "landed": 4,
+        "attempted": 5
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 17,
+          "attempted": 25
+        },
+        "totalStrikes": {
+          "landed": 18,
+          "attempted": 26
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 124
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 14,
+          "attempted": 23
+        },
+        "totalStrikes": {
+          "landed": 14,
+          "attempted": 23
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 15
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 38,
+          "attempted": 59
+        },
+        "totalStrikes": {
+          "landed": 38,
+          "attempted": 59
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 24
+      }
+    ]
+  },
+  {
+    "fighter_name": "Daniel Santos",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/b67d6bacc68d4c92",
+    "opponent_name": "Bolaji Oki",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/4bdedbdeedff7d1d",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/1fa88509d87cc05e",
+    "result": "win",
+    "weight_class": "Featherweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 76,
+        "attempted": 159
+      },
+      "totalStrikes": {
+        "landed": 87,
+        "attempted": 172
+      },
+      "takedowns": {
+        "landed": 2,
+        "attempted": 5
+      },
+      "submissionAttempts": 1,
+      "reversals": 0,
+      "controlTimeSeconds": 100
+    },
+    "strikes": {
+      "head": {
+        "landed": 35,
+        "attempted": 95
+      },
+      "body": {
+        "landed": 19,
+        "attempted": 39
+      },
+      "leg": {
+        "landed": 22,
+        "attempted": 25
+      },
+      "distance": {
+        "landed": 70,
+        "attempted": 151
+      },
+      "clinch": {
+        "landed": 6,
+        "attempted": 8
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 14,
+          "attempted": 30
+        },
+        "totalStrikes": {
+          "landed": 15,
+          "attempted": 32
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 1,
+        "reversals": 0,
+        "controlTimeSeconds": 4
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 23,
+          "attempted": 50
+        },
+        "totalStrikes": {
+          "landed": 29,
+          "attempted": 57
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 4
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 96
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 39,
+          "attempted": 79
+        },
+        "totalStrikes": {
+          "landed": 43,
+          "attempted": 83
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Kody Steele",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/aebaa8cec15b083d",
+    "opponent_name": "Noah Gugnon",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/6266abf6e4245c72",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/02df66c779a72260",
+    "result": "win",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "3:54",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 1,
+      "sigStrikes": {
+        "landed": 25,
+        "attempted": 52
+      },
+      "totalStrikes": {
+        "landed": 25,
+        "attempted": 52
+      },
+      "takedowns": {
+        "landed": 1,
+        "attempted": 3
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 22
+    },
+    "strikes": {
+      "head": {
+        "landed": 20,
+        "attempted": 45
+      },
+      "body": {
+        "landed": 3,
+        "attempted": 5
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 21,
+        "attempted": 48
+      },
+      "clinch": {
+        "landed": 1,
+        "attempted": 1
+      },
+      "ground": {
+        "landed": 3,
+        "attempted": 3
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 1,
+        "sigStrikes": {
+          "landed": 25,
+          "attempted": 52
+        },
+        "totalStrikes": {
+          "landed": 25,
+          "attempted": 52
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 3
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 22
+      }
+    ]
+  },
+  {
+    "fighter_name": "Noah Gugnon",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/6266abf6e4245c72",
+    "opponent_name": "Kody Steele",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/aebaa8cec15b083d",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/02df66c779a72260",
+    "result": "loss",
+    "weight_class": "Lightweight",
+    "is_title_fight": false,
+    "method": "KO/TKO",
+    "round": 1,
+    "time": "3:54",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 31,
+        "attempted": 57
+      },
+      "totalStrikes": {
+        "landed": 32,
+        "attempted": 58
+      },
+      "takedowns": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 0
+    },
+    "strikes": {
+      "head": {
+        "landed": 26,
+        "attempted": 51
+      },
+      "body": {
+        "landed": 0,
+        "attempted": 0
+      },
+      "leg": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "distance": {
+        "landed": 26,
+        "attempted": 51
+      },
+      "clinch": {
+        "landed": 5,
+        "attempted": 6
+      },
+      "ground": {
+        "landed": 0,
+        "attempted": 0
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 31,
+          "attempted": 57
+        },
+        "totalStrikes": {
+          "landed": 32,
+          "attempted": 58
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 0
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 0
+      }
+    ]
+  },
+  {
+    "fighter_name": "Iasmin Lucindo",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/abcf2cc6efc42031",
+    "opponent_name": "Nicolle Caliari",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/fc0a4053eb8a3a59",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/4081a5fe66569321",
+    "result": "win",
+    "weight_class": "Women's Strawweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 31,
+        "attempted": 49
+      },
+      "totalStrikes": {
+        "landed": 57,
+        "attempted": 80
+      },
+      "takedowns": {
+        "landed": 3,
+        "attempted": 4
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 567
+    },
+    "strikes": {
+      "head": {
+        "landed": 22,
+        "attempted": 38
+      },
+      "body": {
+        "landed": 7,
+        "attempted": 9
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 11,
+        "attempted": 23
+      },
+      "clinch": {
+        "landed": 7,
+        "attempted": 9
+      },
+      "ground": {
+        "landed": 13,
+        "attempted": 17
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 7,
+          "attempted": 11
+        },
+        "totalStrikes": {
+          "landed": 10,
+          "attempted": 14
+        },
+        "takedowns": {
+          "landed": 2,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 145
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 16,
+          "attempted": 30
+        },
+        "totalStrikes": {
+          "landed": 30,
+          "attempted": 48
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 185
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 8,
+          "attempted": 8
+        },
+        "totalStrikes": {
+          "landed": 17,
+          "attempted": 18
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 237
+      }
+    ]
+  },
+  {
+    "fighter_name": "Nicolle Caliari",
+    "fighter_ufcstats_url": "http://ufcstats.com/fighter-details/fc0a4053eb8a3a59",
+    "opponent_name": "Iasmin Lucindo",
+    "opponent_ufcstats_url": "http://ufcstats.com/fighter-details/abcf2cc6efc42031",
+    "event_name": "UFC 333: Volkanovski vs. Evloev",
+    "event_date": "2026-10-24",
+    "ufcstats_fight_url": "http://ufcstats.com/fight-details/4081a5fe66569321",
+    "result": "loss",
+    "weight_class": "Women's Strawweight",
+    "is_title_fight": false,
+    "method": "Decision - Unanimous",
+    "round": 3,
+    "time": "5:00",
+    "scheduled_rounds": 3,
+    "totals": {
+      "knockdowns": 0,
+      "sigStrikes": {
+        "landed": 27,
+        "attempted": 36
+      },
+      "totalStrikes": {
+        "landed": 54,
+        "attempted": 67
+      },
+      "takedowns": {
+        "landed": 2,
+        "attempted": 4
+      },
+      "submissionAttempts": 0,
+      "reversals": 0,
+      "controlTimeSeconds": 135
+    },
+    "strikes": {
+      "head": {
+        "landed": 13,
+        "attempted": 19
+      },
+      "body": {
+        "landed": 12,
+        "attempted": 15
+      },
+      "leg": {
+        "landed": 2,
+        "attempted": 2
+      },
+      "distance": {
+        "landed": 15,
+        "attempted": 23
+      },
+      "clinch": {
+        "landed": 8,
+        "attempted": 9
+      },
+      "ground": {
+        "landed": 4,
+        "attempted": 4
+      }
+    },
+    "rounds": [
+      {
+        "round": 1,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 2,
+          "attempted": 5
+        },
+        "totalStrikes": {
+          "landed": 6,
+          "attempted": 9
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 2
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 55
+      },
+      {
+        "round": 2,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 16,
+          "attempted": 20
+        },
+        "totalStrikes": {
+          "landed": 28,
+          "attempted": 33
+        },
+        "takedowns": {
+          "landed": 1,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 43
+      },
+      {
+        "round": 3,
+        "knockdowns": 0,
+        "sigStrikes": {
+          "landed": 9,
+          "attempted": 11
+        },
+        "totalStrikes": {
+          "landed": 20,
+          "attempted": 25
+        },
+        "takedowns": {
+          "landed": 0,
+          "attempted": 1
+        },
+        "submissionAttempts": 0,
+        "reversals": 0,
+        "controlTimeSeconds": 37
+      }
+    ]
   }
 ]
