@@ -411711,6 +411711,556 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Imed Eddine Dziri",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "0-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Imed-Eddine-Dziri-420262",
+      "fight_history": [
+        {
+          "opponent_name": "Lionel Kamooze",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lionel-Kamooze-440823",
+          "event_name": "Berbere FC 8 - Berbere Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/Berbere-FC-8-Berbere-Fighting-Championship-104311",
+          "date": "2024-06-28",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Mechannaf Seifeddine",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hamza Fetaimi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hamza-Fetaimi-415356",
+          "event_name": "Berbere FC 5 - Berbere Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/Berbere-FC-5-Berbere-Fighting-Championship-96364",
+          "date": "2022-12-22",
+          "result": "draw",
+          "method": "Draw",
+          "referee": "Hichem Rambi",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Delsin Gray",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Delsin-Gray-503045",
+      "fight_history": [
+        {
+          "opponent_name": "Ryan Withrow",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Withrow-508950",
+          "event_name": "MFP 5 - Mayhem Fight Promotions",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFP-5-Mayhem-Fight-Promotions-114607",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "TKO (Strikes)",
+          "referee": "Patricia Vandermeer",
+          "round": 3,
+          "time": "2:09"
+        },
+        {
+          "opponent_name": "Duke Lough",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Duke-Lough-506783",
+          "event_name": "MFP 4 - Mayhem Fight Promotions",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFP-4-Mayhem-Fight-Promotions-114048",
+          "date": "2026-08-29",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Chris Milloy",
+          "round": 1,
+          "time": "0:11"
+        },
+        {
+          "opponent_name": "Carter West",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carter-West-418204",
+          "event_name": "MFP 3 - Mayhem Fight Promotions",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFP-3-Mayhem-Fight-Promotions-112031",
+          "date": "2026-06-27",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Patricia Vandermeer",
+          "round": 3,
+          "time": "3:00"
+        }
+      ]
+    },
+    {
+      "name": "Ricardo Hussein",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1711398154Snapinsta.app_356944969_306882715097286_6636982692897834806_n_1080.jpg",
+      "weight_class": "Bantamweight",
+      "record": "5-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ricardo-Hussein-402783",
+      "fight_history": [
+        {
+          "opponent_name": "Uziel Gomez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Uziel-Gomez-395196",
+          "event_name": "FLC 3 - Fight League Champions 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/FLC-3-Fight-League-Champions-3-113662",
+          "date": "2026-07-24",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Daniela Modad",
+          "round": 3,
+          "time": "1:48"
+        },
+        {
+          "opponent_name": "Jesse Velazquez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jesse-Velazquez-248177",
+          "event_name": "Combate Global 98 - Mexico vs. USA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-98-Mexico-vs-USA-112370",
+          "date": "2026-04-11",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Jonathan Romero",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yahir Ramirez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yahir-Ramirez-394387",
+          "event_name": "LUX 053 - Puebla",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-053-Puebla-108305",
+          "date": "2025-07-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Edgard Lopez",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Axel Osuna",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Axel-Osuna-302521",
+          "event_name": "LUX 042 - Guadalajara",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-042-Guadalajara-101778",
+          "date": "2024-04-26",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Gerardo Cruz",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ivan Rodriguez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Rodriguez-443239",
+          "event_name": "LUX 033 - Puebla",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-033-Puebla-97925",
+          "date": "2023-06-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Edgard Lopez",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Alexis Leon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexis-Leon-381009",
+          "event_name": "LUX 027 - Puebla",
+          "event_sherdog_url": "https://www.sherdog.com/events/LUX-027-Puebla-94960",
+          "date": "2022-10-14",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Daniela Modad",
+          "round": 1,
+          "time": "4:42"
+        }
+      ]
+    },
+    {
+      "name": "Mia Grawe",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250427061036_Mia_Grawe.JPG",
+      "weight_class": "Flyweight",
+      "record": "3-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Mia-Grawe-379650",
+      "fight_history": [
+        {
+          "opponent_name": "Ashley Thiner",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ashley-Thiner-368827",
+          "event_name": "Professional Fighters League - PFL Austin: Eblen vs. Kasanganay 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Professional-Fighters-League-PFL-Austin-Eblen-vs-Kasanganay-2-112807",
+          "date": "2026-07-18",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Jeff Rexroad",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kenia Rosas Martinez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kenia-Rosas-Martinez-181011",
+          "event_name": "Fury FC - Challenger Series 13",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-Challenger-Series-13-107358",
+          "date": "2025-04-27",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Aladin Martinez",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Tamar Israeli",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tamar-Israeli-453655",
+          "event_name": "Fury FC 94 - Fury Fighting Championship 94: Vigil vs. Gwerder",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-94-Fury-Fighting-Championship-94-Vigil-vs-Gwerder-103214",
+          "date": "2024-07-21",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Ryan Thompson",
+          "round": 2,
+          "time": "1:41"
+        },
+        {
+          "opponent_name": "Mihaela Keller",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mihaela-Keller-359089",
+          "event_name": "Fury FC 87 - Fury Fighting Championship 87",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-87-Fury-Fighting-Championship-87-100686",
+          "date": "2024-03-10",
+          "result": "win",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "John Herzog",
+          "round": 2,
+          "time": "3:03"
+        }
+      ]
+    },
+    {
+      "name": "Erickson Quinzo",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1739509019IMG_9662.jpeg",
+      "weight_class": "Featherweight",
+      "record": "8-4-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Erickson-Quinzo-368473",
+      "fight_history": [
+        {
+          "opponent_name": "Sebastian Gomez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sebastian-Gomez-390335",
+          "event_name": "BSC 34 - Budo Sento Championship 34",
+          "event_sherdog_url": "https://www.sherdog.com/events/BSC-34-Budo-Sento-Championship-34-112451",
+          "date": "2026-04-30",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Horacio Lopez",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Rafael Saenz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafael-Saenz-378977",
+          "event_name": "MFL 2 - Tigre vs. Orozco",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFL-2-Tigre-vs-Orozco-110344",
+          "date": "2025-11-15",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Isidro Cruz",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Cruz Garcia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cruz-Garcia-402306",
+          "event_name": "Combate Global - Mexico vs. Argentina",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Mexico-vs-Argentina-108274",
+          "date": "2025-08-28",
+          "result": "loss",
+          "method": "Technical Submission (Rear-Naked Choke)",
+          "referee": "Antonio Guerrero",
+          "round": 1,
+          "time": "4:33"
+        },
+        {
+          "opponent_name": "Victor Nunez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Victor-Nunez-284189",
+          "event_name": "BSC 27 - Budo Sento Championship 27",
+          "event_sherdog_url": "https://www.sherdog.com/events/BSC-27-Budo-Sento-Championship-27-106696",
+          "date": "2025-02-14",
+          "result": "win",
+          "method": "TKO (Punches and Elbows)",
+          "referee": "Antonio Guerrero",
+          "round": 2,
+          "time": "4:12"
+        },
+        {
+          "opponent_name": "Juan Camilo Caicedo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Juan-Camilo-Caicedo-343893",
+          "event_name": "BSC 24 - Budo Sento Championship 24",
+          "event_sherdog_url": "https://www.sherdog.com/events/BSC-24-Budo-Sento-Championship-24-103441",
+          "date": "2024-08-02",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Horacio Lopez",
+          "round": 2,
+          "time": "2:23"
+        },
+        {
+          "opponent_name": "Erik Neftaly Martinez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erik-Neftaly-Martinez-394395",
+          "event_name": "BDMMA 11 - Beat Down MMA 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/BDMMA-11-Beat-Down-MMA-11-102567",
+          "date": "2024-04-19",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "3:11"
+        },
+        {
+          "opponent_name": "Javier Guzman",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Javier-Guzman-266735",
+          "event_name": "FFC 67 - Galindo vs. Woody",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFC-67-Galindo-vs-Woody-99726",
+          "date": "2023-10-19",
+          "result": "win",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Napoleon Pina",
+          "round": 2,
+          "time": "1:04"
+        },
+        {
+          "opponent_name": "Esteban Nocelo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Esteban-Nocelo-244353",
+          "event_name": "BDMMA 7 - Beat Down MMA 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/BDMMA-7-Beat-Down-MMA-7-102568",
+          "date": "2023-06-17",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "",
+          "round": 1,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Anthony Portilla",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anthony-Portilla-254607",
+          "event_name": "JSFL 1 - Yuma vs. Paillacho",
+          "event_sherdog_url": "https://www.sherdog.com/events/JSFL-1-Yuma-vs-Paillacho-93068",
+          "date": "2022-05-07",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mauricio Naranjo",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jose Alfonso Campos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jose-Alfonso-Campos-310295",
+          "event_name": "Troncal Fight League 1 - Zona de Guerra",
+          "event_sherdog_url": "https://www.sherdog.com/events/Troncal-Fight-League-1-Zona-de-Guerra-92130",
+          "date": "2022-02-19",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Mauricio Naranjo",
+          "round": 1,
+          "time": "4:55"
+        },
+        {
+          "opponent_name": "Alex Cunuhay",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Cunuhay-276421",
+          "event_name": "Barbarians 14 - BFL 14: Centeno vs. Cueva",
+          "event_sherdog_url": "https://www.sherdog.com/events/Barbarians-14-BFL-14-Centeno-vs-Cueva-89790",
+          "date": "2021-06-30",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Daniel Prado",
+          "round": 2,
+          "time": "1:59"
+        },
+        {
+          "opponent_name": "Marco Jherod",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marco-Jherod-382191",
+          "event_name": "EMMA 18 - Extreme MMA 18",
+          "event_sherdog_url": "https://www.sherdog.com/events/EMMA-18-Extreme-MMA-18-88540",
+          "date": "2021-03-06",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mauricio Naranjo",
+          "round": 1,
+          "time": "2:33"
+        }
+      ]
+    },
+    {
+      "name": "Adam Amado",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1786580328Adam_Amado.jpg",
+      "weight_class": "Featherweight",
+      "record": "4-4-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Adam-Amado-317383",
+      "fight_history": [
+        {
+          "opponent_name": "Jesse Langarica",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jesse-Langarica-410504",
+          "event_name": "RUF 70 - Legends",
+          "event_sherdog_url": "https://www.sherdog.com/events/RUF-70-Legends-114050",
+          "date": "2026-08-29",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Brad Frank",
+          "round": 3,
+          "time": "3:08"
+        },
+        {
+          "opponent_name": "Alim Muhammed",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alim-Muhammed-285181",
+          "event_name": "RUF MMA 68 - Cinco De Mayo Fight Night",
+          "event_sherdog_url": "https://www.sherdog.com/events/RUF-MMA-68-Cinco-De-Mayo-Fight-Night-111705",
+          "date": "2026-05-02",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "3:46"
+        },
+        {
+          "opponent_name": "Rod Moore",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rod-Moore-389901",
+          "event_name": "PFC 46 - Peak Fighting 46",
+          "event_sherdog_url": "https://www.sherdog.com/events/PFC-46-Peak-Fighting-46-107622",
+          "date": "2025-08-09",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Jacob Montalvo",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Keyon Lomax",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Keyon-Lomax-399330",
+          "event_name": "SF - Shogun Fights 30",
+          "event_sherdog_url": "https://www.sherdog.com/events/SF-Shogun-Fights-30-107377",
+          "date": "2025-03-29",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Fernando Yamasaki",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Tom Hinz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tom-Hinz-389312",
+          "event_name": "CFFC 132 - Cage Fury Fighting Championships 132: Daukaus vs. Patershuk",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-132-Cage-Fury-Fighting-Championships-132-Daukaus-vs-Patershuk-102704",
+          "date": "2024-06-14",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Dan Miragliotta",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mauricio Gomez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mauricio-Gomez-369934",
+          "event_name": "CFFC 114 - Cage Fury Fighting Championships 114",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-114-Cage-Fury-Fighting-Championships-114-94911",
+          "date": "2022-11-10",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Andrew Glenn",
+          "round": 2,
+          "time": "1:36"
+        },
+        {
+          "opponent_name": "Gonzalo Ojeda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gonzalo-Ojeda-69460",
+          "event_name": "CFFC 110 - Cage Fury Fighting Championships 110: Alequin vs. Radtke",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-110-Cage-Fury-Fighting-Championships-110-Alequin-vs-Radtke-93829",
+          "date": "2022-07-14",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "Wayne Spinola",
+          "round": 2,
+          "time": "4:12"
+        },
+        {
+          "opponent_name": "Brandon Moran",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brandon-Moran-253057",
+          "event_name": "CFFC 100 - Cage Fury Fighting Championships 100",
+          "event_sherdog_url": "https://www.sherdog.com/events/CFFC-100-Cage-Fury-Fighting-Championships-100-90273",
+          "date": "2021-09-16",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Andrew Glenn",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Sean Polk",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sean-Polk-461413",
+      "fight_history": [
+        {
+          "opponent_name": "Edgar Mixan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edgar-Mixan-465417",
+          "event_name": "Fusion Fight League - Fights Under the Lights Missoula",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fusion-Fight-League-Fights-Under-the-Lights-Missoula-114027",
+          "date": "2026-08-29",
+          "result": "win",
+          "method": "KO (Head Kick)",
+          "referee": "",
+          "round": 2,
+          "time": "1:20"
+        },
+        {
+          "opponent_name": "Brandon Role",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brandon-Role-449098",
+          "event_name": "Fusion Fight League - Night of Champions",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fusion-Fight-League-Night-of-Champions-111555",
+          "date": "2026-03-07",
+          "result": "win",
+          "method": "TKO (Body Kick and Punches)",
+          "referee": "",
+          "round": 4,
+          "time": "1:55"
+        },
+        {
+          "opponent_name": "Gavin Young",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gavin-Young-482229",
+          "event_name": "Fusion Fight League - Seasons' Beatings",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fusion-Fight-League-Seasons-Beatings-108414",
+          "date": "2025-12-13",
+          "result": "win",
+          "method": "KO (Head Kick)",
+          "referee": "Dennis Bain",
+          "round": 1,
+          "time": "0:20"
+        },
+        {
+          "opponent_name": "Ty Mcryhew",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ty-Mcryhew-480798",
+          "event_name": "Fusion Fight League - Fights Under The Lights",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fusion-Fight-League-Fights-Under-The-Lights-108408",
+          "date": "2025-06-28",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "0:28"
+        },
+        {
+          "opponent_name": "Pascual Guitierrez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Pascual-Guitierrez-461414",
+          "event_name": "Fusion Fight League - Rising Stars",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fusion-Fight-League-Rising-Stars-104811",
+          "date": "2024-10-18",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:40"
+        }
+      ]
     }
   ],
   "fights": [
@@ -441104,6 +441654,19 @@
     },
     {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Sharaf Davlatmurodov",
+      "fighter2_name": "Wildemar Souza Santos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
       "fighter1_name": "David Wright",
       "fighter2_name": "Lance Wright",
       "fight_finished": false,
@@ -441143,34 +441706,21 @@
     },
     {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Julian Flenory",
-      "fighter2_name": "Ryan Firinaiu",
+      "fighter1_name": "Imed Eddine Dziri",
+      "fighter2_name": "Jermaine Edwards",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Travon Eller",
-      "fighter2_name": "Akeem Lewis",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
       "fighter1_name": "Isaiah Veloso",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Delsin Gray",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -441364,19 +441914,6 @@
     },
     {
       "event_name": "LFA 247 - Breno vs Torres",
-      "fighter1_name": "Lucas Ganin",
-      "fighter2_name": "Abbas Abasov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 247 - Breno vs Torres",
       "fighter1_name": "Delton Kaufmann",
       "fighter2_name": "Abasi Young",
       "fight_finished": false,
@@ -441390,6 +441927,45 @@
     },
     {
       "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Benjamin Orozco",
+      "fighter2_name": "Canon Swanson",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Lucas Ganin",
+      "fighter2_name": "Abbas Abasov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Aiden Ingram",
+      "fighter2_name": "Ricardo Hussein",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
       "fighter1_name": "Paul Marghitas",
       "fighter2_name": "Sergio Mamone Jr.",
       "fight_finished": false,
@@ -441398,6 +441974,45 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Zoe Nowicki",
+      "fighter2_name": "Mia Grawe",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Erickson Quinzo",
+      "fighter2_name": "Adam Amado",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Sean Polk",
+      "fighter2_name": "Luke La Vanway",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     }

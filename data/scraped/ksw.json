@@ -165398,6 +165398,124 @@
           "time": "3:56"
         }
       ]
+    },
+    {
+      "name": "Bohdan Danylko",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1726076226danilko.jpg",
+      "weight_class": "Featherweight",
+      "record": "8-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Bohdan-Danylko-432350",
+      "fight_history": [
+        {
+          "opponent_name": "Patryk Likus",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Patryk-Likus-304353",
+          "event_name": "Babilon MMA 60 - Blachuta vs. Norkus",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-60-Blachuta-vs-Norkus-114010",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Mateusz Wroblewski",
+          "round": 2,
+          "time": "3:07"
+        },
+        {
+          "opponent_name": "Krystian Glazewski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Krystian-Glazewski-361979",
+          "event_name": "Strife 15 - Odzimkowski vs. Ahmala",
+          "event_sherdog_url": "https://www.sherdog.com/events/Strife-15-Odzimkowski-vs-Ahmala-109324",
+          "date": "2025-09-26",
+          "result": "win",
+          "method": "TKO (Punch)",
+          "referee": "",
+          "round": 3,
+          "time": "0:57"
+        },
+        {
+          "opponent_name": "Krzysztof Geburek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Krzysztof-Geburek-411685",
+          "event_name": "DWM Fight Night 4 - Swidwin",
+          "event_sherdog_url": "https://www.sherdog.com/events/DWM-Fight-Night-4-Swidwin-108390",
+          "date": "2025-06-21",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mariusz Magda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mariusz-Magda-216827",
+          "event_name": "DWM Fight Night 3 - DWM Fight Night",
+          "event_sherdog_url": "https://www.sherdog.com/events/DWM-Fight-Night-3-DWM-Fight-Night-107080",
+          "date": "2025-03-29",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Piotr Jarosz",
+          "round": 1,
+          "time": "4:26"
+        },
+        {
+          "opponent_name": "Michal Borowski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Michal-Borowski-329135",
+          "event_name": "FEN 56 - Wroclaw: Ostrowski vs. Stanek",
+          "event_sherdog_url": "https://www.sherdog.com/events/FEN-56-Wroclaw-Ostrowski-vs-Stanek-104124",
+          "date": "2024-10-05",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Szymon Deregowski",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hubert Lotta",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hubert-Lotta-270149",
+          "event_name": "Hybrid MMA 5 - Summer Edition",
+          "event_sherdog_url": "https://www.sherdog.com/events/Hybrid-MMA-5-Summer-Edition-104198",
+          "date": "2024-08-23",
+          "result": "win",
+          "method": "TKO (Punch)",
+          "referee": "",
+          "round": 1,
+          "time": "2:22"
+        },
+        {
+          "opponent_name": "Nathan Chruszczyk",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nathan-Chruszczyk-448521",
+          "event_name": "DWM Fight Night 2 - Local Heroes",
+          "event_sherdog_url": "https://www.sherdog.com/events/DWM-Fight-Night-2-Local-Heroes-102685",
+          "date": "2024-03-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Emil Sniadala",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emil-Sniadala-305485",
+          "event_name": "BFN 4 - Blood Fight Night 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFN-4-Blood-Fight-Night-4-102132",
+          "date": "2024-03-16",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "1:11"
+        },
+        {
+          "opponent_name": "Lukasz Gradzki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lukasz-Gradzki-403908",
+          "event_name": "Strife Tube 1 - Gawryjolek vs. Balla",
+          "event_sherdog_url": "https://www.sherdog.com/events/Strife-Tube-1-Gawryjolek-vs-Balla-98654",
+          "date": "2023-08-12",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Piotr Jarosz",
+          "round": 1,
+          "time": "3:21"
+        }
+      ]
     }
   ],
   "fights": [
@@ -177989,6 +178107,19 @@
       "event_name": "KSW 123 - Bartosinski vs. Lopaczyk",
       "fighter1_name": "Wojciech Kawa",
       "fighter2_name": "Oleksandr Moisa",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "KSW 123 - Bartosinski vs. Lopaczyk",
+      "fighter1_name": "Maciej Kazieczko",
+      "fighter2_name": "Bohdan Danylko",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

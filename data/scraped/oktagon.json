@@ -884,11 +884,18 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/899386"
     },
     {
-      "name": "Oktagon MMA - Oktagon 101",
+      "name": "Oktagon MMA - Oktagon 101: Dalaslan vs. Kinehan",
       "date": "2027-01-16",
       "start_time": "2027-01-16T00:00:00+00:00",
       "event_location": "Hanns-Martin-Schleyer-Halle, Stuttgart, Germany",
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/902859"
+    },
+    {
+      "name": "Oktagon MMA - Oktagon 102: Kincl vs. Humburger",
+      "date": "2027-01-30",
+      "start_time": "2027-01-30T00:00:00+00:00",
+      "event_location": "Home Credit Arena, Liberec, Czech Republic",
+      "event_poster": "https://www1-cdn.sherdog.com/image_vs/903163"
     }
   ],
   "fighters": [
@@ -22375,19 +22382,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 97: Severino vs. Holzer",
-      "fighter1_name": "Jan Holzer",
-      "fighter2_name": "Rastislav Zvara",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 97: Severino vs. Holzer",
       "fighter1_name": "Ozan Aslaner",
       "fighter2_name": "Denis Frimpong",
       "fight_finished": false,
@@ -22415,7 +22409,7 @@
     {
       "event_name": "Oktagon MMA - Oktagon 97: Severino vs. Holzer",
       "fighter1_name": "Jan Holzer",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Jan Svagerko",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -22486,7 +22480,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "163lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -22569,6 +22563,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
+      "fighter1_name": "Michaela Hlavacikova",
+      "fighter2_name": "Marta Sos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "Oktagon MMA - Oktagon 99",
       "fighter1_name": "Patrick Vespaziani",
       "fighter2_name": "Nicolaj Wagner",
@@ -22579,6 +22586,19 @@
       "time": "",
       "weight_class": "Heavyweight",
       "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 99",
+      "fighter1_name": "Marc Doussis",
+      "fighter2_name": "Adam Palasz",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": false,
       "is_title_fight": false
     },
     {
@@ -22596,6 +22616,19 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 99",
+      "fighter1_name": "Altin Zenuni",
+      "fighter2_name": "Tomas Ciganik",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 99",
       "fighter1_name": "Moh Eter",
       "fighter2_name": "Tomas Holecek",
       "fight_finished": false,
@@ -22604,6 +22637,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 99",
+      "fighter1_name": "Ali Gunduz",
+      "fighter2_name": "Abdullah Sultani",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -22634,7 +22680,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 101",
+      "event_name": "Oktagon MMA - Oktagon 101: Dalaslan vs. Kinehan",
       "fighter1_name": "Alina Dalaslan",
       "fighter2_name": "Niamh Kinehan",
       "fight_finished": false,
@@ -22645,6 +22691,19 @@
       "weight_class": "Bantamweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 102: Kincl vs. Humburger",
+      "fighter1_name": "Patrik Kincl",
+      "fighter2_name": "Dominik Humburger",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": true,
+      "is_title_fight": false
     }
   ]
 }
