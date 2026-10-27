@@ -849,7 +849,7 @@
       "event_poster": "https://www1-cdn.sherdog.com/image_vs/895082"
     },
     {
-      "name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "date": "2026-10-31",
       "start_time": "2026-10-31T00:00:00+00:00",
       "event_location": "SAP Garden, Munich, Germany",
@@ -7919,6 +7919,518 @@
           "referee": "",
           "round": 2,
           "time": "2:11"
+        }
+      ]
+    },
+    {
+      "name": "Dawid Smielowski",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1731388184IMG_8220.jpeg",
+      "weight_class": "Welterweight",
+      "record": "12-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Dawid-Smielowski-185407",
+      "fight_history": [
+        {
+          "opponent_name": "Gracjan Wyroslak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gracjan-Wyroslak-328727",
+          "event_name": "Hybrid MMA 10 - Smielowski vs. Wyroslak",
+          "event_sherdog_url": "https://www.sherdog.com/events/Hybrid-MMA-10-Smielowski-vs-Wyroslak-110849",
+          "date": "2025-12-12",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Piotr Jarosz",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Welisson Paiva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Welisson-Paiva-300591",
+          "event_name": "KSW 103 - Brichta vs. Charzewski",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-103-Brichta-vs-Charzewski-105142",
+          "date": "2025-02-21",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Paulina Swider",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Aymard Guih",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aymard-Guih-125233",
+          "event_name": "KSW 100 - Khalidov vs. Bartosinski",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-100-Khalidov-vs-Bartosinski-103747",
+          "date": "2024-11-16",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Loic Pora",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Bartlomiej Kopera",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bartlomiej-Kopera-70075",
+          "event_name": "KSW 96 - Pawlak vs. Janikowski",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-96-Pawlak-vs-Janikowski-102728",
+          "date": "2024-07-20",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Piotr Jarosz",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Lom-Ali Eskiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/LomAli-Eskiev-89601",
+          "event_name": "KSW 86 - Wiklacz vs. Przybysz 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-86-Wiklacz-vs-Przybysz-4-98555",
+          "date": "2023-09-16",
+          "result": "loss",
+          "method": "TKO (Elbows and Punches)",
+          "referee": "Piotr Jarosz",
+          "round": 1,
+          "time": "4:21"
+        },
+        {
+          "opponent_name": "Patryk Kaczmarczyk",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Patryk-Kaczmarczyk-288887",
+          "event_name": "KSW 72 - Romanowski vs. Grzebyk",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-72-Romanowski-vs-Grzebyk-93628",
+          "date": "2022-07-23",
+          "result": "win",
+          "method": "KO (Body Kick)",
+          "referee": "Piotr Jarosz",
+          "round": 2,
+          "time": "2:51"
+        },
+        {
+          "opponent_name": "Filip Pejic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Filip-Pejic-85664",
+          "event_name": "KSW 67 - De Fries vs. Stosic",
+          "event_sherdog_url": "https://www.sherdog.com/events/KSW-67-De-Fries-vs-Stosic-91810",
+          "date": "2022-02-26",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Tomasz Bronder",
+          "round": 3,
+          "time": "4:52"
+        },
+        {
+          "opponent_name": "Krzysztof  Gutowski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Krzysztof-Gutowski-210173",
+          "event_name": "Babilon MMA 20 - Smielowski vs. Gutowski",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-20-Smielowski-vs-Gutowski-88781",
+          "date": "2021-03-26",
+          "result": "win",
+          "method": "KO (Head Kick and Punches)",
+          "referee": "Tomasz Bronder",
+          "round": 1,
+          "time": "4:58"
+        },
+        {
+          "opponent_name": "Hubert  Sulewski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hubert-Sulewski-210367",
+          "event_name": "Babilon MMA 15 - Skibinski vs. Medvedovski",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-15-Skibinski-vs-Medvedovski-87332",
+          "date": "2020-08-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Cezary Wojciechowski",
+          "round": 2,
+          "time": "4:32"
+        },
+        {
+          "opponent_name": "Damian Zorczykowski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Damian-Zorczykowski-185413",
+          "event_name": "Babilon MMA 11 - Skibinski vs. Nalgiev",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-11-Skibinski-vs-Nalgiev-82445",
+          "date": "2019-12-13",
+          "result": "win",
+          "method": "KO (Flying Knee)",
+          "referee": "Piotr Jarosz",
+          "round": 3,
+          "time": "4:46"
+        },
+        {
+          "opponent_name": "Dmitriy Gorbatov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dmitriy-Gorbatov-265845",
+          "event_name": "Slugfest 16 - Wagrowiec",
+          "event_sherdog_url": "https://www.sherdog.com/events/Slugfest-16-Wagrowiec-74839",
+          "date": "2019-05-24",
+          "result": "win",
+          "method": "Submission (Buldog Choke)",
+          "referee": "Tomasz Bronder",
+          "round": 1,
+          "time": "1:35"
+        },
+        {
+          "opponent_name": "Piotr Kacprzak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Piotr-Kacprzak-269023",
+          "event_name": "Babilon MMA 7 - Kita vs. Gluchowski",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-7-Kita-vs-Gluchowski-73155",
+          "date": "2019-01-25",
+          "result": "win",
+          "method": "TKO (Shoulder Injury)",
+          "referee": "Tomasz Bronder",
+          "round": 1,
+          "time": "1:46"
+        },
+        {
+          "opponent_name": "Dawid Matyszczak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dawid-Matyszczak-151059",
+          "event_name": "RWC 1 - Nowe rozdanie",
+          "event_sherdog_url": "https://www.sherdog.com/events/RWC-1-Nowe-rozdanie-72905",
+          "date": "2018-12-21",
+          "result": "win",
+          "method": "Submission (Triangle Choke)",
+          "referee": "Cezary Wojciechowski",
+          "round": 3,
+          "time": "2:39"
+        },
+        {
+          "opponent_name": "Slawomir Szczepanski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Slawomir-Szczepanski-208731",
+          "event_name": "Slugfest 14 - Murowana Goslina",
+          "event_sherdog_url": "https://www.sherdog.com/events/Slugfest-14-Murowana-Goslina-66157",
+          "date": "2018-04-13",
+          "result": "win",
+          "method": "KO (High Kick)",
+          "referee": "Piotr Jarosz",
+          "round": 1,
+          "time": "4:19"
+        },
+        {
+          "opponent_name": "Jakub Hanuszkiewicz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jakub-Hanuszkiewicz-266407",
+          "event_name": "Slugfest 12 - Wagrowiec",
+          "event_sherdog_url": "https://www.sherdog.com/events/Slugfest-12-Wagrowiec-63717",
+          "date": "2017-10-28",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Cezary Wojciechowski",
+          "round": 1,
+          "time": "3:29"
+        }
+      ]
+    },
+    {
+      "name": "Arbi Mezhidov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/152308377745457bc6a80b3e92d20a29e96ac37e5f_6tD5h_495x495.png",
+      "weight_class": "Welterweight",
+      "record": "19-7-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Arbi-Mezhidov-85225",
+      "fight_history": [
+        {
+          "opponent_name": "Alex da Silva Coelho",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-da-Silva-Coelho-153799",
+          "event_name": "UAE Warriors 69 - Chopurov vs. Ramos",
+          "event_sherdog_url": "https://www.sherdog.com/events/UAE-Warriors-69-Chopurov-vs-Ramos-111928",
+          "date": "2026-03-28",
+          "result": "loss",
+          "method": "Submission (Anaconda Choke)",
+          "referee": "Sulaiman Al Mudiyan",
+          "round": 2,
+          "time": "0:44"
+        },
+        {
+          "opponent_name": "Jairo Pacheco",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jairo-Pacheco-270425",
+          "event_name": "Real Fight Arena 25 - RFA 25",
+          "event_sherdog_url": "https://www.sherdog.com/events/Real-Fight-Arena-25-RFA-25-109850",
+          "date": "2025-10-18",
+          "result": "loss",
+          "method": "Submission (Neck Crank)",
+          "referee": "",
+          "round": 4,
+          "time": "2:00"
+        },
+        {
+          "opponent_name": "Marcus Rodrigues da Costa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcus-Rodrigues-da-Costa-199085",
+          "event_name": "XCC 2 - Xtreme Combat Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/XCC-2-Xtreme-Combat-Championship-108085",
+          "date": "2025-05-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Martin Horinek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Martin-Horinek-307129",
+          "event_name": "Real Fight Arena 15 - RFA 15: Bratislava",
+          "event_sherdog_url": "https://www.sherdog.com/events/Real-Fight-Arena-15-RFA-15-Bratislava-100797",
+          "date": "2024-03-09",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jocimar Ferreira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jocimar-Ferreira-67348",
+          "event_name": "Sparta Championship Fighting - Sparta CF 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Sparta-Championship-Fighting-Sparta-CF-2-96516",
+          "date": "2023-03-11",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Julio Barreto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Julio-Barreto-185617",
+          "event_name": "Real Fight Arena 5 - RFA 5: Brno",
+          "event_sherdog_url": "https://www.sherdog.com/events/Real-Fight-Arena-5-RFA-5-Brno-94854",
+          "date": "2022-10-29",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Lukasz Bosacki",
+          "round": 1,
+          "time": "0:24"
+        },
+        {
+          "opponent_name": "Ozan Aslaner",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ozan-Aslaner-201483",
+          "event_name": "NFC 7 - National Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/NFC-7-National-Fighting-Championship-90908",
+          "date": "2021-12-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Jan Vobornik",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Sahil Siraj",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sahil-Siraj-209747",
+          "event_name": "FCR 9 - Fight Club Rush 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/FCR-9-Fight-Club-Rush-9-90175",
+          "date": "2021-09-04",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Rebin Saber",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Aleksandr Vertko",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aleksandr-Vertko-180861",
+          "event_name": "NFT Gym - National Fighting Championship 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/NFT-Gym-National-Fighting-Championship-4-89804",
+          "date": "2021-07-25",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Saul Rogers",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Saul-Rogers-71863",
+          "event_name": "Bellator 248 - Kongo vs. Johnson 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Bellator-248-Kongo-vs-Johnson-2-87493",
+          "date": "2020-10-10",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Todd Anderson",
+          "round": 1,
+          "time": "4:38"
+        },
+        {
+          "opponent_name": "Krisztian Simon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Krisztian-Simon-239193",
+          "event_name": "XFN - Double Red Fight Night",
+          "event_sherdog_url": "https://www.sherdog.com/events/XFN-Double-Red-Fight-Night-83829",
+          "date": "2019-12-14",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Ondrej Petr",
+          "round": 2,
+          "time": "2:59"
+        },
+        {
+          "opponent_name": "Souksavanh Khampasath",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Souksavanh-Khampasath-79267",
+          "event_name": "XFN 16 - X Fight Nights 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/XFN-16-X-Fight-Nights-16-73779",
+          "date": "2019-02-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Lukasz Bosacki",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ludovit Klein",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ludovit-Klein-183159",
+          "event_name": "XFN 14 - X Fight Nights 14",
+          "event_sherdog_url": "https://www.sherdog.com/events/XFN-14-X-Fight-Nights-14-67703",
+          "date": "2018-11-18",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Lukasz Bosacki",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jose Zarauz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jose-Zarauz-105907",
+          "event_name": "ACB 84 - Bratislava",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACB-84-Bratislava-66013",
+          "date": "2018-04-07",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ioan Vranceanu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ioan-Vranceanu-174407",
+          "event_name": "ACB 60 - Vienna",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACB-60-Vienna-59519",
+          "date": "2017-05-13",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marco Broersen",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Bogdan Barbu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bogdan-Barbu-181791",
+          "event_name": "AFC - Austrian Fight Challenge 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFC-Austrian-Fight-Challenge-4-56981",
+          "date": "2016-12-10",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Wolfgang Hartl",
+          "round": 2,
+          "time": "2:30"
+        },
+        {
+          "opponent_name": "Marko Burusic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marko-Burusic-85793",
+          "event_name": "FFC 26 - Final Fight Championship 26",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFC-26-Final-Fight-Championship-26-52995",
+          "date": "2016-09-23",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Grant Waterman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Andrei Vasinca",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Andrei-Vasinca-167221",
+          "event_name": "AFC - Austrian Fight Challenge 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFC-Austrian-Fight-Challenge-3-53847",
+          "date": "2016-07-09",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Jan Vobornik",
+          "round": 1,
+          "time": "3:30"
+        },
+        {
+          "opponent_name": "Zoltan Hegedus",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zoltan-Hegedus-181887",
+          "event_name": "WLMMA - We Love MMA 22",
+          "event_sherdog_url": "https://www.sherdog.com/events/WLMMA-We-Love-MMA-22-52813",
+          "date": "2016-06-04",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Wolfgang Hartl",
+          "round": 1,
+          "time": "1:23"
+        },
+        {
+          "opponent_name": "Zsolt Fenyes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zsolt-Fenyes-86819",
+          "event_name": "VFN 8 - Vendetta 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/VFN-8-Vendetta-8-34537",
+          "date": "2013-11-23",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Ceyrhan Bayrakci",
+          "round": 1,
+          "time": "1:00"
+        },
+        {
+          "opponent_name": "Milan Zerjal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Milan-Zerjal-76321",
+          "event_name": "WFC 17 - Olimp: Live & Fight",
+          "event_sherdog_url": "https://www.sherdog.com/events/WFC-17-Olimp-Live-Fight-24093",
+          "date": "2012-10-21",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Grant Waterman",
+          "round": 3,
+          "time": "4:37"
+        },
+        {
+          "opponent_name": "Lubos Pavelka",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lubos-Pavelka-119803",
+          "event_name": "VFN 5 - Vendetta 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/VFN-5-Vendetta-5-26355",
+          "date": "2012-09-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Nebil Sebai",
+          "round": 1,
+          "time": "0:42"
+        },
+        {
+          "opponent_name": "Nicolae Negrea",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nicolae-Negrea-104151",
+          "event_name": "WFC - Challengers 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/WFC-Challengers-3-23025",
+          "date": "2012-06-03",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 2,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Leonardo Zecchi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leonardo-Zecchi-95379",
+          "event_name": "WFC - Challengers 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/WFC-Challengers-2-20993",
+          "date": "2012-03-17",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "0:58"
+        },
+        {
+          "opponent_name": "Primoz Vrbinc",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Primoz-Vrbinc-72785",
+          "event_name": "WFC 15 - Olimp Sport Nutrition",
+          "event_sherdog_url": "https://www.sherdog.com/events/WFC-15-Olimp-Sport-Nutrition-19579",
+          "date": "2011-12-18",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "Grant Waterman",
+          "round": 2,
+          "time": "1:41"
+        },
+        {
+          "opponent_name": "Luka Coz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luka-Coz-55701",
+          "event_name": "WFC - Challengers",
+          "event_sherdog_url": "https://www.sherdog.com/events/WFC-Challengers-18549",
+          "date": "2011-09-25",
+          "result": "win",
+          "method": "KO",
+          "referee": "Grant Waterman",
+          "round": 1,
+          "time": "4:50"
         }
       ]
     }
@@ -22199,9 +22711,9 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Amiran Gogoladze",
-      "fighter2_name": "Felix Klinkhammer",
+      "fighter2_name": "Jessin Ayari",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -22212,9 +22724,9 @@
       "is_title_fight": true
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Gokhan Aksu",
-      "fighter2_name": "Niko Samsonidse",
+      "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -22225,7 +22737,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Ronald Paradeiser",
       "fighter2_name": "Tyrone Pfeifer",
       "fight_finished": false,
@@ -22238,7 +22750,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Lazar Todev",
       "fighter2_name": "Simon Biyong",
       "fight_finished": false,
@@ -22251,20 +22763,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
-      "fighter1_name": "Ion Surdu",
-      "fighter2_name": "Jessin Ayari",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Michael Deiga Scheck",
       "fighter2_name": "Lukas Chotenovsky",
       "fight_finished": false,
@@ -22277,7 +22776,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Marek Bartl",
       "fighter2_name": "Brian Manning",
       "fight_finished": false,
@@ -22290,7 +22789,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Endrit Brajshori",
       "fighter2_name": "Christian Mach",
       "fight_finished": false,
@@ -22303,7 +22802,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Henrique Madureira",
       "fighter2_name": "Daniel Schordje",
       "fight_finished": false,
@@ -22316,7 +22815,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Kevin Hangs",
       "fighter2_name": "Burak Kizilirmak",
       "fight_finished": false,
@@ -22329,20 +22828,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
-      "fighter1_name": "Shawn Marcos da Silva",
-      "fighter2_name": "Fayaz Haqparast",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Klinkhammer",
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Marat Nessar",
       "fighter2_name": "Abdul Malik Aliev",
       "fight_finished": false,
@@ -22572,6 +23058,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
+      "fighter1_name": "Dawid Smielowski",
+      "fighter2_name": "Arbi Mezhidov",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },

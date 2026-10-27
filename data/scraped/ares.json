@@ -4672,6 +4672,28 @@
           "time": "2:13"
         }
       ]
+    },
+    {
+      "name": "Nikodem Blazejewski",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "0-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Nikodem-Blazejewski-509626",
+      "fight_history": [
+        {
+          "opponent_name": "Bartlomiej Mikolajczyk",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bartlomiej-Mikolajczyk-423439",
+          "event_name": "SCF 9 - Solo Combat Federation",
+          "event_sherdog_url": "https://www.sherdog.com/events/SCF-9-Solo-Combat-Federation-114814",
+          "date": "2026-10-16",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Grzegorz Szczepanik",
+          "round": 1,
+          "time": "1:45"
+        }
+      ]
     }
   ],
   "fights": [
@@ -9982,13 +10004,13 @@
     {
       "event_name": "Ares 45 - Zebo vs. Baki 2",
       "fighter1_name": "Nimo Djagbo",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Nikodem Blazejewski",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },
