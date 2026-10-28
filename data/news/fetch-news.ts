@@ -84,9 +84,12 @@ async function ingestSource(source: NewsSourceConfig, recentTitles: RecentTitle[
     const toInsert = dedupeAgainstExisting(candidates, recentTitles);
 
     for (const article of toInsert) {
+      // Only title, source, date and link are kept: the excerpt (the outlet's
+      // text) and the enclosure image (often agency photos) belong to the
+      // publisher, so neither is stored nor shown.
       const result = await sql<{ id: number }>`
         INSERT INTO news_articles (source_id, org_id, title, excerpt, url, image_url, language, published_at)
-        VALUES (${article.sourceId}, ${article.orgId}, ${article.title}, ${article.excerpt}, ${article.url}, ${article.imageUrl}, ${article.language}, ${article.publishedAt.toISOString()})
+        VALUES (${article.sourceId}, ${article.orgId}, ${article.title}, '', ${article.url}, NULL, ${article.language}, ${article.publishedAt.toISOString()})
         ON CONFLICT (url) DO NOTHING
         RETURNING id
       `;
