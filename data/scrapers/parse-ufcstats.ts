@@ -4,8 +4,9 @@
 // granular stats (significant strikes, takedowns, control time, strike
 // placement) that Sherdog's own "Fight History" table (see parse.ts /
 // fighter_fight_history) never carries. UFC-only: UFCStats doesn't cover any
-// other organization. Fetching these pages requires a real (headless)
-// browser — see shared/fetch-playwright.ts's doc comment for why.
+// other organization. The scraper that fetched these pages was removed on
+// 2026-10-28 (UFCStats blocks bots and fetching it meant bypassing that);
+// the parsers stay for the already-committed data and their tests.
 import type { CheerioAPI } from 'cheerio';
 
 export interface UfcStatsEventMeta {

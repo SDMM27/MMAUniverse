@@ -1,6 +1,7 @@
 // data/scrapers/shared/ufcstats-bonuses.ts
 //
-// The file scrape-ufcstats-bonuses.ts writes and sync-fighter-stats.ts reads.
+// The file the (removed, 2026-10-28) UFCStats bonus scraper wrote and
+// sync-fighter-stats.ts reads. No longer refreshed.
 import fs from 'node:fs';
 import path from 'node:path';
 import type { UfcStatsFightBonuses } from '../parse-ufcstats';

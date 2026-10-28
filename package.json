@@ -29,8 +29,6 @@
     "sync:fighter-history": "tsx data/scrapers/sync-fighter-history.ts",
     "sync:ufc-times": "tsx data/scrapers/sync-ufc-broadcast-times.ts",
     "sync:ufc-rankings": "tsx data/scrapers/sync-ufc-rankings.ts",
-    "scrape:ufcstats": "tsx data/scrapers/scrape-ufcstats.ts",
-    "scrape:ufcstats-bonuses": "tsx data/scrapers/scrape-ufcstats-bonuses.ts",
     "sync:fighter-stats": "tsx data/scrapers/sync-fighter-stats.ts",
     "sync:fighter-physique": "tsx data/scrapers/sync-fighter-physique.ts",
     "sync:fighter-gender": "tsx data/scrapers/sync-fighter-gender.ts",
