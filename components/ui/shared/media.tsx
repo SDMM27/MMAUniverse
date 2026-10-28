@@ -66,9 +66,6 @@ export function CoverImage({
           className="object-cover"
           style={{ objectPosition }}
           onError={() => setFailed(true)}
-          // Our own files in public/ (organization badges) are already small —
-          // serve them as-is rather than spending the Vercel image-optimization quota.
-          unoptimized={src.startsWith('/')}
         />
       </div>
     </div>

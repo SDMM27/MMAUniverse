@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    // The Vercel image-optimization quota ran out (every /_next/image answered
+    // 402, so every photo fell back to the silhouette). Images are served as-is:
+    // fighter photos are already Commons thumbnails, the rest are our own files.
+    unoptimized: true,
     // Fighter photos and event posters are hotlinked from Sherdog (scraped source,
     // see data/scrapers/sherdog.ts) — allow next/image to optimize them. Wildcard
     // covers both the main domain (fighter photos) and its CDN subdomains (event
