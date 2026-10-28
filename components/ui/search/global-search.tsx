@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { CoverImage } from '@/components/ui/shared/media';
+import { orgLogoPath } from '@/data/lib/org-logos';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
 import {
@@ -298,7 +299,7 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
                 {results.events.map((event) => (
                   <Link key={event.id} href={eventHref(event)} {...optionProps()}>
                     <CoverImage
-                      src={event.event_poster}
+                      src={event.organization_abbreviation ? orgLogoPath(event.organization_abbreviation) : null}
                       alt=""
                       sizes="40px"
                       className="h-10 w-10 shrink-0 rounded-md"
