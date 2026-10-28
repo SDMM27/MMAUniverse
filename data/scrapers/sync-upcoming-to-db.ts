@@ -14,7 +14,7 @@ import type { ScrapedFighter, ScrapedOrgData } from './shared/types';
 import { currentRecord } from './shared/fighter-record';
 import { planFightSync, type FreshFight } from './shared/fight-sync';
 import { ORG_CONFIGS } from './orgs.config';
-import { isRecentPastDate } from './shared/live-dates';
+import { catchUpDaysFromArgs, isMissedPastDate, isRecentPastDate } from './shared/live-dates';
 
 // tsx doesn't auto-load .env.local the way Next.js does; parse it by hand.
 function loadEnvLocal() {
@@ -54,6 +54,7 @@ function loadDataset(orgKey: string): ScrapedOrgData {
 // write a data/scraped/{orgKey}.json for each entry in ORG_CONFIGS, so sync should pick up
 // all of them rather than silently ignoring one, cagewarriors, rizin, ksw, aca, invicta, lfa.
 const datasets = ORG_CONFIGS.map((config) => loadDataset(config.orgKey));
+const catchUpDays = catchUpDaysFromArgs();
 
 async function upsertEvent(
   event: { name: string; date: string; start_time?: string; event_location: string; event_poster: string },
@@ -192,7 +193,12 @@ async function syncRecentPastResults(dataset: ScrapedOrgData, today: string) {
   `) as { id: number; name: string; date: string }[];
 
   for (const row of pendingRows) {
-    if (!isRecentPastDate(row.date)) continue;
+    if (!isRecentPastDate(row.date, undefined, catchUpDays)) {
+      if (isMissedPastDate(row.date, undefined, catchUpDays)) {
+        console.warn(`  WARNING: "${row.name}" (${row.date}) still has unfinished fights in Neon, older than the ${catchUpDays}-day catch-up -- rerun with --catch-up-days`);
+      }
+      continue;
+    }
     // By name first; else by date, since Sherdog may have renamed the event since the last sync.
     const sameDate = dataset.events.filter((e) => e.date === row.date);
     const event = dataset.events.find((e) => e.name === row.name) ?? (sameDate.length === 1 ? sameDate[0] : undefined);
