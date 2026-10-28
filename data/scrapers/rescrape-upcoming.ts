@@ -17,14 +17,15 @@ import path from 'node:path';
 import { fetchAndLoad } from './shared/fetch-throttled';
 import { parseEventTableUrls, parseEventDetails, parseFighterDetails, toScrapedFightHistory } from './parse';
 import { ORG_CONFIGS } from './orgs.config';
-import { isRecentPastDate } from './shared/live-dates';
+import { catchUpDaysFromArgs, isMissedPastDate, isRecentPastDate } from './shared/live-dates';
 import type { ScrapedOrgData, ScrapedEvent, ScrapedFighter, ScrapedFight } from './shared/types';
 
 const SHERDOG_BASE = 'https://www.sherdog.com';
 const OUTPUT_DIR = path.resolve('data/scraped');
 
 async function main() {
-  const requestedKey = process.argv[2];
+  const requestedKey = process.argv.slice(2).find((a) => !a.startsWith('--'));
+  const catchUpDays = catchUpDaysFromArgs();
   const configs = requestedKey ? ORG_CONFIGS.filter((c) => c.orgKey === requestedKey) : ORG_CONFIGS;
 
   if (requestedKey && configs.length === 0) {
@@ -51,8 +52,13 @@ async function main() {
     // Recently-past events with at least one fight the JSON still has as not finished.
     const unfinishedEventNames = new Set(existing.fights.filter((f) => !f.fight_finished).map((f) => f.event_name));
     const incompleteDates = new Set(
-      existing.events.filter((e) => unfinishedEventNames.has(e.name) && isRecentPastDate(e.date)).map((e) => e.date),
+      existing.events.filter((e) => unfinishedEventNames.has(e.name) && isRecentPastDate(e.date, undefined, catchUpDays)).map((e) => e.date),
     );
+    for (const e of existing.events) {
+      if (unfinishedEventNames.has(e.name) && isMissedPastDate(e.date, undefined, catchUpDays)) {
+        console.warn(`[${config.orgKey}] WARNING: "${e.name}" (${e.date}) still has unfinished fights, older than the ${catchUpDays}-day catch-up -- rerun with --catch-up-days`);
+      }
+    }
     const oldestIncompleteDate = Array.from(incompleteDates).sort()[0];
 
     const eventPages: { url: string; recent: boolean }[] = upcomingUrls.map((url) => ({ url, recent: false }));

@@ -2,12 +2,6 @@
   "organization_id": 10,
   "events": [
     {
-      "name": "LFA 239 - Mecate vs. Exposito",
-      "date": "2026-08-21",
-      "event_location": "Ventura County Fairgrounds, Ventura, California, United States",
-      "event_poster": ""
-    },
-    {
       "name": "LFA 238 - Distrito #1",
       "date": "2026-07-31",
       "event_location": "Nilson Nelson Gymnasium, Brasilia, Federal District, Brazil",
@@ -1501,6 +1495,13 @@
       "date": "2026-11-20",
       "start_time": "2026-11-20T00:00:00+00:00",
       "event_location": "Arizona Financial Theatre, Phoenix, Arizona, United States",
+      "event_poster": ""
+    },
+    {
+      "name": "LFA 239 - Mecate vs. Exposito",
+      "date": "2026-08-21",
+      "start_time": "2026-08-21T00:00:00+00:00",
+      "event_location": "Ventura County Fairgrounds, Ventura, California, United States",
       "event_poster": ""
     }
   ],
@@ -412261,119 +412262,77 @@
           "time": "2:40"
         }
       ]
+    },
+    {
+      "name": "Talal Yousufzai",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Heavyweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Talal-Yousufzai-408840",
+      "fight_history": [
+        {
+          "opponent_name": "O'Shay Jordan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/OShay-Jordan-399254",
+          "event_name": "RUF MMA 47 - Road To One Finals",
+          "event_sherdog_url": "https://www.sherdog.com/events/RUF-MMA-47-Road-To-One-Finals-92865",
+          "date": "2022-05-14",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "1:14"
+        }
+      ]
+    },
+    {
+      "name": "Josh Reynolds",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Middleweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Josh-Reynolds-473952",
+      "fight_history": [
+        {
+          "opponent_name": "Wacey Woods",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Wacey-Woods-437259",
+          "event_name": "APC 24 - All Powers Combat 24",
+          "event_sherdog_url": "https://www.sherdog.com/events/APC-24-All-Powers-Combat-24-107341",
+          "date": "2024-11-16",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 2,
+          "time": "2:02"
+        },
+        {
+          "opponent_name": "Delton Kaufmann",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Delton-Kaufmann-339191",
+          "event_name": "APC 23 - All Powers Combat 23",
+          "event_sherdog_url": "https://www.sherdog.com/events/APC-23-All-Powers-Combat-23-107340",
+          "date": "2023-11-17",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:10"
+        },
+        {
+          "opponent_name": "Timothy Moore Jr.",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Timothy-Moore-Jr-380346",
+          "event_name": "XFN 31 - Xtreme Fighting Nation 31: Back in Action",
+          "event_sherdog_url": "https://www.sherdog.com/events/XFN-31-Xtreme-Fighting-Nation-31-Back-in-Action-88305",
+          "date": "2020-12-19",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "0:55"
+        }
+      ]
     }
   ],
   "fights": [
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Chris Mecate",
-      "fighter2_name": "Manuel Exposito",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Daniel Frunza",
-      "fighter2_name": "Jonathan Hanes",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Benjamin Orozco",
-      "fighter2_name": "Dzhamal Mavliudov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Nika Sabanashvili",
-      "fighter2_name": "Artur Gadzhikhanov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "140lb Catchweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Irakli Kuchukhidze",
-      "fighter2_name": "Austin Clayton",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Joaquin Garcia",
-      "fighter2_name": "Orlando Sanders",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Trever Devestern",
-      "fighter2_name": "Edmund Kwan",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Sevak Khachatryan",
-      "fighter2_name": "Aiden Ingram",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Terrell Bosen",
-      "fighter2_name": "Christopher Collins",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Light Heavyweight"
-    },
-    {
-      "event_name": "LFA 239 - Mecate vs. Exposito",
-      "fighter1_name": "Ryan Firinaiu",
-      "fighter2_name": "Yoan Robert-Ramirez",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Heavyweight"
-    },
     {
       "event_name": "LFA 238 - Distrito #1",
       "fighter1_name": "Herbeth Sousa",
@@ -441667,19 +441626,6 @@
     },
     {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "David Wright",
-      "fighter2_name": "Lance Wright",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
       "fighter1_name": "Matthew Adams",
       "fighter2_name": "Shealor Ladd",
       "fight_finished": false,
@@ -441688,6 +441634,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "David Wright",
+      "fighter2_name": "Lance Wright",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -441914,14 +441873,14 @@
     },
     {
       "event_name": "LFA 247 - Breno vs Torres",
-      "fighter1_name": "Delton Kaufmann",
-      "fighter2_name": "Abasi Young",
+      "fighter1_name": "Lucas Ganin",
+      "fighter2_name": "Abbas Abasov",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Middleweight",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -441940,19 +441899,6 @@
     },
     {
       "event_name": "LFA 247 - Breno vs Torres",
-      "fighter1_name": "Lucas Ganin",
-      "fighter2_name": "Abbas Abasov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 247 - Breno vs Torres",
       "fighter1_name": "Aiden Ingram",
       "fighter2_name": "Ricardo Hussein",
       "fight_finished": false,
@@ -441966,19 +441912,6 @@
     },
     {
       "event_name": "LFA 247 - Breno vs Torres",
-      "fighter1_name": "Paul Marghitas",
-      "fighter2_name": "Sergio Mamone Jr.",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 247 - Breno vs Torres",
       "fighter1_name": "Zoe Nowicki",
       "fighter2_name": "Mia Grawe",
       "fight_finished": false,
@@ -441987,6 +441920,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Delton Kaufmann",
+      "fighter2_name": "Abasi Young",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Paul Marghitas",
+      "fighter2_name": "Sergio Mamone Jr.",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -442013,6 +441972,149 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 247 - Breno vs Torres",
+      "fighter1_name": "Talal Yousufzai",
+      "fighter2_name": "Josh Reynolds",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "215lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Chris Mecate",
+      "fighter2_name": "Manuel Exposito",
+      "fight_finished": true,
+      "winner_name": "Chris Mecate",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "150lbCatchweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Daniel Frunza",
+      "fighter2_name": "Jonathan Hanes",
+      "fight_finished": true,
+      "winner_name": "Daniel Frunza",
+      "method": "KO (Punches)",
+      "round": 2,
+      "time": "1:52",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Benjamin Orozco",
+      "fighter2_name": "Dzhamal Mavliudov",
+      "fight_finished": true,
+      "winner_name": "Benjamin Orozco",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "158lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Artur Gadzhikhanov",
+      "fighter2_name": "Nika Sabanashvili",
+      "fight_finished": true,
+      "winner_name": "Artur Gadzhikhanov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "140lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Austin Clayton",
+      "fighter2_name": "Irakli Kuchukhidze",
+      "fight_finished": true,
+      "winner_name": "Austin Clayton",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Orlando Sanders",
+      "fighter2_name": "Joaquin Garcia",
+      "fight_finished": true,
+      "winner_name": "Orlando Sanders",
+      "method": "Submission (Armbar)",
+      "round": 3,
+      "time": "1:20",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Trever Devestern",
+      "fighter2_name": "Edmund Kwan",
+      "fight_finished": true,
+      "winner_name": "Trever Devestern",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Aiden Ingram",
+      "fighter2_name": "Sevak Khachatryan",
+      "fight_finished": true,
+      "winner_name": "Aiden Ingram",
+      "method": "Submission (Guillotine Choke)",
+      "round": 2,
+      "time": "1:23",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Christopher Collins",
+      "fighter2_name": "Terrell Bosen",
+      "fight_finished": true,
+      "winner_name": "Christopher Collins",
+      "method": "Submission (Arm-Triangle Choke)",
+      "round": 1,
+      "time": "1:24",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 239 - Mecate vs. Exposito",
+      "fighter1_name": "Ryan Firinaiu",
+      "fighter2_name": "Yoan Robert-Ramirez",
+      "fight_finished": true,
+      "winner_name": "Ryan Firinaiu",
+      "method": "TKO (Elbows and Punches)",
+      "round": 1,
+      "time": "4:43",
+      "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     }
