@@ -56939,6 +56939,266 @@
           "time": "0:48"
         }
       ]
+    },
+    {
+      "name": "Mattia Giordano",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1745435623mattiagiordano.png",
+      "weight_class": "Bantamweight",
+      "record": "5-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Mattia-Giordano-407331",
+      "fight_history": [
+        {
+          "opponent_name": "Ernesto Schisano",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ernesto-Schisano-393526",
+          "event_name": "Professional Fighters League - PFL Madrid: Van Steenis vs. Edwards 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Professional-Fighters-League-PFL-Madrid-Van-Steenis-vs-Edwards-2-110863",
+          "date": "2026-03-20",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Bryan Miner",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Paulo Andre Costa Oliveira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paulo-Andre-Costa-Oliveira-174901",
+          "event_name": "BFL 8 - Barcelona Fight League 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFL-8-Barcelona-Fight-League-8-112077",
+          "date": "2025-12-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "3:03"
+        },
+        {
+          "opponent_name": "Lucas Marcondes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lucas-Marcondes-482030",
+          "event_name": "LIS 3 - Llescas I Sobrasadas 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/LIS-3-Llescas-I-Sobrasadas-3-109010",
+          "date": "2025-07-04",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Jordi Vinyals",
+          "round": 1,
+          "time": "3:20"
+        },
+        {
+          "opponent_name": "Liam Arjona Hammerslay",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Liam-Arjona-Hammerslay-319117",
+          "event_name": "WOW 17 - Madrid",
+          "event_sherdog_url": "https://www.sherdog.com/events/WOW-17-Madrid-105714",
+          "date": "2025-03-29",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:55"
+        },
+        {
+          "opponent_name": "Nestor Santana",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nestor-Santana-262197",
+          "event_name": "LIS 2 - Llescas I Sobrasadas 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/LIS-2-Llescas-I-Sobrasadas-2-105563",
+          "date": "2024-11-02",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Jordi Vinyals",
+          "round": 2,
+          "time": "3:20"
+        },
+        {
+          "opponent_name": "Alberto Ibanez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alberto-Ibanez-280345",
+          "event_name": "LIS 1 - Llescas I Sobrasadas 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/LIS-1-Llescas-I-Sobrasadas-1-102224",
+          "date": "2024-03-16",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Ray Boixader",
+          "round": 1,
+          "time": "2:20"
+        },
+        {
+          "opponent_name": "Antonio Santana",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Antonio-Santana-327185",
+          "event_name": "WTE FC 15 - WTE Fight Championship 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/WTE-FC-15-WTE-Fight-Championship-15-100410",
+          "date": "2023-12-01",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Maximilien Vallot",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1482199604mv.jpeg",
+      "weight_class": "Flyweight",
+      "record": "7-6-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Maximilien-Vallot-226009",
+      "fight_history": [
+        {
+          "opponent_name": "Souhil Arezki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Souhil-Arezki-395375",
+          "event_name": "HXMMA 43 - Hexagone MMA 43",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-43-Hexagone-MMA-43-111603",
+          "date": "2026-04-11",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Mohamed El Fadili",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Liridon Ramani",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Liridon-Ramani-153123",
+          "event_name": "HXMMA 39 - Hexagone MMA 39",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-39-Hexagone-MMA-39-110580",
+          "date": "2026-02-06",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Patricio Carlos",
+          "round": 2,
+          "time": "4:30"
+        },
+        {
+          "opponent_name": "Hudson Melo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hudson-Melo-206245",
+          "event_name": "HXMMA 27 - Hexagone MMA 27",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-27-Hexagone-MMA-27-105737",
+          "date": "2025-04-25",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Mohamed Khamallah",
+          "round": 2,
+          "time": "0:59"
+        },
+        {
+          "opponent_name": "Leopold Goi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leopold-Goi-274915",
+          "event_name": "HXMMA 21 - Hexagone MMA 21",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-21-Hexagone-MMA-21-105039",
+          "date": "2024-11-23",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "2:03"
+        },
+        {
+          "opponent_name": "Salah Elkas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salah-Elkas-123195",
+          "event_name": "HXMMA 15 - Hexagone MMA 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-15-Hexagone-MMA-15-99822",
+          "date": "2024-03-15",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Mourad Benseghir",
+          "round": 1,
+          "time": "3:35"
+        },
+        {
+          "opponent_name": "Anas Kamal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anas-Kamal-313463",
+          "event_name": "HXMMA 12 - Hexagone MMA 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/HXMMA-12-Hexagone-MMA-12-99001",
+          "date": "2023-10-28",
+          "result": "win",
+          "method": "Submission (Brabo Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:24"
+        },
+        {
+          "opponent_name": "Anass Mehraz",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anass-Mehraz-276025",
+          "event_name": "FFAC - FFA Challenge 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFAC-FFA-Challenge-1-88913",
+          "date": "2021-04-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mourad Benseghir",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Gianni Fernandez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gianni-Fernandez-306719",
+          "event_name": "100% Fight 38 - Romming vs. Paraisy",
+          "event_sherdog_url": "https://www.sherdog.com/events/10037-Fight-38-Romming-vs-Paraisy-72831",
+          "date": "2019-03-09",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Ahmed Korchi",
+          "round": 1,
+          "time": "4:41"
+        },
+        {
+          "opponent_name": "Sylvain Sommereisen",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sylvain-Sommereisen-219739",
+          "event_name": "HFC 12 - Hard Fighting Championship 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/HFC-12-Hard-Fighting-Championship-12-65281",
+          "date": "2018-01-13",
+          "result": "loss",
+          "method": "Submission (Armbar)",
+          "referee": "Patricio Carlos",
+          "round": 2,
+          "time": "2:16"
+        },
+        {
+          "opponent_name": "Youri Panada",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Youri-Panada-184699",
+          "event_name": "HFC - Hard Fighting Championship 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/HFC-Hard-Fighting-Championship-10-63013",
+          "date": "2017-09-23",
+          "result": "loss",
+          "method": "Submission (Brabo Choke)",
+          "referee": "Patricio Carlos",
+          "round": 1,
+          "time": "1:41"
+        },
+        {
+          "opponent_name": "Salman Khadjiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salman-Khadjiev-235493",
+          "event_name": "HFC - Hard Fighting Championship 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/HFC-Hard-Fighting-Championship-9-61673",
+          "date": "2017-07-01",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Patricio Carlos",
+          "round": 3,
+          "time": "4:00"
+        },
+        {
+          "opponent_name": "Hovik Haroutiunian",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hovik-Haroutiunian-123187",
+          "event_name": "100% Fight - Contenders 34: France vs. China",
+          "event_sherdog_url": "https://www.sherdog.com/events/10037-Fight-Contenders-34-France-vs-China-56507",
+          "date": "2016-12-17",
+          "result": "win",
+          "method": "TKO (Shoulder Injury)",
+          "referee": "Christophe Chapuis",
+          "round": 1,
+          "time": "4:28"
+        },
+        {
+          "opponent_name": "Alex Kherfallah",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alex-Kherfallah-201281",
+          "event_name": "OFC - Octagon Fighting Club 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/OFC-Octagon-Fighting-Club-15-52757",
+          "date": "2016-06-04",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Fateh Mezine",
+          "round": 2,
+          "time": "1:35"
+        }
+      ]
     }
   ],
   "fights": [
@@ -96761,6 +97021,19 @@
     },
     {
       "event_name": "CW 212 - Cage Warriors 212: Spanish Showcase",
+      "fighter1_name": "Mattia Giordano",
+      "fighter2_name": "Maximilien Vallot",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "129lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 212 - Cage Warriors 212: Spanish Showcase",
       "fighter1_name": "Angel Bellucci",
       "fighter2_name": "Shahram Hotak",
       "fight_finished": false,
@@ -96801,13 +97074,13 @@
     {
       "event_name": "CW 213 - Cage Warriors 213: London",
       "fighter1_name": "Ollie Sarwa",
-      "fighter2_name": "Kadeem Perkins",
+      "fighter2_name": "Ieuan Mackenzie",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight",
+      "weight_class": "140lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },

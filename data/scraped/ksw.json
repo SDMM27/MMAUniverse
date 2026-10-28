@@ -178093,13 +178093,13 @@
     {
       "event_name": "KSW 123 - Bartosinski vs. Lopaczyk",
       "fighter1_name": "Artur Szczepaniak",
-      "fighter2_name": "Steven Krt",
+      "fighter2_name": "Michal Hir",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Welterweight",
+      "weight_class": "174lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -178154,6 +178154,19 @@
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": true
+    },
+    {
+      "event_name": "KSW 124 - Pawlak vs. Kuberski",
+      "fighter1_name": "Rafal Haratyk",
+      "fighter2_name": "Andi Vrtacic",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "KSW 124 - Pawlak vs. Kuberski",
