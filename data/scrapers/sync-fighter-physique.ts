@@ -1,16 +1,12 @@
 // data/scrapers/sync-fighter-physique.ts
 //
 // Fills fighters.height_cm / reach_cm / birth_date, shown in the header of the
-// fighter page (web + mobile; birth_date as an age). Two sources, because
-// neither covers everything:
-//  - Sherdog: height and birth date (it has no reach field), but every org --
-//    one fetch per unique sherdog_url, applied to every same-person row sharing it.
-//  - UFCStats: height, reach and DOB, UFC fighters only (the ones
-//    sync-fighter-stats.ts already matched to a ufcstats_url). Needs the
-//    headless browser, see shared/fetch-playwright.ts.
-// Sherdog's height wins when both have one (it's published in cm; UFCStats
-// rounds to the inch); UFCStats only fills a height Sherdog didn't have. Same
-// for the birth date: Sherdog's, else UFCStats'.
+// fighter page (web + mobile; birth_date as an age). Source: Sherdog --
+// height and birth date (it has no reach field), every org, one fetch per
+// unique sherdog_url, applied to every same-person row sharing it.
+// Reach used to come from UFCStats (UFC fighters only); that source was
+// removed on 2026-10-28 because fetching it meant bypassing its anti-bot
+// challenge. Reach values already in the table stay; new fighters get none.
 //
 // Every row is stamped physique_*_checked_at once its page was read, found
 // or not, so each page is fetched once ever (birth date came later: Sherdog
@@ -19,14 +15,12 @@
 // (resumable -- stop it and re-run, it picks up where it was), every later
 // run (daily-sync.yml) only touches fighters that got a URL since.
 //
-// Usage: npx tsx data/scrapers/sync-fighter-physique.ts [--source=sherdog|ufcstats] [--limit=N]
+// Usage: npx tsx data/scrapers/sync-fighter-physique.ts [--limit=N]
 import fs from 'node:fs';
 import path from 'node:path';
 import { neon } from '@neondatabase/serverless';
 import { fetchAndLoad } from './shared/fetch-throttled';
-import { fetchAndLoadPW, closeBrowser } from './shared/fetch-playwright';
 import { parseFighterHeightCm, parseFighterBirthDate } from './parse';
-import { parseFighterPhysique, parseFighterBirthDate as parseUfcStatsBirthDate } from './parse-ufcstats';
 
 // Duplicated from sync-fighter-history.ts rather than shared — see that file's own note on why
 // (tsx doesn't auto-load .env.local the way Next.js does; it's a few lines, not worth a module).
@@ -107,46 +101,9 @@ async function syncFromSherdog(limit: number | null) {
   console.log(`Sherdog: done, ${found}/${urls.length} had a height, ${withBirthDate} a birth date, ${failed} failed.`);
 }
 
-async function syncFromUfcStats(limit: number | null) {
-  const rows = (await sql`
-    SELECT DISTINCT ufcstats_url FROM fighters
-    WHERE ufcstats_url IS NOT NULL AND physique_ufcstats_checked_at IS NULL
-  `) as { ufcstats_url: string }[];
-  const urls = rows.map((r) => r.ufcstats_url).slice(0, limit ?? undefined);
-  console.log(`UFCStats: ${rows.length} unchecked URL(s), fetching ${urls.length}.`);
-
-  let withReach = 0;
-  let failed = 0;
-  for (let i = 0; i < urls.length; i++) {
-    const url = urls[i];
-    let physique;
-    let birthDate: string | null;
-    try {
-      const $ = await fetchAndLoadPW(url);
-      physique = parseFighterPhysique($);
-      birthDate = parseUfcStatsBirthDate($);
-    } catch (error) {
-      failed++;
-      console.warn(`  failed to fetch ${url}: ${(error as Error).message}`);
-      continue;
-    }
-    if (physique.reachCm !== null) withReach++;
-    await sql`
-      UPDATE fighters SET
-        reach_cm = COALESCE(${physique.reachCm}, reach_cm),
-        height_cm = COALESCE(height_cm, ${physique.heightCm}),
-        birth_date = COALESCE(birth_date, ${birthDate}::date),
-        physique_ufcstats_checked_at = NOW()
-      WHERE ufcstats_url = ${url}
-    `;
-    if ((i + 1) % 100 === 0) console.log(`  ...${i + 1}/${urls.length} (${withReach} with a reach)`);
-  }
-  console.log(`UFCStats: done, ${withReach}/${urls.length} had a reach, ${failed} failed.`);
-}
-
-// ufcstats_url only ever lands on a fighter's UFC row; copy what it gave onto
-// that same person's rows in other orgs (same sherdog_url), so their Bellator
-// or PFL page shows the reach too.
+// Reach (from the former UFCStats source) only ever landed on a fighter's UFC
+// row; copy it onto that same person's rows in other orgs (same sherdog_url),
+// so their Bellator or PFL page shows it too.
 async function propagateToSiblings() {
   const updated = (await sql`
     UPDATE fighters f SET
@@ -167,15 +124,9 @@ async function main() {
   const args = process.argv.slice(2);
   const limitArg = args.find((a) => a.startsWith('--limit='));
   const limit = limitArg ? parseInt(limitArg.slice('--limit='.length), 10) : null;
-  const source = args.find((a) => a.startsWith('--source='))?.slice('--source='.length);
 
   await ensureSchema();
-  try {
-    if (source !== 'ufcstats') await syncFromSherdog(limit);
-    if (source !== 'sherdog') await syncFromUfcStats(limit);
-  } finally {
-    await closeBrowser(); // otherwise the tsx process never exits on its own
-  }
+  await syncFromSherdog(limit);
   await propagateToSiblings();
 }
 

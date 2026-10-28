@@ -1,6 +1,6 @@
 // data/scrapers/sync-fighter-stats.ts
 //
-// Pushes data/scraped/ufcstats-fight-stats.json (see scrape-ufcstats.ts) into
+// Pushes data/scraped/ufcstats-fight-stats.json (frozen since the UFCStats scraper was removed on 2026-10-28) into
 // Neon: sets fighters.ufcstats_url for every fighter it can match, and
 // upserts one fighter_fight_stats row per (fighter, fight) pair. UFC-only —
 // UFCStats doesn't cover any other organization, so every match is scoped to
@@ -94,7 +94,7 @@ async function ensureSchema() {
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS finish_round INT;`;
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS finish_time VARCHAR(10);`;
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS scheduled_rounds INT;`;
-  // Added 2026-09-29: UFC Fight / Performance of the Night, see scrape-ufcstats-bonuses.ts.
+  // Added 2026-09-29: UFC Fight / Performance of the Night, see shared/ufcstats-bonuses.ts.
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS bonus_fotn BOOLEAN NOT NULL DEFAULT false;`;
   await sql`ALTER TABLE fighter_fight_stats ADD COLUMN IF NOT EXISTS bonus_potn BOOLEAN NOT NULL DEFAULT false;`;
   await sql`
