@@ -9,6 +9,14 @@ export interface NewsSourceConfig {
   language: 'fr' | 'en';
 }
 
+/** Display name credited on each news card, keyed by `news_articles.source_id`. */
+export const NEWS_SOURCE_NAMES: Record<string, string> = {
+  sherdog: 'Sherdog',
+  'mma-fighting': 'MMA Fighting',
+  'lequipe-mma': "L'Équipe",
+  'mma-junkie': 'MMA Junkie',
+};
+
 // NOTE: 'mma-junkie' (https://mmajunkie.usatoday.com/feed) is deliberately
 // omitted here. As of 2026-09-04 that URL — and every other path checked
 // (mmajunkie.com/feed, /rss, /rss.xml, /feed.xml, /arc/outboundfeeds/rss/) —
