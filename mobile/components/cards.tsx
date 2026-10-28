@@ -2,6 +2,7 @@ import { View, Text, Image, Pressable } from 'react-native';
 import type { EventWithOrganization, Fighter, FighterWithOrganization, FightWithFighters, Organization } from '../lib/types';
 import { CountryFlag } from './country-flag';
 import { FighterPhoto } from './fighter-photo';
+import { assetUrl } from '../lib/api';
 
 export function OrganizationCard({ organization, onPress }: { organization: Organization; onPress: () => void }) {
   return (
@@ -11,7 +12,7 @@ export function OrganizationCard({ organization, onPress }: { organization: Orga
       accessibilityLabel={organization.name}
       className="flex-row items-center gap-3 rounded-lg border border-base-border bg-base-card p-3"
     >
-      <Image source={{ uri: organization.logo_link }} accessible={false} className="h-12 w-12 rounded-full" />
+      <Image source={{ uri: assetUrl(organization.logo_link) }} accessible={false} className="h-12 w-12 rounded-full" />
       <View>
         <Text className="font-display text-xs uppercase tracking-wide text-accent">{organization.abbreviation}</Text>
         <Text className="text-base font-semibold text-ink-primary">{organization.name}</Text>

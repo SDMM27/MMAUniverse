@@ -10,6 +10,12 @@ import type {
 
 const API_URL = process.env.EXPO_PUBLIC_API_URL;
 
+// Some image fields (organizations.logo_link) are site-relative paths served
+// from the website's public/ folder — native <Image> needs an absolute URL.
+export function assetUrl(src: string): string {
+  return src.startsWith('/') && API_URL ? `${API_URL}${src}` : src;
+}
+
 async function apiFetch<T>(path: string): Promise<T> {
   if (!API_URL) {
     throw new Error('EXPO_PUBLIC_API_URL is not set — add it to mobile/.env');
