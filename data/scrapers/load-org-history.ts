@@ -103,7 +103,7 @@ async function loadOrg(key: string, apply: boolean, today: string) {
   const toCreate: { name: string; weight_class: string; record: string; sherdog_url: string | null }[] = [];
   let byUrlMatches = 0;
   let byNameMatches = 0;
-  for (const name of weightClassOf.keys()) {
+  for (const name of Array.from(weightClassOf.keys())) {
     const json = jsonFighters.get(name);
     const url = json?.sherdog_url || null;
     const urlMatch = url ? pickFighter(byUrl.get(url) ?? [], orgId) : undefined;
