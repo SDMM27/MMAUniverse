@@ -9,7 +9,6 @@ import { displayEventName, formatEventDate, formatEventTime } from '@/data/lib/e
 import { splitMainEvent } from '@/data/lib/fight-utils';
 import { isEventLocked } from '@/data/lib/pick-lock';
 import { fetchPicksForEvent, fetchEventLeaderboard, getOrCreateCurrentUser, type StoredPick } from '@/data/lib/picks-data';
-import { CoverImage } from '@/components/ui/shared/media';
 import EventOrgTabs from '@/components/ui/events/event-org-tabs';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightRow from '@/components/ui/fights/fight-row';
@@ -77,7 +76,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
       />
       <EventOrgTabs events={orgEvents} currentEventId={event.id} />
       <div className="flex items-center gap-4 border-b border-base-border pb-6">
-        <CoverImage src={event.event_poster} alt={event.name} className="h-20 w-20 rounded-md" />
         <div>
           <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{displayEventName(event.name)}</h1>
           <p className="text-sm text-ink-secondary">

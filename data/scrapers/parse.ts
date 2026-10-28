@@ -126,7 +126,9 @@ export function parseEventDetails($: CheerioAPI, baseUrl: string): ParsedEventDe
   const date = normalizeDate(dateContent);
   const start_time = normalizeStartTime(dateContent);
   const location = $('.info span[itemprop="location"]').first().text().trim();
-  const poster = $('meta[itemprop="image"]').first().attr('content') ?? '';
+  // Event posters are the promoters' artwork hosted on Sherdog's CDN — not ours
+  // to republish, so they are deliberately never captured (always '').
+  const poster = '';
 
   const fights: ParsedFight[] = [];
 
