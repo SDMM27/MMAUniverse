@@ -28,6 +28,7 @@ import { computeDominanceScore, type FightStatsSide, type RoundStatsSide } from 
 import { normalizeWeightClass } from '../lib/rating/normalize-weight-class';
 import { simulateDivisionRatings, type DivisionFightInput, type DivisionNoResultInput } from '../lib/rating/simulate-division';
 import { simulateCareerRatings, ratingAsOf, type CareerFightInput, type CareerNoResultInput } from '../lib/rating/simulate-career';
+import { resultsOnlyCareerInputs, type ResultOnlyFightRow } from '../lib/rating/results-only-fights';
 import { conservativeRating, DEFAULT_GLICKO_PARAMS } from '../lib/rating/glicko-rating';
 import { loadProspectPrior } from './prospect-data';
 import { homeDivision, isEligibleInDivision, divisionDisplayScores, poundForPoundScores, capChallengersBelowChampion } from '../lib/rating/display-scores';
@@ -265,16 +266,21 @@ async function main() {
     return;
   }
 
+  // `--dry-run=<file.json>`: compute everything, write nothing to Neon -- the
+  // fighter_ratings rows go to that file instead (to compare two runs).
+  const dryRunFile = process.argv.find((a) => a.startsWith('--dry-run='))?.slice('--dry-run='.length) ?? null;
+  const dryRunRows: Record<string, unknown>[] = [];
+
   // fighter_rating_history is a full recomputation every run (not an
   // incremental append) -- fighter_ratings itself upserts by (fighter_id,
   // weight_class) so it self-corrects, but history rows have no natural
   // per-row uniqueness to upsert against, so it's cleared and rebuilt from
   // source data each time, same DELETE-then-insert pattern
   // sync-ufc-rankings.ts already uses for its own fully-recomputed table.
-  await sql`DELETE FROM fighter_rating_history`;
+  if (!dryRunFile) await sql`DELETE FROM fighter_rating_history`;
 
   console.log('Loading fighter_fight_stats + fighter_fight_round_stats + fighters + rankings from Neon...');
-  const statsRows = (await sql`
+  const allStatsRows = (await sql`
     SELECT ffs.id, ffs.fighter_id, f.name AS fighter_name, ffs.opponent_name, ffs.event_date,
            ffs.ufcstats_fight_url, ffs.result, ffs.weight_class, ffs.is_title_fight, ffs.method,
            ffs.finish_round, ffs.finish_time, ffs.scheduled_rounds, ffs.bonus_fotn, ffs.bonus_potn, ffs.knockdowns,
@@ -286,6 +292,61 @@ async function main() {
     FROM fighter_fight_stats ffs
     JOIN fighters f ON f.id = ffs.fighter_id
   `) as StatsRow[];
+
+  // UFC fights from `resultsOnlySince` on come from the `fights` table instead:
+  // results only, no stats (data/lib/rating/results-only-fights.ts). By default
+  // the day after the last UFCStats fight -- that scraper was removed on
+  // 2026-10-28, so nothing newer has stats. `--results-only-since=YYYY-MM-DD`
+  // moves the cutoff earlier, to exercise the results-only path on fights that
+  // do have stats.
+  const lastStatsDate = allStatsRows.reduce((max, r) => (r.event_date && r.event_date > max ? r.event_date : max), '');
+  const resultsOnlySince =
+    process.argv.find((a) => a.startsWith('--results-only-since='))?.slice('--results-only-since='.length) ??
+    new Date(Date.parse(`${lastStatsDate}T00:00:00Z`) + 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  const statsRows = allStatsRows.filter((r) => !r.event_date || r.event_date < resultsOnlySince);
+  // Each fighter is mapped to their UFC row (same sherdog_url): a UFC card can
+  // point at the same person's Bellator row (Waldo Cortes-Acosta, Michael Page),
+  // and their stats history sits on the UFC one. Road to UFC and the Contender
+  // Series aren't UFC fights for FightScore (UFCStats never covered them).
+  // A card the live sync never closed (all of UFC Fight Night 285, 2026-08-22,
+  // is still "not finished" in `fights`) takes its results from fighter1's
+  // Sherdog history (fighter_fight_history) instead.
+  const resultOnlyRows = (await sql`
+    WITH canon AS (
+      SELECT x.id, COALESCE(
+        (SELECT u.id FROM fighters u WHERE u.organization_id = 1 AND u.sherdog_url = x.sherdog_url ORDER BY u.id LIMIT 1),
+        x.id) AS ufc_id, x.is_women
+      FROM fighters x
+    )
+    SELECT f.id AS fight_id, e.date AS event_date, f.weight_class,
+           CASE WHEN f.fight_finished THEN f.method ELSE h.method END AS method,
+           CASE WHEN f.fight_finished THEN f.round ELSE h.round END AS round,
+           CASE
+             WHEN f.fight_finished THEN
+               CASE WHEN f.winner_id IS NULL THEN NULL WHEN f.winner_id = f.fighter1_id THEN a.ufc_id ELSE b.ufc_id END
+             WHEN h.result = 'win' THEN a.ufc_id
+             WHEN h.result = 'loss' THEN b.ufc_id
+           END AS winner_id,
+           a.ufc_id AS fighter1_id, b.ufc_id AS fighter2_id, f.is_title_fight, f.is_main_event,
+           COALESCE(a.is_women, false) OR COALESCE(b.is_women, false) AS is_women
+    FROM fights f
+    JOIN events e ON e.id = f.event_id
+    JOIN canon a ON a.id = f.fighter1_id
+    JOIN canon b ON b.id = f.fighter2_id
+    LEFT JOIN LATERAL (
+      SELECT hh.result, hh.method, hh.round FROM fighter_fight_history hh
+      WHERE hh.fighter_id = f.fighter1_id AND hh.event_date = e.date ORDER BY hh.id LIMIT 1
+    ) h ON NOT f.fight_finished
+    WHERE e.organization_id = 1 AND (f.fight_finished OR h.result IS NOT NULL)
+      AND e.name !~* '(road to ufc|contender series)'
+      AND e.date >= ${resultsOnlySince} AND e.date <= ${todayIso}
+    ORDER BY e.date, f.id
+  `) as ResultOnlyFightRow[];
+  const resultsOnly = resultsOnlyCareerInputs(resultOnlyRows);
+  console.log(
+    `Results only (no stats) from ${resultsOnlySince}: ${resultsOnly.fights.length} fight(s), ${resultsOnly.noResults.length} draw/NC, ` +
+      `${resultsOnly.skippedUnmatchedDivision} skipped (unmatched weight class), ${resultsOnly.skippedNoResult} skipped (no winner, not a draw/NC).`,
+  );
 
   const roundRows = (await sql`
     SELECT fighter_fight_stats_id, round, sig_strikes_landed, control_time_seconds, knockdowns
@@ -366,9 +427,11 @@ async function main() {
   // FightScore v2: one chronological pass over every division.
   const careerFights: CareerFightInput[] = Array.from(byDivision.entries())
     .flatMap(([division, divisionPairs]) => divisionPairs.filter((p) => p.winner.event_date).map((p) => ({ ...toFightInput(p), division })))
+    .concat(resultsOnly.fights)
     .sort(byDate);
   const careerNoResults: CareerNoResultInput[] = Array.from(noResultsByDivision.entries())
     .flatMap(([division, list]) => list.map((n) => ({ ...n, division })))
+    .concat(resultsOnly.noResults)
     .sort(byDate);
   // Debutants start from their pre-UFC record (data/lib/rating/prospect-rating.ts).
   const career = simulateCareerRatings(careerFights, careerNoResults, DEFAULT_GLICKO_PARAMS, await loadProspectPrior());
@@ -377,12 +440,21 @@ async function main() {
 
   // Eligibility + display scores for every (fighter, division) row up front:
   // the P4P scale needs every division's eligible fighters at once.
-  const fighterIdsByDivision = new Map<string, number[]>();
+  const fighterIdSetsByDivision = new Map<string, Set<number>>();
+  const idsIn = (division: string) => fighterIdSetsByDivision.get(division) ?? fighterIdSetsByDivision.set(division, new Set()).get(division)!;
   for (const [division, divisionPairs] of Array.from(byDivision.entries())) {
-    const ids = new Set<number>();
-    for (const p of divisionPairs) if (p.winner.event_date) ids.add(p.winner.fighter_id).add(p.loser.fighter_id);
-    fighterIdsByDivision.set(division, Array.from(ids));
+    for (const p of divisionPairs) if (p.winner.event_date) idsIn(division).add(p.winner.fighter_id).add(p.loser.fighter_id);
   }
+  // Results-only fights (no stats) count for the division too, and how many of them each fighter has there.
+  const resultsOnlyCount = new Map<string, number>(); // `${division}|${fighterId}`
+  for (const fight of resultsOnly.fights) {
+    for (const id of [fight.winnerId, fight.loserId]) {
+      idsIn(fight.division).add(id);
+      const key = `${fight.division}|${id}`;
+      resultsOnlyCount.set(key, (resultsOnlyCount.get(key) ?? 0) + 1);
+    }
+  }
+  const fighterIdsByDivision = new Map(Array.from(fighterIdSetsByDivision, ([division, ids]) => [division, Array.from(ids)]));
   const eligibleIdsByDivision = new Map<string, Set<number>>();
   const displayScoreByDivision = new Map<string, Map<number, number>>();
   for (const [division, ids] of Array.from(fighterIdsByDivision.entries())) {
@@ -455,7 +527,8 @@ async function main() {
   let totalHistoryRows = 0;
   let totalEstimatedFallbacks = 0;
 
-  for (const [division, divisionPairs] of Array.from(byDivision.entries()).sort()) {
+  for (const division of Array.from(fighterIdsByDivision.keys()).sort()) {
+    const divisionPairs = byDivision.get(division) ?? [];
     const sorted = divisionPairs
       .filter((p) => p.winner.event_date)
       .sort((a, b) => (a.winner.event_date! < b.winner.event_date! ? -1 : 1));
@@ -468,12 +541,20 @@ async function main() {
     const eligibleIds = eligibleIdsByDivision.get(division)!;
     const displayScores = displayScoreByDivision.get(division)!;
 
-    const fighterIds = Array.from(fighterStates.keys());
+    // Every fighter rated in this division: the v1 simulation only knows the
+    // fights with stats, so a fighter whose fights here are all results-only
+    // (no stats) has no v1 state -- defaults below.
+    const fighterIds = Array.from(new Set([...Array.from(fighterStates.keys()), ...fighterIdsByDivision.get(division)!]));
+    const lastFightDateOf = (fighterId: number) => {
+      const v1 = fighterStates.get(fighterId)?.lastFightDate ?? null;
+      const glicko = career.fighterStates.get(fighterId)?.lastFightDateByDivision.get(division) ?? null;
+      return v1 && glicko ? (v1 > glicko ? v1 : glicko) : v1 ?? glicko;
+    };
     const archetypeByFighter = classifyStyles(
       fighterIds.map((fighterId) => ({
         fighterId,
         ...(styleTotalsByFighter.get(fighterId) ?? { totals: decayedTotals([]), fights: 0 }),
-        isReference: (fighterStates.get(fighterId)!.lastFightDate ?? '') >= styleReferenceSince,
+        isReference: (lastFightDateOf(fighterId) ?? '') >= styleReferenceSince,
       })),
     );
 
@@ -503,7 +584,9 @@ async function main() {
       running.lastFightDate = simulated.lastFightDate;
       profileByFighter.set(fighterId, toMatchupProfile(running, todayIso));
     }
-    const averagePool = eligibleIds.size > 0 ? Array.from(eligibleIds) : Array.from(profileByFighter.keys());
+    // Only fighters with a profile: one whose fights here are all results-only (no stats) has none.
+    const eligibleWithProfile = Array.from(eligibleIds).filter((id) => profileByFighter.has(id));
+    const averagePool = eligibleWithProfile.length > 0 ? eligibleWithProfile : Array.from(profileByFighter.keys());
     const divisionAverageProfile = averageMatchupProfiles(averagePool.map((id) => profileByFighter.get(id)!));
     const mlWinProbabilityByFighter = new Map<number, number>();
     for (const [fighterId, profile] of Array.from(profileByFighter.entries())) {
@@ -512,10 +595,25 @@ async function main() {
 
     // Upsert fighter_ratings.
     for (const fighterId of fighterIds) {
-      const state = fighterStates.get(fighterId)!;
+      const v1 = fighterStates.get(fighterId);
+      const state = {
+        currentStreak: v1?.currentStreak ?? 0, // career streak, from fighter_fight_history, overwrites it below
+        isFormerChampion: v1?.isFormerChampion ?? false,
+        fightsSimulated: (v1?.fightsSimulated ?? 0) + (resultsOnlyCount.get(`${division}|${fighterId}`) ?? 0),
+        lastFightDate: lastFightDateOf(fighterId),
+      };
       const { rating, rd } = ratingToday.get(fighterId)!;
       const displayScore = displayScores.get(fighterId)!;
       const isChampion = championIdByDivision.get(division) === fighterId;
+      if (dryRunFile) {
+        dryRunRows.push({
+          fighter_id: fighterId, weight_class: division, points: rating, rating_deviation: rd, display_score: displayScore,
+          p4p_score: p4pScoreByFighter.get(fighterId)!, fights_rated: state.fightsSimulated, last_fight_date: state.lastFightDate,
+          is_champion: isChampion, is_ranking_eligible: eligibleIds.has(fighterId), style_archetype: archetypeByFighter.get(fighterId) ?? null,
+        });
+        totalFightersRated++;
+        continue;
+      }
       await sql`
         INSERT INTO fighter_ratings
           (fighter_id, weight_class, points, rating_deviation, display_score, p4p_score, current_streak, is_former_champion,
@@ -558,6 +656,11 @@ async function main() {
         loserPointsAfter: careerEntry.loserAfter.rating,
       };
       const ids = statsIdLookup.get(entry.fightUrl);
+      if (dryRunFile) {
+        totalHistoryRows += 2;
+        if (entry.dominanceEstimated) totalEstimatedFallbacks++;
+        continue;
+      }
       await sql`
         INSERT INTO fighter_rating_history
           (fighter_id, weight_class, fighter_fight_stats_id, points_before, points_after,
@@ -585,6 +688,12 @@ async function main() {
     `Done. ${totalFightersRated} fighter_ratings row(s) upserted, ${totalHistoryRows} fighter_rating_history row(s) inserted, ` +
       `${totalEstimatedFallbacks} used the dominance-estimated fallback, ${skippedUnmatchedDivision} fights skipped (unmatched weight class).`,
   );
+
+  if (dryRunFile) {
+    fs.writeFileSync(dryRunFile, JSON.stringify(dryRunRows, null, 1));
+    console.log(`Dry run: nothing written to Neon; the fighter_ratings rows are in ${dryRunFile}.`);
+    return;
+  }
 
   await applyCareerStreaks();
   console.log('Career streaks updated.');
