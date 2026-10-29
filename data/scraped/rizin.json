@@ -152191,6 +152191,52 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Christian-Akira-Matsuo-509187",
       "fight_history": []
+    },
+    {
+      "name": "Yajuro Yamasaki",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250908031126_Yajuro_Yamasaki.JPG",
+      "weight_class": "Lightweight",
+      "record": "3-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Yajuro-Yamasaki-481291",
+      "fight_history": [
+        {
+          "opponent_name": "Satoru Kitaoka",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Satoru-Kitaoka-1756",
+          "event_name": "Deep - 133 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-133-Impact-113531",
+          "date": "2026-09-13",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Minoru Toyonaga",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ken Ura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ken-Ura-428669",
+          "event_name": "Deep - Tokyo Impact 2026 1st Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2026-1st-Round-111118",
+          "date": "2026-02-23",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Takashi Hashimoto",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Assane Gaide",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Assane-Gaide-473221",
+          "event_name": "Deep - Tokyo Impact 2025 4th Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2025-4th-Round-108857",
+          "date": "2025-09-07",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Takashi Hashimoto",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -161889,6 +161935,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Yajuro Yamasaki",
+      "fighter2_name": "Jake Wilkins",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },

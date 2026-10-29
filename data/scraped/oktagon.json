@@ -22999,19 +22999,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
-      "fighter1_name": "Gokhan Aksu",
-      "fighter2_name": "Rene Runge",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "161lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Ronald Paradeiser",
       "fighter2_name": "Tyrone Pfeifer",
       "fight_finished": false,
@@ -23033,6 +23020,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
+      "fighter1_name": "Gokhan Aksu",
+      "fighter2_name": "Rene Runge",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "161lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -23077,19 +23077,6 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
-      "fighter1_name": "Hafeni Nafuka",
-      "fighter2_name": "Ivan Klevets",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "159lb Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
       "fighter1_name": "Henrique Madureira",
       "fighter2_name": "Daniel Schordje",
       "fight_finished": false,
@@ -23098,6 +23085,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 96: Gogoladze vs. Ayari",
+      "fighter1_name": "Hafeni Nafuka",
+      "fighter2_name": "Ivan Klevets",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "159lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },

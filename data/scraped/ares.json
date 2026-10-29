@@ -4762,6 +4762,76 @@
           "time": "3:01"
         }
       ]
+    },
+    {
+      "name": "Dina da Silva Barbosa",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1586906561Screenshot_20200414-200214.png",
+      "weight_class": "Strawweight",
+      "record": "3-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Dina-da-Silva-Barbosa-311583",
+      "fight_history": [
+        {
+          "opponent_name": "Jainne Lais Mendonca Aguiar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jainne-Lais-Mendonca-Aguiar-264817",
+          "event_name": "Number 1 - Fight Series 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/Number-1-Fight-Series-7-95208",
+          "date": "2022-11-26",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Cezani Moutinho",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kalindra Faria",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kalindra-Faria-48080",
+          "event_name": "BFS 10 - Brazilian Fighting Series 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFS-10-Brazilian-Fighting-Series-10-92153",
+          "date": "2022-05-29",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:16"
+        },
+        {
+          "opponent_name": "Jessica Coelho da Cruz Nepomuceno",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jessica-Coelho-da-Cruz-Nepomuceno-282149",
+          "event_name": "Number 1 - Fight Series 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Number-1-Fight-Series-3-92091",
+          "date": "2022-02-05",
+          "result": "win",
+          "method": "TKO (Punch)",
+          "referee": "",
+          "round": 1,
+          "time": "4:05"
+        },
+        {
+          "opponent_name": "Ingrid Silva",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ingrid-Silva-311589",
+          "event_name": "PF - Paraiba Fight",
+          "event_sherdog_url": "https://www.sherdog.com/events/PF-Paraiba-Fight-86323",
+          "date": "2019-09-14",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Bruno Parma",
+          "round": 3,
+          "time": "4:12"
+        },
+        {
+          "opponent_name": "Camila Daniele Bezerra Lima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Camila-Daniele-Bezerra-Lima-311585",
+          "event_name": "GFC 63 - Grand Fighting Championship 63",
+          "event_sherdog_url": "https://www.sherdog.com/events/GFC-63-Grand-Fighting-Championship-63-73263",
+          "date": "2018-10-25",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Fabio Lima",
+          "round": 1,
+          "time": "3:32"
+        }
+      ]
     }
   ],
   "fights": [
@@ -10092,6 +10162,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "fighter1_name": "Sarah Moussaddak",
+      "fighter2_name": "Dina da Silva Barbosa",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
       "is_main_event": false,
       "is_title_fight": false
     },
