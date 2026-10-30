@@ -1727,14 +1727,14 @@
       "name": "ACA 210 - Myrzabekov vs. Tumenov",
       "date": "2026-12-05",
       "start_time": "2026-12-05T00:00:00+00:00",
-      "event_location": "Bishkek, Kyrgyzstan",
+      "event_location": "Zhashtyk Arena, Bishkek, Kyrgyzstan",
       "event_poster": ""
     },
     {
       "name": "ACA 211 - Shlemenko vs. Emeev",
       "date": "2026-12-25",
       "start_time": "2026-12-25T00:00:00+00:00",
-      "event_location": "St. Petersburg, Russia",
+      "event_location": "Sibur Arena, St. Petersburg, Russia",
       "event_poster": ""
     }
   ],
@@ -35299,7 +35299,7 @@
           "event_sherdog_url": "https://www.sherdog.com/events/ACA-YE-20-ACA-Young-Eagles-20-90304",
           "date": "2021-08-16",
           "result": "win",
-          "method": "Submission (Calf Slicer)",
+          "method": "Submission (Hamstring Stretch)",
           "referee": "Gerikhan Shibilov",
           "round": 2,
           "time": "3:40"
@@ -429421,7 +429421,7 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Featherweight",
+      "weight_class": "149lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },

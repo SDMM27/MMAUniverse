@@ -411754,44 +411754,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Delsin-Gray-503045",
-      "fight_history": [
-        {
-          "opponent_name": "Ryan Withrow",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Withrow-508950",
-          "event_name": "MFP 5 - Mayhem Fight Promotions",
-          "event_sherdog_url": "https://www.sherdog.com/events/MFP-5-Mayhem-Fight-Promotions-114607",
-          "date": "2026-10-03",
-          "result": "win",
-          "method": "TKO (Strikes)",
-          "referee": "Patricia Vandermeer",
-          "round": 3,
-          "time": "2:09"
-        },
-        {
-          "opponent_name": "Duke Lough",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Duke-Lough-506783",
-          "event_name": "MFP 4 - Mayhem Fight Promotions",
-          "event_sherdog_url": "https://www.sherdog.com/events/MFP-4-Mayhem-Fight-Promotions-114048",
-          "date": "2026-08-29",
-          "result": "win",
-          "method": "TKO (Punches)",
-          "referee": "Chris Milloy",
-          "round": 1,
-          "time": "0:11"
-        },
-        {
-          "opponent_name": "Carter West",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carter-West-418204",
-          "event_name": "MFP 3 - Mayhem Fight Promotions",
-          "event_sherdog_url": "https://www.sherdog.com/events/MFP-3-Mayhem-Fight-Promotions-112031",
-          "date": "2026-06-27",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "Patricia Vandermeer",
-          "round": 3,
-          "time": "3:00"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Ricardo Hussein",
@@ -441802,13 +441765,13 @@
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Lightweight",
+      "weight_class": "Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Isaiah Veloso",
+      "fighter1_name": "Isaiah Parks",
       "fighter2_name": "Delsin Gray",
       "fight_finished": false,
       "winner_name": null,
