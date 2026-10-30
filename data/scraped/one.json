@@ -8932,6 +8932,64 @@
           "time": "2:14"
         }
       ]
+    },
+    {
+      "name": "Oga Akita",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1793362050Oga_Akita-Hero-1200x1165-1-600x583.png",
+      "weight_class": "Bantamweight",
+      "record": "4-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Oga-Akita-480508",
+      "fight_history": [
+        {
+          "opponent_name": "Prashanth Guda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Prashanth-Guda-327001",
+          "event_name": "One Championship - One Friday Fights 176",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-176-114702",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Kemp Cheng",
+          "round": 1,
+          "time": "2:09"
+        },
+        {
+          "opponent_name": "Hirotaka Shimizu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hirotaka-Shimizu-485935",
+          "event_name": "WCF - Wardog Cage Fight 57",
+          "event_sherdog_url": "https://www.sherdog.com/events/WCF-Wardog-Cage-Fight-57-113083",
+          "date": "2026-05-31",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Manabu Kano",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yu Katayanagi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yu-Katayanagi-474696",
+          "event_name": "WCF - Wardog Cage Fight 55",
+          "event_sherdog_url": "https://www.sherdog.com/events/WCF-Wardog-Cage-Fight-55-111240",
+          "date": "2026-02-08",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Manabu Kano",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hideyoshi Okamoto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hideyoshi-Okamoto-267645",
+          "event_name": "WCF - Wardog Cage Fight 54: 2nd Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/WCF-Wardog-Cage-Fight-54-2nd-Round-109861",
+          "date": "2025-10-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -9210,26 +9268,26 @@
     },
     {
       "event_name": "One Championship - One Friday Fights 176",
-      "fighter1_name": "Ethan Brockett",
-      "fighter2_name": "Pedro Duarte",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Pedro Duarte",
+      "fighter2_name": "Ethan Brockett",
+      "fight_finished": true,
+      "winner_name": "Pedro Duarte",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:33",
       "weight_class": "Lightweight",
       "is_main_event": true,
       "is_title_fight": false
     },
     {
       "event_name": "One Championship - One Friday Fights 176",
-      "fighter1_name": "Prashanth Guda",
-      "fighter2_name": "Ouga Akita",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fighter1_name": "Oga Akita",
+      "fighter2_name": "Prashanth Guda",
+      "fight_finished": true,
+      "winner_name": "Oga Akita",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:09",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false

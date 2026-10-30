@@ -303,24 +303,31 @@
       "event_poster": ""
     },
     {
-      "name": "Ares 44 - Younousov vs. Nam",
+      "name": "Ares 46 - TBD vs. TBD",
+      "date": "2027-01-15",
+      "start_time": "2027-01-15T00:00:00+00:00",
+      "event_location": "Marseille Sports Palace, Marseille, France",
+      "event_poster": ""
+    },
+    {
+      "name": "ARES 44 - Younousov vs. Nam",
       "date": "2026-10-31",
       "start_time": "2026-10-31T00:00:00+00:00",
       "event_location": "Zenith of Strasbourg, Strasbourg, France",
       "event_poster": ""
     },
     {
-      "name": "Ares 45 - Zebo vs. Baki 2",
+      "name": "ARES 45 - Zebo vs. Baki 2",
       "date": "2026-11-20",
       "start_time": "2026-11-20T00:00:00+00:00",
       "event_location": "Adidas Arena, Paris, France",
       "event_poster": ""
     },
     {
-      "name": "Ares 46 - TBD vs. TBD",
-      "date": "2027-01-15",
-      "start_time": "2027-01-15T00:00:00+00:00",
-      "event_location": "Marseille Sports Palace, Marseille, France",
+      "name": "ARES 46 - TBD vs. TBD",
+      "date": "2026-12-11",
+      "start_time": "2026-12-11T00:00:00+00:00",
+      "event_location": "Adidas Arena, Paris, France",
       "event_poster": ""
     }
   ],
@@ -9971,7 +9978,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "Ares 46 - TBD vs. TBD",
+      "fighter1_name": "Jade Jorand",
+      "fighter2_name": "Kinga Jendrasik",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Strawweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Aboubakar Younousov",
       "fighter2_name": "Tyson Nam",
       "fight_finished": false,
@@ -9984,7 +10004,7 @@
       "is_title_fight": true
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Youssef Boughanem",
       "fighter2_name": "Mohamed Soumah",
       "fight_finished": false,
@@ -9997,7 +10017,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Sofiane El Fatni",
       "fighter2_name": "Mario Gagliardi",
       "fight_finished": false,
@@ -10010,7 +10030,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Andrii Misiuk",
       "fighter2_name": "Phruethukorn Chaichongcharden",
       "fight_finished": false,
@@ -10023,7 +10043,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Bilal Bakhouche-Chareuf",
       "fighter2_name": "Daniel Rodrigues",
       "fight_finished": false,
@@ -10036,7 +10056,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Benoit Prigent",
       "fighter2_name": "Jafar Yousifi",
       "fight_finished": false,
@@ -10049,7 +10069,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Melissa Hurtado",
       "fighter2_name": "Weronika Cislo",
       "fight_finished": false,
@@ -10062,7 +10082,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Maher Belkhadir",
       "fighter2_name": "Marc-Philippe Ngatchou",
       "fight_finished": false,
@@ -10075,7 +10095,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Lasha Gogishvili",
       "fighter2_name": "Alexandre Carole",
       "fight_finished": false,
@@ -10088,7 +10108,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 44 - Younousov vs. Nam",
+      "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Mohadi Nazirov",
       "fighter2_name": "Ibrahima Abdoul-Razak Dosso",
       "fight_finished": false,
@@ -10101,7 +10121,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
       "fighter1_name": "Jordan Zebo",
       "fighter2_name": "Baissangour Chamsoudinov",
       "fight_finished": false,
@@ -10114,7 +10134,7 @@
       "is_title_fight": true
     },
     {
-      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
       "fighter1_name": "Ghassen Jbalia",
       "fighter2_name": "Modibo Diakite",
       "fight_finished": false,
@@ -10127,7 +10147,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
       "fighter1_name": "Amir Aliev",
       "fighter2_name": "Adionai Maciel",
       "fight_finished": false,
@@ -10140,7 +10160,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
       "fighter1_name": "Nimo Djagbo",
       "fighter2_name": "Nikodem Blazejewski",
       "fight_finished": false,
@@ -10153,7 +10173,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
       "fighter1_name": "Marvin Caperan",
       "fighter2_name": "Bruno Pudins",
       "fight_finished": false,
@@ -10166,7 +10186,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 45 - Zebo vs. Baki 2",
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
       "fighter1_name": "Sarah Moussaddak",
       "fighter2_name": "Dina da Silva Barbosa",
       "fight_finished": false,
@@ -10179,7 +10199,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Ares 46 - TBD vs. TBD",
+      "event_name": "ARES 46 - TBD vs. TBD",
       "fighter1_name": "Jade Jorand",
       "fighter2_name": "Kinga Jendrasik",
       "fight_finished": false,
