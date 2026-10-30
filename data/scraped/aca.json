@@ -75848,6 +75848,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Ivan-Soloviev-222661",
       "fight_history": [
         {
+          "opponent_name": "Mamurzhon Khamdamov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mamurzhon-Khamdamov-209297",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Dmitry Valuevich",
+          "round": 2,
+          "time": "3:52"
+        },
+        {
           "opponent_name": "Viktor Azatyan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Viktor-Azatyan-222875",
           "event_name": "ACA 196 - Silva vs. Borisov",
@@ -212910,6 +212922,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mamurzhon-Khamdamov-209297",
       "fight_history": [
+        {
+          "opponent_name": "Ivan Soloviev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Soloviev-222661",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Dmitry Valuevich",
+          "round": 2,
+          "time": "3:52"
+        },
         {
           "opponent_name": "Alexander Krasnikov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Krasnikov-295249",
@@ -429329,7 +429353,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Middleweight",
       "is_main_event": true,
       "is_title_fight": false
@@ -429342,7 +429366,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429355,7 +429379,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429368,7 +429392,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429381,7 +429405,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429394,7 +429418,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429407,7 +429431,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429420,7 +429444,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "149lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429433,7 +429457,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429446,7 +429470,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429459,7 +429483,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429472,7 +429496,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429485,7 +429509,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429498,7 +429522,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429511,7 +429535,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429524,7 +429548,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429533,11 +429557,11 @@
       "event_name": "ACA 209 - Frolov vs. Odilov",
       "fighter1_name": "Mamurzhon Khamdamov",
       "fighter2_name": "Ivan Soloviev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Mamurzhon Khamdamov",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "3:52",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
