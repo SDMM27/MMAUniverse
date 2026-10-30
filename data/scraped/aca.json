@@ -11983,10 +11983,22 @@
       "name": "Viskhan Kadirov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1754405803viskhankadirov.jpg",
       "weight_class": "Welterweight",
-      "record": "16-4-0",
+      "record": "16-5-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Viskhan-Kadirov-285763",
       "fight_history": [
+        {
+          "opponent_name": "Bekhruz Zugurov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bekhruz-Zugurov-182307",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Dmitry Valuevich",
+          "round": 2,
+          "time": "1:28"
+        },
         {
           "opponent_name": "Khafiz Sakibekov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khafiz-Sakibekov-335465",
@@ -12233,10 +12245,22 @@
       "name": "Khafiz Sakibekov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1775330194IMG_3021.jpeg",
       "weight_class": "Welterweight",
-      "record": "11-5-0",
+      "record": "12-5-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Khafiz-Sakibekov-335465",
       "fight_history": [
+        {
+          "opponent_name": "Nikita Podkovalnikov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nikita-Podkovalnikov-266305",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Viskhan Kadirov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Viskhan-Kadirov-285763",
@@ -34024,10 +34048,22 @@
       "name": "Nashkho Galaev",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1737481505galaev.jpg",
       "weight_class": "Featherweight",
-      "record": "13-10-0",
+      "record": "13-11-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Nashkho-Galaev-166271",
       "fight_history": [
+        {
+          "opponent_name": "Tural Ragimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tural-Ragimov-100757",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Vicente Vargas",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vicente-Vargas-182031",
@@ -35180,10 +35216,22 @@
       "name": "Eldar Munapov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1765899573eldarmunapov.jpg",
       "weight_class": "Featherweight",
-      "record": "10-2-0",
+      "record": "10-3-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Eldar-Munapov-335023",
       "fight_history": [
+        {
+          "opponent_name": "Hayk Kazaryan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hayk-Kazaryan-273551",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Vyacheslav Svischev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vyacheslav-Svischev-315655",
@@ -39410,6 +39458,18 @@
       "sherdog_url": "https://www.sherdog.com/fighter/Azam-Gaforov-198511",
       "fight_history": [
         {
+          "opponent_name": "Felipe Bunes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Felipe-Bunes-135973",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Submission (Twister)",
+          "referee": "Maxim Protasov",
+          "round": 1,
+          "time": "4:13"
+        },
+        {
           "opponent_name": "Aren Akopyan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aren-Akopyan-166363",
           "event_name": "ACA 203 - Gaforov vs. Akopyan",
@@ -39667,10 +39727,22 @@
       "name": "Firdavs Zaripov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1717864860Firdavs_Zaripov.jpg",
       "weight_class": "Bantamweight",
-      "record": "13-5-0",
+      "record": "14-5-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Firdavs-Zaripov-161779",
       "fight_history": [
+        {
+          "opponent_name": "Vagiz Ismagilov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vagiz-Ismagilov-74790",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Dmitry Valuevich",
+          "round": 1,
+          "time": "1:25"
+        },
         {
           "opponent_name": "Kholmurod Nurmatov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kholmurod-Nurmatov-223469",
@@ -39893,10 +39965,22 @@
       "name": "Kholmurod Nurmatov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1740678838kholmurodnurmatov.jpg",
       "weight_class": "Bantamweight",
-      "record": "12-11-0",
+      "record": "12-12-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kholmurod-Nurmatov-223469",
       "fight_history": [
+        {
+          "opponent_name": "Emomakhdi Orzuzoda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Emomakhdi-Orzuzoda-373855",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Firdavs Rizvonzoda",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Firdavs Zaripov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Firdavs-Zaripov-161779",
@@ -41703,10 +41787,22 @@
       "name": "Klidson Abreu",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1759936032klidsonabreu.jpg",
       "weight_class": "Heavyweight",
-      "record": "17-9-0",
+      "record": "18-9-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Klidson-Abreu-111535",
       "fight_history": [
+        {
+          "opponent_name": "Hamdy Abdelwahab",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hamdy-Abdelwahab-331853",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Firdavs Rizvonzoda",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Zumso Zuraev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zumso-Zuraev-380002",
@@ -42049,10 +42145,22 @@
       "name": "Alikhan Musaev",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1736782945musaev.jpg",
       "weight_class": "Lightweight",
-      "record": "11-0-0",
+      "record": "12-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alikhan-Musaev-390928",
       "fight_history": [
+        {
+          "opponent_name": "Jahongir Saidjamolov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jahongir-Saidjamolov-198503",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Firdavs Rizvonzoda",
+          "round": 2,
+          "time": "2:36"
+        },
         {
           "opponent_name": "Furkat Komilov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Furkat-Komilov-265771",
@@ -42679,10 +42787,22 @@
       "name": "Emomakhdi Orzuzoda",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1741808848emomakhdiorzuzoda.jpg",
       "weight_class": "Bantamweight",
-      "record": "7-4-0",
+      "record": "8-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Emomakhdi-Orzuzoda-373855",
       "fight_history": [
+        {
+          "opponent_name": "Kholmurod Nurmatov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kholmurod-Nurmatov-223469",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Firdavs Rizvonzoda",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Anvar Abdullaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anvar-Abdullaev-375702",
@@ -43201,10 +43321,22 @@
       "name": "Nikita Podkovalnikov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/15098148049f87bde6.png",
       "weight_class": "Welterweight",
-      "record": "13-7-0",
+      "record": "13-8-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Nikita-Podkovalnikov-266305",
       "fight_history": [
+        {
+          "opponent_name": "Khafiz Sakibekov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khafiz-Sakibekov-335465",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Mehdi Dakaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mehdi-Dakaev-190671",
@@ -44949,10 +45081,22 @@
       "name": "Oyatullo Muminov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1778499395oyatullomuminov.jpg",
       "weight_class": "Bantamweight",
-      "record": "15-5-0",
+      "record": "15-6-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Oyatullo-Muminov-300259",
       "fight_history": [
+        {
+          "opponent_name": "Bektur Zhenishbek Uulu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bektur-Zhenishbek-Uulu-339657",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Azatbek Kochorov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Azatbek-Kochorov-411027",
@@ -47523,10 +47667,22 @@
       "name": "Hayk Kazaryan",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1741462748haykkazaryan.jpeg",
       "weight_class": "Featherweight",
-      "record": "20-6-0",
+      "record": "21-6-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Hayk-Kazaryan-273551",
       "fight_history": [
+        {
+          "opponent_name": "Eldar Munapov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eldar-Munapov-335023",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Tomas Deak",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tomas-Deak-50578",
@@ -48155,10 +48311,22 @@
       "name": "Hamdy Abdelwahab",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220724091942_abdelwahabhamdy.PNG",
       "weight_class": "Super Heavyweight",
-      "record": "7-2-0",
+      "record": "7-3-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Hamdy-Abdelwahab-331853",
       "fight_history": [
+        {
+          "opponent_name": "Klidson Abreu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Klidson-Abreu-111535",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Firdavs Rizvonzoda",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Anton Vinnikov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anton-Vinnikov-192817",
@@ -59861,10 +60029,22 @@
       "name": "Bekhruz Zugurov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1518505094mX5evj7nCLQ.jpg",
       "weight_class": "Lightweight",
-      "record": "18-8-0",
+      "record": "19-8-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Bekhruz-Zugurov-182307",
       "fight_history": [
+        {
+          "opponent_name": "Viskhan Kadirov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Viskhan-Kadirov-285763",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Dmitry Valuevich",
+          "round": 2,
+          "time": "1:28"
+        },
         {
           "opponent_name": "Maharbek Karginov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Maharbek-Karginov-136733",
@@ -61541,10 +61721,22 @@
       "name": "Shadid Abdurzakov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1752240778shadidabdurzakov.jpg",
       "weight_class": "Welterweight",
-      "record": "12-5-0",
+      "record": "12-6-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Shadid-Abdurzakov-297253",
       "fight_history": [
+        {
+          "opponent_name": "Nizambek Abdrashitov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nizambek-Abdrashitov-199459",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Ali Mashrapov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ali-Mashrapov-277991",
@@ -61767,10 +61959,22 @@
       "name": "Ali Mashrapov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1723062704mashrapov.jpg",
       "weight_class": "Middleweight",
-      "record": "17-15-0",
+      "record": "17-16-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ali-Mashrapov-277991",
       "fight_history": [
+        {
+          "opponent_name": "Sayed Safarmamadov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sayed-Safarmamadov-364501",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Firdavs Rizvonzoda",
+          "round": 1,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Shadid Abdurzakov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shadid-Abdurzakov-297253",
@@ -73053,10 +73257,22 @@
       "name": "Alexey Makhno",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1734190411IMG_3213.jpeg",
       "weight_class": "Middleweight",
-      "record": "27-13-0",
+      "record": "27-14-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Alexey-Makhno-115701",
       "fight_history": [
+        {
+          "opponent_name": "Kuat Khamitov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kuat-Khamitov-86936",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Maxim Protasov",
+          "round": 2,
+          "time": "0:44"
+        },
         {
           "opponent_name": "Aurel Pirtea",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aurel-Pirtea-48374",
@@ -75843,7 +76059,7 @@
       "name": "Ivan Soloviev",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1749130624ivansoloviev.jpg",
       "weight_class": "Middleweight",
-      "record": "12-3-0",
+      "record": "12-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Ivan-Soloviev-222661",
       "fight_history": [
@@ -77357,10 +77573,22 @@
       "name": "Vagiz Ismagilov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/17167496941afdbfa86ce7de9041bcbefa9c4011f0_SaAwp_495x495.png",
       "weight_class": "Bantamweight",
-      "record": "6-3-0",
+      "record": "6-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Vagiz-Ismagilov-74790",
       "fight_history": [
+        {
+          "opponent_name": "Firdavs Zaripov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Firdavs-Zaripov-161779",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Dmitry Valuevich",
+          "round": 1,
+          "time": "1:25"
+        },
         {
           "opponent_name": "Akhmed Khamzaev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Akhmed-Khamzaev-259357",
@@ -77475,10 +77703,22 @@
       "name": "Akhmed Khamzaev",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1741808967akhmedkhamzaev.jpg",
       "weight_class": "Bantamweight",
-      "record": "11-4-0",
+      "record": "12-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Akhmed-Khamzaev-259357",
       "fight_history": [
+        {
+          "opponent_name": "Mustafa Ashurzoda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mustafa-Ashurzoda-411792",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Dmitry Valuevich",
+          "round": 1,
+          "time": "3:26"
+        },
         {
           "opponent_name": "Vagiz Ismagilov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vagiz-Ismagilov-74790",
@@ -81807,10 +82047,22 @@
       "name": "Kuat Khamitov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1511683465img.png",
       "weight_class": "Welterweight",
-      "record": "25-9-0",
+      "record": "26-9-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kuat-Khamitov-86936",
       "fight_history": [
+        {
+          "opponent_name": "Alexey Makhno",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexey-Makhno-115701",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Maxim Protasov",
+          "round": 2,
+          "time": "0:44"
+        },
         {
           "opponent_name": "Alan Silva",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alan-Silva-267611",
@@ -83655,10 +83907,22 @@
       "name": "Saidyokub Kakhramonov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20221118052515_Saidyokub_Kakhramonov_ff.JPG",
       "weight_class": "Bantamweight",
-      "record": "13-3-0",
+      "record": "13-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Saidyokub-Kakhramonov-274077",
       "fight_history": [
+        {
+          "opponent_name": "Bakhtovar Yunusov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bakhtovar-Yunusov-378649",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Omar El Bily",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Omar-El-Bily-364727",
@@ -114514,10 +114778,22 @@
       "name": "Tural Ragimov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20161122042244_img.JPG",
       "weight_class": "Featherweight",
-      "record": "22-10-0",
+      "record": "23-10-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Tural-Ragimov-100757",
       "fight_history": [
+        {
+          "opponent_name": "Nashkho Galaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nashkho-Galaev-166271",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Nikita Prikhodko",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nikita-Prikhodko-385044",
@@ -174359,10 +174635,22 @@
       "name": "Nizambek Abdrashitov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1679590815nizambek-zhunus-uulu-.png",
       "weight_class": "Lightweight",
-      "record": "12-4-0",
+      "record": "13-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Nizambek-Abdrashitov-199459",
       "fight_history": [
+        {
+          "opponent_name": "Shadid Abdurzakov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shadid-Abdurzakov-297253",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Artur Arutyunyan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Artur-Arutyunyan-245997",
@@ -212918,7 +213206,7 @@
       "name": "Mamurzhon Khamdamov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1718052069Mamurjon_Khamdamov.jpg",
       "weight_class": "Welterweight",
-      "record": "12-3-0",
+      "record": "13-3-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mamurzhon-Khamdamov-209297",
       "fight_history": [
@@ -223436,6 +223724,18 @@
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Felipe-Bunes-135973",
       "fight_history": [
+        {
+          "opponent_name": "Azam Gaforov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Azam-Gaforov-198511",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Submission (Twister)",
+          "referee": "Maxim Protasov",
+          "round": 1,
+          "time": "4:13"
+        },
         {
           "opponent_name": "Edgar Chairez",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Edgar-Chairez-244721",
@@ -317483,10 +317783,22 @@
       "name": "Jahongir Saidjamolov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1710644266Jahongir_Saidjamolov.png",
       "weight_class": "Welterweight",
-      "record": "16-5-0",
+      "record": "16-6-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jahongir-Saidjamolov-198503",
       "fight_history": [
+        {
+          "opponent_name": "Alikhan Musaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alikhan-Musaev-390928",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Firdavs Rizvonzoda",
+          "round": 2,
+          "time": "2:36"
+        },
         {
           "opponent_name": "Zalimkhan Yusupov",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zalimkhan-Yusupov-169085",
@@ -381189,10 +381501,22 @@
       "name": "Mustafa Ashurzoda",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Bantamweight",
-      "record": "4-0-0",
+      "record": "4-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Mustafa-Ashurzoda-411792",
       "fight_history": [
+        {
+          "opponent_name": "Akhmed Khamzaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Akhmed-Khamzaev-259357",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Dmitry Valuevich",
+          "round": 1,
+          "time": "3:26"
+        },
         {
           "opponent_name": "Salimzhan Abylaikhan",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salimzhan-Abylaikhan-471290",
@@ -381555,10 +381879,22 @@
       "name": "Bakhtovar Yunusov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240607073833_Bakhtovar_Yunusov.JPG",
       "weight_class": "Bantamweight",
-      "record": "11-1-0",
+      "record": "12-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Bakhtovar-Yunusov-378649",
       "fight_history": [
+        {
+          "opponent_name": "Saidyokub Kakhramonov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Saidyokub-Kakhramonov-274077",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Qinghe Zhang",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Qinghe-Zhang-382525",
@@ -381721,10 +382057,22 @@
       "name": "Bektur Zhenishbek Uulu",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1792007074Bektur_Zhenishbek_Uulu.jpg",
       "weight_class": "Flyweight",
-      "record": "5-0-0",
+      "record": "6-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Bektur-Zhenishbek-Uulu-339657",
       "fight_history": [
+        {
+          "opponent_name": "Oyatullo Muminov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oyatullo-Muminov-300259",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Maxim Protasov",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Vitaliy Kositsyn",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Vitaliy-Kositsyn-260007",
@@ -381791,10 +382139,22 @@
       "name": "Sayed Safarmamadov",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1727661258Sayed_Safarmamadov.jpg",
       "weight_class": "Lightweight",
-      "record": "4-0-0",
+      "record": "5-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Sayed-Safarmamadov-364501",
       "fight_history": [
+        {
+          "opponent_name": "Ali Mashrapov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ali-Mashrapov-277991",
+          "event_name": "ACA 209 - Frolov vs. Odilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/ACA-209-Frolov-vs-Odilov-114289",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "TKO (Doctor Stoppage)",
+          "referee": "Firdavs Rizvonzoda",
+          "round": 1,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Dotev Aushev",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dotev-Aushev-480581",
@@ -429373,26 +429733,26 @@
     },
     {
       "event_name": "ACA 209 - Frolov vs. Odilov",
-      "fighter1_name": "Viskhan Kadirov",
-      "fighter2_name": "Bekhruz Zugurov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Bekhruz Zugurov",
+      "fighter2_name": "Viskhan Kadirov",
+      "fight_finished": true,
+      "winner_name": "Bekhruz Zugurov",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "1:28",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 209 - Frolov vs. Odilov",
-      "fighter1_name": "Alexey Makhno",
-      "fighter2_name": "Kuat Khamitov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Kuat Khamitov",
+      "fighter2_name": "Alexey Makhno",
+      "fight_finished": true,
+      "winner_name": "Kuat Khamitov",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "0:44",
       "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429401,24 +429761,24 @@
       "event_name": "ACA 209 - Frolov vs. Odilov",
       "fighter1_name": "Firdavs Zaripov",
       "fighter2_name": "Vagiz Ismagilov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Firdavs Zaripov",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "1:25",
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
     {
       "event_name": "ACA 209 - Frolov vs. Odilov",
-      "fighter1_name": "Jahongir Saidjamolov",
-      "fighter2_name": "Alikhan Musaev",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fighter1_name": "Alikhan Musaev",
+      "fighter2_name": "Jahongir Saidjamolov",
+      "fight_finished": true,
+      "winner_name": "Alikhan Musaev",
+      "method": "TKO (Punches)",
+      "round": 2,
+      "time": "2:36",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -429427,11 +429787,11 @@
       "event_name": "ACA 209 - Frolov vs. Odilov",
       "fighter1_name": "Khafiz Sakibekov",
       "fighter2_name": "Nikita Podkovalnikov",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "0:00",
+      "fight_finished": true,
+      "winner_name": "Khafiz Sakibekov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
