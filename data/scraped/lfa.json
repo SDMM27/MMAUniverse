@@ -1484,13 +1484,6 @@
       "event_poster": ""
     },
     {
-      "name": "LFA 245 - Khamzaev vs. Prescendo",
-      "date": "2026-10-30",
-      "start_time": "2026-10-30T00:00:00+00:00",
-      "event_location": "Seneca Niagara Resort and Casino, Niagara Falls, New York, United States",
-      "event_poster": ""
-    },
-    {
       "name": "LFA 246 - Alves vs. Vinuto",
       "date": "2026-11-13",
       "start_time": "2026-11-13T00:00:00+00:00",
@@ -1502,6 +1495,13 @@
       "date": "2026-11-20",
       "start_time": "2026-11-20T00:00:00+00:00",
       "event_location": "Arizona Financial Theatre, Phoenix, Arizona, United States",
+      "event_poster": ""
+    },
+    {
+      "name": "LFA 245 - Khamzaev vs. Prescendo",
+      "date": "2026-10-30",
+      "start_time": "2026-10-30T00:00:00+00:00",
+      "event_location": "Seneca Niagara Resort and Casino, Niagara Falls, New York, United States",
       "event_poster": ""
     }
   ],
@@ -20944,10 +20944,22 @@
       "name": "David Wright",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230210020630_David_Wright.JPG",
       "weight_class": "Middleweight",
-      "record": "6-3-0",
+      "record": "6-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/David-Wright-401321",
       "fight_history": [
+        {
+          "opponent_name": "Lance Wright",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lance-Wright-222605",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "KO (Punches)",
+          "referee": "Todd Anderson",
+          "round": 1,
+          "time": "0:52"
+        },
         {
           "opponent_name": "Jake Woodley",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jake-Woodley-432845",
@@ -38721,10 +38733,22 @@
       "name": "Lance Wright",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1624584675Lance_Wright.jpeg",
       "weight_class": "Middleweight",
-      "record": "7-5-0",
+      "record": "8-5-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Lance-Wright-222605",
       "fight_history": [
+        {
+          "opponent_name": "David Wright",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/David-Wright-401321",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Todd Anderson",
+          "round": 1,
+          "time": "0:52"
+        },
         {
           "opponent_name": "Theo Haig",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Theo-Haig-364045",
@@ -39135,10 +39159,22 @@
       "name": "Shealor Ladd",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1736561766IMG_9199.jpeg",
       "weight_class": "Light Heavyweight",
-      "record": "4-1-0",
+      "record": "5-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Shealor-Ladd-385313",
       "fight_history": [
+        {
+          "opponent_name": "Matthew Adams",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matthew-Adams-276263",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Matt Rocca",
+          "round": 1,
+          "time": "1:30"
+        },
         {
           "opponent_name": "Isaiah Pinson",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Isaiah-Pinson-410181",
@@ -42798,10 +42834,22 @@
       "name": "Matthew Adams",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1732767786adams.jpg",
       "weight_class": "Heavyweight",
-      "record": "6-3-0",
+      "record": "6-4-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Matthew-Adams-276263",
       "fight_history": [
+        {
+          "opponent_name": "Shealor Ladd",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shealor-Ladd-385313",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Matt Rocca",
+          "round": 1,
+          "time": "1:30"
+        },
         {
           "opponent_name": "Anthony Wint",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anthony-Wint-383061",
@@ -44700,10 +44748,22 @@
       "name": "Aline David",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1732777372david.jpg",
       "weight_class": "Strawweight",
-      "record": "3-1-0",
+      "record": "4-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Aline-David-385243",
       "fight_history": [
+        {
+          "opponent_name": "Naomie Young",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Naomie-Young-372606",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "TKO (Knees)",
+          "referee": "Matt Rocca",
+          "round": 3,
+          "time": "3:49"
+        },
         {
           "opponent_name": "Jayde Sheeley",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jayde-Sheeley-158375",
@@ -63401,10 +63461,22 @@
       "name": "Naomie Young",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1693079851359835005_648716640624077_4911500475214366882_n.jpg",
       "weight_class": "Strawweight",
-      "record": "3-2-0",
+      "record": "3-3-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Naomie-Young-372606",
       "fight_history": [
+        {
+          "opponent_name": "Aline David",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aline-David-385243",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "TKO (Knees)",
+          "referee": "Matt Rocca",
+          "round": 3,
+          "time": "3:49"
+        },
         {
           "opponent_name": "Lateesha Potoka",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lateesha-Potoka-221039",
@@ -73367,10 +73439,22 @@
       "name": "Jermaine Edwards",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1736601239edwards.jpg",
       "weight_class": "Lightweight",
-      "record": "2-0-0",
+      "record": "2-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jermaine-Edwards-432914",
       "fight_history": [
+        {
+          "opponent_name": "Imed Eddine Dziri",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Imed-Eddine-Dziri-420262",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Todd Anderson",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Temuujin Ulzii-Orshikh",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Temuujin-UlziiOrshikh-279783",
@@ -409138,10 +409222,23 @@
       "name": "Isaiah Parks",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Light Heavyweight",
-      "record": "0-0-0",
+      "record": "1-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Isaiah-Parks-507334",
-      "fight_history": []
+      "fight_history": [
+        {
+          "opponent_name": "Delsin Gray",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Delsin-Gray-503045",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Matt Rocca",
+          "round": 1,
+          "time": "2:13"
+        }
+      ]
     },
     {
       "name": "Christian Getsey",
@@ -411717,10 +411814,22 @@
       "name": "Imed Eddine Dziri",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Middleweight",
-      "record": "0-1-0",
+      "record": "1-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Imed-Eddine-Dziri-420262",
       "fight_history": [
+        {
+          "opponent_name": "Jermaine Edwards",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jermaine-Edwards-432914",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Todd Anderson",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Lionel Kamooze",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lionel-Kamooze-440823",
@@ -411751,10 +411860,23 @@
       "name": "Delsin Gray",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Light Heavyweight",
-      "record": "0-0-0",
+      "record": "0-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Delsin-Gray-503045",
-      "fight_history": []
+      "fight_history": [
+        {
+          "opponent_name": "Isaiah Parks",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Isaiah-Parks-507334",
+          "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-245-Khamzaev-vs-Prescendo-114326",
+          "date": "2026-10-30",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Matt Rocca",
+          "round": 1,
+          "time": "2:13"
+        }
+      ]
     },
     {
       "name": "Ricardo Hussein",
@@ -441666,123 +441788,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Ansar Khamzaev",
-      "fighter2_name": "Juliano Prescendo",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Thomas Picciano",
-      "fighter2_name": "Santos Verdinez",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Joey Hart",
-      "fighter2_name": "Alberth Bahamondes",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Welterweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Sharaf Davlatmurodov",
-      "fighter2_name": "Wildemar Souza Santos",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Light Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Matthew Adams",
-      "fighter2_name": "Shealor Ladd",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Light Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "David Wright",
-      "fighter2_name": "Lance Wright",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Naomie Young",
-      "fighter2_name": "Aline David",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Strawweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Imed Eddine Dziri",
-      "fighter2_name": "Jermaine Edwards",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Catchweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
-      "fighter1_name": "Isaiah Parks",
-      "fighter2_name": "Delsin Gray",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Light Heavyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "LFA 246 - Alves vs. Vinuto",
       "fighter1_name": "Natalia Alves",
       "fighter2_name": "Raiane Vinuto",
@@ -442078,6 +442083,123 @@
       "round": 0,
       "time": "",
       "weight_class": "215lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Ansar Khamzaev",
+      "fighter2_name": "Juliano Prescendo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Lightweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Thomas Picciano",
+      "fighter2_name": "Santos Verdinez",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Joey Hart",
+      "fighter2_name": "Alberth Bahamondes",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Welterweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Sharaf Davlatmurodov",
+      "fighter2_name": "Wildemar Souza Santos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "0:00",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Shealor Ladd",
+      "fighter2_name": "Matthew Adams",
+      "fight_finished": true,
+      "winner_name": "Shealor Ladd",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "1:30",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Lance Wright",
+      "fighter2_name": "David Wright",
+      "fight_finished": true,
+      "winner_name": "Lance Wright",
+      "method": "KO (Punches)",
+      "round": 1,
+      "time": "0:52",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Aline David",
+      "fighter2_name": "Naomie Young",
+      "fight_finished": true,
+      "winner_name": "Aline David",
+      "method": "TKO (Knees)",
+      "round": 3,
+      "time": "3:49",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Imed Eddine Dziri",
+      "fighter2_name": "Jermaine Edwards",
+      "fight_finished": true,
+      "winner_name": "Imed Eddine Dziri",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "LFA 245 - Khamzaev vs. Prescendo",
+      "fighter1_name": "Isaiah Parks",
+      "fighter2_name": "Delsin Gray",
+      "fight_finished": true,
+      "winner_name": "Isaiah Parks",
+      "method": "TKO (Punches)",
+      "round": 1,
+      "time": "2:13",
+      "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     }

@@ -53116,7 +53116,7 @@
           "event_sherdog_url": "https://www.sherdog.com/events/AFC-Ased-Fighting-Championship-Selection-2-94306",
           "date": "2022-07-03",
           "result": "win",
-          "method": "TKO",
+          "method": "TKO (Punches)",
           "referee": "Fuad Musayev",
           "round": 1,
           "time": "0:47"
@@ -145007,7 +145007,7 @@
       "name": "Jacobe Smith",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20240911122228_Jacobe_Smith.JPG",
       "weight_class": "Welterweight",
-      "record": "12-0-0",
+      "record": "13-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Jacobe-Smith-394506",
       "fight_history": [
