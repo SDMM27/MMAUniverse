@@ -3262,10 +3262,22 @@
       "name": "Lasha Gogishvili",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
       "weight_class": "Bantamweight",
-      "record": "4-1-0",
+      "record": "5-1-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Lasha-Gogishvili-435222",
       "fight_history": [
+        {
+          "opponent_name": "Alexandre Carole",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexandre-Carole-408426",
+          "event_name": "ARES 44 - Younousov vs. Nam",
+          "event_sherdog_url": "https://www.sherdog.com/events/ARES-44-Younousov-vs-Nam-111977",
+          "date": "2026-10-31",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Luc Hernandez",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Alison Silva",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alison-Silva-413689",
@@ -9998,7 +10010,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Bantamweight",
       "is_main_event": true,
       "is_title_fight": true
@@ -10011,7 +10023,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "160lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -10024,7 +10036,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -10037,7 +10049,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "176lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -10050,7 +10062,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -10063,7 +10075,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Strawweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -10076,7 +10088,7 @@
       "winner_name": null,
       "method": "",
       "round": 0,
-      "time": "",
+      "time": "0:00",
       "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
@@ -10085,11 +10097,11 @@
       "event_name": "ARES 44 - Younousov vs. Nam",
       "fighter1_name": "Lasha Gogishvili",
       "fighter2_name": "Alexandre Carole",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
+      "fight_finished": true,
+      "winner_name": "Lasha Gogishvili",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
       "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
