@@ -161914,6 +161914,19 @@
     },
     {
       "event_name": "Rizin FF - Rizin 55",
+      "fighter1_name": "Jake Wilkins",
+      "fighter2_name": "Yajuro Yamasaki",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Rizin FF - Rizin 55",
       "fighter1_name": "Naohiro Matsumoto",
       "fighter2_name": "Masachika Takahashi",
       "fight_finished": false,
@@ -161935,19 +161948,6 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Rizin FF - Rizin 55",
-      "fighter1_name": "Yajuro Yamasaki",
-      "fighter2_name": "Jake Wilkins",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
