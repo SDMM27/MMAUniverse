@@ -4911,6 +4911,314 @@
           "time": "3:32"
         }
       ]
+    },
+    {
+      "name": "Jean Magny",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Jean-Magny-409015",
+      "fight_history": [
+        {
+          "opponent_name": "Shekina Bilolo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shekina-Bilolo-453327",
+          "event_name": "Coliseum 4 - Coliseum Fighting Championship",
+          "event_sherdog_url": "https://www.sherdog.com/events/Coliseum-4-Coliseum-Fighting-Championship-112303",
+          "date": "2026-04-18",
+          "result": "win",
+          "method": "Submission",
+          "referee": "Fateh Oubelli",
+          "round": 2,
+          "time": "2:52"
+        },
+        {
+          "opponent_name": "Saba Saladze",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Saba-Saladze-435992",
+          "event_name": "AEC 12 - Arena Elite Championship 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEC-12-Arena-Elite-Championship-12-106187",
+          "date": "2025-02-08",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Oumar Mizaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oumar-Mizaev-388657",
+          "event_name": "Pro Evolution Fighting 6 - PEF 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pro-Evolution-Fighting-6-PEF-6-105700",
+          "date": "2024-12-21",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Mohmad Emin Abdulkhazhiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mohmad-Emin-Abdulkhazhiev-420201",
+          "event_name": "AEC 10 - Arena Elite Championship 10",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEC-10-Arena-Elite-Championship-10-105229",
+          "date": "2024-11-29",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Salvo Giudice",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Salvo-Giudice-422675",
+          "event_name": "AEF 9 - AEF Championship 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEF-9-AEF-Championship-9-104004",
+          "date": "2024-10-04",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Loic Pora",
+          "round": 2,
+          "time": "1:36"
+        },
+        {
+          "opponent_name": "Taymir Kovraev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taymir-Kovraev-442596",
+          "event_name": "AEF 7 - AEF Championship 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEF-7-AEF-Championship-7-101877",
+          "date": "2024-05-31",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Naoufel Louati",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Ahmed Houari",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ahmed-Houari-413141",
+          "event_name": "Pro Evolution Fighting 4 - PEF 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pro-Evolution-Fighting-4-PEF-4-102193",
+          "date": "2024-05-02",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Victor Lemaignent",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Victor-Lemaignent-461162",
+          "event_name": "FMMAF - MMA League 11: Clermont - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-11-Clermont-Day-1-101992",
+          "date": "2024-03-01",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:29"
+        },
+        {
+          "opponent_name": "Leka Gjonbalaj",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Leka-Gjonbalaj-435505",
+          "event_name": "Pro Evolution Fighting 3 - PEF 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pro-Evolution-Fighting-3-PEF-3-100559",
+          "date": "2023-12-28",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Marc Goddard",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Oualy Tandia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oualy-Tandia-419548",
+          "event_name": "Pro Evolution Fighting 2 - PEF 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pro-Evolution-Fighting-2-PEF-2-99070",
+          "date": "2023-09-23",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Cagdas Atmaca",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cagdas-Atmaca-376197",
+          "event_name": "CWA - Cage Warriors Academy Lowlands 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/CWA-Cage-Warriors-Academy-Lowlands-5-97218",
+          "date": "2023-05-06",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Khizar  Mizaev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khizar-Mizaev-414990",
+          "event_name": "Pro Evolution Fighting 1 - PEF 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pro-Evolution-Fighting-1-PEF-1-99069",
+          "date": "2023-03-18",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "2:57"
+        },
+        {
+          "opponent_name": "Joey Nasello",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joey-Nasello-432565",
+          "event_name": "BMMAF - 2023 Belgium Novice Championship: Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/BMMAF-2023-Belgium-Novice-Championship-Day-2-102049",
+          "date": "2023-02-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Guillaume Nassau",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Guillaume-Nassau-426192",
+          "event_name": "BMMAF - All in the Cage",
+          "event_sherdog_url": "https://www.sherdog.com/events/BMMAF-All-in-the-Cage-97852",
+          "date": "2022-11-26",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "2:51"
+        },
+        {
+          "opponent_name": "Luca Rosinski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Luca-Rosinski-409016",
+          "event_name": "BMMAF - Fight Night: Series",
+          "event_sherdog_url": "https://www.sherdog.com/events/BMMAF-Fight-Night-Series-92941",
+          "date": "2022-05-21",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:15"
+        }
+      ]
+    },
+    {
+      "name": "Bogdan Ozdoev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Bogdan-Ozdoev-423617",
+      "fight_history": [
+        {
+          "opponent_name": "Eddy Hourtal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eddy-Hourtal-428352",
+          "event_name": "Pro Evolution Fighting 6 - PEF 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pro-Evolution-Fighting-6-PEF-6-105700",
+          "date": "2024-12-21",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Aline Gaye",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aline-Gaye-450588",
+          "event_name": "AEF 8 - AEF Championship 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEF-8-AEF-Championship-8-103572",
+          "date": "2024-09-21",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Abdourakman Iniev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdourakman-Iniev-423624",
+          "event_name": "Game of Cage - The Road 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/Game-of-Cage-The-Road-5-99748",
+          "date": "2023-09-24",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Amine Jmel",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amine-Jmel-397604",
+          "event_name": "Game of Cage - The Road 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/Game-of-Cage-The-Road-4-98213",
+          "date": "2023-07-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Adam Abbar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adam-Abbar-423618",
+          "event_name": "Game of Cage - The Road 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Game-of-Cage-The-Road-3-98154",
+          "date": "2023-05-28",
+          "result": "win",
+          "method": "Submission",
+          "referee": "",
+          "round": 1,
+          "time": "1:33"
+        },
+        {
+          "opponent_name": "Enzo Thery",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Enzo-Thery-419781",
+          "event_name": "Game of Cage - The Road 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Game-of-Cage-The-Road-2-96765",
+          "date": "2023-03-12",
+          "result": "win",
+          "method": "Submission",
+          "referee": "",
+          "round": 1,
+          "time": "0:33"
+        },
+        {
+          "opponent_name": "Eddy Hourtal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eddy-Hourtal-428352",
+          "event_name": "FMMAF - MMA League 2: Tarbes - Day 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-2-Tarbes-Day-2-105250",
+          "date": "2023-02-04",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "2:00"
+        },
+        {
+          "opponent_name": "Abdoulaye Dione",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdoulaye-Dione-432886",
+          "event_name": "FMMAF - MMA League 2: Tarbes - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-2-Tarbes-Day-1-105251",
+          "date": "2023-02-03",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "2:35"
+        },
+        {
+          "opponent_name": "Ismael Belmehadji",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ismael-Belmehadji-461070",
+          "event_name": "FMMAF - MMA League 2: Tarbes - Day 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/FMMAF-MMA-League-2-Tarbes-Day-1-105251",
+          "date": "2023-02-03",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "0:45"
+        }
+      ]
     }
   ],
   "fights": [
@@ -10256,6 +10564,45 @@
       "weight_class": "Strawweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "ARES 46 - TBD vs. TBD",
+      "fighter1_name": "Alexis Nicolas",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ARES 46 - TBD vs. TBD",
+      "fighter1_name": "Jean Magny",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ARES 46 - TBD vs. TBD",
+      "fighter1_name": "Bogdan Ozdoev",
+      "fighter2_name": "Unknown Fighter",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }
