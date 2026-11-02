@@ -747606,19 +747606,6 @@
     },
     {
       "event_name": "UFC Fight Night 294 - Prochazka vs. Stirling",
-      "fighter1_name": "Jacqueline Cavalcanti",
-      "fighter2_name": "Michelle Montague",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "UFC Fight Night 294 - Prochazka vs. Stirling",
       "fighter1_name": "Diyar Nurgozhay",
       "fighter2_name": "Alik Lorenz",
       "fight_finished": false,
@@ -747852,6 +747839,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "UFC 335 - Oliveira vs. Lopes",
+      "fighter1_name": "Jacqueline Cavalcanti",
+      "fighter2_name": "Michelle Montague",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "UFC 336 - Prates vs. Morales",
       "fighter1_name": "Carlos Prates",
       "fighter2_name": "Michael Morales",
@@ -747888,6 +747888,19 @@
       "time": "",
       "weight_class": "Lightweight",
       "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "fighter1_name": "Bogdan Guskov",
+      "fighter2_name": "Robert Whittaker",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
+      "is_main_event": false,
       "is_title_fight": false
     },
     {
@@ -747939,6 +747952,32 @@
       "round": 0,
       "time": "",
       "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "fighter1_name": "Marwan Rahiki",
+      "fighter2_name": "Joo Sang Yoo",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "fighter1_name": "Joanderson Brito",
+      "fighter2_name": "Kaan Ofli",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
       "is_main_event": false,
       "is_title_fight": false
     }

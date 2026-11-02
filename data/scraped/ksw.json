@@ -165516,6 +165516,100 @@
           "time": "3:21"
         }
       ]
+    },
+    {
+      "name": "Szymon Herrmann",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1719848650IMG-5466.jpg",
+      "weight_class": "Middleweight",
+      "record": "7-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Szymon-Herrmann-216451",
+      "fight_history": [
+        {
+          "opponent_name": "Lukasz Siwiec",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lukasz-Siwiec-168925",
+          "event_name": "Babilon MMA 59 - Sianos vs. Mysiala",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-59-Sianos-vs-Mysiala-112827",
+          "date": "2026-07-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Krystian Wolinski",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Arturs Ozolins",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arturs-Ozolins-218073",
+          "event_name": "Babilon MMA 55 - Lazarz vs. Kolecki 2",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-55-Lazarz-vs-Kolecki-2-109985",
+          "date": "2025-11-21",
+          "result": "win",
+          "method": "Decision (Majority)",
+          "referee": "Piotr Szyba",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mariusz Krzeszowski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mariusz-Krzeszowski-424701",
+          "event_name": "Babilon MMA 52 - Mendlewski vs. Skrzek",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-52-Mendlewski-vs-Skrzek-107959",
+          "date": "2025-05-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Michal Lepicki",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kamil Korzeniewski",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kamil-Korzeniewski-410205",
+          "event_name": "Babilon MMA 49 - Politylo vs. Majdan",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-49-Politylo-vs-Majdan-105050",
+          "date": "2024-11-22",
+          "result": "win",
+          "method": "KO (Head Kick)",
+          "referee": "Piotr Jarosz",
+          "round": 2,
+          "time": "3:42"
+        },
+        {
+          "opponent_name": "Rafal Lewon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rafal-Lewon-82657",
+          "event_name": "Babilon MMA 46 - Sianos vs. Thompson",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-46-Sianos-vs-Thompson-103287",
+          "date": "2024-08-09",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Tomasz Bronder",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kamil Mekal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kamil-Mekal-275591",
+          "event_name": "Babilon MMA 38 - Lopaczyk vs. Jakimowicz",
+          "event_sherdog_url": "https://www.sherdog.com/events/Babilon-MMA-38-Lopaczyk-vs-Jakimowicz-98820",
+          "date": "2023-09-22",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Adrian Zak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adrian-Zak-171805",
+          "event_name": "FSC 7 - First Step Championship 7: Koszalin",
+          "event_sherdog_url": "https://www.sherdog.com/events/FSC-7-First-Step-Championship-7-Koszalin-97461",
+          "date": "2023-05-13",
+          "result": "win",
+          "method": "TKO (Knee to the Body and Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -178105,6 +178199,19 @@
     },
     {
       "event_name": "KSW 123 - Bartosinski vs. Lopaczyk",
+      "fighter1_name": "Alain Van De Merckt",
+      "fighter2_name": "Szymon Herrmann",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "KSW 123 - Bartosinski vs. Lopaczyk",
       "fighter1_name": "Wojciech Kawa",
       "fighter2_name": "Oleksandr Moisa",
       "fight_finished": false,
@@ -178184,7 +178291,7 @@
     {
       "event_name": "KSW 124 - Pawlak vs. Kuberski",
       "fighter1_name": "Souheil Kaouchen",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Oleksii Polishchuk",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

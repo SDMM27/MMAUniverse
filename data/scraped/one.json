@@ -9027,6 +9027,158 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Chayut Rojanakat",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1781871803Bos_Chayut-hero-1200x1165-1-600x583.png",
+      "weight_class": "Featherweight",
+      "record": "5-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Chayut-Rojanakat-326251",
+      "fight_history": [
+        {
+          "opponent_name": "Hsiang Liao",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hsiang-Liao-319331",
+          "event_name": "One Championship - One Friday Fights 159",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-159-113001",
+          "date": "2026-06-19",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Thanh Sang Tran",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Thanh-Sang-Tran-478382",
+          "event_name": "GMA 11 - Gods of Martial Arts 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMA-11-Gods-of-Martial-Arts-11-110889",
+          "date": "2025-12-27",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "Van Dong Do",
+          "round": 2,
+          "time": "4:29"
+        },
+        {
+          "opponent_name": "Gleb Ovcharov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gleb-Ovcharov-489001",
+          "event_name": "LC 28 - Lion Championship 28",
+          "event_sherdog_url": "https://www.sherdog.com/events/LC-28-Lion-Championship-28-110414",
+          "date": "2025-11-08",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 3,
+          "time": "4:18"
+        },
+        {
+          "opponent_name": "Rin Saroth",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rin-Saroth-137315",
+          "event_name": "GMA 7 - Gods of Martial Arts 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMA-7-Gods-of-Martial-Arts-7-109040",
+          "date": "2025-08-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Brennan Kim",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Brennan-Kim-395573",
+          "event_name": "SEAFC - South East Asia Fighting Championship: Legacy",
+          "event_sherdog_url": "https://www.sherdog.com/events/SEAFC-South-East-Asia-Fighting-Championship-Legacy-108166",
+          "date": "2025-05-16",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "Jack Ferguson",
+          "round": 1,
+          "time": "1:26"
+        }
+      ]
+    },
+    {
+      "name": "Kentaro Okumura",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250118102451_Kentaro_Okumura.JPG",
+      "weight_class": "Bantamweight",
+      "record": "5-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Kentaro-Okumura-443327",
+      "fight_history": [
+        {
+          "opponent_name": "Taiyo Ogawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taiyo-Ogawa-443948",
+          "event_name": "Fighting Nexus - Sublime Guys Fight in Kawagoe 2026",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Sublime-Guys-Fight-in-Kawagoe-2026-114004",
+          "date": "2026-08-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Naoki Deguchi",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yuto Shioya",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuto-Shioya-430267",
+          "event_name": "Fighting Nexus - Nexus Mania 2026",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Nexus-Mania-2026-112066",
+          "date": "2026-04-25",
+          "result": "loss",
+          "method": "TKO (Corner Stoppage)",
+          "referee": "Yoshinori Umeki",
+          "round": 1,
+          "time": "3:38"
+        },
+        {
+          "opponent_name": "Takuya Ogura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Takuya-Ogura-25576",
+          "event_name": "GFG 5 - Global Fightingsports Game 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/GFG-5-Global-Fightingsports-Game-5-110075",
+          "date": "2025-11-30",
+          "result": "win",
+          "method": "Submission (Armbar)",
+          "referee": "",
+          "round": 1,
+          "time": "3:32"
+        },
+        {
+          "opponent_name": "Masamune Onodera",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Masamune-Onodera-484535",
+          "event_name": "Fighting Nexus - Vol. 40",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-40-109590",
+          "date": "2025-09-14",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Yuto Kaneko",
+          "round": 1,
+          "time": "2:01"
+        },
+        {
+          "opponent_name": "Toru Fujii",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Toru-Fujii-348453",
+          "event_name": "Fighting Nexus - Sublime Guys Fight in Kawagoe 2025",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Sublime-Guys-Fight-in-Kawagoe-2025-108183",
+          "date": "2025-06-22",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Hidenobu Koike",
+          "round": 1,
+          "time": "2:41"
+        },
+        {
+          "opponent_name": "Kazuki Aoki",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kazuki-Aoki-382722",
+          "event_name": "Fighting Nexus - Vol. 38",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fighting-Nexus-Vol-38-106725",
+          "date": "2025-03-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Yuto Kaneko",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -9341,6 +9493,19 @@
       "weight_class": "Welterweight",
       "is_main_event": true,
       "is_title_fight": true
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 177",
+      "fighter1_name": "Chayut Rojanakat",
+      "fighter2_name": "Kentaro Okumura",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
     },
     {
       "event_name": "One Championship - One on Prime Video 49",
