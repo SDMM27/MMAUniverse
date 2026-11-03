@@ -1724,6 +1724,13 @@
       "event_poster": ""
     },
     {
+      "name": "ACA YE 70 - ACA Young Eagles 70",
+      "date": "2026-11-19",
+      "start_time": "2026-11-19T00:00:00+00:00",
+      "event_location": "Sport Hall Colloseum, Grozny, Chechnya, Russia",
+      "event_poster": ""
+    },
+    {
       "name": "ACA 210 - Myrzabekov vs. Tumenov",
       "date": "2026-12-05",
       "start_time": "2026-12-05T00:00:00+00:00",
@@ -382358,6 +382365,76 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Mohammad Heibati",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1617400183Mohammad_Heibati.jpg",
+      "weight_class": "Lightweight",
+      "record": "4-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Mohammad-Heibati-342359",
+      "fight_history": [
+        {
+          "opponent_name": "Sanzhar Tazhiev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sanzhar-Tazhiev-382299",
+          "event_name": "Naiza FC 74 - Naiza Fighter Championship 74: Serikuly vs. Saralapov",
+          "event_sherdog_url": "https://www.sherdog.com/events/Naiza-FC-74-Naiza-Fighter-Championship-74-Serikuly-vs-Saralapov-108416",
+          "date": "2025-06-28",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Aktleu Askerbaiuly",
+          "round": 2,
+          "time": "4:23"
+        },
+        {
+          "opponent_name": "Fanil Rafikov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Fanil-Rafikov-176949",
+          "event_name": "Naiza FC 68 - Naiza Fighter Championship 68: Rafikov vs. Heibati",
+          "event_sherdog_url": "https://www.sherdog.com/events/Naiza-FC-68-Naiza-Fighter-Championship-68-Rafikov-vs-Heibati-104618",
+          "date": "2024-10-19",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "3:10"
+        },
+        {
+          "opponent_name": "Muratbek Kasimbay",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Muratbek-Kasimbay-223221",
+          "event_name": "AMC Fight Nights 99 - Makhno vs. Khachatryan",
+          "event_sherdog_url": "https://www.sherdog.com/events/AMC-Fight-Nights-99-Makhno-vs-Khachatryan-88422",
+          "date": "2020-12-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Dmitry Valuevich",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Filipp Kosyrev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Filipp-Kosyrev-346699",
+          "event_name": "FNG 94 - Fight Nights Global 94",
+          "event_sherdog_url": "https://www.sherdog.com/events/FNG-94-Fight-Nights-Global-94-80497",
+          "date": "2019-10-12",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Stanislav Novitsky",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Abdula Murtazaliev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdula-Murtazaliev-293001",
+          "event_name": "DFS 5 - Dagestan Fighting Selection 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/DFS-5-Dagestan-Fighting-Selection-5-79037",
+          "date": "2019-08-27",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 2,
+          "time": "2:31"
+        }
+      ]
     }
   ],
   "fights": [
@@ -430066,6 +430143,19 @@
       "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": true
+    },
+    {
+      "event_name": "ACA 211 - Shlemenko vs. Emeev",
+      "fighter1_name": "Pavel Gordeev",
+      "fighter2_name": "Mohammad Heibati",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
     }
   ]
 }

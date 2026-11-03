@@ -324,7 +324,7 @@
       "event_poster": ""
     },
     {
-      "name": "ARES 46 - TBD vs. TBD",
+      "name": "ARES 46 - Jorand vs. Jendrasik",
       "date": "2026-12-11",
       "start_time": "2026-12-11T00:00:00+00:00",
       "event_location": "Adidas Arena, Paris, France",
@@ -5217,6 +5217,50 @@
           "referee": "",
           "round": 1,
           "time": "0:45"
+        }
+      ]
+    },
+    {
+      "name": "Lamp Toure",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Lamp-Toure-419630",
+      "fight_history": [
+        {
+          "opponent_name": "Adrian Czachor",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Adrian-Czachor-413455",
+          "event_name": "AEC 19 - Arena Elite Championship 19",
+          "event_sherdog_url": "https://www.sherdog.com/events/AEC-19-Arena-Elite-Championship-19-113207",
+          "date": "2026-06-13",
+          "result": "win",
+          "method": "KO (Flying Knee)",
+          "referee": "Naoufel Louati",
+          "round": 1,
+          "time": "3:00"
+        }
+      ]
+    },
+    {
+      "name": "Valeriu Asaftei",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Featherweight",
+      "record": "1-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Valeriu-Asaftei-458044",
+      "fight_history": [
+        {
+          "opponent_name": "Huseyn Safarli",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Huseyn-Safarli-459181",
+          "event_name": "MMA Quest 17 - Pilidis vs. Leonidou",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMA-Quest-17-Pilidis-vs-Leonidou-113359",
+          "date": "2026-06-21",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Ilias  Karavakos",
+          "round": 3,
+          "time": "3:10"
         }
       ]
     }
@@ -10553,7 +10597,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "ARES 46 - TBD vs. TBD",
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
+      "fighter1_name": "Lamp Toure",
+      "fighter2_name": "Valeriu Asaftei",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ARES 46 - Jorand vs. Jendrasik",
       "fighter1_name": "Jade Jorand",
       "fighter2_name": "Kinga Jendrasik",
       "fight_finished": false,
@@ -10566,7 +10623,7 @@
       "is_title_fight": true
     },
     {
-      "event_name": "ARES 46 - TBD vs. TBD",
+      "event_name": "ARES 46 - Jorand vs. Jendrasik",
       "fighter1_name": "Alexis Nicolas",
       "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
@@ -10579,7 +10636,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "ARES 46 - TBD vs. TBD",
+      "event_name": "ARES 46 - Jorand vs. Jendrasik",
       "fighter1_name": "Jean Magny",
       "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
@@ -10592,7 +10649,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "ARES 46 - TBD vs. TBD",
+      "event_name": "ARES 46 - Jorand vs. Jendrasik",
       "fighter1_name": "Bogdan Ozdoev",
       "fighter2_name": "Unknown Fighter",
       "fight_finished": false,
