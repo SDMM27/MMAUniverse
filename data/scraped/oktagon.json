@@ -870,7 +870,7 @@
       "event_poster": ""
     },
     {
-      "name": "Oktagon MMA - Oktagon 99",
+      "name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
       "date": "2026-12-05",
       "start_time": "2026-12-05T00:00:00+00:00",
       "event_location": "Westfalenhalle, Dortmund, Germany",
@@ -895,6 +895,13 @@
       "date": "2027-01-30",
       "start_time": "2027-01-30T00:00:00+00:00",
       "event_location": "Home Credit Arena, Liberec, Czech Republic",
+      "event_poster": ""
+    },
+    {
+      "name": "Oktagon MMA - Oktagon 103",
+      "date": "2027-02-20",
+      "start_time": "2027-02-20T00:00:00+00:00",
+      "event_location": "Wiener Stadthalle, Vienna, Austria",
       "event_poster": ""
     }
   ],
@@ -9879,6 +9886,408 @@
           "referee": "",
           "round": 1,
           "time": "0:53"
+        }
+      ]
+    },
+    {
+      "name": "Sayed Murtaza Sadat",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1527165086Sayed_Murtaza_Sadat.jpg",
+      "weight_class": "Lightweight",
+      "record": "7-3-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Sayed-Murtaza-Sadat-287051",
+      "fight_history": [
+        {
+          "opponent_name": "Eduard Evdokimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eduard-Evdokimov-382665",
+          "event_name": "GMC 48 - German MMA Championship 48",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-48-German-MMA-Championship-48-113464",
+          "date": "2026-07-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Cengiz Dana",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ion Voda",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ion-Voda-192521",
+          "event_name": "GMC 42 - German MMA Championship 42",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-42-German-MMA-Championship-42-106464",
+          "date": "2025-04-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marco Broersen",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Erik Spirko",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erik-Spirko-409249",
+          "event_name": "GMC 39 - German MMA Championship 39",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-39-German-MMA-Championship-39-103392",
+          "date": "2024-09-07",
+          "result": "loss",
+          "method": "TKO (Punch)",
+          "referee": "",
+          "round": 1,
+          "time": "3:00"
+        },
+        {
+          "opponent_name": "Anastasios Chatzigeorgiadis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anastasios-Chatzigeorgiadis-387262",
+          "event_name": "National Fighting Championship - NFC 18: Coga vs. Taran",
+          "event_sherdog_url": "https://www.sherdog.com/events/National-Fighting-Championship-NFC-18-Coga-vs-Taran-100858",
+          "date": "2024-03-30",
+          "result": "loss",
+          "method": "TKO (Retirement)",
+          "referee": "Jan Vobornik",
+          "round": 3,
+          "time": "4:23"
+        },
+        {
+          "opponent_name": "Amirjon Gafurov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amirjon-Gafurov-332229",
+          "event_name": "IFC MMA - Integra FC 17",
+          "event_sherdog_url": "https://www.sherdog.com/events/IFC-MMA-Integra-FC-17-100324",
+          "date": "2023-11-04",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Michael Wachter",
+          "round": 1,
+          "time": "4:05"
+        },
+        {
+          "opponent_name": "Kamil Magomedov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kamil-Magomedov-163693",
+          "event_name": "Brave CF 57 - Brave Combat Federation 57",
+          "event_sherdog_url": "https://www.sherdog.com/events/Brave-CF-57-Brave-Combat-Federation-57-91766",
+          "date": "2022-03-11",
+          "result": "loss",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Aaron Wallace",
+          "round": 1,
+          "time": "4:07"
+        },
+        {
+          "opponent_name": "Abdullah Sadiqyar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Abdullah-Sadiqyar-383211",
+          "event_name": "SLFC 12 - Snow Leopard Fighting Championship 12",
+          "event_sherdog_url": "https://www.sherdog.com/events/SLFC-12-Snow-Leopard-Fighting-Championship-12-88909",
+          "date": "2021-04-09",
+          "result": "win",
+          "method": "TKO (Elbows)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Zabiullah Rahimi Faizi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zabiullah-Rahimi-Faizi-287039",
+          "event_name": "TGFC 3 - Truly Grand Fighting Championship 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/TGFC-3-Truly-Grand-Fighting-Championship-3-71269",
+          "date": "2018-10-19",
+          "result": "win",
+          "method": "Submission",
+          "referee": "Sabrullah Bigzad",
+          "round": 4,
+          "time": "2:13"
+        },
+        {
+          "opponent_name": "Seftullah Oryakhil",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seftullah-Oryakhil-313629",
+          "event_name": "AFC - Afghanistan Fighting Championship 7",
+          "event_sherdog_url": "https://www.sherdog.com/events/AFC-Afghanistan-Fighting-Championship-7-73613",
+          "date": "2018-10-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Wasem Kohbandi",
+          "round": 2,
+          "time": "2:57"
+        },
+        {
+          "opponent_name": "Mushtaq Abullah",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mushtaq-Abullah-287053",
+          "event_name": "TGFC 2 - Champions Night",
+          "event_sherdog_url": "https://www.sherdog.com/events/TGFC-2-Champions-Night-68041",
+          "date": "2018-05-14",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Sabrullah Bigzad",
+          "round": 2,
+          "time": "4:43"
+        }
+      ]
+    },
+    {
+      "name": "Ty Flores",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20150814024546_Tyler_Flores.JPG",
+      "weight_class": "Heavyweight",
+      "record": "15-5-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ty-Flores-86350",
+      "fight_history": [
+        {
+          "opponent_name": "Jamal Pogues",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jamal-Pogues-152993",
+          "event_name": "Tuff-N-Uff - Tuff-N-Uff 150",
+          "event_sherdog_url": "https://www.sherdog.com/events/TuffNUff-TuffNUff-150-110312",
+          "date": "2025-12-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "John McCarthy",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Marcus Gamble",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcus-Gamble-230373",
+          "event_name": "Tuff-N-Uff - Tuff-N-Uff 137",
+          "event_sherdog_url": "https://www.sherdog.com/events/TuffNUff-TuffNUff-137-102700",
+          "date": "2024-05-24",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Jason Herzog",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Joshua Silveira",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Joshua-Silveira-244965",
+          "event_name": "Professional Fighters League - PFL 7: 2023 Playoffs",
+          "event_sherdog_url": "https://www.sherdog.com/events/Professional-Fighters-League-PFL-7-2023-Playoffs-98147",
+          "date": "2023-08-04",
+          "result": "loss",
+          "method": "TKO (Knees)",
+          "referee": "Jeff Rexroad",
+          "round": 1,
+          "time": "4:46"
+        },
+        {
+          "opponent_name": "Dan Spohn",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dan-Spohn-39485",
+          "event_name": "Professional Fighters League - PFL 4: 2023 Regular Season",
+          "event_sherdog_url": "https://www.sherdog.com/events/Professional-Fighters-League-PFL-4-2023-Regular-Season-96899",
+          "date": "2023-06-08",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Keith Peterson",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Delan Monte",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Delan-Monte-172067",
+          "event_name": "Professional Fighters League - PFL 1: 2023 Regular Season",
+          "event_sherdog_url": "https://www.sherdog.com/events/Professional-Fighters-League-PFL-1-2023-Regular-Season-96440",
+          "date": "2023-04-01",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Chris Tognoni",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ryan Parker",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryan-Parker-253537",
+          "event_name": "Fury FC 75 - Fury Fighting Championship 75: Cutts vs. Hafez",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-75-Fury-Fighting-Championship-75-Cutts-vs-Hafez-95980",
+          "date": "2023-02-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Jeff Rexroad",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Graham Park",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Graham-Park-74565",
+          "event_name": "Unified MMA 49 - Unified MMA",
+          "event_sherdog_url": "https://www.sherdog.com/events/Unified-MMA-49-Unified-MMA-95015",
+          "date": "2022-12-17",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Andy Social",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "George Tokkos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/George-Tokkos-175999",
+          "event_name": "Fury FC 59 - Fury Fighting Championship 59",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-59-Fury-Fighting-Championship-59-92113",
+          "date": "2022-03-27",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Joe Soliz",
+          "round": 1,
+          "time": "4:39"
+        },
+        {
+          "opponent_name": "Myron Dennis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Myron-Dennis-48240",
+          "event_name": "Fury FC 53 - Fury Fighting Championship 53: Lookin' For a Fight",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-53-Fury-Fighting-Championship-53-Lookin-For-a-Fight-90799",
+          "date": "2021-11-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Rob Madrigal",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Larry Crowe",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Larry-Crowe-63999",
+          "event_name": "Fury FC 46 - Fury Fighting Championship 46",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-46-Fury-Fighting-Championship-46-89093",
+          "date": "2021-05-16",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Kerry Hatley",
+          "round": 3,
+          "time": "1:21"
+        },
+        {
+          "opponent_name": "Dustin Jacoby",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Dustin-Jacoby-73825",
+          "event_name": "Dana White's Contender Series - Contender Series 2020: Week 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2020-Week-1-86523",
+          "date": "2020-08-04",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Erick Murray",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erick-Murray-159303",
+          "event_name": "Shamrock FC - Shamrock 318",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shamrock-FC-Shamrock-318-76205",
+          "date": "2019-05-10",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Marc Wasem",
+          "round": 2,
+          "time": "1:54"
+        },
+        {
+          "opponent_name": "James Bochnovic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/James-Bochnovic-130011",
+          "event_name": "Shamrock FC - Shamrock 311",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shamrock-FC-Shamrock-311-64307",
+          "date": "2018-11-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Marc Wasem",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "DiMarcco Hutchison",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/DiMarcco-Hutchison-221647",
+          "event_name": "LFA 42 - Krantz vs. Kayne",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-42-Krantz-vs-Kayne-68013",
+          "date": "2018-06-08",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Marc Wasem",
+          "round": 2,
+          "time": "2:02"
+        },
+        {
+          "opponent_name": "Jarrod Thomas",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jarrod-Thomas-227173",
+          "event_name": "Shamrock FC - Shamrock 305",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shamrock-FC-Shamrock-305-64293",
+          "date": "2018-05-11",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Dwayne Bess",
+          "round": 1,
+          "time": "2:07"
+        },
+        {
+          "opponent_name": "Jordan Dowdy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jordan-Dowdy-195599",
+          "event_name": "Shamrock FC - Shamrock 295",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shamrock-FC-Shamrock-295-61737",
+          "date": "2017-09-22",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Marc Wasem",
+          "round": 2,
+          "time": "1:59"
+        },
+        {
+          "opponent_name": "Aaron Highfill",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aaron-Highfill-177075",
+          "event_name": "Shamrock FC - Shamrock 290",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shamrock-FC-Shamrock-290-61735",
+          "date": "2017-06-02",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Marc Wasem",
+          "round": 1,
+          "time": "0:30"
+        },
+        {
+          "opponent_name": "Geoff Neal",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Geoff-Neal-72107",
+          "event_name": "RTP - Rumble Time Promotions",
+          "event_sherdog_url": "https://www.sherdog.com/events/RTP-Rumble-Time-Promotions-48651",
+          "date": "2015-10-23",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Mike England",
+          "round": 1,
+          "time": "3:58"
+        },
+        {
+          "opponent_name": "Colby Tierney",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Colby-Tierney-80127",
+          "event_name": "RFA 28 - Sanchez vs. Poppie",
+          "event_sherdog_url": "https://www.sherdog.com/events/RFA-28-Sanchez-vs-Poppie-46701",
+          "date": "2015-08-07",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "John Duever",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Chad Williams",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chad-Williams-178467",
+          "event_name": "RTP - Rumble Time Promotions",
+          "event_sherdog_url": "https://www.sherdog.com/events/RTP-Rumble-Time-Promotions-45907",
+          "date": "2015-05-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mike England",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Said Osmanov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "0-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Said-Osmanov-368377",
+      "fight_history": [
+        {
+          "opponent_name": "Ivan Goncharov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ivan-Goncharov-368375",
+          "event_name": "Harlem School - Ultimatum 7: Back in Town",
+          "event_sherdog_url": "https://www.sherdog.com/events/Harlem-School-Ultimatum-7-Back-in-Town-74249",
+          "date": "2019-02-24",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
         }
       ]
     }
@@ -24550,6 +24959,19 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
+      "fighter1_name": "James Hendin",
+      "fighter2_name": "Sayed Murtaza Sadat",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
       "fighter1_name": "Ondrej Raska",
       "fighter2_name": "Dominic Schober",
       "fight_finished": false,
@@ -24558,19 +24980,6 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
-      "fighter1_name": "Michaela Hlavacikova",
-      "fighter2_name": "Marta Sos",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -24588,9 +24997,22 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 99",
-      "fighter1_name": "Patrick Vespaziani",
-      "fighter2_name": "Nicolaj Wagner",
+      "event_name": "Oktagon MMA - Oktagon 98: Legierski vs. Buchinger",
+      "fighter1_name": "Michaela Hlavacikova",
+      "fighter2_name": "Marta Sos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
+      "fighter1_name": "Kasim Aras",
+      "fighter2_name": "Ty Flores",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -24601,7 +25023,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 99",
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
+      "fighter1_name": "Patrick Vespaziani",
+      "fighter2_name": "Nicolaj Wagner",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Heavyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
       "fighter1_name": "Marc Doussis",
       "fighter2_name": "Adam Palasz",
       "fight_finished": false,
@@ -24614,7 +25049,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 99",
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
+      "fighter1_name": "Ali Gunduz",
+      "fighter2_name": "Abdullah Sultani",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
       "fighter1_name": "Emir-Can Al",
       "fighter2_name": "Adam Havran",
       "fight_finished": false,
@@ -24627,7 +25075,20 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 99",
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
+      "fighter1_name": "Murat Tuysuz",
+      "fighter2_name": "Jan Stanovsky",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
       "fighter1_name": "Altin Zenuni",
       "fighter2_name": "Tomas Ciganik",
       "fight_finished": false,
@@ -24640,7 +25101,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 99",
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
       "fighter1_name": "Moh Eter",
       "fighter2_name": "Tomas Holecek",
       "fight_finished": false,
@@ -24653,15 +25114,15 @@
       "is_title_fight": false
     },
     {
-      "event_name": "Oktagon MMA - Oktagon 99",
-      "fighter1_name": "Ali Gunduz",
-      "fighter2_name": "Abdullah Sultani",
+      "event_name": "Oktagon MMA - Oktagon 99: Aras vs. Flores",
+      "fighter1_name": "Furkan Ugur",
+      "fighter2_name": "Said Osmanov",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "Bantamweight",
+      "weight_class": "Lightweight",
       "is_main_event": false,
       "is_title_fight": false
     },
@@ -24680,8 +25141,8 @@
     },
     {
       "event_name": "Oktagon MMA - Oktagon 100",
-      "fighter1_name": "Luke Barnatt",
-      "fighter2_name": "Unknown Fighter",
+      "fighter1_name": "Karlos Vemola",
+      "fighter2_name": "Tomasz Narkun",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

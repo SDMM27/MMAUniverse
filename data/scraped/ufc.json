@@ -5010,7 +5010,7 @@
       "event_poster": ""
     },
     {
-      "name": "UFC Fight Night 296 - Riyadh",
+      "name": "UFC Fight Night 295 - Riyadh",
       "date": "2026-12-05",
       "start_time": "2026-12-05T00:00:00+00:00",
       "event_location": "Riyadh, Saudi Arabia",
@@ -5031,7 +5031,7 @@
       "event_poster": ""
     },
     {
-      "name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "date": "2027-02-07",
       "start_time": "2027-02-07T00:00:00+00:00",
       "event_location": "Afterpay Arena, Sydney, New South Wales, Australia",
@@ -646347,6 +646347,386 @@
           "time": "0:12"
         }
       ]
+    },
+    {
+      "name": "Carlos Calderon",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20260518011001_Carlos_Calderon.JPG",
+      "weight_class": "Featherweight",
+      "record": "11-4-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Carlos-Calderon-247279",
+      "fight_history": [
+        {
+          "opponent_name": "Lorram Esteves",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Lorram-Esteves-183397",
+          "event_name": "Fury FC 125 - Fury Fighting Championship 125: Fight Force",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-125-Fury-Fighting-Championship-125-Fight-Force-114025",
+          "date": "2026-10-02",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Jeff Rexroad",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Damon Jackson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Damon-Jackson-113767",
+          "event_name": "Fury FC 119 - Fury Fighting Championship 119: Calderon vs. Jackson",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-119-Fury-Fighting-Championship-119-Calderon-vs-Jackson-111825",
+          "date": "2026-05-17",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Joe Soliz",
+          "round": 4,
+          "time": "2:07"
+        },
+        {
+          "opponent_name": "Justice Torres",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Justice-Torres-270853",
+          "event_name": "Fury FC 116 - Fury Fighting Championship 116: Saenz vs. Riles",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-116-Fury-Fighting-Championship-116-Saenz-vs-Riles-111324",
+          "date": "2026-02-20",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Ramsey Ishaq",
+          "round": 1,
+          "time": "1:35"
+        },
+        {
+          "opponent_name": "Mauricio Gomez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mauricio-Gomez-369934",
+          "event_name": "Fury FC 112 - Fury Fighting Championship 112: Kilmer vs. Khera",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-112-Fury-Fighting-Championship-112-Kilmer-vs-Khera-110216",
+          "date": "2025-12-14",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "Jeff Rexroad",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jesse Butler",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jesse-Butler-217941",
+          "event_name": "Fury FC 106 - Fury Fighting Championship 106: Maranhao vs. Minev",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-106-Fury-Fighting-Championship-106-Maranhao-vs-Minev-108202",
+          "date": "2025-07-18",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Joe Pepe",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Juan Alvarez Jr.",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Juan-Alvarez-Jr-305889",
+          "event_name": "Fury FC 104 - Fury Fighting Championship 104: Yannis vs. Aguirre",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-104-Fury-Fighting-Championship-104-Yannis-vs-Aguirre-108064",
+          "date": "2025-05-25",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Danielle Guevara",
+          "round": 1,
+          "time": "1:19"
+        },
+        {
+          "opponent_name": "Alberto Montes",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alberto-Montes-257203",
+          "event_name": "Dana White's Contender Series - Contender Series 2024: Week 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2024-Week-8-102762",
+          "date": "2024-10-01",
+          "result": "loss",
+          "method": "Submission (Anaconda Choke)",
+          "referee": "Eric McMahon",
+          "round": 2,
+          "time": "2:38"
+        },
+        {
+          "opponent_name": "Kurtis Ellis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kurtis-Ellis-227267",
+          "event_name": "LFA 186 - Bekoev vs. Foxworth",
+          "event_sherdog_url": "https://www.sherdog.com/events/LFA-186-Bekoev-vs-Foxworth-102826",
+          "date": "2024-06-22",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Joe Coca",
+          "round": 1,
+          "time": "2:31"
+        },
+        {
+          "opponent_name": "Alejandro Gavidia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alejandro-Gavidia-292401",
+          "event_name": "Combate Global - Slice vs. Ewert",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Slice-vs-Ewert-98924",
+          "date": "2023-09-23",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Marcos Perez",
+          "round": 2,
+          "time": "0:39"
+        },
+        {
+          "opponent_name": "Elijah Leggett",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elijah-Leggett-204451",
+          "event_name": "Combate Global - Martinez vs. Zarauz",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Martinez-vs-Zarauz-97969",
+          "date": "2023-05-28",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Chris Mignocchi",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Motaz Askar",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Motaz-Askar-248375",
+          "event_name": "CCC 15 - Colorado Combat Club 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/CCC-15-Colorado-Combat-Club-15-95529",
+          "date": "2022-12-09",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Bobby Wombacher",
+          "round": 1,
+          "time": "4:32"
+        },
+        {
+          "opponent_name": "Carlos Cordoba Fonseca",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlos-Cordoba-Fonseca-211549",
+          "event_name": "Combate Global - Romero vs. Ayala",
+          "event_sherdog_url": "https://www.sherdog.com/events/Combate-Global-Romero-vs-Ayala-94967",
+          "date": "2022-09-30",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Chris Mignocchi",
+          "round": 1,
+          "time": "0:25"
+        },
+        {
+          "opponent_name": "Jake Mendez",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jake-Mendez-147565",
+          "event_name": "CCC 11 - Colorado Combat Club 11: Petrosyan vs. Gonzalez",
+          "event_sherdog_url": "https://www.sherdog.com/events/CCC-11-Colorado-Combat-Club-11-Petrosyan-vs-Gonzalez-91923",
+          "date": "2022-03-25",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Oscar Martinez",
+          "round": 1,
+          "time": "0:17"
+        },
+        {
+          "opponent_name": "Kyle Broadwater",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyle-Broadwater-270849",
+          "event_name": "Fury FC 51 - Fury Fighting Championship 51",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-51-Fury-Fighting-Championship-51-89880",
+          "date": "2021-09-12",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Joel Ojeda",
+          "round": 3,
+          "time": "4:59"
+        },
+        {
+          "opponent_name": "Jordan Plutin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jordan-Plutin-317009",
+          "event_name": "Fury FC 44 - Fury Fighting Championship 44",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-44-Fury-Fighting-Championship-44-84899",
+          "date": "2021-03-06",
+          "result": "nc",
+          "method": "No Contest (Accidental Knee to Groin)",
+          "referee": "Joe Soliz",
+          "round": 2,
+          "time": "0:30"
+        },
+        {
+          "opponent_name": "Eduardo Anaya",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Eduardo-Anaya-215117",
+          "event_name": "Fury FC 43 - Fury Fighting Championship 43",
+          "event_sherdog_url": "https://www.sherdog.com/events/Fury-FC-43-Fury-Fighting-Championship-43-85321",
+          "date": "2020-12-12",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Jeff Rexroad",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Akbar Abdullaev",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230330081416_Akbar_Abdullaev.PNG",
+      "weight_class": "Lightweight",
+      "record": "14-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Akbar-Abdullaev-377895",
+      "fight_history": [
+        {
+          "opponent_name": "Ednilson Barros Santos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ednilson-Barros-Santos-182997",
+          "event_name": "Dana White's Contender Series - Contender Series 2026: Week 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/Dana-Whites-Contender-Series-Contender-Series-2026-Week-6-112632",
+          "date": "2026-09-15",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Jason Herzog",
+          "round": 1,
+          "time": "0:19"
+        },
+        {
+          "opponent_name": "Ibragim Dauev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibragim-Dauev-328797",
+          "event_name": "One Championship - One on Prime Video 35",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-35-104923",
+          "date": "2025-09-05",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "3:49"
+        },
+        {
+          "opponent_name": "Kai Tang",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kai-Tang-228701",
+          "event_name": "One Championship - One on Prime Video 27",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-27-104913",
+          "date": "2025-01-10",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Herb Dean",
+          "round": 5,
+          "time": "1:21"
+        },
+        {
+          "opponent_name": "Halil Amir",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Halil-Amir-324529",
+          "event_name": "One Championship - One on Prime Video 22: Sundell vs. Diachkova",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-22-Sundell-vs-Diachkova-100885",
+          "date": "2024-05-03",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Herb Dean",
+          "round": 2,
+          "time": "2:52"
+        },
+        {
+          "opponent_name": "Aaron Canarte",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aaron-Canarte-275317",
+          "event_name": "One Championship - One on Prime Video 12: Superlek vs. Khalilov",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-12-Superlek-vs-Khalilov-97679",
+          "date": "2023-07-14",
+          "result": "win",
+          "method": "TKO (Spinning Back Kick and Punches)",
+          "referee": "Herb Dean",
+          "round": 1,
+          "time": "0:41"
+        },
+        {
+          "opponent_name": "Ho Taek Oh",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ho-Taek-Oh-64634",
+          "event_name": "One Championship - One on Prime Video 8: Superlek vs. Williams",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-8-Superlek-vs-Williams-95478",
+          "date": "2023-03-24",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "0:44"
+        },
+        {
+          "opponent_name": "Kyyalbek Keldibay Uulu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kyyalbek-Keldibay-Uulu-350677",
+          "event_name": "WEF 121 - Selection 42: Grand Prix 66kg",
+          "event_sherdog_url": "https://www.sherdog.com/events/WEF-121-Selection-42-Grand-Prix-66kg-95040",
+          "date": "2022-11-15",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Sadyk Ashirov",
+          "round": 1,
+          "time": "0:49"
+        },
+        {
+          "opponent_name": "Erbol Zholdoshbekov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erbol-Zholdoshbekov-417137",
+          "event_name": "WEF 121 - Selection 42: Grand Prix 66kg",
+          "event_sherdog_url": "https://www.sherdog.com/events/WEF-121-Selection-42-Grand-Prix-66kg-95040",
+          "date": "2022-11-15",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Sadyk Ashirov",
+          "round": 1,
+          "time": "2:13"
+        },
+        {
+          "opponent_name": "Omurbek Toktoali Uulu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Omurbek-Toktoali-Uulu-259155",
+          "event_name": "WEF 121 - Selection 42: Grand Prix 66kg",
+          "event_sherdog_url": "https://www.sherdog.com/events/WEF-121-Selection-42-Grand-Prix-66kg-95040",
+          "date": "2022-11-15",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Sadyk Ashirov",
+          "round": 1,
+          "time": "3:47"
+        },
+        {
+          "opponent_name": "Alexander Treskin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alexander-Treskin-181583",
+          "event_name": "RCC - Intro 23",
+          "event_sherdog_url": "https://www.sherdog.com/events/RCC-Intro-23-94798",
+          "date": "2022-09-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Georgy Tamoev",
+          "round": 3,
+          "time": "3:34"
+        },
+        {
+          "opponent_name": "Konstantin Simonov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Konstantin-Simonov-308541",
+          "event_name": "RCC - Intro 21",
+          "event_sherdog_url": "https://www.sherdog.com/events/RCC-Intro-21-94131",
+          "date": "2022-06-25",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Viktor Korneev",
+          "round": 1,
+          "time": "1:48"
+        },
+        {
+          "opponent_name": "Tolkunbek Mamatov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tolkunbek-Mamatov-349409",
+          "event_name": "WEF 99 - Selection 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/WEF-99-Selection-33-88480",
+          "date": "2021-06-20",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Markovich Markovich",
+          "round": 1,
+          "time": "1:56"
+        },
+        {
+          "opponent_name": "Asadulla Rustamov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Asadulla-Rustamov-283381",
+          "event_name": "FFC - FMR Fighting Championship: Selection 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFC-FMR-Fighting-Championship-Selection-5-88027",
+          "date": "2020-12-12",
+          "result": "win",
+          "method": "TKO",
+          "referee": "Ivan Zavtane",
+          "round": 1,
+          "time": "4:10"
+        },
+        {
+          "opponent_name": "Kurbon Aminov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kurbon-Aminov-377896",
+          "event_name": "FFC - FMR Fighting Championship: Selection 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/FFC-FMR-Fighting-Championship-Selection-4-87710",
+          "date": "2020-10-24",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "4:42"
+        }
+      ]
     }
   ],
   "fights": [
@@ -747204,7 +747584,7 @@
     {
       "event_name": "UFC Fight Night 293 - Cortes-Acosta vs. Walker",
       "fighter1_name": "Austin Bashi",
-      "fighter2_name": "Lucas Brennan",
+      "fighter2_name": "Carlos Calderon",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
@@ -747618,7 +747998,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 296 - Riyadh",
+      "event_name": "UFC Fight Night 295 - Riyadh",
       "fighter1_name": "Israel Adesanya",
       "fighter2_name": "Sharabutdin Magomedov",
       "fight_finished": false,
@@ -747631,7 +748011,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 296 - Riyadh",
+      "event_name": "UFC Fight Night 295 - Riyadh",
       "fighter1_name": "Ion Cutelaba",
       "fighter2_name": "Magomed Tuchalov",
       "fight_finished": false,
@@ -747644,7 +748024,33 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 296 - Riyadh",
+      "event_name": "UFC Fight Night 295 - Riyadh",
+      "fighter1_name": "Akbar Abdullaev",
+      "fighter2_name": "Mairon Santos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 295 - Riyadh",
+      "fighter1_name": "Jun Yong Park",
+      "fighter2_name": "Marco Tulio",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC Fight Night 295 - Riyadh",
       "fighter1_name": "Islam Dulatov",
       "fighter2_name": "Levan Chokheli",
       "fight_finished": false,
@@ -747657,7 +748063,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 296 - Riyadh",
+      "event_name": "UFC Fight Night 295 - Riyadh",
       "fighter1_name": "Hecher Sosa",
       "fighter2_name": "Abdul Hussein",
       "fight_finished": false,
@@ -747670,7 +748076,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 296 - Riyadh",
+      "event_name": "UFC Fight Night 295 - Riyadh",
       "fighter1_name": "Jafel Filho",
       "fighter2_name": "Bruno Silva",
       "fight_finished": false,
@@ -747683,7 +748089,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 296 - Riyadh",
+      "event_name": "UFC Fight Night 295 - Riyadh",
       "fighter1_name": "Matthieu Letho Duclos",
       "fighter2_name": "Modestino Rodrigues",
       "fight_finished": false,
@@ -747696,7 +748102,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 296 - Riyadh",
+      "event_name": "UFC Fight Night 295 - Riyadh",
       "fighter1_name": "Ivan Gnizditskiy",
       "fighter2_name": "Uran Satybaldiev",
       "fight_finished": false,
@@ -747878,7 +748284,7 @@
       "is_title_fight": true
     },
     {
-      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "event_name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "fighter1_name": "Benoit St. Denis",
       "fighter2_name": "Quillan Salkilld",
       "fight_finished": false,
@@ -747891,7 +748297,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "event_name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "fighter1_name": "Bogdan Guskov",
       "fighter2_name": "Robert Whittaker",
       "fight_finished": false,
@@ -747904,7 +748310,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "event_name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "fighter1_name": "George Mangos",
       "fighter2_name": "Dagiisuren Chagnaadorj",
       "fight_finished": false,
@@ -747917,7 +748323,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "event_name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "fighter1_name": "Rabindra Dhant",
       "fighter2_name": "Ryo Tajima",
       "fight_finished": false,
@@ -747930,7 +748336,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "event_name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "fighter1_name": "Niushiyue Ji",
       "fighter2_name": "Takaya Suzuki",
       "fight_finished": false,
@@ -747943,7 +748349,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "event_name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "fighter1_name": "Bo Hyun Park",
       "fighter2_name": "Bo Meng",
       "fight_finished": false,
@@ -747956,7 +748362,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "event_name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "fighter1_name": "Marwan Rahiki",
       "fighter2_name": "Joo Sang Yoo",
       "fight_finished": false,
@@ -747969,7 +748375,7 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 298 - Saint Denis vs. Salkilld",
+      "event_name": "UFC Fight Night 298 - St. Denis vs. Salkilld",
       "fighter1_name": "Joanderson Brito",
       "fighter2_name": "Kaan Ofli",
       "fight_finished": false,

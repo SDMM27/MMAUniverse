@@ -140,6 +140,13 @@
       "start_time": "2026-12-18T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
       "event_poster": ""
+    },
+    {
+      "name": "One Championship - One Friday Fights 185",
+      "date": "2027-01-15",
+      "start_time": "2027-01-15T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
     }
   ],
   "fighters": [
@@ -9179,6 +9186,598 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Shosuke Kinoshita",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20260830052359_Shosuke_Kinoshita.JPG",
+      "weight_class": "Featherweight",
+      "record": "13-7-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Shosuke-Kinoshita-276311",
+      "fight_history": [
+        {
+          "opponent_name": "Otabek Rajabov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Otabek-Rajabov-390749",
+          "event_name": "Pancrase - 363",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-363-112917",
+          "date": "2026-06-28",
+          "result": "loss",
+          "method": "Technical Submission (Triangle Choke)",
+          "referee": "Kosuke Umeda",
+          "round": 3,
+          "time": "2:45"
+        },
+        {
+          "opponent_name": "Jae Young Shin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jae-Young-Shin-316877",
+          "event_name": "Pancrase - 361",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-361-111474",
+          "date": "2026-03-14",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Mizuki Nakano",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Isana Morita",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Isana-Morita-421010",
+          "event_name": "Pancrase - 355",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-355-108432",
+          "date": "2025-07-27",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Motohiro Tsuruwa",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kisugi Endo",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kisugi-Endo-220805",
+          "event_name": "Pancrase - 352",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-352-106355",
+          "date": "2025-03-09",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Kosuke Umeda",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Mayo Komori",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mayo-Komori-226321",
+          "event_name": "Pancrase - 349",
+          "event_sherdog_url": "https://www.sherdog.com/events/Pancrase-349-104461",
+          "date": "2024-11-10",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Kosuke Umeda",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Junya Hibino",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Junya-Hibino-375230",
+          "event_name": "Deep - 119 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-119-Impact-102129",
+          "date": "2024-05-03",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Tatsuro Nagase",
+          "round": 1,
+          "time": "0:27"
+        },
+        {
+          "opponent_name": "Rikiya Matsuzawa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Rikiya-Matsuzawa-364823",
+          "event_name": "Deep - 115 Impact: Deep vs. Black Combat",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-115-Impact-Deep-vs-Black-Combat-98423",
+          "date": "2023-09-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Minoru Toyonaga",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ryuki Asahina",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryuki-Asahina-410627",
+          "event_name": "Deep - Tokyo Impact 2023 2nd Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2023-2nd-Round-96525",
+          "date": "2023-03-25",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Ryosuke Uchida",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Taito Kubota",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taito-Kubota-82600",
+          "event_name": "Deep - Tokyo Impact 2022 7th Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2022-7th-Round-95324",
+          "date": "2022-12-11",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Ryosuke Uchida",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yuki Saito",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yuki-Saito-83546",
+          "event_name": "Deep - Tokyo Impact 2022 5th Round",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-Tokyo-Impact-2022-5th-Round-94237",
+          "date": "2022-09-11",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Akira Shibata",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Jin Aoi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jin-Aoi-167105",
+          "event_name": "Deep - 106 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-106-Impact-91123",
+          "date": "2022-02-26",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Tatsuro Nagase",
+          "round": 2,
+          "time": "1:36"
+        },
+        {
+          "opponent_name": "Tatsuya Takahashi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tatsuya-Takahashi-385962",
+          "event_name": "Deep - 104 Impact",
+          "event_sherdog_url": "https://www.sherdog.com/events/Deep-104-Impact-90615",
+          "date": "2021-10-23",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Tatsuro Nagase",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Yamato Hamamatsu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yamato-Hamamatsu-87221",
+          "event_name": "Zst - Zst 69",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Zst-69-89075",
+          "date": "2020-11-22",
+          "result": "win",
+          "method": "TKO (Shoulder Injury)",
+          "referee": "Minoru Toyonaga",
+          "round": 1,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Kazuki Hagiwara",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kazuki-Hagiwara-189571",
+          "event_name": "Zst - Zst 68",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Zst-68-87235",
+          "date": "2020-08-30",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Yasuhiro Tazawa",
+          "round": 1,
+          "time": "2:35"
+        },
+        {
+          "opponent_name": "Yasutomi Hokuto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yasutomi-Hokuto-361971",
+          "event_name": "Zst - Zst 67",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Zst-67-84289",
+          "date": "2020-01-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Tatsuro Nagase",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Shota Takasu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shota-Takasu-238479",
+          "event_name": "Zst - Zst 66",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Zst-66-78923",
+          "date": "2019-08-13",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Masato Kataoka",
+          "round": 1,
+          "time": "0:20"
+        },
+        {
+          "opponent_name": "Naoto Shimizu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Naoto-Shimizu-193677",
+          "event_name": "Zst - Zst 63",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Zst-63-73563",
+          "date": "2019-01-27",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Yasuhiro Tazawa",
+          "round": 1,
+          "time": "2:46"
+        },
+        {
+          "opponent_name": "Sora Yamamoto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sora-Yamamoto-239271",
+          "event_name": "Zst - Zst 62 / Swat! 167",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Zst-62-Swat-167-71211",
+          "date": "2018-10-28",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Tomoki Matsumiya",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Takahiro Kato",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Takahiro-Kato-126185",
+          "event_name": "Zst - Zst 60",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Zst-60-66363",
+          "date": "2018-05-12",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Masato Fukuda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Seong Su Lee",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Seong-Su-Lee-111329",
+          "event_name": "Zst - Zst 59 / Swat! 164",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Zst-59-Swat-164-66361",
+          "date": "2018-03-17",
+          "result": "draw",
+          "method": "Draw (Unanimous)",
+          "referee": "Masato Fukuda",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Masanori Hirata",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Masanori-Hirata-20565",
+          "event_name": "Zst - Swat! 163",
+          "event_sherdog_url": "https://www.sherdog.com/events/Zst-Swat-163-81855",
+          "date": "2017-12-17",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Hirokazu Takamoto",
+          "round": 1,
+          "time": "2:02"
+        }
+      ]
+    },
+    {
+      "name": "Takuya Shibamura",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250722064728_Takuya_Shibamura.JPG",
+      "weight_class": "Lightweight",
+      "record": "6-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Takuya-Shibamura-444713",
+      "fight_history": [
+        {
+          "opponent_name": "Taisei Mizusugi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taisei-Mizusugi-395823",
+          "event_name": "Rizin FF - Landmark Vol. 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/Rizin-FF-Landmark-Vol-15-111987",
+          "date": "2026-07-18",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Takashi Hashimoto",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ryo Goto",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ryo-Goto-421177",
+          "event_name": "Shooto - Lemino Shooto Vol. 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Lemino-Shooto-Vol-3-111322",
+          "date": "2026-02-18",
+          "result": "loss",
+          "method": "TKO (Body Kicks and Punches)",
+          "referee": "Masato Fukuda",
+          "round": 1,
+          "time": "1:44"
+        },
+        {
+          "opponent_name": "Shinsuke Nishio",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Shinsuke-Nishio-325925",
+          "event_name": "Shooto - Professional Shooto 2025 Vol. 6",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Professional-Shooto-2025-Vol-6-108381",
+          "date": "2025-07-21",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Masato Kataoka",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Hibiki Tejima",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hibiki-Tejima-454750",
+          "event_name": "Shooto - Professional Shooto 2025 Vol. 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Professional-Shooto-2025-Vol-1-106286",
+          "date": "2025-01-19",
+          "result": "win",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Tsuyoshi Okada",
+          "round": 2,
+          "time": "0:21"
+        },
+        {
+          "opponent_name": "Koichiro Yamashita",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Koichiro-Yamashita-393244",
+          "event_name": "Shooto - Torao 34",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Torao-34-103912",
+          "date": "2024-11-17",
+          "result": "win",
+          "method": "KO (Knee)",
+          "referee": "Tsuyoshi Okada",
+          "round": 2,
+          "time": "1:43"
+        },
+        {
+          "opponent_name": "Kenzo Miyake",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kenzo-Miyake-393240",
+          "event_name": "Shooto - Torao 33",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Torao-33-102771",
+          "date": "2024-07-14",
+          "result": "win",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Masato Kataoka",
+          "round": 2,
+          "time": "1:25"
+        },
+        {
+          "opponent_name": "Hiroaki Mukuno",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hiroaki-Mukuno-398390",
+          "event_name": "Shooto - Torao 32",
+          "event_sherdog_url": "https://www.sherdog.com/events/Shooto-Torao-32-101873",
+          "date": "2024-05-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Tsuyoshi Okada",
+          "round": 2,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Elbek Alyshov",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1754015316Elbek_Alyshov-hero-1200x1165-2-600x583.jpg",
+      "weight_class": "Featherweight",
+      "record": "6-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Elbek-Alyshov-315085",
+      "fight_history": [
+        {
+          "opponent_name": "Enkh-Orgil Baatarkhuu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/EnkhOrgil-Baatarkhuu-271289",
+          "event_name": "One Championship - One Friday Fights 164",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-164-113342",
+          "date": "2026-07-31",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 2,
+          "time": "2:52"
+        },
+        {
+          "opponent_name": "Carlo Bumina-ang",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Carlo-Buminaang-431098",
+          "event_name": "One Championship - One on Prime Video 37",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-37-108248",
+          "date": "2025-11-07",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "3:24"
+        },
+        {
+          "opponent_name": "Jeremy Pacatiw",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jeremy-Pacatiw-191623",
+          "event_name": "One Championship - One on Prime Video 34",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-34-104922",
+          "date": "2025-08-01",
+          "result": "win",
+          "method": "Submission (Arm-Triangle Choke)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "1:17"
+        },
+        {
+          "opponent_name": "Subkhonali Naimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Subkhonali-Naimov-381328",
+          "event_name": "Colosseum MMA - Battle of Champions 20",
+          "event_sherdog_url": "https://www.sherdog.com/events/Colosseum-MMA-Battle-of-Champions-20-88971",
+          "date": "2021-03-28",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "2:11"
+        },
+        {
+          "opponent_name": "Magomednur Aglarov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Magomednur-Aglarov-149261",
+          "event_name": "Colosseum MMA - Battle of Champions 17",
+          "event_sherdog_url": "https://www.sherdog.com/events/Colosseum-MMA-Battle-of-Champions-17-88208",
+          "date": "2020-12-19",
+          "result": "win",
+          "method": "Submission (Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:33"
+        },
+        {
+          "opponent_name": "Oskon Zhumadilov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Oskon-Zhumadilov-377421",
+          "event_name": "Colosseum MMA - Battle of Champions 15",
+          "event_sherdog_url": "https://www.sherdog.com/events/Colosseum-MMA-Battle-of-Champions-15-87691",
+          "date": "2020-10-18",
+          "result": "win",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "",
+          "round": 2,
+          "time": "0:45"
+        }
+      ]
+    },
+    {
+      "name": "Carlo Bumina-ang",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1698169920Carlo_Bumina-ang-Hero-1200x1165-1.jpg",
+      "weight_class": "Featherweight",
+      "record": "10-2-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Carlo-Buminaang-431098",
+      "fight_history": [
+        {
+          "opponent_name": "Batochir Batsaikhan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Batochir-Batsaikhan-399640",
+          "event_name": "One Championship - One Friday Fights 151",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-151-112343",
+          "date": "2026-04-24",
+          "result": "win",
+          "method": "TKO (Knee and Punches)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "1:27"
+        },
+        {
+          "opponent_name": "Marcos Aurelio",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Marcos-Aurelio-428147",
+          "event_name": "One Championship - One on Prime Video 39",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-39-110762",
+          "date": "2026-01-23",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "0:50"
+        },
+        {
+          "opponent_name": "Elbek Alyshov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Elbek-Alyshov-315085",
+          "event_name": "One Championship - One on Prime Video 37",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-37-108248",
+          "date": "2025-11-07",
+          "result": "loss",
+          "method": "Submission (Guillotine Choke)",
+          "referee": "Olivier Coste",
+          "round": 2,
+          "time": "3:24"
+        },
+        {
+          "opponent_name": "Mauro Mastromarini",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Mauro-Mastromarini-302057",
+          "event_name": "One Championship - One on Prime Video 30",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-30-104917",
+          "date": "2025-04-04",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Herb Dean",
+          "round": 1,
+          "time": "2:45"
+        },
+        {
+          "opponent_name": "Min Jong Song",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Min-Jong-Song-67475",
+          "event_name": "One Championship - One on Prime Video 28",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-28-104915",
+          "date": "2025-02-07",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Herb Dean",
+          "round": 1,
+          "time": "0:53"
+        },
+        {
+          "opponent_name": "Enkh-Orgil Baatarkhuu",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/EnkhOrgil-Baatarkhuu-271289",
+          "event_name": "One Championship - One on Prime Video 24",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-on-Prime-Video-24-101167",
+          "date": "2024-08-02",
+          "result": "loss",
+          "method": "Technical Submission (Arm-Triangle Choke)",
+          "referee": "Herb Dean",
+          "round": 3,
+          "time": "4:59"
+        },
+        {
+          "opponent_name": "Chayan Oorzhak",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chayan-Oorzhak-342175",
+          "event_name": "One Championship - One Friday Fights 65",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-65-103065",
+          "date": "2024-05-31",
+          "result": "win",
+          "method": "Submission (Ninja Choke)",
+          "referee": "Kemp Cheng",
+          "round": 2,
+          "time": "2:39"
+        },
+        {
+          "opponent_name": "Zhipeng Xie",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Zhipeng-Xie-396041",
+          "event_name": "One Championship - One Friday Fights 50",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-50-101416",
+          "date": "2024-02-02",
+          "result": "win",
+          "method": "Technical Submission (Arm-Triangle Choke)",
+          "referee": "Mohamad Sulaiman",
+          "round": 1,
+          "time": "1:29"
+        },
+        {
+          "opponent_name": "Ilyas Dursun",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ilyas-Dursun-399438",
+          "event_name": "One Championship - One Friday Fights 44",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-44-100572",
+          "date": "2023-12-08",
+          "result": "win",
+          "method": "KO (Punch)",
+          "referee": "Justin Brown",
+          "round": 1,
+          "time": "0:23"
+        },
+        {
+          "opponent_name": "Denis Andreev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Denis-Andreev-294323",
+          "event_name": "One Championship - One Friday Fights 37",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-37-99760",
+          "date": "2023-10-20",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "Mohamad Sulaiman",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Reza Saedi",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Reza-Saedi-383932",
+          "event_name": "One Championship - One Friday Fights 27",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-27-98849",
+          "date": "2023-08-04",
+          "result": "win",
+          "method": "TKO (Punches and Knees)",
+          "referee": "Herb Dean",
+          "round": 1,
+          "time": "0:52"
+        },
+        {
+          "opponent_name": "Arniel Lomayno",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arniel-Lomayno-323897",
+          "event_name": "Team Lakay Championship 16 - The Kapangan MMA Invasion 4",
+          "event_sherdog_url": "https://www.sherdog.com/events/Team-Lakay-Championship-16-The-Kapangan-MMA-Invasion-4-91510",
+          "date": "2019-04-27",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -9599,6 +10198,19 @@
       "is_title_fight": false
     },
     {
+      "event_name": "One Championship - ONE Samurai 5",
+      "fighter1_name": "Shosuke Kinoshita",
+      "fighter2_name": "Takuya Shibamura",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Lightweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "One Championship - One Friday Fights 179",
       "fighter1_name": "Allycia Hellen Rodrigues",
       "fighter2_name": "Charlotte Padie",
@@ -9649,6 +10261,19 @@
       "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 185",
+      "fighter1_name": "Elbek Alyshov",
+      "fighter2_name": "Carlo Bumina-ang",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": true,
+      "is_title_fight": true
     }
   ]
 }
