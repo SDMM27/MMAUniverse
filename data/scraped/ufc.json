@@ -4954,13 +4954,6 @@
       "event_poster": ""
     },
     {
-      "name": "UFC Fight Night 295 - Riyadh",
-      "date": "2026-11-28",
-      "start_time": "2026-11-28T00:00:00+00:00",
-      "event_location": "Riyadh, Saudi Arabia",
-      "event_poster": ""
-    },
-    {
       "name": "UFC Fight Night 291 - Buckley vs. Malott",
       "date": "2026-10-17",
       "start_time": "2026-10-17T00:00:00+00:00",
@@ -746776,45 +746769,6 @@
       "is_title_fight": false
     },
     {
-      "event_name": "UFC Fight Night 295 - Riyadh",
-      "fighter1_name": "Hecher Sosa",
-      "fighter2_name": "Abdul Hussein",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Bantamweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "UFC Fight Night 295 - Riyadh",
-      "fighter1_name": "Jafel Filho",
-      "fighter2_name": "Bruno Silva",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "UFC Fight Night 295 - Riyadh",
-      "fighter1_name": "Matthieu Letho Duclos",
-      "fighter2_name": "Modestino Rodrigues",
-      "fight_finished": false,
-      "winner_name": null,
-      "method": "",
-      "round": 0,
-      "time": "",
-      "weight_class": "Middleweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
       "event_name": "UFC Fight Night 291 - Buckley vs. Malott",
       "fighter1_name": "Mike Malott",
       "fighter2_name": "Joaquin Buckley",
@@ -748144,6 +748098,19 @@
       "event_name": "UFC 335 - Oliveira vs. Lopes",
       "fighter1_name": "Joe Pyfer",
       "fighter2_name": "Bo Nickal",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "UFC 335 - Oliveira vs. Lopes",
+      "fighter1_name": "Baisangur Susurkaev",
+      "fighter2_name": "Damian Pinas",
       "fight_finished": false,
       "winner_name": null,
       "method": "",

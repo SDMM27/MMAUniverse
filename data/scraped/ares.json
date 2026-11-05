@@ -5263,6 +5263,40 @@
           "time": "3:10"
         }
       ]
+    },
+    {
+      "name": "Garcia Pinto Kinkela",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Welterweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Garcia-Pinto-Kinkela-365601",
+      "fight_history": [
+        {
+          "opponent_name": "Jefferson Costa",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Jefferson-Costa-305643",
+          "event_name": "EFN 1 - Ethiopa Fight Night 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/EFN-1-Ethiopa-Fight-Night-1-114971",
+          "date": "2026-09-19",
+          "result": "win",
+          "method": "TKO (Retirement)",
+          "referee": "",
+          "round": 2,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Boyka Botha",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Boyka-Botha-468907",
+          "event_name": "EFC 134 - EFC Worldwide 134",
+          "event_sherdog_url": "https://www.sherdog.com/events/EFC-134-EFC-Worldwide-134-112573",
+          "date": "2026-06-04",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Wiekus Swart",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -10606,6 +10640,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
+      "fighter1_name": "Alou Camara",
+      "fighter2_name": "Garcia Pinto Kinkela",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Middleweight",
       "is_main_event": false,
       "is_title_fight": false
     },
