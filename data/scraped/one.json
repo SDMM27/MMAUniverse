@@ -9063,10 +9063,22 @@
       "name": "Chayut Rojanakat",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1781871803Bos_Chayut-hero-1200x1165-1-600x583.png",
       "weight_class": "Featherweight",
-      "record": "5-0-0",
+      "record": "6-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Chayut-Rojanakat-326251",
       "fight_history": [
+        {
+          "opponent_name": "Kentaro Okumura",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Kentaro-Okumura-443327",
+          "event_name": "One Championship - One Friday Fights 177",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-177-114696",
+          "date": "2026-11-06",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "1:25"
+        },
         {
           "opponent_name": "Hsiang Liao",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Hsiang-Liao-319331",
@@ -9133,10 +9145,22 @@
       "name": "Kentaro Okumura",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20250118102451_Kentaro_Okumura.JPG",
       "weight_class": "Bantamweight",
-      "record": "5-1-0",
+      "record": "5-2-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Kentaro-Okumura-443327",
       "fight_history": [
+        {
+          "opponent_name": "Chayut Rojanakat",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Chayut-Rojanakat-326251",
+          "event_name": "One Championship - One Friday Fights 177",
+          "event_sherdog_url": "https://www.sherdog.com/events/One-Championship-One-Friday-Fights-177-114696",
+          "date": "2026-11-06",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Olivier Coste",
+          "round": 3,
+          "time": "1:25"
+        },
         {
           "opponent_name": "Taiyo Ogawa",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Taiyo-Ogawa-443948",
