@@ -10672,13 +10672,13 @@
     {
       "event_name": "ARES 46 - Jorand vs. Jendrasik",
       "fighter1_name": "Alexis Nicolas",
-      "fighter2_name": "Unknown Fighter",
+      "fighter2_name": "Bilal Bakhouche-Chareuf",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "",
+      "weight_class": "Welterweight",
       "is_main_event": false,
       "is_title_fight": false
     },

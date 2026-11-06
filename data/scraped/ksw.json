@@ -178251,6 +178251,19 @@
     },
     {
       "event_name": "KSW 124 - Pawlak vs. Kuberski",
+      "fighter1_name": "Patryk Kaczmarczyk",
+      "fighter2_name": "Josef Stummer",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "KSW 124 - Pawlak vs. Kuberski",
       "fighter1_name": "Stefan Vojcak",
       "fighter2_name": "Artur Szpilka",
       "fight_finished": false,
