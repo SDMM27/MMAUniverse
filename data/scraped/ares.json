@@ -5297,6 +5297,110 @@
           "time": "5:00"
         }
       ]
+    },
+    {
+      "name": "Ibrahima Wade",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "3-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ibrahima-Wade-411656",
+      "fight_history": [
+        {
+          "opponent_name": "Ricards Ozols",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ricards-Ozols-388498",
+          "event_name": "The King of Fighters 11 - KOF 11",
+          "event_sherdog_url": "https://www.sherdog.com/events/The-King-of-Fighters-11-KOF-11-105660",
+          "date": "2024-12-07",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Karim Benmabrouk",
+          "round": 3,
+          "time": "3:22"
+        },
+        {
+          "opponent_name": "Cidiri Cisse",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Cidiri-Cisse-397916",
+          "event_name": "The King of Fighters 9 - KOF 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/The-King-of-Fighters-9-KOF-9-103131",
+          "date": "2024-11-15",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "1:42"
+        },
+        {
+          "opponent_name": "Felix Polianidis",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Felix-Polianidis-83954",
+          "event_name": "Warriors Night MMA - Warriors Night MMA 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/Warriors-Night-MMA-Warriors-Night-MMA-1-104627",
+          "date": "2024-09-14",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "0:54"
+        },
+        {
+          "opponent_name": "Naib Itayev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Naib-Itayev-365861",
+          "event_name": "Allstars Fight Night - AFN 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/Allstars-Fight-Night-AFN-3-98487",
+          "date": "2023-09-30",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Jovan Todorovic",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Light Heavyweight",
+      "record": "2-1-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Jovan-Todorovic-348251",
+      "fight_history": [
+        {
+          "opponent_name": "Stefan Stankovic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Stefan-Stankovic-77904",
+          "event_name": "BFL 4 - Balkan Fighting League",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFL-4-Balkan-Fighting-League-114456",
+          "date": "2026-10-03",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Vladimir  Badrljica",
+          "round": 1,
+          "time": "2:32"
+        },
+        {
+          "opponent_name": "Suren Manukyan",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Suren-Manukyan-400043",
+          "event_name": "BFL 3 - Balkan Fighting League",
+          "event_sherdog_url": "https://www.sherdog.com/events/BFL-3-Balkan-Fighting-League-113309",
+          "date": "2026-06-27",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Vladimir  Badrljica",
+          "round": 1,
+          "time": "1:19"
+        },
+        {
+          "opponent_name": "Aleksandar Joketic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Aleksandar-Joketic-101683",
+          "event_name": "MFC 9 - Montenegro Fighting Championship 9",
+          "event_sherdog_url": "https://www.sherdog.com/events/MFC-9-Montenegro-Fighting-Championship-9-81217",
+          "date": "2019-09-07",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Vladimir  Badrljica",
+          "round": 1,
+          "time": "0:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -10653,6 +10757,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Middleweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ARES 45 - Zebo vs. Baki 2",
+      "fighter1_name": "Ibrahima Wade",
+      "fighter2_name": "Jovan Todorovic",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Light Heavyweight",
       "is_main_event": false,
       "is_title_fight": false
     },

@@ -382435,6 +382435,148 @@
           "time": "2:31"
         }
       ]
+    },
+    {
+      "name": "Ruslan Kasymaly Uulu",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1764035735Ruslan_Kasymaly.png",
+      "weight_class": "Bantamweight",
+      "record": "11-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Ruslan-Kasymaly-Uulu-392240",
+      "fight_history": [
+        {
+          "opponent_name": "Baymen Nurzhigit",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Baymen-Nurzhigit-402280",
+          "event_name": "Octagon Promotion - Octagon 80: Kuanyshbaev vs. Chapanov",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-80-Kuanyshbaev-vs-Chapanov-109800",
+          "date": "2025-10-29",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Khalil Mamiev",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Bair Shtepin",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bair-Shtepin-193915",
+          "event_name": "Octagon Promotion - Octagon 69: Kasymaly uulu vs. Shtepin",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-69-Kasymaly-uulu-vs-Shtepin-106683",
+          "date": "2025-01-18",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Khalil Mamiev",
+          "round": 5,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Anar Azizli",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Anar-Azizli-318225",
+          "event_name": "Octagon Promotion - Octagon 63: Kasymaly uulu vs. Azizli",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-63-Kasymaly-uulu-vs-Azizli-104475",
+          "date": "2024-09-27",
+          "result": "win",
+          "method": "KO (Punches)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 1,
+          "time": "2:33"
+        },
+        {
+          "opponent_name": "Sayod Rustamov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sayod-Rustamov-389576",
+          "event_name": "Octagon Promotion - Octagon 61: Shaimanov vs. Esenbekov",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-61-Shaimanov-vs-Esenbekov-103854",
+          "date": "2024-08-03",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 2,
+          "time": "2:41"
+        },
+        {
+          "opponent_name": "Amirkhon Atakhanov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Amirkhon-Atakhanov-388888",
+          "event_name": "Octagon Promotion - Octagon 55: Khudoyberdiev vs. Magomedov",
+          "event_sherdog_url": "https://www.sherdog.com/events/Octagon-Promotion-Octagon-55-Khudoyberdiev-vs-Magomedov-101338",
+          "date": "2024-02-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Furkan Koc",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Furkan-Koc-413943",
+          "event_name": "Muradov Professional League - MPL 8",
+          "event_sherdog_url": "https://www.sherdog.com/events/Muradov-Professional-League-MPL-8-99021",
+          "date": "2023-09-16",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Javlonbek Tukhtaboev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Javlonbek-Tukhtaboev-381665",
+          "event_name": "Muradov Professional League - MPL 7: Mamadzhanov vs. Isaev",
+          "event_sherdog_url": "https://www.sherdog.com/events/Muradov-Professional-League-MPL-7-Mamadzhanov-vs-Isaev-95948",
+          "date": "2023-01-07",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Axel Wankimmenade",
+          "round": 2,
+          "time": "3:43"
+        },
+        {
+          "opponent_name": "Bekzat Isabek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Bekzat-Isabek-383743",
+          "event_name": "Alash Pride 77 - Boranbaev vs. Abdylda uulu",
+          "event_sherdog_url": "https://www.sherdog.com/events/Alash-Pride-77-Boranbaev-vs-Abdylda-uulu-94884",
+          "date": "2022-11-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Erzhan Shiyrbayev",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Erzhan-Shiyrbayev-344615",
+          "event_name": "SP 1 - Shumkar Pride",
+          "event_sherdog_url": "https://www.sherdog.com/events/SP-1-Shumkar-Pride-98111",
+          "date": "2022-07-31",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "",
+          "round": 1,
+          "time": "4:46"
+        },
+        {
+          "opponent_name": "Ernur Satibaldy",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ernur-Satibaldy-399479",
+          "event_name": "Alash Pride 72 - Alash Pride FC",
+          "event_sherdog_url": "https://www.sherdog.com/events/Alash-Pride-72-Alash-Pride-FC-91726",
+          "date": "2022-02-27",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Daurenbek Dzhakaev",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Asros  Dalimov",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Asros-Dalimov-392241",
+          "event_name": "EFC Global - EFC Global 16",
+          "event_sherdog_url": "https://www.sherdog.com/events/EFC-Global-EFC-Global-16-90354",
+          "date": "2021-09-04",
+          "result": "win",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        }
+      ]
     }
   ],
   "fights": [
@@ -430115,6 +430257,19 @@
       "round": 0,
       "time": "",
       "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "ACA 210 - Myrzabekov vs. Tumenov",
+      "fighter1_name": "Kairat Akhmetov",
+      "fighter2_name": "Ruslan Kasymaly Uulu",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "Bantamweight",
       "is_main_event": false,
       "is_title_fight": false
     },

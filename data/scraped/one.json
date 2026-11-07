@@ -93,6 +93,20 @@
       "event_poster": ""
     },
     {
+      "name": "One Championship - One on Prime Video 49",
+      "date": "2026-11-06",
+      "start_time": "2026-11-06T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
+      "name": "One Championship - One Friday Fights 177",
+      "date": "2026-11-06",
+      "start_time": "2026-11-06T00:00:00+00:00",
+      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
+      "event_poster": ""
+    },
+    {
       "name": "One Championship - One Friday Fights 178",
       "date": "2026-11-13",
       "start_time": "2026-11-13T00:00:00+00:00",
@@ -131,20 +145,6 @@
       "name": "One Championship - One Friday Fights 185",
       "date": "2027-01-15",
       "start_time": "2027-01-15T00:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": ""
-    },
-    {
-      "name": "One Championship - One on Prime Video 49",
-      "date": "2026-11-06",
-      "start_time": "2026-11-06T00:00:00+00:00",
-      "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
-      "event_poster": ""
-    },
-    {
-      "name": "One Championship - One Friday Fights 177",
-      "date": "2026-11-06",
-      "start_time": "2026-11-06T00:00:00+00:00",
       "event_location": "Lumpinee Boxing Stadium, Bangkok, Thailand",
       "event_poster": ""
     }
@@ -10295,6 +10295,84 @@
       "is_title_fight": false
     },
     {
+      "event_name": "One Championship - One on Prime Video 49",
+      "fighter1_name": "Magomed Magomedov",
+      "fighter2_name": "Lucas Gabriel",
+      "fight_finished": true,
+      "winner_name": "Magomed Magomedov",
+      "method": "Decision (Split)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 49",
+      "fighter1_name": "Seung Cheol Lee",
+      "fighter2_name": "Nazareth Lalthazuala",
+      "fight_finished": true,
+      "winner_name": "Seung Cheol Lee",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 2,
+      "time": "3:04",
+      "weight_class": "Flyweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 49",
+      "fighter1_name": "Magdalena Czaban",
+      "fighter2_name": "Victoria Souza",
+      "fight_finished": true,
+      "winner_name": "Magdalena Czaban",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Strawweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One on Prime Video 49",
+      "fighter1_name": "Ilmadi Israilov",
+      "fighter2_name": "Kalandar Tabarov",
+      "fight_finished": true,
+      "winner_name": "Ilmadi Israilov",
+      "method": "Decision (Unanimous)",
+      "round": 3,
+      "time": "5:00",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 177",
+      "fighter1_name": "Tye Ruotolo",
+      "fighter2_name": "Christian Lee",
+      "fight_finished": true,
+      "winner_name": "Tye Ruotolo",
+      "method": "Submission (Rear-Naked Choke)",
+      "round": 1,
+      "time": "2:08",
+      "weight_class": "Welterweight",
+      "is_main_event": true,
+      "is_title_fight": true
+    },
+    {
+      "event_name": "One Championship - One Friday Fights 177",
+      "fighter1_name": "Chayut Rojanakat",
+      "fighter2_name": "Kentaro Okumura",
+      "fight_finished": true,
+      "winner_name": "Chayut Rojanakat",
+      "method": "TKO (Punches)",
+      "round": 3,
+      "time": "1:25",
+      "weight_class": "Featherweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
       "event_name": "One Championship - ONE Samurai 5",
       "fighter1_name": "Joshua Pacio",
       "fighter2_name": "Keito Yamakita",
@@ -10410,84 +10488,6 @@
       "weight_class": "Featherweight",
       "is_main_event": true,
       "is_title_fight": true
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 49",
-      "fighter1_name": "Magomed Magomedov",
-      "fighter2_name": "Lucas Gabriel",
-      "fight_finished": true,
-      "winner_name": "Magomed Magomedov",
-      "method": "Decision (Split)",
-      "round": 3,
-      "time": "5:00",
-      "weight_class": "Welterweight",
-      "is_main_event": true,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 49",
-      "fighter1_name": "Seung Cheol Lee",
-      "fighter2_name": "Nazareth Lalthazuala",
-      "fight_finished": true,
-      "winner_name": "Seung Cheol Lee",
-      "method": "Submission (Rear-Naked Choke)",
-      "round": 2,
-      "time": "3:04",
-      "weight_class": "Flyweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 49",
-      "fighter1_name": "Magdalena Czaban",
-      "fighter2_name": "Victoria Souza",
-      "fight_finished": true,
-      "winner_name": "Magdalena Czaban",
-      "method": "Decision (Unanimous)",
-      "round": 3,
-      "time": "5:00",
-      "weight_class": "Strawweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One on Prime Video 49",
-      "fighter1_name": "Ilmadi Israilov",
-      "fighter2_name": "Kalandar Tabarov",
-      "fight_finished": true,
-      "winner_name": "Ilmadi Israilov",
-      "method": "Decision (Unanimous)",
-      "round": 3,
-      "time": "5:00",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
-    },
-    {
-      "event_name": "One Championship - One Friday Fights 177",
-      "fighter1_name": "Tye Ruotolo",
-      "fighter2_name": "Christian Lee",
-      "fight_finished": true,
-      "winner_name": "Tye Ruotolo",
-      "method": "Submission (Rear-Naked Choke)",
-      "round": 1,
-      "time": "2:08",
-      "weight_class": "Welterweight",
-      "is_main_event": true,
-      "is_title_fight": true
-    },
-    {
-      "event_name": "One Championship - One Friday Fights 177",
-      "fighter1_name": "Chayut Rojanakat",
-      "fighter2_name": "Kentaro Okumura",
-      "fight_finished": true,
-      "winner_name": "Chayut Rojanakat",
-      "method": "TKO (Punches)",
-      "round": 3,
-      "time": "1:25",
-      "weight_class": "Featherweight",
-      "is_main_event": false,
-      "is_title_fight": false
     }
   ]
 }
