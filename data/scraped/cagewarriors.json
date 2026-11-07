@@ -14584,10 +14584,34 @@
       "name": "Luan Duarte",
       "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1559570820IMG_20190531_214143.jpg",
       "weight_class": "Lightweight",
-      "record": "14-12-0",
+      "record": "15-13-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Luan-Duarte-179415",
       "fight_history": [
+        {
+          "opponent_name": "Ognjen Micovic",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ognjen-Micovic-404714",
+          "event_name": "ARMMADA - ARMMADA 19",
+          "event_sherdog_url": "https://www.sherdog.com/events/ARMMADA-ARMMADA-19-114341",
+          "date": "2026-09-26",
+          "result": "win",
+          "method": "Decision (Unanimous)",
+          "referee": "Aleksandar Zoric",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Ibrahim Benmalek",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ibrahim-Benmalek-376245",
+          "event_name": "GMC 49 - German MMA Championship 49",
+          "event_sherdog_url": "https://www.sherdog.com/events/GMC-49-German-MMA-Championship-49-114581",
+          "date": "2026-09-05",
+          "result": "loss",
+          "method": "Decision (Split)",
+          "referee": "",
+          "round": 3,
+          "time": "5:00"
+        },
         {
           "opponent_name": "Tariq Pell",
           "opponent_sherdog_url": "https://www.sherdog.com/fighter/Tariq-Pell-301139",
@@ -55365,80 +55389,7 @@
       "record": "0-0-0",
       "ranking": 0,
       "sherdog_url": "https://www.sherdog.com/fighter/Arturo-Martin-Izquierdo-405635",
-      "fight_history": [
-        {
-          "opponent_name": "Antonio Amaya",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Antonio-Amaya-438243",
-          "event_name": "LBS Promotions - Yan vs. Sakuraba",
-          "event_sherdog_url": "https://www.sherdog.com/events/LBS-Promotions-Yan-vs-Sakuraba-108450",
-          "date": "2025-05-10",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Wilson de Castro",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Wilson-de-Castro-425635",
-          "event_name": "LBS Promotions - MMA, Muay Thai, K-1",
-          "event_sherdog_url": "https://www.sherdog.com/events/LBS-Promotions-MMA-Muay-Thai-K1-102824",
-          "date": "2024-06-01",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Alvaro Aguilar",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alvaro-Aguilar-300109",
-          "event_name": "LBS Promotions - MMA, Muay Thai, K-1",
-          "event_sherdog_url": "https://www.sherdog.com/events/LBS-Promotions-MMA-Muay-Thai-K1-100216",
-          "date": "2023-11-18",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Alvaro Diaz",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Alvaro-Diaz-437568",
-          "event_name": "MMAC 6 - MMA Castileon 6",
-          "event_sherdog_url": "https://www.sherdog.com/events/MMAC-6-MMA-Castileon-6-98380",
-          "date": "2023-07-15",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "Chinto Mordillo",
-          "round": 3,
-          "time": "3:00"
-        },
-        {
-          "opponent_name": "Josiah Harrison",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Josiah-Harrison-440781",
-          "event_name": "HDH 118 - Hombres de Honor 118",
-          "event_sherdog_url": "https://www.sherdog.com/events/HDH-118-Hombres-de-Honor-118-97140",
-          "date": "2023-04-08",
-          "result": "loss",
-          "method": "TKO (Punches)",
-          "referee": "",
-          "round": 2,
-          "time": "0:00"
-        },
-        {
-          "opponent_name": "Nolan Perez",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Nolan-Perez-405636",
-          "event_name": "HDH 112 - Hombres de Honor 112: Open Nacional Nuevos Talentos",
-          "event_sherdog_url": "https://www.sherdog.com/events/HDH-112-Hombres-de-Honor-112-Open-Nacional-Nuevos-Talentos-93100",
-          "date": "2022-04-09",
-          "result": "win",
-          "method": "Decision (Unanimous)",
-          "referee": "",
-          "round": 2,
-          "time": "5:00"
-        }
-      ]
+      "fight_history": []
     },
     {
       "name": "Mohammad Hany Musleh",
@@ -55450,7 +55401,7 @@
       "fight_history": [
         {
           "opponent_name": "Gabriel Evans",
-          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriel-Evans-410132",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Gabriel-Evans-331303",
           "event_name": "MMA Battle Arena - Battle Arena 87: Birmingham",
           "event_sherdog_url": "https://www.sherdog.com/events/MMA-Battle-Arena-Battle-Arena-87-Birmingham-113544",
           "date": "2026-07-11",
@@ -58739,6 +58690,146 @@
           "referee": "Ahmed Korchi",
           "round": 2,
           "time": "5:00"
+        }
+      ]
+    },
+    {
+      "name": "Taylor Rose",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter_large_default.jpg",
+      "weight_class": "Lightweight",
+      "record": "2-0-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Taylor-Rose-454035",
+      "fight_history": [
+        {
+          "opponent_name": "Radley Andrews",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Radley-Andrews-509985",
+          "event_name": "Cage Rage MMA Promotions - Cage Rage 007",
+          "event_sherdog_url": "https://www.sherdog.com/events/Cage-Rage-MMA-Promotions-Cage-Rage-007-114360",
+          "date": "2026-10-24",
+          "result": "win",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "",
+          "round": 1,
+          "time": "0:24"
+        },
+        {
+          "opponent_name": "Matthew Holland",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Matthew-Holland-67639",
+          "event_name": "MMAX Meta - Fight Night 5",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMAX-Meta-Fight-Night-5-113103",
+          "date": "2026-05-01",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Cyrus Besharate",
+          "round": 1,
+          "time": "1:54"
+        }
+      ]
+    },
+    {
+      "name": "Milton Afonso Cabral",
+      "image_url": "https://www.sherdog.com/image_crop/200/300/_images/fighter/1660410374Schermata_2022-08-13_alle_7.05.54_PM.png",
+      "weight_class": "Middleweight",
+      "record": "3-5-0",
+      "ranking": 0,
+      "sherdog_url": "https://www.sherdog.com/fighter/Milton-Afonso-Cabral-396695",
+      "fight_history": [
+        {
+          "opponent_name": "Arkaitz Ramos",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Arkaitz-Ramos-159587",
+          "event_name": "WOW 26 - Bilbao",
+          "event_sherdog_url": "https://www.sherdog.com/events/WOW-26-Bilbao-110990",
+          "date": "2026-02-21",
+          "result": "loss",
+          "method": "TKO (Punches)",
+          "referee": "Angel Bolanos",
+          "round": 1,
+          "time": "1:34"
+        },
+        {
+          "opponent_name": "Sean Clancy Jr.",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Sean-Clancy-Jr-322787",
+          "event_name": "CW 161 - Cage Warriors 161: Dublin",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-161-Cage-Warriors-161-Dublin-98291",
+          "date": "2023-10-14",
+          "result": "loss",
+          "method": "Submission (Neck Crank)",
+          "referee": "Rich Mitchell",
+          "round": 1,
+          "time": "3:08"
+        },
+        {
+          "opponent_name": "Khadim Dia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Khadim-Dia-381090",
+          "event_name": "CW 154 - Cage Warriors 154: Rome",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-154-Cage-Warriors-154-Rome-96666",
+          "date": "2023-05-06",
+          "result": "loss",
+          "method": "Decision (Unanimous)",
+          "referee": "Rich Mitchell",
+          "round": 3,
+          "time": "5:00"
+        },
+        {
+          "opponent_name": "Paddy Wilkinson",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Paddy-Wilkinson-239717",
+          "event_name": "CW 147 - Cage Warriors 147: Unplugged",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-147-Cage-Warriors-147-Unplugged-94114",
+          "date": "2022-11-20",
+          "result": "win",
+          "method": "TKO (Punches)",
+          "referee": "Leon Roberts",
+          "round": 1,
+          "time": "0:47"
+        },
+        {
+          "opponent_name": "George McManus",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/George-McManus-168617",
+          "event_name": "CW 142\t - Cage Warriors 142",
+          "event_sherdog_url": "https://www.sherdog.com/events/CW-142-Cage-Warriors-142-94081",
+          "date": "2022-08-13",
+          "result": "loss",
+          "method": "Submission (Rear-Naked Choke)",
+          "referee": "Harry Selby",
+          "round": 1,
+          "time": "1:52"
+        },
+        {
+          "opponent_name": "Yannick Frachon",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Yannick-Frachon-225731",
+          "event_name": "MMAGP - Mixed Martial Arts Grand Prix: Fight of Fame",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMAGP-Mixed-Martial-Arts-Grand-Prix-Fight-of-Fame-93793",
+          "date": "2022-07-09",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 2,
+          "time": "0:00"
+        },
+        {
+          "opponent_name": "Ilian Bouafia",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Ilian-Bouafia-389398",
+          "event_name": "MMAGP - Mixed Martial Arts Grand Prix 3",
+          "event_sherdog_url": "https://www.sherdog.com/events/MMAGP-Mixed-Martial-Arts-Grand-Prix-3-89564",
+          "date": "2021-07-01",
+          "result": "loss",
+          "method": "KO (Punch)",
+          "referee": "Mourad Benseghir",
+          "round": 1,
+          "time": "1:25"
+        },
+        {
+          "opponent_name": "Milton Pina",
+          "opponent_sherdog_url": "https://www.sherdog.com/fighter/Milton-Pina-145107",
+          "event_name": "MSC 1 - Margem Sul Championship 1",
+          "event_sherdog_url": "https://www.sherdog.com/events/MSC-1-Margem-Sul-Championship-1-88598",
+          "date": "2019-06-01",
+          "result": "win",
+          "method": "TKO",
+          "referee": "",
+          "round": 1,
+          "time": "0:00"
         }
       ]
     }
@@ -98602,6 +98693,19 @@
     },
     {
       "event_name": "CW 212 - Cage Warriors 212: Spanish Showcase",
+      "fighter1_name": "Connor Patterson",
+      "fighter2_name": "Efstathios Piperigos",
+      "fight_finished": false,
+      "winner_name": null,
+      "method": "",
+      "round": 0,
+      "time": "",
+      "weight_class": "150lb Catchweight",
+      "is_main_event": false,
+      "is_title_fight": false
+    },
+    {
+      "event_name": "CW 212 - Cage Warriors 212: Spanish Showcase",
       "fighter1_name": "Simone Patrizi",
       "fighter2_name": "Armands Gruznovs",
       "fight_finished": false,
@@ -98615,14 +98719,14 @@
     },
     {
       "event_name": "CW 212 - Cage Warriors 212: Spanish Showcase",
-      "fighter1_name": "Connor Patterson",
-      "fighter2_name": "Efstathios Piperigos",
+      "fighter1_name": "Taylor Rose",
+      "fighter2_name": "Milton Afonso Cabral",
       "fight_finished": false,
       "winner_name": null,
       "method": "",
       "round": 0,
       "time": "",
-      "weight_class": "150lb Catchweight",
+      "weight_class": "177lb Catchweight",
       "is_main_event": false,
       "is_title_fight": false
     },
