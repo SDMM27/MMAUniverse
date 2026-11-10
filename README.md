@@ -51,7 +51,7 @@ flowchart LR
         N[news-sync<br/>toutes les 2 h]
     end
 
-    J[(data/scraped/*.json<br/>versionnés dans git)]
+    J[(data/scraped/*.json<br/>dépôt privé MMAUniverse-data)]
     DB[(Postgres Neon)]
 
     S --> D & E
@@ -66,7 +66,7 @@ flowchart LR
     DB --> API[API mobile] --> MOB[App Expo]
 ```
 
-Chaque scraper écrit d'abord un fichier JSON versionné dans `data/scraped/`, puis une étape de synchronisation séparée pousse ce fichier dans Postgres. Ce découpage a trois avantages :
+Chaque scraper écrit d'abord un fichier JSON dans `data/scraped/`, puis une étape de synchronisation séparée pousse ce fichier dans Postgres. Ces JSON sont des données de sites tiers : ils ne sont **pas** publiés dans ce dépôt public, mais versionnés dans un dépôt privé (`SDMM27/MMAUniverse-data`) que les workflows clonent dans `data/scraped/`. Ce découpage a trois avantages :
 
 - **Rejouable** : une synchro peut être relancée sans repasser par le réseau.
 - **Auditable** : chaque rafraîchissement de données est un commit (`chore(scrape): daily data refresh`), donc l'historique git montre ce qui a changé et quand.
@@ -169,7 +169,7 @@ data/
   scrapers/             Scrapers Sherdog, UFCStats, ufc.com + synchros vers Neon
     shared/             Fetch (throttle / Playwright), checkpoints, normalisation
     __fixtures__/       Pages HTML réelles pour les tests de parsing
-  scraped/              Données brutes scrapées (JSON versionnés)
+  scraped/              Données brutes scrapées : clone du dépôt privé MMAUniverse-data (ignoré ici)
   lib/rating/           Moteur FightScore : dominance, Glicko, scores, styles, régression
   scripts/              Calcul, calibrage, réglage et entraînement du FightScore
   ml-models/            Paramètres réglés et poids du modèle entraîné
@@ -186,6 +186,12 @@ Prérequis : Node 24 et une base Postgres (Neon).
 
 ```bash
 npm install
+```
+
+Le site lui-même n'a besoin que de la base. Pour lancer les scrapers ou les synchros, cloner aussi les données (accès au dépôt privé requis) :
+
+```bash
+git clone https://github.com/SDMM27/MMAUniverse-data.git data/scraped
 ```
 
 Créer un fichier `.env.local` :

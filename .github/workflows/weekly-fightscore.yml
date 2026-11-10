@@ -6,8 +6,8 @@ name: Weekly FightScore
 # and the Sunday + Monday 09:00 runs of daily-sync.yml have pulled the results
 # and current champions into Neon by then. The UFCStats fight-level stats it
 # reads are frozen: their scraper was removed on 2026-10-28 (UFCStats blocks
-# bots, and fetching it meant bypassing that), so fights after that date carry
-# no stats and don't enter FightScore until a licensed source replaces it.
+# bots, and fetching it meant bypassing that). UFC fights after the last stats
+# date enter the Glicko from their result alone (results-only-fights.ts).
 # The recomputation is a full, deterministic replay of every fight. Run it by
 # hand (workflow_dispatch) after a data fix that shouldn't wait for Monday.
 on:
@@ -28,6 +28,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # The frozen UFCStats JSON lives in the private SDMM27/MMAUniverse-data repo (see daily-sync.yml).
+      - uses: actions/checkout@v4
+        with:
+          repository: SDMM27/MMAUniverse-data
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+          path: data/scraped
 
       - uses: actions/setup-node@v4
         with:

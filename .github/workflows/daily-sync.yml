@@ -9,7 +9,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: mma-universe-sync
@@ -20,6 +20,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Scraped JSON lives in the private SDMM27/MMAUniverse-data repo, not in this public one
+      # (third-party data must not be redistributed). DATA_REPO_TOKEN: read/write on that repo only.
+      - uses: actions/checkout@v4
+        with:
+          repository: SDMM27/MMAUniverse-data
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+          path: data/scraped
 
       - uses: actions/setup-node@v4
         with:
@@ -36,11 +44,12 @@ jobs:
       - name: Catch up fighters' Sherdog history on recent fights
         run: npx tsx data/scrapers/sync-live-fighter-history.ts --catch-up
 
-      - name: Commit refreshed scraped data
+      - name: Commit refreshed scraped data (private data repo)
+        working-directory: data/scraped
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/scraped/*.json
+          git add *.json
           git diff --cached --quiet || git commit -m "chore(scrape): daily data refresh"
           git push
 

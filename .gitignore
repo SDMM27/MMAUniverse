@@ -9,7 +9,8 @@
 
 # testing
 /coverage
-data/scraped/.cache/
+# Scraped data: a clone of the private SDMM27/MMAUniverse-data repo (never commit it here).
+/data/scraped/
 
 # next.js
 /.next/

@@ -2,8 +2,7 @@ name: Event-day live sync
 
 # Tighter polling for the days an event is actually happening. Runs every 30 minutes, Friday to
 # Sunday only (almost every card falls on those days; a Saturday card running past 00:00 UTC is
-# covered by Sunday's runs) -- kept that sparse to stay inside the free GitHub Actions minutes
-# of a private repo. Beyond that,
+# covered by Sunday's runs). Beyond that,
 # check-live-orgs.ts gates everything: if no org has an event dated today (or, until noon UTC,
 # yesterday -- an American card runs past 00:00 UTC, see shared/live-dates.ts) it exits immediately
 # (a single cheap DB query, no Sherdog traffic at all). On a live day it only rescrapes the
@@ -19,7 +18,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: mma-universe-sync
@@ -30,6 +29,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Scraped JSON lives in the private SDMM27/MMAUniverse-data repo (see daily-sync.yml).
+      - uses: actions/checkout@v4
+        with:
+          repository: SDMM27/MMAUniverse-data
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+          path: data/scraped
 
       - uses: actions/setup-node@v4
         with:
@@ -56,12 +62,13 @@ jobs:
         if: steps.live.outputs.orgs != ''
         run: npx tsx data/scrapers/sync-live-fighter-history.ts ${{ steps.live.outputs.orgs }}
 
-      - name: Commit refreshed scraped data
+      - name: Commit refreshed scraped data (private data repo)
         if: steps.live.outputs.orgs != ''
+        working-directory: data/scraped
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/scraped/*.json
+          git add *.json
           git diff --cached --quiet || git commit -m "chore(scrape): live event-day refresh"
           git push
 
