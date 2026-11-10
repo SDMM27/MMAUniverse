@@ -8,8 +8,13 @@ import { formatInteger } from './format';
  */
 export default function OrgFilter({ options, active }: { options: { key: string; label: string; fights: number }[]; active: string }) {
   return (
-    <nav aria-label="Organisation" className="scrollbar-none -mx-6 overflow-x-auto px-6">
-      <ul className="flex w-max gap-2">
+    // Swipeable row on phones (faded right edge hints at more); wraps from sm up,
+    // where a hidden horizontal scroll can't be reached with a mouse wheel.
+    <nav
+      aria-label="Organisation"
+      className="scrollbar-none -mx-6 overflow-x-auto px-6 [mask-image:linear-gradient(to_right,black_calc(100%-2rem),transparent)] sm:mx-0 sm:overflow-visible sm:px-0 sm:[mask-image:none]"
+    >
+      <ul className="flex w-max gap-2 sm:w-auto sm:flex-wrap">
         {options.map((option) => {
           const isActive = option.key === active;
           return (
