@@ -2,7 +2,7 @@ import CardGridSkeleton from '@/components/ui/shared/card-grid-skeleton';
 
 export default function Loading() {
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-6">
+    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
       <CardGridSkeleton />
     </main>
   );

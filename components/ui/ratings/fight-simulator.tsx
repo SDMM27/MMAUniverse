@@ -323,10 +323,10 @@ function FactorsNote({ a, b, prediction }: { a: SimulatorFighter; b: SimulatorFi
           {factors.map(([factor, shift]) => {
             const favored = shift > 0 ? a : b;
             return (
-              <li key={factor} className="flex items-baseline gap-3 text-sm">
-                <span className="w-32 shrink-0 text-ink-secondary">{FACTOR_LABEL[factor]}</span>
-                <span className="min-w-0 flex-1 text-ink-primary">{factorDetail(factor, favored, favored === a ? b : a)}</span>
-                <span className="shrink-0 tabular-nums text-accent">
+              <li key={factor} className="grid grid-cols-[1fr_auto] gap-x-3 gap-y-0.5 text-sm sm:flex sm:items-baseline">
+                <span className="text-ink-secondary sm:w-32 sm:shrink-0">{FACTOR_LABEL[factor]}</span>
+                <span className="col-span-2 row-start-2 min-w-0 text-ink-primary sm:flex-1">{factorDetail(factor, favored, favored === a ? b : a)}</span>
+                <span className="col-start-2 row-start-1 shrink-0 tabular-nums text-accent">
                   +{Math.round(Math.abs(shift) * 100)} pt{Math.round(Math.abs(shift) * 100) > 1 ? 's' : ''}
                 </span>
               </li>

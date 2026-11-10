@@ -28,6 +28,10 @@ const links = [
   { href: '/classement', label: 'Pronostics' },
 ];
 
+// Menu entries on phones: a full-width row at least 44px tall, so a thumb
+// doesn't land on the neighbouring link.
+const MOBILE_LINK = 'flex min-h-11 items-center border-b border-base-border/60 text-base';
+
 function isActive(pathname: string, href: string) {
   // '/' would otherwise match every path as a prefix. Exact match or a '/'-
   // bounded prefix (for subroutes, e.g. /classement-calcule/methodologie)
@@ -59,14 +63,14 @@ function MenuIcon({ d }: { d: string }) {
   );
 }
 
-function NavLink({ href, label, active }: { href: string; label: string; active: boolean }) {
+function NavLink({ href, label, active, className = '' }: { href: string; label: string; active: boolean; className?: string }) {
   return (
     <Link
       href={href}
       aria-current={active ? 'page' : undefined}
       className={`font-display text-sm uppercase tracking-wide transition-colors ${
         active ? 'text-accent' : 'text-ink-secondary hover:text-accent'
-      }`}
+      } ${className}`}
     >
       {label}
     </Link>
@@ -86,7 +90,7 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <nav className="border-b border-base-border bg-base-bg px-6 py-3 sm:px-10 2xl:px-16">
+    <nav className="border-b border-base-border bg-base-bg px-4 py-3 sm:px-10 2xl:px-16">
       <div className="flex items-center justify-between gap-4">
         <Link href="/" className="shrink-0">
           <MMAUniverseLogo />
@@ -143,24 +147,24 @@ export default function Nav() {
       </div>
 
       {open && (
-        <ul id="mobile-nav-menu" className="mt-4 flex flex-col gap-4 border-t border-base-border pt-4 xl:hidden">
+        <ul id="mobile-nav-menu" className="mt-3 grid grid-cols-2 gap-x-4 border-t border-base-border pt-2 xl:hidden">
           {links.map((link) => (
             <li key={link.href}>
-              <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} />
+              <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} className={MOBILE_LINK} />
             </li>
           ))}
           {/* Inside the auth guards, so the hidden ones don't leave empty gaps. */}
           <SignedIn>
             <li>
-              <NavLink href="/mes-pronostics" label="Mes pronostics" active={isActive(pathname, '/mes-pronostics')} />
+              <NavLink href="/mes-pronostics" label="Mes pronostics" active={isActive(pathname, '/mes-pronostics')} className={MOBILE_LINK} />
             </li>
             <li>
-              <NavLink href="/profil" label="Mon profil" active={isActive(pathname, '/profil')} />
+              <NavLink href="/profil" label="Mon profil" active={isActive(pathname, '/profil')} className={MOBILE_LINK} />
             </li>
           </SignedIn>
           <SignedOut>
             <li>
-              <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
+              <Link href="/sign-in" className={`font-display uppercase tracking-wide text-accent ${MOBILE_LINK}`}>
                 Connexion
               </Link>
             </li>

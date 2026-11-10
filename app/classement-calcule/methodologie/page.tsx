@@ -22,7 +22,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col gap-8 p-6">
+    <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
       <div>
         <Link href="/classement-calcule" className="text-xs uppercase tracking-wide text-accent hover:underline">
           ← Retour au FightScore

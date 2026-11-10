@@ -27,7 +27,7 @@ export default async function Page() {
 
   if (!userId) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-6 text-center">
+      <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-4 sm:p-6 text-center">
         <p className="text-sm text-ink-secondary">Connecte-toi pour voir ton profil.</p>
         <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
           Connexion
@@ -43,7 +43,7 @@ export default async function Page() {
   ]);
 
   return (
-    <main className="flex min-h-screen flex-col gap-8 p-6">
+    <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
       <h1 className="border-b border-base-border pb-6 font-display text-2xl uppercase tracking-wide text-ink-primary">
         Mon profil
       </h1>

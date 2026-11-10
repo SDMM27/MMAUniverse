@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { fetchEventsByOrg } from '@/data/lib/data';
 import { getEvent, getEventFights } from '@/data/lib/page-data';
@@ -64,7 +65,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const siteUrl = getSiteUrl();
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-6">
+    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
       <JsonLd
         data={[
           sportsEventJsonLd(siteUrl, event, fights, eventMetadataDescription(event, mainEvent)),
@@ -96,8 +97,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
         />
       ) : (
         <>
+          {!userId && !locked && (
+            <div className="flex flex-col items-center gap-3 rounded-lg border border-base-border bg-base-card p-4 text-center">
+              <p className="text-sm text-ink-secondary">
+                Connecte-toi pour pronostiquer les combats de cette soirée et grimper au classement.
+              </p>
+              <Link
+                href="/sign-in"
+                className="flex min-h-[44px] w-full items-center justify-center rounded-md bg-accent px-4 py-2 font-display text-sm uppercase tracking-wide text-white sm:w-auto"
+              >
+                Se connecter
+              </Link>
+            </div>
+          )}
           {mainEvent && (
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2">
               <FightCard fight={mainEvent} event={event} />
               <FightPickSection
                 fight={mainEvent}
@@ -107,9 +121,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
               />
             </div>
           )}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             {rest.map((fight) => (
-              <div key={fight.id} className="flex flex-col gap-3">
+              <div key={fight.id} className="flex flex-col gap-2">
                 <FightRow fight={fight} />
                 <FightPickSection
                   fight={fight}

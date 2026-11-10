@@ -11,9 +11,9 @@ function RankingRow({ ranking }: { ranking: RankingWithFighter }) {
       <span className="rounded bg-accent/15 px-2 py-0.5 font-display text-xs uppercase tracking-wide text-accent">
         {ranking.rank === 0 ? 'C' : `#${ranking.rank}`}
       </span>
-      <span className="text-sm text-ink-primary">
+      <span className="min-w-0 flex-1 text-sm text-ink-primary">
         {ranking.fighter_id ? (
-          <Link href={fighterHref({ id: ranking.fighter_id, name: ranking.fighter_name })} className="hover:text-accent">
+          <Link href={fighterHref({ id: ranking.fighter_id, name: ranking.fighter_name })} className="-my-2 block py-2 hover:text-accent">
             {ranking.fighter_name}
           </Link>
         ) : (

@@ -1,5 +1,4 @@
 // components/ui/picks/fight-pick-section.tsx
-import Link from 'next/link';
 import type { FightWithFighters } from '@/data/lib/definitions';
 import type { StoredPick } from '@/data/lib/picks-data';
 import PickForm from './pick-form';
@@ -16,18 +15,9 @@ export default function FightPickSection({
   signedIn: boolean;
   pick: StoredPick | null;
 }) {
-  if (!signedIn) {
-    // Once picks are locked there's nothing left to sign in for.
-    if (locked) return null;
-    return (
-      <p className="rounded-lg border border-base-border bg-base-card p-4 text-center text-xs text-ink-secondary">
-        <Link href="/sign-in" className="text-accent hover:underline">
-          Connecte-toi
-        </Link>{' '}
-        pour pronostiquer ce combat.
-      </p>
-    );
-  }
+  // Signed-out visitors get a single sign-in banner at the top of the card
+  // (app/events/[slug]/page.tsx) instead of one prompt under every fight.
+  if (!signedIn) return null;
 
   if (locked) {
     return <PickResult fight={fight} pick={pick} />;

@@ -18,7 +18,7 @@ export default async function Page() {
   const events = await fetchAllEvents();
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-6">
+    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
       <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Événements</h1>
       {events.length === 0 ? <EmptyState title="Aucun événement pour le moment" /> : <EventsByStatus events={events} />}
     </main>

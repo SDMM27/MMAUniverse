@@ -18,7 +18,7 @@ export default async function Page() {
   const leaderboard = await fetchAllTimeLeaderboard();
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-6">
+    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
       <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Classement</h1>
       {leaderboard.length === 0 ? (
         <EmptyState title="Aucun pronostic" description="Personne n'a encore pronostiqué d'événement." />

@@ -20,7 +20,7 @@ export default async function Page() {
 
   if (!userId) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-6 text-center">
+      <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-4 sm:p-6 text-center">
         <p className="text-sm text-ink-secondary">Connecte-toi pour voir tes pronostics.</p>
         <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
           Connexion
@@ -33,7 +33,7 @@ export default async function Page() {
   const totalPoints = history.reduce((sum, entry) => sum + (entry.points ?? 0), 0);
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-6">
+    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
       <div className="flex items-center justify-between border-b border-base-border pb-6">
         <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Mes pronostics</h1>
         <span className="font-display text-lg text-accent">{totalPoints} pts</span>

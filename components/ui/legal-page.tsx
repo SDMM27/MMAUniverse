@@ -4,7 +4,7 @@ import { CONTACT_EMAIL, LEGAL_LAST_UPDATED } from '@/data/lib/legal';
 
 export function LegalPage({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col gap-8 p-6">
+    <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col gap-8 p-4 sm:p-6">
       <header className="border-b border-base-border pb-6">
         <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{title}</h1>
         <p className="mt-2 text-xs text-ink-secondary">Dernière mise à jour : {LEGAL_LAST_UPDATED}</p>

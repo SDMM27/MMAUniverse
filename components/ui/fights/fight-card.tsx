@@ -48,7 +48,7 @@ export default function FightCard({ fight, event, live, eventName }: FightCardPr
     // nesting an <a> inside the fighters' own <a href="/fighters/...">
     // below — those get a higher z-index so they stay independently
     // clickable on top of the stretched one.
-    <div className="relative flex flex-col gap-5 rounded-xl border-2 border-accent bg-base-card p-6 shadow-lg transition-shadow hover:shadow-accent/20 sm:p-8">
+    <div className="relative flex flex-col gap-5 rounded-xl border-2 border-accent bg-base-card p-4 shadow-lg transition-shadow hover:shadow-accent/20 sm:p-8">
       <div className="flex flex-col gap-5">
         <p className="text-center font-display text-sm font-bold uppercase tracking-[0.2em] text-accent">
           Combat principal
@@ -158,10 +158,10 @@ function FighterColumn({
         objectPosition="top"
       />
       <CountryFlag code={fighter.nationality} />
-      <span className="w-full truncate font-display text-base uppercase tracking-wide text-ink-primary sm:text-xl">
+      <span className="w-full line-clamp-2 break-words font-display text-base uppercase tracking-wide text-ink-primary sm:line-clamp-none sm:truncate sm:text-xl">
         {fighter.name}
       </span>
-      <span className="text-xs text-ink-secondary sm:text-sm">{fighter.record}</span>
+      <span className="whitespace-nowrap text-xs text-ink-secondary sm:text-sm">{fighter.record}</span>
       {status === 'finished' ? (
         <span className={`font-display text-2xl font-bold ${resultColor[result]}`}>{resultLabel[result]}</span>
       ) : (

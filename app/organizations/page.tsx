@@ -20,7 +20,7 @@ export default async function Page() {
 
   if (organizations.length === 0) {
     return (
-      <main className="flex min-h-screen flex-col gap-8 p-6">
+      <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
         <EmptyState title="Aucune organisation pour le moment" />
       </main>
     );
@@ -38,7 +38,7 @@ export default async function Page() {
   });
 
   return (
-    <main className="flex min-h-screen flex-col gap-8 p-6">
+    <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
       <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">
         Organisations ({organizations.length})
       </h1>

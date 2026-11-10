@@ -26,7 +26,7 @@ export default async function Page({ searchParams }: { searchParams: { a?: strin
   const prefill = !hasParams && fighters.length > 0 ? await fetchNextMainEventPrefill(fighters) : null;
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-4xl flex-col gap-8 px-6 py-8">
+    <main className="mx-auto flex min-h-screen max-w-4xl flex-col gap-8 px-4 sm:px-6 py-8">
       <header className="border-b border-base-border pb-8">
         <p className="font-display text-xs uppercase tracking-widest text-accent">FightScore · UFC</p>
         <h1 className="mt-2 font-display text-4xl uppercase leading-none text-ink-primary md:text-5xl">Simulateur de combat</h1>

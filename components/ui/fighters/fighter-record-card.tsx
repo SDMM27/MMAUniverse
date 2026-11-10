@@ -18,9 +18,9 @@ function MethodRow({
   const percentage = pct(count, total);
   return (
     <div className="mb-2 last:mb-0">
-      <div className="flex items-center justify-between text-xs uppercase tracking-wide text-ink-secondary">
-        <span>{label}</span>
-        <span className="font-semibold text-ink-primary">
+      <div className="flex items-center justify-between gap-2 text-xs uppercase tracking-wide text-ink-secondary">
+        <span className="min-w-0 truncate">{label}</span>
+        <span className="shrink-0 whitespace-nowrap font-semibold text-ink-primary">
           {count} · {percentage}%
         </span>
       </div>

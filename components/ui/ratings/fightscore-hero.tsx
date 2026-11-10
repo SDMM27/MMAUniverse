@@ -15,7 +15,7 @@ export default function FightScoreHero({ leader, summary }: { leader: FighterRat
   return (
     <section className="relative overflow-hidden border-b border-base-border">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,59,48,0.18),transparent_60%)]" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-12 md:py-16 lg:grid-cols-[1.3fr_1fr]">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 py-12 md:py-16 lg:grid-cols-[1.3fr_1fr]">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 font-display text-xs uppercase tracking-widest text-accent">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />

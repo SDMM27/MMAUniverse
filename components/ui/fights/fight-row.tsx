@@ -30,13 +30,16 @@ export default function FightRow({ fight }: { fight: FightWithFighters }) {
   }
 
   return (
-    <div className="flex items-center justify-between gap-3 rounded-lg border border-base-border bg-base-card p-3">
+    // < sm: a 2-column grid with the centre block as a full-width header on
+    // top (order-first, DOM order stays fighter1 / centre / fighter2); sm+: the
+    // original single flex row.
+    <div className="grid grid-cols-2 gap-x-3 gap-y-3 rounded-lg border border-base-border bg-base-card p-3 sm:flex sm:items-center sm:justify-between">
       <FighterSide
         fighter={fight.fighter1}
         align="left"
         outcome={fight.fight_finished ? (fight.winner_id === null ? 'draw' : fight.winner_id === fight.fighter1.id ? 'win' : 'loss') : null}
       />
-      <div className="flex w-36 shrink-0 flex-col items-center gap-1.5 text-center">
+      <div className="order-first col-span-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center sm:order-none sm:col-auto sm:w-36 sm:shrink-0 sm:flex-col sm:gap-1.5">
         <span className="font-display text-sm uppercase tracking-wide text-accent">{fight.weight_class}</span>
         {fight.is_title_fight && <TitleFightBadge />}
         <span className="text-sm text-ink-secondary">{formatFightResult(fight)}</span>
@@ -68,7 +71,7 @@ function FighterSide({
     // enough; this Link is itself the flex item FightRow needs to shrink.
     <Link
       href={fighterHref(fighter)}
-      className={`flex min-w-0 flex-1 items-center gap-3 rounded-md transition-colors hover:text-accent ${align === 'right' ? 'flex-row-reverse text-right' : ''}`}
+      className={`flex min-w-0 flex-1 flex-col items-center gap-2 rounded-md text-center transition-colors hover:text-accent sm:flex-row sm:gap-3 ${align === 'right' ? 'sm:flex-row-reverse sm:text-right' : 'sm:text-left'}`}
     >
       <CoverImage
         src={fighter.image_url}
@@ -76,8 +79,8 @@ function FighterSide({
         className="h-16 w-16 shrink-0 rounded-md"
         objectPosition="top"
       />
-      <div className="min-w-0">
-        <div className={`flex items-center gap-2 ${align === 'right' ? 'flex-row-reverse' : ''}`}>
+      <div className="w-full min-w-0 sm:w-auto">
+        <div className={`flex flex-wrap items-center justify-center gap-x-2 gap-y-1 sm:flex-nowrap sm:justify-start ${align === 'right' ? 'sm:flex-row-reverse' : ''}`}>
           {outcome && (
             <span className={`shrink-0 font-display text-sm font-bold ${outcomeColor[outcome]}`} aria-hidden="true">
               {outcomeLabel[outcome]}
@@ -85,14 +88,14 @@ function FighterSide({
           )}
           <CountryFlag code={fighter.nationality} className="shrink-0 text-lg" />
           <p
-            className={`truncate font-display text-base uppercase tracking-wide ${outcome === 'loss' ? 'text-ink-secondary' : 'text-ink-primary'}`}
+            className={`line-clamp-2 w-full break-words font-display text-base uppercase tracking-wide sm:line-clamp-none sm:w-auto sm:truncate ${outcome === 'loss' ? 'text-ink-secondary' : 'text-ink-primary'}`}
           >
             {fighter.name}
           </p>
         </div>
         <p className="text-sm text-ink-secondary">
-          {fighter.record}
-          {outcome === 'win' && <span className="ml-1.5 text-win">Vainqueur</span>}
+          <span className="whitespace-nowrap">{fighter.record}</span>
+          {outcome === 'win' && <span className="block text-win sm:ml-1.5 sm:inline">Vainqueur</span>}
         </p>
       </div>
     </Link>

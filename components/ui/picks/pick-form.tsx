@@ -61,29 +61,29 @@ export default function PickForm({
 
   return (
     <div className="flex flex-col gap-3 rounded-lg border border-base-border bg-base-card p-4">
-      <div className="flex justify-center gap-4">
+      <div className="grid grid-cols-2 gap-2">
         <button
           type="button"
           onClick={() => setWinnerId(fight.fighter1!.id)}
-          className={`rounded-md border px-4 py-2 font-display text-sm uppercase tracking-wide ${winnerId === fight.fighter1!.id ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
+          className={`min-h-[44px] w-full break-words rounded-md border px-3 py-2 font-display text-sm uppercase tracking-wide ${winnerId === fight.fighter1!.id ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
         >
           {fight.fighter1.name}
         </button>
         <button
           type="button"
           onClick={() => setWinnerId(fight.fighter2!.id)}
-          className={`rounded-md border px-4 py-2 font-display text-sm uppercase tracking-wide ${winnerId === fight.fighter2!.id ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
+          className={`min-h-[44px] w-full break-words rounded-md border px-3 py-2 font-display text-sm uppercase tracking-wide ${winnerId === fight.fighter2!.id ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
         >
           {fight.fighter2.name}
         </button>
       </div>
-      <div className="flex justify-center gap-2">
+      <div className="grid grid-cols-3 gap-2">
         {(Object.keys(methodLabels) as MethodCategory[]).map((option) => (
           <button
             key={option}
             type="button"
             onClick={() => setMethod(option)}
-            className={`rounded-md border px-3 py-1 text-xs uppercase tracking-wide ${method === option ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
+            className={`min-h-[40px] rounded-md border px-2 py-2 text-xs uppercase tracking-wide ${method === option ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
           >
             {methodLabels[option]}
           </button>
@@ -96,7 +96,7 @@ export default function PickForm({
               key={r}
               type="button"
               onClick={() => setRound(r)}
-              className={`h-8 w-8 rounded-md border text-xs ${round === r ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
+              className={`h-10 w-10 rounded-md border text-xs ${round === r ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
             >
               {r}
             </button>
@@ -107,7 +107,7 @@ export default function PickForm({
         type="button"
         onClick={handleSubmit}
         disabled={!winnerId || !method || status === 'saving'}
-        className="rounded-md bg-accent px-4 py-2 font-display text-sm uppercase tracking-wide text-white disabled:opacity-40"
+        className="min-h-[44px] rounded-md bg-accent px-4 py-2 font-display text-sm uppercase tracking-wide text-white disabled:opacity-40"
       >
         {status === 'saving' ? 'Enregistrement...' : 'Valider le pronostic'}
       </button>

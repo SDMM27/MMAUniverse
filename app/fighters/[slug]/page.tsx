@@ -80,7 +80,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const siteUrl = getSiteUrl();
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-6">
+    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
       <JsonLd
         data={[
           fighterProfileJsonLd(siteUrl, fighter, canonicalPath, fighterMetadataDescription(fighter, ratings[0])),
@@ -92,7 +92,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       />
       <div className="rounded-lg bg-base-card p-4">
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
-          <figure className="flex w-40 shrink-0 flex-col gap-1 sm:w-56">
+          <figure className="flex mx-auto w-44 shrink-0 flex-col gap-1 sm:mx-0 sm:w-56">
             <CoverImage
               src={fighter.image_url}
               alt={fighter.name}
@@ -100,7 +100,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
               className="aspect-[3/4] w-full rounded-lg border-2 border-base-bg"
               objectPosition="top"
             />
-            {fighter.image_url && fighter.photo_license && <PhotoCredit fighter={fighter} />}
+            {fighter.image_url && fighter.photo_license && <PhotoCredit fighter={fighter} className="text-center sm:text-left" />}
           </figure>
           <div className="flex flex-1 flex-col gap-4 sm:justify-between">
             <div>
@@ -125,9 +125,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
             {nextFight && (
               <Link
                 href={`/events/${nextFight.event_id}`}
-                className="flex items-center justify-between rounded-lg border border-accent bg-base-bg/40 p-3 hover:border-accent"
+                className="flex items-center justify-between gap-3 rounded-lg border border-accent bg-base-bg/40 p-3 hover:border-accent"
               >
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm text-ink-primary">
                     Prochain combat vs {nextFight.opponent_name ?? 'Adversaire inconnu'}
                   </p>
@@ -135,7 +135,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     {displayEventName(nextFight.event_name)} · {formatEventDate(nextFight.event_date, { weekday: true })}
                   </p>
                 </div>
-                <span className="font-display text-xs uppercase tracking-wide text-accent">À venir</span>
+                <span className="shrink-0 whitespace-nowrap font-display text-xs uppercase tracking-wide text-accent">À venir</span>
               </Link>
             )}
           </div>

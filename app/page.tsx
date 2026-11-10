@@ -93,7 +93,7 @@ export default async function Page() {
       <JsonLd data={websiteJsonLd(getSiteUrl(), HOME_DESCRIPTION)} />
       <FightScoreHero leader={p4pLeader} summary={summary} />
 
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-10">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 py-10">
         {(p4p.men.length > 0 || p4p.women.length > 0) && (
           <section>
             <SectionHeader title="Pound-for-Pound" href="/classement-calcule" linkLabel="Classement complet" />

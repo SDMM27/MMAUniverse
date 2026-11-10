@@ -25,7 +25,7 @@ export default async function Page() {
 
   if (ratings.length === 0) {
     return (
-      <main className="flex min-h-screen flex-col gap-8 p-6">
+      <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
         <EmptyState
           title="Classement pas encore calculé"
           description="Le classement calculé n'est disponible que pour l'UFC pour l'instant."
@@ -37,7 +37,7 @@ export default async function Page() {
   const updatedAt = formatUpdatedAt(summary?.updated_at ?? null);
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-10 px-6 py-8">
+    <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-10 px-4 sm:px-6 py-8">
       <header className="flex flex-col gap-4 border-b border-base-border pb-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="font-display text-xs uppercase tracking-widest text-accent">Classement calculé · UFC</p>

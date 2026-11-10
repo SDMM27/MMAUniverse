@@ -35,7 +35,7 @@ export default async function Page() {
   ]);
 
   return (
-    <main className="flex min-h-screen flex-col gap-8 p-6">
+    <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
       <div className="flex flex-col gap-2 border-b border-base-border pb-6">
         <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Bienvenue !</h1>
         <p className="text-sm text-ink-secondary">
