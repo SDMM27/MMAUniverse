@@ -20,16 +20,16 @@ export default function NewsCard({
       href={article.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col overflow-hidden rounded-lg border border-base-border bg-base-card transition-colors hover:border-accent"
+      className="fx-card flex min-w-0 flex-col overflow-hidden border border-line bg-surface hover:border-accent"
     >
       <div className="flex flex-col gap-1 p-3">
-        <span className="font-display text-xs uppercase tracking-wide text-accent">
+        <span className="font-mono text-[11px] font-bold uppercase text-accent-strong">
           {[article.organization_abbreviation, NEWS_SOURCE_NAMES[article.source_id] ?? article.source_id]
             .filter(Boolean)
             .join(' · ')}
         </span>
-        <p className="line-clamp-3 font-display text-sm uppercase tracking-wide text-ink-primary">{article.title}</p>
-        <p className="text-xs text-ink-secondary">{formatRelativeDate(article.published_at)}</p>
+        <p className="line-clamp-3 font-display text-base uppercase leading-tight text-ink [overflow-wrap:anywhere]">{article.title}</p>
+        <p className="font-mono text-[11px] uppercase text-muted">{formatRelativeDate(article.published_at)}</p>
       </div>
     </a>
   );

@@ -1,8 +1,8 @@
 // Shared by the /analyses server page and its client charts.
 
-export const METHOD_COLORS = { ko: '#d95926', sub: '#3987e5', dec: '#199e70' } as const;
+export const METHOD_COLORS = { ko: 'var(--sd-accent)', sub: 'var(--sd-accent-2)', dec: 'var(--sd-muted)' } as const;
 export const METHOD_LABELS = { ko: 'KO/TKO', sub: 'Soumission', dec: 'Décision' } as const;
-export const SINGLE_SERIES_COLOR = '#ff3b30';
+export const SINGLE_SERIES_COLOR = 'var(--sd-accent)';
 
 const percentFormat = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 1, minimumFractionDigits: 1 });
 const roundPercentFormat = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 });

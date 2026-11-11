@@ -9,7 +9,7 @@ export default function CardGridSkeleton({ count = 8 }: { count?: number }) {
         <div
           key={index}
           aria-hidden="true"
-          className="h-40 animate-pulse rounded-lg border border-base-border bg-base-card"
+          className="h-40 animate-pulse border border-line border-t-2 border-t-ink bg-surface"
         />
       ))}
     </div>

@@ -27,7 +27,7 @@ export default function Page() {
       <LegalSection title="Hébergeur">
         <p>
           {HOST.name}, {HOST.address} —{' '}
-          <a href={HOST.website} className="text-accent underline-offset-2 hover:underline" rel="noopener noreferrer">
+          <a href={HOST.website} className="text-accent-strong underline-offset-2 hover:underline" rel="noopener noreferrer">
             {HOST.website.replace('https://', '')}
           </a>
         </p>
@@ -60,7 +60,7 @@ export default function Page() {
         <p>
           Les photos de combattants proviennent de Wikimedia Commons, sous licence libre ; leurs auteurs et licences
           sont indiqués sur la page{' '}
-          <Link href="/credits-photos" className="text-accent underline-offset-2 hover:underline">
+          <Link href="/credits-photos" className="text-accent-strong underline-offset-2 hover:underline">
             crédits photos
           </Link>
           . Les visuels d’articles appartiennent à leurs éditeurs. Si vous
@@ -73,7 +73,7 @@ export default function Page() {
       <LegalSection title="Données personnelles">
         <p>
           Le traitement des données des utilisateurs est décrit dans la{' '}
-          <Link href="/confidentialite" className="text-accent underline-offset-2 hover:underline">
+          <Link href="/confidentialite" className="text-accent-strong underline-offset-2 hover:underline">
             politique de confidentialité
           </Link>
           .

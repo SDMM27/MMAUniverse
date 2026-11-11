@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const siteUrl = getSiteUrl();
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
+    <main className="flex min-h-screen flex-col gap-6 shell py-4 sm:py-6">
       <JsonLd
         data={[
           sportsOrganizationJsonLd(siteUrl, organization, organizationMetadataDescription(organization)),
@@ -57,11 +57,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
           ]),
         ]}
       />
-      <div className="flex items-center gap-4 border-b border-base-border pb-6">
-        <CoverImage src={organization.logo_link} alt={organization.name} className="h-16 w-16 rounded-full" />
-        <div>
-          <p className="font-display text-xs uppercase tracking-wide text-accent">{organization.abbreviation}</p>
-          <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{organization.name}</h1>
+      <div className="flex items-center gap-4 border-b border-line pb-6">
+        <CoverImage src={organization.logo_link} alt={organization.name} className="h-16 w-16 shrink-0 rounded-full sm:h-24 sm:w-24" />
+        <div className="min-w-0">
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">{organization.abbreviation}</p>
+          <h1 className="font-display uppercase leading-[0.9] text-[clamp(2rem,6vw,4rem)] text-ink [overflow-wrap:anywhere]">{organization.name}</h1>
         </div>
       </div>
       <OrganizationHubTabs events={events} fighters={fighters} rankings={rankings} />

@@ -4,15 +4,17 @@ import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
+import FaceOff from '@/components/ui/fx/face-off';
+import { matchupOdds } from '@/components/ui/ratings/matchup-odds';
+import { faceOffCorner, tapeMeasures } from '@/components/ui/ratings/matchup-face-off';
 import TaleOfTheTape from '@/components/ui/ratings/tale-of-the-tape';
 import { SimulatorFighter } from '@/data/lib/definitions';
 import type { MainEventPrefill } from '@/data/lib/simulator-data';
 import { buildSimulatorPath } from '@/data/lib/simulator-params';
-import { predictFight } from '@/data/lib/rating/simulate-fight';
 import { fighterHref } from '@/data/lib/slug';
 import { FINISH_METHODS, contextMix, predictOutcomes, type FinishMethod } from '@/data/lib/rating/fight-outcome';
 import { FIGHT_OUTCOME_MODEL } from '@/data/lib/rating/fight-outcome-model';
-import { predictMatchup, profileRates, type MatchupFactor, type MatchupPrediction } from '@/data/lib/rating/matchup-model';
+import { profileRates, type MatchupFactor, type MatchupPrediction } from '@/data/lib/rating/matchup-model';
 import { MATCHUP_MODEL } from '@/data/lib/rating/matchup-model-tuned';
 
 const isWomen = (fighter: SimulatorFighter) => fighter.weight_class.startsWith("Women's");
@@ -23,7 +25,7 @@ const METHOD_PHRASE: Record<FinishMethod, string> = { ko: 'par KO / TKO', sub: '
 const formatPct = (p: number) => (p < 0.005 ? '<1%' : `${Math.round(p * 100)}%`);
 
 const Swatch = ({ corner }: { corner: 'A' | 'B' }) => (
-  <span aria-hidden className={`inline-block h-2.5 w-2.5 shrink-0 rounded-sm ${corner === 'A' ? 'bg-accent' : 'bg-ink-secondary/60'}`} />
+  <span aria-hidden className={`inline-block h-2.5 w-2.5 shrink-0 ${corner === 'A' ? 'bg-accent' : 'bg-accent-2'}`} />
 );
 
 const CONFIDENCE_LABEL = {
@@ -34,11 +36,13 @@ const CONFIDENCE_LABEL = {
 
 function FighterPicker({
   label,
+  corner,
   options,
   selected,
   onSelect,
 }: {
   label: string;
+  corner: 'A' | 'B';
   options: SimulatorFighter[];
   selected: SimulatorFighter | null;
   onSelect: (fighter: SimulatorFighter | null) => void;
@@ -52,15 +56,18 @@ function FighterPicker({
 
   if (selected) {
     return (
-      <div className="flex min-w-0 items-center gap-3 rounded-xl border border-base-border bg-base-card p-4">
+      <div className={`fx-notch flex min-w-0 items-center gap-3 border border-l-4 border-line bg-surface p-4 ${corner === "A" ? "border-l-accent" : "border-l-accent-2"}`}>
         <CoverImage src={selected.fighter_image_url} alt={selected.fighter_name} className="h-16 w-16 shrink-0 rounded-full" sizes="64px" objectPosition="top" />
         <div className="min-w-0 flex-1">
-          <p className="font-display text-xs uppercase tracking-widest text-ink-secondary">{label}</p>
-          <Link href={fighterHref({ id: selected.fighter_id, name: selected.fighter_name })} className="flex items-center gap-2 truncate text-lg text-ink-primary hover:text-accent">
+          <p className="flex items-center gap-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">
+            <Swatch corner={corner} />
+            {label}
+          </p>
+          <Link href={fighterHref({ id: selected.fighter_id, name: selected.fighter_name })} className="flex min-h-11 items-center gap-2 truncate text-lg text-ink hover:text-accent-strong">
             <CountryFlag code={selected.fighter_nationality} className="shrink-0 text-sm" />
             <span className="truncate">{selected.fighter_name}</span>
           </Link>
-          <p className="truncate text-xs text-ink-secondary">
+          <p className="truncate text-xs text-muted">
             {selected.weight_class}
             {selected.matchup_profile.age != null && ` · ${Math.floor(selected.matchup_profile.age)} ans`}
             {selected.is_champion && ' · Champion'}
@@ -72,7 +79,7 @@ function FighterPicker({
             onSelect(null);
             setQuery('');
           }}
-          className="shrink-0 text-xs uppercase tracking-wide text-accent hover:underline"
+          className="inline-flex min-h-11 shrink-0 items-center px-1 font-mono text-xs font-bold uppercase text-accent-strong hover:underline"
         >
           Changer
         </button>
@@ -81,8 +88,9 @@ function FighterPicker({
   }
 
   return (
-    <div className="relative rounded-xl border border-base-border bg-base-card p-4">
-      <label className="font-display text-xs uppercase tracking-widest text-ink-secondary" htmlFor={`sim-${label}`}>
+    <div className={`relative border border-l-4 border-line bg-surface p-4 ${corner === "A" ? "border-l-accent" : "border-l-accent-2"}`}>
+      <label className="flex items-center gap-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted" htmlFor={`sim-${label}`}>
+        <Swatch corner={corner} />
         {label}
       </label>
       <input
@@ -92,26 +100,26 @@ function FighterPicker({
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Rechercher un combattant..."
         autoComplete="off"
-        className="mt-2 w-full rounded-lg border border-base-border bg-transparent px-3 py-2 text-sm text-ink-primary placeholder:text-ink-secondary focus:border-accent focus:outline-none"
+        className="mt-2 min-h-11 w-full border border-line bg-transparent px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-accent focus:outline-none"
       />
       {matches.length > 0 && (
-        <ul className="absolute inset-x-4 top-full z-10 mt-1 overflow-hidden rounded-lg border border-base-border bg-base-card shadow-lg">
+        <ul className="absolute inset-x-4 top-full z-10 mt-1 overflow-hidden border border-line bg-surface shadow-lg">
           {matches.map((fighter) => (
             <li key={fighter.fighter_id}>
               <button
                 type="button"
                 onClick={() => onSelect(fighter)}
-                className="flex w-full items-center gap-3 px-3 py-2 text-left hover:bg-white/[0.05]"
+                className="flex min-h-11 w-full items-center gap-3 px-3 py-2 text-left hover:bg-surface-2"
               >
                 <CoverImage src={fighter.fighter_image_url} alt="" className="h-8 w-8 shrink-0 rounded-full" sizes="32px" objectPosition="top" />
-                <span className="min-w-0 flex-1 truncate text-sm text-ink-primary">{fighter.fighter_name}</span>
-                <span className="shrink-0 text-xs text-ink-secondary">{fighter.weight_class}</span>
+                <span className="min-w-0 flex-1 truncate text-sm text-ink">{fighter.fighter_name}</span>
+                <span className="shrink-0 text-xs text-muted">{fighter.weight_class}</span>
               </button>
             </li>
           ))}
         </ul>
       )}
-      {query.trim() && matches.length === 0 && <p className="mt-2 text-xs text-ink-secondary">Aucun combattant classé ne correspond.</p>}
+      {query.trim() && matches.length === 0 && <p className="mt-2 text-xs text-muted">Aucun combattant classé ne correspond.</p>}
     </div>
   );
 }
@@ -151,25 +159,25 @@ function OutcomeBreakdown({ a, b, winA, rounds }: { a: SimulatorFighter; b: Simu
   const methodTotal = (method: FinishMethod) => line('A', method).probability + line('B', method).probability;
 
   return (
-    <div className="mt-6 flex flex-col gap-8 border-t border-base-border pt-5">
+    <div className="mt-6 flex flex-col gap-8 border-t border-line pt-5">
       <div>
-        <p className="font-display text-xs uppercase tracking-widest text-ink-secondary">Scénario le plus probable</p>
-        <p className="mt-1 text-lg text-ink-primary">
+        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Scénario le plus probable</p>
+        <p className="mt-1 text-lg text-ink">
           {name(top.corner)} {METHOD_PHRASE[top.method]}
-          {topRound && <span className="text-ink-secondary">, le plus souvent au round {topRound}</span>}
-          <span className="ml-2 font-display text-accent">{formatPct(top.probability)}</span>
+          {topRound && <span className="text-muted">, le plus souvent au round {topRound}</span>}
+          <span className="ml-2 font-display text-accent-strong">{formatPct(top.probability)}</span>
         </p>
-        <p className="mt-1 text-xs text-ink-secondary">
+        <p className="mt-1 text-xs text-muted">
           C&apos;est l&apos;issue la plus fréquente parmi les six possibles (deux vainqueurs × trois méthodes), mais elle
           reste loin d&apos;être sûre.
         </p>
       </div>
 
       <div>
-        <p className="font-display text-xs uppercase tracking-widest text-ink-secondary">Comment chacun peut gagner</p>
+        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Comment chacun peut gagner</p>
         <table className="mt-2 w-full table-fixed text-sm">
           <thead>
-            <tr className="text-xs text-ink-secondary">
+            <tr className="text-xs text-muted">
               <th className="w-[28%] py-1 text-left font-normal" />
               {(['A', 'B'] as const).map((corner) => (
                 <th key={corner} className="py-1 pl-2 text-right font-normal">
@@ -184,49 +192,49 @@ function OutcomeBreakdown({ a, b, winA, rounds }: { a: SimulatorFighter; b: Simu
           </thead>
           <tbody>
             {FINISH_METHODS.map((method) => (
-              <tr key={method} className="border-t border-base-border/60">
-                <td className="py-2 text-ink-secondary">{METHOD_LABEL[method]}</td>
+              <tr key={method} className="border-t border-line">
+                <td className="py-2 text-muted">{METHOD_LABEL[method]}</td>
                 {(['A', 'B'] as const).map((corner) => {
                   const cell = line(corner, method);
                   return (
-                    <td key={corner} className={`py-2 pl-2 text-right tabular-nums ${cell === top ? 'text-accent' : 'text-ink-primary'}`}>
+                    <td key={corner} className={`py-2 pl-2 text-right tabular-nums ${cell === top ? 'font-bold text-accent-strong' : 'text-ink'}`}>
                       {formatPct(cell.probability)}
                     </td>
                   );
                 })}
-                <td className="py-2 pl-2 text-right tabular-nums text-ink-secondary">{formatPct(methodTotal(method))}</td>
+                <td className="py-2 pl-2 text-right tabular-nums text-muted">{formatPct(methodTotal(method))}</td>
               </tr>
             ))}
-            <tr className="border-t border-base-border">
-              <td className="py-2 text-ink-primary">Victoire</td>
+            <tr className="border-t-2 border-line">
+              <td className="py-2 text-ink">Victoire</td>
               {(['A', 'B'] as const).map((corner) => (
-                <td key={corner} className="py-2 pl-2 text-right font-display text-base tabular-nums text-ink-primary">
+                <td key={corner} className="py-2 pl-2 text-right font-display text-base tabular-nums text-ink">
                   {formatPct(cornerTotal(corner))}
                 </td>
               ))}
-              <td className="py-2 pl-2 text-right tabular-nums text-ink-secondary">100%</td>
+              <td className="py-2 pl-2 text-right tabular-nums text-muted">100%</td>
             </tr>
           </tbody>
         </table>
-        <p className="mt-2 text-xs text-ink-secondary">
+        <p className="mt-2 text-xs text-muted">
           Lecture : {a.fighter_name} gagne par décision dans {formatPct(line('A', 'dec').probability)} des cas. La colonne
           Total additionne les deux combattants ; la dernière ligne redonne leurs chances de victoire.
         </p>
       </div>
 
       <div>
-        <p className="font-display text-xs uppercase tracking-widest text-ink-secondary">Quand le combat se termine</p>
+        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Quand le combat se termine</p>
         <div className="mt-2 grid grid-cols-2 gap-3">
-          <div className="rounded-lg border border-base-border/60 px-3 py-2">
-            <p className="text-xs text-ink-secondary">Avant la limite (KO ou soumission)</p>
-            <p className="font-display text-2xl text-ink-primary">{formatPct(1 - toDecision)}</p>
+          <div className="border border-line px-3 py-2">
+            <p className="text-xs text-muted">Avant la limite (KO ou soumission)</p>
+            <p className="font-display text-2xl text-ink">{formatPct(1 - toDecision)}</p>
           </div>
-          <div className="rounded-lg border border-base-border/60 px-3 py-2">
-            <p className="text-xs text-ink-secondary">Jusqu&apos;aux juges (décision)</p>
-            <p className="font-display text-2xl text-ink-primary">{formatPct(toDecision)}</p>
+          <div className="border border-line px-3 py-2">
+            <p className="text-xs text-muted">Jusqu&apos;aux juges (décision)</p>
+            <p className="font-display text-2xl text-ink">{formatPct(toDecision)}</p>
           </div>
         </div>
-        <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-secondary">
+        <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted">
           {(['A', 'B'] as const).map((corner) => (
             <span key={corner} className="flex items-center gap-1.5">
               <Swatch corner={corner} />
@@ -235,26 +243,26 @@ function OutcomeBreakdown({ a, b, winA, rounds }: { a: SimulatorFighter; b: Simu
           ))}
         </p>
         <ul className="mt-2 flex flex-col gap-2">
-          {endings.map((ending) => (
+          {endings.map((ending, i) => (
             <li key={ending.label} className="flex items-center gap-3 text-sm">
-              <span className="w-20 shrink-0 text-ink-secondary">{ending.label}</span>
+              <span className="w-20 shrink-0 text-muted">{ending.label}</span>
               <div
-                className="flex h-3 flex-1 overflow-hidden rounded-full bg-white/5"
+                className="flex h-3 flex-1 overflow-hidden bg-surface-2"
                 role="img"
                 aria-label={`${ending.label} : ${formatPct(ending.a + ending.b)} au total, dont ${a.fighter_name} ${formatPct(ending.a)} et ${b.fighter_name} ${formatPct(ending.b)}`}
               >
-                <div className="bg-accent" style={{ width: `${ending.a * 100}%` }} />
-                <div className="bg-ink-secondary/60" style={{ width: `${ending.b * 100}%` }} />
+                <div className="fx-bar bg-accent" style={{ width: `${ending.a * 100}%`, animationDelay: `${i * 90}ms` }} />
+                <div className="fx-bar bg-accent-2" style={{ width: `${ending.b * 100}%`, animationDelay: `${i * 90}ms` }} />
               </div>
-              <span className="w-10 shrink-0 text-right tabular-nums text-ink-primary">{formatPct(ending.a + ending.b)}</span>
+              <span className="w-10 shrink-0 text-right tabular-nums text-ink">{formatPct(ending.a + ending.b)}</span>
               <span className="hidden w-24 shrink-0 text-xs tabular-nums sm:inline">
-                <span className="text-accent">{formatPct(ending.a)}</span>
-                <span className="text-ink-secondary"> + {formatPct(ending.b)}</span>
+                <span className="text-accent-strong">{formatPct(ending.a)}</span>
+                <span className="text-muted"> + {formatPct(ending.b)}</span>
               </span>
             </li>
           ))}
         </ul>
-        <p className="mt-2 text-xs text-ink-secondary">
+        <p className="mt-2 text-xs text-muted">
           Chaque ligne donne la probabilité que le combat se termine à ce moment-là, quel que soit le vainqueur ; la couleur
           indique qui l&apos;emporte. Le round exact reste difficile à prévoir : il s&apos;écarte peu de la moyenne UFC. Les
           nuls et no contests (environ 2 % des combats) ne sont pas comptés.
@@ -312,21 +320,21 @@ function FactorsNote({ a, b, prediction }: { a: SimulatorFighter; b: SimulatorFi
 
   return (
     <div className="mt-4">
-      <p className="font-display text-xs uppercase tracking-widest text-ink-secondary">Ce qui fait pencher la balance</p>
-      <p className="mt-1 text-xs text-ink-secondary">
+      <p className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Ce qui fait pencher la balance</p>
+      <p className="mt-1 text-xs text-muted">
         Sur le FightScore seul : {a.fighter_name} {baseA} %, {b.fighter_name} {100 - baseA} %.
       </p>
       {factors.length === 0 ? (
-        <p className="mt-2 text-sm text-ink-secondary">Aucun autre facteur ne pèse vraiment : l&apos;estimation repose sur le FightScore.</p>
+        <p className="mt-2 text-sm text-muted">Aucun autre facteur ne pèse vraiment : l&apos;estimation repose sur le FightScore.</p>
       ) : (
         <ul className="mt-2 flex flex-col gap-1.5">
           {factors.map(([factor, shift]) => {
             const favored = shift > 0 ? a : b;
             return (
               <li key={factor} className="grid grid-cols-[1fr_auto] gap-x-3 gap-y-0.5 text-sm sm:flex sm:items-baseline">
-                <span className="text-ink-secondary sm:w-32 sm:shrink-0">{FACTOR_LABEL[factor]}</span>
-                <span className="col-span-2 row-start-2 min-w-0 text-ink-primary sm:flex-1">{factorDetail(factor, favored, favored === a ? b : a)}</span>
-                <span className="col-start-2 row-start-1 shrink-0 tabular-nums text-accent">
+                <span className="text-muted sm:w-32 sm:shrink-0">{FACTOR_LABEL[factor]}</span>
+                <span className="col-span-2 row-start-2 min-w-0 text-ink sm:flex-1">{factorDetail(factor, favored, favored === a ? b : a)}</span>
+                <span className="col-start-2 row-start-1 shrink-0 tabular-nums text-accent-strong">
                   +{Math.round(Math.abs(shift) * 100)} pt{Math.round(Math.abs(shift) * 100) > 1 ? 's' : ''}
                 </span>
               </li>
@@ -335,7 +343,7 @@ function FactorsNote({ a, b, prediction }: { a: SimulatorFighter; b: SimulatorFi
         </ul>
       )}
       {unknown.length > 0 && (
-        <p className="mt-2 text-xs text-ink-secondary">
+        <p className="mt-2 text-xs text-muted">
           Inconnu : {unknown.join(', ')}. {unknown.length > 1 ? 'Ces facteurs ne sont pas pris' : "Ce facteur n'est pas pris"} en compte.
         </p>
       )}
@@ -393,10 +401,9 @@ export default function FightSimulator({
   const optionsFor = (other: SimulatorFighter | null) =>
     fighters.filter((f) => (!other || isWomen(f) === isWomen(other)) && f.fighter_id !== other?.fighter_id);
 
-  const rating = a && b ? predictFight({ rating: a.rating, rd: a.rd }, { rating: b.rating, rd: b.rd }) : null;
-  const prediction = a && b && rating ? predictMatchup(rating.winA, a.matchup_profile, b.matchup_profile, MATCHUP_MODEL) : null;
-  const pctA = prediction ? Math.round(prediction.winA * 100) : 0;
-  const pctB = prediction ? 100 - pctA : 0;
+  const odds = a && b ? matchupOdds(a, b) : null;
+  const rating = odds?.rating ?? null;
+  const prediction = odds?.prediction ?? null;
   // Title fights are five rounds: default to that when a champion is in the matchup.
   const [roundsChoice, setRoundsChoice] = useState<3 | 5 | null>(null);
   const rounds = roundsChoice ?? (a?.is_champion || b?.is_champion ? 5 : 3);
@@ -404,70 +411,64 @@ export default function FightSimulator({
   return (
     <div className="flex flex-col gap-6">
       {prefill && showPrefill && (
-        <p className="text-xs text-ink-secondary">
+        <p className="text-xs text-muted">
           Main event de{' '}
-          <Link href={`/events/${prefill.eventId}`} className="text-accent hover:underline">
+          <Link href={`/events/${prefill.eventId}`} className="text-accent-strong hover:underline">
             {prefill.eventName}
           </Link>
           {prefill.eventDate && ` · ${prefill.eventDate}`}
         </p>
       )}
       <div className="grid gap-4 md:grid-cols-2">
-        <FighterPicker label="Coin rouge" options={optionsFor(b)} selected={a} onSelect={(f) => select('a', f)} />
-        <FighterPicker label="Coin bleu" options={optionsFor(a)} selected={b} onSelect={(f) => select('b', f)} />
+        <FighterPicker label="Coin rouge" corner="A" options={optionsFor(b)} selected={a} onSelect={(f) => select('a', f)} />
+        <FighterPicker label="Coin ambre" corner="B" options={optionsFor(a)} selected={b} onSelect={(f) => select('b', f)} />
       </div>
 
-      {a && b && <TaleOfTheTape a={a} b={b} />}
-
-      {a && b && rating && prediction ? (
-        <div className="rounded-xl border border-base-border bg-base-card p-5">
-          <div className="flex items-end justify-between gap-4">
-            <div className="min-w-0">
-              <p className="truncate text-sm text-ink-secondary">{a.fighter_name}</p>
-              <p className={`font-display text-4xl ${pctA >= pctB ? 'text-accent' : 'text-ink-primary'}`}>{pctA}%</p>
+      {a && b && odds && rating && prediction ? (
+        <>
+          <FaceOff
+            key={`${a.fighter_id}-${b.fighter_id}`}
+            a={faceOffCorner(a)}
+            b={faceOffCorner(b)}
+            pctA={odds.pctA}
+            measures={tapeMeasures(a, b)}
+          />
+          <TaleOfTheTape a={a} b={b} />
+          <div className="border border-line bg-surface p-5">
+            <p className="text-sm text-muted">{CONFIDENCE_LABEL[rating.confidence]}</p>
+            <FactorsNote a={a} b={b} prediction={prediction} />
+            {a.weight_class !== b.weight_class && (
+              <p className="mt-1 text-xs text-muted">
+                Combattants de catégories différentes ({a.weight_class} / {b.weight_class}) : le FightScore est un seul niveau par
+                combattant, mais la différence de poids réelle n&apos;est pas modélisée.
+              </p>
+            )}
+            <div className="mt-5 flex flex-wrap items-center gap-3 text-xs">
+              <span className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Durée prévue</span>
+              <div className="flex border-2 border-ink">
+                {([3, 5] as const).map((n) => (
+                  <button
+                    key={n}
+                    type="button"
+                    onClick={() => setRoundsChoice(n)}
+                    aria-pressed={rounds === n}
+                    className={`min-h-11 px-4 font-display uppercase ${rounds === n ? 'bg-ink text-bg' : 'text-ink hover:bg-surface-2'}`}
+                  >
+                    {n} rounds
+                  </button>
+                ))}
+              </div>
             </div>
-            <div className="min-w-0 text-right">
-              <p className="truncate text-sm text-ink-secondary">{b.fighter_name}</p>
-              <p className={`font-display text-4xl ${pctB > pctA ? 'text-accent' : 'text-ink-primary'}`}>{pctB}%</p>
-            </div>
-          </div>
-          <div className="mt-3 flex h-3 overflow-hidden rounded-full bg-white/10" role="img" aria-label={`${a.fighter_name} ${pctA}%, ${b.fighter_name} ${pctB}%`}>
-            <div className="bg-accent" style={{ width: `${pctA}%` }} />
-            <div className="bg-ink-secondary/60" style={{ width: `${pctB}%` }} />
-          </div>
-          <p className="mt-4 text-sm text-ink-secondary">{CONFIDENCE_LABEL[rating.confidence]}</p>
-          <FactorsNote a={a} b={b} prediction={prediction} />
-          {a.weight_class !== b.weight_class && (
-            <p className="mt-1 text-xs text-ink-secondary">
-              Combattants de catégories différentes ({a.weight_class} / {b.weight_class}) : le FightScore est un seul niveau par
-              combattant, mais la différence de poids réelle n&apos;est pas modélisée.
-            </p>
-          )}
-          <div className="mt-5 flex items-center gap-2 text-xs">
-            <span className="text-ink-secondary">Durée prévue</span>
-            {([3, 5] as const).map((n) => (
-              <button
-                key={n}
-                type="button"
-                onClick={() => setRoundsChoice(n)}
-                aria-pressed={rounds === n}
-                className={`rounded-full border px-3 py-1 uppercase tracking-wide ${
-                  rounds === n ? 'border-accent text-accent' : 'border-base-border text-ink-secondary hover:text-ink-primary'
-                }`}
-              >
-                {n} rounds
+            <OutcomeBreakdown a={a} b={b} winA={prediction.winA} rounds={rounds} />
+            <div className="mt-4 flex justify-end">
+              <button type="button" onClick={copyLink} className="inline-flex min-h-11 items-center px-1 font-mono text-xs font-bold uppercase text-accent-strong hover:underline">
+                {copied ? 'Lien copié' : 'Copier le lien'}
               </button>
-            ))}
+            </div>
           </div>
-          <OutcomeBreakdown a={a} b={b} winA={prediction.winA} rounds={rounds} />
-          <div className="mt-4 flex justify-end">
-            <button type="button" onClick={copyLink} className="text-xs uppercase tracking-wide text-accent hover:underline">
-              {copied ? 'Lien copié' : 'Copier le lien'}
-            </button>
-          </div>
-        </div>
+        </>
       ) : (
-        <p className="rounded-xl border border-dashed border-base-border p-6 text-center text-sm text-ink-secondary">
+        <p className="border border-dashed border-line p-6 text-center text-sm text-muted">
           Choisis deux combattants pour simuler leur affrontement.
         </p>
       )}

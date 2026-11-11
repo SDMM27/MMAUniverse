@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Quelles données MMA Universe collecte, pourquoi, combien de temps, et comment exercer vos droits.',
 };
 
-const linkClass = 'text-accent underline-offset-2 hover:underline';
+const linkClass = 'text-accent-strong underline-offset-2 hover:underline';
 
 export default function Page() {
   return (
@@ -35,23 +35,23 @@ export default function Page() {
       <LegalSection title="Données collectées et finalités">
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            <span className="text-ink-primary">Compte</span> : adresse e-mail, nom d’utilisateur ou prénom, et, si vous
+            <span className="text-ink">Compte</span> : adresse e-mail, nom d’utilisateur ou prénom, et, si vous
             vous connectez via un fournisseur tiers (Google par exemple), l’identifiant transmis par ce fournisseur.
             Finalité : vous identifier et sécuriser votre compte. Base légale : exécution du service que vous demandez
             (art. 6.1.b RGPD).
           </li>
           <li>
-            <span className="text-ink-primary">Pronostics et préférences</span> : vos pronostics, combattants favoris et
+            <span className="text-ink">Pronostics et préférences</span> : vos pronostics, combattants favoris et
             nationalités suivies. Finalité : afficher vos pronostics, votre score et un contenu personnalisé. Base
             légale : exécution du service.
           </li>
           <li>
-            <span className="text-ink-primary">Mesure d’audience</span> : pages vues, pays, type d’appareil et site
+            <span className="text-ink">Mesure d’audience</span> : pages vues, pays, type d’appareil et site
             d’origine, de façon agrégée et sans cookie ni identifiant persistant (Vercel Web Analytics). Finalité :
             savoir quelles pages sont utiles. Base légale : intérêt légitime (art. 6.1.f RGPD).
           </li>
           <li>
-            <span className="text-ink-primary">Journaux techniques</span> : adresse IP et requêtes conservées
+            <span className="text-ink">Journaux techniques</span> : adresse IP et requêtes conservées
             brièvement par l’hébergeur pour la sécurité et le bon fonctionnement du site. Base légale : intérêt
             légitime.
           </li>
@@ -71,7 +71,7 @@ export default function Page() {
         <ul className="list-disc space-y-2 pl-5">
           {PROCESSORS.map((p) => (
             <li key={p.name}>
-              <span className="text-ink-primary">{p.name}</span> ({p.country}) — {p.role}{' '}
+              <span className="text-ink">{p.name}</span> ({p.country}) — {p.role}{' '}
               <a href={p.privacyUrl} className={linkClass} rel="noopener noreferrer">
                 Sa politique
               </a>

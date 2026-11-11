@@ -74,27 +74,27 @@ export default function FighterPreferencePicker({
 
   return (
     <div className="flex flex-col gap-3">
-      <h2 className="font-display text-sm uppercase tracking-wide text-ink-primary">Combattants préférés</h2>
+      <h2 className="font-display text-2xl uppercase leading-none text-ink">Combattants préférés</h2>
 
       {preferredFighters.length > 0 && (
         <ul className="flex flex-col gap-2">
           {preferredFighters.map((fighter) => (
             <li
               key={fighter.id}
-              className="flex items-center justify-between gap-3 rounded-lg border border-base-border bg-base-card p-2"
+              className="fx-row flex items-center justify-between gap-3 border border-line bg-surface p-2"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex min-w-0 items-center gap-2">
                 <CoverImage src={fighter.image_url} alt={fighter.name} className="h-10 w-10 rounded-full" objectPosition="top" />
                 <div className="flex items-center gap-1.5">
                   <CountryFlag code={fighter.nationality} className="text-sm" />
-                  <span className="text-sm text-ink-primary">{fighter.name}</span>
+                  <span className="truncate text-sm text-ink">{fighter.name}</span>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={() => removeFighter(fighter.id)}
                 disabled={status === 'saving'}
-                className="text-xs text-ink-secondary hover:text-accent disabled:opacity-40"
+                className="inline-flex min-h-11 shrink-0 items-center px-2 font-mono text-xs uppercase text-muted hover:text-accent-strong disabled:opacity-40"
               >
                 Retirer
               </button>
@@ -109,7 +109,7 @@ export default function FighterPreferencePicker({
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Rechercher un combattant..."
         aria-label="Rechercher un combattant"
-        className="w-full rounded-md border border-base-border bg-base-card px-3 py-2 text-sm text-ink-primary placeholder:text-ink-secondary sm:max-w-xs"
+        className="min-h-11 w-full border-2 border-ink bg-surface px-3 text-sm text-ink placeholder:text-muted sm:max-w-xs"
       />
 
       {visibleResults.length > 0 && (
@@ -117,20 +117,20 @@ export default function FighterPreferencePicker({
           {visibleResults.map((fighter) => (
             <li
               key={fighter.id}
-              className="flex items-center justify-between gap-3 rounded-lg border border-base-border bg-base-card p-2"
+              className="fx-row flex items-center justify-between gap-3 border border-line bg-surface p-2"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex min-w-0 items-center gap-2">
                 <CoverImage src={fighter.image_url} alt={fighter.name} className="h-10 w-10 rounded-full" objectPosition="top" />
                 <div className="flex items-center gap-1.5">
                   <CountryFlag code={fighter.nationality} className="text-sm" />
-                  <span className="text-sm text-ink-primary">{fighter.name}</span>
+                  <span className="truncate text-sm text-ink">{fighter.name}</span>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={() => addFighter(fighter.id)}
                 disabled={status === 'saving'}
-                className="text-xs text-accent hover:underline disabled:opacity-40"
+                className="inline-flex min-h-11 shrink-0 items-center px-2 font-mono text-xs font-bold uppercase text-accent-strong hover:underline disabled:opacity-40"
               >
                 Ajouter
               </button>
@@ -139,7 +139,7 @@ export default function FighterPreferencePicker({
         </ul>
       )}
 
-      {status === 'error' && <p className="text-xs text-accent">Erreur réseau, réessaie.</p>}
+      {status === 'error' && <p className="text-xs text-accent-strong">Erreur réseau, réessaie.</p>}
     </div>
   );
 }

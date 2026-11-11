@@ -14,31 +14,31 @@ export default function OrganizationCard({ organization }: { organization: Organ
   return (
     <Link
       href={`/organizations/${organization.id}`}
-      className="flex flex-col items-center gap-3 rounded-lg border border-base-border bg-base-card p-4 text-center transition-colors hover:border-accent"
+      className="fx-card flex min-w-0 flex-col items-center gap-3 border border-line bg-surface p-4 text-center hover:border-accent"
     >
       <CoverImage
         src={organization.logo_link}
         alt={organization.name}
-        className="h-16 w-16 rounded-full"
+        className="fx-shake h-16 w-16 rounded-full"
       />
-      <div>
-        <p className="font-display text-sm uppercase tracking-wide text-ink-primary">{organization.abbreviation}</p>
-        <p className="text-xs text-ink-secondary">{organization.name}</p>
+      <div className="min-w-0">
+        <p className="font-display text-2xl uppercase leading-none text-ink">{organization.abbreviation}</p>
+        <p className="mt-1 text-xs text-muted [overflow-wrap:anywhere]">{organization.name}</p>
       </div>
-      <div className="mt-auto flex flex-col items-center gap-0.5 border-t border-base-border pt-2 w-full">
+      <div className="mt-auto flex w-full flex-col items-center gap-0.5 border-t border-line pt-2">
         {nextEvent ? (
           <>
-            <span className="font-display text-[11px] uppercase tracking-wide text-accent">
+            <span className="font-mono text-[11px] font-bold uppercase text-accent-strong">
               {nextEvent.isUpcoming ? 'Prochain' : 'Dernier'}
             </span>
-            <p className="line-clamp-1 text-xs text-ink-primary">{displayEventName(nextEvent.name)}</p>
-            <p className="text-[11px] text-ink-secondary">{formatEventDate(nextEvent.date)}</p>
+            <p className="line-clamp-1 max-w-full text-xs text-ink">{displayEventName(nextEvent.name)}</p>
+            <p className="font-mono text-[11px] uppercase text-muted">{formatEventDate(nextEvent.date)}</p>
           </>
         ) : (
-          <p className="text-[11px] text-ink-secondary">Aucun événement</p>
+          <p className="text-[11px] text-muted">Aucun événement</p>
         )}
         {typeof eventCount === 'number' && eventCount > 0 && (
-          <p className="mt-1 text-[11px] text-ink-secondary">
+          <p className="mt-1 font-mono text-[11px] uppercase text-muted">
             {eventCount} événement{eventCount > 1 ? 's' : ''}
           </p>
         )}

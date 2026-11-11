@@ -1,3 +1,4 @@
+import SectionHeading from '@/components/ui/fx/section-heading';
 import type { CareerStats } from '@/data/lib/career-stats';
 
 const decimal = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -10,9 +11,9 @@ const fmtDuration = (seconds: number | null) =>
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-lg border border-base-border bg-base-bg/40 p-3">
-      <p className="font-display text-xl text-ink-primary">{value}</p>
-      <p className="text-xs uppercase tracking-wide text-ink-secondary">{label}</p>
+    <div className="min-w-0 border border-line bg-surface-2 p-3">
+      <p className="font-display text-4xl leading-none text-ink">{value}</p>
+      <p className="mt-1 font-mono text-[11px] uppercase text-muted">{label}</p>
     </div>
   );
 }
@@ -21,12 +22,12 @@ function DistributionRow({ label, ratio }: { label: string; ratio: number }) {
   const width = Math.round(ratio * 100);
   return (
     <div className="mb-2 last:mb-0">
-      <div className="flex items-center justify-between text-xs uppercase tracking-wide text-ink-secondary">
+      <div className="flex items-center justify-between font-mono text-[11px] uppercase text-muted">
         <span>{label}</span>
-        <span className="font-semibold text-ink-primary">{width} %</span>
+        <span className="font-bold text-ink">{width} %</span>
       </div>
-      <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-base-border">
-        <div className="h-full rounded-full bg-accent" style={{ width: `${width}%` }} />
+      <div className="mt-1 h-1.5 w-full overflow-hidden bg-surface-2">
+        <div className="fx-bar h-full bg-accent" style={{ width: `${width}%` }} />
       </div>
     </div>
   );
@@ -37,9 +38,9 @@ export default function FighterCareerStats({ stats }: { stats: CareerStats | nul
   const { strikeDistribution } = stats;
 
   return (
-    <section className="rounded-lg bg-base-card p-4">
-      <h2 className="font-display text-sm uppercase tracking-wide text-ink-secondary">Statistiques UFC (source UFCStats)</h2>
-      <p className="mb-3 text-xs text-ink-secondary">
+    <section className="border border-line bg-surface p-4 sm:p-6">
+      <SectionHeading title="Statistiques UFC" caption="Source UFCStats" />
+      <p className="mb-3 font-mono text-[11px] uppercase text-muted">
         Moyennes de carrière sur {stats.fights} combat{stats.fights > 1 ? 's' : ''} en UFC uniquement.
       </p>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
@@ -60,7 +61,7 @@ export default function FighterCareerStats({ stats }: { stats: CareerStats | nul
       </div>
       {strikeDistribution && (
         <div className="mt-4">
-          <p className="mb-2 text-xs uppercase tracking-wide text-ink-secondary">Répartition des frappes significatives</p>
+          <p className="mb-2 font-mono text-[11px] uppercase text-muted">Répartition des frappes significatives</p>
           <DistributionRow label="Tête" ratio={strikeDistribution.head} />
           <DistributionRow label="Corps" ratio={strikeDistribution.body} />
           <DistributionRow label="Jambes" ratio={strikeDistribution.leg} />

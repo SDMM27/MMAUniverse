@@ -33,11 +33,11 @@ function Section({ eyebrow, scope, title, intro, children }: { eyebrow: string; 
     <section className="flex flex-col gap-5">
       <div>
         <div className="flex flex-wrap items-center gap-2">
-          <p className="font-display text-xs uppercase tracking-widest text-accent">{eyebrow}</p>
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">{eyebrow}</p>
           {scope && <ScopeBadge label={scope} />}
         </div>
-        <h2 className="mt-1 font-display text-2xl uppercase tracking-wide text-ink-primary">{title}</h2>
-        {intro && <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ink-secondary">{intro}</p>}
+        <h2 className="mt-1 font-display text-[clamp(2rem,5vw,3rem)] uppercase leading-[0.9] text-ink">{title}</h2>
+        {intro && <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">{intro}</p>}
       </div>
       {children}
     </section>
@@ -46,14 +46,14 @@ function Section({ eyebrow, scope, title, intro, children }: { eyebrow: string; 
 
 function Card({ title, badge, caption, children }: { title?: string; badge?: string; caption?: React.ReactNode; children: React.ReactNode }) {
   return (
-    <div className="flex flex-col gap-4 rounded-lg border border-base-border bg-base-card p-5">
+    <div className="flex flex-col gap-4 border border-line bg-surface p-5">
       {title && (
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h3 className="font-display text-base uppercase tracking-wide text-ink-primary">{title}</h3>
+          <h3 className="font-display text-xl uppercase leading-none text-ink">{title}</h3>
           {badge && <ScopeBadge label={badge} />}
         </div>
       )}
-      {caption && <p className="text-sm leading-relaxed text-ink-secondary">{caption}</p>}
+      {caption && <p className="text-sm leading-relaxed text-muted">{caption}</p>}
       {children}
     </div>
   );
@@ -61,10 +61,10 @@ function Card({ title, badge, caption, children }: { title?: string; badge?: str
 
 function Stat({ label, value, detail }: { label: string; value: string; detail?: string }) {
   return (
-    <div className="flex flex-col gap-1 rounded-lg border border-base-border bg-base-card p-4">
-      <p className="text-xs uppercase tracking-wide text-ink-secondary">{label}</p>
-      <p className="text-3xl font-semibold text-ink-primary">{value}</p>
-      {detail && <p className="text-xs text-ink-secondary">{detail}</p>}
+    <div className="sd-punch flex min-w-0 flex-col gap-1 border border-line bg-surface p-4">
+      <p className="font-mono text-[11px] uppercase text-muted">{label}</p>
+      <p className="font-display text-4xl uppercase leading-none text-ink">{value}</p>
+      {detail && <p className="text-xs text-muted">{detail}</p>}
     </div>
   );
 }
@@ -85,7 +85,7 @@ function strongestBucket(factor: WinFactor): FactorBucket | null {
 function factorCaption(factor: WinFactor): React.ReactNode {
   const strongest = strongestBucket(factor);
   if (!strongest) return null;
-  const pct = <strong className="text-ink-primary">{formatPercent(rate(strongest), 0)}</strong>;
+  const pct = <strong className="text-ink">{formatPercent(rate(strongest), 0)}</strong>;
   const wins = rate(strongest) < 0.5 ? 'ne gagne que' : 'gagne';
   switch (factor.id) {
     case 'streak':
@@ -123,7 +123,7 @@ function FactorCard({ factor, badge }: { factor: WinFactor; badge?: string }) {
           footnote: `${formatInteger(b.total)} combats`,
         }))}
       />
-      {factor.id === 'streak' && <p className="-mt-2 text-[11px] text-ink-secondary">D / V : défaites / victoires d&apos;affilée avant le combat.</p>}
+      {factor.id === 'streak' && <p className="-mt-2 text-[11px] text-muted">D / V : défaites / victoires d&apos;affilée avant le combat.</p>}
     </Card>
   );
 }
@@ -189,12 +189,15 @@ export default async function Page({ searchParams }: { searchParams: { org?: str
   const orgRows = data.orgComparison.map((row) => ({ label: orgLabel(row.organization), ko: row.ko, sub: row.sub, dec: row.dec }));
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-14 px-4 sm:px-6 py-8">
-      <header className="flex flex-col gap-6 border-b border-base-border pb-8">
+    <main className="flex min-h-screen shell flex-col gap-14 py-8">
+      <header className="flex flex-col gap-6 border-b border-line pb-8">
         <div>
-          <p className="font-display text-xs uppercase tracking-widest text-accent">Analyses · Données</p>
-          <h1 className="mt-2 font-display text-4xl uppercase leading-none text-ink-primary md:text-5xl">Le MMA en chiffres</h1>
-          <p className="mt-3 max-w-2xl text-sm text-ink-secondary">
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
+            <span className="fx-live mr-2 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle" />
+            Analyses · Données
+          </p>
+          <h1 className="mt-2 font-display uppercase leading-[0.9] text-[clamp(2.5rem,7vw,5rem)] text-ink">Le MMA en chiffres</h1>
+          <p className="mt-3 max-w-2xl text-sm text-muted">
             Comment les combats se terminent, comment le sport a changé, et ce qui fait vraiment gagner un combat. Les résultats viennent de Sherdog pour
             chaque organisation suivie ; les statistiques détaillées (frappes, takedowns, contrôle, allonge) n&apos;existent que pour l&apos;UFC et sont
             marquées comme telles.
@@ -285,7 +288,7 @@ export default async function Page({ searchParams }: { searchParams: { org?: str
             Pour chaque facteur, la part de combats gagnés selon l&apos;écart entre les deux combattants. La ligne pointillée marque 50 % : un pile ou face.
             L&apos;expérience, la série en cours et l&apos;inactivité se basent sur le palmarès pro complet de chaque combattant, y compris dans les
             organisations qu&apos;on ne suit pas. Ce sont des corrélations, pas une prédiction pour un combat donné : le{' '}
-            <Link href="/simulateur" className="text-accent hover:underline">
+            <Link href="/simulateur" className="text-accent-strong hover:underline">
               simulateur
             </Link>{' '}
             combine ces signaux avec le FightScore.
@@ -302,7 +305,7 @@ export default async function Page({ searchParams }: { searchParams: { org?: str
           ))}
         </div>
         {missingFactors.length > 0 && (
-          <p className="text-sm text-ink-secondary">
+          <p className="text-sm text-muted">
             Pas assez de données pour {missingFactors.map((factor) => factor.title.charAt(0).toLowerCase() + factor.title.slice(1)).join(', ')} : la date de
             naissance, la taille ou le palmarès ne sont pas connus pour la plupart des combattants de cette organisation.
           </p>
@@ -347,7 +350,7 @@ export default async function Page({ searchParams }: { searchParams: { org?: str
         </Card>
       </Section>
 
-      <footer className="border-t border-base-border pt-6 text-xs leading-relaxed text-ink-secondary">
+      <footer className="border-t border-line pt-6 text-xs leading-relaxed text-muted">
         Sources : Sherdog pour les résultats de chaque organisation, la taille, la date de naissance et le palmarès pro des combattants ; UFCStats.com
         pour les statistiques détaillées et l&apos;allonge, publiées uniquement pour l&apos;UFC. Les no contests, nuls et disqualifications sont exclus
         des taux de finish. Données mises à jour automatiquement ; dernier combat pris en compte le {data.lastDate.split('-').reverse().join('/')}.

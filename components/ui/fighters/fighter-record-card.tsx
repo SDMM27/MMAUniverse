@@ -1,3 +1,4 @@
+import CountUp from '@/components/ui/fx/count-up';
 import { FighterStats, MethodBreakdown } from '@/data/lib/definitions';
 
 function pct(count: number, total: number): number {
@@ -18,14 +19,14 @@ function MethodRow({
   const percentage = pct(count, total);
   return (
     <div className="mb-2 last:mb-0">
-      <div className="flex items-center justify-between gap-2 text-xs uppercase tracking-wide text-ink-secondary">
+      <div className="flex items-center justify-between gap-2 font-mono text-[11px] uppercase text-muted">
         <span className="min-w-0 truncate">{label}</span>
-        <span className="shrink-0 whitespace-nowrap font-semibold text-ink-primary">
+        <span className="shrink-0 whitespace-nowrap font-bold text-ink">
           {count} · {percentage}%
         </span>
       </div>
-      <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-base-border">
-        <div className={`h-full rounded-full ${barColorClass}`} style={{ width: `${percentage}%` }} />
+      <div className="mt-1 h-1.5 w-full overflow-hidden bg-surface-2">
+        <div className={`fx-bar h-full ${barColorClass}`} style={{ width: `${percentage}%` }} />
       </div>
     </div>
   );
@@ -45,12 +46,12 @@ function RecordColumn({
   barColorClass: string;
 }) {
   return (
-    <div className="flex-1">
+    <div className="min-w-0 flex-1">
       <div className="mb-2 flex items-baseline gap-2">
-        <span className={`rounded px-2 py-0.5 font-display text-xs font-bold uppercase tracking-wide ${badgeClass}`}>
+        <span className={`px-2 py-0.5 font-mono text-[11px] font-bold uppercase ${badgeClass}`}>
           {label}
         </span>
-        <span className="font-display text-xl text-ink-primary">{total}</span>
+        <CountUp value={String(total)} className="font-display text-5xl leading-none text-ink sm:text-6xl" />
       </div>
       <MethodRow label="KO/TKO" count={methods.koTko} total={total} barColorClass={barColorClass} />
       <MethodRow label="Soumissions" count={methods.submission} total={total} barColorClass={barColorClass} />
@@ -66,7 +67,7 @@ export default function FighterRecordCard({ stats }: { stats: FighterStats }) {
   return (
     <div>
       {stats.draws > 0 && (
-        <p className="mb-3 text-xs text-ink-secondary">
+        <p className="mb-3 font-mono text-[11px] uppercase text-muted">
           {stats.wins}-{stats.losses} · {stats.draws} nul{stats.draws > 1 ? 's' : ''}
         </p>
       )}
@@ -75,15 +76,15 @@ export default function FighterRecordCard({ stats }: { stats: FighterStats }) {
           label="Victoires"
           total={stats.wins}
           methods={stats.winMethods}
-          badgeClass="bg-win text-base-bg"
-          barColorClass="bg-win"
+          badgeClass="bg-live text-[#04140a]"
+          barColorClass="bg-live"
         />
-        <div className="w-px bg-base-border" />
+        <div className="w-px bg-line" />
         <RecordColumn
           label="Défaites"
           total={stats.losses}
           methods={stats.lossMethods}
-          badgeClass="bg-accent text-ink-primary"
+          badgeClass="bg-accent text-accent-ink"
           barColorClass="bg-accent"
         />
       </div>

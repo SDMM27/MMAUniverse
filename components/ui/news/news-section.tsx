@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import NewsCard from '@/components/ui/news/news-card';
+import SectionHeading from '@/components/ui/fx/section-heading';
 import { NewsArticle } from '@/data/lib/definitions';
 
 export default function NewsSection({
@@ -9,12 +9,7 @@ export default function NewsSection({
 }) {
   return (
     <section>
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Actus</h2>
-        <Link href="/actualites" className="text-xs uppercase tracking-wide text-accent hover:underline">
-          Voir toutes les actus
-        </Link>
-      </div>
+      <SectionHeading title="Actus" href="/actualites" linkLabel="Voir toutes les actus" />
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
         {articles.map((article) => (
           <NewsCard key={article.id} article={article} />

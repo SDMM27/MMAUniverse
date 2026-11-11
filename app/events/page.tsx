@@ -18,8 +18,11 @@ export default async function Page() {
   const events = await fetchAllEvents();
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
-      <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Événements</h1>
+    <main className="flex min-h-screen flex-col gap-6 shell py-4 sm:py-6">
+      <header className="flex flex-col gap-2">
+        <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">Calendrier MMA</p>
+        <h1 className="font-display text-[clamp(2.5rem,7vw,5rem)] uppercase leading-[0.9] text-ink">Événements</h1>
+      </header>
       {events.length === 0 ? <EmptyState title="Aucun événement pour le moment" /> : <EventsByStatus events={events} />}
     </main>
   );

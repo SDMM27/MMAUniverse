@@ -10,7 +10,13 @@ import { rankTrend } from '@/data/lib/rating/weekly-trend';
 import { fighterHref } from '@/data/lib/slug';
 
 // display_score is NUMERIC -> string at runtime (see FighterRating's type comment).
+// French decimal comma ("70,9"), like the simulator and the count-up numbers.
 export function formatScore(score: FighterRatingWithFighter['display_score']) {
+  return scoreValue(score).replace('.', ',');
+}
+
+/** One-decimal score with a dot, the input format <CountUp value> expects. */
+export function scoreValue(score: FighterRatingWithFighter['display_score']) {
   return Number(score).toFixed(1);
 }
 
@@ -28,12 +34,12 @@ export function formatUpdatedAt(updatedAt: string | null) {
   return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short' }).format(new Date(updatedAt));
 }
 
-/** Horizontal bar, 0-100 -- display_score is already rescaled to that range per division. */
-export function ScoreBar({ score, className = '' }: { score: FighterRatingWithFighter['display_score']; className?: string }) {
+/** Horizontal bar, 0-100 -- display_score is already rescaled to that range per division. Grows in on first paint. */
+export function ScoreBar({ score, className = '', delayMs = 0 }: { score: FighterRatingWithFighter['display_score']; className?: string; delayMs?: number }) {
   const width = Math.max(0, Math.min(100, Number(score)));
   return (
-    <div className={`h-1 overflow-hidden rounded-full bg-base-border ${className}`} aria-hidden="true">
-      <div className="h-full rounded-full bg-accent" style={{ width: `${width}%` }} />
+    <div className={`h-1.5 overflow-hidden bg-surface-2 ${className}`} aria-hidden="true">
+      <div className="fx-bar h-full bg-accent" style={{ width: `${width}%`, animationDelay: `${delayMs}ms` }} />
     </div>
   );
 }
@@ -44,8 +50,8 @@ export function StreakBadge({ streak }: { streak: number }) {
   const winning = streak > 0;
   return (
     <span
-      className={`shrink-0 rounded px-1.5 py-0.5 font-display text-[11px] uppercase tracking-wide ${
-        winning ? 'bg-win/15 text-win' : 'bg-ink-secondary/15 text-ink-secondary'
+      className={`shrink-0 px-1.5 py-0.5 font-mono text-[11px] font-bold uppercase ${
+        winning ? 'bg-live text-[#04140a]' : 'bg-surface-2 text-ink'
       }`}
       title={winning ? `${streak} victoires consécutives` : `${-streak} défaites consécutives`}
     >
@@ -65,7 +71,7 @@ export function TrendBadge({ fighter, rank }: { fighter: FighterRatingWithFighte
   const since = `depuis le classement du ${formatUpdatedAt(fighter.previous_week!)}`;
   if (trend.kind === 'new') {
     return (
-      <span className="shrink-0 font-display text-[11px] uppercase tracking-wide text-win" title={`Nouveau dans ce classement ${since}`}>
+      <span className="shrink-0 font-mono text-[11px] font-bold uppercase text-win-strong" title={`Nouveau dans ce classement ${since}`}>
         New
       </span>
     );
@@ -73,7 +79,7 @@ export function TrendBadge({ fighter, rank }: { fighter: FighterRatingWithFighte
   const up = trend.kind === 'up';
   const label = `${up ? 'Gagne' : 'Perd'} ${trend.places} place${trend.places > 1 ? 's' : ''} ${since}`;
   return (
-    <span className={`shrink-0 font-display text-[11px] tabular-nums ${up ? 'text-win' : 'text-accent'}`} title={label} aria-label={label}>
+    <span className={`shrink-0 font-mono text-[11px] font-bold tabular-nums ${up ? 'text-win-strong' : 'text-accent-strong'}`} title={label} aria-label={label}>
       {up ? '▲' : '▼'}
       {trend.places}
     </span>
@@ -81,9 +87,10 @@ export function TrendBadge({ fighter, rank }: { fighter: FighterRatingWithFighte
 }
 
 /**
- * One ranked fighter: position, photo, flag + name, a secondary line
- * (division, style...), and the score with its bar. `highlight` gives the
- * row the accent treatment used for #1 / the champion.
+ * One ranked fighter, "fight night" style: octagon rank, photo, name in
+ * condensed capitals, a secondary line (division, style...), and the score
+ * with its bar. Rows cascade in (`index` staggers them); `highlight` frames
+ * #1 / the champion in red. Lay rows out in a `flex flex-col gap-2` list.
  */
 export function FighterRankRow({
   fighter,
@@ -91,48 +98,55 @@ export function FighterRankRow({
   rank,
   subtitle,
   highlight = false,
+  index = 0,
 }: {
   fighter: FighterRatingWithFighter;
   rankLabel: string;
   rank?: number; // position on the list, for the week-over-week TrendBadge (omit to show none)
   subtitle?: React.ReactNode;
   highlight?: boolean;
+  index?: number; // position in the rendered list, for the cascade delay
 }) {
+  const delay = Math.min(index, 12) * 90;
   return (
     <Link
       href={fighterHref({ id: fighter.fighter_id, name: fighter.fighter_name })}
-      className={`group flex items-center gap-3 border-b border-base-border px-3 py-2.5 transition-colors last:border-b-0 hover:bg-white/[0.03] ${
-        highlight ? 'bg-accent/[0.06]' : ''
+      style={{ animationDelay: `${delay}ms` }}
+      className={`fx-row fx-in-left group flex min-h-[64px] items-center gap-3 border px-3 py-2 ${
+        highlight ? 'border-accent bg-accent/10' : 'border-line bg-surface hover:border-ink/40'
       }`}
     >
       <span
-        className={`w-7 shrink-0 text-center font-display text-base ${highlight ? 'text-accent' : 'text-ink-secondary'}`}
+        className={`fx-oct grid h-10 w-10 shrink-0 place-items-center font-display text-lg leading-none sm:h-11 sm:w-11 sm:text-xl ${
+          highlight ? 'bg-accent text-accent-ink' : 'bg-surface-2 text-ink'
+        }`}
       >
         {rankLabel}
       </span>
       <CoverImage
         src={fighter.fighter_image_url}
-        alt={fighter.fighter_name}
-        className="h-10 w-10 shrink-0 rounded-full"
+        alt=""
+        // Phones: the name needs the room more than the photo does.
+        className="hidden h-10 w-10 shrink-0 rounded-full sm:flex"
         sizes="40px"
         objectPosition="top"
       />
       <div className="min-w-0 flex-1">
-        <p className="flex items-center gap-2 truncate text-sm text-ink-primary group-hover:text-accent">
+        <p className="flex items-center gap-2 font-display text-lg uppercase leading-none text-ink group-hover:text-accent-strong sm:text-xl">
           <CountryFlag code={fighter.fighter_nationality} className="shrink-0 text-xs" />
           <span className="truncate">{fighter.fighter_name}</span>
         </p>
         {/* The streak sits under the name rather than in its own column: on a phone that column
             left the name a handful of characters ("Manel Ka..."). */}
-        <p className="flex items-center gap-2 text-xs text-ink-secondary">
+        <p className="mt-1 flex items-center gap-2 font-mono text-[11px] uppercase text-muted">
           {subtitle && <span className="truncate">{subtitle}</span>}
           <StreakBadge streak={fighter.current_streak} />
         </p>
       </div>
       {rank !== undefined && <TrendBadge fighter={fighter} rank={rank} />}
-      <div className="w-16 shrink-0 text-right sm:w-24">
-        <span className="font-display text-base text-ink-primary">{formatScore(fighter.display_score)}</span>
-        <ScoreBar score={fighter.display_score} className="mt-1" />
+      <div className="w-16 shrink-0 text-right sm:w-28">
+        <span className="font-display text-xl leading-none text-ink sm:text-2xl">{formatScore(fighter.display_score)}</span>
+        <ScoreBar score={fighter.display_score} className="mt-1.5" delayMs={delay} />
       </div>
     </Link>
   );

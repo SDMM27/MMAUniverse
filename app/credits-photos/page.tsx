@@ -61,7 +61,7 @@ export default async function Page() {
         <p>
           Vous êtes l’auteur d’une photo et souhaitez corriger un crédit, ou proposer les vôtres ? Écrivez-nous via
           l’adresse indiquée dans les{' '}
-          <Link href="/mentions-legales" className="text-accent underline-offset-2 hover:underline">
+          <Link href="/mentions-legales" className="text-accent-strong underline-offset-2 hover:underline">
             mentions légales
           </Link>
           .
@@ -72,7 +72,7 @@ export default async function Page() {
         <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
           {credits.map((c) => (
             <li key={c.id} className="flex flex-col">
-              <Link href={fighterHref(c)} className="text-xs text-ink-primary hover:text-accent">
+              <Link href={fighterHref(c)} className="text-xs text-ink hover:text-accent-strong">
                 {c.name}
               </Link>
               <PhotoCredit fighter={c} />

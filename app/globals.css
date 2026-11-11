@@ -1,6 +1,29 @@
+/* Design system: @sdmm/design (theme "mma") is imported in app/layout.tsx,
+   before this file, so these rules can build on its --sd-* tokens. */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Fonts are self-hosted by next/font (components/ui/fonts.ts); hand them to the
+   design system tokens. Declared on :root, where next/font sets its variables;
+   html:root outranks the design system's own :root rules whatever order the
+   build emits the stylesheets in. */
+html:root {
+  --sd-font-display: var(--font-bricolage), "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --sd-font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --sd-font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+  /* Win green readable as small text (AA) on bg/surface; --sd-live is for fills. */
+  --mu-win-strong: #137a41;
+}
+/* The design system's light muted (#6b655c) lands at 4.4:1 on surface-2 and
+   on red-tinted rows; one step darker keeps small grey labels AA everywhere. */
+html:root[data-theme="light"] {
+  --sd-muted: #5f5950;
+}
+html:root[data-theme="dark"] {
+  --mu-win-strong: #3ccf7f;
+}
 
 html {
   /* Chromium's CSS scroll-anchoring heuristic fights Next.js App Router's
@@ -33,7 +56,160 @@ html {
   }
 }
 
+/* One column for the whole site: header, every page and footer share the same
+   max width and side gutters, so their left/right edges line up. Full-bleed
+   bands (nav border, ticker, footer rule) stay outside it. */
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .shell { padding-inline: 1.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .shell { padding-inline: 2.5rem; }
+  }
+  @media (min-width: 1536px) {
+    .shell { padding-inline: 4rem; }
+  }
+}
+
 /* iOS Safari zooms into any focused form field under 16px; keep phones at 16px. */
 @media (max-width: 639px) {
   input, select, textarea { font-size: 16px; }
+}
+
+/* ------------------------------------------------------------------------
+   "Fight night" visual language (refonte-design.md). Every animation below
+   is switched off under prefers-reduced-motion (end of section), on top of
+   the design system's own global reduced-motion rule.
+   ------------------------------------------------------------------------ */
+@layer components {
+  /* Titles: Bricolage condensed (wdth 75), extra-bold, upper case. Weight sits
+     in the components layer so font-bold & co. can still override it. */
+  .font-display {
+    font-weight: var(--sd-display-weight);
+    font-stretch: 75%;
+    letter-spacing: var(--sd-display-tracking);
+  }
+
+  /* Octagon: ranks, initials, badges. */
+  .fx-oct {
+    clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+  }
+  /* Button cut on the bias (parallelogram). */
+  .fx-cut {
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  }
+  /* Panel with its bottom-right corner cut off. */
+  .fx-notch {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+  }
+
+  /* Glint that sweeps across a hero. Parent: relative + overflow hidden. */
+  .fx-glint {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sd-accent) 18%, transparent), transparent);
+    animation: fx-slash 5s var(--sd-ease-in-out) infinite;
+    will-change: transform;
+  }
+  /* Slanted underline drawn under a word. */
+  .fx-underline {
+    transform-origin: left;
+    animation: fx-underline 0.9s 0.4s var(--sd-ease-out) both;
+  }
+  .fx-spin {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: fx-spin 18s linear infinite;
+  }
+  /* "VS" landing like a punch. */
+  .fx-punch {
+    animation: fx-punch 0.9s var(--sd-ease-spring) both;
+  }
+  .fx-in-left {
+    animation: fx-in-left 0.7s var(--sd-ease-out) both;
+  }
+  .fx-in-right {
+    animation: fx-in-right 0.7s var(--sd-ease-out) both;
+  }
+  /* Bars growing from their start (or end, for mirrored bars). */
+  .fx-bar {
+    transform-origin: left;
+    animation: fx-grow 1.1s var(--sd-ease-out) both;
+  }
+  .fx-bar-r {
+    transform-origin: right;
+    animation: fx-grow 1.1s var(--sd-ease-out) both;
+  }
+  /* Live dot. */
+  .fx-live {
+    animation: fx-pulse 1.8s ease-out infinite;
+  }
+  /* Cards that lift on hover; their octagon shakes. */
+  .fx-card {
+    transition: transform 0.25s var(--sd-ease-spring), border-color 0.2s, box-shadow 0.25s;
+  }
+  @media (hover: hover) {
+    .fx-card:hover {
+      transform: translateY(-4px) rotate(-0.4deg);
+      border-color: var(--sd-accent);
+      box-shadow: var(--sd-shadow-md);
+    }
+    .fx-card:hover .fx-shake {
+      animation: fx-shake 0.35s linear;
+    }
+    .fx-row:hover {
+      transform: translateX(6px);
+    }
+  }
+  .fx-row {
+    transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
+  }
+  /* Staggered entrance; set --i on each item. */
+  .fx-stagger {
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+}
+
+@keyframes fx-slash {
+  0% { transform: translateX(-120%) skewX(-18deg); }
+  60%, 100% { transform: translateX(1400%) skewX(-18deg); }
+}
+@keyframes fx-underline { from { transform: skewX(-18deg) scaleX(0); } to { transform: skewX(-18deg) scaleX(1); } }
+@keyframes fx-spin { to { transform: rotate(360deg); } }
+@keyframes fx-punch {
+  0% { transform: scale(2.4); opacity: 0; }
+  55% { transform: scale(0.88); opacity: 1; }
+  75% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+@keyframes fx-in-left { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }
+@keyframes fx-in-right { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+@keyframes fx-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes fx-pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--sd-accent) 55%, transparent); }
+  70% { box-shadow: 0 0 0 14px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@keyframes fx-shake {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-glint { display: none; }
+  .fx-underline { animation: none; transform: skewX(-18deg); }
+  .fx-spin, .fx-punch, .fx-in-left, .fx-in-right, .fx-bar, .fx-bar-r, .fx-live, .fx-shake { animation: none; }
+  .fx-card, .fx-row { transition: none; }
+  .fx-card:hover, .fx-row:hover { transform: none; }
 }

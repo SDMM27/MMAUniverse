@@ -6,9 +6,9 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 // measures its container and draws at real pixel size, so text stays 11-12px
 // at every width instead of scaling with a viewBox.
 
-export const GRID_COLOR = '#262626';
-export const AXIS_TEXT_COLOR = '#9a9a9a';
-export const SURFACE_COLOR = '#161616';
+export const GRID_COLOR = 'var(--sd-line)';
+export const AXIS_TEXT_COLOR = 'var(--sd-muted)';
+export const SURFACE_COLOR = 'var(--sd-surface)';
 
 export function useChartWidth() {
   const ref = useRef<HTMLDivElement>(null);
@@ -45,20 +45,20 @@ export function ChartTooltip({ tooltip, width }: { tooltip: TooltipState; width:
   return (
     <div
       role="status"
-      className="pointer-events-none absolute z-10 w-max max-w-[180px] -translate-x-1/2 -translate-y-full rounded-md border border-base-border bg-base-bg px-3 py-2 text-xs shadow-lg"
+      className="pointer-events-none absolute z-10 w-max max-w-[180px] -translate-x-1/2 -translate-y-full border border-line bg-bg px-3 py-2 text-xs shadow-lg"
       style={{ left, top: tooltip.y - 8 }}
     >
-      <p className="mb-1 text-ink-secondary">{tooltip.title}</p>
+      <p className="mb-1 text-muted">{tooltip.title}</p>
       <ul className="flex flex-col gap-0.5">
         {tooltip.rows.map((row) => (
           <li key={row.label} className="flex items-center gap-2">
             {row.color && <span className="h-0.5 w-3 shrink-0 rounded-full" style={{ background: row.color }} aria-hidden="true" />}
-            <span className="font-semibold tabular-nums text-ink-primary">{row.value}</span>
-            <span className="text-ink-secondary">{row.label}</span>
+            <span className="font-semibold tabular-nums text-ink">{row.value}</span>
+            <span className="text-muted">{row.label}</span>
           </li>
         ))}
       </ul>
-      {tooltip.footnote && <p className="mt-1 text-[11px] text-ink-secondary">{tooltip.footnote}</p>}
+      {tooltip.footnote && <p className="mt-1 text-[11px] text-muted">{tooltip.footnote}</p>}
     </div>
   );
 }
@@ -74,7 +74,7 @@ export function ChartFrame({ height, children }: { height: number; children: (wi
 
 export function Legend({ items }: { items: { color: string; label: string }[] }) {
   return (
-    <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink-secondary">
+    <ul className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
       {items.map((item) => (
         <li key={item.label} className="flex items-center gap-1.5">
           <span className="h-2.5 w-2.5 rounded-sm" style={{ background: item.color }} aria-hidden="true" />
@@ -85,14 +85,14 @@ export function Legend({ items }: { items: { color: string; label: string }[] })
   );
 }
 
-/** A bar path with a 4px rounded data end and a square baseline. */
-export function columnPath(x: number, y: number, width: number, height: number, radius = 4): string {
+/** A bar path with a 4px data end and a square baseline. */
+export function columnPath(x: number, y: number, width: number, height: number, radius = 0): string {
   if (height <= 0) return '';
   const r = Math.min(radius, width / 2, height);
   return `M${x},${y + height}V${y + r}Q${x},${y} ${x + r},${y}H${x + width - r}Q${x + width},${y} ${x + width},${y + r}V${y + height}Z`;
 }
 
-export function horizontalBarPath(x: number, y: number, width: number, height: number, radius = 4): string {
+export function horizontalBarPath(x: number, y: number, width: number, height: number, radius = 0): string {
   if (width <= 0) return '';
   const r = Math.min(radius, height / 2, width);
   return `M${x},${y}H${x + width - r}Q${x + width},${y} ${x + width},${y + r}V${y + height - r}Q${x + width},${y + height} ${x + width - r},${y + height}H${x}Z`;

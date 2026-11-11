@@ -10,12 +10,12 @@ type Credited = {
   photo_source_url: string | null;
 };
 
-const linkClass = 'underline-offset-2 hover:text-ink-primary hover:underline';
+const linkClass = 'underline-offset-2 hover:text-ink hover:underline';
 
 export function PhotoCredit({ fighter, className = '' }: { fighter: Credited; className?: string }) {
   const author = fighter.photo_author ?? 'Auteur inconnu';
   return (
-    <figcaption className={`text-[10px] leading-snug text-ink-secondary ${className}`}>
+    <figcaption className={`text-[10px] leading-snug text-muted ${className}`}>
       Photo :{' '}
       {fighter.photo_source_url ? (
         <a href={fighter.photo_source_url} className={linkClass} rel="noopener noreferrer">

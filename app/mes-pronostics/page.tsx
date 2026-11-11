@@ -20,9 +20,9 @@ export default async function Page() {
 
   if (!userId) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-4 sm:p-6 text-center">
-        <p className="text-sm text-ink-secondary">Connecte-toi pour voir tes pronostics.</p>
-        <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
+      <main className="flex min-h-screen flex-col items-center justify-center gap-4 shell py-4 sm:py-6 text-center">
+        <p className="text-sm text-muted">Connecte-toi pour voir tes pronostics.</p>
+        <Link href="/sign-in" className="fx-cut inline-flex min-h-11 items-center bg-accent px-6 font-display text-lg uppercase text-accent-ink">
           Connexion
         </Link>
       </main>
@@ -33,10 +33,16 @@ export default async function Page() {
   const totalPoints = history.reduce((sum, entry) => sum + (entry.points ?? 0), 0);
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
-      <div className="flex items-center justify-between border-b border-base-border pb-6">
-        <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Mes pronostics</h1>
-        <span className="font-display text-lg text-accent">{totalPoints} pts</span>
+    <main className="flex min-h-screen flex-col gap-6 shell py-4 sm:py-6">
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <header className="flex flex-col gap-2">
+        <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
+          <span className="fx-live mr-2 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle" />
+          Mon historique
+        </p>
+        <h1 className="font-display uppercase leading-[0.9] text-[clamp(2.5rem,7vw,5rem)] text-ink">Mes pronostics</h1>
+      </header>
+        <span className="sd-stamp border-2 border-accent bg-accent/10 px-4 py-1 font-display text-3xl uppercase text-accent-strong">{totalPoints} pts</span>
       </div>
       {history.length === 0 ? (
         <EmptyState title="Aucun pronostic" description="Va sur un événement à venir pour pronostiquer un combat." />
@@ -46,15 +52,15 @@ export default async function Page() {
             <Link
               key={index}
               href={`/events/${entry.eventId}`}
-              className="flex items-center justify-between rounded-lg border border-base-border bg-base-card p-4 transition-colors hover:border-accent"
+              className="fx-card flex min-h-11 items-center justify-between gap-3 border border-line bg-surface p-4 hover:border-accent"
             >
-              <div>
-                <p className="font-display text-sm uppercase tracking-wide text-ink-primary">{entry.eventName}</p>
-                <p className="text-xs text-ink-secondary">
+              <div className="min-w-0">
+                <p className="font-display text-base uppercase text-ink">{entry.eventName}</p>
+                <p className="font-mono text-[11px] uppercase text-muted [overflow-wrap:anywhere]">
                   {entry.fighter1Name} vs {entry.fighter2Name} · pronostic : {entry.predictedWinnerName}
                 </p>
               </div>
-              <span className="font-display text-sm text-accent">
+              <span className="shrink-0 font-display text-lg uppercase text-accent-strong">
                 {entry.points === null ? 'À venir' : `${entry.points} pts`}
               </span>
             </Link>

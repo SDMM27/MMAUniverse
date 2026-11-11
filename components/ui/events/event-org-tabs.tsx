@@ -36,23 +36,25 @@ export default function EventOrgTabs({ events, currentEventId }: { events: Event
   return (
     <nav
       aria-label="Autres événements de cette organisation"
-      className="flex gap-6 overflow-x-auto border-b border-base-border pb-3"
+      className="scrollbar-none flex overflow-x-auto"
     >
-      {windowed.map((event) => {
-        const active = event.id === currentEventId;
-        return (
-          <Link
-            key={event.id}
-            href={`/events/${event.id}`}
-            aria-current={active ? 'page' : undefined}
-            className={`shrink-0 whitespace-nowrap font-display text-sm uppercase tracking-wide transition-colors ${
-              active ? 'text-accent' : 'text-ink-secondary hover:text-accent'
-            }`}
-          >
-            {displayEventName(event.name)}
-          </Link>
-        );
-      })}
+      <div className="flex border-2 border-ink">
+        {windowed.map((event) => {
+          const active = event.id === currentEventId;
+          return (
+            <Link
+              key={event.id}
+              href={`/events/${event.id}`}
+              aria-current={active ? 'page' : undefined}
+              className={`inline-flex min-h-11 shrink-0 items-center whitespace-nowrap px-4 font-display text-sm uppercase transition-colors ${
+                active ? 'bg-ink text-bg' : 'text-ink hover:bg-surface-2'
+              }`}
+            >
+              {displayEventName(event.name)}
+            </Link>
+          );
+        })}
+      </div>
     </nav>
   );
 }
