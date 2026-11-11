@@ -13,22 +13,22 @@ export const metadata: Metadata = staticPageMetadata({
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="flex flex-col gap-2">
-      <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">{title}</h2>
-      <div className="flex flex-col gap-3 text-sm leading-relaxed text-ink-secondary">{children}</div>
+    <section className="flex flex-col gap-3 border-t-2 border-ink pt-5">
+      <h2 className="font-display text-[clamp(1.5rem,3.5vw,2rem)] uppercase leading-[0.95] text-ink">{title}</h2>
+      <div className="flex flex-col gap-4 text-base leading-relaxed text-muted">{children}</div>
     </section>
   );
 }
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
+    <main className="mx-auto flex min-h-screen w-full max-w-[68ch] flex-col gap-10 px-4 py-8 sm:px-6">
       <div>
-        <Link href="/classement-calcule" className="text-xs uppercase tracking-wide text-accent hover:underline">
+        <Link href="/classement-calcule" className="inline-flex min-h-11 items-center font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong hover:underline">
           ← Retour au FightScore
         </Link>
-        <h1 className="mt-2 font-display text-2xl uppercase tracking-wide text-ink-primary">Méthodologie</h1>
-        <p className="mt-1 max-w-2xl text-sm text-ink-secondary">
+        <h1 className="mt-2 font-display text-[clamp(2.5rem,7vw,5rem)] uppercase leading-[0.9] text-ink">Méthodologie</h1>
+        <p className="mt-4 text-base text-muted">
           Le classement calculé (UFC uniquement pour l&apos;instant) repose sur les statistiques réelles de chaque
           combat, pas sur un vote ou l&apos;avis d&apos;une organisation. Voici comment le score de chaque combattant
           est obtenu.
@@ -56,9 +56,9 @@ export default function Page() {
           appris sur les données, et ne remplacent jamais une victoire : elles déplacent au plus quelques points de
           note.
         </p>
-        <p className="rounded-lg border border-base-border bg-base-card p-3 text-xs">
-          <strong className="text-ink-primary">Important :</strong> « qui a gagné chaque round » est une{' '}
-          <strong className="text-ink-primary">estimation</strong> calculée à partir des statistiques brutes (frappes,
+        <p className="border border-line border-l-4 border-l-accent bg-surface p-4 text-sm">
+          <strong className="text-ink">Important :</strong> « qui a gagné chaque round » est une{' '}
+          <strong className="text-ink">estimation</strong> calculée à partir des statistiques brutes (frappes,
           contrôle, coups reçus), pas les vraies cartes des juges — celles-ci ne sont pas publiées de façon
           exploitable. C&apos;est une approximation raisonnable, pas un fait officiel.
         </p>
@@ -140,8 +140,8 @@ export default function Page() {
           (frappes par zone, takedowns, contrôle, soumissions). Le signal le plus utile s&apos;est révélé être la forme
           récente, à égalité avec ce score de carrière.
         </p>
-        <p className="rounded-lg border border-base-border bg-base-card p-3 text-xs">
-          <strong className="text-ink-primary">À prendre avec recul :</strong> sur les 1 468 combats les plus récents,
+        <p className="border border-line border-l-4 border-l-accent bg-surface p-4 text-sm">
+          <strong className="text-ink">À prendre avec recul :</strong> sur les 1 468 combats les plus récents,
           jamais vus à l&apos;entraînement, ce modèle désigne le vainqueur dans environ 58 % des cas (50 % au hasard,
           57 % avec le seul score de carrière). C&apos;est un signal utile, mais un léger complément du score plutôt qu&apos;une
           prédiction fiable : un combat reste très incertain.

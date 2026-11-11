@@ -7,6 +7,7 @@ import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { groupFighterRatingsByWeightClass, orderDivisionWithChampionPinned, sortWeightClassGroups } from '@/data/lib/rating/order-division';
 import { FighterRatingWithFighter } from '@/data/lib/definitions';
 import { FighterRankRow, formatScore, ScoreBar, StreakBadge, TrendBadge, weightClassSlug } from './fightscore-parts';
+import { OctBadge } from '@/components/ui/fx/octagon';
 import { fighterHref } from '@/data/lib/slug';
 
 // One division at a time behind a row of division tabs, rather than all
@@ -27,34 +28,37 @@ function ChampionCard({ champion, outranked }: { champion: FighterRatingWithFigh
   return (
     <Link
       href={fighterHref({ id: champion.fighter_id, name: champion.fighter_name })}
-      className="group flex items-center gap-4 border-b border-base-border bg-gradient-to-r from-accent/15 to-transparent p-4"
+      className="fx-row fx-in-left group flex items-center gap-3 border border-accent bg-accent/10 p-3 sm:gap-4"
     >
+      <OctBadge tone="accent" size={44}>
+        C
+      </OctBadge>
       <CoverImage
         src={champion.fighter_image_url}
         alt={champion.fighter_name}
-        className="h-20 w-16 shrink-0 rounded-lg"
+        className="h-20 w-16 shrink-0"
         sizes="64px"
         objectPosition="top"
       />
       <div className="min-w-0 flex-1">
-        <span className="rounded bg-accent px-2 py-0.5 font-display text-[11px] uppercase tracking-widest text-white">Champion</span>
-        <p className="mt-2 flex items-center gap-2 font-display text-lg uppercase leading-tight text-ink-primary group-hover:text-accent sm:text-xl">
+        <span className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-accent-strong">Champion</span>
+        <p className="mt-1 flex items-center gap-2 font-display text-lg uppercase leading-tight text-ink group-hover:text-accent-strong sm:text-xl">
           <CountryFlag code={champion.fighter_nationality} className="shrink-0 text-sm" />
           <span className="min-w-0 break-words">{champion.fighter_name}</span>
           {outranked && (
-            <sup className="text-accent" title={OUTRANKED_NOTE}>
+            <sup className="text-accent-strong" title={OUTRANKED_NOTE}>
               *
             </sup>
           )}
         </p>
-        <p className="mt-0.5 flex items-center gap-2 text-xs text-ink-secondary">
+        <p className="mt-0.5 flex items-center gap-2 text-xs text-muted">
           {champion.style_archetype}
           <StreakBadge streak={champion.current_streak} />
           <TrendBadge fighter={champion} rank={0} />
         </p>
       </div>
       <div className="w-20 shrink-0 text-right sm:w-28">
-        <p className="font-display text-3xl text-ink-primary">{formatScore(champion.display_score)}</p>
+        <p className="font-display text-3xl text-ink">{formatScore(champion.display_score)}</p>
         <ScoreBar score={champion.display_score} className="mt-1" />
       </div>
     </Link>
@@ -93,27 +97,31 @@ export default function FightScoreList({ ratings }: { ratings: FighterRatingWith
 
   return (
     <div>
-      <div role="tablist" aria-label="Catégories" className="scrollbar-none -mx-6 mb-4 flex gap-2 overflow-x-auto px-6 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
-        {groups.map((g) => {
-          const active = g.weightClass === group.weightClass;
-          return (
-            <button
-              key={g.weightClass}
-              type="button"
-              role="tab"
-              aria-selected={active}
-              onClick={() => select(g.weightClass)}
-              className={`shrink-0 rounded-full border px-3.5 py-1.5 font-display text-xs uppercase tracking-wide transition-colors ${
-                active ? 'border-accent bg-accent text-white' : 'border-base-border text-ink-secondary hover:border-accent hover:text-accent'
-              }`}
-            >
-              {g.weightClass}
-            </button>
-          );
-        })}
+      <div role="tablist" aria-label="Catégories" className="scrollbar-none -mx-4 mb-6 overflow-x-auto px-4 sm:mx-0 sm:overflow-visible sm:px-0">
+        <div className="flex w-max border-2 border-ink sm:w-auto sm:flex-wrap">
+          {groups.map((g) => {
+            const active = g.weightClass === group.weightClass;
+            return (
+              <button
+                key={g.weightClass}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                onClick={() => select(g.weightClass)}
+                className={`min-h-11 shrink-0 px-4 font-display text-sm uppercase transition-colors ${
+                  active ? 'bg-ink text-bg' : 'text-ink hover:bg-surface-2'
+                }`}
+              >
+                {g.weightClass}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      <div role="tabpanel" className="overflow-hidden rounded-xl border border-base-border bg-base-card">
+      <h3 className="mb-4 font-display text-[clamp(1.75rem,4vw,2.5rem)] uppercase leading-[0.95] text-ink">{group.weightClass}</h3>
+
+      <div role="tabpanel" className="flex flex-col gap-2">
         {champion && <ChampionCard champion={champion} outranked={championOutranked} />}
         {contenders.map((fighter, i) => (
           <FighterRankRow
@@ -121,13 +129,14 @@ export default function FightScoreList({ ratings }: { ratings: FighterRatingWith
             fighter={fighter}
             rankLabel={String(i + 1)}
             rank={i + 1}
+            index={i + 1}
             highlight={!champion && i === 0}
             subtitle={fighter.style_archetype ?? undefined}
           />
         ))}
       </div>
 
-      {championOutranked && <p className="mt-3 text-xs text-ink-secondary">* {OUTRANKED_NOTE}</p>}
+      {championOutranked && <p className="mt-3 text-xs text-muted">* {OUTRANKED_NOTE}</p>}
     </div>
   );
 }
