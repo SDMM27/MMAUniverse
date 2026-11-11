@@ -42,7 +42,7 @@ export default async function Page() {
         </p>
         <h1 className="font-display uppercase leading-[0.9] text-[clamp(2.5rem,7vw,5rem)] text-ink">Mes pronostics</h1>
       </header>
-        <span className="fx-punch border-2 border-accent bg-accent/10 px-4 py-1 font-display text-3xl uppercase text-accent-strong">{totalPoints} pts</span>
+        <span className="sd-stamp border-2 border-accent bg-accent/10 px-4 py-1 font-display text-3xl uppercase text-accent-strong">{totalPoints} pts</span>
       </div>
       {history.length === 0 ? (
         <EmptyState title="Aucun pronostic" description="Va sur un événement à venir pour pronostiquer un combat." />

@@ -23,7 +23,7 @@ type Point = { label: string; value: number | null; fights: number; note?: strin
 const MIN_FIGHTS_PER_POINT = 12;
 
 const selectClass =
-  'min-h-11 border-2 border-ink bg-surface px-2 text-sm text-ink focus:border-accent focus:outline-none';
+  'min-h-11 w-full max-w-full border-2 border-ink bg-surface px-2 text-sm text-ink focus:border-accent focus:outline-none';
 
 function formatMetric(metric: TrendMetric, value: number): string {
   return metric.unit === 'percent' ? formatPercent(value) : formatNumber(value);
@@ -145,7 +145,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
   return (
     <div className="flex flex-col gap-5">
       <div className="flex flex-wrap items-end gap-3">
-        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
+        <label className="flex min-w-0 max-w-full flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           Mesure
           <select className={selectClass} value={metricId} onChange={(e) => setMetricId(e.target.value as TrendMetricId)}>
             <optgroup label={`Résultats · ${orgLabel}`}>
@@ -164,7 +164,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             </optgroup>
           </select>
         </label>
-        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
+        <label className="flex min-w-0 max-w-full flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           Organisation
           {/* UFCStats metrics only exist for the UFC: the select shows it, locked, rather than a choice that wouldn't apply. */}
           <select
@@ -180,7 +180,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             ))}
           </select>
         </label>
-        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
+        <label className="flex min-w-0 max-w-full flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           Catégorie
           <select className={selectClass} value={divisionFilter} onChange={(e) => setDivisionChoice(e.target.value)}>
             <option value="all">Toutes</option>
@@ -197,7 +197,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             ))}
           </select>
         </label>
-        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
+        <label className="flex min-w-0 max-w-full flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           De
           <select
             className={selectClass}
@@ -214,7 +214,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             ))}
           </select>
         </label>
-        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
+        <label className="flex min-w-0 max-w-full flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           À
           <select
             className={selectClass}

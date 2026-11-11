@@ -10,7 +10,13 @@ import { rankTrend } from '@/data/lib/rating/weekly-trend';
 import { fighterHref } from '@/data/lib/slug';
 
 // display_score is NUMERIC -> string at runtime (see FighterRating's type comment).
+// French decimal comma ("70,9"), like the simulator and the count-up numbers.
 export function formatScore(score: FighterRatingWithFighter['display_score']) {
+  return scoreValue(score).replace('.', ',');
+}
+
+/** One-decimal score with a dot, the input format <CountUp value> expects. */
+export function scoreValue(score: FighterRatingWithFighter['display_score']) {
   return Number(score).toFixed(1);
 }
 

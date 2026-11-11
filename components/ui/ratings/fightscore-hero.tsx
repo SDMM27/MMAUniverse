@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import { FighterRatingWithFighter, FightScoreSummary } from '@/data/lib/definitions';
-import { formatScore, formatUpdatedAt } from './fightscore-parts';
+import { formatScore, scoreValue, formatUpdatedAt } from './fightscore-parts';
 import { fighterHref } from '@/data/lib/slug';
 import CountUp from '@/components/ui/fx/count-up';
 import RecomputeCountdown from '@/components/ui/fx/recompute-countdown';
@@ -83,7 +83,7 @@ export default function FightScoreHero({ leader }: { leader: FighterRatingWithFi
               <span className="absolute inset-0 flex flex-col items-center justify-center">
                 <span className="font-mono text-[11px] font-bold uppercase text-accent-strong sm:text-xs">N°1 pound-for-pound</span>
                 <span className="font-display text-[clamp(3.5rem,11vw,4.5rem)] leading-none text-ink">
-                  <CountUp value={formatScore(leader.display_score)} />
+                  <CountUp value={scoreValue(leader.display_score)} />
                 </span>
                 <span className="font-mono text-[11px] uppercase text-muted">FightScore</span>
               </span>

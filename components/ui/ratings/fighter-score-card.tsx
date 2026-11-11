@@ -3,7 +3,7 @@ import CountUp from '@/components/ui/fx/count-up';
 import { OctBadge } from '@/components/ui/fx/octagon';
 import { FighterRatingWithFighter, QualityWin } from '@/data/lib/definitions';
 import { displayEventName } from '@/data/lib/event-utils';
-import { ScoreBar, formatScore } from './fightscore-parts';
+import { ScoreBar, scoreValue } from './fightscore-parts';
 
 type RatingWithRank = FighterRatingWithFighter & { division_rank: string };
 
@@ -28,7 +28,7 @@ export default function FighterScoreCard({ ratings, qualityWins }: { ratings: Ra
               </OctBadge>
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <CountUp value={formatScore(rating.display_score)} className="font-display text-6xl leading-none text-ink" />
+                  <CountUp value={scoreValue(rating.display_score)} className="font-display text-6xl leading-none text-ink" />
                   <span className="font-mono text-[11px] font-bold uppercase text-muted">
                     {rating.is_champion ? 'Champion' : rating.is_ranking_eligible ? 'Classé' : 'Inactif'} · {rating.weight_class}
                   </span>

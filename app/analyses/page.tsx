@@ -61,7 +61,7 @@ function Card({ title, badge, caption, children }: { title?: string; badge?: str
 
 function Stat({ label, value, detail }: { label: string; value: string; detail?: string }) {
   return (
-    <div className="fx-punch flex min-w-0 flex-col gap-1 border border-line bg-surface p-4">
+    <div className="sd-punch flex min-w-0 flex-col gap-1 border border-line bg-surface p-4">
       <p className="font-mono text-[11px] uppercase text-muted">{label}</p>
       <p className="font-display text-4xl uppercase leading-none text-ink">{value}</p>
       {detail && <p className="text-xs text-muted">{detail}</p>}
