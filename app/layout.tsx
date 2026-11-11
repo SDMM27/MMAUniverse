@@ -1,11 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Analytics } from "@vercel/analytics/next";
-import { inter, oswald } from "@/components/ui/fonts";
+import { bricolage, inter, jetbrainsMono } from "@/components/ui/fonts";
+import { THEME_COLORS, themeScript } from "@/components/ui/theme/theme-script";
 import Nav from "@/components/ui/nav";
 import Footer from "@/components/ui/footer";
 import { getSiteUrl } from "@/data/lib/site-url";
 import { OPEN_GRAPH_BASE, SITE_NAME } from "@/data/lib/seo-utils";
+import "@sdmm/design/css/all-mma.css";
 import "./globals.css";
 import "flag-icons/css/flag-icons.min.css";
 
@@ -28,7 +30,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a",
+  // Dark by default; theme-script.ts swaps it when the visitor picks light.
+  themeColor: THEME_COLORS.dark,
 };
 
 export default function RootLayout({
@@ -38,8 +41,12 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="fr">
-        <body className={`${inter.className} ${oswald.variable} bg-base-bg text-ink-primary`}>
+      {/* data-theme is set before paint by themeScript, hence suppressHydrationWarning. */}
+      <html lang="fr" data-theme="dark" suppressHydrationWarning className={`${bricolage.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+        <head>
+          <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        </head>
+        <body className="bg-bg font-sans text-ink antialiased">
           <Nav />
           {children}
           <Footer />

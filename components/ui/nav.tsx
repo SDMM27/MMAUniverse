@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
-import MMAUniverseLogo from '@/components/ui/mma-universe-logo';
 import GlobalSearch, { SearchButton } from '@/components/ui/search/global-search';
+import ThemeToggle from '@/components/ui/theme/theme-toggle';
 
 // "FightScore" (the calculated ranking, the site's flagship
 // feature — see docs/superpowers/specs/2026-09-14-fighter-rating-algorithm-design.md)
@@ -30,7 +30,7 @@ const links = [
 
 // Menu entries on phones: a full-width row at least 44px tall, so a thumb
 // doesn't land on the neighbouring link.
-const MOBILE_LINK = 'flex min-h-11 items-center border-b border-base-border/60 text-base';
+const MOBILE_LINK = 'flex min-h-11 items-center border-b border-line/60 text-lg';
 
 function isActive(pathname: string, href: string) {
   // '/' would otherwise match every path as a prefix. Exact match or a '/'-
@@ -68,8 +68,8 @@ function NavLink({ href, label, active, className = '' }: { href: string; label:
     <Link
       href={href}
       aria-current={active ? 'page' : undefined}
-      className={`font-display text-sm uppercase tracking-wide transition-colors ${
-        active ? 'text-accent' : 'text-ink-secondary hover:text-accent'
+      className={`font-display uppercase tracking-[0.04em] transition-colors ${
+        active ? 'text-ink shadow-[inset_0_-3px_0_var(--sd-accent)]' : 'text-muted hover:text-ink'
       } ${className}`}
     >
       {label}
@@ -90,24 +90,32 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <nav className="border-b border-base-border bg-base-bg px-4 py-3 sm:px-10 2xl:px-16">
+    <nav aria-label="Navigation principale" className="border-b border-line bg-bg px-4 py-2 sm:px-10 2xl:px-16">
       <div className="flex items-center justify-between gap-4">
-        <Link href="/" className="shrink-0">
-          <MMAUniverseLogo />
+        <Link href="/" aria-label="MMA Universe, accueil" className="flex min-h-11 shrink-0 items-center font-display text-[24px] uppercase sm:text-[28px] leading-none text-ink">
+          MMA<span className="text-accent">/</span>Universe
         </Link>
 
-        <ul className="hidden items-center gap-4 xl:flex 2xl:gap-6">
+        <ul className="hidden items-center gap-0.5 xl:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} />
+              <NavLink
+                href={link.href}
+                label={link.label}
+                active={isActive(pathname, link.href)}
+                className="flex min-h-11 items-center px-2.5 text-[17px] 2xl:px-3.5"
+              />
             </li>
           ))}
           <li className="flex items-center">
             <SearchButton onClick={() => setSearchOpen(true)} />
           </li>
-          <li className="flex items-center">
+          <li className="ml-2 flex items-center">
+            <ThemeToggle />
+          </li>
+          <li className="ml-2 flex items-center">
             <SignedOut>
-              <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
+              <Link href="/sign-in" className="flex min-h-11 items-center font-display text-[17px] uppercase tracking-[0.04em] text-accent-strong hover:underline">
                 Connexion
               </Link>
             </SignedOut>
@@ -120,18 +128,19 @@ export default function Nav() {
         {/* Below xl, links collapse into the toggled menu (the full bar needs
             ~1,200px); the account avatar stays visible next to the toggle
             rather than hiding inside it. */}
-        <div className="flex items-center gap-3 xl:hidden">
+        <div className="flex items-center gap-2 sm:gap-3 xl:hidden">
           <SignedIn>
             <AccountButton />
           </SignedIn>
           <SearchButton onClick={() => setSearchOpen(true)} />
+          <ThemeToggle />
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-controls="mobile-nav-menu"
             aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-base-border text-ink-primary"
+            className="flex h-11 w-11 shrink-0 items-center justify-center border border-line text-ink"
           >
             {open ? (
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -147,7 +156,7 @@ export default function Nav() {
       </div>
 
       {open && (
-        <ul id="mobile-nav-menu" className="mt-3 grid grid-cols-2 gap-x-4 border-t border-base-border pt-2 xl:hidden">
+        <ul id="mobile-nav-menu" className="mt-2 grid grid-cols-2 gap-x-4 border-t border-line pt-2 xl:hidden">
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} className={MOBILE_LINK} />
@@ -164,7 +173,7 @@ export default function Nav() {
           </SignedIn>
           <SignedOut>
             <li>
-              <Link href="/sign-in" className={`font-display uppercase tracking-wide text-accent ${MOBILE_LINK}`}>
+              <Link href="/sign-in" className={`font-display uppercase tracking-[0.04em] text-accent-strong ${MOBILE_LINK}`}>
                 Connexion
               </Link>
             </li>
