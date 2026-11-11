@@ -102,7 +102,7 @@ export default async function Page() {
       {(p4p.men.length > 0 || p4p.women.length > 0) && (
         <section>
           <SectionHeading title="Pound-for-Pound" caption="Les meilleurs FightScores, toutes catégories confondues" />
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-2">
             {p4p.men.length > 0 && <PoundForPoundList fighters={p4p.men} title="Hommes" />}
             {p4p.women.length > 0 && <PoundForPoundList fighters={p4p.women} title="Femmes" />}
           </div>

@@ -119,7 +119,8 @@ export default function Nav() {
             <AccountButton />
           </SignedIn>
           <SearchButton onClick={() => setSearchOpen(true)} />
-          <ThemeToggle />
+          {/* Below sm the header has no room left (360px): the switch moves into the menu. */}
+          <ThemeToggle className="hidden sm:grid" />
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
@@ -156,6 +157,10 @@ export default function Nav() {
 
       {open && (
         <ul id="mobile-nav-menu" className="mt-2 grid grid-cols-2 gap-x-4 border-t border-line pt-2 xl:hidden">
+          <li className="col-span-2 flex min-h-11 items-center justify-between border-b border-line/60 sm:hidden">
+            <span className="font-display text-lg uppercase tracking-[0.04em] text-muted">Thème</span>
+            <ThemeToggle />
+          </li>
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href} label={link.label} active={isActive(pathname, link.href)} className={MOBILE_LINK} />

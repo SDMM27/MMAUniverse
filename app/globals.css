@@ -16,6 +16,11 @@ html:root {
   /* Win green readable as small text (AA) on bg/surface; --sd-live is for fills. */
   --mu-win-strong: #137a41;
 }
+/* The design system's light muted (#6b655c) lands at 4.4:1 on surface-2 and
+   on red-tinted rows; one step darker keeps small grey labels AA everywhere. */
+html:root[data-theme="light"] {
+  --sd-muted: #5f5950;
+}
 html:root[data-theme="dark"] {
   --mu-win-strong: #3ccf7f;
 }
