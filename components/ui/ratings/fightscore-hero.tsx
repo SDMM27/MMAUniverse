@@ -30,7 +30,7 @@ export default function FightScoreHero({ leader }: { leader: FighterRatingWithFi
             Le classement MMA{' '}
             <span className="relative inline-block text-accent-strong">
               calculé
-              <span aria-hidden="true" className="fx-underline absolute inset-x-0 bottom-1 h-2 bg-accent" />
+              <span aria-hidden="true" className="fx-underline absolute inset-x-0 -bottom-[0.04em] h-[0.07em] bg-accent" />
             </span>
             , pas décrété.
           </h1>

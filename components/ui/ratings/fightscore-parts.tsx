@@ -126,7 +126,8 @@ export function FighterRankRow({
       <CoverImage
         src={fighter.fighter_image_url}
         alt=""
-        className="h-10 w-10 shrink-0 rounded-full"
+        // Phones: the name needs the room more than the photo does.
+        className="hidden h-10 w-10 shrink-0 rounded-full sm:flex"
         sizes="40px"
         objectPosition="top"
       />
