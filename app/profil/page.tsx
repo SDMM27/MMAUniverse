@@ -28,8 +28,8 @@ export default async function Page() {
   if (!userId) {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-4 sm:p-6 text-center">
-        <p className="text-sm text-ink-secondary">Connecte-toi pour voir ton profil.</p>
-        <Link href="/sign-in" className="font-display text-sm uppercase tracking-wide text-accent">
+        <p className="text-sm text-muted">Connecte-toi pour voir ton profil.</p>
+        <Link href="/sign-in" className="fx-cut inline-flex min-h-11 items-center bg-accent px-6 font-display text-lg uppercase text-accent-ink">
           Connexion
         </Link>
       </main>
@@ -44,9 +44,13 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
-      <h1 className="border-b border-base-border pb-6 font-display text-2xl uppercase tracking-wide text-ink-primary">
-        Mon profil
-      </h1>
+      <header className="flex flex-col gap-2">
+        <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
+          <span className="fx-live mr-2 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle" />
+          Préférences
+        </p>
+        <h1 className="font-display uppercase leading-[0.9] text-[clamp(2.5rem,7vw,5rem)] text-ink">Mon profil</h1>
+      </header>
 
       <FighterPreferencePicker preferredFighters={preferredFighters} />
       <NationalityPreferencePicker availableCodes={availableNationalities} preferredCodes={preferredNationalities} />

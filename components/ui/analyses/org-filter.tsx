@@ -23,12 +23,12 @@ export default function OrgFilter({ options, active }: { options: { key: string;
                 href={`/analyses?org=${encodeURIComponent(option.key)}`}
                 scroll={false}
                 aria-current={isActive ? 'page' : undefined}
-                className={`flex flex-col rounded-md border px-3 py-1.5 transition-colors ${
-                  isActive ? 'border-accent bg-accent/10' : 'border-base-border hover:border-ink-secondary'
+                className={`flex min-h-11 flex-col justify-center border-2 px-3 py-1 transition-colors ${
+                  isActive ? 'border-ink bg-ink text-bg' : 'border-ink text-ink hover:bg-surface-2'
                 }`}
               >
-                <span className={`font-display text-sm uppercase tracking-wide ${isActive ? 'text-accent' : 'text-ink-primary'}`}>{option.label}</span>
-                <span className="text-[11px] tabular-nums text-ink-secondary">{formatInteger(option.fights)} combats</span>
+                <span className="font-display text-sm uppercase">{option.label}</span>
+                <span className={`font-mono text-[10px] uppercase tabular-nums ${isActive ? 'text-bg/70' : 'text-muted'}`}>{formatInteger(option.fights)} combats</span>
               </Link>
             </li>
           );

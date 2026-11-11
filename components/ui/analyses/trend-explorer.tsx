@@ -23,7 +23,7 @@ type Point = { label: string; value: number | null; fights: number; note?: strin
 const MIN_FIGHTS_PER_POINT = 12;
 
 const selectClass =
-  'h-9 rounded-md border border-base-border bg-base-card px-2 text-sm text-ink-primary focus:border-accent focus:outline-none';
+  'min-h-11 border-2 border-ink bg-surface px-2 text-sm text-ink focus:border-accent focus:outline-none';
 
 function formatMetric(metric: TrendMetric, value: number): string {
   return metric.unit === 'percent' ? formatPercent(value) : formatNumber(value);
@@ -145,7 +145,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
   return (
     <div className="flex flex-col gap-5">
       <div className="flex flex-wrap items-end gap-3">
-        <label className="flex flex-col gap-1 text-xs uppercase tracking-wide text-ink-secondary">
+        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           Mesure
           <select className={selectClass} value={metricId} onChange={(e) => setMetricId(e.target.value as TrendMetricId)}>
             <optgroup label={`Résultats · ${orgLabel}`}>
@@ -164,7 +164,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             </optgroup>
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs uppercase tracking-wide text-ink-secondary">
+        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           Organisation
           {/* UFCStats metrics only exist for the UFC: the select shows it, locked, rather than a choice that wouldn't apply. */}
           <select
@@ -180,7 +180,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             ))}
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs uppercase tracking-wide text-ink-secondary">
+        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           Catégorie
           <select className={selectClass} value={divisionFilter} onChange={(e) => setDivisionChoice(e.target.value)}>
             <option value="all">Toutes</option>
@@ -197,7 +197,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             ))}
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs uppercase tracking-wide text-ink-secondary">
+        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           De
           <select
             className={selectClass}
@@ -214,7 +214,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             ))}
           </select>
         </label>
-        <label className="flex flex-col gap-1 text-xs uppercase tracking-wide text-ink-secondary">
+        <label className="flex flex-col gap-1 font-mono text-[11px] uppercase text-muted">
           À
           <select
             className={selectClass}
@@ -231,7 +231,7 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             ))}
           </select>
         </label>
-        <div className="flex gap-1" role="group" aria-label="Période rapide">
+        <div className="flex border-2 border-ink" role="group" aria-label="Période rapide">
           {presets.map((preset) => {
             const active = rollingYears === preset.rolling && fromYear === preset.from && toYear === currentYear;
             return (
@@ -245,8 +245,8 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
                   setFromYear(preset.from);
                   setToYear(currentYear);
                 }}
-                className={`h-9 rounded-md border px-3 text-xs uppercase tracking-wide transition-colors ${
-                  active ? 'border-accent text-accent' : 'border-base-border text-ink-secondary hover:text-ink-primary'
+                className={`min-h-11 px-3 font-display text-sm uppercase transition-colors ${
+                  active ? 'bg-ink text-bg' : 'text-ink hover:bg-surface-2'
                 }`}
               >
                 {preset.label}
@@ -258,24 +258,24 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
 
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="flex flex-wrap items-center gap-2 text-sm text-ink-secondary">
+          <p className="flex flex-wrap items-center gap-2 text-sm text-muted">
             <ScopeBadge label={isStats ? 'UFC uniquement' : orgLabel === 'Toutes' ? 'Toutes organisations' : orgLabel} />
             {metric.description}
           </p>
           {isStats && !isUfc && (
-            <p className="mt-1 text-xs text-ink-secondary">
+            <p className="mt-1 text-xs text-muted">
               Les statistiques détaillées n&apos;existent que pour l&apos;UFC : le filtre « {orgLabel} » ne s&apos;applique pas à cette mesure.
             </p>
           )}
-          <p className="mt-2 text-3xl font-semibold text-ink-primary">
+          <p className="mt-2 font-display text-5xl uppercase leading-none text-ink">
             {sliceValue === null ? '—' : formatMetric(metric, sliceValue)}
-            <span className="ml-2 text-sm font-normal text-ink-secondary">
+            <span className="ml-2 font-sans text-sm font-normal normal-case text-muted">
               {rollingYears !== null ? `du ${dayFormat.format(windowStart(rollingYears))} à aujourd’hui` : 'sur la sélection'} ·{' '}
               {formatInteger(sliceTotals.fights)} combats
             </span>
           </p>
         </div>
-        <div className="flex rounded-md border border-base-border p-0.5" role="group" aria-label="Vue">
+        <div className="flex border-2 border-ink" role="group" aria-label="Vue">
           {(
             [
               ['year', 'Par année'],
@@ -287,8 +287,8 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
               type="button"
               aria-pressed={view === value}
               onClick={() => setView(value)}
-              className={`rounded px-3 py-1.5 text-xs uppercase tracking-wide transition-colors ${
-                view === value ? 'bg-accent text-white' : 'text-ink-secondary hover:text-ink-primary'
+              className={`min-h-11 px-3 font-display text-sm uppercase transition-colors ${
+                view === value ? 'bg-ink text-bg' : 'text-ink hover:bg-surface-2'
               }`}
             >
               {label}
@@ -300,10 +300,10 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
       {view === 'year' ? <YearLine points={points} metric={metric} /> : <DivisionBars points={points} metric={metric} />}
 
       <details className="text-sm">
-        <summary className="cursor-pointer text-xs uppercase tracking-wide text-ink-secondary hover:text-ink-primary">Voir les données</summary>
-        <div className="mt-3 max-h-72 overflow-auto rounded-md border border-base-border">
+        <summary className="inline-flex min-h-11 cursor-pointer items-center font-mono text-xs uppercase text-muted hover:text-ink">Voir les données</summary>
+        <div className="mt-3 max-h-72 overflow-auto border border-line">
           <table className="w-full text-left text-sm">
-            <thead className="sticky top-0 bg-base-card text-xs uppercase tracking-wide text-ink-secondary">
+            <thead className="sticky top-0 bg-surface font-mono text-[11px] uppercase text-muted">
               <tr>
                 <th className="px-3 py-2 font-normal">{view === 'year' ? 'Année' : 'Catégorie'}</th>
                 <th className="px-3 py-2 text-right font-normal">{metric.label}</th>
@@ -312,10 +312,10 @@ export default function TrendExplorer({ orgs, initialOrg, ufcKey, statsCube, sta
             </thead>
             <tbody className="tabular-nums">
               {points.map((point) => (
-                <tr key={point.label} className="border-t border-base-border">
+                <tr key={point.label} className="border-t border-line">
                   <td className="px-3 py-1.5">{point.label}</td>
                   <td className="px-3 py-1.5 text-right">{point.value === null ? '—' : formatMetric(metric, point.value)}</td>
-                  <td className="px-3 py-1.5 text-right text-ink-secondary">{formatInteger(point.fights)}</td>
+                  <td className="px-3 py-1.5 text-right text-muted">{formatInteger(point.fights)}</td>
                 </tr>
               ))}
             </tbody>
@@ -338,7 +338,7 @@ function YearLine({ points, metric }: { points: Point[]; metric: TrendMetric }) 
   const tickLabel = (tick: number) => (metric.unit === 'percent' ? `${Math.round(tick * 100)} %` : formatNumber(tick).replace(',0', ''));
 
   if (values.length === 0) {
-    return <p className="py-16 text-center text-sm text-ink-secondary">Pas assez de combats sur cette sélection.</p>;
+    return <p className="py-16 text-center text-sm text-muted">Pas assez de combats sur cette sélection.</p>;
   }
 
   return (
@@ -472,11 +472,11 @@ function DivisionBars({ points, metric }: { points: Point[]; metric: TrendMetric
                   );
                 return (
                   <g key={point.label} tabIndex={0} onFocus={showTooltip} onBlur={hide} className="outline-none transition-opacity hover:opacity-80 focus-visible:opacity-80">
-                    <text x={0} y={y + barHeight / 2} dy="0.32em" fontSize={12} fill="#f5f5f5">
+                    <text x={0} y={y + barHeight / 2} dy="0.32em" fontSize={12} fill="var(--sd-ink)">
                       {point.label}
                     </text>
                     <path d={horizontalBarPath(labelWidth, y, barWidth, barHeight)} fill={SINGLE_SERIES_COLOR} />
-                    <text x={labelWidth + barWidth + 6} y={y + barHeight / 2} dy="0.32em" fontSize={12} fontWeight={600} fill="#f5f5f5" className="tabular-nums">
+                    <text x={labelWidth + barWidth + 6} y={y + barHeight / 2} dy="0.32em" fontSize={12} fontWeight={600} fill="var(--sd-ink)" className="tabular-nums">
                       {point.value === null ? '—' : formatMetric(metric, point.value)}
                     </text>
                     <rect x={0} y={index * rowHeight} width={width} height={rowHeight} fill="transparent" onPointerEnter={showTooltip} onPointerMove={showTooltip} />

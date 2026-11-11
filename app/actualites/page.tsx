@@ -40,7 +40,13 @@ export default async function ActualitesPage({
 
   return (
     <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
-      <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Actualités</h1>
+      <header className="flex flex-col gap-2">
+        <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
+          <span className="fx-live mr-2 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle" />
+          Fil d&apos;actus
+        </p>
+        <h1 className="font-display uppercase leading-[0.9] text-[clamp(2.5rem,7vw,5rem)] text-ink">Actualités</h1>
+      </header>
       <NewsOrgFilter organizations={organizations} />
       {articles.length === 0 ? (
         <EmptyState
@@ -49,7 +55,7 @@ export default async function ActualitesPage({
         />
       ) : (
         <>
-          <p className="text-xs text-ink-secondary">
+          <p className="font-mono text-[11px] uppercase text-muted">
             {total} actu{total > 1 ? 's' : ''}
           </p>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">

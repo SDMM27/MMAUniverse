@@ -1,5 +1,6 @@
 import { fetchRankedOrganizations, fetchRankingsByOrg } from '@/data/lib/data';
 import RankingsList from '@/components/ui/rankings/rankings-list';
+import SectionHeading from '@/components/ui/fx/section-heading';
 import EmptyState from '@/components/ui/shared/empty-state';
 import type { Metadata } from 'next';
 import { staticPageMetadata } from '@/data/lib/seo-utils';
@@ -29,10 +30,16 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
-      <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">Rankings</h1>
+      <header className="flex flex-col gap-2">
+        <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
+          <span className="fx-live mr-2 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle" />
+          Classements officiels
+        </p>
+        <h1 className="font-display uppercase leading-[0.9] text-[clamp(2.5rem,7vw,5rem)] text-ink">Rankings</h1>
+      </header>
       {organizations.map((org, i) => (
-        <section key={org.id} className="flex flex-col gap-3">
-          <h2 className="font-display text-lg uppercase tracking-wide text-accent">{org.name}</h2>
+        <section key={org.id} aria-labelledby={`org-${org.id}`}>
+          <SectionHeading id={`org-${org.id}`} title={org.name} />
           <RankingsList rankings={rankingsByOrg[i]} />
         </section>
       ))}

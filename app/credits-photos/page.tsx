@@ -72,7 +72,7 @@ export default async function Page() {
         <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
           {credits.map((c) => (
             <li key={c.id} className="flex flex-col">
-              <Link href={fighterHref(c)} className="text-xs text-ink-primary hover:text-accent">
+              <Link href={fighterHref(c)} className="text-xs text-ink hover:text-accent-strong">
                 {c.name}
               </Link>
               <PhotoCredit fighter={c} />

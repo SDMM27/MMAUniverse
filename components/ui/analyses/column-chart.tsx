@@ -56,7 +56,7 @@ export default function ColumnChart({
                   x2={width - MARGIN.right}
                   y1={yOf(reference)}
                   y2={yOf(reference)}
-                  stroke="#f5f5f5"
+                  stroke="var(--sd-ink)"
                   strokeOpacity={0.55}
                   strokeDasharray="4 4"
                   pointerEvents="none"
@@ -80,14 +80,14 @@ export default function ColumnChart({
                     {value !== null && (
                       <>
                         <path d={columnPath(x, yOf(value), barWidth, plotHeight * value)} fill={SINGLE_SERIES_COLOR} />
-                        <text x={center} y={yOf(value) - 6} textAnchor="middle" fontSize={11} fontWeight={600} fill="#f5f5f5">
+                        <text x={center} y={yOf(value) - 6} textAnchor="middle" fontSize={11} fontWeight={600} fill="var(--sd-ink)">
                           {formatPercent(value, 0)}
                         </text>
                       </>
                     )}
                     <rect x={center - slot / 2} y={MARGIN.top} width={slot} height={plotHeight} fill="transparent" onPointerEnter={showTooltip} onPointerMove={showTooltip} />
                     <foreignObject x={center - slot / 2} y={height - MARGIN.bottom + 4} width={slot} height={MARGIN.bottom - 4}>
-                      <p className="px-0.5 text-center text-[11px] leading-tight text-ink-secondary">{narrow && column.shortLabel ? column.shortLabel : column.label}</p>
+                      <p className="px-0.5 text-center text-[11px] leading-tight text-muted">{narrow && column.shortLabel ? column.shortLabel : column.label}</p>
                     </foreignObject>
                   </g>
                 );

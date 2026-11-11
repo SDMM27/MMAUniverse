@@ -34,7 +34,7 @@ export default function NationalityPreferencePicker({
 
   return (
     <div className="flex flex-col gap-3">
-      <h2 className="font-display text-sm uppercase tracking-wide text-ink-primary">Nationalités préférées</h2>
+      <h2 className="font-display text-2xl uppercase leading-none text-ink">Nationalités préférées</h2>
       <div className="flex flex-wrap gap-2">
         {availableCodes.map((code) => {
           const selected = preferredSet.has(code);
@@ -45,8 +45,8 @@ export default function NationalityPreferencePicker({
               onClick={() => toggle(code)}
               disabled={status === 'saving'}
               aria-pressed={selected}
-              className={`flex items-center gap-1.5 rounded-md border px-2 py-1 text-xs uppercase tracking-wide disabled:opacity-40 ${
-                selected ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'
+              className={`flex min-h-11 items-center gap-1.5 border-2 px-3 font-mono text-xs uppercase disabled:opacity-40 ${
+                selected ? 'border-accent bg-accent/10 text-accent-strong' : 'border-ink text-ink hover:bg-surface-2'
               }`}
             >
               <CountryFlag code={code} className="text-sm" />
@@ -55,7 +55,7 @@ export default function NationalityPreferencePicker({
           );
         })}
       </div>
-      {status === 'error' && <p className="text-xs text-accent">Erreur réseau, réessaie.</p>}
+      {status === 'error' && <p className="text-xs text-accent-strong">Erreur réseau, réessaie.</p>}
     </div>
   );
 }

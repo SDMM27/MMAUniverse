@@ -39,9 +39,13 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
-      <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">
-        Organisations ({organizations.length})
-      </h1>
+      <header className="flex flex-col gap-2">
+        <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
+          <span className="fx-live mr-2 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle" />
+          Les promotions suivies
+        </p>
+        <h1 className="font-display uppercase leading-[0.9] text-[clamp(2.5rem,7vw,5rem)] text-ink">Organisations ({organizations.length})</h1>
+      </header>
       <OrganizationsList organizations={organizationsWithActivity} />
     </main>
   );

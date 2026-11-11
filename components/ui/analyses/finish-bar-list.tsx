@@ -35,7 +35,7 @@ export default function FinishBarList({ rows, ariaLabel, highlight }: { rows: Fi
                 const y = index * ROW_HEIGHT + (ROW_HEIGHT - BAR_HEIGHT) / 2;
                 const koWidth = trackWidth * koShare;
                 const subWidth = trackWidth * subShare;
-                const r = 4;
+                const r = 0;
                 const subX = labelWidth + koWidth + GAP;
                 const subDrawn = Math.max(0, subWidth - GAP);
                 const showTooltip = () =>
@@ -53,11 +53,11 @@ export default function FinishBarList({ rows, ariaLabel, highlight }: { rows: Fi
                   );
                 return (
                   <g key={row.label} tabIndex={0} onFocus={showTooltip} onBlur={hide} className="outline-none transition-opacity hover:opacity-80 focus-visible:opacity-80">
-                    {row.label === highlight && <rect x={0} y={index * ROW_HEIGHT + 4} width={3} height={ROW_HEIGHT - 8} rx={1.5} fill="#ff3b30" />}
-                    <text x={row.label === highlight ? 10 : 0} y={y + BAR_HEIGHT / 2} dy="0.32em" fontSize={12} fontWeight={row.label === highlight ? 700 : 400} fill="#f5f5f5">
+                    {row.label === highlight && <rect x={0} y={index * ROW_HEIGHT + 4} width={3} height={ROW_HEIGHT - 8} fill="var(--sd-accent)" />}
+                    <text x={row.label === highlight ? 10 : 0} y={y + BAR_HEIGHT / 2} dy="0.32em" fontSize={12} fontWeight={row.label === highlight ? 700 : 400} fill="var(--sd-ink)">
                       {row.label}
                     </text>
-                    <rect x={labelWidth} y={y} width={trackWidth} height={BAR_HEIGHT} rx={r} fill="#1f1f1f" />
+                    <rect x={labelWidth} y={y} width={trackWidth} height={BAR_HEIGHT} rx={r} fill="var(--sd-surface-2)" />
                     {koWidth > 0 && <rect x={labelWidth} y={y} width={koWidth} height={BAR_HEIGHT} fill={METHOD_COLORS.ko} />}
                     {subDrawn > 0 && (
                       <path
@@ -65,7 +65,7 @@ export default function FinishBarList({ rows, ariaLabel, highlight }: { rows: Fi
                         fill={METHOD_COLORS.sub}
                       />
                     )}
-                    <text x={width} y={y + BAR_HEIGHT / 2} dy="0.32em" textAnchor="end" fontSize={12} fontWeight={600} fill="#f5f5f5" className="tabular-nums">
+                    <text x={width} y={y + BAR_HEIGHT / 2} dy="0.32em" textAnchor="end" fontSize={12} fontWeight={600} fill="var(--sd-ink)" className="tabular-nums">
                       {formatPercent(koShare + subShare, 0)}
                     </text>
                     <rect x={0} y={index * ROW_HEIGHT} width={width} height={ROW_HEIGHT} fill="transparent" onPointerEnter={showTooltip} onPointerMove={showTooltip} />

@@ -42,8 +42,8 @@ export function CoverImage({
 
   if (!src || failed) {
     return (
-      <div className={`flex items-center justify-center bg-base-border ${className}`} aria-hidden="true">
-        <SilhouetteIcon className="h-1/3 w-1/3 text-ink-secondary/40" />
+      <div className={`flex items-center justify-center bg-surface-2 ${className}`} aria-hidden="true">
+        <SilhouetteIcon className="h-1/3 w-1/3 text-muted/50" />
       </div>
     );
   }
@@ -56,7 +56,7 @@ export function CoverImage({
     // other. The inner div is always position:relative so <Image fill> (which
     // requires a positioned ancestor) has one to attach to, independent of
     // whatever position the outer box itself needs to be.
-    <div className={`overflow-hidden bg-base-border ${className}`}>
+    <div className={`overflow-hidden bg-surface-2 ${className}`}>
       <div className="relative h-full w-full">
         <Image
           src={withHigherResolution(src)}

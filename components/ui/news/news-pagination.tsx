@@ -28,21 +28,21 @@ export default function NewsPagination({
         href={hasPrevious ? hrefForPage(page - 1) : hrefForPage(page)}
         aria-disabled={!hasPrevious}
         tabIndex={hasPrevious ? undefined : -1}
-        className={`rounded-md border border-base-border px-3 py-1.5 text-sm text-ink-primary transition-colors ${
-          hasPrevious ? 'hover:border-accent' : 'pointer-events-none opacity-40'
+        className={`inline-flex min-h-11 items-center border-2 border-ink px-4 font-display text-sm uppercase text-ink transition-colors ${
+          hasPrevious ? 'hover:border-accent hover:text-accent-strong' : 'pointer-events-none opacity-40'
         }`}
       >
         Précédent
       </Link>
-      <span className="text-sm text-ink-secondary">
+      <span className="font-mono text-xs uppercase text-muted">
         Page {page} / {totalPages}
       </span>
       <Link
         href={hasNext ? hrefForPage(page + 1) : hrefForPage(page)}
         aria-disabled={!hasNext}
         tabIndex={hasNext ? undefined : -1}
-        className={`rounded-md border border-base-border px-3 py-1.5 text-sm text-ink-primary transition-colors ${
-          hasNext ? 'hover:border-accent' : 'pointer-events-none opacity-40'
+        className={`inline-flex min-h-11 items-center border-2 border-ink px-4 font-display text-sm uppercase text-ink transition-colors ${
+          hasNext ? 'hover:border-accent hover:text-accent-strong' : 'pointer-events-none opacity-40'
         }`}
       >
         Suivant

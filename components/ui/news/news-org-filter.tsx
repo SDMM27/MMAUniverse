@@ -22,7 +22,7 @@ function NewsOrgFilterInner({ organizations }: { organizations: Organization[] }
       value={searchParams.get('org') ?? 'all'}
       onChange={(event) => selectOrg(event.target.value)}
       aria-label="Filtrer par organisation"
-      className="w-fit rounded-md border border-base-border bg-base-card px-3 py-2 text-sm text-ink-primary"
+      className="min-h-11 w-fit max-w-full border-2 border-ink bg-surface px-3 font-mono text-xs uppercase text-ink"
     >
       <option value="all">Toutes les organisations</option>
       {organizations.map((organization) => (

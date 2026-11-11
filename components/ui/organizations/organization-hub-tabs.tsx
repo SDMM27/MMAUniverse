@@ -41,7 +41,7 @@ function OrganizationHubTabsInner({ events, fighters, rankings }: Props) {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex gap-2" role="tablist" aria-label="Sections de l'organisation">
+      <div className="flex w-fit max-w-full overflow-x-auto border-2 border-ink" role="tablist" aria-label="Sections de l'organisation">
         {(
           [
             ['events', 'Événements'],
@@ -55,10 +55,8 @@ function OrganizationHubTabsInner({ events, fighters, rankings }: Props) {
             role="tab"
             aria-selected={tab === value}
             onClick={() => selectTab(value)}
-            className={`rounded-full border px-4 py-1.5 font-display text-sm uppercase tracking-wide transition-colors ${
-              tab === value
-                ? 'border-accent bg-accent text-white'
-                : 'border-base-border bg-base-card text-ink-secondary hover:border-accent'
+            className={`min-h-11 shrink-0 px-4 font-display text-sm uppercase transition-colors ${
+              tab === value ? 'bg-ink text-bg' : 'text-ink hover:bg-surface-2'
             }`}
           >
             {label}
