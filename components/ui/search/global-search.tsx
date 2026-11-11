@@ -32,7 +32,7 @@ export function SearchButton({ onClick, className = '' }: { onClick: () => void;
       aria-label="Rechercher"
       aria-haspopup="dialog"
       title="Rechercher (Ctrl+K)"
-      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-base-border text-ink-primary transition-colors hover:border-accent hover:text-accent ${className}`}
+      className={`flex h-11 w-11 shrink-0 items-center justify-center border border-line text-ink transition-colors hover:border-accent hover:text-accent-strong ${className}`}
     >
       <SearchIcon className="h-5 w-5" />
     </button>
@@ -209,28 +209,28 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
       'aria-selected': index === activeIndex,
       onMouseMove: () => setActiveIndex(index),
       onClick: close,
-      className: `flex items-center gap-3 rounded-md px-3 py-2 transition-colors ${
-        index === activeIndex ? 'bg-base-border' : 'hover:bg-base-border'
+      className: `relative flex min-h-11 items-center gap-3 border-l-4 px-3 py-2 transition-colors ${
+        index === activeIndex ? 'border-accent bg-surface-2' : 'border-transparent hover:bg-surface-2'
       }`,
     };
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center px-4 pt-[10vh]">
-      <div className="absolute inset-0 bg-black/60" onClick={close} aria-hidden="true" />
+      <div className="absolute inset-0 bg-bg/80 backdrop-blur-sm" onClick={close} aria-hidden="true" />
       <div
         ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
         onKeyDown={onDialogKeyDown}
-        className="relative flex max-h-[80vh] w-full max-w-xl flex-col overflow-hidden rounded-lg border border-base-border bg-base-bg shadow-xl"
+        className="sd-punch relative flex max-h-[80vh] w-full max-w-xl flex-col overflow-hidden border border-line border-t-2 border-t-ink bg-surface"
       >
         <h2 id={titleId} className="sr-only">
           Recherche
         </h2>
-        <div className="flex items-center gap-3 border-b border-base-border px-4 py-3">
-          <SearchIcon className="h-5 w-5 shrink-0 text-ink-secondary" />
+        <div className="flex items-center gap-3 border-b border-line px-4 py-2">
+          <SearchIcon className="h-5 w-5 shrink-0 text-muted" />
           <input
             ref={inputRef}
             type="text"
@@ -249,13 +249,13 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
             autoCorrect="off"
             spellCheck={false}
             enterKeyHint="search"
-            className="min-w-0 flex-1 bg-transparent text-base text-ink-primary placeholder:text-ink-secondary focus:outline-none"
+            className="min-h-12 min-w-0 flex-1 bg-transparent font-display text-lg uppercase text-ink placeholder:text-muted focus:outline-none"
           />
           <button
             type="button"
             onClick={close}
             aria-label="Fermer la recherche"
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-base-border text-ink-secondary hover:text-accent"
+            className="flex h-11 w-11 shrink-0 items-center justify-center border border-line text-muted hover:border-accent hover:text-accent-strong"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path strokeLinecap="round" d="M6 6l12 12M18 6 6 18" />
@@ -264,7 +264,7 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
         </div>
 
         <div className="overflow-y-auto p-2">
-          <div aria-live="polite" className="px-3 py-2 text-sm text-ink-secondary">
+          <div aria-live="polite" className="px-3 py-2 font-mono text-[11px] uppercase text-muted">
             {!query && 'Tapez au moins 2 caractères.'}
             {query && status === 'loading' && 'Recherche en cours…'}
             {query && status === 'error' && 'La recherche est indisponible pour le moment.'}
@@ -284,8 +284,8 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
                       className="h-10 w-10 shrink-0 rounded-full"
                     />
                     <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm text-ink-primary">{fighter.name}</span>
-                      <span className="block truncate text-xs text-ink-secondary">
+                      <span className="block truncate text-sm text-ink">{fighter.name}</span>
+                      <span className="block truncate text-xs text-muted">
                         {[fighter.weight_class, fighter.organization_abbreviation, fighter.record].filter(Boolean).join(' · ')}
                       </span>
                     </span>
@@ -302,11 +302,11 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
                       src={event.organization_abbreviation ? orgLogoPath(event.organization_abbreviation) : null}
                       alt=""
                       sizes="40px"
-                      className="h-10 w-10 shrink-0 rounded-md"
+                      className="h-10 w-10 shrink-0"
                     />
                     <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm text-ink-primary">{displayEventName(event.name)}</span>
-                      <span className="block truncate text-xs text-ink-secondary">
+                      <span className="block truncate text-sm text-ink">{displayEventName(event.name)}</span>
+                      <span className="block truncate text-xs text-muted">
                         {[formatEventDate(event.date), event.organization_abbreviation].filter(Boolean).join(' · ')}
                       </span>
                     </span>
@@ -325,8 +325,8 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
                       className="h-10 w-10 shrink-0 rounded-full"
                     />
                     <span className="min-w-0 flex-1">
-                      <span className="block truncate text-sm text-ink-primary">{organization.name}</span>
-                      <span className="block truncate text-xs text-ink-secondary">{organization.abbreviation}</span>
+                      <span className="block truncate text-sm text-ink">{organization.name}</span>
+                      <span className="block truncate text-xs text-muted">{organization.abbreviation}</span>
                     </span>
                   </Link>
                 ))}
@@ -338,7 +338,7 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
             <Link
               href={allFightersHref(query)}
               onClick={close}
-              className="mt-1 block rounded-md px-3 py-2 text-sm text-accent hover:bg-base-border"
+              className="mt-1 flex min-h-11 items-center px-3 py-2 text-sm text-accent-strong hover:bg-surface-2 hover:underline"
             >
               Voir tous les combattants pour « {query} »
             </Link>
@@ -352,7 +352,7 @@ export default function GlobalSearch({ open, onOpenChange }: { open: boolean; on
 function ResultGroup({ label, groupId, children }: { label: string; groupId: string; children: React.ReactNode }) {
   return (
     <div role="group" aria-labelledby={groupId} className="mb-2">
-      <p id={groupId} className="px-3 py-1 font-display text-xs uppercase tracking-wide text-ink-secondary">
+      <p id={groupId} className="px-3 py-1 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
         {label}
       </p>
       {children}

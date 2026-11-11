@@ -6,9 +6,9 @@ export default function ErrorState({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 rounded-lg border border-accent/40 bg-base-card py-16 text-center">
-      <p className="font-display text-lg uppercase tracking-wide text-accent">{title}</p>
-      {description && <p className="max-w-sm text-sm text-ink-secondary">{description}</p>}
+    <div className="flex flex-col items-center justify-center gap-2 border border-accent border-l-4 bg-surface px-4 py-16 text-center">
+      <p className="font-display text-xl uppercase text-danger">{title}</p>
+      {description && <p className="max-w-sm text-sm text-muted">{description}</p>}
     </div>
   );
 }
