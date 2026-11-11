@@ -26,7 +26,7 @@ export default async function Page({ searchParams }: { searchParams: { a?: strin
   const prefill = !hasParams && fighters.length > 0 ? await fetchNextMainEventPrefill(fighters) : null;
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-5xl flex-col gap-8 px-4 py-8 sm:px-6">
+    <main className="flex min-h-screen shell flex-col gap-8 py-8">
       <header className="border-b border-line pb-8">
         <p className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
           <span className="fx-live h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true" />

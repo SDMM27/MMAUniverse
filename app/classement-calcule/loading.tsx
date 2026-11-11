@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main role="status" aria-label="Chargement" className="mx-auto flex min-h-screen max-w-6xl flex-col gap-8 px-4 py-8 sm:px-6">
+    <main role="status" aria-label="Chargement" className="flex min-h-screen shell flex-col gap-8 py-8">
       <div aria-hidden="true" className="flex flex-col gap-4">
         <div className="h-4 w-40 animate-pulse bg-surface-2" />
         <div className="h-16 w-full max-w-lg animate-pulse bg-surface-2" />

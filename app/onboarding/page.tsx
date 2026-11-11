@@ -35,7 +35,7 @@ export default async function Page() {
   ]);
 
   return (
-    <main className="flex min-h-screen flex-col gap-8 p-4 sm:p-6">
+    <main className="flex min-h-screen flex-col gap-8 shell py-4 sm:py-6">
       <div className="flex flex-col gap-3 border-b border-line pb-6">
         <header className="flex flex-col gap-2">
         <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">

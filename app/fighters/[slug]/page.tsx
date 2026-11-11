@@ -81,7 +81,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const siteUrl = getSiteUrl();
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
+    <main className="flex min-h-screen flex-col gap-6 shell py-4 sm:py-6">
       <JsonLd
         data={[
           fighterProfileJsonLd(siteUrl, fighter, canonicalPath, fighterMetadataDescription(fighter, ratings[0])),

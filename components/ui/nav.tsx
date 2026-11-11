@@ -90,7 +90,8 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <nav aria-label="Navigation principale" className="border-b border-line bg-bg px-4 py-2 sm:px-10 2xl:px-16">
+    <nav aria-label="Navigation principale" className="border-b border-line bg-bg py-2">
+      <div className="shell">
       <div className="flex items-center justify-between gap-4">
         <Link href="/" aria-label="MMA Universe, accueil" className="flex min-h-11 shrink-0 items-center font-display text-[24px] uppercase sm:text-[28px] leading-none text-ink">
           MMA<span className="text-accent">/</span>Universe
@@ -184,6 +185,7 @@ export default function Nav() {
           </SignedOut>
         </ul>
       )}
+      </div>
       <GlobalSearch open={searchOpen} onOpenChange={setSearchOpen} />
     </nav>
   );

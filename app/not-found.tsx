@@ -13,7 +13,7 @@ const LINKS = [
 
 export default function NotFound() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-6 p-4 text-center sm:p-6">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-6 shell py-4 text-center sm:py-6">
       <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">Page introuvable</p>
       <h1 className="fx-punch font-display text-[clamp(7rem,30vw,16rem)] uppercase leading-[0.8] text-ink">
         4<span className="text-accent">0</span>4

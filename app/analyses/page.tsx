@@ -189,7 +189,7 @@ export default async function Page({ searchParams }: { searchParams: { org?: str
   const orgRows = data.orgComparison.map((row) => ({ label: orgLabel(row.organization), ko: row.ko, sub: row.sub, dec: row.dec }));
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-14 px-4 sm:px-6 py-8">
+    <main className="flex min-h-screen shell flex-col gap-14 py-8">
       <header className="flex flex-col gap-6 border-b border-line pb-8">
         <div>
           <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">

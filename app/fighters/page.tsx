@@ -42,7 +42,7 @@ export default async function Page({
   const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
+    <main className="flex min-h-screen flex-col gap-6 shell py-4 sm:py-6">
       <header>
         <p className="mb-2 font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
           <span className="fx-live mr-2 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle" />

@@ -9,7 +9,8 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-ink px-4 py-8 sm:px-6">
+    <footer className="border-t-2 border-ink py-8">
+      <div className="shell">
       <p className="font-display text-[clamp(2.5rem,9vw,5rem)] uppercase leading-[0.9] text-ink">
         MMA<span className="text-accent">/</span>Universe
       </p>
@@ -28,6 +29,7 @@ export default function Footer() {
             </Link>
           ))}
         </nav>
+      </div>
       </div>
     </footer>
   );

@@ -4,7 +4,7 @@ import ErrorState from '@/components/ui/shared/error-state';
 
 export default function Error({ reset }: { error: Error; reset: () => void }) {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 sm:p-6">
+    <main className="flex min-h-screen flex-col items-center justify-center shell py-4 sm:py-6">
       <ErrorState title="Impossible de charger les analyses" />
       <button
         onClick={reset}

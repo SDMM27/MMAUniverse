@@ -120,7 +120,7 @@ export default async function Page() {
       <JsonLd data={websiteJsonLd(getSiteUrl(), HOME_DESCRIPTION)} />
       <Marquee items={ticker} label="Infos du FightScore" />
 
-      <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-16 px-4 pb-16 sm:px-6 sm:gap-[72px]">
+      <div className="shell flex flex-col gap-16 pb-16 sm:gap-[72px]">
         <div>
           <FightScoreHero leader={p4pLeader} />
           <FightScoreStats summary={summary} organizationCount={organizations.length} />

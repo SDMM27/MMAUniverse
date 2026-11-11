@@ -4,7 +4,7 @@ import { CONTACT_EMAIL, LEGAL_LAST_UPDATED } from '@/data/lib/legal';
 
 export function LegalPage({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col gap-8 p-4 sm:p-6">
+    <main className="flex min-h-screen shell flex-col gap-8 py-4 sm:py-6 [&>*]:max-w-3xl">
       <header className="border-b-2 border-ink pb-6">
         <h1 className="font-display text-[clamp(2.25rem,7vw,4rem)] uppercase leading-[0.9] text-ink [overflow-wrap:anywhere]">
           {title}

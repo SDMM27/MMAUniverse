@@ -20,7 +20,7 @@ export default async function Page() {
 
   if (!userId) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center gap-4 p-4 sm:p-6 text-center">
+      <main className="flex min-h-screen flex-col items-center justify-center gap-4 shell py-4 sm:py-6 text-center">
         <p className="text-sm text-muted">Connecte-toi pour voir tes pronostics.</p>
         <Link href="/sign-in" className="fx-cut inline-flex min-h-11 items-center bg-accent px-6 font-display text-lg uppercase text-accent-ink">
           Connexion
@@ -33,7 +33,7 @@ export default async function Page() {
   const totalPoints = history.reduce((sum, entry) => sum + (entry.points ?? 0), 0);
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
+    <main className="flex min-h-screen flex-col gap-6 shell py-4 sm:py-6">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <header className="flex flex-col gap-2">
         <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">

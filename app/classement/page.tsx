@@ -19,7 +19,7 @@ export default async function Page() {
   const leaderboard = await fetchAllTimeLeaderboard();
 
   return (
-    <main className="flex min-h-screen flex-col gap-6 p-4 sm:p-6">
+    <main className="flex min-h-screen flex-col gap-6 shell py-4 sm:py-6">
       <header className="flex flex-col gap-2">
         <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
           <span className="fx-live mr-2 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle" />
