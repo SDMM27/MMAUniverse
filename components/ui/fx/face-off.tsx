@@ -48,15 +48,19 @@ function MirrorBar({ measure, index }: { measure: FaceOffMeasure; index: number 
   const width = (raw: number | null) => (raw == null || max === 0 ? 0 : (100 * raw) / max);
   const delay = { animationDelay: `${300 + index * 120}ms` };
   return (
-    <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3">
-      <div className="flex h-3 justify-end bg-surface-2" aria-hidden="true">
-        <span className="fx-bar-r block h-full bg-accent" style={{ width: `${width(measure.rawA)}%`, ...delay }} />
-      </div>
-      <span className="w-[13ch] text-center font-mono text-xs font-bold tabular-nums">
-        {measure.a} <span className="text-muted">· {measure.label} ·</span> {measure.b}
-      </span>
-      <div className="h-3 bg-surface-2" aria-hidden="true">
-        <span className="fx-bar block h-full bg-accent-2" style={{ width: `${width(measure.rawB)}%`, ...delay }} />
+    <div>
+      <p className="flex items-baseline justify-between gap-3 font-mono text-xs font-bold tabular-nums">
+        <span>{measure.a}</span>
+        <span className="uppercase text-muted">{measure.label}</span>
+        <span>{measure.b}</span>
+      </p>
+      <div className="mt-1 grid grid-cols-2 gap-1" aria-hidden="true">
+        <div className="flex h-3 justify-end bg-surface-2">
+          <span className="fx-bar-r block h-full bg-accent" style={{ width: `${width(measure.rawA)}%`, ...delay }} />
+        </div>
+        <div className="h-3 bg-surface-2">
+          <span className="fx-bar block h-full bg-accent-2" style={{ width: `${width(measure.rawB)}%`, ...delay }} />
+        </div>
       </div>
     </div>
   );

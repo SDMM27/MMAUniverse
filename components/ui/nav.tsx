@@ -96,34 +96,20 @@ export default function Nav() {
           MMA<span className="text-accent">/</span>Universe
         </Link>
 
-        <ul className="hidden items-center gap-0.5 xl:flex">
-          {links.map((link) => (
-            <li key={link.href}>
-              <NavLink
-                href={link.href}
-                label={link.label}
-                active={isActive(pathname, link.href)}
-                className="flex min-h-11 items-center px-2.5 text-[17px] 2xl:px-3.5"
-              />
-            </li>
-          ))}
-          <li className="flex items-center">
-            <SearchButton onClick={() => setSearchOpen(true)} />
-          </li>
-          <li className="ml-2 flex items-center">
-            <ThemeToggle />
-          </li>
-          <li className="ml-2 flex items-center">
-            <SignedOut>
-              <Link href="/sign-in" className="flex min-h-11 items-center font-display text-[17px] uppercase tracking-[0.04em] text-accent-strong hover:underline">
-                Connexion
-              </Link>
-            </SignedOut>
-            <SignedIn>
-              <AccountButton />
-            </SignedIn>
-          </li>
-        </ul>
+        {/* Wide screens: tools on the top row, the ten section links on their
+            own row underneath (in one row they needed ~1,800px). */}
+        <div className="hidden items-center gap-2 xl:flex">
+          <SearchButton onClick={() => setSearchOpen(true)} />
+          <ThemeToggle />
+          <SignedOut>
+            <Link href="/sign-in" className="ml-1 flex min-h-11 items-center font-display text-[17px] uppercase tracking-[0.04em] text-accent-strong hover:underline">
+              Connexion
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <AccountButton />
+          </SignedIn>
+        </div>
 
         {/* Below xl, links collapse into the toggled menu (the full bar needs
             ~1,200px); the account avatar stays visible next to the toggle
@@ -154,6 +140,19 @@ export default function Nav() {
           </button>
         </div>
       </div>
+
+      <ul className="-mx-2 mt-1 hidden items-center gap-0.5 overflow-x-auto scrollbar-none xl:flex">
+        {links.map((link) => (
+          <li key={link.href} className="shrink-0">
+            <NavLink
+              href={link.href}
+              label={link.label}
+              active={isActive(pathname, link.href)}
+              className="flex min-h-11 items-center px-2.5 text-[17px] 2xl:px-3.5"
+            />
+          </li>
+        ))}
+      </ul>
 
       {open && (
         <ul id="mobile-nav-menu" className="mt-2 grid grid-cols-2 gap-x-4 border-t border-line pt-2 xl:hidden">
