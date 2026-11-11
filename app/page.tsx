@@ -130,7 +130,7 @@ export default async function Page() {
           <section aria-labelledby="home-face-off">
             <SectionHeading
               id="home-face-off"
-              title="Face-à-face"
+              title="Prochain événement"
               caption={
                 <>
                   Main event ·{' '}
@@ -140,8 +140,14 @@ export default async function Page() {
                   {faceOff.prefill.eventDate && ` · ${faceOff.prefill.eventDate}`}
                 </>
               }
+              href={`/events/${faceOff.prefill.eventId}`}
+              linkLabel="Toute la carte"
             />
-            <MatchupFaceOff a={faceOff.a} b={faceOff.b} />
+            <MatchupFaceOff
+              a={faceOff.a}
+              b={faceOff.b}
+              link={{ href: `/events/${faceOff.prefill.eventId}`, label: `Voir l'événement ${faceOff.prefill.eventName}` }}
+            />
           </section>
         )}
 

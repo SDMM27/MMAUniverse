@@ -6,7 +6,7 @@ import { CoverImage } from '@/components/ui/shared/media';
 import { CountryFlag } from '@/components/ui/shared/country-flag';
 import FaceOff from '@/components/ui/fx/face-off';
 import { matchupOdds } from '@/components/ui/ratings/matchup-odds';
-import { cornerSubtitle, tapeMeasures } from '@/components/ui/ratings/matchup-face-off';
+import { faceOffCorner, tapeMeasures } from '@/components/ui/ratings/matchup-face-off';
 import TaleOfTheTape from '@/components/ui/ratings/tale-of-the-tape';
 import { SimulatorFighter } from '@/data/lib/definitions';
 import type { MainEventPrefill } from '@/data/lib/simulator-data';
@@ -428,8 +428,8 @@ export default function FightSimulator({
         <>
           <FaceOff
             key={`${a.fighter_id}-${b.fighter_id}`}
-            a={{ name: a.fighter_name, href: fighterHref({ id: a.fighter_id, name: a.fighter_name }), subtitle: cornerSubtitle(a) }}
-            b={{ name: b.fighter_name, href: fighterHref({ id: b.fighter_id, name: b.fighter_name }), subtitle: cornerSubtitle(b) }}
+            a={faceOffCorner(a)}
+            b={faceOffCorner(b)}
             pctA={odds.pctA}
             measures={tapeMeasures(a, b)}
           />
