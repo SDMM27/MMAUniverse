@@ -26,17 +26,20 @@ export default async function Page({ searchParams }: { searchParams: { a?: strin
   const prefill = !hasParams && fighters.length > 0 ? await fetchNextMainEventPrefill(fighters) : null;
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-4xl flex-col gap-8 px-4 sm:px-6 py-8">
-      <header className="border-b border-base-border pb-8">
-        <p className="font-display text-xs uppercase tracking-widest text-accent">FightScore · UFC</p>
-        <h1 className="mt-2 font-display text-4xl uppercase leading-none text-ink-primary md:text-5xl">Simulateur de combat</h1>
-        <p className="mt-3 max-w-2xl text-sm text-ink-secondary">
+    <main className="mx-auto flex min-h-screen max-w-5xl flex-col gap-8 px-4 py-8 sm:px-6">
+      <header className="border-b border-line pb-8">
+        <p className="flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
+          <span className="fx-live h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true" />
+          FightScore · UFC
+        </p>
+        <h1 className="mt-3 font-display text-[clamp(2.5rem,7vw,5rem)] uppercase leading-[0.9] text-ink">Simulateur de combat</h1>
+        <p className="mt-4 max-w-2xl text-sm text-muted">
           Choisis deux combattants : la simulation compare leur niveau FightScore (et l&apos;incertitude sur ce niveau), corrigé
           de leur âge, de leur allonge, de leur inactivité et de leurs statistiques UFC (frappes, contrôle, knockdowns subis),
           pour estimer les chances de victoire de chacun, puis la méthode et le round à partir de la façon dont leurs combats passés
           se sont terminés (KO, soumission, décision) et de la moyenne de leur catégorie. C&apos;est une estimation
           statistique, pas une prédiction de la forme du jour.{' '}
-          <Link href="/classement-calcule/methodologie" className="text-accent hover:underline">
+          <Link href="/classement-calcule/methodologie" className="text-accent-strong hover:underline">
             Comment ça marche
           </Link>
           .

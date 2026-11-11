@@ -21,7 +21,7 @@ function Cell({ children, highlighted, align }: { children: React.ReactNode; hig
   return (
     <span
       className={`min-w-0 break-words text-sm ${align === 'right' ? 'text-right' : 'text-left'} ${
-        highlighted ? 'font-semibold text-accent' : 'text-ink-primary'
+        highlighted ? 'font-semibold text-accent-strong' : 'text-ink'
       }`}
     >
       {children}
@@ -30,19 +30,29 @@ function Cell({ children, highlighted, align }: { children: React.ReactNode; hig
 }
 
 export default function TaleOfTheTape({ a, b }: { a: SimulatorFighter; b: SimulatorFighter }) {
+  // Height and reach already show as mirrored bars in the face-off when both
+  // are known; they only appear here when one side is missing.
   const rows: Row[] = [
-    {
-      label: 'Taille',
-      a: formatPhysique(a.height_cm, null) ?? MISSING,
-      b: formatPhysique(b.height_cm, null) ?? MISSING,
-      edge: edgeFor(a.height_cm, b.height_cm),
-    },
-    {
-      label: 'Allonge',
-      a: a.reach_cm ? `${a.reach_cm} cm` : MISSING,
-      b: b.reach_cm ? `${b.reach_cm} cm` : MISSING,
-      edge: edgeFor(a.reach_cm, b.reach_cm),
-    },
+    ...(a.height_cm && b.height_cm
+      ? []
+      : [
+          {
+            label: 'Taille',
+            a: formatPhysique(a.height_cm, null) ?? MISSING,
+            b: formatPhysique(b.height_cm, null) ?? MISSING,
+            edge: edgeFor(a.height_cm, b.height_cm),
+          },
+        ]),
+    ...(a.reach_cm && b.reach_cm
+      ? []
+      : [
+          {
+            label: 'Allonge',
+            a: a.reach_cm ? `${a.reach_cm} cm` : MISSING,
+            b: b.reach_cm ? `${b.reach_cm} cm` : MISSING,
+            edge: edgeFor(a.reach_cm, b.reach_cm),
+          },
+        ]),
     { label: 'Âge', a: a.age != null ? `${Math.floor(a.age)} ans` : MISSING, b: b.age != null ? `${Math.floor(b.age)} ans` : MISSING },
     { label: 'Palmarès', a: a.record ?? MISSING, b: b.record ?? MISSING },
     {
@@ -54,15 +64,15 @@ export default function TaleOfTheTape({ a, b }: { a: SimulatorFighter; b: Simula
   ];
 
   return (
-    <section className="rounded-xl border border-base-border bg-base-card p-5" aria-label="Comparaison physique">
-      <h2 className="font-display text-xs uppercase tracking-widest text-ink-secondary">Face à face</h2>
-      <div className="mt-3 divide-y divide-base-border">
+    <section className="border border-line bg-surface p-5" aria-label="Comparaison physique">
+      <h2 className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Tale of the tape</h2>
+      <div className="mt-3 divide-y divide-line">
         {rows.map((row) => (
           <div key={row.label} className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 py-2">
             <Cell align="left" highlighted={row.edge === 'a'}>
               {row.a}
             </Cell>
-            <span className="text-center text-[11px] uppercase tracking-wide text-ink-secondary">{row.label}</span>
+            <span className="text-center font-mono text-[11px] uppercase text-muted">{row.label}</span>
             <Cell align="right" highlighted={row.edge === 'b'}>
               {row.b}
             </Cell>
