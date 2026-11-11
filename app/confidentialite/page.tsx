@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Quelles données MMA Universe collecte, pourquoi, combien de temps, et comment exercer vos droits.',
 };
 
-const linkClass = 'text-accent underline-offset-2 hover:underline';
+const linkClass = 'text-accent-strong underline-offset-2 hover:underline';
 
 export default function Page() {
   return (
