@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { groupUpcomingByWeek, splitEventsByStatus } from '@/data/lib/event-utils';
 import { Event } from '@/data/lib/definitions';
+import SectionHeading from '@/components/ui/fx/section-heading';
 import EventCard from './event-card';
 
 type Tab = 'upcoming' | 'past';
@@ -53,38 +54,38 @@ function EventsByStatusInner<T extends Event>({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex gap-2" role="tablist" aria-label="Filtrer les événements">
-        {(
-          [
-            ['upcoming', `À venir (${upcoming.length})`],
-            ['past', `Passés (${past.length})`],
-          ] as const
-        ).map(([value, label]) => (
-          <button
-            key={value}
-            type="button"
-            role="tab"
-            aria-selected={tab === value}
-            onClick={() => selectTab(value)}
-            className={`rounded-full border px-4 py-1.5 font-display text-sm uppercase tracking-wide transition-colors ${
-              tab === value
-                ? 'border-accent bg-accent text-white'
-                : 'border-base-border bg-base-card text-ink-secondary hover:border-accent'
-            }`}
-          >
-            {label}
-          </button>
-        ))}
+      <div className="scrollbar-none flex overflow-x-auto" role="tablist" aria-label="Filtrer les événements">
+        <div className="flex border-2 border-ink">
+          {(
+            [
+              ['upcoming', `À venir (${upcoming.length})`],
+              ['past', `Passés (${past.length})`],
+            ] as const
+          ).map(([value, label]) => (
+            <button
+              key={value}
+              type="button"
+              role="tab"
+              aria-selected={tab === value}
+              onClick={() => selectTab(value)}
+              className={`inline-flex min-h-11 shrink-0 items-center whitespace-nowrap px-4 font-display text-sm uppercase transition-colors ${
+                tab === value ? 'bg-ink text-bg' : 'text-ink hover:bg-surface-2'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
       {active.length === 0 ? (
-        <p className="text-sm text-ink-secondary">{emptyMessage}</p>
+        <p className="text-sm text-muted">{emptyMessage}</p>
       ) : tab === 'upcoming' ? (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-10">
           {thisWeek.length > 0 && <EventGroup title={`Cette semaine (${thisWeek.length})`} events={thisWeek} />}
           {later.length > 0 && <EventGroup title={`À venir (${later.length})`} events={later} />}
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,15rem),1fr))] gap-3">
           {active.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
@@ -96,14 +97,14 @@ function EventsByStatusInner<T extends Event>({
 
 function EventGroup<T extends Event>({ title, events }: { title: string; events: T[] }) {
   return (
-    <div className="flex flex-col gap-3">
-      <h2 className="font-display text-sm uppercase tracking-wide text-ink-secondary">{title}</h2>
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+    <section className="flex flex-col">
+      <SectionHeading title={title} />
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,15rem),1fr))] gap-3">
         {events.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

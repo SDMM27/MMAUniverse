@@ -14,6 +14,7 @@ import EventOrgTabs from '@/components/ui/events/event-org-tabs';
 import FightCard from '@/components/ui/fights/fight-card';
 import FightRow from '@/components/ui/fights/fight-row';
 import FightPickSection from '@/components/ui/picks/fight-pick-section';
+import SectionHeading from '@/components/ui/fx/section-heading';
 import EmptyState from '@/components/ui/shared/empty-state';
 import JsonLd from '@/components/ui/shared/json-ld';
 
@@ -76,20 +77,19 @@ export default async function Page({ params }: { params: { slug: string } }) {
         ]}
       />
       <EventOrgTabs events={orgEvents} currentEventId={event.id} />
-      <div className="flex items-center gap-4 border-b border-base-border pb-6">
-        <div>
-          <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary">{displayEventName(event.name)}</h1>
-          <p className="text-sm text-ink-secondary">
-            {formatEventDate(event.date, { weekday: true })}
-            {eventTime && ` · ${eventTime}`} · {event.event_location}
-          </p>
-          {prelimsTime && (
-            <p className="mt-1 text-xs text-ink-secondary">
-              Préliminaires à {prelimsTime}
-            </p>
-          )}
-        </div>
-      </div>
+      <header className="flex flex-col gap-3 border-b-2 border-ink pb-6">
+        <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
+          {event.organization_abbreviation}
+        </p>
+        <h1 className="font-display text-[clamp(2.5rem,8vw,6rem)] uppercase leading-[0.9] text-ink [overflow-wrap:anywhere]">
+          {displayEventName(event.name)}
+        </h1>
+        <p className="font-mono text-[11px] uppercase text-muted">
+          {formatEventDate(event.date, { weekday: true })}
+          {eventTime && ` · ${eventTime}`} · {event.event_location}
+        </p>
+        {prelimsTime && <p className="font-mono text-[11px] uppercase text-muted">Préliminaires à {prelimsTime}</p>}
+      </header>
       {fights.length === 0 ? (
         <EmptyState
           title="Aucun combat annoncé"
@@ -98,13 +98,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
       ) : (
         <>
           {!userId && !locked && (
-            <div className="flex flex-col items-center gap-3 rounded-lg border border-base-border bg-base-card p-4 text-center">
-              <p className="text-sm text-ink-secondary">
+            <div className="flex flex-col items-center gap-3 border border-line bg-surface p-4 text-center">
+              <p className="text-sm text-muted">
                 Connecte-toi pour pronostiquer les combats de cette soirée et grimper au classement.
               </p>
               <Link
                 href="/sign-in"
-                className="flex min-h-[44px] w-full items-center justify-center rounded-md bg-accent px-4 py-2 font-display text-sm uppercase tracking-wide text-white sm:w-auto"
+                className="fx-cut inline-flex min-h-11 w-full items-center justify-center bg-accent px-6 font-display text-lg uppercase text-accent-ink sm:w-auto"
               >
                 Se connecter
               </Link>
@@ -122,8 +122,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </div>
           )}
           <div className="flex flex-col gap-4">
-            {rest.map((fight) => (
-              <div key={fight.id} className="flex flex-col gap-2">
+            {rest.map((fight, index) => (
+              <div
+                key={fight.id}
+                className="fx-in-left flex flex-col gap-2"
+                style={{ animationDelay: `${Math.min(index, 12) * 70}ms` }}
+              >
                 <FightRow fight={fight} />
                 <FightPickSection
                   fight={fight}
@@ -137,8 +141,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
         </>
       )}
       {locked && (
-        <div className="flex flex-col gap-3 border-t border-base-border pt-6">
-          <h2 className="font-display text-lg uppercase tracking-wide text-ink-primary">Classement de cet événement</h2>
+        <section className="flex flex-col border-t-2 border-ink pt-6">
+          <SectionHeading title="Classement de cet événement" />
           {leaderboard.length === 0 ? (
             <EmptyState title="Aucun pronostic" description="Personne n'a pronostiqué cet événement." />
           ) : (
@@ -146,17 +150,17 @@ export default async function Page({ params }: { params: { slug: string } }) {
               {leaderboard.map((entry, index) => (
                 <li
                   key={entry.userId}
-                  className="flex items-center justify-between rounded-lg border border-base-border bg-base-card px-4 py-2"
+                  className="fx-row flex items-center justify-between gap-3 border border-line bg-surface px-4 py-2"
                 >
-                  <span className="text-sm text-ink-primary">
-                    #{index + 1} {entry.displayName}
+                  <span className="min-w-0 truncate text-sm text-ink">
+                    <span className="font-mono text-xs font-bold text-muted">#{index + 1}</span> {entry.displayName}
                   </span>
-                  <span className="font-display text-sm text-accent">{entry.points} pts</span>
+                  <span className="shrink-0 font-display text-lg text-accent-strong">{entry.points} pts</span>
                 </li>
               ))}
             </ol>
           )}
-        </div>
+        </section>
       )}
     </main>
   );

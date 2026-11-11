@@ -31,7 +31,7 @@ export default function PickForm({
   // missing, with no indication of why.
   if (!fight.fighter1 || !fight.fighter2) {
     return (
-      <p className="rounded-lg border border-base-border bg-base-card p-4 text-center text-xs text-ink-secondary">
+      <p className="border border-line bg-surface p-4 text-center text-xs text-muted">
         Pronostic indisponible : données des combattants manquantes.
       </p>
     );
@@ -60,43 +60,44 @@ export default function PickForm({
   }
 
   return (
-    <div className="flex flex-col gap-3 rounded-lg border border-base-border bg-base-card p-4">
+    <div className="flex flex-col gap-3 border border-line bg-surface p-4">
+      <p className="font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">Ton pronostic</p>
       <div className="grid grid-cols-2 gap-2">
-        <button
-          type="button"
-          onClick={() => setWinnerId(fight.fighter1!.id)}
-          className={`min-h-[44px] w-full break-words rounded-md border px-3 py-2 font-display text-sm uppercase tracking-wide ${winnerId === fight.fighter1!.id ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
-        >
-          {fight.fighter1.name}
-        </button>
-        <button
-          type="button"
-          onClick={() => setWinnerId(fight.fighter2!.id)}
-          className={`min-h-[44px] w-full break-words rounded-md border px-3 py-2 font-display text-sm uppercase tracking-wide ${winnerId === fight.fighter2!.id ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
-        >
-          {fight.fighter2.name}
-        </button>
+        {[fight.fighter1, fight.fighter2].map((fighter) => (
+          <button
+            key={fighter.id}
+            type="button"
+            aria-pressed={winnerId === fighter.id}
+            onClick={() => setWinnerId(fighter.id)}
+            className={`min-h-11 w-full min-w-0 break-words border-2 px-3 py-2 font-display uppercase transition-colors ${winnerId === fighter.id ? 'border-ink bg-ink text-bg' : 'border-ink text-ink hover:bg-surface-2'}`}
+          >
+            {fighter.name}
+          </button>
+        ))}
       </div>
       <div className="grid grid-cols-3 gap-2">
         {(Object.keys(methodLabels) as MethodCategory[]).map((option) => (
           <button
             key={option}
             type="button"
+            aria-pressed={method === option}
             onClick={() => setMethod(option)}
-            className={`min-h-[40px] rounded-md border px-2 py-2 text-xs uppercase tracking-wide ${method === option ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
+            className={`min-h-11 border-2 px-2 py-2 font-mono text-[11px] font-bold uppercase transition-colors ${method === option ? 'border-ink bg-ink text-bg' : 'border-line text-ink hover:border-ink hover:bg-surface-2'}`}
           >
             {methodLabels[option]}
           </button>
         ))}
       </div>
       {method && method !== 'decision' && (
-        <div className="flex justify-center gap-2">
+        <div className="flex flex-wrap justify-center gap-2">
           {Array.from({ length: getScheduledRounds(fight) }, (_, i) => i + 1).map((r) => (
             <button
               key={r}
               type="button"
+              aria-pressed={round === r}
+              aria-label={`Round ${r}`}
               onClick={() => setRound(r)}
-              className={`h-10 w-10 rounded-md border text-xs ${round === r ? 'border-accent text-accent' : 'border-base-border text-ink-secondary'}`}
+              className={`h-11 w-11 border-2 font-mono text-xs font-bold transition-colors ${round === r ? 'border-ink bg-ink text-bg' : 'border-line text-ink hover:border-ink hover:bg-surface-2'}`}
             >
               {r}
             </button>
@@ -107,11 +108,11 @@ export default function PickForm({
         type="button"
         onClick={handleSubmit}
         disabled={!winnerId || !method || status === 'saving'}
-        className="min-h-[44px] rounded-md bg-accent px-4 py-2 font-display text-sm uppercase tracking-wide text-white disabled:opacity-40"
+        className="fx-cut min-h-11 bg-accent px-6 py-2 font-display text-lg uppercase text-accent-ink disabled:opacity-40"
       >
         {status === 'saving' ? 'Enregistrement...' : 'Valider le pronostic'}
       </button>
-      {status === 'error' && <p className="text-center text-xs text-accent">Erreur réseau, réessaie.</p>}
+      {status === 'error' && <p role="alert" className="text-center text-xs text-danger">Erreur réseau, réessaie.</p>}
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
 export default function FightResultRow({ result }: { result: FightResultWithContext }) {
   return (
     <div className="flex flex-col gap-1">
-      <span className="font-display text-xs uppercase tracking-wide text-accent">
+      <span className="font-mono text-[11px] font-bold uppercase text-accent-strong">
         {result.organization_abbreviation} · {displayEventName(result.event_name)} · {formatEventDate(result.event_date)}
       </span>
       <FightRow fight={result} />

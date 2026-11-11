@@ -12,16 +12,16 @@ export default function EventCard({
   return (
     <Link
       href={`/events/${event.id}`}
-      className="flex flex-col overflow-hidden rounded-lg border border-base-border bg-base-card transition-colors hover:border-accent"
+      className="fx-card fx-notch flex min-w-0 flex-col overflow-hidden border border-line bg-surface hover:border-accent"
     >
-      <div className="flex flex-col gap-1 p-3">
+      <div className="flex flex-col gap-2 p-3 sm:p-4">
         {event.organization_abbreviation && (
-          <span className="font-display text-xs uppercase tracking-wide text-accent">
+          <span className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
             {event.organization_abbreviation}
           </span>
         )}
-        <p className="font-display text-sm uppercase tracking-wide text-ink-primary">{displayEventName(event.name)}</p>
-        <p className="text-xs text-ink-secondary">
+        <p className="font-display text-xl uppercase leading-[0.95] text-ink [overflow-wrap:anywhere]">{displayEventName(event.name)}</p>
+        <p className="font-mono text-[11px] uppercase text-muted">
           {formatEventDate(event.date, { weekday: true })}
           {eventTime && ` · ${eventTime}`} · {event.event_location}
         </p>

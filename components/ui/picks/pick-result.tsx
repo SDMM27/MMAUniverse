@@ -19,7 +19,7 @@ export default function PickResult({
   // Same reasoning as PickForm: don't render nothing, say why there's nothing to show.
   if (!fight.fighter1 || !fight.fighter2) {
     return (
-      <p className="rounded-lg border border-base-border bg-base-card p-4 text-center text-xs text-ink-secondary">
+      <p className="border border-line bg-surface p-4 text-center text-xs text-muted">
         Pronostic indisponible : données des combattants manquantes.
       </p>
     );
@@ -27,7 +27,7 @@ export default function PickResult({
 
   if (!pick) {
     return (
-      <p className="rounded-lg border border-base-border bg-base-card p-4 text-center text-xs text-ink-secondary">
+      <p className="border border-line bg-surface p-4 text-center text-xs text-muted">
         Aucun pronostic enregistré pour ce combat.
       </p>
     );
@@ -44,13 +44,13 @@ export default function PickResult({
   const correct = points !== null && points > 0;
 
   return (
-    <div className="flex flex-col items-center gap-1 rounded-lg border border-base-border bg-base-card p-4 text-center">
-      <p className="text-xs text-ink-secondary">
-        Ton pronostic : <span className="text-ink-primary">{predictedWinnerName}</span> par {methodLabels[pick.predicted_method_category]}
+    <div className="flex flex-col items-center gap-1 border border-line bg-surface p-4 text-center">
+      <p className="font-mono text-[11px] uppercase text-muted">
+        Ton pronostic : <span className="font-bold text-ink">{predictedWinnerName}</span> par {methodLabels[pick.predicted_method_category]}
         {pick.predicted_round ? ` au round ${pick.predicted_round}` : ''}
       </p>
       {points !== null && (
-        <p className={`font-display text-sm uppercase tracking-wide ${correct ? 'text-win' : 'text-accent'}`}>
+        <p className={`font-display text-lg uppercase ${correct ? 'text-win-strong' : 'text-danger'}`}>
           {correct ? `Correct — +${points} pts` : 'Incorrect — 0 pt'}
         </p>
       )}
