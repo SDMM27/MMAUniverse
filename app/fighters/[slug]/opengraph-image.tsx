@@ -9,11 +9,11 @@ export const alt = 'Fiche du combattant sur MMA Universe';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-const BACKGROUND = '#0a0a0a';
-const CARD = '#161616';
-const ACCENT = '#ff3b30'; // tailwind.config.ts accent
-const INK = '#f5f5f5';
-const INK_SECONDARY = '#9a9a9a';
+const BACKGROUND = '#0b0a09'; // @sdmm/design « mma », dark theme
+const CARD = '#171513';
+const ACCENT = '#ff4d55';
+const INK = '#f3efe6';
+const INK_SECONDARY = '#a39b8e';
 
 type CardData = {
   name: string;
@@ -137,7 +137,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
               overflow: 'hidden',
               position: 'relative',
               background: CARD,
-              border: '2px solid #262626',
+              border: '2px solid #34302a',
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}

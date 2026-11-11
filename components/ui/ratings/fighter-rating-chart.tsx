@@ -1,15 +1,19 @@
 'use client';
 
 import type { PointerEvent } from 'react';
-import { AXIS_TEXT_COLOR, ChartFrame, ChartTooltip, GRID_COLOR, SURFACE_COLOR, useTooltip } from '@/components/ui/analyses/chart-kit';
-import { SINGLE_SERIES_COLOR } from '@/components/ui/analyses/format';
+import { ChartFrame, ChartTooltip, useTooltip } from '@/components/ui/analyses/chart-kit';
 import { displayEventName, formatEventDate } from '@/data/lib/event-utils';
 import type { RatingHistoryPoint } from '@/data/lib/fighter-profile-data';
 
 const HEIGHT = 240;
 const MARGIN = { top: 12, right: 12, bottom: 26, left: 44 };
 const RESULT_LABELS: Record<string, string> = { win: 'Victoire', loss: 'Défaite', draw: 'Nul', nc: 'No contest' };
-const RESULT_COLORS: Record<string, string> = { win: '#199e70', loss: '#d95926' };
+// Theme-aware colours (CSS variables from @sdmm/design), not hex: they follow dark/light.
+const GRID_COLOR = 'var(--sd-line)';
+const AXIS_TEXT_COLOR = 'var(--sd-muted)';
+const SURFACE_COLOR = 'var(--sd-surface)';
+const LINE_COLOR = 'var(--sd-accent)';
+const RESULT_COLORS: Record<string, string> = { win: 'var(--sd-live, #199e70)', loss: 'var(--sd-accent)' };
 
 const toTime = (date: string) => Date.parse(`${date}T00:00:00Z`);
 
@@ -81,7 +85,7 @@ export default function FighterRatingChart({ history }: { history: RatingHistory
                     {year}
                   </text>
                 ))}
-                <path d={path} fill="none" stroke={SINGLE_SERIES_COLOR} strokeWidth={2} strokeLinejoin="round" />
+                <path d={path} fill="none" stroke={LINE_COLOR} strokeWidth={2.5} strokeLinejoin="round" />
                 {history.map((p, i) => (
                   <circle key={p.id} cx={x(times[i])} cy={y(p.pointsAfter)} r={3.5} fill={RESULT_COLORS[p.result ?? ''] ?? AXIS_TEXT_COLOR} stroke={SURFACE_COLOR} strokeWidth={1.5} />
                 ))}
@@ -92,7 +96,7 @@ export default function FighterRatingChart({ history }: { history: RatingHistory
           );
         }}
       </ChartFrame>
-      <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink-secondary">
+      <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[11px] uppercase text-muted">
         <li className="flex items-center gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full" style={{ background: RESULT_COLORS.win }} aria-hidden="true" />
           Victoire

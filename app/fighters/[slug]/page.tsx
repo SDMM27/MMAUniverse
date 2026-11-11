@@ -20,6 +20,7 @@ import FighterRecordCard from '@/components/ui/fighters/fighter-record-card';
 import FighterScoreCard from '@/components/ui/ratings/fighter-score-card';
 import FighterRatingHistory from '@/components/ui/ratings/fighter-rating-history';
 import FighterCareerStats from '@/components/ui/fighters/fighter-career-stats';
+import SectionHeading from '@/components/ui/fx/section-heading';
 import EmptyState from '@/components/ui/shared/empty-state';
 import JsonLd from '@/components/ui/shared/json-ld';
 
@@ -90,34 +91,34 @@ export default async function Page({ params }: { params: { slug: string } }) {
           ]),
         ]}
       />
-      <div className="rounded-lg bg-base-card p-4">
+      <div className="fx-notch border border-line bg-surface p-4 sm:p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
           <figure className="flex mx-auto w-44 shrink-0 flex-col gap-1 sm:mx-0 sm:w-56">
             <CoverImage
               src={fighter.image_url}
               alt={fighter.name}
               sizes="(max-width: 640px) 60vw, 280px"
-              className="aspect-[3/4] w-full rounded-lg border-2 border-base-bg"
+              className="aspect-[3/4] w-full border-2 border-ink"
               objectPosition="top"
             />
             {fighter.image_url && fighter.photo_license && <PhotoCredit fighter={fighter} className="text-center sm:text-left" />}
           </figure>
           <div className="flex flex-1 flex-col gap-4 sm:justify-between">
             <div>
-              <p className="font-display text-xs uppercase tracking-wide text-accent">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-accent-strong">
                 {fighter.organization_abbreviation} · {fighter.weight_class}
               </p>
-              <h1 className="font-display text-2xl uppercase tracking-wide text-ink-primary sm:text-3xl">
+              <h1 className="mt-1 font-display uppercase leading-[0.9] text-[clamp(2.5rem,8vw,5.5rem)] text-ink [overflow-wrap:anywhere]">
                 {fighter.name}
               </h1>
-              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-secondary">
+              <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[11px] uppercase text-muted">
                 {primaryRanking && (
-                  <span className="rounded bg-accent/15 px-2 py-0.5 font-display text-xs uppercase tracking-wide text-accent">
+                  <span className="bg-accent px-2 py-1 font-bold text-accent-ink">
                     {primaryRanking.rank === 0 ? 'Champion' : `#${primaryRanking.rank}`}
                   </span>
                 )}
                 <CountryFlag code={fighter.nationality} className="text-lg" />
-                {fighter.record && <span className="font-display text-ink-primary">{fighter.record}</span>}
+                {fighter.record && <span className="font-bold text-ink">{fighter.record}</span>}
                 {age !== null && <span>{age} ans</span>}
                 {physique && <span>{physique}</span>}
               </div>
@@ -125,22 +126,22 @@ export default async function Page({ params }: { params: { slug: string } }) {
             {nextFight && (
               <Link
                 href={`/events/${nextFight.event_id}`}
-                className="flex items-center justify-between gap-3 rounded-lg border border-accent bg-base-bg/40 p-3 hover:border-accent"
+                className="fx-card flex min-h-11 items-center justify-between gap-3 border-2 border-accent bg-accent/10 p-3"
               >
                 <div className="min-w-0">
-                  <p className="text-sm text-ink-primary">
+                  <p className="font-display text-lg uppercase leading-none text-ink">
                     Prochain combat vs {nextFight.opponent_name ?? 'Adversaire inconnu'}
                   </p>
-                  <p className="text-xs text-ink-secondary">
+                  <p className="mt-1 font-mono text-[11px] uppercase text-muted">
                     {displayEventName(nextFight.event_name)} · {formatEventDate(nextFight.event_date, { weekday: true })}
                   </p>
                 </div>
-                <span className="shrink-0 whitespace-nowrap font-display text-xs uppercase tracking-wide text-accent">À venir</span>
+                <span className="shrink-0 whitespace-nowrap font-mono text-xs font-bold uppercase text-accent-strong">À venir</span>
               </Link>
             )}
           </div>
         </div>
-        <div className="mt-6 border-t border-base-border pt-4">
+        <div className="mt-6 border-t border-line pt-4">
           <FighterRecordCard stats={stats} />
         </div>
         <FighterScoreCard ratings={ratings} qualityWins={qualityWins} />
@@ -148,7 +149,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <FighterRatingHistory history={ratingHistory} />
       <FighterCareerStats stats={careerStats} />
       <div>
-        <h2 className="mb-3 font-display text-sm uppercase tracking-wide text-ink-secondary">Historique</h2>
+        <SectionHeading title="Historique" />
         {pastFights.length === 0 ? (
           <EmptyState title="Aucun combat enregistré" />
         ) : (

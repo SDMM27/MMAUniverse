@@ -58,12 +58,12 @@ function FightersSearchBarInner({ organizations }: { organizations: Organization
         onChange={(event) => setText(event.target.value)}
         placeholder="Rechercher un combattant..."
         aria-label="Rechercher un combattant"
-        className="w-full rounded-md border border-base-border bg-base-card px-3 py-2 text-sm text-ink-primary placeholder:text-ink-secondary sm:max-w-xs"
+        className="min-h-11 w-full border-2 border-ink bg-surface px-3 text-sm text-ink placeholder:text-muted focus:border-accent focus:outline-none sm:max-w-xs"
       />
       <select
         value={searchParams.get('org') ?? 'all'}
         onChange={(event) => selectOrg(event.target.value)}
-        className="w-fit rounded-md border border-base-border bg-base-card px-3 py-2 text-sm text-ink-primary"
+        className="min-h-11 w-fit border-2 border-ink bg-surface px-3 font-mono text-xs uppercase text-ink focus:border-accent focus:outline-none"
       >
         <option value="all">Toutes les organisations</option>
         {organizations.map((organization) => (

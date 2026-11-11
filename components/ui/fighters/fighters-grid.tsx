@@ -3,7 +3,7 @@ import { FighterWithOrganization } from '@/data/lib/definitions';
 
 export default function FightersGrid({ fighters }: { fighters: FighterWithOrganization[] }) {
   return (
-    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-3 md:grid-cols-[repeat(3,minmax(0,1fr))] lg:grid-cols-[repeat(4,minmax(0,1fr))]">
       {fighters.map((fighter) => (
         <FighterCard key={fighter.id} fighter={fighter} />
       ))}
