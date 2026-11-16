@@ -114,6 +114,19 @@ test('an item is matched to at most one fighter', () => {
   assert.equal(m.get(1)?.method, 'sherdog');
 });
 
+test('rows sharing a Sherdog ID (same fighter in several orgs) all get the item', () => {
+  const items = [item({ qid: 'Q1', sherdogIds: new Set(['123']), files: ['A.jpg'] })];
+  const m = matchFighters(
+    [
+      fighter(1, 'A', { sherdog_url: 'https://www.sherdog.com/fighter/A-123' }),
+      fighter(2, 'A', { sherdog_url: 'https://www.sherdog.com/fighter/A-123' }),
+    ],
+    items,
+  );
+  assert.equal(m.get(1)?.item.qid, 'Q1');
+  assert.equal(m.get(2)?.item.qid, 'Q1');
+});
+
 test('parseArtist still extracts text and link', () => {
   const r = parseArtist('<a href="//commons.wikimedia.org/wiki/User:Foo">Foo</a> (<a href="/x">talk</a>)');
   assert.equal(r.author, 'Foo');

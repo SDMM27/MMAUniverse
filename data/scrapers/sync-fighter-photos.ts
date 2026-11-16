@@ -218,7 +218,8 @@ export function toIsoDay(value: string | Date | null | undefined): string | null
 /**
  * Pairs our fighters with Wikidata items. Sherdog ID first; then name + exact
  * birth date for the rest, only when that pair is unique among the items and
- * among our fighters. Each fighter, and each item, is matched at most once.
+ * among our fighters. Each fighter is matched at most once; an item can go to
+ * several rows sharing its Sherdog ID, but to only one name + date match.
  */
 export function matchFighters(fighters: OurFighter[], items: WikidataItem[]): Map<number, FighterMatch> {
   const matches = new Map<number, FighterMatch>();
@@ -232,8 +233,9 @@ export function matchFighters(fighters: OurFighter[], items: WikidataItem[]): Ma
     const id = sherdogIdFromUrl(f.sherdog_url);
     const candidates = id ? itemsBySherdog.get(id) : undefined;
     if (!candidates?.length) continue;
-    const item = candidates.find((c) => c.files.length > 0 && !usedItems.has(c.qid)) ?? candidates.find((c) => !usedItems.has(c.qid));
-    if (!item) continue;
+    // No "already used" check here: one person can have several rows (one per
+    // organization) sharing the same sherdog_url, and each row gets the photo.
+    const item = candidates.find((c) => c.files.length > 0) ?? candidates[0];
     matches.set(f.id, { item, method: 'sherdog' });
     usedItems.add(item.qid);
   }
