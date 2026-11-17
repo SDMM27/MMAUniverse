@@ -1,3 +1,4 @@
+import { unstable_cache } from 'next/cache';
 import { sql } from '@/data/lib/db';
 import { resolveFighterIds } from '@/data/lib/fighter-redirect';
 import {
@@ -21,7 +22,7 @@ import { combineProfiles, emptyProfile, type FinishMethod, type OutcomeProfile }
 import { FIGHT_OUTCOME_MODEL } from './rating/fight-outcome-model';
 import { emptyMatchupProfile, type MatchupProfile } from './rating/matchup-model';
 
-export async function fetchOrganizations() {
+async function loadOrganizations() {
     try {
       // Artificially delay a response for demo purposes.
       // Don't do this in production :)
@@ -40,7 +41,7 @@ export async function fetchOrganizations() {
     }
   }
 
-  export async function fetchEventsByOrg(orgId: string) {
+  async function loadEventsByOrg(orgId: string) {
     try {
       // Artificially delay a response for demo purposes.
       // Don't do this in production :)
@@ -59,7 +60,7 @@ export async function fetchOrganizations() {
     }
   }
 
-export async function fetchAllEvents() {
+async function loadAllEvents() {
   try {
     const data = await sql<Event & { organization_abbreviation: string }>`
       SELECT e.*, o.abbreviation AS organization_abbreviation
@@ -197,7 +198,7 @@ function withDisplayWeightClass<T extends Fighter>(fighter: T): T {
   return { ...fighter, weight_class: displayWeightClass(fighter.weight_class, fighter.is_women) ?? fighter.weight_class };
 }
 
-export async function fetchFightersByOrg(organizationId: string) {
+async function loadFightersByOrg(organizationId: string) {
   try {
     const data = await sql<Fighter & { organization_abbreviation: string }>`
       SELECT f.*, o.abbreviation AS organization_abbreviation
@@ -218,7 +219,7 @@ export async function fetchFightersByOrg(organizationId: string) {
 // division, champion then contenders 1-15), which reproduces the org's own
 // display order for free. groupRankingsByWeightClass (data/lib/ranking-utils.ts)
 // depends on that order.
-export async function fetchRankingsByOrg(organizationId: string) {
+async function loadRankingsByOrg(organizationId: string) {
   try {
     const data = await sql<RankingWithFighter>`
       SELECT r.*, f.image_url AS fighter_image_url, f.record AS fighter_record
@@ -252,7 +253,7 @@ export async function fetchFighterRankings(fighterId: string) {
 // Backs the /rankings index -- only organizations that actually have ranking
 // data get listed, so the orgs without a scraper yet don't show as empty
 // tiles. The layout scales automatically as more orgs get scrapers later.
-export async function fetchRankedOrganizations() {
+async function loadRankedOrganizations() {
   try {
     const data = await sql<Organization>`
       SELECT DISTINCT o.* FROM organizations o
@@ -661,7 +662,7 @@ export async function fetchNewsArticles({
 // by weight_class (groupFighterRatingsByWeightClass,
 // data/lib/rating/order-division.ts) and re-orders each group through
 // orderDivisionWithChampionPinned before display.
-export async function fetchAllFighterRatings(perDivision: number = 15) {
+async function loadAllFighterRatings(perDivision: number = 15) {
   try {
     const data = await sql<FighterRatingWithFighter>`
       WITH prev AS (SELECT MAX(week_start) AS week FROM fighter_rating_snapshots WHERE week_start < (SELECT MAX(week_start) FROM fighter_rating_snapshots))
@@ -714,7 +715,7 @@ export async function fetchFighterRatingsByFighterId(fighterId: string) {
 // The headline numbers next to the ranking: how many fighters are currently
 // ranked (ranking-eligible), across how many divisions, and when the weekly
 // recompute (data/scripts/compute-fighter-ratings.ts) last ran.
-export async function fetchFightScoreSummary() {
+async function loadFightScoreSummary() {
   try {
     const data = await sql<FightScoreSummary>`
       SELECT COUNT(*) FILTER (WHERE is_ranking_eligible) AS ranked_count,
@@ -739,7 +740,7 @@ export async function fetchFightScoreSummary() {
 // not recomputed since the column was added. DISTINCT ON (fighter_id): one
 // row per fighter, their champion row first if they hold a belt (the rating
 // is the same on every row). ml_win_probability only breaks exact ties.
-export async function fetchTopPoundForPound(limit: number) {
+async function loadTopPoundForPound(limit: number) {
   try {
     const [men, women] = await Promise.all([
       sql<FighterRatingWithFighter>`
@@ -793,7 +794,7 @@ export async function fetchTopPoundForPound(limit: number) {
 // rating and deviation the fight simulator (/simulateur) predicts from. The
 // simulator works client-side from this list so picking a fighter is instant.
 // NUMERIC columns come back as strings -- coerced to numbers here.
-export async function fetchSimulatorFighters() {
+async function loadSimulatorFighters() {
   try {
     const data = await sql<{
       fighter_id: number;
@@ -962,3 +963,26 @@ export async function fetchQualityWinsByFighterId(fighterId: string, limit: numb
     throw new Error('Failed to fetch quality wins.');
   }
 }
+
+// Data Cache wrappers for the heavy reads every visitor (and crawler) shares.
+// Every page is force-dynamic, so without these each hit re-downloaded whole
+// tables from Neon: the home page alone pulled every event (twice, via
+// fetchNextMainEventPrefill) and every rated fighter's simulator profile.
+// That egress used up Neon's monthly public network transfer on 2026-11-17.
+// The data only moves when the GitHub Actions syncs write (daily, every 30
+// minutes on event days, weekly for FightScore), so a few minutes of
+// staleness is invisible; live fight results come from fetchFightsByEvent,
+// which stays uncached. Arguments are part of the cache key.
+const FIVE_MINUTES = 5 * 60;
+const ONE_HOUR = 60 * 60;
+
+export const fetchOrganizations = unstable_cache(loadOrganizations, ['organizations-v1'], { revalidate: ONE_HOUR });
+export const fetchRankedOrganizations = unstable_cache(loadRankedOrganizations, ['ranked-organizations-v1'], { revalidate: ONE_HOUR });
+export const fetchAllEvents = unstable_cache(loadAllEvents, ['all-events-v1'], { revalidate: FIVE_MINUTES });
+export const fetchEventsByOrg = unstable_cache(loadEventsByOrg, ['events-by-org-v1'], { revalidate: FIVE_MINUTES });
+export const fetchFightersByOrg = unstable_cache(loadFightersByOrg, ['fighters-by-org-v1'], { revalidate: ONE_HOUR });
+export const fetchRankingsByOrg = unstable_cache(loadRankingsByOrg, ['rankings-by-org-v1'], { revalidate: ONE_HOUR });
+export const fetchAllFighterRatings = unstable_cache(loadAllFighterRatings, ['all-fighter-ratings-v1'], { revalidate: ONE_HOUR });
+export const fetchFightScoreSummary = unstable_cache(loadFightScoreSummary, ['fightscore-summary-v1'], { revalidate: ONE_HOUR });
+export const fetchTopPoundForPound = unstable_cache(loadTopPoundForPound, ['top-p4p-v1'], { revalidate: ONE_HOUR });
+export const fetchSimulatorFighters = unstable_cache(loadSimulatorFighters, ['simulator-fighters-v1'], { revalidate: ONE_HOUR });
