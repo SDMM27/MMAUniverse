@@ -13,7 +13,13 @@ function formatFightResult(fight: FightWithFighters): string {
   return parts.length > 0 ? parts.join(' · ') : 'Résultat non précisé';
 }
 
-export default function FightRow({ fight }: { fight: FightWithFighters }) {
+export default function FightRow({
+  fight,
+  linkFighters = true,
+}: {
+  fight: FightWithFighters;
+  linkFighters?: boolean;
+}) {
   if (!fight.fighter1 || !fight.fighter2) {
     return (
       <div className="border border-line bg-surface p-4 text-sm text-muted">
@@ -30,6 +36,7 @@ export default function FightRow({ fight }: { fight: FightWithFighters }) {
       <FighterSide
         fighter={fight.fighter1}
         align="left"
+        linked={linkFighters}
         outcome={fight.fight_finished ? (fight.winner_id === null ? 'draw' : fight.winner_id === fight.fighter1.id ? 'win' : 'loss') : null}
       />
       <div className="order-first col-span-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center sm:order-none sm:col-auto sm:w-36 sm:shrink-0 sm:flex-col sm:gap-1.5">
@@ -42,6 +49,7 @@ export default function FightRow({ fight }: { fight: FightWithFighters }) {
       <FighterSide
         fighter={fight.fighter2}
         align="right"
+        linked={linkFighters}
         outcome={fight.fight_finished ? (fight.winner_id === null ? 'draw' : fight.winner_id === fight.fighter2.id ? 'win' : 'loss') : null}
       />
     </div>
@@ -51,23 +59,18 @@ export default function FightRow({ fight }: { fight: FightWithFighters }) {
 function FighterSide({
   fighter,
   align,
+  linked,
   outcome,
 }: {
   fighter: Fighter;
   align: 'left' | 'right';
+  linked: boolean;
   outcome: FightOutcome | null;
 }) {
-  return (
-    // min-w-0 on both this Link and the div below: a flex item's default
-    // min-width is the width of its content — without it at *every* nested
-    // flex level between the row and the actual text, a long fighter name
-    // refuses to shrink and pushes the row (and the page, on narrow screens)
-    // wider than its container. Setting it only on the innermost div isn't
-    // enough; this Link is itself the flex item FightRow needs to shrink.
-    <Link
-      href={fighterHref(fighter)}
-      className={`flex min-w-0 flex-1 flex-col items-center gap-2 text-center transition-colors hover:text-accent-strong sm:flex-row sm:gap-3 ${align === 'right' ? 'sm:flex-row-reverse sm:text-right' : 'sm:text-left'}`}
-    >
+  // The outer flex item and the text container both need min-w-0 so long names can shrink.
+  const className = `flex min-w-0 flex-1 flex-col items-center gap-2 text-center sm:flex-row sm:gap-3 ${align === 'right' ? 'sm:flex-row-reverse sm:text-right' : 'sm:text-left'}`;
+  const content = (
+    <>
       <CoverImage
         src={fighter.image_url}
         alt={fighter.name}
@@ -98,6 +101,14 @@ function FighterSide({
           {outcome === 'win' && <span className="block text-win-strong sm:ml-1.5 sm:inline">Vainqueur</span>}
         </p>
       </div>
+    </>
+  );
+
+  if (!linked) return <div className={className}>{content}</div>;
+
+  return (
+    <Link href={fighterHref(fighter)} className={`${className} transition-colors hover:text-accent-strong`}>
+      {content}
     </Link>
   );
 }
